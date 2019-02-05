@@ -1,0 +1,14 @@
+weather:
+  name: Previsioni Meteo
+  view: true
+  icon: mdi:weather-sunny
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+#    - sensor.dark_sky_icon
+#    - sensor.dark_sky_summary
+#    - sensor.dark_sky_daily_summary
+#    - sensor.dark_sky_precip_probability
+#    - sensor.dark_sky_temperature
+#    - sensor.dark_sky_cloud_coverage
+#    - sensor.dark_sky_uv_index

@@ -1,0 +1,35 @@
+network:
+  name: Dispositivi di Rete
+  view: true
+  icon: mdi:lan
+  entities:
+    - group.speedtest
+    - group.pfsense
+#    - group.qnap
+
+speedtest:
+  name: Speed Test
+  control: hidden
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+pfsense:
+  name: pfSense
+  control: hidden
+  entities:
+    - sensor.freebsd_router_kbyte_sec_received
+    - sensor.freebsd_router_kbyte_sec_sent
+
+#qnap:
+#  name: QNAP TS-228 Status
+#  control: hidden
+#  entities:
+#    - sensor.nas_status
+#    - sensor.nas_cpu_usage
+#    - sensor.nas_memory_usage
+#    - sensor.nas_volume_used_datavol1
+#    - sensor.nas_system_temperature
+#    - sensor.nas_temperature_drive_0_1
+#    - sensor.nas_temperature_drive_0_2

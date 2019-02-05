@@ -1,0 +1,39 @@
+######################################################################
+# Script: Speech Engine
+# Inputs:
+# - media_player
+# - volume_level
+# - message
+# - enable_greeting
+#
+# - announcement
+# - welcome_message
+######################################################################
+
+speech_engine:
+  alias: Speech Engine
+  sequence: 
+    - service: script.notify_voice
+      data_template:
+        media_player: >-
+          {{ media_player }}
+        volume_level: >-
+          {{ volume_level }}
+        language: >-
+          {{ language }}
+        message: >-
+          {# greeting message #}    
+          {% if enable_greeting == true %}
+            {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 12 %}
+              Buongiorno.
+            {% elif now().strftime('%H')|int >= 12 and now().strftime('%H')|int < 17 %}
+              Buonpomeriggio.
+            {% elif now().strftime('%H')|int >= 17 and now().strftime('%H')|int < 23 %}
+              Buonasera.
+            {% else %}
+              Buonanotte.
+            {% endif %}
+          {% endif %}
+          
+          {# generic message #}
+          {{ message }}

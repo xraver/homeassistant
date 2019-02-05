@@ -1,0 +1,30 @@
+######################################################################
+# Wake Up Giorgio
+# - Every working day it opens Studio Cover
+######################################################################
+
+- alias: "Risveglio Giorgio"
+  trigger:
+    - platform: time
+      at: '07:00:00'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.home_mode_away
+        state: 'off'
+
+      - condition: time
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+
+  action:
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.tapparella_studio
+        position: 85

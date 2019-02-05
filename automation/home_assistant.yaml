@@ -1,0 +1,131 @@
+######################################################################
+# Home Assistant: Management of the Home Mode Button
+######################################################################
+
+- alias: "Home Assistant: Cambio Modalità On"
+  trigger:
+    platform: state
+    entity_id: input_boolean.home_mode_day,
+               input_boolean.home_mode_night,
+               input_boolean.home_mode_away
+    to: 'on'
+
+  action:
+    - service: input_boolean.turn_off
+      data_template:
+        entity_id: >
+          {% set booleans = [ 'input_boolean.home_mode_day', 'input_boolean.home_mode_night', 'input_boolean.home_mode_away' ] | reject('equalto', trigger.entity_id) %}
+          {{ booleans | list | join(', ') }}
+
+- alias: "Home Assistant: Cambio Modalità Off"
+  trigger:
+    platform: state
+    entity_id: input_boolean.home_mode_day,
+               input_boolean.home_mode_night,
+               input_boolean.home_mode_away
+    to: 'off'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.home_mode_day
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.home_mode_night
+        state: 'off'
+      - condition: state
+        entity_id: input_boolean.home_mode_away
+        state: 'off'
+
+  action:
+    - service: input_boolean.turn_on
+      data_template: 
+        entity_id: >
+          {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 23 %}
+            input_boolean.home_mode_day
+          {% else %}
+            input_boolean.home_mode_night
+          {% endif %}
+
+######################################################################
+# Home Assistant: Management of Day/Night Mode
+######################################################################
+       
+- alias: "Home Assistant: Modalità Giorno/Notte"
+  trigger:
+    - platform: time
+      at: '07:00:00'
+    - platform: time
+      at: '23:00:00'
+    - platform: homeassistant
+      event: start
+
+  condition:
+    condition: state
+    entity_id: input_boolean.home_mode_away
+    state: 'off'
+
+  action:
+    - service: input_boolean.turn_on
+      data_template: 
+        entity_id: >-
+          {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 23 %}      
+            input_boolean.home_mode_day
+          {% else %}
+            input_boolean.home_mode_night
+          {% endif %}
+
+######################################################################
+# Home Assistant: Management of Speech Notifications
+######################################################################
+
+- alias: "Home Assistant: Gestione notifiche vocali"
+  trigger:
+    - platform: state
+      entity_id: input_boolean.home_mode_night
+      to: 'on'
+    - platform: state
+      entity_id: input_boolean.home_mode_night
+      to: 'off'
+
+  action:
+    - service_template: >-
+          {% if is_state('input_boolean.home_mode_night', 'on') %}
+            input_boolean.turn_off
+          {% else %}
+            input_boolean.turn_on
+          {% endif %}
+      data:
+        entity_id: input_boolean.speech_notifications
+   
+######################################################################
+# Home Assistant: Update Available Notifications
+######################################################################
+
+- alias: "Home Assistant: Notifica Aggiornamento"
+  trigger:
+    - platform: state
+      entity_id: updater.updater
+
+  action:
+    service: script.notify_text
+    data_template:
+      #message: "Home Assistant {{ states.updater.updater.state }} is now available. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
+      title: "Home Assistant - Aggiornamento"
+      message: "E' disponibile un aggiornamento per Home Assistant ({{ states.updater.updater.state }}). {{now().strftime('%Y-%m-%d %I:%M %p')}}"
+      enable_persistant: true
+
+######################################################################
+# Home Assistant: Startup Automation
+# - Sync with Google Assistant
+######################################################################
+
+- alias: "Home Assistant: startup automations"
+  trigger:
+    - platform: homeassistant
+      event: start
+
+  action: 
+    - delay: 0:05
+    - service: google_assistant.request_sync

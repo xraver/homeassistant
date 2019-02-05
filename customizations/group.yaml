@@ -1,0 +1,39 @@
+######################################################################
+# Group Customization for the order view
+######################################################################
+
+group.default_view:
+  order: 0
+group.cucina:
+  order: 1
+group.sala:
+  order: 2
+group.bagno:
+  order: 3
+group.studio:
+  order: 4
+group.camera:
+  order: 5
+
+group.covers:
+  order: 10
+
+group.climate:
+  order: 11
+
+group.people:
+  order: 12
+
+group.network:
+  order: 13
+
+group.weather:
+  order: 14
+
+group.settings:
+  order: 15
+
+group.all_automations:
+  hidden: false
+  control: hidden
+  friendly_name: Automazioni

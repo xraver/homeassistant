@@ -1,0 +1,32 @@
+######################################################################
+# Inputs: Home Mode
+######################################################################
+
+home_mode_day:
+  name: Giorno
+  icon: mdi:white-balance-sunny
+  initial: on
+
+home_mode_night:
+  name: Notte
+  icon: mdi:weather-night
+  initial: off
+  
+home_mode_away:
+  name: Vacanza
+  icon: mdi:airplane-takeoff
+  initial: off
+
+######################################################################
+# Inputs: Notification Settings
+######################################################################
+
+speech_notifications:
+  name: Notifiche Vocali
+  icon: mdi:speaker-wireless
+  initial: on
+
+text_notifications:
+  name: Notifiche Testuali
+  icon: mdi:message-bulleted
+  initial: on

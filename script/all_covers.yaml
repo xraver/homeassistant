@@ -1,0 +1,30 @@
+######################################################################
+# All Covers Operation
+######################################################################
+
+all_covers_operation:
+  alias: "Operazioni su tutte le Tapparelle"
+  sequence:
+    - service_template: "cover.{{modus}}_cover"
+      data:
+        entity_id: 
+          - cover.tapparella_cucina
+          - cover.tapparella_sala
+          - cover.tapparella_camera
+          - cover.tapparella_studio
+
+######################################################################
+# All Covers Position
+######################################################################
+
+all_covers_position:
+  alias: "Imposta posizione a tutte le Tapparelle"
+  sequence:
+    - service: cover.set_cover_position
+      data_template:
+        entity_id: 
+          - cover.tapparella_cucina
+          - cover.tapparella_sala
+          - cover.tapparella_camera
+          - cover.tapparella_studio
+        position: '{{ position }}'

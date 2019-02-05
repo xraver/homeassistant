@@ -1,0 +1,31 @@
+######################################################################
+# Sensor: Cover position
+######################################################################
+
+- platform: template
+  sensors:
+    tapparella_cucina:
+      friendly_name: "Cucina"
+      value_template: "{{ state_attr('cover.tapparella_cucina', 'current_position') }}" 
+      unit_of_measurement: '%'
+     
+- platform: template
+  sensors:
+    tapparella_sala:
+      friendly_name: "Sala"
+      value_template: "{{ state_attr('cover.tapparella_sala', 'current_position') }}"
+      unit_of_measurement: '%'
+
+- platform: template
+  sensors:
+    tapparella_studio:
+      friendly_name: "Studio"
+      value_template: "{{ state_attr('cover.tapparella_studio', 'current_position') }}"
+      unit_of_measurement: '%'
+
+- platform: template
+  sensors:
+    tapparella_camera:
+      friendly_name: "Camera"
+      value_template: "{{ state_attr('cover.tapparella_camera', 'current_position') }}"
+      unit_of_measurement: '%'

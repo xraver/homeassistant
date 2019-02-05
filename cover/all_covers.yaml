@@ -1,0 +1,30 @@
+- platform: template
+  covers:
+    all_covers:
+      friendly_name: "Tapparelle Globale"
+      open_cover:
+        service: script.all_covers_operation
+        data:
+          modus: 'open'
+      close_cover:
+        service: script.all_covers_operation
+        data:
+          modus: 'close'
+      stop_cover:
+        service: script.all_covers_operation
+        data:
+          modus: 'stop'
+      set_cover_position: 
+        service: script.all_covers_position
+        data_template:
+          position: "{{ position }}"
+#      value_template: 
+#      icon_template: >-
+#        {% if is_state('sensor.all_covers', 'open') %}
+#          mdi:window-open
+#        {% else %}
+#          mdi:window-closed
+#        {% endif %}
+#      entity_id:
+#        - cover.bedroom
+#        - cover.livingroom

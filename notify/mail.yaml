@@ -1,0 +1,12 @@
+######################################################################
+# Mail Server Integration
+######################################################################
+
+- name: mail
+  platform: smtp
+  server: !secret mail_server
+  port: 25
+  encryption: none
+  sender: !secret mail_sender
+  recipient: !secret mail_recipient
+  sender_name: Casa Ravera-Testa

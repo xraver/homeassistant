@@ -1,0 +1,17 @@
+######################################################################
+# Media Player Devices
+######################################################################
+
+# Samsung TV UE46C600
+media_player.ue46c7000_samsung_dtv_rcr:
+  friendly_name: TV Sala
+
+# Samsung BD-F6500
+media_player.bdf6500_bdf6500:
+  friendly_name: Blu-Ray Camera
+
+# NowTV
+media_player.roku_yd00df095157:
+  friendly_name: NowTV Anna
+media_player.roku_yd00dm481414:
+  friendly_name: NowTV Giorgio

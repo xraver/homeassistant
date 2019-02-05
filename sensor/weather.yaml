@@ -1,0 +1,53 @@
+######################################################################
+# Weather Sensor
+######################################################################
+ 
+- platform: yr
+
+#- platform: openweathermap
+#  api_key: !secret openweathermap_key
+#  forecast: 1
+#  latitude: !secret home_latitude
+#  longitude: !secret home_longitude
+#  language: it
+#  monitored_conditions:
+#    - weather
+#    - temperature
+#    - humidity
+#    - wind_speed
+#    - pressure
+#    - rain
+#    - snow
+#    - clouds
+
+- platform: darksky
+  api_key: !secret darksky_key
+  forecast:
+    - 0
+    - 1
+    - 2
+    - 3
+  language: it
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  monitored_conditions:
+    - summary
+    - icon
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - dew_point
+    - wind_speed
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+    - minutely_summary
+    - hourly_summary
+    - daily_summary
+    - temperature_high
+    - temperature_low
+    - uv_index
+  units: si
+  update_interval: 00:30

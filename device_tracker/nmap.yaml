@@ -1,0 +1,20 @@
+######################################################################
+# Device Tracker: Nmap
+######################################################################
+
+- platform: nmap_tracker
+  hosts:
+    - s9.giorgioravera.it
+    - a5.giorgioravera.it
+    - a3.giorgioravera.it
+  scan_options: " --privileged -sP "
+  # The number of minutes Nmap will not scan this device
+  home_interval: 10
+
+  # Seconds between each scan for new devices
+  interval_seconds: 60
+  # Seconds to wait till marking someone as not home after not being seen
+  consider_home: 600
+  new_device_defaults:
+    track_new_devices: false
+    hide_if_away: false

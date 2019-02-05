@@ -1,0 +1,65 @@
+######################################################################
+# Google Home Integration
+######################################################################
+
+project_id: !secret google_project
+api_key: !secret google_api_key
+#api_key: !secret google_oauth_key
+expose_by_default: false
+entity_config:
+  climate.bagno_termostato_bagno:
+    name: Termostato Bagno
+    room: Bagno
+    expose: true
+  climate.camera_termostato_camera:
+    name: Termostato Camera
+    room: Camera
+    expose: true
+  climate.cucina_termostato_cucina:
+    name: Termostato Cucina
+    room: Cucina
+    expose: true
+  climate.sala_termostato_sala:
+    name: Termostato Sala
+    room: Sala
+    expose: true
+  climate.studio_termostato_studio:
+    name: Termostato Studio
+    room: Studio
+    expose: true
+  cover.all_covers:
+    name: Tapparella Generale
+    room: Generale
+    expose: true
+  cover.tapparella_cucina:
+    name: Tapparella Cucina
+    room: Cucina
+    expose: true
+  cover.tapparella_sala:
+    name: Tapparella Sala
+    room: Sala
+    expose: true
+  cover.tapparella_studio:
+    name: Tapparella Studio
+    room: Studio
+    expose: true
+  cover.tapparella_camera:
+    name: Tapparella Camera
+    room: Camera
+    expose: true
+  input_boolean.home_mode_away:
+    name: Modalità Vacanza
+    room: Generale
+    expose: true
+  media_player.bdf6500_bdf6500:
+    name: Blue-Ray Camera
+    room: Camera
+    expose: true
+  media_player.roku_yd00dm481414:
+    name: NowTV Giorgio
+    room: Sala
+    expose: true
+  media_player.ue46c7000_samsung_dtv_rcr:
+    name: TV Sala
+    room: Sala
+    expose: true

@@ -1,0 +1,61 @@
+default_view:
+  name: Principale
+  view: true
+  icon: mdi:home
+  entities:
+    - device_tracker.giorgio
+    - device_tracker.laura
+    - sensor.home_mode
+    - group.cucina
+    - group.sala
+    - group.bagno
+    - group.studio
+    - group.camera
+    - group.home_mode
+    - gorup.all_automations
+
+cucina:
+  name: Cucina
+  control: hidden
+  entities:
+    - cover.tapparella_cucina
+    - climate.cucina_termostato_cucina
+    - media_player.google_home
+
+sala:
+  name: Sala
+  control: hidden
+  entities:
+    - cover.tapparella_sala
+    - climate.sala_termostato_sala
+#    - media_player.roku_yd00dm481414
+#    - media_player.ue46c7000_samsung_dtv_rcr 
+
+bagno:
+  name: Bagno
+  control: hidden
+  entities:
+    - climate.bagno_termostato_bagno
+
+studio:
+  name: Studio
+  control: hidden
+  entities:
+    - cover.tapparella_studio
+    - climate.studio_termostato_studio
+
+camera:
+  name: Camera
+  control: hidden
+  entities:
+    - cover.tapparella_camera
+    - climate.camera_termostato_camera
+#    - media_player.bdf6500_bdf6500
+
+home_mode:
+  name: Modalità Casa
+  control: hidden
+  entities:
+    - input_boolean.home_mode_day
+    - input_boolean.home_mode_night
+    - input_boolean.home_mode_away

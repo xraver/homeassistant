@@ -1,0 +1,8 @@
+people:
+  name: Persone
+  view: true
+  icon: mdi:account-multiple
+  entities:
+    - device_tracker.giorgio
+    - device_tracker.laura
+    - device_tracker.anna

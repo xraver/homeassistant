@@ -1,0 +1,9 @@
+######################################################################
+# Zone Work
+######################################################################
+
+name: Lavoro
+latitude: !secret work_latitude
+longitude: !secret work_longitude
+radius: 50
+icon: mdi:city

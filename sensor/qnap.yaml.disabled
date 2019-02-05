@@ -1,0 +1,15 @@
+######################################################################
+# QNAP Sensor
+######################################################################
+
+- platform: qnap
+  host: !secret qnap_host
+  username: !secret qnap_username
+  password: !secret qnap_password
+  monitored_conditions:
+    - status
+    - system_temp
+    - cpu_usage
+    - memory_percent_used
+    - drive_temp
+    - volume_percentage_used

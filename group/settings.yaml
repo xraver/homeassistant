@@ -1,0 +1,14 @@
+settings:
+  name: Configurazione
+  view: true
+  icon: mdi:settings
+  entities:
+    - group.all_automations
+    - group.ha_settings
+
+ha_settings:
+  name: Configurazione Notifiche
+  control: hidden
+  entities:
+    - input_boolean.speech_notifications
+    - input_boolean.text_notifications

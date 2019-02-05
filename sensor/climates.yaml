@@ -1,0 +1,38 @@
+######################################################################
+# Sensor: Temperature from Radiator Thermostat
+######################################################################
+
+- platform: template
+  sensors:
+    termostato_cucina:
+      friendly_name: "Cucina"
+      value_template: "{{ state_attr('climate.cucina_termostato_cucina', 'current_temperature') }}" 
+      unit_of_measurement: '°C'
+     
+- platform: template
+  sensors:
+    termostato_sala:
+      friendly_name: "Sala"
+      value_template: "{{ state_attr('climate.sala_termostato_sala', 'current_temperature') }}"
+      unit_of_measurement: '°C'
+
+- platform: template
+  sensors:
+    termostato_bagno:
+      friendly_name: "Bagno"
+      value_template: "{{ state_attr('climate.bagno_termostato_bagno', 'current_temperature') }}"
+      unit_of_measurement: '°C'
+
+- platform: template
+  sensors:
+    termostato_studio:
+      friendly_name: "Studio"
+      value_template: "{{ state_attr('climate.studio_termostato_studio', 'current_temperature') }}"
+      unit_of_measurement: '°C'
+
+- platform: template
+  sensors:
+    termostato_camera:
+      friendly_name: "Camera"
+      value_template: "{{ state_attr('climate.camera_termostato_camera', 'current_temperature') }}"
+      unit_of_measurement: '°C'

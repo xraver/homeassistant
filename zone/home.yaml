@@ -1,0 +1,9 @@
+######################################################################
+# Zone: Home
+######################################################################
+
+name: Casa
+latitude: !secret home_latitude
+longitude: !secret home_longitude
+radius: 50
+icon: mdi:home

@@ -1,0 +1,8 @@
+######################################################################
+# Push Notifications
+######################################################################
+
+- name: push
+  platform: html5
+  gcm_api_key: !secret google_push_key
+  gcm_sender_id: !secret google_push_id
