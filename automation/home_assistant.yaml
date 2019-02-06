@@ -127,5 +127,5 @@
       event: start
 
   action: 
-    - delay: 0:05
+    - delay: 00:05
     - service: google_assistant.request_sync
