@@ -1,0 +1,9 @@
+######################################################################
+# Zone: Casa Varazze
+######################################################################
+
+name: Varazze
+latitude: !secret varazze_latitude
+longitude: !secret varazze_longitude
+radius: 50
+icon: mdi:home
