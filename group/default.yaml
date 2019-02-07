@@ -4,7 +4,7 @@ default_view:
   icon: mdi:home
   entities:
     - device_tracker.google_maps_115265981849847357125
-    - device_tracker.laura
+    - device_tracker.google_maps_103158638433668748797
     - sensor.home_mode
     - group.cucina
     - group.sala

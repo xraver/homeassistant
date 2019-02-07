@@ -4,5 +4,5 @@ people:
   icon: mdi:account-multiple
   entities:
     - device_tracker.google_maps_115265981849847357125
-    - device_tracker.laura
+    - device_tracker.google_maps_103158638433668748797
     - device_tracker.anna

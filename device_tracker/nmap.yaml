@@ -9,7 +9,7 @@
     - a3.giorgioravera.it
   scan_options: " --privileged -sP "
   # The number of minutes Nmap will not scan this device
-  home_interval: 10
+  home_interval: 30
 
   # Seconds between each scan for new devices
   interval_seconds: 60

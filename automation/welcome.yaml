@@ -9,25 +9,52 @@
     - platform: state
       entity_id: 
         - device_tracker.google_maps_115265981849847357125
-        - device_tracker.laura
-      to: 'home'
+        - device_tracker.google_maps_103158638433668748797
+      to: 'Casa'
       for: '00:00:30'
 
   condition: []
-  #condition:
-    #condition: time
-    #after: '10:00:00'
-    #before: '23:00:00'
-    #condition: state 
-    #entity_id: input_boolean.home_mode_night
-    #state: 'off'
 
   action:
+    - wait_template: >- 
+        {# Giorgio #}
+        {% if is_state_attr('trigger.to_state.entity_id', 'friendly_name', 'Giorgio') %}
+          {% if is_state('device_tracker.s9', 'home') %}
+            true
+          {% else %}
+            false
+          {% endif %}
+
+        {# Laura #}
+        {% elif is_state_attr('trigger.to_state.entity_id', 'friendly_name', 'Laura') %}
+          {% if is_state('device_tracker.a5', 'home') %}
+            true
+          {% else %}
+            false
+          {% endif %}
+
+        {# Anna #}
+        {% elif is_state_attr('trigger.to_state.entity_id', 'friendly_name', 'Anna') %}
+          {% if is_state('device_tracker.a3', 'home') %}
+            true
+          {% else %}
+            false
+          {% endif %}
+
+        {# Others #}
+        {% else %}
+          false
+        {% endif %}
+
+      timeout: '00:10:00'
+      continue_on_timeout: 'false'
+
     - service: script.speech_engine
       data_template:
         language: 'it'
         message: >
-          {% set name = trigger.entity_id.split('.')[1]|replace('_', ' ') %}
+          {% set name = trigger.to_state.entity_id.split('.')[1]|replace('_', ' ') %}
+          {% set name = state_attr('trigger.to_state.entity_id', 'friendly_name') %}
           {%- macro greeting_sentence(name) -%}
           {{ [
           "Ciao " ~ name + " è un piacere rivederti a casa",
