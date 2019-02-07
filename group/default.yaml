@@ -3,7 +3,7 @@ default_view:
   view: true
   icon: mdi:home
   entities:
-    - device_tracker.giorgio
+    - google_maps_115265981849847357125
     - device_tracker.laura
     - sensor.home_mode
     - group.cucina

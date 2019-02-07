@@ -3,6 +3,6 @@ people:
   view: true
   icon: mdi:account-multiple
   entities:
-    - device_tracker.giorgio
+    - google_maps_115265981849847357125
     - device_tracker.laura
     - device_tracker.anna
