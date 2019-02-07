@@ -4,6 +4,8 @@
 ######################################################################
 
 - alias: "Notte: Chiusura Tapparelle"
+  initial_state: 'off'
+
   trigger:
     - platform: state
       entity_id: input_boolean.home_mode_night

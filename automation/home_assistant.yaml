@@ -122,6 +122,8 @@
 ######################################################################
 
 - alias: "Home Assistant: startup automations"
+  initial_state: off
+
   trigger:
     - platform: homeassistant
       event: start

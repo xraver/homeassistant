@@ -82,6 +82,9 @@ map:
 # Track the sun
 sun:
 
+# Allow diagnosing system problems
+system_health:
+
 # UPNP
 upnp:
   port_mapping: false
