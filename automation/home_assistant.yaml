@@ -111,7 +111,6 @@
   action:
     service: script.notify_text
     data_template:
-      #message: "Home Assistant {{ states.updater.updater.state }} is now available. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
       title: "Home Assistant - Aggiornamento"
       message: "E' disponibile un aggiornamento per Home Assistant ({{ states.updater.updater.state }}). {{now().strftime('%Y-%m-%d %I:%M %p')}}"
       enable_persistant: true

@@ -3,7 +3,7 @@
 # - Every working day it opens Studio Cover
 ######################################################################
 
-- alias: "Risveglio Giorgio"
+- alias: "Giorno: Risveglio Giorgio"
   trigger:
     - platform: time
       at: '07:00:00'
