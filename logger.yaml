@@ -1,0 +1,9 @@
+######################################################################
+# Logger Configuration
+# Log Severities: critical, fatal, error, warning, warn, info, debug, notset
+######################################################################
+
+default: info
+logs:
+  homeassistant.components.automation: info
+  homeassistant.components.device_tracker: warn
