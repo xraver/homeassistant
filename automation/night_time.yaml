@@ -20,4 +20,9 @@
     - service: cover.set_cover_position
       data:
         entity_id: cover.all_covers
-        position: 10
+        position: 15
+
+    - service: cover.set_cover_position
+      data:
+        entity_id: cover.tapparella_camera
+        position: 0

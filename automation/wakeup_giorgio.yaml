@@ -26,5 +26,7 @@
   action:
     - service: cover.set_cover_position
       data:
-        entity_id: cover.tapparella_studio
+        entity_id:
+          - cover.tapparella_cucina
+          - cover.tapparella_studio
         position: 85
