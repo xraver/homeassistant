@@ -42,7 +42,7 @@
     - service: input_boolean.turn_on
       data_template: 
         entity_id: >
-          {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 23 %}
+          {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
             input_boolean.home_mode_day
           {% else %}
             input_boolean.home_mode_night
@@ -55,7 +55,7 @@
 - alias: "Home Assistant: Modalità Giorno/Notte"
   trigger:
     - platform: time
-      at: '07:00:00'
+      at: '08:00:00'
     - platform: time
       at: '23:00:00'
     - platform: homeassistant
@@ -70,7 +70,7 @@
     - service: input_boolean.turn_on
       data_template: 
         entity_id: >-
-          {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 23 %}      
+          {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}      
             input_boolean.home_mode_day
           {% else %}
             input_boolean.home_mode_night
