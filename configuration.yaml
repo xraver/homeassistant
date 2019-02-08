@@ -76,6 +76,12 @@ logbook:
       - group
       - script
 
+# Log Management
+logger: !include logger.yaml
+
+# Record Management
+recorder: !include recorder.yaml
+
 # Enables a map showing the location of tracked devices
 map:
 
