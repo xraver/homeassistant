@@ -16,5 +16,5 @@
   # Seconds to wait till marking someone as not home after not being seen
   consider_home: 600
   new_device_defaults:
-    track_new_devices: false
+    track_new_devices: true
     hide_if_away: false

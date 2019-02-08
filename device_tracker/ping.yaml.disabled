@@ -4,15 +4,15 @@
 
 - platform: ping
   hosts:
-    giorgio: s9.giorgioravera.it
-    laura: a5.giorgioravera.it
-    anna: a3.giorgioravera.it
+    s9: s9.giorgioravera.it
+    a5: a5.giorgioravera.it
+    a3: a3.giorgioravera.it
   count: 5
 
   # Seconds between each scan for new devices
-  interval_seconds: 30
+  interval_seconds: 60
   # Seconds to wait till marking someone as not home after not being seen
   consider_home: 180
   new_device_defaults:
-    track_new_devices: false
+    track_new_devices: true
     hide_if_away: false
