@@ -29,7 +29,7 @@ sala:
     - cover.tapparella_sala
     - climate.sala_termostato_sala
 #    - media_player.roku_yd00dm481414
-#    - media_player.ue46c7000_samsung_dtv_rcr 
+    - media_player.tv_sala
 
 bagno:
   name: Bagno

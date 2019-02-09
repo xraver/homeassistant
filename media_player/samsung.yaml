@@ -1,0 +1,8 @@
+######################################################################
+# Samsung Media Player Devices
+######################################################################
+
+- platform: samsungtv
+  host: tv.giorgioravera.it
+  port: 55000
+  name: TV Sala 

@@ -91,6 +91,9 @@ sun:
 # Allow diagnosing system problems
 system_health:
 
+# Cloud
+# cloud:
+
 # UPNP
 upnp:
   port_mapping: false
@@ -114,8 +117,8 @@ tts:
   - platform: google
     language: it
 
-# Cloud
-# cloud:
+# Multimedia
+media_player: !include_dir_merge_list media_player/
 
 # MQTT
 mqtt:
@@ -130,7 +133,6 @@ maxcube:
   gateways:
     - host: 192.168.0.28
       port: 62910
-
 climate:
   platform: maxcube
 
