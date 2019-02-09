@@ -1,0 +1,23 @@
+######################################################################
+# Script: TV Change Channel
+# Inputs:
+# - tv
+# - channel
+#
+# Operations:
+# - media_player.play_media
+######################################################################
+
+tv_change_channel:
+  alias: TV Cambia Canale
+  sequence: 
+    - service: media_player.play_media
+      data_template:
+        entity_id: >-
+          {% if tv | length == 0 %}
+          {% set tv = 'media_player.tv_sala' %}
+          {% endif %}
+          {{ tv }}
+        media_content_type: "channel"
+        media_content_id: >-
+          {{ channel }}

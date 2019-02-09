@@ -6,9 +6,9 @@
 # - enable_persistent
 #
 # Operations:
-# - mail
-# - browser push
-# - enable_persistent notification
+# - notify.mail
+# - notify.push
+# - persistent_notification.create (if enable_persistent)
 ######################################################################
 
 notify_text_internal:
@@ -63,7 +63,15 @@ notify_text:
 
 ######################################################################
 # Script: Voice Notification
-# - google home
+# Input:
+# - media_player
+# - volume_level
+# - language
+# - message
+#
+# Operations:
+# - media_player.volume_set
+# - tts.google_say
 ######################################################################
 
 notify_voice:

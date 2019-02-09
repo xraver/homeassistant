@@ -1,5 +1,10 @@
 ######################################################################
 # All Covers Operation
+# Inputs:
+# - modus
+#
+# Operations:
+# - cover.{{modus}}_cover
 ######################################################################
 
 all_covers_operation:
@@ -15,6 +20,11 @@ all_covers_operation:
 
 ######################################################################
 # All Covers Position
+# Inputs:
+# - position
+#
+# Operations:
+# - cover.set_cover_position
 ######################################################################
 
 all_covers_position:

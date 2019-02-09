@@ -6,8 +6,8 @@
 # - message
 # - enable_greeting
 #
-# - announcement
-# - welcome_message
+# Operations:
+# - script.notify_voice (greeting + message)
 ######################################################################
 
 speech_engine:
