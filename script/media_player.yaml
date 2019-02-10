@@ -9,7 +9,7 @@
 ######################################################################
 
 tv_change_channel:
-  alias: TV Cambia Canale
+  alias: TV Cambia canale
   sequence: 
     - service: media_player.play_media
       data_template:
@@ -21,3 +21,104 @@ tv_change_channel:
         media_content_type: "channel"
         media_content_id: >-
           {{ channel }}
+
+######################################################################
+# Script: TV Volume Up
+# Inputs:
+# - tv
+#
+# Operations:
+# - media_player.volume_up
+######################################################################
+
+tv_volume_up:
+  alias: TV Alza volume
+  sequence:
+    - service: media_player.volume_up
+      data_template:
+        entity_id: >-
+          {% if tv | length == 0 %}
+          {% set tv = 'media_player.tv_sala' %}
+          {% endif %}
+          {{ tv }}
+
+######################################################################
+# Script: TV Volume Down
+# Inputs:
+# - tv
+#
+# Operations:
+# - media_player.volume_down
+######################################################################
+
+tv_volume_down:
+  alias: TV Abbassa volume
+  sequence:
+    - service: media_player.volume_down
+      data_template:
+        entity_id: >-
+          {% if tv | length == 0 %}
+          {% set tv = 'media_player.tv_sala' %}
+          {% endif %}
+          {{ tv }}
+
+######################################################################
+# Script: TV Volume Mute
+# Inputs:
+# - tv
+#
+# Operations:
+# - media_player.volume_mute
+######################################################################
+
+tv_volume_mute:
+  alias: TV Volume Muto
+  sequence:
+    - service: media_player.volume_mute
+      data_template:
+        entity_id: >-
+          {% if tv | length == 0 %}
+          {% set tv = 'media_player.tv_sala' %}
+          {% endif %}
+          {{ tv }}
+        is_volume_muted: true
+
+######################################################################
+# Script: TV Play/Pause
+# Inputs:
+# - tv
+#
+# Operations:
+# - media_player.media_play_pause
+######################################################################
+
+tv_play_pause:
+  alias: TV Play/Pause
+  sequence:
+    - service: media_player.media_play_pause
+      data_template:
+        entity_id: >-
+          {% if tv | length == 0 %}
+          {% set tv = 'media_player.tv_sala' %}
+          {% endif %}
+          {{ tv }}
+
+######################################################################
+# Script: TV Toggle
+# Inputs:
+# - tv
+#
+# Operations:
+# - media_player.toggle
+######################################################################
+
+tv_toggle:
+  alias: TV Accendi/Spegni
+  sequence:
+    - service: media_player.toggle
+      data_template:
+        entity_id: >-
+          {% if tv | length == 0 %}
+          {% set tv = 'media_player.tv_sala' %}
+          {% endif %}
+          {{ tv }}

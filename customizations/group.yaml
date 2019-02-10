@@ -21,17 +21,20 @@ group.covers:
 group.climate:
   order: 11
 
-group.people:
+group.media_player:
   order: 12
 
-group.network:
+group.people:
   order: 13
 
-group.weather:
+group.network:
   order: 14
 
-group.settings:
+group.weather:
   order: 15
+
+group.settings:
+  order: 16
 
 group.all_automations:
   hidden: false

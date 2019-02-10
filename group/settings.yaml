@@ -3,6 +3,7 @@ settings:
   view: true
   icon: mdi:settings
   entities:
+    - binary_sensor.home_mode 
     - group.all_automations
     - group.ha_settings
 

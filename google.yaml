@@ -55,11 +55,7 @@ entity_config:
     name: Blue-Ray Camera
     room: Camera
     expose: true
-  media_player.roku_yd00dm481414:
-    name: NowTV Giorgio
-    room: Sala
-    expose: true
-  media_player.ue46c7000_samsung_dtv_rcr:
+  media_player.tv_sala:
     name: TV Sala
     room: Sala
     expose: true

@@ -109,9 +109,6 @@ cover: !include_dir_merge_list cover/
 # Switches
 switch: !include_dir_merge_list switch/
 
-# Input Boolean
-input_boolean: !include_dir_merge_named input_boolean/
-
 # Text to speech
 tts:
   - platform: google
@@ -131,13 +128,18 @@ mqtt:
 # EQ3 Max Cube
 maxcube:
   gateways:
-    - host: 192.168.0.28
+    - host: maxcube.giorgioravera.it
       port: 62910
 climate:
   platform: maxcube
 
 # Google Assistant
 google_assistant: !include google.yaml
+
+# Inputs
+input_boolean: !include_dir_merge_named input_boolean/
+input_text: !include_dir_merge_named input_text/
+#input_number: !include_dir_merge_list input_number/
 
 # Zones
 zone: !include_dir_list zone/

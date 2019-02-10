@@ -5,7 +5,6 @@
 home_mode_day:
   name: Giorno
   icon: mdi:white-balance-sunny
-  initial: on
 
 home_mode_night:
   name: Notte
@@ -15,7 +14,6 @@ home_mode_night:
 home_mode_away:
   name: Vacanza
   icon: mdi:airplane-takeoff
-  initial: off
 
 ######################################################################
 # Inputs: Notification Settings

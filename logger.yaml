@@ -7,3 +7,4 @@ default: info
 logs:
   homeassistant.components.automation: info
   homeassistant.components.device_tracker: warn
+  homeassistant.components.input_text: info
