@@ -3,7 +3,15 @@ media_player:
   view: true
   icon: mdi:television
   entities:
+    - group.google_home
     - group.tv_sala
+
+google_home:
+  name: Google Home Cucina
+  control: hidden
+  entities:
+  - media_player.google_home
+  - input_text.google_home_speak
     
 tv_sala:
   name: TV Sala
@@ -16,3 +24,5 @@ tv_sala:
   - script.tv_play_pause
   - script.tv_toggle
   - input_text.tv_change_channel
+  
+

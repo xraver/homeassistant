@@ -8,3 +8,10 @@ tv_change_channel:
   max: 3
   pattern: '[1-999]'
   mode: text
+
+######################################################################
+# Input Text: Google Home Speak 
+######################################################################
+google_home_speak:
+  name: Pronuncia
+  mode: text
