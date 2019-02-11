@@ -26,7 +26,7 @@
 
 - platform: template
   sensors:
-    text_notirication:
+    text_notification:
       friendly_name: Notifiche testuali
       entity_id: input_boolean.text_notifications
       value_template: >-
@@ -44,7 +44,7 @@
 
 - platform: template
   sensors:
-    speech_notirication:
+    speech_notification:
       friendly_name: Notifiche vocali
       entity_id: input_boolean.speech_notifications
       value_template: >-
