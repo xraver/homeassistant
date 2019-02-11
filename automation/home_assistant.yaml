@@ -128,3 +128,26 @@
   action: 
     - delay: 00:05
     - service: google_assistant.request_sync
+    
+######################################################################
+# Home Assistant: Weekly Clean Log
+# - tts.clear_cache
+# - system_log.clear
+# - recorder.purge
+######################################################################
+
+- alias: "Home Assistant: Pulitura settimanale log"
+  trigger: 
+    - platform: time
+      at: '00:00:00'
+
+  condition:
+    - condition: time
+      weekday: [mon]
+
+  action:
+    - service: tts.clear_cache
+    - service: system_log.clear
+    - service: recorder.purge
+      data:
+        keep_days: 0
