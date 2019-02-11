@@ -9,7 +9,7 @@
 # - temp5
 #
 # Operations:
-# - cover.{{modus}}_cover
+# - climate.set_temperature
 ######################################################################
 
 climate_daily_schedule:

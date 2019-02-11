@@ -2,7 +2,7 @@
 # Home Assistant: Management of the Home Mode Button
 ######################################################################
 
-- alias: "Home Assistant: Cambio Modalità On"
+- alias: "Home Assistant: Cambio modalità On"
   trigger:
     platform: state
     entity_id: input_boolean.home_mode_day,
@@ -17,7 +17,7 @@
           {% set booleans = [ 'input_boolean.home_mode_day', 'input_boolean.home_mode_night', 'input_boolean.home_mode_away' ] | reject('equalto', trigger.entity_id) %}
           {{ booleans | list | join(', ') }}
 
-- alias: "Home Assistant: Cambio Modalità Off"
+- alias: "Home Assistant: Cambio modalità Off"
   trigger:
     platform: state
     entity_id: input_boolean.home_mode_day,
@@ -52,7 +52,7 @@
 # Home Assistant: Management of Day/Night Mode
 ######################################################################
        
-- alias: "Home Assistant: Modalità Giorno/Notte"
+- alias: "Home Assistant: Modalità giorno/Notte"
   trigger:
     - platform: time
       at: '08:00:00'
@@ -103,7 +103,7 @@
 # Home Assistant: Update Available Notifications
 ######################################################################
 
-- alias: "Home Assistant: Notifica Aggiornamento"
+- alias: "Home Assistant: Notifica aggiornamento"
   trigger:
     - platform: state
       entity_id: updater.updater
@@ -120,7 +120,7 @@
 # - Sync with Google Assistant
 ######################################################################
 
-- alias: "Home Assistant: startup automations"
+- alias: "Home Assistant: Startup automations"
   trigger:
     - platform: homeassistant
       event: start

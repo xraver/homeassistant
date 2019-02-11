@@ -3,7 +3,7 @@
 # - script.tv_change_channel
 ######################################################################
 
-- alias: "TV: cambia canale"
+- alias: "TV: Cambia canale"
   trigger:
     - platform: state
       entity_id: input_text.tv_change_channel
@@ -21,7 +21,7 @@
 # - script.notify_voice
 ######################################################################
 
-- alias: "Google Home: pronuncia testo"
+- alias: "Google Home: Pronuncia testo"
   trigger:
     - platform: state
       entity_id: input_text.google_home_speak

@@ -3,7 +3,9 @@
 # - script.climate_daily_schedule
 ######################################################################
 
-- alias: "Termosifoni: Schedule Feriale"
+- alias: "Termosifoni: Schedulazione giornaliera feriale"
+  initial_state: 'off'
+
   trigger:
     - platform: time
       at: '06:30:00'
@@ -15,9 +17,9 @@
       at: '18:30:00'
     - platform: time
       at: '22:00:00'
-    - platform: state
-      entity_id: input_boolean.home_mode_away
-      to: 'off'
+#    - platform: state
+#      entity_id: input_boolean.home_mode_away
+#      to: 'off'
 
   condition:
     condition: and
@@ -54,7 +56,7 @@
         temp1: 19
         temp2: 18
         temp3: 19
-        temp4: 29.5
+        temp4: 19.5
         temp5: 16
 
     - service: script.climate_daily_schedule
@@ -77,24 +79,50 @@
 
 ######################################################################
 # Climate: Away Mode
+# - climate.set_operation_mode
 # - climate.set_temperature
 ######################################################################
 
-- alias: "Termosifoni: modalità vacanza"
+- alias: "Termosifoni: Modalità vacanza"
+  initial_state: 'off'
+
   trigger:
     - platform: state
       entity_id: input_boolean.home_mode_away
       to: 'on'
+    - platform: state
+      entity_id: input_boolean.home_mode_away
+      to: 'off'
 
   condition: []
 
   action:
-    - service: climate.set_temperature
-      data:
+    - service: climate.set_operation_mode
+      data_template:
         entity_id:
         - climate.cucina_termostato_cucina
         - climate.sala_termostato_sala
         - climate.bagno_termostato_bagno
         - climate.studio_termostato_studio
         - climate.camera_termostato_camera
-        temperature: 16
+        operation_mode: >-
+          {% if trigger.to_state.state == 'on' %}
+            vacation
+          {% else %}
+            auto
+          {% endif %}
+    
+    - service: climate.set_temperature
+      data_template:
+        entity_id:
+        - climate.cucina_termostato_cucina
+        - climate.sala_termostato_sala
+        - climate.bagno_termostato_bagno
+        - climate.studio_termostato_studio
+        - climate.camera_termostato_camera
+        temperature: >-
+          {% if trigger.to_state.state == 'on' %}
+            10
+          {% else %}
+            19
+          {% endif %}
