@@ -16,12 +16,7 @@
         state: 'off'
 
       - condition: time
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
+        weekday: [mon, tue, wed, thu, fri]
 
   action:
     - service: cover.set_cover_position

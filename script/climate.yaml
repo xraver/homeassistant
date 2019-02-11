@@ -1,0 +1,38 @@
+######################################################################
+# Climate: Daily Schedule
+# Inputs:
+# - entity_id
+# - temp1
+# - temp2
+# - temp3
+# - temp4
+# - temp5
+#
+# Operations:
+# - cover.{{modus}}_cover
+######################################################################
+
+climate_daily_schedule:
+  alias: "Termosifoni: Schedulazione giornaliera"
+  sequence:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: {{ entity_id }}
+        temperature: >-
+          {% set current_date_string = now().strftime("%H%M") %}
+          {% set time1_string = ("0630") %}
+          {% set time2_string = ("0730") %}
+          {% set time3_string = ("0900") %}
+          {% set time4_string = ("1830") %}
+          {% set time5_string = ("2200") %}
+          {% if (current_date_string|int >= (time1_string)|int) and ((current_date_string|int < (time2_string)|int)) %}
+            {{ temp1 }}
+          {% eliif (current_date_string|int >= (time2_string)|int) and ((current_date_string|int < (time3_string)|int)) %}
+            {{ temp2 }}
+          {% elif (current_date_string|int >= (time3_string)|int) and ((current_date_string|int < (time4_string)|int)) %}
+            {{ temp3 }}
+          {% elif (current_date_string|int >= (time4_string)|int) and ((current_date_string|int < (time5_string)|int)) %}
+            {{ temp4 }}
+          {% else % }
+            {{ temp5 }}
+          {% endif %}

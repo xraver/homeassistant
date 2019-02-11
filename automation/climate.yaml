@@ -1,9 +1,9 @@
 ######################################################################
 # Climate: Weekly Schedule
-# - climate.set_temperature
+# - script.climate_daily_schedule
 ######################################################################
 
-- alias: "Termosifoni: Schedule Settimanale"
+- alias: "Termosifoni: Schedule Feriale"
   trigger:
     - platform: time
       at: '06:30:00'
@@ -24,100 +24,50 @@
         state: 'off'
 
       - condition: time
-        weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
+        weekday: [mon, tue, wed, thu, fri]
 
   action:
-    - service: climate.set_temperature
+    - service: script.climate_daily_schedule
       data_template:
         entity_id: climate.bagno_termostato_cucina
-        temperature: >-
-        {% if trigger.now.hour == 6 %}
-          20
-        {% elif trigger.now.hour == 7 %}
-          18
-        {% elif trigger.now.hour == 9 %}
-          20
-        {% elif trigger.now.hour == 18 %}
-          20.5
-        {% elif trigger.now.hour == 22 %}
-          16
-        {% else % }
-          16
-        {% endif %}
+        temp1: 20
+        temp2: 18
+        temp3: 20
+        temp4: 20.5
+        temp5: 16
 
-    - service: climate.set_temperature
+    - service: script.climate_daily_schedule
       data_template:
         entity_id: climate.bagno_termostato_sala
-        temperature: >-
-        {% if trigger.now.hour == 6 %}
-          18
-        {% elif trigger.now.hour == 7 %}
-          18
-        {% elif trigger.now.hour == 9 %}
-          19.5
-        {% elif trigger.now.hour == 18 %}
-          20
-        {% elif trigger.now.hour == 22 %}
-          16
-        {% else % }
-          16
-        {% endif %}
+        temp1: 18
+        temp2: 18
+        temp3: 19.5
+        temp4: 20
+        temp5: 16
 
-    - service: climate.set_temperature
+    - service: script.climate_daily_schedule
       data_template:
         entity_id: climate.bagno_termostato_bagno
-        temperature: >-
-        {% if trigger.now.hour == 6 %}
-          19
-        {% elif trigger.now.hour == 7 %}
-          18
-        {% elif trigger.now.hour == 9 %}
-          19
-        {% elif trigger.now.hour == 18 %}
-          19.5
-        {% elif trigger.now.hour == 22 %}
-          16
-        {% else % }
-          16
-        {% endif %}
+        temp1: 19
+        temp2: 18
+        temp3: 19
+        temp4: 29.5
+        temp5: 16
 
-    - service: climate.set_temperature
+    - service: script.climate_daily_schedule
       data_template:
         entity_id: climate.bagno_termostato_studio
-        temperature: >-
-        {% if trigger.now.hour == 6 %}
-          18
-        {% elif trigger.now.hour == 7 %}
-          18
-        {% elif trigger.now.hour == 9 %}
-          19.5
-        {% elif trigger.now.hour == 18 %}
-          20
-        {% elif trigger.now.hour == 22 %}
-          16
-        {% else % }
-          16
-        {% endif %}
+        temp1: 18
+        temp2: 18
+        temp3: 19.5
+        temp4: 20
+        temp5: 16
 
-    - service: climate.set_temperature
+    - service: script.climate_daily_schedule
       data_template:
         entity_id: climate.bagno_termostato_camera
-        temperature: >-
-        {% if trigger.now.hour == 6 %}
-          19
-        {% elif trigger.now.hour == 7 %}
-          18
-        {% elif trigger.now.hour == 9 %}
-          19
-        {% elif trigger.now.hour == 18 %}
-          19.5
-        {% elif trigger.now.hour == 22 %}
-          16
-        {% else % }
-          16
-        {% endif %}
+        temp1: 19
+        temp2: 18
+        temp3: 19
+        temp4: 19.5
+        temp5: 16
