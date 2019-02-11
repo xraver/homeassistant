@@ -9,7 +9,7 @@
 ######################################################################
 
 tv_change_channel:
-  alias: TV Cambia canale
+  alias: "TV: Cambia canale"
   sequence: 
     - service: media_player.play_media
       data_template:
@@ -32,7 +32,7 @@ tv_change_channel:
 ######################################################################
 
 tv_volume_up:
-  alias: TV Alza volume
+  alias: "TV: Alza volume"
   sequence:
     - service: media_player.volume_up
       data_template:
@@ -52,7 +52,7 @@ tv_volume_up:
 ######################################################################
 
 tv_volume_down:
-  alias: TV Abbassa volume
+  alias: "TV: Abbassa volume"
   sequence:
     - service: media_player.volume_down
       data_template:
@@ -72,7 +72,7 @@ tv_volume_down:
 ######################################################################
 
 tv_volume_mute:
-  alias: TV Volume Muto
+  alias: "TV: Volume Muto"
   sequence:
     - service: media_player.volume_mute
       data_template:
@@ -93,7 +93,7 @@ tv_volume_mute:
 ######################################################################
 
 tv_play_pause:
-  alias: TV Play/Pause
+  alias: "TV: Play/Pause"
   sequence:
     - service: media_player.media_play_pause
       data_template:
@@ -113,7 +113,7 @@ tv_play_pause:
 ######################################################################
 
 tv_toggle:
-  alias: TV Accendi/Spegni
+  alias: "TV: Accendi/Spegni"
   sequence:
     - service: media_player.toggle
       data_template:
