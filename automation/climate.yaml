@@ -1,0 +1,123 @@
+######################################################################
+# Climate: Weekly Schedule
+# - climate.set_temperature
+######################################################################
+
+- alias: "Termosifoni: Schedule Settimanale"
+  trigger:
+    - platform: time
+      at: '06:30:00'
+    - platform: time
+      at: '07:30:00'
+    - platform: time
+      at: '09:00:00'
+    - platform: time
+      at: '18:30:00'
+    - platform: time
+      at: '22:00:00'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.home_mode_away
+        state: 'off'
+
+      - condition: time
+        weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+
+  action:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: climate.bagno_termostato_cucina
+        temperature: >-
+        {% if trigger.now.hour == 6 %}
+          20
+        {% elif trigger.now.hour == 7 %}
+          18
+        {% elif trigger.now.hour == 9 %}
+          20
+        {% elif trigger.now.hour == 18 %}
+          20.5
+        {% elif trigger.now.hour == 22 %}
+          16
+        {% else % }
+          16
+        {% endif %}
+
+    - service: climate.set_temperature
+      data_template:
+        entity_id: climate.bagno_termostato_sala
+        temperature: >-
+        {% if trigger.now.hour == 6 %}
+          18
+        {% elif trigger.now.hour == 7 %}
+          18
+        {% elif trigger.now.hour == 9 %}
+          19.5
+        {% elif trigger.now.hour == 18 %}
+          20
+        {% elif trigger.now.hour == 22 %}
+          16
+        {% else % }
+          16
+        {% endif %}
+
+    - service: climate.set_temperature
+      data_template:
+        entity_id: climate.bagno_termostato_bagno
+        temperature: >-
+        {% if trigger.now.hour == 6 %}
+          19
+        {% elif trigger.now.hour == 7 %}
+          18
+        {% elif trigger.now.hour == 9 %}
+          19
+        {% elif trigger.now.hour == 18 %}
+          19.5
+        {% elif trigger.now.hour == 22 %}
+          16
+        {% else % }
+          16
+        {% endif %}
+
+    - service: climate.set_temperature
+      data_template:
+        entity_id: climate.bagno_termostato_studio
+        temperature: >-
+        {% if trigger.now.hour == 6 %}
+          18
+        {% elif trigger.now.hour == 7 %}
+          18
+        {% elif trigger.now.hour == 9 %}
+          19.5
+        {% elif trigger.now.hour == 18 %}
+          20
+        {% elif trigger.now.hour == 22 %}
+          16
+        {% else % }
+          16
+        {% endif %}
+
+    - service: climate.set_temperature
+      data_template:
+        entity_id: climate.bagno_termostato_camera
+        temperature: >-
+        {% if trigger.now.hour == 6 %}
+          19
+        {% elif trigger.now.hour == 7 %}
+          18
+        {% elif trigger.now.hour == 9 %}
+          19
+        {% elif trigger.now.hour == 18 %}
+          19.5
+        {% elif trigger.now.hour == 22 %}
+          16
+        {% else % }
+          16
+        {% endif %}
