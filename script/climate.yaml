@@ -33,6 +33,6 @@ climate_daily_schedule:
             {{ temp3 }}
           {% elif ((current_date_string|int) >= (time4_string|int)) and ((current_date_string|int) < (time5_string|int)) %}
             {{ temp4 }}
-          {% else % }
+          {% else %}
             {{ temp5 }}
           {% endif %}

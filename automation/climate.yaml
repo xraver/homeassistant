@@ -29,7 +29,7 @@
   action:
     - service: script.climate_daily_schedule
       data_template:
-        entity_id: climate.bagno_termostato_cucina
+        entity_id: climate.cucina_termostato_cucina
         temp1: 20
         temp2: 18
         temp3: 20
@@ -38,7 +38,7 @@
 
     - service: script.climate_daily_schedule
       data_template:
-        entity_id: climate.bagno_termostato_sala
+        entity_id: climate.sala_termostato_sala
         temp1: 18
         temp2: 18
         temp3: 19.5
@@ -56,7 +56,7 @@
 
     - service: script.climate_daily_schedule
       data_template:
-        entity_id: climate.bagno_termostato_studio
+        entity_id: climate.studio_termostato_studio
         temp1: 18
         temp2: 18
         temp3: 19.5
@@ -65,7 +65,7 @@
 
     - service: script.climate_daily_schedule
       data_template:
-        entity_id: climate.bagno_termostato_camera
+        entity_id: climate.camera_termostato_camera
         temp1: 19
         temp2: 18
         temp3: 19
