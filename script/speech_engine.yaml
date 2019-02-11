@@ -15,12 +15,9 @@ speech_engine:
   sequence: 
     - service: script.notify_voice
       data_template:
-        media_player: >-
-          {{ media_player }}
-        volume_level: >-
-          {{ volume_level }}
-        language: >-
-          {{ language }}
+        media_player: "{{ media_player }}"
+        volume_level: "{{ volume_level }}"
+        language: "{{ language }}"
         message: >-
           {# greeting message #}    
           {% if enable_greeting == true %}
