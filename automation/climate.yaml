@@ -15,6 +15,9 @@
       at: '18:30:00'
     - platform: time
       at: '22:00:00'
+    - platform: state
+      entity_id: input_boolean.home_mode_away
+      to: 'off'
 
   condition:
     condition: and
@@ -71,3 +74,27 @@
         temp3: 19
         temp4: 19.5
         temp5: 16
+
+######################################################################
+# Climate: Away Mode
+# - climate.set_temperature
+######################################################################
+
+- alias: "Termosifoni: modalità vacanza"
+  trigger:
+    - platform: state
+      entity_id: input_boolean.home_mode_away
+      to: 'on'
+
+  condition: []
+
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id:
+        - climate.cucina_termostato_cucina
+        - climate.sala_termostato_sala
+        - climate.bagno_termostato_bagno
+        - climate.studio_termostato_studio
+        - climate.camera_termostato_camera
+        temperature: 16
