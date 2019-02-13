@@ -51,10 +51,10 @@ entity_config:
     name: Modalità Vacanza
     room: Generale
     expose: true
-  media_player.bdf6500_bdf6500:
-    name: Blue-Ray Camera
-    room: Camera
-    expose: true
+#  media_player.bdf6500_bdf6500:
+#    name: Blue-Ray Camera
+#    room: Camera
+#    expose: true
   media_player.tv_sala:
     name: TV Sala
     room: Sala
