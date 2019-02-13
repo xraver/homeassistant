@@ -6,4 +6,4 @@ name: Morgex
 latitude: !secret morgex_latitude
 longitude: !secret morgex_longitude
 radius: 50
-icon: mdi:home
+icon: mdi:image-filter-hdr
