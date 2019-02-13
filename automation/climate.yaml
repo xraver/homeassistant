@@ -97,32 +97,26 @@
   condition: []
 
   action:
-    - service: climate.set_operation_mode
+    - service: script.climate_away_mode
       data_template:
-        entity_id:
-        - climate.cucina_termostato_cucina
-        - climate.sala_termostato_sala
-        - climate.bagno_termostato_bagno
-        - climate.studio_termostato_studio
-        - climate.camera_termostato_camera
-        operation_mode: >-
-          {% if trigger.to_state.state == 'on' %}
-            vacation
-          {% else %}
-            auto
-          {% endif %}
-    
-    - service: climate.set_temperature
+        entity_id: climate.cucina_termostato_cucina
+
+    - service: script.climate_away_mode
       data_template:
-        entity_id:
-        - climate.cucina_termostato_cucina
-        - climate.sala_termostato_sala
-        - climate.bagno_termostato_bagno
-        - climate.studio_termostato_studio
-        - climate.camera_termostato_camera
-        temperature: >-
-          {% if trigger.to_state.state == 'on' %}
-            10
-          {% else %}
-            19
-          {% endif %}
+        entity_id: climate.sala_termostato_sala
+        mode: trigger.to_state.state
+
+    - service: script.climate_away_mode
+      data_template:
+        entity_id: climate.bagno_termostato_bagno
+        mode: trigger.to_state.state
+          
+    - service: script.climate_away_mode
+      data_template:
+        entity_id: climate.studio_termostato_studio
+        mode: trigger.to_state.state
+          
+    - service: script.climate_away_mode
+      data_template:
+        entity_id: climate.camera_termostato_camera
+        mode: trigger.to_state.state

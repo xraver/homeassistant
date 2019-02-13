@@ -4,12 +4,12 @@
 
 - platform: dnsip
   hostname: xraver.duckdns.org
-  name: hass
+  name: ip_1
   resolver: 8.8.8.8
   scan_interval: 1800
   
- - platform: dnsip
-   hostname: xraver2.duckdns.org
-   name: hass
-   resolver: 8.8.8.8
-   scan_interval: 1800
+- platform: dnsip
+  hostname: xraver2.duckdns.org
+  name: ip_2
+  resolver: 8.8.8.8
+  scan_interval: 1800

@@ -3,9 +3,17 @@ network:
   view: true
   icon: mdi:lan
   entities:
+    - group.ip
     - group.speedtest
     - group.pfsense
 #    - group.qnap
+
+ip:
+  name: External IP 
+  control: hidden
+  entities:
+    - sensor.ip_1
+    - sensor.ip_2
 
 speedtest:
   name: Speed Test

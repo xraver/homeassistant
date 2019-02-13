@@ -36,3 +36,37 @@ climate_daily_schedule:
           {% else %}
             {{ temp5 }}
           {% endif %}
+
+######################################################################
+# Climate: Away Mode
+# Inputs:
+# - entity_id
+# - mode
+#
+# Operations:
+# - climate.set_operation_mode
+# - climate.set_temperature
+######################################################################
+
+climate_away_mode:
+  alias: "Termosifoni: Modalità vacanza"
+  sequence:
+    - service: climate.set_operation_mode
+      data_template:
+        entity_id: "{{ entity_id }}"
+        operation_mode: >-
+          {% if mode == 'on' %}
+            vacation
+          {% else %}
+            auto
+          {% endif %}
+    - delay: '00:00:30'
+    - service: climate.set_temperature
+      data_template:
+        entity_id: "{{ entity_id }}"
+        temperature: >-
+          {% if mode == 'on' %}
+            10
+          {% else %}
+            19
+          {% endif %}
