@@ -24,5 +24,3 @@ tv_sala:
   - script.tv_play_pause
   - script.tv_toggle
   - input_text.tv_change_channel
-  
-
