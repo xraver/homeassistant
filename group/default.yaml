@@ -12,7 +12,7 @@ default_view:
     - group.studio
     - group.camera
     - group.home_mode
-    - gorup.all_automations
+    - gorup.train
 
 cucina:
   name: Cucina
@@ -59,3 +59,11 @@ home_mode:
     - input_boolean.home_mode_day
     - input_boolean.home_mode_night
     - input_boolean.home_mode_away
+
+train:
+  name: Treni
+  control: hidden
+  entities:
+    - sensor.train_11229
+    - sensor.train_11354
+    - sensor.train_24529

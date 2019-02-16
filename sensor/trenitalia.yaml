@@ -1,7 +1,0 @@
-- platform: viaggiatreno
-  train_id: 11229
-  station_id: S08409
-
-- platform: viaggiatreno
-  train_id: 11354
-  station_id: S04220

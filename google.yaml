@@ -4,7 +4,6 @@
 
 project_id: !secret google_project
 api_key: !secret google_api_key
-#api_key: !secret google_oauth_key
 expose_by_default: false
 entity_config:
   climate.bagno_termostato_bagno:

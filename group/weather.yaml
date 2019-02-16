@@ -5,10 +5,36 @@ weather:
   entities:
     - sun.sun
     - sensor.yr_symbol
-#    - sensor.dark_sky_icon
-#    - sensor.dark_sky_summary
-#    - sensor.dark_sky_daily_summary
-#    - sensor.dark_sky_precip_probability
-#    - sensor.dark_sky_temperature
-#    - sensor.dark_sky_cloud_coverage
-#    - sensor.dark_sky_uv_index
+    - group.dark_sky_today
+    - group.dark_sky_tomorrow
+
+dark_sky_today:
+  name: Oggi
+  control: hidden
+  entities:
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_wind_speed
+    - sensor.dark_sky_visibility
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_pressure
+    - sensor.dark_sky_uv_index
+
+dark_sky_tomorrow:
+  name: Domani
+  control: hidden
+  entities:
+    - sensor.dark_sky_summary_0
+    - sensor.dark_sky_daytime_high_temperature_0
+    - sensor.dark_sky_overnight_low_temperature_0
+    - sensor.dark_sky_cloud_coverage_0
+    - sensor.dark_sky_precip_probability_0
+    - sensor.dark_sky_precip_intensity_0
+    - sensor.dark_sky_wind_speed_0
+    - sensor.dark_sky_visibility_0
+    - sensor.dark_sky_humidity_0
+    - sensor.dark_sky_pressure_0
+    - sensor.dark_sky_uv_index_0

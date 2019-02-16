@@ -23,6 +23,10 @@ frontend:
 # Enables configuration UI
 config:
 
+# Lovelace UI Mode
+# lovelace:
+#   mode: yaml
+
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
    # api_password: !secret http_password
@@ -37,10 +41,6 @@ http:
    #   - 192.168.2.0
    ip_ban_enabled: True
    login_attempts_threshold: 3
-
-# Lovelace UI Mode
-# lovelace:
-#   mode: yaml
 
 # Checks for available updates
 # Note: This component will send some information about your system to
