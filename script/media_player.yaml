@@ -19,8 +19,7 @@ tv_change_channel:
           {% endif %}
           {{ tv }}
         media_content_type: "channel"
-        media_content_id: >-
-          {{ channel }}
+        media_content_id: "{{ channel }}"
 
 ######################################################################
 # Script: TV Volume Up
