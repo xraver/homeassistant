@@ -24,9 +24,6 @@
   api_key: !secret darksky_key
   forecast:
     - 0
-    - 1
-    - 2
-    - 3
   language: it
   latitude: !secret home_latitude
   longitude: !secret home_longitude
@@ -50,4 +47,4 @@
     - temperature_low
     - uv_index
   units: si
-  update_interval: 00:30
+  update_interval: 02:00
