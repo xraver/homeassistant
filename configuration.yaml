@@ -66,6 +66,8 @@ history:
     domains:
       - automation
       - group
+      - input_boolean
+      - input_text
       - script
     
 # View all events in a logbook
@@ -74,6 +76,8 @@ logbook:
     domains:
       - automation
       - group
+      - input_boolean
+      - input_text
       - script
 
 # Log Management
