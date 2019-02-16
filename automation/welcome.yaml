@@ -5,6 +5,8 @@
 ######################################################################
 
 - alias: Saluto di benvenuto
+  initial_state: 'on'
+
   trigger:
     - platform: state
       entity_id: 

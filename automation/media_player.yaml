@@ -4,6 +4,8 @@
 ######################################################################
 
 - alias: "TV: Cambia canale"
+  initial_state: 'on'
+
   trigger:
     - platform: state
       entity_id: input_text.tv_change_channel
@@ -22,6 +24,8 @@
 ######################################################################
 
 - alias: "Google Home: Pronuncia testo"
+  initial_state: 'on'
+
   trigger:
     - platform: state
       entity_id: input_text.google_home_speak
