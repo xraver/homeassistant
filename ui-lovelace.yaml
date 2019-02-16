@@ -1,0 +1,2 @@
+title: Casa Ravera-Testa
+views: !include_dir_merge_list lovelace/

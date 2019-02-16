@@ -1,0 +1,61 @@
+- title: Principale
+  id: main
+  #icon: mdi:home-assistant
+  icon: mdi:home
+  badges:
+    - device_tracker.google_maps_115265981849847357125
+    - device_tracker.google_maps_103158638433668748797
+    - binary_sensor.home_mode
+    - binary_sensor.speech_notifications
+    - binary_sensor.text_notifications
+
+  cards:
+  - type: picture-glance
+    title: Cucina
+    show_state: false
+    image: /local/rooms/cucina.jpg
+    entities:
+    - cover.tapparella_cucina
+    - climate.cucina_termostato_cucina
+    - media_player.google_home
+
+  - type: picture-glance
+    title: Sala
+    show_state: true
+    image: /local/rooms/sala.jpg
+    entities: 
+    - cover.tapparella_sala
+    - climate.sala_termostato_sala
+#    - media_player.roku_yd00dm481414
+#    - media_player.ue46c7000_samsung_dtv_rcr
+
+  - type: picture-glance
+    title: Bagno
+    show_state: true
+    image: /local/rooms/bagno.jpg
+    entities: 
+    - climate.bagno_termostato_bagno
+
+  - type: picture-glance
+    title: Studio
+    show_state: true
+    image: /local/rooms/studio.jpg
+    entities: 
+    - cover.tapparella_studio
+    - climate.studio_termostato_studio
+
+  - type: picture-glance
+    title: Camera
+    show_state: true
+    image: /local/rooms/camera.jpg
+    entities: 
+    - cover.tapparella_camera
+    - climate.camera_termostato_camera
+
+  - type: entities
+    title: Modalità Casa
+    show_header_toggle: false
+    entities:
+    - input_boolean.home_mode_day
+    - input_boolean.home_mode_night
+    - input_boolean.home_mode_away

@@ -1,0 +1,25 @@
+- title: Termostato
+  id: climate
+  icon: mdi:thermometer
+  badges:
+    - sensor.termostato_cucina
+    - sensor.termostato_sala
+    - sensor.termostato_bagno
+    - sensor.termostato_studio
+    - sensor.termostato_camera
+
+  cards:
+    - type: thermostat
+      entity: climate.cucina_termostato_cucina
+
+    - type: thermostat
+      entity: climate.sala_termostato_sala
+
+    - type: thermostat
+      entity: climate.bagno_termostato_bagno
+
+    - type: thermostat
+      entity: climate.studio_termostato_studio
+
+    - type: thermostat
+      entity: climate.camera_termostato_camera

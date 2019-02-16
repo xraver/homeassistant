@@ -1,0 +1,19 @@
+- title: Tapparelle
+  id: covers
+  icon: mdi:window-closed
+  badges:
+    - sensor.tapparella_cucina
+    - sensor.tapparella_sala
+    - sensor.tapparella_studio
+    - sensor.tapparella_camera
+
+  cards:
+    - type: entities
+      title: Comandi tapparelle
+      show_header_toggle: false
+      entities:
+        - cover.all_covers
+        - cover.tapparella_cucina
+        - cover.tapparella_sala
+        - cover.tapparella_studio
+        - cover.tapparella_camera
