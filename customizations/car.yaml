@@ -1,0 +1,77 @@
+######################################################################
+# Mercedes Me 
+######################################################################
+
+# Sensori
+binary_sensor.ff590mr_decklid_status:
+  friendly_name: Bagagliaio
+binary_sensor.ff590mr_warning_washwater:
+  friendly_name: Liquido lavacristalli
+binary_sensor.ff590mr_warning_breakfluid:
+  friendly_name: Liquido freni
+binary_sensor.ff590mr_parkbreak_status:
+  friendly_name: Freno a mano
+binary_sensor.ff590mr_warning_engine_light:
+  friendly_name: Allarme Motore
+
+# Pressione gomme
+sensor.ff590mr_tire_pressure_front_left:
+  friendly_name: Anteriore Sinistra
+sensor.ff590mr_tire_pressure_front_right:
+  friendly_name: Anteriore Destra
+sensor.ff590mr_tire_pressure_rear_left:
+  friendly_name: Posteriore Sinistra
+sensor.ff590mr_tire_pressure_rear_right:
+  friendly_name: Posteriore Destra
+
+# Finestrini
+sensor.ff590mr_window_front_left:
+  friendly_name: Anteriore Destro
+sensor.ff590mr_window_front_right:
+  friendly_name: Anteriore Sinistro
+sensor.ff590mr_window_rear_left:
+  friendly_name: Posteriore Sinistro
+sensor.ff590mr_window_rear_right:
+  friendly_name: Posteriore Destro
+
+# Porte
+sensor.ff590mr_door_front_left:
+  friendly_name: Anteriore Sinistra
+sensor.ff590mr_door_front_right:
+  friendly_name: Anteriore Destra
+sensor.ff590mr_door_rear_left:
+  friendly_name: Posteriore Sinistra
+sensor.ff590mr_door_rear_right:
+  friendly_name: Posteriore Destra
+
+# Bloccaggio
+sensor.ff590mr_door_lock_vehicle:
+  friendly_name: Veicolo
+sensor.ff590mr_door_lock_front_left:
+  friendly_name: Porta anteriore sinistra
+sensor.ff590mr_door_lock_front_right:
+  friendly_name: Porta anteriore destra
+sensor.ff590mr_door_lock_rear_left:
+  friendly_name: Porta posteriore sinistra
+sensor.ff590mr_door_lock_rear_right:
+  friendly_name: Porta posteriore destra
+sensor.ff590mr_door_lock_gas:
+  friendly_name: Sportello carburante
+sensor.ff590mr_door_lock_decklid:
+  friendly_name: Bagagliaio
+
+# Dati
+sensor.ff590mr_licenseplate:
+  friendly_name: Targa
+sensor.ff590mr_liquid_consumption_reset:
+  friendly_name:
+sensor.ff590mr_liquid_consumption_start:
+  friendly_name:
+sensor.ff590mr_odometer:
+  friendly_name: Km Percorsi
+sensor.ff590mr_tank_level:
+  friendly_name: Livello Carburante
+sensor.ff590mr_distance_since_reset:
+  friendly_name: Distanza dal reset
+sensor.ff590mr_distance_since_start:
+  friendly_name: Distanza dalla partenza

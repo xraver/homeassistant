@@ -27,14 +27,17 @@ group.media_player:
 group.people:
   order: 13
 
-group.network:
+group.car:
   order: 14
 
-group.weather:
+group.network:
   order: 15
 
-group.settings:
+group.weather:
   order: 16
+
+group.settings:
+  order: 17
 
 group.all_automations:
   hidden: false

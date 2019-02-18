@@ -55,7 +55,7 @@ aclass_doors:
     - sensor.ff590mr_door_front_left
     - sensor.ff590mr_door_front_right
     - sensor.ff590mr_door_rear_left
-    - sensor.ff590mr_door_rear_right   
+    - sensor.ff590mr_door_rear_right
 
 aclass_lock:
    name: "Mercedes A200d: Sblocco serrature"

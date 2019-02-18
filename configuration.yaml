@@ -143,6 +143,12 @@ climate:
 # Google Assistant
 google_assistant: !include google.yaml
 
+# Mercedes Me
+mbwebbeta:
+  username: !secret mb_user
+  password: !secret mb_password
+  scan_interval: 60
+
 # Inputs
 input_boolean: !include_dir_merge_named input_boolean/
 input_text: !include_dir_merge_named input_text/
