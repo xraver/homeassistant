@@ -1,10 +1,11 @@
 - title: Principale
-  id: main
+  id: 1_main
   #icon: mdi:home-assistant
   icon: mdi:home
   badges:
     - device_tracker.google_maps_115265981849847357125
     - device_tracker.google_maps_103158638433668748797
+    - device_tracker.wdd1760081v167576    
     - binary_sensor.home_mode
     - binary_sensor.speech_notifications
     - binary_sensor.text_notifications

@@ -1,0 +1,7 @@
+- title: People
+  id: 5_people
+  icon: mdi:account-multiple
+  badges:
+    - device_tracker.google_maps_115265981849847357125
+    - device_tracker.google_maps_103158638433668748797
+    - device_tracker.google_maps_113099283296073047871

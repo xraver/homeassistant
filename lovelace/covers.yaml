@@ -1,5 +1,5 @@
 - title: Tapparelle
-  id: covers
+  id: 2_covers
   icon: mdi:window-closed
   badges:
     - sensor.tapparella_cucina

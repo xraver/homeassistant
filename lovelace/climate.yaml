@@ -1,5 +1,5 @@
 - title: Termostato
-  id: climate
+  id: 3_climate
   icon: mdi:thermometer
   badges:
     - sensor.termostato_cucina

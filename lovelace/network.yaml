@@ -1,7 +1,15 @@
 - title: Dispositivi di Rete
-  id: network
+  id: 7_network
   icon: mdi:lan
+
   cards:
+  
+    - type: glance
+      name: External IP 
+      entities:
+        - sensor.ip_1
+        - sensor.ip_2
+    
     - type: glance
       title: Speed Test
       entities:

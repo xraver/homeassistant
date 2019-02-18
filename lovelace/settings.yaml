@@ -1,5 +1,5 @@
 - title: Configurazione
-  id: climate
+  id: 9_settings
   icon: mdi:settings
   badges:
     - binary_sensor.home_mode
@@ -7,12 +7,12 @@
     - binary_sensor.text_notifications
     
   cards:
-    - type: glance
+    - type: entities
       title: Automazioni
       entities:
       - group.all_automations
       
-    - type: glance
+    - type: entities
       title: Configurazione Notifiche
       entities:
       - group.ha_settings
