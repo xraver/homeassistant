@@ -35,7 +35,7 @@ aclass_tires:
     - sensor.ff590mr_tire_pressure_rear_left
     - sensor.ff590mr_tire_pressure_rear_right
     
-aclass_tires:
+aclass_windows:
   name: "Mercedes A200d: Finestrini"
   control: hidden
   entities:
