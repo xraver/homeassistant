@@ -1,0 +1,61 @@
+car:
+  name: auto
+  view: true
+  icon: mdi:car
+  entities:
+    - binary_sensor.ff590mr_decklid_status
+    - binary_sensor.ff590mr_warning_washwater
+    - binary_sensor.ff590mr_warning_breakfluid
+    - binary_sensor.ff590mr_parkbreak_status
+    - binary_sensor.ff590mr_warning_engine_light
+    - device_tracker.wdd1760081v167576
+    - group.aclass_sensors
+    - group.aclass_info
+  
+aclass_sensors:
+  name: "Mercedes A200d: Sensori"
+  control: hidden
+  entities:
+    - binary_sensor.ff590mr_decklid_status
+    - binary_sensor.ff590mr_warning_washwater
+    - binary_sensor.ff590mr_warning_breakfluid
+    - binary_sensor.ff590mr_parkbreak_status
+    - binary_sensor.ff590mr_warning_engine_light
+    - device_tracker.wdd1760081v167576
+
+aclass_info:
+  name: "Mercedes A200d: Dati"
+  control: hidden
+  entities:
+    - sensor.ff590mr_door_rear_left
+    - sensor.ff590mr_door_rear_right
+    - sensor.ff590mr_electric_range_skip_indicator
+    - sensor.ff590mr_electric_consumption_reset
+    - sensor.ff590mr_electric_consumption_start
+    - sensor.ff590mr_licenseplate
+    - sensor.ff590mr_liquid_consumption_reset
+    - sensor.ff590mr_liquid_consumption_start
+    - sensor.ff590mr_odometer
+    - sensor.ff590mr_liquid_range
+    - sensor.ff590mr_electric_distance_since_start
+    - sensor.ff590mr_tank_level
+    - sensor.ff590mr_electric_distance_ctritical_reset
+    - sensor.ff590mr_tire_pressure_front_left
+    - sensor.ff590mr_distance_since_reset
+    - sensor.ff590mr_tire_pressure_front_right
+    - sensor.ff590mr_distance_since_start
+    - sensor.ff590mr_tire_pressure_rear_left
+    - sensor.ff590mr_door_lock_decklid
+    - sensor.ff590mr_tire_pressure_rear_right
+    - sensor.ff590mr_door_lock_front_left
+    - sensor.ff590mr_window_front_left
+    - sensor.ff590mr_door_lock_front_right
+    - sensor.ff590mr_window_front_right
+    - sensor.ff590mr_door_lock_gas
+    - sensor.ff590mr_window_rear_left
+    - sensor.ff590mr_door_lock_rear_left
+    - sensor.ff590mr_window_rear_right
+    - sensor.ff590mr_door_lock_rear_right
+    - sensor.ff590mr_door_lock_vehicle
+    - sensor.ff590mr_door_front_left
+    - sensor.ff590mr_door_front_right
