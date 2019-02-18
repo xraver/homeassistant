@@ -63,10 +63,10 @@ sensor.ff590mr_door_lock_decklid:
 # Dati
 sensor.ff590mr_licenseplate:
   friendly_name: Targa
-sensor.ff590mr_liquid_consumption_reset:
-  friendly_name:
-sensor.ff590mr_liquid_consumption_start:
-  friendly_name:
+#sensor.ff590mr_liquid_consumption_reset:
+#  friendly_name:
+#sensor.ff590mr_liquid_consumption_start:
+#  friendly_name:
 sensor.ff590mr_odometer:
   friendly_name: Km Percorsi
 sensor.ff590mr_tank_level:
