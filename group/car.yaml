@@ -10,6 +10,9 @@ car:
     - binary_sensor.ff590mr_warning_engine_light
     - device_tracker.wdd1760081v167576
     - group.aclass_sensors
+    - group.aclass_tires
+    - group.aclass_windows
+    - groupaclass_doors
     - group.aclass_info
   
 aclass_sensors:
@@ -23,12 +26,37 @@ aclass_sensors:
     - binary_sensor.ff590mr_warning_engine_light
     - device_tracker.wdd1760081v167576
 
+aclass_tires:
+  name: "Mercedes A200d: Ruote"
+  control: hidden
+  entities:
+    - sensor.ff590mr_tire_pressure_front_left
+    - sensor.ff590mr_tire_pressure_front_right
+    - sensor.ff590mr_tire_pressure_rear_left
+    - sensor.ff590mr_tire_pressure_rear_right
+    
+aclass_tires:
+  name: "Mercedes A200d: Finestrini"
+  control: hidden
+  entities:
+    - sensor.ff590mr_window_front_left
+    - sensor.ff590mr_window_front_right
+    - sensor.ff590mr_window_rear_left
+    - sensor.ff590mr_window_rear_right
+    
+aclass_doors:
+  name: "Mercedes A200d: Porte"
+  control: hidden
+  entities:
+    - sensor.ff590mr_door_front_left
+    - sensor.ff590mr_door_front_right
+    - sensor.ff590mr_door_rear_left
+    - sensor.ff590mr_door_rear_right   
+ 
 aclass_info:
   name: "Mercedes A200d: Dati"
   control: hidden
   entities:
-    - sensor.ff590mr_door_rear_left
-    - sensor.ff590mr_door_rear_right
     - sensor.ff590mr_electric_range_skip_indicator
     - sensor.ff590mr_electric_consumption_reset
     - sensor.ff590mr_electric_consumption_start
@@ -40,22 +68,12 @@ aclass_info:
     - sensor.ff590mr_electric_distance_since_start
     - sensor.ff590mr_tank_level
     - sensor.ff590mr_electric_distance_ctritical_reset
-    - sensor.ff590mr_tire_pressure_front_left
     - sensor.ff590mr_distance_since_reset
-    - sensor.ff590mr_tire_pressure_front_right
     - sensor.ff590mr_distance_since_start
-    - sensor.ff590mr_tire_pressure_rear_left
     - sensor.ff590mr_door_lock_decklid
-    - sensor.ff590mr_tire_pressure_rear_right
     - sensor.ff590mr_door_lock_front_left
-    - sensor.ff590mr_window_front_left
     - sensor.ff590mr_door_lock_front_right
-    - sensor.ff590mr_window_front_right
-    - sensor.ff590mr_door_lock_gas
-    - sensor.ff590mr_window_rear_left
     - sensor.ff590mr_door_lock_rear_left
-    - sensor.ff590mr_window_rear_right
     - sensor.ff590mr_door_lock_rear_right
+    - sensor.ff590mr_door_lock_gas
     - sensor.ff590mr_door_lock_vehicle
-    - sensor.ff590mr_door_front_left
-    - sensor.ff590mr_door_front_right
