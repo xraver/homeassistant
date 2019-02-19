@@ -17,8 +17,8 @@
     - service: frontend.set_theme
       data_template:
         name: >-
-          {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
-            default
-          {% else %}
+          {% if trigger.to_state.state == 'on' %}
             midnight
+          {% else %}
+            default
           {% endif %}  
