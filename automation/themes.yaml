@@ -12,6 +12,8 @@
     - platform: state
       entity_id: input_boolean.home_mode_night
       to: 'off'
+      
+  action:
     - service: frontend.set_theme
       data_template:
         name: >-
