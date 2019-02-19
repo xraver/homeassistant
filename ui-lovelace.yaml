@@ -17,6 +17,7 @@ views:
       - device_tracker.google_maps_115265981849847357125
       - device_tracker.google_maps_103158638433668748797
       - device_tracker.wdd1760081v167576    
+      - sensor.time
       - binary_sensor.home_mode
       - binary_sensor.speech_notifications
       - binary_sensor.text_notifications
@@ -156,19 +157,19 @@ views:
       - device_tracker.google_maps_113099283296073047871
     cards:
       - type: map
-        title: Giorgio
+        #title: Giorgio
         aspect_ratio: 16:9
         default_zoom: 5
         entities:
         - device_tracker.google_maps_115265981849847357125
       - type: map
-        title: Laura
+        #title: Laura
         aspect_ratio: 16:9
         default_zoom: 15
         entities:
         - device_tracker.google_maps_103158638433668748797
       - type: map
-        title: Anna
+        #title: Anna
         aspect_ratio: 16:9
         default_zoom: 17
         entities:
