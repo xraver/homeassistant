@@ -80,16 +80,7 @@
             input_boolean.home_mode_day
           {% else %}
             input_boolean.home_mode_night
-          {% endif %}
-
-    - service: frontend.set_theme
-      data_template:
-        name: >-
-          {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
-            default
-          {% else %}
-            midnight
-          {% endif %}        
+          {% endif %}      
 
 ######################################################################
 # Home Assistant: Management of Speech Notifications
@@ -108,11 +99,11 @@
 
   action:
     - service_template: >-
-          {% if trigger.to_state.state == 'on' %}
-            input_boolean.turn_off
-          {% else %}
-            input_boolean.turn_on
-          {% endif %}
+        {% if trigger.to_state.state == 'on' %}
+          input_boolean.turn_off
+        {% else %}
+          input_boolean.turn_on
+        {% endif %}
       data:
         entity_id: input_boolean.speech_notifications
    

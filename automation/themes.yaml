@@ -1,0 +1,22 @@
+######################################################################
+# Themes: Management of Day/Night Mode
+######################################################################
+
+- alias: "Temi: Modalità giorno/Notte"
+  initial_state: 'on'
+
+  trigger:
+    - platform: state
+      entity_id: input_boolean.home_mode_night
+      to: 'on'
+    - platform: state
+      entity_id: input_boolean.home_mode_night
+      to: 'off'
+    - service: frontend.set_theme
+      data_template:
+        name: >-
+          {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
+            default
+          {% else %}
+            midnight
+          {% endif %}  
