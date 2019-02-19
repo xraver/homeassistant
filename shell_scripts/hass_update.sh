@@ -1,4 +1,4 @@
-#:/bin/bash
+#!/bin/bash
 
 echo "Changed directory to homeassistant home"
 cd
