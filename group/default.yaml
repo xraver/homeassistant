@@ -5,6 +5,7 @@ default_view:
   entities:
     - device_tracker.google_maps_115265981849847357125
     - device_tracker.google_maps_103158638433668748797
+    - device_tracker.wdd1760081v167576
     - sensor.home_mode
     - group.cucina
     - group.sala
@@ -12,7 +13,7 @@ default_view:
     - group.studio
     - group.camera
     - group.home_mode
-    - gorup.train
+#    - gorup.train
 
 cucina:
   name: Cucina
@@ -60,10 +61,10 @@ home_mode:
     - input_boolean.home_mode_night
     - input_boolean.home_mode_away
 
-train:
-  name: Treni
-  control: hidden
-  entities:
-    - sensor.train_11229
-    - sensor.train_11354
-    - sensor.train_24529
+#train:
+#  name: Treni
+#  control: hidden
+#  entities:
+#    - sensor.train_11229
+#    - sensor.train_11354
+#    - sensor.train_24529
