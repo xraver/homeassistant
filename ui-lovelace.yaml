@@ -1,2 +1,306 @@
+######################################################################
+# Lovelace UI Configuration
+######################################################################
+
 title: Casa Ravera-Testa
-views: !include_dir_merge_list lovelace/
+#views: !include_dir_merge_list lovelace/
+
+######################################################################
+# Main View
+######################################################################
+  - title: Principale
+    id: main
+    #icon: mdi:home-assistant
+    icon: mdi:home
+    badges:
+      - device_tracker.google_maps_115265981849847357125
+      - device_tracker.google_maps_103158638433668748797
+      - device_tracker.wdd1760081v167576    
+      - binary_sensor.home_mode
+      - binary_sensor.speech_notifications
+      - binary_sensor.text_notifications
+    cards:
+    - type: picture-glance
+      title: Cucina
+      show_state: false
+      image: /local/rooms/cucina.jpg
+      entities:
+      - cover.tapparella_cucina
+      - climate.cucina_termostato_cucina
+      - media_player.google_home
+
+    - type: picture-glance
+      title: Sala
+      show_state: true
+      image: /local/rooms/sala.jpg
+      entities: 
+      - cover.tapparella_sala
+      - climate.sala_termostato_sala
+  #    - media_player.roku_yd00dm481414
+  #    - media_player.ue46c7000_samsung_dtv_rcr
+
+    - type: picture-glance
+      title: Bagno
+      show_state: true
+      image: /local/rooms/bagno.jpg
+      entities: 
+      - climate.bagno_termostato_bagno
+
+    - type: picture-glance
+      title: Studio
+      show_state: true
+      image: /local/rooms/studio.jpg
+      entities: 
+      - cover.tapparella_studio
+      - climate.studio_termostato_studio
+
+    - type: picture-glance
+      title: Camera
+      show_state: true
+      image: /local/rooms/camera.jpg
+      entities: 
+      - cover.tapparella_camera
+      - climate.camera_termostato_camera
+
+    - type: entities
+      title: Modalità Casa
+      show_header_toggle: false
+      entities:
+      - input_boolean.home_mode_day
+      - input_boolean.home_mode_night
+      - input_boolean.home_mode_away
+
+######################################################################
+# Covers
+######################################################################
+  - title: Tapparelle
+    id: covers
+    icon: mdi:window-closed
+    badges:
+      - sensor.tapparella_cucina
+      - sensor.tapparella_sala
+      - sensor.tapparella_studio
+      - sensor.tapparella_camera
+    cards:
+      - type: entities
+        title: Comandi tapparelle
+        show_header_toggle: false
+        entities:
+          - cover.all_covers
+          - cover.tapparella_cucina
+          - cover.tapparella_sala
+          - cover.tapparella_studio
+          - cover.tapparella_camera
+
+######################################################################
+# Climate View
+######################################################################
+  - title: Termostato
+    id: climate
+    icon: mdi:thermometer
+    badges:
+      - sensor.termostato_cucina
+      - sensor.termostato_sala
+      - sensor.termostato_bagno
+      - sensor.termostato_studio
+      - sensor.termostato_camera
+    cards:
+      - type: thermostat
+        entity: climate.cucina_termostato_cucina
+      - type: thermostat
+        entity: climate.sala_termostato_sala
+      - type: thermostat
+        entity: climate.bagno_termostato_bagno
+      - type: thermostat
+        entity: climate.studio_termostato_studio
+      - type: thermostat
+        entity: climate.camera_termostato_camera
+
+######################################################################
+# Multimedia
+######################################################################
+  - title: Dispositivi Multimediali
+    id: multimedia
+    icon: mdi:television
+  #  badges:
+  #    - binary_sensor.speech_notifications      
+    cards:
+      - type: entities
+        title: Google Home Cucina
+        show_header_toggle: false
+        entities:
+        - media_player.google_home
+        - input_text.google_home_speak
+      - type: entities
+        title: TV Sala
+        show_header_toggle: false
+        entities:
+        - media_player.tv_sala
+        - script.tv_volume_up
+        - script.tv_volume_down
+        - script.tv_volume_mute
+        - script.tv_play_pause
+        - script.tv_toggle
+        - input_text.tv_change_channel
+
+######################################################################
+# People
+######################################################################
+  - title: People
+    id: people
+    icon: mdi:account-multiple
+    badges:
+      - device_tracker.google_maps_115265981849847357125
+      - device_tracker.google_maps_103158638433668748797
+      - device_tracker.google_maps_113099283296073047871
+    cards:
+      - type: map
+        title: Giorgio
+        aspect_ratio: 16:9
+        default_zoom: 5
+        entities:
+        - device_tracker.google_maps_115265981849847357125
+      - type: map
+        title: Laura
+        aspect_ratio: 16:9
+        default_zoom: 15
+        entities:
+        - device_tracker.google_maps_103158638433668748797
+      - type: map
+        title: Anna
+        aspect_ratio: 16:9
+        default_zoom: 17
+        entities:
+        - device_tracker.google_maps_113099283296073047871
+
+######################################################################
+# Car
+######################################################################
+  - title: Auto
+    id: car
+    icon: mdi:car
+    badges:
+      - device_tracker.wdd1760081v167576  
+      - sensor.ff590mr_odometer
+      - sensor.ff590mr_tank_level
+    cards:
+#      - type: gauge
+#        title: "Livello Carburante"
+#        unit: '%'
+#        entity: sensor.ff590mr_tank_level
+#        severity:
+#          red: 0
+#          yellow: 30
+#          green: 60
+
+      - type: entities
+        title: "Mercedes A200d: Sensori"
+        show_header_toggle: false
+        entities:
+          - binary_sensor.ff590mr_decklid_status
+          - binary_sensor.ff590mr_warning_washwater
+          - binary_sensor.ff590mr_warning_breakfluid
+          - binary_sensor.ff590mr_parkbreak_status
+          - binary_sensor.ff590mr_warning_engine_light
+  #    - device_tracker.wdd1760081v167576
+
+      - type: entities
+        title: "Mercedes A200d: Ruote"
+        show_header_toggle: false
+        entities:
+          - sensor.ff590mr_tire_pressure_front_left
+          - sensor.ff590mr_tire_pressure_front_right
+          - sensor.ff590mr_tire_pressure_rear_left
+          - sensor.ff590mr_tire_pressure_rear_right
+      
+      - type: entities
+        title: "Mercedes A200d: Finestrini"
+        show_header_toggle: false
+        entities:
+          - sensor.ff590mr_window_front_left
+          - sensor.ff590mr_window_front_right
+          - sensor.ff590mr_window_rear_left
+          - sensor.ff590mr_window_rear_right
+      
+      - type: entities
+        title: "Mercedes A200d: Porte"
+        show_header_toggle: false
+        entities:
+          - sensor.ff590mr_door_front_left
+          - sensor.ff590mr_door_front_right
+          - sensor.ff590mr_door_rear_left
+          - sensor.ff590mr_door_rear_right
+
+      - type: entities
+        title: "Mercedes A200d: Sblocco serrature"
+        show_header_toggle: false
+        entities:
+          - sensor.ff590mr_door_lock_vehicle
+          - sensor.ff590mr_door_lock_front_left
+          - sensor.ff590mr_door_lock_front_right
+          - sensor.ff590mr_door_lock_rear_left
+          - sensor.ff590mr_door_lock_rear_right
+          - sensor.ff590mr_door_lock_gas
+          - sensor.ff590mr_door_lock_decklid
+
+      - type: entities
+        title: "Mercedes A200d: Dati"
+        show_header_toggle: false
+        entities:
+          #- sensor.ff590mr_electric_range_skip_indicator
+          #- sensor.ff590mr_electric_consumption_reset
+          #- sensor.ff590mr_electric_consumption_start
+          - sensor.ff590mr_licenseplate
+          - sensor.ff590mr_liquid_consumption_reset
+          - sensor.ff590mr_liquid_consumption_start
+      #    - sensor.ff590mr_odometer
+          #- sensor.ff590mr_liquid_range
+          #- sensor.ff590mr_electric_distance_since_start
+      #    - sensor.ff590mr_tank_level
+          #- sensor.ff590mr_electric_distance_ctritical_reset
+          - sensor.ff590mr_distance_since_reset
+          - sensor.ff590mr_distance_since_start
+
+######################################################################
+# Network
+######################################################################
+  - title: Dispositivi di Rete
+    id: network
+    icon: mdi:lan
+    cards:
+      - type: glance
+        name: External IP 
+        entities:
+          - sensor.ip_1
+          - sensor.ip_2
+      - type: glance
+        title: Speed Test
+        entities:
+        - sensor.speedtest_ping
+        - sensor.speedtest_download
+        - sensor.speedtest_upload          
+      - type: glance
+        title: pfSense
+        entities: 
+          - sensor.freebsd_router_kbyte_sec_received
+          - sensor.freebsd_router_kbyte_sec_sent
+
+######################################################################
+# Settings
+######################################################################
+  - title: Configurazione
+    id: settings
+    icon: mdi:settings
+    badges:
+      - binary_sensor.home_mode
+      - binary_sensor.speech_notifications
+      - binary_sensor.text_notifications
+    cards:
+      - type: entities
+        title: Automazioni
+        entities:
+        - group.all_automations        
+      - type: entities
+        title: Configurazione Notifiche
+        entities:
+        - group.ha_settings
