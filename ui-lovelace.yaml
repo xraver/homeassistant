@@ -185,6 +185,8 @@ views:
       - device_tracker.wdd1760081v167576  
       - sensor.ff590mr_odometer
       - sensor.ff590mr_tank_level
+      - binary_sensor.car_doors_lock
+      - binary_sensor.car_windows_lock
     cards:
 #      - type: gauge
 #        title: "Livello Carburante"
