@@ -25,8 +25,8 @@ notify_text_internal:
         message: "{{ message }}"
 
     - condition: template
-      value_template: >-
-        {% if enable_persistent %}
+      value_template: >
+        {% if enable_persistent | int == 1 %}
           true
         {% else %}
           false
@@ -53,13 +53,7 @@ notify_text:
           {% endif %}
           {{ title }}
         message: "{{ message }}"
-        enable_persistent: >
-          {# Check Null Input #}
-          {% if enable_persistent %}
-            true
-          {% else %}
-            false
-          {% endif %}
+        enable_persistent: "{{ enable_persistent }}"
 
 ######################################################################
 # Script: Voice Notification
@@ -153,13 +147,7 @@ notify_all:
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
-        enable_persistent: >
-          {# Check Null Input #}
-          {% if enable_persistent %}
-            true
-          {% else %}
-            false
-          {% endif %}
+        enable_persistent: "{{ enable_persistent }}"
 
     - service: script.notify_voice
       data_template:

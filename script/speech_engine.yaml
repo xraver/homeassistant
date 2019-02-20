@@ -20,7 +20,7 @@ speech_engine:
         language: "{{ language }}"
         message: >-
           {# greeting message #}    
-          {% if enable_greeting == true %}
+          {% if enable_greeting | int == 1 %}
             {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 12 %}
               Buongiorno.
             {% elif now().strftime('%H')|int >= 12 and now().strftime('%H')|int < 17 %}

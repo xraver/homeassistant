@@ -82,6 +82,7 @@
           "Ciao " ~ name + "! Casa è sempre la casa!",
           ] | random }}
           {%- endmacro -%}
+
           {{ greeting_sentence(name) }}
 
     - service: input_boolean.turn_off
