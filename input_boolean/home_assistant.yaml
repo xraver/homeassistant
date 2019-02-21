@@ -28,12 +28,3 @@ text_notifications:
   name: Notifiche Testuali
   icon: mdi:message-bulleted
   initial: on
-
-######################################################################
-# Inputs: Restart Home Assistant
-######################################################################
-
-homeassistant_restart:
-  name: Riavvia Home Assistant
-  icon: mdi:home-assistant
-  initial: on

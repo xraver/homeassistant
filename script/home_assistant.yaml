@@ -1,0 +1,9 @@
+######################################################################
+# Home Assistant: Restart
+# - homeassistant.restart
+######################################################################
+
+- alias: "Home Assistant: Riavvio Servizio"
+
+  sequence:
+    - service: homeassistant.restart

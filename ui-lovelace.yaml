@@ -309,5 +309,5 @@ views:
         entities:
         - group.ha_settings
       - type: entity-button
-        entity: input_boolean.homeassistant.restart
+        entity: script.homeassistant.restart
 
