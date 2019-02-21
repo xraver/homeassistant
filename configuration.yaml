@@ -99,11 +99,6 @@ system_health:
 # Cloud
 # cloud:
 
-# UPNP
-upnp:
-  port_mapping: false
-  sensors: true
-
 # Sensors
 sensor: !include_dir_merge_list sensor/
 binary_sensor: !include_dir_merge_list binary_sensor/
@@ -114,6 +109,44 @@ cover: !include_dir_merge_list cover/
 # Switches
 switch: !include_dir_merge_list switch/
 
+# Multimedia
+media_player: !include_dir_merge_list media_player/
+
+climate:
+  platform: maxcube
+
+# Inputs
+input_boolean: !include_dir_merge_named input_boolean/
+input_text: !include_dir_merge_named input_text/
+#input_number: !include_dir_merge_list input_number/
+
+# Shell commands
+shell_command: !include_dir_merge_named shell_command
+
+# Device Tracker
+device_tracker: !include_dir_merge_list device_tracker/
+
+# Notification
+notify: !include_dir_merge_list notify/
+
+# Zones
+zone: !include_dir_list zone/
+
+# Group
+group: !include_dir_merge_named group/
+
+# Automations
+automation: !include_dir_merge_list automation/
+
+# Scripts
+script: !include_dir_merge_named script/
+
+# Components:
+# UPNP
+upnp:
+  port_mapping: false
+  sensors: true
+
 # Text to speech
 tts:
   - platform: google
@@ -121,9 +154,6 @@ tts:
     cache: true
     time_memory: 300
     base_url: !secret base_url
-
-# Multimedia
-media_player: !include_dir_merge_list media_player/
 
 # MQTT
 mqtt:
@@ -138,8 +168,6 @@ maxcube:
   gateways:
     - host: maxcube.giorgioravera.it
       port: 62910
-climate:
-  platform: maxcube
 
 # Google Assistant
 google_assistant: !include google.yaml
@@ -157,24 +185,3 @@ weather:
     latitude: !secret home_latitude
     longitude: !secret home_longitude
     mode: hourly
-
-# Inputs
-input_boolean: !include_dir_merge_named input_boolean/
-input_text: !include_dir_merge_named input_text/
-#input_number: !include_dir_merge_list input_number/
-
-# Shell commands
-shell_command: !include_dir_merge_named shell_command
-
-# Zones
-zone: !include_dir_list zone/
-
-# Device Tracker
-device_tracker: !include_dir_merge_list device_tracker/
-
-# Notification
-notify: !include_dir_merge_list notify/
-
-group: !include_dir_merge_named group/
-automation: !include_dir_merge_list automation/
-script: !include_dir_merge_named script/
