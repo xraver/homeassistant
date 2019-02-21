@@ -308,3 +308,6 @@ views:
         title: Configurazione Notifiche
         entities:
         - group.ha_settings
+      - type: entity-button
+        entity: input_boolean.homeassistant.restart
+

@@ -165,3 +165,18 @@
     - service: recorder.purge
       data:
         keep_days: 0
+
+######################################################################
+# Home Assistant: Restart
+# - homeassistant.restart
+######################################################################
+
+- alias: "Home Assistant: Riavvio Servizio"
+  initial_state: 'on'
+
+  trigger: 
+    - platform: state
+      entity_id: input_boolean.homeassistant_restart
+
+  action:
+    - service: homeassistant.restart
