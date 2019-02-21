@@ -308,6 +308,10 @@ views:
         title: Configurazione Notifiche
         entities:
         - group.ha_settings
-      - type: entity-button
-        entity: script.homeassistant.restart
+      - type: entities
+        title: Controlli
+        show_header_toggle: false
+        entities: 
+        - script.homeassistant_restart
+        - script.homeassistant_clearlog
 

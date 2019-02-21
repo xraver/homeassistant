@@ -4,3 +4,9 @@
 
 script.notify_text_internal:
   hidden: true
+
+script.homeassistant_restart:
+  icon: mdi:home-assistant
+
+script.homeassistant_clearlog:
+  icon: mdi:file-document

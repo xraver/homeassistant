@@ -3,7 +3,24 @@
 # - homeassistant.restart
 ######################################################################
 
-- alias: "Home Assistant: Riavvio Servizio"
-
+homeassistant_restart:
+  alias: "Riavvio Home Assistant"
   sequence:
     - service: homeassistant.restart
+
+######################################################################
+# Home Assistant: Clear Log
+# - tts.clear_cache
+# - system_log.clear
+# - recorder.purge
+######################################################################
+
+homeassistant_clearlog:
+  alias: "Pulisci Log"
+  sequence:
+    - service: tts.clear_cache
+    - service: system_log.clear
+    - service: recorder.purge
+      data:
+        keep_days: 0
+

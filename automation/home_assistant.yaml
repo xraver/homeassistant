@@ -143,9 +143,7 @@
     
 ######################################################################
 # Home Assistant: Weekly Clean Log
-# - tts.clear_cache
-# - system_log.clear
-# - recorder.purge
+# - script.homeassistant_clearlog
 ######################################################################
 
 - alias: "Home Assistant: Pulitura settimanale log"
@@ -160,8 +158,4 @@
       weekday: [mon]
 
   action:
-    - service: tts.clear_cache
-    - service: system_log.clear
-    - service: recorder.purge
-      data:
-        keep_days: 0
+    - service: script.homeassistant_clearlog
