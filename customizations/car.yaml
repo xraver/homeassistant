@@ -5,12 +5,14 @@
 # Sensori
 binary_sensor.ff590mr_decklid_status:
   friendly_name: Bagagliaio
+  device_class: opening
 binary_sensor.ff590mr_warning_washwater:
   friendly_name: Liquido lavacristalli
 binary_sensor.ff590mr_warning_breakfluid:
   friendly_name: Liquido freni
 binary_sensor.ff590mr_parkbreak_status:
   friendly_name: Freno a mano
+  device_class: plug
   icon: mdi:car-brake-parking
 binary_sensor.ff590mr_warning_engine_light:
   friendly_name: Allarme Motore

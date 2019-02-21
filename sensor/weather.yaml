@@ -47,4 +47,4 @@
     - temperature_low
     - uv_index
   units: si
-  update_interval: 02:00
+  scan_interval: 02:00
