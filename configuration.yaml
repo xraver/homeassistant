@@ -148,40 +148,22 @@ upnp:
   sensors: true
 
 # Text to speech
-tts:
-  - platform: google
-    language: it
-    cache: true
-    time_memory: 300
-    base_url: !secret base_url
+tts: !include components/tts.yaml
 
 # MQTT
-mqtt:
-  broker: localhost
-  port: 1883
-  client_id: homeassistant
-  username: !secret mqtt_user
-  password: !secret mqtt_password
+mqtt: !include components/mqtt.yaml
 
 # EQ3 Max Cube
-maxcube:
-  gateways:
-    - host: maxcube.giorgioravera.it
-      port: 62910
+maxcube: !include components/eq3max.yaml
 
 # Google Assistant
-google_assistant: !include google.yaml
+google_assistant: !include components/google.yaml
 
 # Mercedes Me
-mbwebbeta:
-  username: !secret mb_user
-  password: !secret mb_password
-  scan_interval: 60
+mbwebbeta: !include components/mercedesme.yaml
 
 # Weather
-weather:
-  - platform: darksky
-    api_key: !secret darksky_key
-    latitude: !secret home_latitude
-    longitude: !secret home_longitude
-    mode: hourly
+weather: !include components/weather.yaml
+
+# Speed Test
+speedtestdotnet: !include components/speedtest.yaml
