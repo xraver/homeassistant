@@ -6,6 +6,6 @@ monitored_conditions:
   - ping
   - download
   - upload
-minute: 0
+server_id: 7274
 scan_interval:
   hours: 6
