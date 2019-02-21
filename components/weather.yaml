@@ -1,0 +1,9 @@
+######################################################################
+# Component: Weather
+######################################################################
+
+platform: darksky
+api_key: !secret darksky_key
+latitude: !secret home_latitude
+longitude: !secret home_longitude
+mode: hourly

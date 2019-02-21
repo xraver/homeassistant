@@ -1,0 +1,7 @@
+######################################################################
+# Component: Mercedes Me
+######################################################################
+
+username: !secret mb_user
+password: !secret mb_password
+scan_interval: 60

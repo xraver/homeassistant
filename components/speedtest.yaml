@@ -1,0 +1,11 @@
+######################################################################
+# Component: Speed Test
+######################################################################
+
+monitored_conditions:
+  - ping
+  - download
+  - upload
+minute: 0
+scan_interval:
+  hours: 6

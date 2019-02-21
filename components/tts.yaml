@@ -1,0 +1,9 @@
+######################################################################
+# Component: Text to Speach
+######################################################################
+
+platform: google
+language: it
+cache: true
+time_memory: 300
+base_url: !secret base_url

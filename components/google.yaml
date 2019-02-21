@@ -1,5 +1,5 @@
 ######################################################################
-# Google Home Integration
+# Component: Google Home Integration
 ######################################################################
 
 project_id: !secret google_project
