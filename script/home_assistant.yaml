@@ -4,7 +4,7 @@
 ######################################################################
 
 homeassistant_restart:
-  alias: "Riavvio Home Assistant"
+  alias: "Riavvio servizio"
   sequence:
     - service: homeassistant.restart
 
@@ -23,4 +23,14 @@ homeassistant_clearlog:
     - service: recorder.purge
       data:
         keep_days: 0
+
+######################################################################
+# Home Assistant: Upgrade
+# - homeassistant.restart
+######################################################################
+
+homeassistant_upgrade:
+  alias: "Aggiornamento"
+  sequence:
+    - service: shell_command.homeassistant_upgrade
 

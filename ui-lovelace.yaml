@@ -356,4 +356,5 @@ views:
         entities: 
         - script.homeassistant_restart
         - script.homeassistant_clearlog
+        - script.homeassistant_upgrade
 
