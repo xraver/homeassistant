@@ -159,7 +159,7 @@ views:
       - type: map
         #title: Giorgio
         aspect_ratio: 16:9
-        default_zoom: 5
+        default_zoom: 15
         entities:
         - device_tracker.google_maps_115265981849847357125
       - type: map
@@ -171,7 +171,7 @@ views:
       - type: map
         #title: Anna
         aspect_ratio: 16:9
-        default_zoom: 17
+        default_zoom: 15
         entities:
         - device_tracker.google_maps_113099283296073047871
 
@@ -187,6 +187,8 @@ views:
       - sensor.ff590mr_tank_level
       - binary_sensor.car_doors_lock
       - binary_sensor.car_windows_lock
+      - binary_sensor.ff590mr_parkbreak_status
+      - binary_sensor.ff590mr_decklid_status
     cards:
 #      - type: gauge
 #        title: "Livello Carburante"
@@ -201,10 +203,10 @@ views:
         title: "Mercedes A200d: Sensori"
         show_header_toggle: false
         entities:
+          - binary_sensor.ff590mr_parkbreak_status
           - binary_sensor.ff590mr_decklid_status
           - binary_sensor.ff590mr_warning_washwater
           - binary_sensor.ff590mr_warning_breakfluid
-          - binary_sensor.ff590mr_parkbreak_status
           - binary_sensor.ff590mr_warning_engine_light
   #    - device_tracker.wdd1760081v167576
 
