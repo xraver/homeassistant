@@ -346,10 +346,12 @@ views:
     cards:
       - type: entities
         title: Automazioni
+        show_header_toggle: false
         entities:
         - group.all_automations        
       - type: entities
         title: Configurazione Notifiche
+        show_header_toggle: false
         entities:
         - group.ha_settings
       - type: entities
