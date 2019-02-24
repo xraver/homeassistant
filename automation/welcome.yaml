@@ -84,6 +84,7 @@
           {%- endmacro -%}
 
           {{ greeting_sentence(name) }}
+        enable_greeting: 0
 
     - service: input_boolean.turn_off
       data:

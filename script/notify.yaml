@@ -26,8 +26,12 @@ notify_text_internal:
 
     - condition: template
       value_template: >
-        {% if enable_persistent | int == 1 %}
-          true
+        {% if enable_persistent | length != 0 %}
+          {% if enable_persistent | int == 1 %}
+            true
+          {% else %}
+            false
+          {% endif %}
         {% else %}
           false
         {% endif %}
