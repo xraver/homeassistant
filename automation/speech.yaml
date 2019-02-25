@@ -1,6 +1,8 @@
 ######################################################################
 # Welcome message
-# - greeting
+#
+# Operations:
+# - script.speech_engine
 # - disable away mode
 ######################################################################
 
@@ -89,3 +91,26 @@
     - service: input_boolean.turn_off
       data:
         entity_id: input_boolean.home_mode_away
+
+######################################################################
+# Hourly message
+#
+# Operations:
+# - script.speech_engine
+######################################################################
+
+- alias: "Saluto orario"
+  initial_state: 'off'
+  
+  trigger:
+    - platform: time
+      at: '12:00:00'
+
+  condition: []
+
+  action:
+    - service: script.speech_engine
+      data_template:
+        message: >- 
+          {% set ora = now().strftime('%H') %}
+          "Sono le {{ ora }} e tutto va bene."
