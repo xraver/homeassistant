@@ -37,8 +37,8 @@ speech_engine:
             {% endif %}
           {%- endmacro -%}
           
-          {# Cover Status #}
-          {%- macro status_cover() -%}
+          {# Covers Status #}
+          {%- macro status_covers() -%}
             {% for entity_id in states.group.covers.attributes.entity_id  %}
               {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
               {% set perc = states(entity_id) %}
@@ -48,6 +48,36 @@ speech_engine:
                 La {{ name }} è aperta al {{ perc }} percento.
               {% endif %}
             {%- endfor %}
+          {%- endmacro -%}
+          
+          {# Car Status #}
+          {%- macro status_car() -%}
+            {% if is_state('device_tracker.wdd1760081v167576', 'Casa') %}
+              {% set car_position = "in garage" %}
+            {% else %}
+              {% set car_position = "fuori" %}
+            {% endif %}
+            {% if is_state('binary_sensor.car_doors_lock', 'off') %}
+              {% set car_lock = "chiusa" %}
+            {% else %}
+              {% set car_lock = "aperta" %}
+            {% endif %}
+            {% if is_state('binary_sensor.car_windows_lock', 'off') %}
+              {% set car_windows = "chiusi" %}
+            {% else %}
+              {% set car_windows = "aperti" %}
+            {% endif %}
+            {% if is_state('binary_sensor.ff590mr_parkbreak_status', 'on') %}
+              {% set car_parkbreak = "inserito" %}
+            {% else %}
+              {% set car_parkbreak = "non inserito" %}
+            {% endif %}
+            La Mercedes si trova {{ car_position }}. è {{ car_lock }}, con i finestrini {{ car_windows }} e il freno a mano {{ car_parkbreak }}.            
+            {% if is_state('binary_sensor.ff590mr_warning_breakfluid', 'on') or
+                  is_state('binary_sensor.ff590mr_warning_engine_light', 'on') or
+                  is_state('binary_sensor.ff590mr_warning_washwater', 'on') %}
+              Sono inoltre presenti allarmi.
+            {% endif %}
           {%- endmacro -%}
           
           {# *********************************************** #}
@@ -63,7 +93,9 @@ speech_engine:
           
           {% if enable_status is defined %}
             {% if enable_status | int == 1 %}
-              {{ status_cover() }}
+              {{ status_covers() }}
+            
+              {{ status_car() }}
             {% endif %}
           {% endif %}
 
