@@ -5,6 +5,7 @@
 # - volume_level
 # - message
 # - enable_greeting
+# - enable_status
 #
 # Operations:
 # - script.notify_voice (greeting + message)
@@ -18,21 +19,53 @@ speech_engine:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
         language: "{{ language }}"
-        message: >-
-          {# greeting message #}
-          {% if enable_greeting | length != 0 %}
-            {% if enable_greeting | int == 1 %}
-              {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 12 %}
-                Buongiorno.
-              {% elif now().strftime('%H')|int >= 12 and now().strftime('%H')|int < 17 %}
-                Buonpomeriggio.
-              {% elif now().strftime('%H')|int >= 17 and now().strftime('%H')|int < 23 %}
-                Buonasera.
+        message: >-        
+          {# *********************************************** #}
+          {# ******************** Macro ******************** #}
+          {# *********************************************** #}
+          
+          {# Greeting Message #}
+          {%- macro greeting() -%}
+            {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 12 %}
+              Buongiorno.
+            {% elif now().strftime('%H')|int >= 12 and now().strftime('%H')|int < 17 %}
+              Buonpomeriggio.
+            {% elif now().strftime('%H')|int >= 17 and now().strftime('%H')|int < 23 %}
+              Buonasera.
+            {% else %}
+              Buonanotte.
+            {% endif %}
+          {%- endmacro -%}
+          
+          {# Cover Status #}
+          {%- macro status_cover() -%}
+            {% for entity_id in states.group.covers.attributes.entity_id  %}
+              {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+              {% set perc = states(entity_id) %}
+              {% if perc | int < 25 %}
+                La {{ name }} è chiusa.
               {% else %}
-                Buonanotte.
+                La {{ name }} è aperta al {{ perc }} percento.
               {% endif %}
+            {%- endfor %}
+          {%- endmacro -%}
+          
+          {# *********************************************** #}
+          {# ******************* Message ******************* #}
+          {# *********************************************** #}
+          
+          {# Greeting Message #}
+          {% if enable_greeting is defined %}
+            {% if enable_greeting | int == 1 %}
+              {{ greeting() }}
             {% endif %}
           {% endif %}
           
+          {% if enable_status is defined %}
+            {% if enable_status | int == 1 %}
+              {{ status_cover() }}
+            {% endif %}
+          {% endif %}
+
           {# generic message #}
           {{ message }}
