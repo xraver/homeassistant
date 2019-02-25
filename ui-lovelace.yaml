@@ -71,6 +71,12 @@ views:
       - input_boolean.home_mode_day
       - input_boolean.home_mode_night
       - input_boolean.home_mode_away
+      
+    - type: entities
+      title: Controlli Vari
+      show_header_toggle: false
+      entities:
+      - script.speech_status
 
 ######################################################################
 # Covers

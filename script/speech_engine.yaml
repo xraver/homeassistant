@@ -80,6 +80,14 @@ speech_engine:
             {% endif %}
           {%- endmacro -%}
           
+          {# Location Status #}
+          {%- macro status_location() -%}
+            {% set giorgio_position = states('device_tracker.google_maps_115265981849847357125') %}
+            {% set laura_position = states('device_tracker.google_maps_103158638433668748797') %}
+            La posizione di Giorgio è {{ giorgio_position }}.
+            La posizione di Laura è {{ laura_position }}.
+          {%- endmacro -%}
+
           {# *********************************************** #}
           {# ******************* Message ******************* #}
           {# *********************************************** #}
@@ -93,11 +101,30 @@ speech_engine:
           
           {% if enable_status is defined %}
             {% if enable_status | int == 1 %}
+
               {{ status_covers() }}
+
+              {{ status_location() }}
             
               {{ status_car() }}
+              
             {% endif %}
           {% endif %}
 
           {# generic message #}
           {{ message }}
+
+######################################################################
+# Script: Speech Status
+#
+# Operations:
+# - script.speech_engine
+######################################################################
+
+speech_status:
+  alias: Pronuncia Stato
+  sequence: 
+    - service: script.speech_engine
+      data:
+        enable_greeting: 1
+        enable_status: 1
