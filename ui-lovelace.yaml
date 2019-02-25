@@ -353,7 +353,8 @@ views:
         title: Configurazione Notifiche
         show_header_toggle: false
         entities:
-        - group.ha_settings
+        - input_boolean.speech_notifications
+        - input_boolean.text_notifications
       - type: entities
         title: Controlli
         show_header_toggle: false
