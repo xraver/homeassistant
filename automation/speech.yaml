@@ -16,7 +16,7 @@
         - device_tracker.google_maps_103158638433668748797
         # - device_tracker.google_maps_113099283296073047871
       to: 'Casa'
-    
+
 #    - platform: state
 #      entity_id: 
 #        - device_tracker.s9
@@ -29,29 +29,29 @@
   action:
     - wait_template: >-
         {# Giorgio #}
-        {% if trigger.to_state.entity_id == 'device_tracker.google_maps_115265981849847357125' %}
+        {% if trigger.entity_id == 'device_tracker.google_maps_115265981849847357125' %}
           {% if is_state('device_tracker.s9', 'home') %}
             true
           {% else %}
             false
           {% endif %}
-
+        
         {# Laura #}
-        {% elif trigger.to_state.entity_id == 'device_tracker.google_maps_103158638433668748797' %}
+        {% elif trigger.entity_id == 'device_tracker.google_maps_103158638433668748797' %}
           {% if is_state('device_tracker.a5', 'home') %}
             true
           {% else %}
             false
           {% endif %}
-
+        
         {# Anna #}
-        {% elif trigger.to_state.entity_id == 'device_tracker.google_maps_113099283296073047871' %}
+        {% elif trigger.entity_id == 'device_tracker.google_maps_113099283296073047871' %}
           {% if is_state('device_tracker.a3', 'home') %}
             true
           {% else %}
             false
           {% endif %}
-
+        
         {# Others #}
         {% else %}
           false
@@ -64,7 +64,7 @@
       data_template:
         language: 'it'
         message: >-
-          {% set name = trigger.to_state.attributes.friendly_name %}
+          {% set name = state_attr(trigger.entity_id, 'friendly_name') %}
           {%- macro greeting_sentence(name) -%}
           {{ [
           "Ciao " ~ name + " è un piacere rivederti a casa",
@@ -84,7 +84,6 @@
           "Ciao " ~ name + "! Casa è sempre la casa!",
           ] | random }}
           {%- endmacro -%}
-
           {{ greeting_sentence(name) }}
         enable_greeting: 0
 
