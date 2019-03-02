@@ -4,4 +4,4 @@
 
 username: !secret mb_user
 password: !secret mb_password
-scan_interval: 60
+scan_interval: 120

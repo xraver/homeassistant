@@ -12,7 +12,7 @@
   # Seconds between each scan for new devices
   interval_seconds: 60
   # Seconds to wait till marking someone as not home after not being seen
-  consider_home: 180
+  consider_home: 300
   new_device_defaults:
     track_new_devices: true
     hide_if_away: false

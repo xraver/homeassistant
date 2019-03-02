@@ -5,6 +5,12 @@
 project_id: !secret google_project
 api_key: !secret google_api_key
 expose_by_default: false
+exposed_domains:
+  - climate
+  - cover
+  - input_boolean
+  - media_player
+  - script
 entity_config:
   climate.bagno_termostato_bagno:
     name: Termostato Bagno
@@ -57,4 +63,6 @@ entity_config:
   media_player.tv_sala:
     name: TV Sala
     room: Sala
+    expose: true
+  script.speech_status:
     expose: true
