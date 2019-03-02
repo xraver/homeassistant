@@ -16,3 +16,6 @@ script.speech_engine:
 
 script.speech_status:
   icon: mdi:voice
+
+script.laura_voice:
+  icon: mdi:voice

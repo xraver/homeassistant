@@ -1,0 +1,36 @@
+######################################################################
+# Script: Laura
+# Inputs: 
+# - type:
+#         1 -> bell'affare
+#
+# Operations:
+# - media_player.play_media
+######################################################################
+
+laura_voice:
+  alias: Voce Laura
+  sequence:
+    - condition: state
+      entity_id: input_boolean.speech_notifications
+      state: 'on'
+  
+    - service: script.notify_volume_manager
+      data_template:
+        media_player: "{{ media_player }}"
+        volume_level: "{{ volume_level }}"
+
+    - service: media_player.play_media
+      data_template:
+        entity_id: >-
+          {# Check Null Input #}
+          {% if media_player | length == 0 %}
+            {% set media_player = 'media_player.google_home' %}
+          {% endif %}
+          {{ media_player }}
+        media_content_type: 'audio/mp4'
+        media_content_id: >-
+          {% if type is not defined %}
+            {% set type = 1 %}
+          {% endif %}
+          https://home.giorgioravera.it/local/audio/laura/{{type}}.mp3

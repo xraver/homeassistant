@@ -60,25 +60,18 @@ notify_text:
         enable_persistent: "{{ enable_persistent }}"
 
 ######################################################################
-# Script: Voice Notification
+# Script: Volume Manager
 # Input:
 # - media_player
 # - volume_level
-# - language
-# - message
 #
 # Operations:
 # - media_player.volume_set
-# - tts.google_say
 ######################################################################
 
-notify_voice:
-  alias: Notifiche vocali
+notify_volume_manager:
+  alias: Gestione Volume
   sequence:
-    - condition: state
-      entity_id: input_boolean.speech_notifications
-      state: 'on'
-  
     - service: media_player.volume_set
       data_template:
         entity_id: >-
@@ -90,7 +83,7 @@ notify_voice:
         volume_level: >-
           {# Default Values #}
           {% set defaultVolume = 0.30 %}
-          {% set maxDayVolume = 0.50 %}
+          {% set maxDayVolume = 0.60 %}
           {% set maxNightVolume = 0.20 %}
           
           {# Check Null Input #}
@@ -112,6 +105,31 @@ notify_voice:
               {{ volume_level }}
             {% endif %}
           {% endif %}
+
+######################################################################
+# Script: Voice Notification
+# Input:
+# - media_player
+# - volume_level
+# - language
+# - message
+#
+# Operations:
+# - script.notify_volume_manager
+# - tts.google_say
+######################################################################
+
+notify_voice:
+  alias: Notifiche vocali
+  sequence:
+    - condition: state
+      entity_id: input_boolean.speech_notifications
+      state: 'on'
+  
+    - service: script.notify_volume_manager
+      data_template:
+        media_player: "{{ media_player }}"
+        volume_level: "{{ volume_level }}"
 
     - service: tts.google_say
       data_template:
