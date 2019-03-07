@@ -57,8 +57,10 @@
           false
         {% endif %}
 
-      timeout: '00:10:00'
+      timeout: '00:30:00'
       continue_on_timeout: 'false'
+
+#    - delay: 00:30
 
     - service: script.speech_engine
       data_template:
