@@ -1,0 +1,47 @@
+######################################################################
+# Alarm: Start Alarm
+#
+# Operations:
+# - script.notify_text
+# - media_player.volume_set
+# - media_player.play_media
+######################################################################
+
+start_alarm:
+  alias: "Attiva Allarme"
+  sequence:
+    - service: script.notify_text
+      data_template: 
+        title: "Allarme"
+        message: "Rilevato allarme"
+        enable_persistent: 1
+
+    - service: media_player.volume_set
+      data_template:
+        entity_id: 'media_player.google_home'
+        volume_level: 0.5
+
+    - service: media_player.play_media
+      data_template:
+        entity_id: 'media_player.google_home'
+        media_content_type: 'audio/mp4'
+        media_content_id: 'https://home.giorgioravera.it/local/audio/alarm.mp3'
+
+######################################################################
+# Alarm: Stop Alarm
+#
+# Operations:
+# - media_player.media_stop
+# - script.volume_manager
+######################################################################
+
+stop_alarm:
+  alias: "Interrompi Allarme"
+  sequence:
+    - service: media_player.media_stop
+      data_template:
+        entity_id: 'media_player.google_home'
+
+    - service: script.volume_manager
+      data_template:
+        media_player: 'media_player.google_home'

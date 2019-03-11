@@ -5,6 +5,7 @@
 #         1 -> bell'affare
 #
 # Operations:
+# - script.volume_manager
 # - media_player.play_media
 ######################################################################
 
@@ -15,9 +16,14 @@ laura_voice:
       entity_id: input_boolean.speech_notifications
       state: 'on'
   
-    - service: script.notify_volume_manager
+    - service: script.volume_manager
       data_template:
-        media_player: "{{ media_player }}"
+        media_player: >-
+          {# Check Null Input #}
+          {% if media_player | length == 0 %}
+            {% set media_player = 'media_player.google_home' %}
+          {% endif %}
+          {{ media_player }}
         volume_level: "{{ volume_level }}"
 
     - service: media_player.play_media

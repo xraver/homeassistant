@@ -1,9 +1,7 @@
 ######################################################################
-# Recorder Configuration
+# Logbook Configuration
 ######################################################################
 
-purge_keep_days: 30
-purge_interval: 1
 exclude:
   entities:
     - sensor.time
@@ -11,4 +9,6 @@ exclude:
   domains:
     - automation
     - group
+    - input_boolean
+    - input_text
     #- script

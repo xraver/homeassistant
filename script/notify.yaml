@@ -69,7 +69,7 @@ notify_text:
 # - media_player.volume_set
 ######################################################################
 
-notify_volume_manager:
+volume_manager:
   alias: Gestione Volume
   sequence:
     - service: media_player.volume_set
@@ -126,7 +126,7 @@ notify_voice:
       entity_id: input_boolean.speech_notifications
       state: 'on'
   
-    - service: script.notify_volume_manager
+    - service: script.volume_manager
       data_template:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
