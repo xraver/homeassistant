@@ -368,4 +368,8 @@ views:
         - script.homeassistant_restart
         - script.homeassistant_clearlog
         - script.homeassistant_upgrade
-
+      - type: entities
+        title: Operazione sui Dispositivi
+        show_header_toggle: false
+        entities: 
+        - script.shelly_upgrade
