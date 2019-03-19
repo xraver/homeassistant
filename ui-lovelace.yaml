@@ -274,6 +274,28 @@ views:
           - sensor.ff590mr_distance_since_start
 
 ######################################################################
+# Train
+######################################################################
+  - title: Treni
+    id: train
+    icon: mdi:train
+    cards:
+      - type: entities
+        title: "Savona - Genova Sampierdarena"
+        show_header_toggle: false
+        entities:
+#          - sensor.train_11341
+#          - sensor.train_11233
+          - sensor.treno_7_35
+#          - sensor.train_11283
+#      - type: entities
+#        title: "Genova Sampierdarena - Savona"
+#        show_header_toggle: false
+#        entities:
+#          - sensor.train_2188
+#          - sensor.train_11354
+ 
+######################################################################
 # Network
 ######################################################################
   - title: Dispositivi di Rete
