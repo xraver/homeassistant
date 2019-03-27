@@ -88,13 +88,13 @@ speech_engine:
             {% else %}
               {% set giorgio_position = states('device_tracker.google_maps_115265981849847357125') %}
             {% endif %}
-            La posizione di Laura è {{ laura_position }}.
+            La posizione di Giorgio è {{ giorgio_position }}.
             {% if is_state('device_tracker.google_maps_103158638433668748797', 'not_home') %}
               {% set laura_position = 'fuori casa' %}
             {% else %}
               {% set laura_position = states('device_tracker.google_maps_103158638433668748797') %}
             {% endif %}
-            La posizione di Giorgio è {{ giorgio_position }}.
+            La posizione di Laura è {{ laura_position }}.
           {%- endmacro -%}
 
           {# *********************************************** #}

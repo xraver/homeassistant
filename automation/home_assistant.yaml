@@ -80,7 +80,9 @@
             input_boolean.home_mode_day
           {% else %}
             input_boolean.home_mode_night
-          {% endif %}      
+          {% endif %}
+    
+    - service: script.volume_manager
 
 ######################################################################
 # Home Assistant: Management of Speech Notifications

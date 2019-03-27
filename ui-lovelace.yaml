@@ -38,8 +38,8 @@ views:
       entities: 
       - cover.tapparella_sala
       - climate.sala_termostato_sala
-  #    - media_player.roku_yd00dm481414
-  #    - media_player.ue46c7000_samsung_dtv_rcr
+      - media_player.tv_sala
+      #- media_player.roku_yd00dm481414
 
     - type: picture-glance
       title: Bagno
@@ -130,8 +130,6 @@ views:
   - title: Dispositivi Multimediali
     id: multimedia
     icon: mdi:television
-  #  badges:
-  #    - binary_sensor.speech_notifications      
     cards:
       - type: entities
         title: Google Home Cucina
@@ -196,14 +194,14 @@ views:
       - binary_sensor.ff590mr_parkbreak_status
       - binary_sensor.ff590mr_decklid_status
     cards:
-#      - type: gauge
-#        title: "Livello Carburante"
-#        unit: '%'
-#        entity: sensor.ff590mr_tank_level
-#        severity:
-#          red: 0
-#          yellow: 30
-#          green: 60
+      #- type: gauge
+      #  title: "Livello Carburante"
+      #  unit: '%'
+      #  entity: sensor.ff590mr_tank_level
+      #  severity:
+      #    red: 0
+      #    yellow: 30
+      #    green: 60
 
       - type: entities
         title: "Mercedes A200d: Sensori"
@@ -214,7 +212,7 @@ views:
           - binary_sensor.ff590mr_warning_washwater
           - binary_sensor.ff590mr_warning_breakfluid
           - binary_sensor.ff590mr_warning_engine_light
-  #    - device_tracker.wdd1760081v167576
+          #- device_tracker.wdd1760081v167576
 
       - type: entities
         title: "Mercedes A200d: Ruote"
@@ -265,10 +263,10 @@ views:
           - sensor.ff590mr_licenseplate
           - sensor.ff590mr_liquid_consumption_reset
           - sensor.ff590mr_liquid_consumption_start
-      #    - sensor.ff590mr_odometer
+          #- sensor.ff590mr_odometer
           #- sensor.ff590mr_liquid_range
           #- sensor.ff590mr_electric_distance_since_start
-      #    - sensor.ff590mr_tank_level
+          #- sensor.ff590mr_tank_level
           #- sensor.ff590mr_electric_distance_ctritical_reset
           - sensor.ff590mr_distance_since_reset
           - sensor.ff590mr_distance_since_start
@@ -276,18 +274,18 @@ views:
 ######################################################################
 # Train
 ######################################################################
-  - title: Treni
-    id: train
-    icon: mdi:train
-    cards:
-      - type: entities
-        title: "Savona - Genova Sampierdarena"
-        show_header_toggle: false
-        entities:
-#          - sensor.train_11341
-#          - sensor.train_11233
-          - sensor.treno_7_35
-#          - sensor.train_11283
+#  - title: Treni
+#    id: train
+#    icon: mdi:train
+#    cards:
+#      - type: entities
+#        title: "Savona - Genova Sampierdarena"
+#        show_header_toggle: false
+#        entities:
+#          #- sensor.train_11341
+#          #- sensor.train_11233
+#          - sensor.treno_7_35
+#          #- sensor.train_11283
 #      - type: entities
 #        title: "Genova Sampierdarena - Savona"
 #        show_header_toggle: false
