@@ -2,8 +2,8 @@
 # Zone Work
 ######################################################################
 
-name: Ansaldo
-latitude: !secret ansaldo_latitude
-longitude: !secret ansaldo_longitude
+name: Hitachi
+latitude: !secret hitachi_latitude
+longitude: !secret hitachi_longitude
 radius: 50
 icon: mdi:city
