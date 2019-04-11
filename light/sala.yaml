@@ -1,30 +1,127 @@
 ######################################################################
-# Living Room Cover
+# Living Room Light (Color)
 ######################################################################
 
 - platform: mqtt
   name: Luce Divano
-  command_topic: "shellies/shellybulb-<deviceid>/color/0/command"
-  state_topic: "shellies/shellybulb-<deviceid>/color/0"
-  payload_on: "on"
-  payload_cff: "off"
-
-  brightness_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  brightness_scale: 100
-  brightness_state_topic: "shellies/shellybulb-<deviceid>/color/0/status"
-
-  color_temp_command_template: 
-  color_temp_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  color_temp_state_topic: 
-  color_temp_value_template: 
-
-  effect_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  hs_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  rgb_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  white_value_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  xy_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  
-  qos: 0
+  schema: template
+  command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  state_topic: "shellies/shellybulb-<deviceid>/color/0/status"
+  command_on_template: >
+    {
+      "turn": "on",
+      "mode": "color",
+      {%- if red is defined and green is defined and blue is defined -%}
+        "red": {{ red }},
+        "green": {{ green }},
+        "blue": {{ blue }},
+      {%- endif -%}
+      {%- if white_value is defined -%}
+        "white": {{ white_value }},
+      {%- endif -%}
+      {%- if brightness is defined -%}
+        "gain": {{ (brightness/255*100) | int }},
+      {%- endif -%}
+      {%- if effect is defined -%}
+        {%- if effect == 'Meteor Shower' -%}
+          "effect": 1
+        {%- elif effect == 'Gradual Change' -%}
+          "effect": 2
+        {%- elif effect == 'Breath' -%}
+          "effect": 3
+        {%- elif effect == 'Flash' -%}
+          "effect": 4
+        {%- elif effect == 'On/Off Gradual' -%}
+          "effect": 5
+        {%- elif effect == 'Red/Green Change' -%}
+          "effect": 6
+        {%- else -%}
+          "effect": 0
+        {%- endif -%}
+      {%- else -%}
+        "effect": 0
+      {%- endif -%}
+    }
+  command_off_template: >
+    {
+      "turn": "off",
+      "mode": "color",
+      "effect": 0
+    }  
+  state_template: >
+    {% if value_json.ison == true and value_json.mode == "color" %}
+      on
+    {% else %}
+      off
+    {% endif %}
+  brightness_template: '{{ (value_json.gain/100*255) | int }}'
+  red_template: '{{ value_json.red }}'
+  green_template: '{{ value_json.green }}'
+  blue_template: '{{ value_json.blue }}'
+  white_value_template: '{{ value_json.white }}'    
+  effect_template: >
+    {%- if value_json.effect == 1 -%}
+      Meteor Shower
+    {%- elif value_json.effect == 2 -%}
+      Gradual Change
+    {%- elif value_json.effect == 3 -%}
+      Breath
+    {%- elif value_json.effect == 4 -%}
+      Flash
+    {%- elif value_json.effect == 5 -%}
+      On/Off Gradual
+    {%- elif value_json.effect == 6 -%}
+      Red/Green Change
+    {%- else -%}
+      Off
+    {%- endif -%}
+  effect_list:
+    - "Off"
+    - Meteor Shower
+    - Gradual Change
+    - Breath
+    - Flash
+    - On/Off Gradual
+    - Red/Green Change
   retain: false
+  qos: 0
+  optimistic: false
 
+######################################################################
+# Living Room Light (White)
+######################################################################
+
+- platform: mqtt
+  name: Luce Divano Bianca
+  schema: template
+  command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  state_topic: "shellies/shellybulb-<deviceid>/color/0/status"
+  command_on_template: >
+    {
+      "turn": "on",
+      "mode": "white",
+      {%- if color_temp is defined -%}
+        "temp": {{ (1000000/(((float(color_temp)-153)/354*180)+153)-35) | int }},
+      {%- endif -%}
+      {%- if brightness is defined -%}
+        "brightness": {{ (brightness/255*100) | int }},
+      {%- endif -%}
+      "effect": 0
+    }
+  command_off_template: >
+    {
+      "turn": "off",
+      "mode": "white",
+      "effect": 0
+    }  
+  state_template: >
+    {% if value_json.ison == true and value_json.mode == "white" %}
+      on
+    {% else %}
+      off
+    {% endif %}
+  brightness_template: '{{ (value_json.brightness/100*255)|int }}'
+  color_temp_template: "{{ (1000000/(((float(value_json.temp)-3000)/3500*4500)+2000)) | int }}"
+  retain: false
+  qos: 0
   optimistic: false
