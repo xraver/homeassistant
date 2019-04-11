@@ -131,7 +131,7 @@ speech_engine:
 ######################################################################
 
 speech_status:
-  alias: Pronuncia Stato
+  alias: Stato Casa
   sequence: 
     - service: script.speech_engine
       data:
