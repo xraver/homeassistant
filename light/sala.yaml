@@ -1,0 +1,30 @@
+######################################################################
+# Living Room Cover
+######################################################################
+
+- platform: mqtt
+  name: Luce Divano
+  command_topic: "shellies/shellybulb-<deviceid>/color/0/command"
+  state_topic: "shellies/shellybulb-<deviceid>/color/0"
+  payload_on: "on"
+  payload_cff: "off"
+
+  brightness_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  brightness_scale: 100
+  brightness_state_topic: "shellies/shellybulb-<deviceid>/color/0/status"
+
+  color_temp_command_template: 
+  color_temp_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  color_temp_state_topic: 
+  color_temp_value_template: 
+
+  effect_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  hs_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  rgb_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  white_value_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  xy_command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
+  
+  qos: 0
+  retain: false
+
+  optimistic: false
