@@ -20,31 +20,31 @@
 #    - snow
 #    - clouds
 
-- platform: darksky
-  api_key: !secret darksky_key
-  forecast:
-    - 0
-  language: it
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  monitored_conditions:
-    - summary
-    - icon
-    - precip_type
-    - precip_intensity
-    - precip_probability
-    - temperature
-    - dew_point
-    - wind_speed
-    - cloud_cover
-    - humidity
-    - pressure
-    - visibility
-    - minutely_summary
-    - hourly_summary
-    - daily_summary
-    - temperature_high
-    - temperature_low
-    - uv_index
-  units: si
-  scan_interval: 02:00
+#- platform: darksky
+#  api_key: !secret darksky_key
+#  forecast:
+#    - 0
+#  language: it
+#  latitude: !secret home_latitude
+#  longitude: !secret home_longitude
+#  monitored_conditions:
+#    - summary
+#    - icon
+#    - precip_type
+#    - precip_intensity
+#    - precip_probability
+#    - temperature
+#    - dew_point
+#    - wind_speed
+#    - cloud_cover
+#    - humidity
+#    - pressure
+#    - visibility
+#    - minutely_summary
+#    - hourly_summary
+#    - daily_summary
+#    - temperature_high
+#    - temperature_low
+#    - uv_index
+#  units: si
+#  scan_interval: 02:00
