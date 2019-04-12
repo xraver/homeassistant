@@ -60,7 +60,7 @@
       timeout: '00:30:00'
       continue_on_timeout: 'false'
 
-#    - delay: 00:30
+    - delay: 00:15
 
     - service: script.speech_engine
       data_template:
