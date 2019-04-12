@@ -7,11 +7,11 @@
   command_topic: "shellies/shellyswitch-559C49/roller/0/command"
   position_topic: "shellies/shellyswitch-559C49/roller/0/pos"
   set_position_topic: "shellies/shellyswitch-559C49/roller/0/command/pos"
-  qos: 0
-  retain: false
   payload_open: "open"
   payload_close: "close"
   payload_stop: "stop"
   position_open: 100
   position_closed: 0
+  retain: false
   optimistic: false
+  qos: 1

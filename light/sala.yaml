@@ -84,7 +84,7 @@
     - On/Off Gradual
     - Red/Green Change
   retain: false
-  qos: 0
+  qos: 1
   optimistic: false
 
 ######################################################################
@@ -123,5 +123,5 @@
   brightness_template: '{{ (value_json.brightness/100*255)|int }}'
   color_temp_template: "{{ (1000000/(((float(value_json.temp)-3000)/3500*4500)+2000)) | int }}"
   retain: false
-  qos: 0
+  qos: 1
   optimistic: false
