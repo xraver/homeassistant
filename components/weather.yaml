@@ -2,16 +2,16 @@
 # Component: Dark Sky
 ######################################################################
 
-platform: darksky
-name: Meteo Savona
-api_key: !secret darksky_key
-latitude: !secret home_latitude
-longitude: !secret home_longitude
-mode: hourly
+- platform: darksky
+  name: Meteo Savona
+  api_key: !secret darksky_key
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  mode: hourly
 
-platform: darksky
-name: Meteo Morgex
-api_key: !secret darksky_key
-latitude: !secret morgex_latitude
-longitude: !secret morgex_longitude
-mode: hourly
+- platform: darksky
+  name: Meteo Morgex
+  api_key: !secret darksky_key
+  latitude: !secret morgex_latitude
+  longitude: !secret morgex_longitude
+  mode: hourly

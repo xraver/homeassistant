@@ -94,7 +94,7 @@ views:
         title: Comandi tapparelle
         show_header_toggle: false
         entities:
-          - cover.all_covers
+          - cover.tapparella_globale
           - cover.tapparella_cucina
           - cover.tapparella_sala
           - cover.tapparella_studio
@@ -328,7 +328,9 @@ views:
       - sensor.yr_symbol
     cards:
       - type: weather-forecast
-        entity: weather.dark_sky
+        entity: weather.meteo_savona
+      - type: weather-forecast
+        entity: weather.meteo_morgex
 #      - type: entities
 #        title: Oggi
 #        show_header_toggle: false
