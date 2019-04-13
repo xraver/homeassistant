@@ -12,21 +12,17 @@ exposed_domains:
   - media_player
   - script
 entity_config:
-  climate.bagno_termostato_bagno:
-    room: Bagno
+# Luci
+  light.luce_corridoio:
+    room: Corridoio
     expose: true
-  climate.camera_termostato_camera:
-    room: Camera
-    expose: true
-  climate.cucina_termostato_cucina:
+  light.luce_cucina:
     room: Cucina
     expose: true
-  climate.sala_termostato_sala:
+  light.luce_divano:
     room: Sala
-    expose: true
-  climate.studio_termostato_studio:
-    room: Studio
-    expose: true
+    expose: true    
+# Tapparelle
   cover.tapparella_globale:
     room: Generale
     expose: true
@@ -42,12 +38,27 @@ entity_config:
   cover.tapparella_camera:
     room: Camera
     expose: true
+# Termostato
+  climate.bagno_termostato_bagno:
+    room: Bagno
+    expose: true
+  climate.camera_termostato_camera:
+    room: Camera
+    expose: true
+  climate.cucina_termostato_cucina:
+    room: Cucina
+    expose: true
+  climate.sala_termostato_sala:
+    room: Sala
+    expose: true
+  climate.studio_termostato_studio:
+    room: Studio
+    expose: true
+# Script & Routine
   input_boolean.home_mode_away:
     room: Generale
     expose: true
-#  media_player.bdf6500_bdf6500:
-#    room: Camera
-#    expose: true
+# Media Player
   media_player.tv_sala:
     room: Sala
     expose: true

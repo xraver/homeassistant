@@ -5,8 +5,8 @@
 - platform: mqtt
   name: Luce Divano
   schema: template
-  command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  state_topic: "shellies/shellybulb-<deviceid>/color/0/status"
+  command_topic: "shellies/shellybulb-BC8610/color/0/set"
+  state_topic: "shellies/shellybulb-BC8610/color/0/status"
   command_on_template: >
     {
       "turn": "on",

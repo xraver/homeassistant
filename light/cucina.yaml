@@ -1,0 +1,13 @@
+######################################################################
+# Kitchen Room Light
+######################################################################
+
+- platform: mqtt
+  name: Luce Cucina
+  command_topic: "shellies/shelly1-93B27D/relay/0/command"
+  state_topic: "shellies/shelly1-93B27D/relay/0"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+  qos: 1
+  optimistic: false

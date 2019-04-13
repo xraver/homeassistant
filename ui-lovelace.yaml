@@ -27,6 +27,7 @@ views:
       show_state: false
       image: /local/rooms/cucina.jpg
       entities:
+      - light.luce_cucina
       - cover.tapparella_cucina
       - climate.cucina_termostato_cucina
       - media_player.google_home
@@ -36,10 +37,22 @@ views:
       show_state: true
       image: /local/rooms/sala.jpg
       entities: 
+      - light.luce_divano
       - cover.tapparella_sala
       - climate.sala_termostato_sala
       - media_player.tv_sala
       #- media_player.roku_yd00dm481414
+
+    - type: picture-glance
+      title: Corridoio
+      show_state: true
+      state_image:
+        "on": /local/rooms/corridoio_on.jpg
+        "off": /local/rooms/corridoio_off.jpg
+      entity: light.luce_corridoio
+      image: 
+      entities: 
+      - light.luce_corridoio
 
     - type: picture-glance
       title: Bagno
@@ -77,6 +90,23 @@ views:
       show_header_toggle: false
       entities:
       - script.speech_status
+
+######################################################################
+# Lights
+######################################################################
+  - title: Luci
+    id: light
+    icon: mdi:lightbulb
+    cards:
+    - type: light
+      entity: light.luce_cucina
+      name: Luce Cucina
+    - type: light
+      entity: light.luce_corridoio
+      name: Luce Corridoio
+    - type: light
+      entity: light.luce_divano
+      name: Luce Divano
 
 ######################################################################
 # Covers

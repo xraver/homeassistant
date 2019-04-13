@@ -1,0 +1,13 @@
+######################################################################
+# Living Room Light (Color)
+######################################################################
+
+- platform: mqtt
+  name: Luce Corridoio
+  command_topic: "shellies/shelly1-24D1EE/relay/0/command"
+  state_topic: "shellies/shelly1-24D1EE/relay/0"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+  qos: 1
+  optimistic: false
