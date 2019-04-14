@@ -29,3 +29,27 @@ shelly_upgrade:
       data:
         topic: 'shellies/shellyswitch-559C49/command'
         payload: 'update_fw'
+
+    # Shelly 1 Luce Corridoio
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly1-24D1EE/command'
+        payload: 'update_fw'
+
+    # Shelly 1 Luce Cucina
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly1-93B27D/command'
+        payload: 'update_fw'
+
+    # Shelly 2.5 Luci Bagno
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shellyswitch25-7457D8/command'
+        payload: 'update_fw'
+
+    # Shelly Bulb Luce Divano
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shellybulb-BC8610/command'
+        payload: 'update_fw'
