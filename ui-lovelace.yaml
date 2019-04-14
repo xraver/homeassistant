@@ -106,6 +106,18 @@ views:
       - light.luce_bagno
       - light.luce_specchio
     cards:
+    - type: entities
+      title: Comandi luci
+      show_header_toggle: false
+      entities:
+        - light.luci_globale
+        - light.luce_cucina
+        - light.luce_corridoio
+        - light.luce_divano
+        - light.luce_divano_bianca
+        - light.luce_bagno
+        - light.luce_specchio
+    
     - type: light
       name: Luci Globale
       entity: light.luci_globale
@@ -157,7 +169,7 @@ views:
           - cover.tapparella_camera
 
 ######################################################################
-# Climate View
+# Climate
 ######################################################################
   - title: Termostato
     id: climate
