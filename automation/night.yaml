@@ -19,7 +19,7 @@
   action:
     - service: cover.set_cover_position
       data:
-        entity_id: cover.all_covers
+        entity_id: cover.tapparella_globale
         position: 15
 
     - service: cover.set_cover_position
