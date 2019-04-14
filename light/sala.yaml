@@ -23,17 +23,17 @@
         "gain": {{ (brightness/255*100) | int }},
       {%- endif -%}
       {%- if effect is defined -%}
-        {%- if effect == 'Meteor Shower' -%}
+        {%- if effect == 'Pioggia di Meteore' -%}
           "effect": 1
-        {%- elif effect == 'Gradual Change' -%}
+        {%- elif effect == 'Cambio Graduale' -%}
           "effect": 2
         {%- elif effect == 'Breath' -%}
           "effect": 3
         {%- elif effect == 'Flash' -%}
           "effect": 4
-        {%- elif effect == 'On/Off Gradual' -%}
+        {%- elif effect == 'On/Off Graduale' -%}
           "effect": 5
-        {%- elif effect == 'Red/Green Change' -%}
+        {%- elif effect == 'Rosso/Verde' -%}
           "effect": 6
         {%- else -%}
           "effect": 0
@@ -45,8 +45,7 @@
   command_off_template: >
     {
       "turn": "off",
-      "mode": "color",
-      "effect": 0
+      "mode": "color"
     }  
   state_template: >
     {% if value_json.ison == true and value_json.mode == "color" %}
@@ -61,28 +60,28 @@
   white_value_template: '{{ value_json.white }}'    
   effect_template: >
     {%- if value_json.effect == 1 -%}
-      Meteor Shower
+      Pioggia di Meteore
     {%- elif value_json.effect == 2 -%}
-      Gradual Change
+      Cambio Graduale
     {%- elif value_json.effect == 3 -%}
       Breath
     {%- elif value_json.effect == 4 -%}
       Flash
     {%- elif value_json.effect == 5 -%}
-      On/Off Gradual
+      On/Off Graduale
     {%- elif value_json.effect == 6 -%}
-      Red/Green Change
+      Rosso/Verde
     {%- else -%}
       Off
     {%- endif -%}
   effect_list:
     - "Off"
-    - Meteor Shower
-    - Gradual Change
+    - Pioggia di Meteore
+    - Cambio Graduale
     - Breath
     - Flash
-    - On/Off Gradual
-    - Red/Green Change
+    - On/Off Graduale
+    - Rosso/Verde
   retain: false
   qos: 1
   optimistic: false
@@ -94,8 +93,8 @@
 - platform: mqtt
   name: Luce Divano Bianca
   schema: template
-  command_topic: "shellies/shellybulb-<deviceid>/color/0/set"
-  state_topic: "shellies/shellybulb-<deviceid>/color/0/status"
+  command_topic: "shellies/shellybulb-BC8610/color/0/set"
+  state_topic: "shellies/shellybulb-BC8610/color/0/status"
   command_on_template: >
     {
       "turn": "on",

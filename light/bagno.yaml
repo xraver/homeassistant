@@ -1,0 +1,27 @@
+######################################################################
+# Bathroom Light
+######################################################################
+
+- platform: mqtt
+  name: Luce Bagno
+  command_topic: "shellies/shellyswitch25-7457D8/relay/0/command"
+  state_topic: "shellies/shellyswitch25-7457D8/relay/0"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+  qos: 1
+  optimistic: false
+
+######################################################################
+# Bathroom Mirror Light
+######################################################################
+
+- platform: mqtt
+  name: Luce Specchio
+  command_topic: "shellies/shellyswitch25-7457D8/relay/1/command"
+  state_topic: "shellies/shellyswitch25-7457D8/relay/1"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+  qos: 1
+  optimistic: false

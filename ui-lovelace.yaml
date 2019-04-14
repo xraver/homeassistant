@@ -11,7 +11,6 @@ views:
 ######################################################################
   - title: Principale
     id: main
-    #icon: mdi:home-assistant
     icon: mdi:home
     badges:
       - device_tracker.google_maps_115265981849847357125
@@ -38,6 +37,7 @@ views:
       image: /local/rooms/sala.jpg
       entities: 
       - light.luce_divano
+      - light.luce_divano_bianca
       - cover.tapparella_sala
       - climate.sala_termostato_sala
       - media_player.tv_sala
@@ -59,6 +59,8 @@ views:
       show_state: true
       image: /local/rooms/bagno.jpg
       entities: 
+      - light.luce_bagno
+      - light.luce_specchio
       - climate.bagno_termostato_bagno
 
     - type: picture-glance
@@ -97,16 +99,40 @@ views:
   - title: Luci
     id: light
     icon: mdi:lightbulb
+    badges:
+      - light.luce_cucina
+      - light.luce_corridoio
+      - light.luce_divano
+      - light.luce_bagno
+      - light.luce_specchio
     cards:
     - type: light
-      entity: light.luce_cucina
+      name: Luci Globale
+      entity: light.luci_globale
+
+    - type: light
       name: Luce Cucina
+      entity: light.luce_cucina
+
     - type: light
-      entity: light.luce_corridoio
       name: Luce Corridoio
+      entity: light.luce_corridoio
+
     - type: light
-      entity: light.luce_divano
       name: Luce Divano
+      entity: light.luce_divano
+
+    - type: light
+      name: Luce Divano Bianca
+      entity: light.luce_divano_bianca
+
+    - type: light
+      name: Luce Bagno
+      entity: light.luce_bagno
+
+    - type: light
+      name: Luce Specchio
+      entity: light.luce_specchio
 
 ######################################################################
 # Covers

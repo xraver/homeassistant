@@ -22,10 +22,13 @@ entity_config:
   light.luce_divano:
     room: Sala
     expose: true    
-# Tapparelle
-  cover.tapparella_globale:
-    room: Generale
+  light.luce_bagno:
+    room: Sala
+    expose: true    
+  light.luce_specchio:
+    room: Sala
     expose: true
+# Tapparelle
   cover.tapparella_cucina:
     room: Cucina
     expose: true

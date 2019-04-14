@@ -12,7 +12,7 @@
       title: Comandi tapparelle
       show_header_toggle: false
       entities:
-        - cover.all_covers
+        - cover.tapparella_globale
         - cover.tapparella_cucina
         - cover.tapparella_sala
         - cover.tapparella_studio
