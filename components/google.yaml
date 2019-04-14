@@ -23,10 +23,10 @@ entity_config:
     room: Sala
     expose: true    
   light.luce_bagno:
-    room: Sala
+    room: Bagno
     expose: true    
   light.luce_specchio:
-    room: Sala
+    room: Bagno
     expose: true
 # Tapparelle
   cover.tapparella_cucina:
