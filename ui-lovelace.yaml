@@ -41,7 +41,6 @@ views:
       - cover.tapparella_sala
       - climate.sala_termostato_sala
       - media_player.tv_sala
-      #- media_player.roku_yd00dm481414
 
     - type: picture-glance
       title: Corridoio
@@ -205,17 +204,54 @@ views:
         entities:
         - media_player.google_home
         - input_text.google_home_speak
-      - type: entities
+
+      - type: vertical-stack
         title: TV Sala
-        show_header_toggle: false
-        entities:
-        - media_player.tv_sala
-        - script.tv_volume_up
-        - script.tv_volume_down
-        - script.tv_volume_mute
-        - script.tv_play_pause
-        - script.tv_toggle
-        - input_text.tv_change_channel
+        cards:
+        - type: media-control
+          entity: media_player.tv_sala
+        - type: horizontal-stack
+          cards:
+          - type: entity-button
+            entity: script.tv_volume_up
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.tv_volume_up
+          - type: entity-button
+            entity: script.tv_volume_down
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.tv_volume_down
+          - type: entity-button
+            entity: script.tv_volume_mute          
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.tv_volume_mute
+
+        - type: horizontal-stack
+          cards:
+          - type: entity-button
+            entity: script.tv_play_pause
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.tv_play_pause
+          - type: entity-button
+            entity: script.tv_toggle
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.tv_toggle
+          - type: entity-button
+            entity: input_text.tv_change_channel
 
 ######################################################################
 # People
