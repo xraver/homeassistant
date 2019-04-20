@@ -9,7 +9,7 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
-  qos: 1
+  qos: 0
   optimistic: false
 
 ######################################################################
@@ -23,5 +23,5 @@
   payload_on: "on"
   payload_off: "off"
   retain: false
-  qos: 1
+  qos: 0
   optimistic: false

@@ -1,11 +1,11 @@
 ######################################################################
-# Corridor Light
+# Badroom Light
 ######################################################################
 
 - platform: mqtt
-  name: Luce Corridoio
-  command_topic: "shellies/shelly1-24D1EE/relay/0/command"
-  state_topic: "shellies/shelly1-24D1EE/relay/0"
+  name: Luce Camera
+  command_topic: "shellies/shelly1-24D1A8/relay/0/command"
+  state_topic: "shellies/shelly1-24D1A8/relay/0"
   payload_on: "on"
   payload_off: "off"
   retain: false

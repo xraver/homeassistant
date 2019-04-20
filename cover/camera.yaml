@@ -14,4 +14,4 @@
   position_closed: 0
   retain: false
   optimistic: false
-  qos: 1
+  qos: 0
