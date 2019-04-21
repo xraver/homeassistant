@@ -6,4 +6,5 @@ name: Torretti
 latitude: !secret torretti_latitude
 longitude: !secret torretti_longitude
 radius: 50
-icon: mdi:hotel
+#icon: mdi:hotel
+icon: mdi:domain

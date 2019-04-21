@@ -6,4 +6,4 @@ name: Hitachi
 latitude: !secret hitachi_latitude
 longitude: !secret hitachi_longitude
 radius: 50
-icon: mdi:city
+icon: mdi:domain
