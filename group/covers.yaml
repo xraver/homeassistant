@@ -1,9 +1,13 @@
+######################################################################
+# Group Covers
+######################################################################
+
 covers:
   name: Tapparelle
   view: true
   icon: mdi:window-closed
   entities:
-    - sensor.tapparella_cucina
-    - sensor.tapparella_sala
-    - sensor.tapparella_studio
-    - sensor.tapparella_camera
+    - cover.tapparella_cucina
+    - cover.tapparella_sala
+    - cover.tapparella_studio
+    - cover.tapparella_camera

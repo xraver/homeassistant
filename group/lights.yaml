@@ -2,7 +2,7 @@
 # Group Lights
 ######################################################################
 
-covers:
+lights:
   name: Luci
   view: true
   icon: mdi:lightbulb
