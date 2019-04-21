@@ -37,7 +37,10 @@ views:
     - type: picture-glance
       title: Sala
       show_state: true
-      image: /local/rooms/sala.jpg
+      state_image:
+        "on": /local/rooms/sala_on.jpg
+        "off": /local/rooms/sala_off.jpg
+      entity: light.luce_divano
       entities: 
       - light.luce_divano
       - light.luce_divano_bianca
