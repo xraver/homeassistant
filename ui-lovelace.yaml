@@ -23,8 +23,11 @@ views:
     cards:
     - type: picture-glance
       title: Cucina
-      show_state: false
-      image: /local/rooms/cucina.jpg
+      show_state: true
+      state_image:
+        "on": /local/rooms/cucina_on.jpg
+        "off": /local/rooms/cucina_off.jpg
+      entity: light.luce_cucina
       entities:
       - light.luce_cucina
       - cover.tapparella_cucina
@@ -56,7 +59,10 @@ views:
     - type: picture-glance
       title: Bagno
       show_state: true
-      image: /local/rooms/bagno.jpg
+      state_image:
+        "on": /local/rooms/bagno_on.jpg
+        "off": /local/rooms/bagno_off.jpg
+      entity: light.luce_bagno
       entities: 
       - light.luce_bagno
       - light.luce_specchio
@@ -65,8 +71,12 @@ views:
     - type: picture-glance
       title: Studio
       show_state: true
-      image: /local/rooms/studio.jpg
+      state_image:
+        "on": /local/rooms/studio_on.jpg
+        "off": /local/rooms/studio_off.jpg
+      entity: light.luce_studio
       entities: 
+      - light.luce_studio
       - cover.tapparella_studio
       - climate.studio_termostato_studio
 
@@ -75,6 +85,7 @@ views:
       show_state: true
       image: /local/rooms/camera.jpg
       entities: 
+      - light.luce_camera
       - cover.tapparella_camera
       - climate.camera_termostato_camera
 
@@ -104,6 +115,8 @@ views:
       - light.luce_divano
       - light.luce_bagno
       - light.luce_specchio
+      - light.luce_studio
+      - light.luce_camera
     cards:
     - type: entities
       title: Comandi luci
@@ -116,6 +129,8 @@ views:
         - light.luce_divano_bianca
         - light.luce_bagno
         - light.luce_specchio
+        - light.luce_studio
+        - light.luce_camera
     
     - type: light
       name: Luci Globale
@@ -252,6 +267,21 @@ views:
                 entity_id: script.tv_toggle
           - type: entity-button
             entity: input_text.tv_change_channel
+
+      - type: vertical-stack
+        title: TV Sala
+        cards:
+        - type: horizontal-stack
+          cards:
+          - type: entity-button
+            name: Affare
+            icon: mdi:numeric-1
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice
 
 ######################################################################
 # People
@@ -487,15 +517,51 @@ views:
         entities:
         - input_boolean.speech_notifications
         - input_boolean.text_notifications
-      - type: entities
-        title: Controlli
-        show_header_toggle: false
-        entities: 
-        - script.homeassistant_restart
-        - script.homeassistant_clearlog
-        - script.homeassistant_upgrade
-      - type: entities
-        title: Operazione sui Dispositivi
-        show_header_toggle: false
-        entities: 
-        - script.shelly_upgrade
+
+      - type: vertical-stack
+        cards:
+        - type: horizontal-stack
+          cards:
+          - type: entities
+            title: Controlli
+            show_header_toggle: false
+            entities:
+            - script.homeassistant_restart
+            - script.homeassistant_clearlog
+            - script.homeassistant_upgrade
+#          - type: entity-button
+#            entity: script.homeassistant_restart
+#            tap_action:
+#              action: call-service
+#              service: script.turn_on
+#              service_data:
+#                entity_id: script.homeassistant_restart
+#          - type: entity-button
+#            entity: script.homeassistant_clearlog
+#            tap_action:
+#              action: call-service
+#              service: script.turn_on
+#              service_data:
+#                entity_id: script.homeassistant_clearlog
+#          - type: entity-button
+#            entity: script.homeassistant_upgrade
+#            tap_action:
+#              action: call-service
+#              service: script.turn_on
+#              service_data:
+#                entity_id: script.homeassistant_upgrade
+
+        - type: horizontal-stack
+          cards:          
+          - type: entities
+            title: Operazione sui Dispositivi
+            show_header_toggle: false
+            entities:
+            - script.shelly_upgrade
+#          - type: entity-button
+#            entity: script.shelly_upgrade
+#            tap_action:
+#              action: call-service
+#              service: script.turn_on
+#              service_data:
+#                entity_id: script.shelly_upgrade

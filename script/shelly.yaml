@@ -48,6 +48,18 @@ shelly_upgrade:
         topic: 'shellies/shellyswitch25-7457D8/command'
         payload: 'update_fw'
 
+    # Shelly 1 Luce Studio
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly1-59E18C/command'
+        payload: 'update_fw'
+
+    # Shelly 1 Luce Camera
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly1-24D1A8/command'
+        payload: 'update_fw'
+
     # Shelly Bulb Luce Divano
     - service: mqtt.publish
       data:

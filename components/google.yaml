@@ -28,6 +28,12 @@ entity_config:
   light.luce_specchio:
     room: Bagno
     expose: true
+  light.luce_studio:
+    room: Studio
+    expose: true
+  light.luce_camera:
+    room: Camera
+    expose: true
 # Tapparelle
   cover.tapparella_cucina:
     room: Cucina
