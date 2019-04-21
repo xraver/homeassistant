@@ -36,12 +36,34 @@ speech_engine:
               Buonanotte.
             {% endif %}
           {%- endmacro -%}
+
+          {# Time & Date #}
+          {%- macro time_and_date() -%}
+            {% set hour = now().strftime('%H') %}
+            {% set min = now().strftime('%M') %}
+            {% set day = now().strftime('%d') %}
+            {% set mounth = now().strftime('%B') %}
+            {% set year = now().strftime('%Y') %}
+            Sono le {{ hour }} e {{ min }} del {{ day }} {{ mounth }} {{ year }}
+          {%- endmacro -%}
+            
+          {# Lights Status #}
+          {%- macro status_lights() -%}
+            {% for entity_id in states.group.lights.attributes.entity_id  %}
+              {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+              {% if is_state(entity_id, 'off') %}
+                La {{ name }} è spenta.
+              {% else %}
+                La {{ name }} è accesa.
+              {% endif %}
+            {%- endfor %}
+          {%- endmacro -%}
           
           {# Covers Status #}
           {%- macro status_covers() -%}
             {% for entity_id in states.group.covers.attributes.entity_id  %}
               {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
-              {% set perc = states(entity_id) %}
+              {% set perc = state_attr(entity_id, 'current_position') %}
               {% if perc | int < 25 %}
                 La {{ name }} è chiusa.
               {% else %}
@@ -97,6 +119,20 @@ speech_engine:
             La posizione di Laura è {{ laura_position }}.
           {%- endmacro -%}
 
+          {# End Message #}
+          {%- macro end_message() -%}
+            {% if enable_status is defined %}
+              {% if enable_status | int == 1 %}
+                {{ [
+                "Spero che il report ti abbia soddisfatto!",
+                "Il report è concluso.",
+                "Alla prossima!",
+                "Non ho altro da comunicare."
+                ] | random }}
+              {% endif %}
+            {% endif %}
+          {%- endmacro -%}
+
           {# *********************************************** #}
           {# ******************* Message ******************* #}
           {# *********************************************** #}
@@ -110,18 +146,25 @@ speech_engine:
           
           {% if enable_status is defined %}
             {% if enable_status | int == 1 %}
+            
+              {{ time_and_date() }}
+
+              {{ status_lights() }}
 
               {{ status_covers() }}
 
               {{ status_location() }}
             
               {{ status_car() }}
-              
+
             {% endif %}
           {% endif %}
 
           {# generic message #}
           {{ message }}
+          
+          {# end message #}
+          {{ end_message() }}
 
 ######################################################################
 # Script: Speech Status

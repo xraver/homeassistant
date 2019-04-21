@@ -83,7 +83,7 @@
           "Sento un interferenza nella Forza! " ~ name + " è qui",
           "Menomale che sei qui " ~ name + "! Mi sentivo solo",
           "Menomale che sei qui " ~ name + "! La casa è vuota senza di te!",
-          "Ciao " ~ name + "! Casa è sempre la casa!",
+          "Ciao " ~ name + "! Casa è sempre la casa!"
           ] | random }}
           {%- endmacro -%}
           {{ greeting_sentence(name) }}
@@ -113,5 +113,5 @@
     - service: script.speech_engine
       data_template:
         message: >- 
-          {% set ora = now().strftime('%H') %}
-          "Sono le {{ ora }} e tutto va bene."
+          {% set hour = now().strftime('%H') %}
+          "Sono le {{ hour }} e tutto va bene."
