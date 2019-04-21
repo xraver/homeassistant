@@ -9,4 +9,4 @@ script.homeassistant_clearlog:
   icon: mdi:file-document
 
 script.homeassistant_upgrade:
-  icon: mdi:cellphone-arrow-down
+  icon: mdi:update
