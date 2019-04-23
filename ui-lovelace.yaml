@@ -4,7 +4,6 @@
 
 title: Casa Ravera-Testa
 views:
-#views: !include_dir_merge_list lovelace/
 
 ######################################################################
 # Main View
@@ -86,7 +85,10 @@ views:
     - type: picture-glance
       title: Camera
       show_state: true
-      image: /local/rooms/camera.jpg
+      state_image:
+        "on": /local/rooms/camera_on.jpg
+        "off": /local/rooms/camera_off.jpg
+      entity: light.luce_camera
       entities: 
       - light.luce_camera
       - cover.tapparella_camera
@@ -125,19 +127,21 @@ views:
       title: Comandi luci
       show_header_toggle: false
       entities:
-        - light.luci_globale
+        - light.luci_casa
         - light.luce_cucina
         - light.luce_corridoio
+        - light.luci_sala
         - light.luce_divano
         - light.luce_divano_bianca
+        - light.luci_bagno
         - light.luce_bagno
         - light.luce_specchio
         - light.luce_studio
         - light.luce_camera
     
     - type: light
-      name: Luci Globale
-      entity: light.luci_globale
+      name: Luci Casa
+      entity: light.luci_casa
 
     - type: light
       name: Luce Cucina
@@ -148,6 +152,10 @@ views:
       entity: light.luce_corridoio
 
     - type: light
+      name: Luci Sala
+      entity: light.luci_sala
+
+    - type: light
       name: Luce Divano
       entity: light.luce_divano
 
@@ -156,12 +164,24 @@ views:
       entity: light.luce_divano_bianca
 
     - type: light
+      name: Luci Bagno
+      entity: light.luci_bagno
+
+    - type: light
       name: Luce Bagno
       entity: light.luce_bagno
 
     - type: light
       name: Luce Specchio
       entity: light.luce_specchio
+
+    - type: light
+      name: Luce Studio
+      entity: light.luce_studio
+
+    - type: light
+      name: Luce Camera
+      entity: light.luce_camera
 
 ######################################################################
 # Covers
@@ -179,7 +199,7 @@ views:
         title: Comandi tapparelle
         show_header_toggle: false
         entities:
-          - cover.tapparella_globale
+          - cover.tapparelle_casa
           - cover.tapparella_cucina
           - cover.tapparella_sala
           - cover.tapparella_studio
