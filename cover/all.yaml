@@ -3,7 +3,7 @@
 ######################################################################
 
 - platform: group
-  name: "Tapparella Globale"
+  name: "Tapparelle Casa"
   entities:
   - cover.tapparella_cucina
   - cover.tapparella_sala

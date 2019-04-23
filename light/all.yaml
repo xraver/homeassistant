@@ -3,7 +3,7 @@
 ######################################################################
 
 - platform: group
-  name: Luci Globale
+  name: "Luci Casa"
   entities:
     - light.luce_corridoio
     - light.luce_cucina
