@@ -146,7 +146,7 @@ mqtt: !include components/mqtt.yaml
 maxcube: !include components/eq3max.yaml
 
 # Google Assistant
-google_assistant: !include components/google.yaml
+google_assistant: !include components/google_assistant.yaml
 
 # Mercedes Me
 mbwebbeta: !include components/mercedesme.yaml
