@@ -6,6 +6,35 @@ exclude:
   entities:
     - sensor.time
     - sensor.time_date
+    - sensor.ff590mr_distance_since_reset
+    - sensor.ff590mr_distance_since_start
+    - sensor.ff590mr_door_front_left
+    - sensor.ff590mr_door_front_right
+    - sensor.ff590mr_door_lock_decklid
+    - sensor.ff590mr_door_lock_front_left
+    - sensor.ff590mr_door_lock_front_right
+    - sensor.ff590mr_door_lock_gas
+    - sensor.ff590mr_door_lock_rear_left
+    - sensor.ff590mr_door_lock_rear_right
+    - sensor.ff590mr_door_rear_left
+    - sensor.ff590mr_door_rear_right
+    - sensor.ff590mr_electric_consumption_reset
+    - sensor.ff590mr_electric_consumption_start
+    - sensor.ff590mr_electric_distance_critical_reset
+    - sensor.ff590mr_electric_distance_since_start
+    - sensor.ff590mr_electric_range_skip_indicator
+    - sensor.ff590mr_licenseplate
+    - sensor.ff590mr_liquid_consumption_reset
+    - sensor.ff590mr_liquid_consumption_start
+    - sensor.ff590mr_liquid_range
+    - sensor.ff590mr_tire_pressure_front_left
+    - sensor.ff590mr_tire_pressure_front_right
+    - sensor.ff590mr_tire_pressure_rear_left
+    - sensor.ff590mr_tire_pressure_rear_right
+    - sensor.ff590mr_window_front_left
+    - sensor.ff590mr_window_front_right
+    - sensor.ff590mr_window_rear_left
+    - sensor.ff590mr_window_rear_right
   domains:
     - automation
     - group
