@@ -101,3 +101,10 @@ sensor.ff590mr_distance_since_reset:
 sensor.ff590mr_distance_since_start:
   friendly_name: Distanza dalla partenza
   icon: mdi:road-variant
+sensor.ff590mr_liquid_consumption_reset:
+  friendly_name: Consumi dal reset
+  icon: mdi:gas-station
+sensor.ff590mr_liquid_consumption_start:
+  friendly_name: Consumi dal reset
+  icon: mdi:gas-station
+
