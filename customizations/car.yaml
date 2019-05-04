@@ -105,6 +105,6 @@ sensor.ff590mr_liquid_consumption_reset:
   friendly_name: Consumi dal reset
   icon: mdi:gas-station
 sensor.ff590mr_liquid_consumption_start:
-  friendly_name: Consumi dal reset
+  friendly_name: Consumi da start
   icon: mdi:gas-station
 
