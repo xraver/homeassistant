@@ -25,3 +25,25 @@
   retain: false
   qos: 0
   optimistic: false
+
+######################################################################
+# Bathroom Global
+######################################################################
+
+- platform: template
+  lights:
+    luci_bagno:
+      friendly_name: "Luci Bagno"
+      turn_on:
+        service: light.turn_on
+        entity_id: "light.luce_bagno, light.luce_specchio"
+      turn_off:
+        service: light.turn_off
+        entity_id: "light.luce_bagno, light.luce_specchio"
+      value_template: >-
+        {% if is_state('light.luce_bagno', 'on') or is_state('light.luce_specchio', 'on') %}
+          on
+        {% else %}
+          off
+        {% endif %}
+      icon_template: mdi:lightbulb
