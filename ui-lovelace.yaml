@@ -348,7 +348,7 @@ views:
       - sensor.ff590mr_tank_level
       - binary_sensor.car_doors_lock
       - binary_sensor.car_windows_lock
-      - binary_sensor.ff590mr_parkbreak_status
+      - binary_sensor.ff590mr_parkbrake_status
       - binary_sensor.ff590mr_decklid_status
     cards:
       #- type: gauge
@@ -364,10 +364,10 @@ views:
         title: "Mercedes A200d: Sensori"
         show_header_toggle: false
         entities:
-          - binary_sensor.ff590mr_parkbreak_status
+          - binary_sensor.ff590mr_parkbrake_status
           - binary_sensor.ff590mr_decklid_status
           - binary_sensor.ff590mr_warning_washwater
-          - binary_sensor.ff590mr_warning_breakfluid
+          - binary_sensor.ff590mr_warning_brakefluid
           - binary_sensor.ff590mr_warning_engine_light
           #- device_tracker.wdd1760081v167576
 

@@ -9,10 +9,10 @@ binary_sensor.ff590mr_decklid_status:
 binary_sensor.ff590mr_warning_washwater:
   friendly_name: Liquido lavacristalli
   device_class: problem
-binary_sensor.ff590mr_warning_breakfluid:
+binary_sensor.ff590mr_warning_brakefluid:
   friendly_name: Liquido freni
   device_class: problem
-binary_sensor.ff590mr_parkbreak_status:
+binary_sensor.ff590mr_parkbrake_status:
   friendly_name: Freno a mano
   device_class: plug
   icon: mdi:car-brake-parking
