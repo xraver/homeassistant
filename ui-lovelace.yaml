@@ -316,6 +316,7 @@ views:
       - device_tracker.google_maps_115265981849847357125
       - device_tracker.google_maps_103158638433668748797
       - device_tracker.google_maps_113099283296073047871
+      - device_tracker.google_maps_108517379615429477419
     cards:
       - type: map
         #title: Giorgio
@@ -335,6 +336,12 @@ views:
         default_zoom: 15
         entities:
         - device_tracker.google_maps_113099283296073047871
+      - type: map
+        #title: Assunta
+        aspect_ratio: 16:9
+        default_zoom: 15
+        entities:
+        - device_tracker.google_maps_108517379615429477419
 
 ######################################################################
 # Car
