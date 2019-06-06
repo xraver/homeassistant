@@ -2,7 +2,7 @@
 # Media Player Devices
 ######################################################################
 
-# Samsung TV UE46C600
+# Samsung TV UE46C7000
 media_player.ue46c7000_samsung_dtv_rcr:
   friendly_name: TV Sala
 
