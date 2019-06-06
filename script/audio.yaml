@@ -3,6 +3,8 @@
 # Inputs: 
 # - type:
 #         1 -> bell'affare
+#         2 -> belan
+#         3 -> una schifezza
 #
 # Operations:
 # - script.volume_manager

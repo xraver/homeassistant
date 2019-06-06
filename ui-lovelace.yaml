@@ -305,6 +305,34 @@ views:
               service: script.turn_on
               service_data:
                 entity_id: script.laura_voice
+                data:
+                  variables:
+                    type: '1'
+          - type: entity-button
+            name: Belan
+            icon: mdi:numeric-2
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice
+                data:
+                  variables:
+                    type: '2'
+          - type: entity-button
+            name: Schifezza
+            icon: mdi:numeric-3
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice
+                data:
+                  variables:
+                    type: '3'
+
 
 ######################################################################
 # People
