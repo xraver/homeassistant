@@ -304,10 +304,7 @@ views:
               action: call-service
               service: script.turn_on
               service_data:
-                entity_id: script.laura_voice
-                data:
-                  variables:
-                    type: '1'
+                entity_id: script.laura_voice_1
           - type: entity-button
             name: Belan
             icon: mdi:numeric-2
@@ -316,10 +313,7 @@ views:
               action: call-service
               service: script.turn_on
               service_data:
-                entity_id: script.laura_voice
-                data:
-                  variables:
-                    type: '2'
+                entity_id: script.laura_voice_2
           - type: entity-button
             name: Schifezza
             icon: mdi:numeric-3
@@ -328,11 +322,7 @@ views:
               action: call-service
               service: script.turn_on
               service_data:
-                entity_id: script.laura_voice
-                data:
-                  variables:
-                    type: '3'
-
+                entity_id: script.laura_voice_3
 
 ######################################################################
 # People

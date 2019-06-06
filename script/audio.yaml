@@ -42,3 +42,24 @@ laura_voice:
             {% set type = 1 %}
           {% endif %}
           https://home.giorgioravera.it/local/audio/laura/{{type}}.mp3
+
+laura_voice_1:
+  alias: Voce Laura 1
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '1'
+
+laura_voice_2:
+  alias: Voce Laura 2
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '2'
+
+laura_voice_3:
+  alias: Voce Laura 3
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '3'
