@@ -6,7 +6,6 @@
   sensors:
     car_doors_lock:
       friendly_name: Vettura Bloccata
-      device_class: lock
       entity_id: sensor.ff590mr_door_lock_vehicle
       value_template: >-
         {{ not is_state('sensor.ff590mr_door_lock_vehicle', '2') }}
@@ -16,6 +15,7 @@
         {% else %}
           mdi:lock-open
         {% endif %}
+      device_class: lock
 
 ######################################################################
 # Binary Sensor: Doors Closed
@@ -25,9 +25,7 @@
   sensors:
     ff590mr_doors_closed:
       friendly_name: Chiusura Porte
-      device_class: lock
-      entity_id: 
-        - sensor.ff590mr_lock
+      entity_id: sensor.ff590mr_lock
       value_template: >-
         {{ is_state_attr('sensor.ff590mr_lock', 'frontLeftDoorClosed', 'true') 
            and is_state_attr('sensor.ff590mr_lock', 'frontRightDoorClosed', 'true')
@@ -42,6 +40,7 @@
         {% else %}
           mdi:car-door
         {% endif %}
+      device_class: lock
 
 ######################################################################
 # Binary Sensor: Decklid Status
@@ -51,7 +50,6 @@
   sensors:
     ff590mr_status_decklid:
       friendly_name: Bagagliaio
-      device_class: opening
       entity_id: sensor.ff590mr_lock
       value_template: >-
         {{ not is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') }}
@@ -61,6 +59,7 @@
         {% else %}
           mdi:lock-open
         {% endif %}
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Warning Brake fluid
@@ -70,10 +69,10 @@
   sensors:
     ff590mr_warning_brakefluid:
       friendly_name: Liquido freni
-      device_class: problem
       entity_id: binary_sensor.ff590mr_engine_light_warning
       value_template: >-
         {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningbrakefluid', 'true') }}
+      device_class: problem
 
 ######################################################################
 # Binary Sensor: Warning Wash Water
@@ -83,10 +82,10 @@
   sensors:
     ff590mr_warning_washwater:
       friendly_name: Liquido lavacristalli
-      device_class: problem
       entity_id: binary_sensor.ff590mr_engine_light_warning
       value_template: >-
         {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningwashwater', 'true') }}
+      device_class: problem
 
 ######################################################################
 # Binary Sensor: Warning Coolant Level Low
@@ -96,7 +95,7 @@
   sensors:
     ff590mr_warning_coolantlevellow:
       friendly_name: Liquido raffreddamento
-      device_class: problem
       entity_id: binary_sensor.ff590mr_engine_light_warning
       value_template: >-
         {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningcoolantlevellow', 'true') }}
+      device_class: problem

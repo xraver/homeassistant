@@ -445,16 +445,16 @@ views:
           #- sensor.ff590mr_electric_range_skip_indicator
           #- sensor.ff590mr_electric_consumption_reset
           #- sensor.ff590mr_electric_consumption_start
-          - sensor.ff590mr_licenseplate
-          - sensor.ff590mr_liquid_consumption_reset
+          #- sensor.ff590mr_licenseplate
+          - sensor.ff590mr_odometer
+          - sensor.ff590mr_distance_since_start
+          - sensor.ff590mr_distance_since_reset
           - sensor.ff590mr_liquid_consumption_start
-          - sensor.ff590mr_odometer_2
+          - sensor.ff590mr_liquid_consumption_reset
           #- sensor.ff590mr_liquid_range
           #- sensor.ff590mr_electric_distance_since_start
-          #- sensor.ff590mr_tank_level
+          - sensor.ff590mr_fuel_level
           #- sensor.ff590mr_electric_distance_ctritical_reset
-          - sensor.ff590mr_distance_since_reset
-          - sensor.ff590mr_distance_since_start
 
 ######################################################################
 # Train

@@ -106,24 +106,3 @@ sensor.ff590mr_door_lock_decklid:
   friendly_name: Bagagliaio
   icon: mdi:lock-open
 
-# Dati
-sensor.ff590mr_licenseplate:
-  friendly_name: Targa
-  icon: mdi:card
-#sensor.ff590mr_liquid_consumption_reset:
-#  friendly_name:
-#sensor.ff590mr_liquid_consumption_start:
-#  friendly_name:
-sensor.ff590mr_distance_since_reset:
-  friendly_name: Distanza dal reset
-  icon: mdi:road-variant
-sensor.ff590mr_distance_since_start:
-  friendly_name: Distanza dalla partenza
-  icon: mdi:road-variant
-sensor.ff590mr_liquid_consumption_reset:
-  friendly_name: Consumi dal reset
-  icon: mdi:gas-station
-sensor.ff590mr_liquid_consumption_start:
-  friendly_name: Consumi da start
-  icon: mdi:gas-station
-
