@@ -40,7 +40,7 @@
         {% else %}
           mdi:car-door
         {% endif %}
-      device_class: lock
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Decklid Status
