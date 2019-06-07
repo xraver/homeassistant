@@ -52,8 +52,8 @@
       friendly_name: Anteriore Sinistra
       entity_id: sensor.ff590mr_lock
       value_template: >-
-        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'CLOSED_AND_LOCKED') or
-                is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'CLOSED_AND_UNLOCKED')) }}
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
       icon_template: mdi:car-door
       device_class: opening
 
@@ -67,8 +67,8 @@
       friendly_name: Anteriore Destra
       entity_id: sensor.ff590mr_lock
       value_template: >-
-        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'CLOSED_AND_LOCKED') or
-                is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'CLOSED_AND_UNLOCKED')) }}
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
       icon_template: mdi:car-door
       device_class: opening
 
@@ -82,8 +82,8 @@
       friendly_name: Posteriore Sinistra
       entity_id: sensor.ff590mr_lock
       value_template: >-     
-        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'CLOSED_AND_LOCKED') or
-                is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'CLOSED_AND_UNLOCKED')) }}
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
       icon_template: mdi:car-door
       device_class: opening
 
@@ -97,8 +97,8 @@
       friendly_name: Posteriore Destra
       entity_id: sensor.ff590mr_lock
       value_template: >-
-        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'CLOSED_AND_LOCKED') or
-                is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'CLOSED_AND_UNLOCKED')) }}
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
       icon_template: mdi:car-door
       device_class: opening
 
@@ -134,7 +134,12 @@
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', 'CLOSED') }}
-      icon_template: mdi:car-window
+      icon_template: >-
+        {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', 'CLOSED') %}
+        mdi:window-closed
+        {% else %}
+          mdi:window-open
+        {% endif %}      
       device_class: opening
 
 ######################################################################
@@ -148,7 +153,12 @@
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', 'CLOSED') }}
-      icon_template: mdi:car-window
+      icon_template: >-
+        {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', 'CLOSED') %}
+        mdi:window-closed
+        {% else %}
+          mdi:window-open
+        {% endif %}   
       device_class: opening
 
 ######################################################################
@@ -162,7 +172,12 @@
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', 'CLOSED') }}
-      icon_template: mdi:car-window
+      icon_template: >-
+        {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', 'CLOSED') %}
+        mdi:window-closed
+        {% else %}
+          mdi:window-open
+        {% endif %}   
       device_class: opening
 
 ######################################################################
@@ -176,7 +191,12 @@
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') }}
-      icon_template: mdi:car-window
+      icon_template: >-
+        {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') %}
+        mdi:window-closed
+        {% else %}
+          mdi:window-open
+        {% endif %}   
       device_class: opening
 
 ######################################################################
