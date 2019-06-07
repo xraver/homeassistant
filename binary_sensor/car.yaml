@@ -42,6 +42,63 @@
         {% endif %}
       device_class: opening
 
+
+######################################################################
+# Binary Sensor: Door Front Left
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_door_front_left:
+      friendly_name: Anteriore Sinistra
+      entity_id: sensor.ff590mr_lock
+      value_template: >-
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'CLOSED_AND_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'CLOSED_AND_UNLOCKED')) }}
+      icon_template: mdi:car-door
+
+######################################################################
+# Binary Sensor: Door Front Right
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_door_front_right:
+      friendly_name: Anteriore Destra
+      entity_id: sensor.ff590mr_lock
+      value_template: >-
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'CLOSED_AND_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'CLOSED_AND_UNLOCKED')) }}
+      icon_template: mdi:car-door
+
+######################################################################
+# Binary Sensor: Door Rear Left
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_door_rear_left:
+      friendly_name: Posteriore Sinistra
+      entity_id: sensor.ff590mr_lock
+      value_template: >-     
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'CLOSED_AND_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'CLOSED_AND_UNLOCKED')) }}
+      icon_template: mdi:car-door
+
+######################################################################
+# Binary Sensor: Door Rear Right
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_door_rear_right:
+      friendly_name: Posteriore Destra
+      entity_id: sensor.ff590mr_lock
+      value_template: >-
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'CLOSED_AND_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'CLOSED_AND_UNLOCKED')) }}
+      icon_template: mdi:car-door
+      
 ######################################################################
 # Binary Sensor: Decklid Status
 ######################################################################
@@ -62,6 +119,17 @@
           mdi:lock-open
         {% endif %}
       device_class: opening
+
+
+
+
+
+
+
+
+
+
+
 
 ######################################################################
 # Binary Sensor: Warning Brake fluid

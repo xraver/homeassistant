@@ -395,7 +395,6 @@ views:
         show_header_toggle: false
         entities:
           - binary_sensor.ff590mr_park_brake_status
-          - binary_sensor.ff590mr_status_decklid
           - binary_sensor.ff590mr_warning_brakefluid
           - binary_sensor.ff590mr_warning_washwater
           - binary_sensor.ff590mr_warning_coolantlevellow
@@ -424,6 +423,7 @@ views:
           - sensor.ff590mr_door_front_right
           - sensor.ff590mr_door_rear_left
           - sensor.ff590mr_door_rear_right
+          - binary_sensor.ff590mr_status_decklid
       - type: entities
         title: "Mercedes A200d: Sblocco serrature"
         show_header_toggle: false

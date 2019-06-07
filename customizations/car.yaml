@@ -69,19 +69,6 @@ sensor.ff590mr_window_rear_left:
 sensor.ff590mr_window_rear_right:
   friendly_name: Posteriore Destro
 
-# Porte
-sensor.ff590mr_door_front_left:
-  friendly_name: Anteriore Sinistra
-  icon: mdi:car-door
-sensor.ff590mr_door_front_right:
-  friendly_name: Anteriore Destra
-  icon: mdi:car-door
-sensor.ff590mr_door_rear_left:
-  friendly_name: Posteriore Sinistra
-  icon: mdi:car-door
-sensor.ff590mr_door_rear_right:
-  friendly_name: Posteriore Destra
-  icon: mdi:car-door
 
 # Bloccaggio
 sensor.ff590mr_door_lock_vehicle:
