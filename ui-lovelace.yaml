@@ -374,10 +374,9 @@ views:
 #      - binary_sensor.ff590mr_park_brake_status
 #      - binary_sensor.ff590mr_status_decklid
       - binary_sensor.ff590mr_engine_light_warning
-      #- binary_sensor.ff590mr_tire_warning
       - binary_sensor.ff590mr_doors_closed
       - binary_sensor.ff590mr_windows_closed
-      - lock.ff590mr_lock
+      - binary_sensor.ff590mr_lock
     cards:
       #- type: gauge
       #  title: "Livello Carburante"
@@ -387,7 +386,10 @@ views:
       #    red: 0
       #    yellow: 30
       #    green: 60
-
+      - type: entity-button
+        name: Blocco/Sblocco Vettura
+        icon: mdi:key
+        entity: lock.ff590mr_lock
       - type: entities
         title: "Mercedes A200d: Sensori"
         show_header_toggle: false
@@ -398,7 +400,6 @@ views:
           - binary_sensor.ff590mr_warning_washwater
           - binary_sensor.ff590mr_warning_coolantlevellow
           #- device_tracker.wdd1760081v167576
-
       - type: entities
         title: "Mercedes A200d: Ruote"
         show_header_toggle: false
@@ -407,7 +408,6 @@ views:
           - sensor.ff590mr_tire_pressure_front_right
           - sensor.ff590mr_tire_pressure_rear_left
           - sensor.ff590mr_tire_pressure_rear_right
-      
       - type: entities
         title: "Mercedes A200d: Finestrini"
         show_header_toggle: false
@@ -416,7 +416,6 @@ views:
           - sensor.ff590mr_window_front_right
           - sensor.ff590mr_window_rear_left
           - sensor.ff590mr_window_rear_right
-      
       - type: entities
         title: "Mercedes A200d: Porte"
         show_header_toggle: false
@@ -425,7 +424,6 @@ views:
           - sensor.ff590mr_door_front_right
           - sensor.ff590mr_door_rear_left
           - sensor.ff590mr_door_rear_right
-
       - type: entities
         title: "Mercedes A200d: Sblocco serrature"
         show_header_toggle: false
@@ -437,7 +435,6 @@ views:
           - sensor.ff590mr_door_lock_rear_right
           - sensor.ff590mr_door_lock_gas
           - sensor.ff590mr_door_lock_decklid
-
       - type: entities
         title: "Mercedes A200d: Dati"
         show_header_toggle: false
