@@ -135,6 +135,7 @@
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', 'CLOSED') }}
       icon_template: mdi:car-window
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Window Front Right
@@ -148,6 +149,7 @@
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', 'CLOSED') }}
       icon_template: mdi:car-window
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Window Rear Left
@@ -158,9 +160,10 @@
     ff590mr_window_rear_left:
       friendly_name: Posteriore Sinistro
       entity_id: binary_sensor.ff590mr_windows_closed
-      value_template: >-     
+      value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', 'CLOSED') }}
       icon_template: mdi:car-window
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Window Rear Right
@@ -172,8 +175,9 @@
       friendly_name: Posteriore Destro
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
-        {{ not (is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') }}
+        {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') }}
       icon_template: mdi:car-window
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Warning Brake fluid
