@@ -73,7 +73,7 @@
 
 - platform: template
   sensors:
-    ff590mr_distance_since_start:
+    ff590mr_distance_since_reset:
       friendly_name: Distanza dal reset
       entity_id: sensor.ff590mr_odometer
       unit_of_measurement: 'Km'
@@ -86,7 +86,7 @@
 
 - platform: template
   sensors:
-    ff590mr_distance_since_start:
+    ff590mr_liquid_consumption_start:
       friendly_name: Consumo dalla partenza
       entity_id: sensor.ff590mr_odometer
       unit_of_measurement: 'l/100Km'
@@ -99,7 +99,7 @@
 
 - platform: template
   sensors:
-    ff590mr_distance_since_start:
+    ff590mr_liquid_consumption_reset:
       friendly_name: Consumo dal reset
       entity_id: sensor.ff590mr_odometer
       unit_of_measurement: 'l/100Km'
