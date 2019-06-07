@@ -56,7 +56,7 @@
                 is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) }}
       icon_template: >-
         {% if (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or 
-               is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED') %}
+               is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) %}
           mdi:lock
         {% else %}
           mdi:lock-open
