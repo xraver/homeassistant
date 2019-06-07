@@ -52,21 +52,3 @@ sensor.ff590mr_odometer_2:
 # tanklevelpercent, tankReserveLamp
 # serviceintervaldays
 # distanceReset, distanceStart
-
-
-
-
-
-
-
-# Finestrini
-sensor.ff590mr_window_front_left:
-  friendly_name: Anteriore Destro
-sensor.ff590mr_window_front_right:
-  friendly_name: Anteriore Sinistro
-sensor.ff590mr_window_rear_left:
-  friendly_name: Posteriore Sinistro
-sensor.ff590mr_window_rear_right:
-  friendly_name: Posteriore Destro
-
-

@@ -103,7 +103,7 @@
       device_class: opening
 
 ######################################################################
-# Binary Sensor: Decklid Status
+# Binary Sensor: Trunk
 ######################################################################
 
 - platform: template
@@ -130,7 +130,7 @@
 - platform: template
   sensors:
     ff590mr_window_front_left:
-      friendly_name: Anteriore Sinistra
+      friendly_name: Anteriore Sinistro
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', 'CLOSED') }}
@@ -143,7 +143,7 @@
 - platform: template
   sensors:
     ff590mr_window_front_right:
-      friendly_name: Anteriore Destra
+      friendly_name: Anteriore Destro
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', 'CLOSED') }}
@@ -156,7 +156,7 @@
 - platform: template
   sensors:
     ff590mr_window_rear_left:
-      friendly_name: Posteriore Sinistra
+      friendly_name: Posteriore Sinistro
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-     
         {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', 'CLOSED') }}
@@ -169,7 +169,7 @@
 - platform: template
   sensors:
     ff590mr_window_rear_right:
-      friendly_name: Posteriore Destra
+      friendly_name: Posteriore Destro
       entity_id: binary_sensor.ff590mr_windows_closed
       value_template: >-
         {{ not (is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') }}
