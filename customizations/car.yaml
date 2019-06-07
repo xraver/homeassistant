@@ -18,7 +18,7 @@ binary_sensor.ff590mr_tire_warning:
   icon: mdi:car-tire-alert
   # lastTirepressureTimestamp
   # tireWarningRollup
-  # tireMarkerFrontLeft, tireMarkerRearLeft, tireMarkerRearRight
+  # tirewarningsrdk
   # tirepressureFrontLeft, tirepressureFrontRight, tirepressureRearLeft, tirepressureRearRight 
 binary_sensor.ff590mr_windows_closed:
   friendly_name: Finestrini
@@ -58,20 +58,6 @@ sensor.ff590mr_odometer_2:
 
 
 
-
-# Pressione gomme
-sensor.ff590mr_tire_pressure_front_left:
-  friendly_name: Anteriore Sinistra
-  icon: mdi:car-tire-alert
-sensor.ff590mr_tire_pressure_front_right:
-  friendly_name: Anteriore Destra
-  icon: mdi:car-tire-alert
-sensor.ff590mr_tire_pressure_rear_left:
-  friendly_name: Posteriore Sinistra
-  icon: mdi:car-tire-alert
-sensor.ff590mr_tire_pressure_rear_right:
-  friendly_name: Posteriore Destra
-  icon: mdi:car-tire-alert
 
 # Finestrini
 sensor.ff590mr_window_front_left:

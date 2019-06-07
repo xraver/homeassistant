@@ -374,7 +374,7 @@ views:
 #      - binary_sensor.ff590mr_park_brake_status
 #      - binary_sensor.ff590mr_status_decklid
       - binary_sensor.ff590mr_engine_light_warning
-      - binary_sensor.ff590mr_tire_warning
+      #- binary_sensor.ff590mr_tire_warning
       - binary_sensor.ff590mr_doors_closed
       - binary_sensor.ff590mr_windows_closed
       - lock.ff590mr_lock

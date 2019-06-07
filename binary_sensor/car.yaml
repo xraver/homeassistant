@@ -1,5 +1,5 @@
 ######################################################################
-# Binary Sensor: Car Doors Lock
+# Binary Sensor: Doors Lock
 ######################################################################
 
 - platform: template
@@ -76,7 +76,7 @@
         {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningbrakefluid', 'true') }}
 
 ######################################################################
-# Binary Sensor: Warning washwater
+# Binary Sensor: Warning Wash Water
 ######################################################################
 
 - platform: template
@@ -89,7 +89,7 @@
         {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningwashwater', 'true') }}
 
 ######################################################################
-# Binary Sensor: Warning coolant level low
+# Binary Sensor: Warning Coolant Level Low
 ######################################################################
 
 - platform: template

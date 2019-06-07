@@ -1,10 +1,47 @@
 ######################################################################
-# Binary Sensor: Car Doors Lock
+# Sensor: Tire Pressure Front Left
 ######################################################################
 
-#- platform: template
-#  sensors:
-#    ff590mr_tank_level:
-#      friendly_name: "Sala"
-#      value_template: "{{ state_attr('cover.tapparella_sala', 'current_position') }}"
-#      unit_of_measurement: '%'
+- platform: template
+  sensors:
+    ff590mr_tire_pressure_front_left:
+      friendly_name: Anteriore Sinistra
+      icon: mdi:car-tire-alert
+      value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontLeft') }}"
+      unit_of_measurement: '%'
+      
+######################################################################
+# Sensor: Tire Pressure Front Right
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_tire_pressure_front_right:
+      friendly_name: Anteriore Destra
+      icon: mdi:car-tire-alert
+      value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontRight') }}"
+      unit_of_measurement: '%'
+      
+######################################################################
+# Sensor: Tire Pressure Rear Left
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_tire_pressure_rear_left:
+      friendly_name: Posteriore Sinistra
+      icon: mdi:car-tire-alert
+      value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearLeft') }}"
+      unit_of_measurement: '%'
+      
+######################################################################
+# Sensor: Tire Pressure Rear Right
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_tire_pressure_rear_right:
+      friendly_name: Posteriore Destra
+      icon: mdi:car-tire-alert
+      value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearRight') }}"
+      unit_of_measurement: '%'
