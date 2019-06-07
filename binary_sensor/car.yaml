@@ -105,7 +105,7 @@
 
 - platform: template
   sensors:
-    ff590mr_status_decklid:
+    ff590mr_trunk:
       friendly_name: Bagagliaio
       entity_id: sensor.ff590mr_lock
       value_template: >-

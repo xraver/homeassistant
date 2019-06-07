@@ -70,6 +70,7 @@
           Chiuse
         {% else %}
           Aperta
+        {% endif %}
       icon_template: mdi:car-door
 
 ######################################################################
@@ -88,6 +89,7 @@
           Chiuse
         {% else %}
           Aperta
+        {% endif %}
       icon_template: mdi:car-door
 
 ######################################################################
@@ -106,6 +108,7 @@
           Chiuse
         {% else %}
           Aperta
+        {% endif %}
       icon_template: mdi:car-door
 
 ######################################################################
@@ -124,6 +127,26 @@
           Chiuse
         {% else %}
           Aperta
+        {% endif %}
+      icon_template: mdi:car-door
+
+######################################################################
+# Sensor: Door Rear Right
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_trunk:
+      friendly_name: Bagagliaio
+      entity_id: sensor.ff590mr_lock
+      value_template: >-
+        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+          Chiuso e Bloccato
+        {% elif is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+          Chiuso
+        {% else %}
+          Aperto
+        {% endif %}
       icon_template: mdi:car-door
 
 ######################################################################

@@ -70,26 +70,3 @@ sensor.ff590mr_window_rear_right:
   friendly_name: Posteriore Destro
 
 
-# Bloccaggio
-sensor.ff590mr_door_lock_vehicle:
-  friendly_name: Veicolo
-  icon: mdi:lock-open
-sensor.ff590mr_door_lock_front_left:
-  friendly_name: Porta anteriore sinistra
-  icon: mdi:lock-open
-sensor.ff590mr_door_lock_front_right:
-  friendly_name: Porta anteriore destra
-  icon: mdi:lock-open
-sensor.ff590mr_door_lock_rear_left:
-  friendly_name: Porta posteriore sinistra
-  icon: mdi:lock-open
-sensor.ff590mr_door_lock_rear_right:
-  friendly_name: Porta posteriore destra
-  icon: mdi:lock-open
-sensor.ff590mr_door_lock_gas:
-  friendly_name: Sportello carburante
-  icon: mdi:lock-open
-sensor.ff590mr_door_lock_decklid:
-  friendly_name: Bagagliaio
-  icon: mdi:lock-open
-
