@@ -374,9 +374,9 @@ views:
 #      - binary_sensor.ff590mr_park_brake_status
 #      - binary_sensor.ff590mr_status_decklid
       - binary_sensor.ff590mr_engine_light_warning
+      - binary_sensor.ff590mr_locked
       - binary_sensor.ff590mr_doors_closed
       - binary_sensor.ff590mr_windows_closed
-      - binary_sensor.ff590mr_lock
     cards:
       #- type: gauge
       #  title: "Livello Carburante"
