@@ -58,96 +58,96 @@
 # Sensor: Door Front Left
 ######################################################################
 
-- platform: template
-  sensors:
-    ff590mr_door_front_left:
-      friendly_name: Anteriore Sinistra
-      entity_id: sensor.ff590mr_lock
-      value_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-          Chiusa e Bloccata
-        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-          Chiuse
-        {% else %}
-          Aperta
-        {% endif %}
-      icon_template: mdi:car-door
+#- platform: template
+#  sensors:
+#    ff590mr_door_front_left:
+#      friendly_name: Anteriore Sinistra
+#      entity_id: sensor.ff590mr_lock
+#      value_template: >-
+#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+#          Chiusa e Bloccata
+#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+#          Chiuse
+#        {% else %}
+#          Aperta
+#        {% endif %}
+#      icon_template: mdi:car-door
 
 ######################################################################
 # Sensor: Door Front Right
 ######################################################################
 
-- platform: template
-  sensors:
-    ff590mr_door_front_right:
-      friendly_name: Anteriore Destra
-      entity_id: sensor.ff590mr_lock
-      value_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-          Chiusa e Bloccata
-        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-          Chiuse
-        {% else %}
-          Aperta
-        {% endif %}
-      icon_template: mdi:car-door
+#- platform: template
+#  sensors:
+#    ff590mr_door_front_right:
+#      friendly_name: Anteriore Destra
+#      entity_id: sensor.ff590mr_lock
+#      value_template: >-
+#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+#          Chiusa e Bloccata
+#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+#          Chiuse
+#        {% else %}
+#          Aperta
+#        {% endif %}
+#      icon_template: mdi:car-door
 
 ######################################################################
 # Sensor: Door Rear Left
 ######################################################################
 
-- platform: template
-  sensors:
-    ff590mr_door_rear_left:
-      friendly_name: Posteriore Sinistra
-      entity_id: sensor.ff590mr_lock
-      value_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-          Chiusa e Bloccata
-        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-          Chiuse
-        {% else %}
-          Aperta
-        {% endif %}
-      icon_template: mdi:car-door
+#- platform: template
+#  sensors:
+#    ff590mr_door_rear_left:
+#      friendly_name: Posteriore Sinistra
+#      entity_id: sensor.ff590mr_lock
+#      value_template: >-
+#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+#          Chiusa e Bloccata
+#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+#          Chiuse
+#        {% else %}
+#          Aperta
+#        {% endif %}
+#      icon_template: mdi:car-door
 
 ######################################################################
 # Sensor: Door Rear Right
 ######################################################################
 
-- platform: template
-  sensors:
-    ff590mr_door_rear_right:
-      friendly_name: Posteriore Destra
-      entity_id: sensor.ff590mr_lock
-      value_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-          Chiusa e Bloccata
-        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-          Chiuse
-        {% else %}
-          Aperta
-        {% endif %}
-      icon_template: mdi:car-door
+#- platform: template
+#  sensors:
+#    ff590mr_door_rear_right:
+#      friendly_name: Posteriore Destra
+#      entity_id: sensor.ff590mr_lock
+#      value_template: >-
+#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+#          Chiusa e Bloccata
+#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+#          Chiuse
+#        {% else %}
+#          Aperta
+#        {% endif %}
+#      icon_template: mdi:car-door
 
 ######################################################################
 # Sensor: Trunk
 ######################################################################
 
-- platform: template
-  sensors:
-    ff590mr_trunk:
-      friendly_name: Bagagliaio
-      entity_id: sensor.ff590mr_lock
-      value_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') %}
-          Chiuso e Bloccato
-        {% elif is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED') %}
-          Chiuso
-        {% else %}
-          Aperto
-        {% endif %}
-      icon_template: mdi:car-door
+#- platform: template
+#  sensors:
+#    ff590mr_trunk:
+#      friendly_name: Bagagliaio
+#      entity_id: sensor.ff590mr_lock
+#      value_template: >-
+#        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') %}
+#          Chiuso e Bloccato
+#        {% elif is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED') %}
+#          Chiuso
+#        {% else %}
+#          Aperto
+#        {% endif %}
+#      icon_template: mdi:car-door
 
 ######################################################################
 # Sensor: Distance from Start
