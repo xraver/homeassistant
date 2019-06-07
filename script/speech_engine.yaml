@@ -79,25 +79,25 @@ speech_engine:
             {% else %}
               {% set car_position = "fuori" %}
             {% endif %}
-            {% if is_state('binary_sensor.car_doors_lock', 'off') %}
+            {% if is_state('binary_sensor.ff590mr_locked', 'off') %}
               {% set car_lock = "chiusa" %}
             {% else %}
               {% set car_lock = "aperta" %}
             {% endif %}
-            {% if is_state('binary_sensor.car_windows_lock', 'off') %}
+            {% if is_state('binary_sensor.ff590mr_windows_closed_2', 'off') %}
               {% set car_windows = "chiusi" %}
             {% else %}
               {% set car_windows = "aperti" %}
             {% endif %}
-            {% if is_state('binary_sensor.ff590mr_parkbreak_status', 'on') %}
+            {% if is_state('binary_sensor.ff590mr_park_brake_status', 'on') %}
               {% set car_parkbreak = "inserito" %}
             {% else %}
               {% set car_parkbreak = "non inserito" %}
             {% endif %}
             La Mercedes si trova {{ car_position }}. è {{ car_lock }}, con i finestrini {{ car_windows }} e il freno a mano {{ car_parkbreak }}.
-            Il livello del carburante è {{ states('sensor.ff590mr_tank_level') }} percento.
-            {% if is_state('binary_sensor.ff590mr_warning_breakfluid', 'on') or
-                  is_state('binary_sensor.ff590mr_warning_engine_light', 'on') or
+            Il livello del carburante è {{ states('sensor.sensor.ff590mr_fuel_level') }} percento.
+            {% if is_state('binary_sensor.ff590mr_warning_brakefluid', 'on') or
+                  is_state('binary_sensor.ff590mr_warning_coolantlevellow', 'on') or
                   is_state('binary_sensor.ff590mr_warning_washwater', 'on') %}
               Sono inoltre presenti allarmi.
             {% endif %}
