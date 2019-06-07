@@ -95,7 +95,7 @@ speech_engine:
               {% set car_parkbreak = "non inserito" %}
             {% endif %}
             La Mercedes si trova {{ car_position }}. è {{ car_lock }}, con i finestrini {{ car_windows }} e il freno a mano {{ car_parkbreak }}.
-            Il livello del carburante è {{ states('sensor.sensor.ff590mr_fuel_level') }} percento.
+            Il livello del carburante è {{ states('sensor.ff590mr_fuel_level') }} percento.
             {% if is_state('binary_sensor.ff590mr_warning_brakefluid', 'on') or
                   is_state('binary_sensor.ff590mr_warning_coolantlevellow', 'on') or
                   is_state('binary_sensor.ff590mr_warning_washwater', 'on') %}
