@@ -24,7 +24,7 @@
 - platform: template
   sensors:
     ff590mr_doors_closed:
-      friendly_name: Chiusura Porte
+      friendly_name: Porte
       entity_id: sensor.ff590mr_lock
       value_template: >-
         {{ not is_state_attr('sensor.ff590mr_lock', 'frontLeftDoorClosed', 'true') 
@@ -52,9 +52,11 @@
       friendly_name: Bagagliaio
       entity_id: sensor.ff590mr_lock
       value_template: >-
-        {{ not is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') }}
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) }}
       icon_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') %}
+        {% if (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or 
+               is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED') %}
           mdi:lock
         {% else %}
           mdi:lock-open
