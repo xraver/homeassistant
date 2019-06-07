@@ -112,7 +112,7 @@
 
 - platform: template
   sensors:
-    sensor.ff590mr_service_interval_days:
+    ff590mr_service_interval_days:
       friendly_name: Prossimo Tagliando
       entity_id: sensor.ff590mr_odometer
       #unit_of_measurement: 'l/100Km'
