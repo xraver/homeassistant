@@ -100,6 +100,58 @@
       icon_template: mdi:car-door
       
 ######################################################################
+# Binary Sensor: Window Front Left
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_window_front_left:
+      friendly_name: Anteriore Sinistra
+      entity_id: binary_sensor.ff590mr_windows_closed
+      value_template: >-
+        {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', 'CLOSED') }}
+      icon_template: mdi:car-window
+
+######################################################################
+# Binary Sensor: Window Front Right
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_window_front_right:
+      friendly_name: Anteriore Destra
+      entity_id: binary_sensor.ff590mr_windows_closed
+      value_template: >-
+        {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', 'CLOSED') }}
+      icon_template: mdi:car-window
+
+######################################################################
+# Binary Sensor: Window Rear Left
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_window_rear_left:
+      friendly_name: Posteriore Sinistra
+      entity_id: binary_sensor.ff590mr_windows_closed
+      value_template: >-     
+        {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', 'CLOSED') }}
+      icon_template: mdi:car-window
+
+######################################################################
+# Binary Sensor: Window Rear Right
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_window_rear_right:
+      friendly_name: Posteriore Destra
+      entity_id: binary_sensor.ff590mr_windows_closed
+      value_template: >-
+        {{ not (is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') }}
+      icon_template: mdi:car-window
+
+######################################################################
 # Binary Sensor: Decklid Status
 ######################################################################
 

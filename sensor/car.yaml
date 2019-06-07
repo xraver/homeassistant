@@ -131,7 +131,7 @@
       icon_template: mdi:car-door
 
 ######################################################################
-# Sensor: Door Rear Right
+# Sensor: Trunk
 ######################################################################
 
 - platform: template
@@ -140,9 +140,9 @@
       friendly_name: Bagagliaio
       entity_id: sensor.ff590mr_lock
       value_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') %}
           Chiuso e Bloccato
-        {% elif is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+        {% elif is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED') %}
           Chiuso
         {% else %}
           Aperto

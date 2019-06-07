@@ -408,33 +408,22 @@ views:
           - sensor.ff590mr_tire_pressure_rear_left
           - sensor.ff590mr_tire_pressure_rear_right
       - type: entities
-        title: "Mercedes A200d: Finestrini"
-        show_header_toggle: false
-        entities:
-          - sensor.ff590mr_window_front_left
-          - sensor.ff590mr_window_front_right
-          - sensor.ff590mr_window_rear_left
-          - sensor.ff590mr_window_rear_right
-      - type: entities
         title: "Mercedes A200d: Porte"
         show_header_toggle: false
         entities:
-          - sensor.ff590mr_door_front_left
-          - sensor.ff590mr_door_front_right
-          - sensor.ff590mr_door_rear_left
-          - sensor.ff590mr_door_rear_right
+          - binary_sensor.ff590mr_door_front_left
+          - binary_sensor.ff590mr_door_front_right
+          - binary_sensor.ff590mr_door_rear_left
+          - binary_sensor.ff590mr_door_rear_right
           - binary_sensor.ff590mr_trunk
       - type: entities
-        title: "Mercedes A200d: Sblocco serrature"
+        title: "Mercedes A200d: Finestrini"
         show_header_toggle: false
         entities:
-          - sensor.ff590mr_door_lock_vehicle
-          - sensor.ff590mr_door_lock_front_left
-          - sensor.ff590mr_door_lock_front_right
-          - sensor.ff590mr_door_lock_rear_left
-          - sensor.ff590mr_door_lock_rear_right
-          - sensor.ff590mr_door_lock_gas
-          - sensor.ff590mr_door_lock_decklid
+          - binary_sensor.ff590mr_window_front_left
+          - binary_sensor.ff590mr_window_front_right
+          - binary_sensor.ff590mr_window_rear_left
+          - binary_sensor.ff590mr_window_rear_right
       - type: entities
         title: "Mercedes A200d: Dati"
         show_header_toggle: false
