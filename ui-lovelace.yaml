@@ -386,21 +386,29 @@ views:
       #    red: 0
       #    yellow: 30
       #    green: 60
-      - type: entity-button
-        name: Blocco/Sblocco Vettura
-        icon: mdi:key
-        entity: lock.ff590mr_lock
+      #- type: entity-button
+      #  name: Blocco/Sblocco Vettura
+      #  icon: mdi:key
+      #  entity: lock.ff590mr_lock
       - type: entities
         title: "Mercedes A200d: Sensori"
         show_header_toggle: false
         entities:
+          - lock.ff590mr_lock
           - binary_sensor.ff590mr_park_brake_status
+          - binary_sensor.ff590mr_locked
+          - binary_sensor.ff590mr_doors_closed
+          - binary_sensor.ff590mr_windows_closed
+          #- device_tracker.wdd1760081v167576
+      - type: entities
+        title: "Mercedes A200d: Allarmi"
+        show_header_toggle: false
+        entities:
           - binary_sensor.ff590mr_warning_brakefluid
           - binary_sensor.ff590mr_warning_washwater
           - binary_sensor.ff590mr_warning_coolantlevellow
-          #- device_tracker.wdd1760081v167576
       - type: entities
-        title: "Mercedes A200d: Ruote"
+        title: "Mercedes A200d: Pneumatici"
         show_header_toggle: false
         entities:
           - sensor.ff590mr_tire_pressure_front_left
