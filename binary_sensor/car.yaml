@@ -42,7 +42,6 @@
         {% endif %}
       device_class: opening
 
-
 ######################################################################
 # Binary Sensor: Door Front Left
 ######################################################################
@@ -56,6 +55,7 @@
         {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'CLOSED_AND_LOCKED') or
                 is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'CLOSED_AND_UNLOCKED')) }}
       icon_template: mdi:car-door
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Door Front Right
@@ -70,6 +70,7 @@
         {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'CLOSED_AND_LOCKED') or
                 is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'CLOSED_AND_UNLOCKED')) }}
       icon_template: mdi:car-door
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Door Rear Left
@@ -84,6 +85,7 @@
         {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'CLOSED_AND_LOCKED') or
                 is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'CLOSED_AND_UNLOCKED')) }}
       icon_template: mdi:car-door
+      device_class: opening
 
 ######################################################################
 # Binary Sensor: Door Rear Right
@@ -98,7 +100,29 @@
         {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'CLOSED_AND_LOCKED') or
                 is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'CLOSED_AND_UNLOCKED')) }}
       icon_template: mdi:car-door
-      
+      device_class: opening
+
+######################################################################
+# Binary Sensor: Decklid Status
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_trunk:
+      friendly_name: Bagagliaio
+      entity_id: sensor.ff590mr_lock
+      value_template: >-
+        {{ not (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or
+                is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) }}
+      icon_template: >-
+        {% if (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or 
+               is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) %}
+          mdi:lock
+        {% else %}
+          mdi:lock-open
+        {% endif %}
+      device_class: opening
+
 ######################################################################
 # Binary Sensor: Window Front Left
 ######################################################################
@@ -150,38 +174,6 @@
       value_template: >-
         {{ not (is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') }}
       icon_template: mdi:car-window
-
-######################################################################
-# Binary Sensor: Decklid Status
-######################################################################
-
-- platform: template
-  sensors:
-    ff590mr_trunk:
-      friendly_name: Bagagliaio
-      entity_id: sensor.ff590mr_lock
-      value_template: >-
-        {{ not (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or
-                is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) }}
-      icon_template: >-
-        {% if (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or 
-               is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) %}
-          mdi:lock
-        {% else %}
-          mdi:lock-open
-        {% endif %}
-      device_class: opening
-
-
-
-
-
-
-
-
-
-
-
 
 ######################################################################
 # Binary Sensor: Warning Brake fluid
