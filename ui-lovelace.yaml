@@ -372,11 +372,10 @@ views:
       - sensor.ff590mr_odometer
       - sensor.ff590mr_fuel_level
 #      - binary_sensor.ff590mr_park_brake_status
-#      - binary_sensor.ff590mr_status_decklid
-      - binary_sensor.ff590mr_engine_light_warning
+#      - binary_sensor.ff590mr_engine_light_warning
       - binary_sensor.ff590mr_locked
       - binary_sensor.ff590mr_doors_closed
-      - binary_sensor.ff590mr_windows_closed
+      - binary_sensor.ff590mr_windows_closed_2
     cards:
       #- type: gauge
       #  title: "Livello Carburante"
@@ -395,15 +394,16 @@ views:
         show_header_toggle: false
         entities:
           - lock.ff590mr_lock
-          - binary_sensor.ff590mr_park_brake_status
           - binary_sensor.ff590mr_locked
           - binary_sensor.ff590mr_doors_closed
-          - binary_sensor.ff590mr_windows_closed
+          - binary_sensor.ff590mr_windows_closed_2
+          - binary_sensor.ff590mr_park_brake_status
           #- device_tracker.wdd1760081v167576
       - type: entities
         title: "Mercedes A200d: Allarmi"
         show_header_toggle: false
         entities:
+          - binary_sensor.ff590mr_engine_light_warning
           - binary_sensor.ff590mr_warning_brakefluid
           - binary_sensor.ff590mr_warning_washwater
           - binary_sensor.ff590mr_warning_coolantlevellow

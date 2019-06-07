@@ -4,28 +4,27 @@
 
 # Binary Sensors
 binary_sensor.ff590mr_engine_light_warning:
-  friendly_name: Allarme Generale
+  friendly_name: Stato Generale
   device_class: problem
   icon: mdi:hazard-lights
-  # warningbrakefluid, warningcoolantlevellow, warningwashwater
+  # warningbrakefluid, warningwashwater, warningcoolantlevellow, warninglowbattery
 binary_sensor.ff590mr_park_brake_status:
   friendly_name: Freno a mano
   device_class: plug
   icon: mdi:car-brake-parking
+  # preWarningBrakeLiningWear
 binary_sensor.ff590mr_tire_warning:
   friendly_name: Allarme Pneumatici
   device_class: problem
   icon: mdi:car-tire-alert
-  # lastTirepressureTimestamp
-  # tireWarningRollup
-  # tirewarningsrdk
-  # tirepressureFrontLeft, tirepressureFrontRight, tirepressureRearLeft, tirepressureRearRight 
+  # tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft, 
+  # tirewarningsrdk, tirewarningsprwtireMarkerFrontRight, tireMarkerFrontLeft, tireMarkerRearLeft, tireMarkerRearRight, 
+  # tireWarningRollup, lastTirepressureTimestamp
 binary_sensor.ff590mr_windows_closed:
   friendly_name: Finestrini
   device_class: opening
   icon: mdi:window-closed
-  #icon: mdi:car-door
-  # windowstatusfrontleft, windowstatusfrontright, windowstatusrearleft, windowstatusrearright
+  # windowstatusrearleft, windowstatusrearright, windowstatusfrontright, windowstatusfrontleft
 
 # Lock
 lock.ff590mr_lock:
@@ -39,16 +38,11 @@ sensor.ff590mr_fuel_level:
 sensor.ff590mr_lock:
   friendly_name: Veicolo
   icon: mdi:lock-open
-# doorsClosed
-# frontLeftDoorLocked, frontLeftDoorClosed, doorStateFrontLeft
-# frontRightDoorLocked, frontRightDoorClosed, doorStateFrontRight
-# rearLeftDoorLocked, rearLeftDoorClosed, doorStateRearLeft
-# rearRightDoorLocked, rearRightDoorClosed, doorStateRearRight
-# trunkStateRollup
-sensor.ff590mr_odometer_2:
+  # doorStateFrontLeft, doorStateFrontRight, doorStateRearLeft, doorStateRearRight, 
+  # frontLeftDoorLocked, frontRightDoorLocked, rearLeftDoorLocked, rearRightDoorLocked, 
+  # frontLeftDoorClosed, frontRightDoorClosed, rearLeftDoorClosed, rearRightDoorClosed, 
+  # doorsClosed, trunkStateRollup, sunroofstatus
+sensor.ff590mr_odometer:
   friendly_name: Km Percorsi
   icon: mdi:road-variant
-# liquidconsumptionreset, liquidconsumptionstart, liquidRangeSkipIndication
-# tanklevelpercent, tankReserveLamp
-# serviceintervaldays
-# distanceReset, distanceStart
+  # distanceReset, distanceStart, liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, serviceintervaldays, tanklevelpercent, tankReserveLamp

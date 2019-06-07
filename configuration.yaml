@@ -149,7 +149,6 @@ maxcube: !include components/eq3max.yaml
 google_assistant: !include components/google_assistant.yaml
 
 # Mercedes Me
-#mbwebbeta: !include components/mercedesme.yaml
 mercedesmeapi: !include components/mercedesme.yaml
 
 # Weather
