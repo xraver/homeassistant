@@ -6,9 +6,10 @@
   sensors:
     ff590mr_tire_pressure_front_left:
       friendly_name: Anteriore Sinistra
-      icon: mdi:car-tire-alert
+      icon_template: mdi:car-tire-alert
       value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontLeft') }}"
-      unit_of_measurement: '%'
+      device_class: pressure
+      unit_of_measurement: 'kPa'
       
 ######################################################################
 # Sensor: Tire Pressure Front Right
@@ -18,9 +19,10 @@
   sensors:
     ff590mr_tire_pressure_front_right:
       friendly_name: Anteriore Destra
-      icon: mdi:car-tire-alert
+      icon_template: mdi:car-tire-alert
       value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontRight') }}"
-      unit_of_measurement: '%'
+      device_class: pressure
+      unit_of_measurement: 'kPa'
       
 ######################################################################
 # Sensor: Tire Pressure Rear Left
@@ -30,9 +32,10 @@
   sensors:
     ff590mr_tire_pressure_rear_left:
       friendly_name: Posteriore Sinistra
-      icon: mdi:car-tire-alert
+      icon_template: mdi:car-tire-alert
       value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearLeft') }}"
-      unit_of_measurement: '%'
+      device_class: pressure
+      unit_of_measurement: 'kPa'
       
 ######################################################################
 # Sensor: Tire Pressure Rear Right
@@ -42,6 +45,7 @@
   sensors:
     ff590mr_tire_pressure_rear_right:
       friendly_name: Posteriore Destra
-      icon: mdi:car-tire-alert
+      icon_template: mdi:car-tire-alert
       value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearRight') }}"
-      unit_of_measurement: '%'
+      device_class: pressure
+      unit_of_measurement: 'kPa'
