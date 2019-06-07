@@ -115,7 +115,6 @@
     ff590mr_service_interval_days:
       friendly_name: Prossimo Tagliando
       entity_id: sensor.ff590mr_odometer
-      #unit_of_measurement: 'l/100Km'
+      unit_of_measurement: 'giorni'
       value_template: "{{ state_attr('sensor.ff590mr_odometer', 'serviceintervaldays') }}"
       icon_template: mdi:wrench
-      device_class: timestamp
