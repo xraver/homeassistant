@@ -18,30 +18,85 @@
         {% endif %}
 
 ######################################################################
-# Binary Sensor: Car Windows Lock
+# Binary Sensor: Doors Closed
 ######################################################################
 
 - platform: template
   sensors:
-    car_windows_lock:
-      friendly_name: Chiusura Finestrini
+    ff590mr_doors_closed:
+      friendly_name: Chiusura Porte
       device_class: lock
       entity_id: 
-        - sensor.ff590mr_window_front_left 
-        - sensor.ff590mr_window_front_right
-        - sensor.ff590mr_window_rear_left
-        - sensor.ff590mr_window_rear_right
+        - sensor.ff590mr_lock
       value_template: >-
-        {{ not (is_state('sensor.ff590mr_window_front_left', '2') 
-           and is_state('sensor.ff590mr_window_front_right', '2')
-           and is_state('sensor.ff590mr_window_rear_left', '2')
-           and is_state('sensor.ff590mr_window_rear_right', '2') ) }}
+        {{ is_state_attr('sensor.ff590mr_lock', 'frontLeftDoorClosed', 'true') 
+           and is_state_attr('sensor.ff590mr_lock', 'frontRightDoorClosed', 'true')
+           and is_state_attr('sensor.ff590mr_lock', 'rearLeftDoorClosed', 'true')
+           and is_state_attr('sensor.ff590mr_lock', 'rearRightDoorClosed', 'true') }}
       icon_template: >-
-        {% if is_state('sensor.ff590mr_window_front_left', '2') 
-           and is_state('sensor.ff590mr_window_front_right', '2')
-           and is_state('sensor.ff590mr_window_rear_left', '2')
-           and is_state('sensor.ff590mr_window_rear_right', '2') %}
-          mdi:window-closed
+        {% if is_state_attr('sensor.ff590mr_lock', 'frontLeftDoorClosed', 'true') 
+           and is_state_attr('sensor.ff590mr_lock', 'frontRightDoorClosed', 'true')
+           and is_state_attr('sensor.ff590mr_lock', 'rearLeftDoorClosed', 'true')
+           and is_state_attr('sensor.ff590mr_lock', 'rearRightDoorClosed', 'true') %}
+          mdi:car-door
         {% else %}
-          mdi:window-open
+          mdi:car-door
         {% endif %}
+
+######################################################################
+# Binary Sensor: Decklid Status
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_status_decklid:
+      friendly_name: Bagagliaio
+      device_class: opening
+      entity_id: sensor.ff590mr_lock
+      value_template: >-
+        {{ not is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') }}
+      icon_template: >-
+        {% if is_state('sensor.ff590mr_lock', 'CLOSED_AND_LOCKED') %}
+          mdi:lock
+        {% else %}
+          mdi:lock-open
+        {% endif %}
+
+######################################################################
+# Binary Sensor: Warning Brake fluid
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_warning_brakefluid:
+      friendly_name: Liquido freni
+      device_class: problem
+      entity_id: binary_sensor.ff590mr_engine_light_warning
+      value_template: >-
+        {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningbrakefluid', 'true') }}
+
+######################################################################
+# Binary Sensor: Warning washwater
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_warning_washwater:
+      friendly_name: Liquido lavacristalli
+      device_class: problem
+      entity_id: binary_sensor.ff590mr_engine_light_warning
+      value_template: >-
+        {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningwashwater', 'true') }}
+
+######################################################################
+# Binary Sensor: Warning coolant level low
+######################################################################
+
+- platform: template
+  sensors:
+    ff590mr_warning_coolantlevellow:
+      friendly_name: Liquido raffreddamento
+      device_class: problem
+      entity_id: binary_sensor.ff590mr_engine_light_warning
+      value_template: >-
+        {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningcoolantlevellow', 'true') }}

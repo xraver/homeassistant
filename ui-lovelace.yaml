@@ -370,11 +370,14 @@ views:
     badges:
       - device_tracker.wdd1760081v167576  
       - sensor.ff590mr_odometer
-      - sensor.ff590mr_tank_level
-      - binary_sensor.car_doors_lock
-      - binary_sensor.car_windows_lock
-      - binary_sensor.ff590mr_parkbrake_status
-      - binary_sensor.ff590mr_decklid_status
+      - sensor.ff590mr_fuel_level
+#      - binary_sensor.ff590mr_park_brake_status
+#      - binary_sensor.ff590mr_status_decklid
+      - binary_sensor.ff590mr_engine_light_warning
+      - binary_sensor.ff590mr_tire_warning
+      - binary_sensor.ff590mr_doors_closed
+      - binary_sensor.ff590mr_windows_closed
+      - lock.ff590mr_lock
     cards:
       #- type: gauge
       #  title: "Livello Carburante"
@@ -389,11 +392,11 @@ views:
         title: "Mercedes A200d: Sensori"
         show_header_toggle: false
         entities:
-          - binary_sensor.ff590mr_parkbrake_status
-          - binary_sensor.ff590mr_decklid_status
-          - binary_sensor.ff590mr_warning_washwater
+          - binary_sensor.ff590mr_park_brake_status
+          - binary_sensor.ff590mr_status_decklid
           - binary_sensor.ff590mr_warning_brakefluid
-          - binary_sensor.ff590mr_warning_engine_light
+          - binary_sensor.ff590mr_warning_washwater
+          - binary_sensor.ff590mr_warning_coolantlevellow
           #- device_tracker.wdd1760081v167576
 
       - type: entities
@@ -445,7 +448,7 @@ views:
           - sensor.ff590mr_licenseplate
           - sensor.ff590mr_liquid_consumption_reset
           - sensor.ff590mr_liquid_consumption_start
-          #- sensor.ff590mr_odometer
+          - sensor.ff590mr_odometer_2
           #- sensor.ff590mr_liquid_range
           #- sensor.ff590mr_electric_distance_since_start
           #- sensor.ff590mr_tank_level

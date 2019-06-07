@@ -8,5 +8,4 @@ logs:
   homeassistant.components.automation: info
   homeassistant.components.device_tracker: warn
   homeassistant.components.input_text: info
-  custom_components.mbwebbeta: warn
-  mbwebapppy.controller: warn
+  custom_components.mercedesmeapi: warn

@@ -4,4 +4,8 @@
 
 username: !secret mb_user
 password: !secret mb_password
-scan_interval: 120
+pin: !secret mb_pin            # need to open the lock, please use the Mercedes web or app to set-up the pin
+country_code: IT               # two digts country code
+accept_lang: it_IT             # four digits country code
+save_car_details: false        # save a json to the HA config directory with the features and states, please use this for debug only 
+#scan_interval: 120
