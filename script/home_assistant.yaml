@@ -34,3 +34,12 @@ homeassistant_upgrade:
   sequence:
     - service: shell_command.homeassistant_upgrade
 
+######################################################################
+# Home Assistant: Sync with Google Home
+# - homeassistant.restart
+######################################################################
+
+homeassistant_google_home_sync:
+  alias: "Sincronizza Google Home"
+  sequence:
+    - service: google_assistant.request_sync

@@ -10,3 +10,6 @@ script.homeassistant_clearlog:
 
 script.homeassistant_upgrade:
   icon: mdi:update
+
+script.homeassistant_google_home_sync:
+  icon: mdi:google

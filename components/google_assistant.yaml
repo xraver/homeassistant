@@ -69,6 +69,7 @@ entity_config:
     expose: true
 # Script & Routine
   input_boolean.home_mode_away:
+    name: Modalità Vacanza
     room: Generale
     expose: true
   script.speech_status:
