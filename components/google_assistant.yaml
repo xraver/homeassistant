@@ -63,13 +63,13 @@ entity_config:
   climate.studio_termostato_studio:
     room: Studio
     expose: true
-# Script & Routine
-  input_boolean.home_mode_away:
-    room: Generale
-    expose: true
 # Media Player
   media_player.tv_sala:
     room: Sala
+    expose: true
+# Script & Routine
+  input_boolean.home_mode_away:
+    room: Generale
     expose: true
   script.speech_status:
     expose: true
