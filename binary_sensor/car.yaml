@@ -27,9 +27,9 @@
       friendly_name: Porte
       entity_id: sensor.ff590mr_lock
       value_template: >-
-        {{ not is_state_attr('sensor.ff590mr_lock', 'doorsClosed', 'true') }}
+        {{ not is_state_attr('sensor.ff590mr_lock', 'doorsClosed', true) }}
       icon_template: >-
-        {% if is_state_attr('sensor.ff590mr_lock', 'doorsClosed', 'true') %}        
+        {% if is_state_attr('sensor.ff590mr_lock', 'doorsClosed', true) %}
           mdi:car-door
         {% else %}
           mdi:car-door

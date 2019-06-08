@@ -36,7 +36,7 @@ speech_engine:
               Buonanotte.
             {% endif %}
           {%- endmacro -%}
-
+          
           {# Time & Date #}
           {%- macro time_and_date() -%}
             {% set hour = now().strftime('%H') %}
@@ -118,7 +118,7 @@ speech_engine:
             {% endif %}
             La posizione di Laura è {{ laura_position }}.
           {%- endmacro -%}
-
+          
           {# End Message #}
           {%- macro end_message() -%}
             {% if enable_status is defined %}
@@ -132,7 +132,7 @@ speech_engine:
               {% endif %}
             {% endif %}
           {%- endmacro -%}
-
+          
           {# *********************************************** #}
           {# ******************* Message ******************* #}
           {# *********************************************** #}
@@ -146,20 +146,20 @@ speech_engine:
           
           {% if enable_status is defined %}
             {% if enable_status | int == 1 %}
-            
+              
               {{ time_and_date() }}
-
+              
               {{ status_lights() }}
-
+              
               {{ status_covers() }}
-
+              
               {{ status_location() }}
-            
+              
               {{ status_car() }}
-
+              
             {% endif %}
           {% endif %}
-
+          
           {# generic message #}
           {{ message }}
           
