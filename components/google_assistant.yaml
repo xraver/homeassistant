@@ -67,11 +67,16 @@ entity_config:
   media_player.tv_sala:
     room: Sala
     expose: true
-# Script & Routine
-  input_boolean.home_mode_away:
+# Inputs
+input_boolean.home_mode_away:
     name: Modalità Vacanza
     room: Generale
     expose: true
+input_boolean.ff590mr_lock:
+    name: Blocco Auto
+    room: Generale
+    expose: true
+# Routine
   script.speech_status:
     expose: true
     room: Generale
