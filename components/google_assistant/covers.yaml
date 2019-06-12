@@ -1,0 +1,17 @@
+######################################################################
+# Google Assistant: Covers
+######################################################################
+
+cover.tapparella_cucina:
+  room: Cucina
+  expose: true
+cover.tapparella_sala:
+  room: Sala
+  expose: true
+cover.tapparella_studio:
+  room: Studio
+  expose: true
+cover.tapparella_camera:
+ room: Camera
+ expose: true
+

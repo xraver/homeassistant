@@ -1,0 +1,26 @@
+######################################################################
+# Google Assistant: Lights
+######################################################################
+
+light.luce_corridoio:
+  room: Corridoio
+  expose: true
+light.luce_cucina:
+  room: Cucina
+  expose: true
+light.luce_divano:
+  room: Sala
+  expose: true    
+light.luce_bagno:
+  room: Bagno
+  expose: true    
+light.luce_specchio:
+  room: Bagno
+  expose: true
+light.luce_studio:
+  room: Studio
+  expose: true
+light.luce_camera:
+  room: Camera
+  expose: true
+
