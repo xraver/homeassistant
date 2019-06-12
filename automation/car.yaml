@@ -68,5 +68,5 @@
 
   action:
     - service: lock.unlock
-      entity_id: lock.ff590mr_unlock
+      entity_id: lock.ff590mr_lock
  
