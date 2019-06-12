@@ -17,6 +17,7 @@ views:
       - device_tracker.wdd1760081v167576    
       - sensor.time
       - binary_sensor.home_mode
+      - binary_sensor.guard_mode
       - binary_sensor.speech_notifications
       - binary_sensor.text_notifications
     cards:
@@ -101,6 +102,7 @@ views:
       - input_boolean.home_mode_day
       - input_boolean.home_mode_night
       - input_boolean.home_mode_away
+      - input_boolean.guard_mode
       
     - type: entities
       title: Controlli Vari
@@ -393,7 +395,8 @@ views:
         title: "Mercedes A200d: Sensori"
         show_header_toggle: false
         entities:
-          - lock.ff590mr_lock
+          #- lock.ff590mr_lock
+          - input_boolean.ff590mr_lock
           - binary_sensor.ff590mr_locked
           - binary_sensor.ff590mr_doors_closed
           - binary_sensor.ff590mr_windows_closed_2

@@ -1,0 +1,69 @@
+######################################################################
+# Guard Mode: Enable
+######################################################################
+
+- alias: "Modalità Guardia: Attivazione"
+  initial_state: 'on'
+
+  trigger:
+    - platform: zone
+      entity_id: 
+        - device_tracker.google_maps_115265981849847357125
+        - device_tracker.google_maps_103158638433668748797
+      zone: zone.casa
+      event: leave
+    - platform: homeassistant
+      event: start  
+
+  condition:
+    condition: template
+    value_template: >-
+      {{ (not is_state('device_tracker.google_maps_115265981849847357125', 'Casa')) and
+         (not is_state('device_tracker.google_maps_103158638433668748797', 'Casa')) }}
+# condition:
+#    condition: and
+#    conditions:
+#      - condition: zone
+#        entity_id: device_tracker.google_maps_115265981849847357125
+#        zone: not zone.casa
+#      - condition: template
+#        entity_id: device_tracker.google_maps_103158638433668748797
+#        zone: not zone.casa
+
+  action:
+    - service: input_boolean.turn_on
+      data_template:
+        entity_id: input_boolean.guard_mode
+
+######################################################################
+# Guard Mode: Disable
+######################################################################
+
+- alias: "Modalità Guardia: Disattivazione"
+  initial_state: 'on'
+
+  trigger:
+    - platform: zone
+      entity_id: 
+        - device_tracker.google_maps_115265981849847357125
+        - device_tracker.google_maps_103158638433668748797
+      zone: zone.casa
+      event: enter
+    - platform: homeassistant
+      event: start 
+
+  condition:
+    condition: and    
+    conditions:
+      - condition: zone
+        entity_id: device_tracker.google_maps_115265981849847357125
+        zone: zone.casa
+      - condition: zone
+        entity_id: device_tracker.google_maps_103158638433668748797
+        zone: zone.casa
+
+  action:
+    - service: input_boolean.turn_off
+      data_template:
+        entity_id: input_boolean.guard_mode
+
