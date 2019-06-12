@@ -1,0 +1,14 @@
+######################################################################
+# People
+######################################################################
+
+people:
+  name: Persone
+  view: true
+  icon: mdi:account-multiple
+  entities:
+    - device_tracker.google_maps_115265981849847357125
+    - device_tracker.google_maps_103158638433668748797
+    - device_tracker.google_maps_113099283296073047871
+#    - device_tracker.wdd1760081v167576
+#    - device_tracker.google_maps_108517379615429477419
