@@ -4,6 +4,7 @@
 
 exclude:
   entities:
+    - sensor.date
     - sensor.time
     - sensor.time_date
     # Mercedes Me
