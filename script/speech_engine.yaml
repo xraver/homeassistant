@@ -6,6 +6,10 @@
 # - message
 # - enable_greeting
 # - enable_status
+# - enable_location
+# - location_people_start
+# - location_people_num
+# - enable_car
 #
 # Operations:
 # - script.notify_voice (greeting + message)
@@ -19,7 +23,30 @@ speech_engine:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
         language: "{{ language }}"
-        message: >-        
+        message: >-
+          
+          {# *********************************************** #}
+          {# ***************** Check Input ***************** #}
+          {# *********************************************** #}
+          {% if enable_greeting is not defined %}
+            {% set enable_greeting=0 %}
+          {% endif %}
+          {% if enable_status is not defined %}
+            {% set enable_status=0 %}
+          {% endif %}
+          {% if enable_location is not defined %}
+            {% set enable_location=0 %}
+          {% endif %}
+          {% if location_people_start is not defined %}
+            {% set location_people_start=1 %}
+          {% endif %}
+          {% if location_people_num is not defined %}
+            {% set location_people_num=2 %}
+          {% endif %}          
+          {% if enable_car is not defined %}
+            {% set enable_car=0 %}
+          {% endif %}
+          
           {# *********************************************** #}
           {# ******************** Macro ******************** #}
           {# *********************************************** #}
@@ -61,7 +88,7 @@ speech_engine:
           
           {# Covers Status #}
           {%- macro status_covers() -%}
-            {% for entity_id in states.group.covers.attributes.entity_id  %}
+            {% for entity_id in states.group.covers.attributes.entity_id %}
               {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
               {% set perc = state_attr(entity_id, 'current_position') %}
               {% if perc | int < 25 %}
@@ -104,32 +131,31 @@ speech_engine:
           {%- endmacro -%}
           
           {# Location Status #}
-          {%- macro status_location() -%}
-            {% if is_state('device_tracker.google_maps_115265981849847357125', 'not_home') %}
-              {% set giorgio_position = 'fuori casa' %}
-            {% else %}
-              {% set giorgio_position = states('device_tracker.google_maps_115265981849847357125') %}
-            {% endif %}
-            La posizione di Giorgio è {{ giorgio_position }}.
-            {% if is_state('device_tracker.google_maps_103158638433668748797', 'not_home') %}
-              {% set laura_position = 'fuori casa' %}
-            {% else %}
-              {% set laura_position = states('device_tracker.google_maps_103158638433668748797') %}
-            {% endif %}
-            La posizione di Laura è {{ laura_position }}.
+          {%- macro status_location(start, num) -%}
+            {% for entity_id in states.group.people.attributes.entity_id %}
+              {% set name = state_attr(entity_id, 'friendly_name') %}
+              {% if is_state(entity_id, 'not_home') %}
+                {% set position = state_attr(entity_id, 'address') %}
+              {% else %}
+                {% set position = states(entity_id) %}
+              {% endif %}
+              
+              {% if (loop.index >= start|int) and (loop.index < num|int+start|int) %}
+                La posizione di {{ name }} è {{ position }}.
+              {% endif %}              
+            {%- endfor %}
           {%- endmacro -%}
           
           {# End Message #}
           {%- macro end_message() -%}
-            {% if enable_status is defined %}
-              {% if enable_status | int == 1 %}
-                {{ [
-                "Spero che il report ti abbia soddisfatto!",
-                "Il report è concluso.",
-                "Alla prossima!",
-                "Non ho altro da comunicare."
-                ] | random }}
-              {% endif %}
+            {% if enable_status | int == 1 %}
+              {{ [
+              "Spero che il report ti abbia soddisfatto!",
+              "Il report è concluso.",
+              "Alla prossima!",
+              "Buon proseguimento!",
+              "Non ho altro da comunicare."
+              ] | random }}
             {% endif %}
           {%- endmacro -%}
           
@@ -138,26 +164,29 @@ speech_engine:
           {# *********************************************** #}
           
           {# Greeting Message #}
-          {% if enable_greeting is defined %}
-            {% if enable_greeting | int == 1 %}
-              {{ greeting() }}
-            {% endif %}
+          {% if enable_greeting | int == 1 %}
+            {{ greeting() }}
           {% endif %}
           
-          {% if enable_status is defined %}
-            {% if enable_status | int == 1 %}
+          {# Home Status #}
+          {% if enable_status | int == 1 %}
               
-              {{ time_and_date() }}
+            {{ time_and_date() }}
               
-              {{ status_lights() }}
+            {{ status_lights() }}
               
-              {{ status_covers() }}
-              
-              {{ status_location() }}
-              
-              {{ status_car() }}
-              
-            {% endif %}
+            {{ status_covers() }}
+                            
+          {% endif %}
+          
+          {# Location Info #}
+          {% if (enable_status | int == 1) or (enable_location | int == 1) %}
+            {{ status_location(location_people_start, location_people_num) }}
+          {% endif %}
+          
+          {# Car Status #}          
+          {% if (enable_status | int == 1) or (enable_car | int == 1) %}              
+            {{ status_car() }}
           {% endif %}
           
           {# generic message #}

@@ -7,8 +7,13 @@ people:
   view: true
   icon: mdi:account-multiple
   entities:
+    # Giorgio
     - device_tracker.google_maps_115265981849847357125
+    # Laura
     - device_tracker.google_maps_103158638433668748797
+    # Anna
     - device_tracker.google_maps_113099283296073047871
-#    - device_tracker.wdd1760081v167576
-#    - device_tracker.google_maps_108517379615429477419
+    # Assunta
+    - device_tracker.google_maps_108517379615429477419
+    # Mercedes
+    - device_tracker.wdd1760081v167576
