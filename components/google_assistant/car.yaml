@@ -2,7 +2,7 @@
 # Google Assistant: Car
 ######################################################################
 
-input_boolean.ff590mr_lock:
+switch.ff590mr_lock:
   name: Blocco Auto
   room: Generale
   expose: true
