@@ -56,7 +56,7 @@
 # Home Assistant: Management of Day/Night Mode
 ######################################################################
        
-- alias: "Home Assistant: Modalità giorno/Notte"
+- alias: "Home Assistant: Modalità Giorno/Notte"
   initial_state: 'on'
 
   trigger:
@@ -83,6 +83,29 @@
           {% endif %}
     
     - service: script.volume_manager
+
+######################################################################
+# Home Assistant: Management Away Mode
+######################################################################
+
+- alias: "Home Assistant: Modalità Vacanza"
+  initial_state: 'on'
+ 
+  trigger:
+    - platform: zone
+      entity_id: 
+        - device_tracker.google_maps_115265981849847357125
+        - device_tracker.google_maps_103158638433668748797
+        # - device_tracker.google_maps_113099283296073047871
+      zone: zone.casa
+      event: enter
+
+  condition: []
+
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.home_mode_away  
 
 ######################################################################
 # Home Assistant: Management of Speech Notifications

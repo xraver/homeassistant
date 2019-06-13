@@ -3,20 +3,19 @@
 #
 # Operations:
 # - script.speech_engine
-# - disable away mode
 ######################################################################
 
 - alias: Saluto di benvenuto
   initial_state: 'on'
 
   trigger:
-    - platform: state
-      entity_id: 
+    - platform: zone
+      entity_id:
         - device_tracker.google_maps_115265981849847357125
         - device_tracker.google_maps_103158638433668748797
         # - device_tracker.google_maps_113099283296073047871
-      to: 'Casa'
-
+      zone: zone.casa
+      event: enter
 #    - platform: state
 #      entity_id: 
 #        - device_tracker.s9
@@ -88,10 +87,6 @@
           {%- endmacro -%}
           {{ greeting_sentence(name) }}
         enable_greeting: 0
-
-    - service: input_boolean.turn_off
-      data:
-        entity_id: input_boolean.home_mode_away
 
 ######################################################################
 # Hourly message
