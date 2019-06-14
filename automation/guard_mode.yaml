@@ -53,7 +53,7 @@
       event: start 
 
   condition:
-    condition: and    
+    condition: or    
     conditions:
       - condition: zone
         entity_id: device_tracker.google_maps_115265981849847357125
