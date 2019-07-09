@@ -1,8 +1,7 @@
 ######################################################################
-# Samsung Media Player Devices
+# Sony Bravia TV
 ######################################################################
 
-- platform: samsungtv
+- platform: braviatv
   host: tv.giorgioravera.it
-  port: 55000
   name: TV Sala 
