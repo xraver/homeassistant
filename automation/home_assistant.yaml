@@ -93,7 +93,7 @@
  
   trigger:
     - platform: zone
-      entity_id: 
+      entity_id:
         - device_tracker.google_maps_115265981849847357125
         - device_tracker.google_maps_103158638433668748797
         # - device_tracker.google_maps_113099283296073047871

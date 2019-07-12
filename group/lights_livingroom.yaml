@@ -1,0 +1,11 @@
+######################################################################
+# Group Lights Livingroom
+######################################################################
+
+lights_livingroom:
+  name: Luci Sala
+  view: true
+  icon: mdi:lightbulb
+  entities:
+    - light.luce_divano
+    - light.luce_divano_bianca
