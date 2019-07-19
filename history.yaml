@@ -4,6 +4,11 @@
 
 exclude:
   entities:
+    # Device Trackers
+    - device_tracker.a3
+    - device_tracker.a5
+    - device_tracker.s9
+    # Time & Date
     - sensor.date
     - sensor.time
     - sensor.time_date
@@ -47,6 +52,7 @@ exclude:
   domains:
     - automation
     - group
+    - input_datetime
     - input_boolean
     - input_text
-    #- script
+    - script
