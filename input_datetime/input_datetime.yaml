@@ -1,0 +1,16 @@
+######################################################################
+# Home Assistant: End of Away Mode
+######################################################################
+away_mode_end:
+  name: "Fine Vacanza"
+  has_time: true
+  has_date: true
+
+######################################################################
+# Washing Machine: End of Work
+######################################################################
+
+#washing_machine_end:
+#  name: "Avvia Lavatrice"
+#  has_time: true
+#  has_date: false

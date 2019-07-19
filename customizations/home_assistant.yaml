@@ -13,3 +13,9 @@ script.homeassistant_upgrade:
 
 script.homeassistant_google_home_sync:
   icon: mdi:google
+
+input_datetime.away_mode_end:
+  icon: mdi:airplane-takeoff
+
+#input_datetime.washing_machine_end:
+#  icon: mdi:washing-machine

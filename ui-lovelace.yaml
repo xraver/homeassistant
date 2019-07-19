@@ -41,6 +41,7 @@ views:
         "on": /local/rooms/sala_on.jpg
         "off": /local/rooms/sala_off.jpg
       entity: light.luce_divano
+      #entity: group.lights_livingroom
       entities: 
       - light.luce_divano
       - light.luce_divano_bianca
@@ -66,6 +67,7 @@ views:
         "on": /local/rooms/bagno_on.jpg
         "off": /local/rooms/bagno_off.jpg
       entity: light.luce_bagno
+      #entity: group.lights_bathroom
       entities: 
       - light.luce_bagno
       - light.luce_specchio
@@ -110,6 +112,12 @@ views:
       entities:
       - script.speech_status
 
+    - type: entities
+      title: Eventi
+      show_header_toggle: false
+      entities:
+      - input_datetime.away_mode_end
+      
 ######################################################################
 # Lights
 ######################################################################

@@ -54,8 +54,8 @@ updater:
 
 # Discover some devices automatically
 discovery:
-#  ignore:
-#    - roku
+  ignore:
+    - roku
 #    - google_cast
 
 # Allows you to issue voice commands from the frontend in enabled browsers
@@ -104,6 +104,7 @@ media_player: !include_dir_merge_list media_player/
 # Inputs
 input_boolean: !include_dir_merge_named input_boolean/
 input_text: !include_dir_merge_named input_text/
+input_datetime: !include_dir_merge_named input_datetime/
 #input_number: !include_dir_merge_list input_number/
 
 # Shell commands

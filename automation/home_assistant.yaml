@@ -99,6 +99,8 @@
         # - device_tracker.google_maps_113099283296073047871
       zone: zone.casa
       event: enter
+    - platform: template
+      value_template: "{{ states('sensor.time_date') == (state_attr('input_datetime.away_mode_end', 'timestamp') | int | timestamp_custom('%H:%M, %Y-%m-%d', true)) }}"
 
   condition: []
 

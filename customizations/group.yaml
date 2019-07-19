@@ -2,43 +2,6 @@
 # Group Customization for the order view
 ######################################################################
 
-group.default_view:
-  order: 0
-group.cucina:
-  order: 1
-group.sala:
-  order: 2
-group.bagno:
-  order: 3
-group.studio:
-  order: 4
-group.camera:
-  order: 5
-
-group.covers:
-  order: 10
-
-group.climate:
-  order: 11
-
-group.media_player:
-  order: 12
-
-group.people:
-  order: 13
-
-group.car:
-  order: 14
-
-group.network:
-  order: 15
-
-group.weather:
-  order: 16
-
-group.settings:
-  order: 17
-
 group.all_automations:
   hidden: false
   control: hidden
