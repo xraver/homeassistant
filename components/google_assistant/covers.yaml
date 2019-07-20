@@ -3,15 +3,14 @@
 ######################################################################
 
 cover.tapparella_cucina:
+  expose: true
   room: Cucina
-  expose: true
 cover.tapparella_sala:
+  expose: true
   room: Sala
-  expose: true
 cover.tapparella_studio:
-  room: Studio
   expose: true
+  room: Studio
 cover.tapparella_camera:
- room: Camera
- expose: true
-
+  expose: true
+  room: Camera

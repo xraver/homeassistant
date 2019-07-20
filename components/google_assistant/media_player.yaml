@@ -3,5 +3,5 @@
 ######################################################################
 
 media_player.tv_sala:
-  room: Sala
   expose: true
+  room: Sala

@@ -3,24 +3,23 @@
 ######################################################################
 
 light.luce_corridoio:
+  expose: true
   room: Corridoio
-  expose: true
 light.luce_cucina:
+  expose: true
   room: Cucina
-  expose: true
 light.luce_divano:
+  expose: true
   room: Sala
-  expose: true    
 light.luce_bagno:
+  expose: true
   room: Bagno
-  expose: true    
 light.luce_specchio:
+  expose: true
   room: Bagno
-  expose: true
 light.luce_studio:
+  expose: true
   room: Studio
-  expose: true
 light.luce_camera:
-  room: Camera
   expose: true
-
+  room: Camera

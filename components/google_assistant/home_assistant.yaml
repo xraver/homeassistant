@@ -3,10 +3,11 @@
 ######################################################################
 
 input_boolean.home_mode_away:
-    name: Modalità Vacanza
-    room: Generale
-    expose: true
+  name: Modalità Vacanza
+  room: Generale
+  expose: true
 script.speech_status:
+  name: Stato Casa
   expose: true
   room: Generale
 script.homeassistant_restart:
@@ -25,4 +26,3 @@ script.shelly_upgrade:
   name: Aggiorna Shelly
   expose: true
   room: Generale
-
