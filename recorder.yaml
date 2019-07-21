@@ -54,7 +54,7 @@ exclude:
   domains:
     - automation
     - group
-    - input_datetime
     - input_boolean
+    - input_datetime
     - input_text
     - script
