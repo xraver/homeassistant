@@ -1,1 +1,1 @@
-homeassistant_upgrade: /etc/homeassistant/shell_scripts/homeassistant_upgrade.sh 
+homeassistant_upgrade: 'bash /etc/homeassistant/shell_scripts/homeassistant_upgrade.sh'

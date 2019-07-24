@@ -1,1 +1,1 @@
-shelly_upgrade: /etc/homeassistant/shell_scripts/shelly_upgrade.sh
+shelly_upgrade: 'bash /etc/homeassistant/shell_scripts/shelly_upgrade.sh'
