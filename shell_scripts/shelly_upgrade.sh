@@ -1,8 +1,9 @@
 #!/bin/bash
 
-HOST=$(awk '/mqtt_host/ { print  $2 }' ../secrets.yaml)
-USER=$(awk '/mqtt_user/ { print  $2 }' ../secrets.yaml)
-PASSWORD=$(awk '/mqtt_password/ { print  $2 }' ../secrets.yaml)
+HASS_HOME="/var/lib/homeassistant/.homeassistant"
+HOST=$(awk '/mqtt_host/ { print  $2 }' $HASS_HOME/secrets.yaml)
+USER=$(awk '/mqtt_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
+PASSWORD=$(awk '/mqtt_password/ { print  $2 }' $HASS_HOME/secrets.yaml)
 SHELLY_ID=(
 	shellyswitch-55980F
 	shellyswitch-135454

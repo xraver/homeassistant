@@ -13,26 +13,6 @@ media_player.roku_yd00dm481414:
   friendly_name: NowTV Giorgio
 
 # Script di comando
-input_text.tv_change_channel:
-  friendly_name: Imposta Canale
-  icon: mdi:remote
-
-script.tv_volume_up:
-  friendly_name: Alza Volume
-  icon: mdi:volume-high
-
-script.tv_volume_down:
-  friendly_name: Abbassa Volume
-  icon: mdi:volume-medium
-
-script.tv_volume_mute:
-  friendly_name: Volume Muto
-  icon: mdi:volume-mute
-
-script.tv_play_pause:
-  friendly_name: Play/Pause
-  icon: mdi:play-pause
-
 script.tv_toggle:
   friendly_name: Accendi/Spegni
   icon: mdi:power

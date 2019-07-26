@@ -1,24 +1,4 @@
 ######################################################################
-# TV: change channel
-# - script.tv_change_channel
-######################################################################
-
-- alias: "TV: Cambia canale"
-  initial_state: 'on'
-
-  trigger:
-    - platform: state
-      entity_id: input_text.tv_change_channel
-
-  condition: []
-
-  action:
-    - service: script.tv_change_channel
-      data_template:
-        tv: "media_player.tv_sala"
-        channel: "{{ trigger.to_state.state }}"
-
-######################################################################
 # Google Home: speeak message
 # - script.notify_voice
 ######################################################################
