@@ -65,3 +65,15 @@ shelly_upgrade:
       data:
         topic: 'shellies/shellybulb-BC8610/command'
         payload: 'update_fw'
+
+    # Shelly EM
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shellyem-B9E1A0/command'
+        payload: 'update_fw'
+        
+    # Shelly Plug S
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shellyplug-s-7A31CB/command'
+        payload: 'update_fw'

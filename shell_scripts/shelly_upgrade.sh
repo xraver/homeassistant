@@ -15,6 +15,8 @@ SHELLY_ID=(
 	shelly1-59E18C
 	shelly1-24D1A8
 	shellybulb-BC8610
+  shellyem-B9E1A0
+  shellyplug-s-7A31CB
 )
 
 echo "Upgrade Shelly Firmware"
