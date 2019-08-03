@@ -1,0 +1,33 @@
+######################################################################
+# Shelly EM
+######################################################################
+
+- platform: mqtt
+  name: "Consumo"
+  state_topic: "shellies/shellyem-B9E1A0/emeter/0/power"
+  unit_of_measurement: 'W'
+  qos: 0
+
+- platform: mqtt
+  name: "Volt"
+  state_topic: "shellies/shellyem-B9E1A0/emeter/0/voltage"
+  unit_of_measurement: 'V'
+  qos: 0
+
+- platform: mqtt
+  name: "Energia Assorbita"
+  state_topic: "shellies/shellyem-B9E1A0/emeter/0/energy"
+  unit_of_measurement: 'KVh'
+  qos: 0
+
+- platform: mqtt
+  name: "Potenza Reattiva"
+  state_topic: "shellies/shellyem-B9E1A0/emeter/0/reactive_power"
+  unit_of_measurement: 'var'
+  qos: 0
+
+#- platform: mqtt
+#  name: "Energia Restituita"
+#  state_topic: "shellies/shellyem-B9E1A0/emeter/0/returned_energy"
+#  unit_of_measurement: 'KWh'
+#  qos: 0
