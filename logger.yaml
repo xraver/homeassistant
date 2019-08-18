@@ -9,3 +9,4 @@ logs:
   homeassistant.components.device_tracker: warn
   homeassistant.components.input_text: info
   custom_components.mercedesmeapi: warn
+  homeassistant.components.updater: debug

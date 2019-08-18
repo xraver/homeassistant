@@ -4,7 +4,6 @@
 
 - platform: google_maps
   username: !secret google_maps_username
-  password: !secret google_maps_password
 
   # Seconds between each scan for new devices
   # interval_seconds: 60

@@ -9,7 +9,13 @@
   qos: 0
 
 - platform: mqtt
-  name: "Volt"
+  name: "Potenza Reattiva"
+  state_topic: "shellies/shellyem-B9E1A0/emeter/0/reactive_power"
+  unit_of_measurement: 'var'
+  qos: 0
+
+- platform: mqtt
+  name: "Voltaggio"
   state_topic: "shellies/shellyem-B9E1A0/emeter/0/voltage"
   unit_of_measurement: 'V'
   qos: 0
@@ -18,12 +24,6 @@
   name: "Energia Assorbita"
   state_topic: "shellies/shellyem-B9E1A0/emeter/0/energy"
   unit_of_measurement: 'KVh'
-  qos: 0
-
-- platform: mqtt
-  name: "Potenza Reattiva"
-  state_topic: "shellies/shellyem-B9E1A0/emeter/0/reactive_power"
-  unit_of_measurement: 'var'
   qos: 0
 
 #- platform: mqtt

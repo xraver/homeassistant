@@ -154,3 +154,6 @@ weather: !include components/weather.yaml
 
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
+
+# Custom Updater
+custom_updater:
