@@ -49,6 +49,9 @@ exclude:
     - sensor.ff590mr_tire_pressure_rear_left
     - sensor.ff590mr_tire_pressure_rear_right
     - sensor.ff590mr_trunk
+    # Energy Sensors
+    - sensor.potenza_reattiva
+    - sensor.tensione
   domains:
     - automation
     - group

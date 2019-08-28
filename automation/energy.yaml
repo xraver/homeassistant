@@ -1,0 +1,18 @@
+######################################################################
+# Energy: Power Consumption Notifications
+######################################################################
+
+- alias: "Allarme Consumo Energetico"
+  initial_state: 'on'
+
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.potenza_istantanea
+      above: 2950
+
+  action:
+    service: script.notify_text
+    data_template:
+      title: "Home Assistant - Allarme Consumo Energetico"
+      message: "Consumo energetico elevato ({{ states.sensor.potenza_istantanea.state }})."
+      enable_persistant: false

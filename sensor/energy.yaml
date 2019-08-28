@@ -3,31 +3,31 @@
 ######################################################################
 
 - platform: mqtt
-  name: "Consumo"
+  name: "Potenza Istantanea"
   state_topic: "shellies/shellyem-B9E1A0/emeter/0/power"
-  unit_of_measurement: 'W'
+  unit_of_measurement: 'Watts'
   qos: 0
 
 - platform: mqtt
   name: "Potenza Reattiva"
   state_topic: "shellies/shellyem-B9E1A0/emeter/0/reactive_power"
-  unit_of_measurement: 'var'
+  unit_of_measurement: 'Watts'
   qos: 0
 
 - platform: mqtt
-  name: "Voltaggio"
+  name: "Tensione"
   state_topic: "shellies/shellyem-B9E1A0/emeter/0/voltage"
-  unit_of_measurement: 'V'
+  unit_of_measurement: 'Volts'
   qos: 0
 
-- platform: mqtt
-  name: "Energia Assorbita"
-  state_topic: "shellies/shellyem-B9E1A0/emeter/0/energy"
-  unit_of_measurement: 'KVh'
-  qos: 0
+#- platform: mqtt
+#  name: "Energia Assorbita"
+#  state_topic: "shellies/shellyem-B9E1A0/emeter/0/energy"
+#  unit_of_measurement: 'Watt/min'
+#  qos: 0
 
 #- platform: mqtt
 #  name: "Energia Restituita"
 #  state_topic: "shellies/shellyem-B9E1A0/emeter/0/returned_energy"
-#  unit_of_measurement: 'KWh'
+#  unit_of_measurement: 'Watt/min'
 #  qos: 0
