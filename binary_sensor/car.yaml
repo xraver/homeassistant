@@ -8,7 +8,7 @@
       friendly_name: Vettura Bloccata
       entity_id: lock.ff590mr_lock
       value_template: >-
-        {{ not is_state('lock.ff590mr_lock', 'locked') }}
+        {{ is_state('lock.ff590mr_lock', 'locked') }}
       icon_template: >-
         {% if is_state('lock.ff590mr_lock', 'locked') %}
           mdi:lock
