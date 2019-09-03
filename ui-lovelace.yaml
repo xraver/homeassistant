@@ -26,7 +26,7 @@ views:
       - binary_sensor.guard_mode
       - binary_sensor.speech_notifications
       - binary_sensor.text_notifications
-      - sensor.consumo
+      - sensor.potenza_istantanea
     cards:
     - type: picture-glance
       title: Cucina
@@ -114,10 +114,10 @@ views:
       - input_boolean.guard_mode
       
     - type: sensor
-      entity: sensor.consumo
+      entity: sensor.potenza_istantanea
       name: Consumo Energetico
       graph: line
-      unit: W
+      unit: Watts
       detail: 2
 
     - type: entities
@@ -125,6 +125,7 @@ views:
       show_header_toggle: false
       entities:
       - script.speech_status
+      - automation.risveglio_giorgio
 
     - type: entities
       title: Eventi
@@ -1259,7 +1260,43 @@ views:
 #        entities:
 #          - sensor.train_2188
 #          - sensor.train_11354
- 
+
+######################################################################
+# Power Status
+######################################################################
+  - title: Monitoraggio Energetico
+    id: network
+    icon: mdi:flash
+    badges:
+      - sensor.potenza_istantanea
+      - sensor.potenza_reattiva
+      - sensor.tensione
+    cards:
+    - type: sensor
+      entity: sensor.potenza_istantanea
+      name: Consumo Energetico
+      graph: line
+      unit: Watts
+      detail: 2
+#    - type: sensor
+#      entity: sensor.potenza_reattiva
+#      name: Potenza Reattiva
+#      graph: line
+#      unit: var
+#      detail: 1
+#    - type: sensor
+#      entity: sensor.energia_assorbita
+#      name: Energia Assorbita
+#      graph: line
+#      unit: KVh
+#      detail: 1
+#    - type: sensor
+#      entity: sensor.voltaggio
+#      name: Voltaggio
+#      graph: line
+#      unit: V
+#      detail: 1
+
 ######################################################################
 # Network
 ######################################################################

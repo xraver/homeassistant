@@ -3,7 +3,7 @@
 # - Switch off all covers
 ######################################################################
 
-- alias: "Notte: Chiusura tapparelle"
+- alias: "Modalità Notte"
   initial_state: 'off'
 
   trigger:

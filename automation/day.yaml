@@ -3,7 +3,7 @@
 # - Every working day it opens Studio Cover
 ######################################################################
 
-- alias: "Giorno: Risveglio Giorgio"
+- alias: "Risveglio Giorgio"
   initial_state: 'on'
 
   trigger:
@@ -25,5 +25,6 @@
       data:
         entity_id:
           - cover.tapparella_cucina
+#          - cover.tapparella_sala
           - cover.tapparella_studio
         position: 85
