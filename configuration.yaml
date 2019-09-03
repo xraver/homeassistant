@@ -146,14 +146,24 @@ maxcube: !include components/eq3max.yaml
 # Google Assistant
 google_assistant: !include components/google_assistant.yaml
 
-# Mercedes Me
-mercedesmeapi: !include components/mercedesme.yaml
-
 # Weather
 weather: !include components/weather.yaml
 
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
 
+###########################################################
+# Custom Components
+###########################################################
+
+# Mercedes Me
+mercedesmeapi: !include components/mercedesme.yaml
+
 # Custom Updater
 custom_updater:
+
+# HACS
+# hacs: !include components/hacs.yaml
+
+# Shelly for Hass
+#shelly: !include components/shelly.yaml
