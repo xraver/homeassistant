@@ -106,7 +106,7 @@ speech_engine:
             {% else %}
               {% set car_position = "fuori" %}
             {% endif %}
-            {% if is_state('lock.ff590mr_lock', 'locked') %}
+            {% if is_state('binary_sensor.ff590mr_locked', 'off') %}
               {% set car_lock = "chiusa" %}
             {% else %}
               {% set car_lock = "aperta" %}
