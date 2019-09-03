@@ -106,7 +106,7 @@ speech_engine:
             {% else %}
               {% set car_position = "fuori" %}
             {% endif %}
-            {% if is_state('binary_sensor.ff590mr_locked', 'off') %}
+            {% if is_state('lock.ff590mr_lock', 'locked') %}
               {% set car_lock = "chiusa" %}
             {% else %}
               {% set car_lock = "aperta" %}
@@ -116,12 +116,7 @@ speech_engine:
             {% else %}
               {% set car_windows = "aperti" %}
             {% endif %}
-            {% if is_state('binary_sensor.ff590mr_park_brake_status', 'on') %}
-              {% set car_parkbreak = "inserito" %}
-            {% else %}
-              {% set car_parkbreak = "non inserito" %}
-            {% endif %}
-            La Mercedes si trova {{ car_position }}. è {{ car_lock }}, con i finestrini {{ car_windows }} e il freno a mano {{ car_parkbreak }}.
+            La Mercedes si trova {{ car_position }}. è {{ car_lock }} con i finestrini {{ car_windows }}.
             Il livello del carburante è {{ states('sensor.ff590mr_fuel_level') }} percento.
             {% if is_state('binary_sensor.ff590mr_warning_brakefluid', 'on') or
                   is_state('binary_sensor.ff590mr_warning_coolantlevellow', 'on') or
