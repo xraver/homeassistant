@@ -15,15 +15,15 @@ SHELLY_ID=(
 	shelly1-59E18C
 	shelly1-24D1A8
 	shellybulb-BC8610
-  shellyem-B9E1A0
-  shellyplug-s-7A31CB
+	shellyem-B9E1A0
+	shellyplug-s-7A31CB
 )
 
 echo "Upgrade Shelly Firmware"
 
 for i in "${SHELLY_ID[@]}"
 do
-	echo mosquitto_pub -h $HOST -d -u $USER -P $PASSWORD -t shellies/$i/command -m update_fw
+	mosquitto_pub -h $HOST -d -u $USER -P $PASSWORD -t shellies/$i/command -m update_fw
 done
 
 echo "Done"
