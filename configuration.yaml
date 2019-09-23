@@ -152,6 +152,9 @@ weather: !include components/weather.yaml
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
 
+# Mobile App
+mobile_app:
+
 ###########################################################
 # Custom Components
 ###########################################################
