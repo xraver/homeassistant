@@ -143,13 +143,15 @@
 
   trigger:
     - platform: state
-      entity_id: updater.updater
+      entity_id: binary_sensor.updater
+      from: 'off'
+      to: 'on'
 
   action:
     service: script.notify_text
     data_template:
       title: "Home Assistant - Aggiornamento"
-      message: "E' disponibile un aggiornamento per Home Assistant ({{ states.updater.updater.state }}). {{now().strftime('%Y-%m-%d %I:%M %p')}}"
+      message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
       enable_persistant: true
 
 ######################################################################
