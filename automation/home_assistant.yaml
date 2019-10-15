@@ -148,11 +148,11 @@
       to: 'on'
 
   action:
-    service: script.notify_text
-    data_template:
-      title: "Home Assistant - Aggiornamento"
-      message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
-      enable_persistant: true
+    - service: script.notify_text
+      data_template:
+        title: "Home Assistant - Aggiornamento"
+        message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
+        enable_persistant: true
 
 ######################################################################
 # Home Assistant: Startup Automation
