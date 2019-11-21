@@ -1213,6 +1213,7 @@ views:
           - binary_sensor.ff590mr_door_rear_left
           - binary_sensor.ff590mr_door_rear_right
           - binary_sensor.ff590mr_trunk
+          - binary_sensor.ff590mr_fuel_lid
       - type: entities
         title: "Mercedes A200d: Finestrini"
         show_header_toggle: false
