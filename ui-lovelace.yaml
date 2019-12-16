@@ -1432,13 +1432,3 @@ views:
             entities:
             - script.shelly_upgrade
             - script.shelly_reboot
-
-      - type: vertical-stack
-        cards:
-        - type: custom:tracker-card
-          title: Aggiornamenti Moduli Custom
-          name_text: Nome
-          current_text: Versione Corrente
-          available_text: Versione Disponibile
-          check_text: Verifica
-          update_all_text: Aggiorna
