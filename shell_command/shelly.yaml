@@ -1,1 +1,2 @@
 shelly_upgrade: 'bash /var/lib/homeassistant/.homeassistant/shell_scripts/shelly_upgrade.sh'
+shelly_reboot: 'bash /var/lib/homeassistant/.homeassistant/shell_scripts/shelly_reboot.sh'

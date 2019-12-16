@@ -4,3 +4,5 @@
 
 script.shelly_upgrade:
   icon: mdi:cellphone-arrow-down
+script.shelly_reboot:
+  icon: mdi:restart

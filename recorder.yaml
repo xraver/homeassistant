@@ -25,6 +25,7 @@ exclude:
     - binary_sensor.ff590mr_park_brake_status
     - binary_sensor.ff590mr_tire_warning
     - binary_sensor.ff590mr_trunk
+    - binary_sensor.ff590mr_fuel_lid
     #- binary_sensor.ff590mr_warning_brakefluid
     #- binary_sensor.ff590mr_warning_coolantlevellow
     #- binary_sensor.ff590mr_warning_washwater
@@ -51,6 +52,19 @@ exclude:
     - sensor.ff590mr_tire_pressure_rear_left
     - sensor.ff590mr_tire_pressure_rear_right
     - sensor.ff590mr_trunk
+    # Shelly
+    - sensor.shelly1_status
+    - sensor.shelly2_status
+    - sensor.shelly3_status
+    - sensor.shelly4_status
+    - sensor.shelly5_status
+    - sensor.shelly6_status
+    - sensor.shelly7_status
+    - sensor.shelly8_status
+    - sensor.shelly9_status
+    - sensor.shellybulb_status
+    - sensor.shellyem_status
+    - sensor.shellyplugs_status
     # Energy Sensors
     - sensor.potenza_reattiva
     - sensor.tensione

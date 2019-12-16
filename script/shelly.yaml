@@ -77,3 +77,12 @@ shelly_upgrade:
       data:
         topic: 'shellies/shellyplug-s-7A31CB/command'
         payload: 'update_fw'
+
+######################################################################
+# Shelly: Reboot
+# - shell_command.shelly_reboot
+######################################################################
+shelly_reboot:
+  alias: "Shelly: Riavvia Dispositivi"
+  sequence:
+    - service: shell_command.shelly_reboot

@@ -1,0 +1,21 @@
+######################################################################
+# Group Shelly Devices
+######################################################################
+
+shelly:
+  name: Shelly Devices
+  view: true
+  #icon: mdi:thermometer
+  entities:
+    - sensor.shelly1_status
+    - sensor.shelly2_status
+    - sensor.shelly3_status
+    - sensor.shelly4_status
+    - sensor.shelly5_status
+    - sensor.shelly6_status
+    - sensor.shelly7_status
+    - sensor.shelly8_status
+    - sensor.shelly9_status
+    - sensor.shellybulb_status
+    - sensor.shellyem_status
+    - sensor.shellyplugs_status

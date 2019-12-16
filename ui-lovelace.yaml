@@ -51,7 +51,7 @@ views:
       #entity: group.lights_livingroom
       entities: 
       - light.luce_divano
-      - light.luce_divano_bianca
+      #- light.luce_divano_bianca
       - cover.tapparella_sala
       - climate.sala_termostato_sala
       - media_player.tv_sala
@@ -157,7 +157,7 @@ views:
         - light.luce_corridoio
         - light.luci_sala
         - light.luce_divano
-        - light.luce_divano_bianca
+        #- light.luce_divano_bianca
         - light.luci_bagno
         - light.luce_bagno
         - light.luce_specchio
@@ -184,9 +184,9 @@ views:
       name: Luce Divano
       entity: light.luce_divano
 
-    - type: light
-      name: Luce Divano Bianca
-      entity: light.luce_divano_bianca
+#    - type: light
+#      name: Luce Divano Bianca
+#      entity: light.luce_divano_bianca
 
     - type: light
       name: Luci Bagno
@@ -1425,19 +1425,13 @@ views:
 #                entity_id: script.homeassistant_upgrade
 
         - type: horizontal-stack
-          cards:          
+          cards:
           - type: entities
             title: Operazione sui Dispositivi
             show_header_toggle: false
             entities:
             - script.shelly_upgrade
-#          - type: entity-button
-#            entity: script.shelly_upgrade
-#            tap_action:
-#              action: call-service
-#              service: script.turn_on
-#              service_data:
-#                entity_id: script.shelly_upgrade
+            - script.shelly_reboot
 
       - type: vertical-stack
         cards:

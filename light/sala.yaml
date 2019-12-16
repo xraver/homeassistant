@@ -90,40 +90,40 @@
 # Living Room Light (White)
 ######################################################################
 
-- platform: mqtt
-  name: Luce Divano Bianca
-  schema: template
-  command_topic: "shellies/shellybulb-BC8610/color/0/set"
-  state_topic: "shellies/shellybulb-BC8610/color/0/status"
-  command_on_template: >
-    {
-      "turn": "on",
-      "mode": "white",
-      {%- if color_temp is defined -%}
-        "temp": {{ (1000000/(((float(color_temp)-153)/354*180)+153)-35) | int }},
-      {%- endif -%}
-      {%- if brightness is defined -%}
-        "brightness": {{ (brightness/255*100) | int }},
-      {%- endif -%}
-      "effect": 0
-    }
-  command_off_template: >
-    {
-      "turn": "off",
-      "mode": "white",
-      "effect": 0
-    }  
-  state_template: >
-    {% if value_json.ison == true and value_json.mode == "white" %}
-      on
-    {% else %}
-      off
-    {% endif %}
-  brightness_template: '{{ (value_json.brightness/100*255)|int }}'
-  color_temp_template: "{{ (1000000/(((float(value_json.temp)-3000)/3500*4500)+2000)) | int }}"
-  retain: false
-  qos: 0
-  optimistic: false
+#- platform: mqtt
+#  name: Luce Divano Bianca
+#  schema: template
+#  command_topic: "shellies/shellybulb-BC8610/color/0/set"
+#  state_topic: "shellies/shellybulb-BC8610/color/0/status"
+#  command_on_template: >
+#    {
+#      "turn": "on",
+#      "mode": "white",
+#      {%- if color_temp is defined -%}
+#        "temp": {{ (1000000/(((float(color_temp)-153)/354*180)+153)-35) | int }},
+#      {%- endif -%}
+#      {%- if brightness is defined -%}
+#        "brightness": {{ (brightness/255*100) | int }},
+#      {%- endif -%}
+#      "effect": 0
+#    }
+#  command_off_template: >
+#    {
+#      "turn": "off",
+#      "mode": "white",
+#      "effect": 0
+#    }  
+#  state_template: >
+#    {% if value_json.ison == true and value_json.mode == "white" %}
+#      on
+#    {% else %}
+#      off
+#    {% endif %}
+#  brightness_template: '{{ (value_json.brightness/100*255)|int }}'
+#  color_temp_template: "{{ (1000000/(((float(value_json.temp)-3000)/3500*4500)+2000)) | int }}"
+#  retain: false
+#  qos: 0
+#  optimistic: false
 
 ######################################################################
 # Living Room Global
