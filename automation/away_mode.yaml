@@ -1,0 +1,58 @@
+######################################################################
+# Away Mode: Enable Action
+######################################################################
+
+- alias: "Modalità Vacanza: Azione on"
+  initial_state: 'on'
+
+  trigger:
+    platform: state
+    entity_id: input_boolean.home_mode_away
+    to: 'on'
+
+  action:
+    - service: script.notify_voice
+      data_template:
+        message: "Modalità vacanza abilitata"
+
+######################################################################
+# Away Mode: Disable Action
+######################################################################
+
+- alias: "Modalità Vacanza: Azione off"
+  initial_state: 'on'
+
+  trigger:
+    platform: state
+    entity_id: input_boolean.home_mode_away
+    to: 'off'
+
+  action:
+    - service: script.notify_voice
+      data_template:
+        message: "Modalità vacanza disabilitata"
+
+######################################################################
+# Away Mode: Disable
+######################################################################
+
+- alias: "Modalità Vacanza: Disattivazione"
+  initial_state: 'on'
+ 
+  trigger:
+    - platform: zone
+      entity_id:
+        - device_tracker.google_maps_115265981849847357125
+        - device_tracker.google_maps_103158638433668748797
+        # - device_tracker.google_maps_113099283296073047871
+      zone: zone.casa
+      event: enter
+    - platform: template
+      value_template: "{{ states('sensor.time_date') == (state_attr('input_datetime.away_mode_end', 'timestamp') | int | timestamp_custom('%H:%M, %Y-%m-%d', true)) }}"
+
+  condition: []
+
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.home_mode_away
