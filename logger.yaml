@@ -7,5 +7,7 @@ default: info
 logs:
   homeassistant.components.automation: info
   homeassistant.components.device_tracker: warn
+  homeassistant.components.discovery: warn
   homeassistant.components.input_text: info
+  homeassistant.components.sensor: warn
   custom_components.mercedesmeapi: warn
