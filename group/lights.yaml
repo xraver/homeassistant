@@ -9,6 +9,7 @@ lights:
   entities:
     - light.luce_cucina
     - light.luce_corridoio
+    - light.luce_sala
     - light.luce_divano
     - light.luce_bagno
     - light.luce_specchio

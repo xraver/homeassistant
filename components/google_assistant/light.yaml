@@ -8,6 +8,9 @@ light.luce_corridoio:
 light.luce_cucina:
   expose: true
   room: Cucina
+light.luce_sala:
+  expose: true
+  room: Sala
 light.luce_divano:
   expose: true
   room: Sala

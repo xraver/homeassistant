@@ -99,6 +99,11 @@ speech_engine:
             {%- endfor %}
           {%- endmacro -%}
           
+          {# Consumption Status #}
+          {%- macro status_consumption() -%}
+          "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"
+          {%- endmacro -%}
+          
           {# Car Status #}
           {%- macro status_car() -%}
             {% if is_state('device_tracker.wdd1760081v167576', 'Casa') %}
@@ -171,6 +176,8 @@ speech_engine:
             {{ status_lights() }}
               
             {{ status_covers() }}
+            
+            {{ status_consumption() }}
                             
           {% endif %}
           
@@ -204,3 +211,19 @@ speech_status:
       data:
         enable_greeting: 1
         enable_status: 1
+
+######################################################################
+# Speech Consumption
+#
+# Operations:
+# - script.speech_engine
+######################################################################
+
+speech_consumption:
+  alias: Consumo Energetico
+  sequence:
+    - service: script.speech_engine
+      data_template:
+        language: 'it'
+        message: >-
+          "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"

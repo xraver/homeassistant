@@ -7,5 +7,6 @@ lights_livingroom:
   view: true
   icon: mdi:lightbulb
   entities:
+    - light.luce_sala
     - light.luce_divano
-    - light.luce_divano_bianca
+#    - light.luce_divano_bianca

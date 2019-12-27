@@ -13,6 +13,7 @@ SHELLY_ID=(
 	shelly7.giorgioravera.it
 	shelly8.giorgioravera.it
 	shelly9.giorgioravera.it
+	shelly10.giorgioravera.it
 	shellybulb.giorgioravera.it
 	shellyem.giorgioravera.it
 	shellyplugs.giorgioravera.it

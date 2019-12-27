@@ -11,6 +11,7 @@ SHELLY_ID=(
 	shellyswitch-559C49
 	shelly1-24D1EE
 	shelly1-93B27D
+	shelly1-C426F9
 	shellyswitch25-7457D8
 	shelly1-59E18C
 	shelly1-24D1A8

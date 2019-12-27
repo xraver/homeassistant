@@ -47,9 +47,9 @@ views:
       state_image:
         "on": /local/images/rooms/sala_on.jpg
         "off": /local/images/rooms/sala_off.jpg
-      entity: light.luce_divano
-      #entity: group.lights_livingroom
+      entity: group.lights_livingroom
       entities: 
+      - light.luce_sala
       - light.luce_divano
       #- light.luce_divano_bianca
       - cover.tapparella_sala
@@ -73,8 +73,7 @@ views:
       state_image:
         "on": /local/images/rooms/bagno_on.jpg
         "off": /local/images/rooms/bagno_off.jpg
-      entity: light.luce_bagno
-      #entity: group.lights_bathroom
+      entity: group.lights_bathroom
       entities: 
       - light.luce_bagno
       - light.luce_specchio
@@ -125,6 +124,7 @@ views:
       show_header_toggle: false
       entities:
       - script.speech_status
+      - script.speech_consumption
       - automation.risveglio_giorgio
 
     - type: entities
@@ -142,6 +142,7 @@ views:
     badges:
       - light.luce_cucina
       - light.luce_corridoio
+      - light.luce_sala
       - light.luce_divano
       - light.luce_bagno
       - light.luce_specchio
@@ -156,6 +157,7 @@ views:
         - light.luce_cucina
         - light.luce_corridoio
         - light.luci_sala
+        - light.luce_sala
         - light.luce_divano
         #- light.luce_divano_bianca
         - light.luci_bagno

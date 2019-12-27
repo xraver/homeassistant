@@ -4,6 +4,7 @@
 
 script.speech_engine:
   icon: mdi:text-to-speech
-
 script.speech_status:
   icon: mdi:voice
+script.speech_consumption:
+  icon: mdi:power-plug
