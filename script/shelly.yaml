@@ -15,7 +15,7 @@ shelly_upgrade:
     # Shelly 2 Tapparella Sala
     - service: mqtt.publish
       data:
-        topic: 'shellies/shellyswitch-135454/command'
+        topic: 'shellies/shellyswitch25-6919BD/command'
         payload: 'update_fw'
 
     # Shelly 2 Tapparella Studio

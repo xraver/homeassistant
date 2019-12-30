@@ -6,7 +6,7 @@ USER=$(awk '/mqtt_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
 PASSWORD=$(awk '/mqtt_password/ { print  $2 }' $HASS_HOME/secrets.yaml)
 SHELLY_ID=(
 	shellyswitch-55980F
-	shellyswitch-135454
+	shellyswitch25-6919BD
 	shellyswitch-13572B
 	shellyswitch-559C49
 	shelly1-24D1EE

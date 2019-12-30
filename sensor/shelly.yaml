@@ -251,6 +251,34 @@
     - uptime
 
 ######################################################################
+# Sensor: Shelly 10
+######################################################################
+
+- platform: rest
+  scan_interval: 43200
+  resource: http://shelly10.giorgioravera.it/status
+  method: GET
+  name: shelly10_status
+  #value_template: '{{ value_json.has_update }}'
+  value_template: >-
+    {% if value_json.has_update == True %}
+      on
+    {% else %}
+      off
+    {% endif %}
+  authentication: basic
+  username: !secret shelly_user
+  password: !secret shelly_password
+  json_attributes:
+  #  - wifi_sta
+  #  - mqtt
+  #  - time
+  #  - has_update
+    - mac
+    - update
+    - uptime
+
+######################################################################
 # Sensor: Shelly Bulb
 ######################################################################
 

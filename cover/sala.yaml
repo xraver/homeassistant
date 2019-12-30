@@ -4,9 +4,9 @@
 
 - platform: mqtt
   name: Tapparella Sala
-  command_topic: "shellies/shellyswitch-135454/roller/0/command"
-  position_topic: "shellies/shellyswitch-135454/roller/0/pos"
-  set_position_topic: "shellies/shellyswitch-135454/roller/0/command/pos"
+  command_topic: "shellies/shellyswitch25-6919BD/roller/0/command"
+  position_topic: "shellies/shellyswitch25-6919BD/roller/0/pos"
+  set_position_topic: "shellies/shellyswitch25-6919BD/roller/0/command/pos"
   payload_open: "open"
   payload_close: "close"
   payload_stop: "stop"
