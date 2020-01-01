@@ -114,7 +114,7 @@ views:
       entity: sensor.potenza_istantanea
       name: Consumo Energetico
       graph: line
-      unit: Watts
+      unit: W
       detail: 2
 
     - type: entities
@@ -1277,7 +1277,7 @@ views:
       entity: sensor.potenza_istantanea
       name: Consumo Energetico
       graph: line
-      unit: Watts
+      unit: W
       detail: 2
 #    - type: sensor
 #      entity: sensor.potenza_reattiva
@@ -1304,9 +1304,12 @@ views:
   - title: Dispositivi di Rete
     id: network
     icon: mdi:lan
+    panel: true
     cards:
+    - type: horizontal-stack
+      cards:
       - type: glance
-        name: External IP 
+        title: External IP 
         entities:
           - sensor.ip_1
           - sensor.ip_2
@@ -1377,58 +1380,41 @@ views:
       - binary_sensor.guard_mode
       - binary_sensor.speech_notifications
       - binary_sensor.text_notifications
+    panel: true
     cards:
-      - type: entities
-        title: Automazioni
-        show_header_toggle: false
-        entities:
-        - group.all_automations        
-      - type: entities
-        title: Configurazione Notifiche
-        show_header_toggle: false
-        entities:
-        - input_boolean.speech_notifications
-        - input_boolean.text_notifications
+    - type: horizontal-stack
+      cards:
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Automazioni
+          show_header_toggle: false
+          entities:
+          - group.all_automations
+          #- automation.modalita_notte
+          - automation.risveglio_giorgio
+          #- automation.saluto_di_benvenuto
+          #- automation.saluto_orario
+        - type: entities
+          title: Configurazione Notifiche
+          show_header_toggle: false
+          entities:
+          - input_boolean.speech_notifications
+          - input_boolean.text_notifications
 
       - type: vertical-stack
         cards:
-        - type: horizontal-stack
-          cards:
-          - type: entities
-            title: Controlli
-            show_header_toggle: false
-            entities:
-            - script.homeassistant_restart
-            - script.homeassistant_clearlog
-            - script.homeassistant_upgrade
-            - script.homeassistant_google_home_sync
-#          - type: entity-button
-#            entity: script.homeassistant_restart
-#            tap_action:
-#              action: call-service
-#              service: script.turn_on
-#              service_data:
-#                entity_id: script.homeassistant_restart
-#          - type: entity-button
-#            entity: script.homeassistant_clearlog
-#            tap_action:
-#              action: call-service
-#              service: script.turn_on
-#              service_data:
-#                entity_id: script.homeassistant_clearlog
-#          - type: entity-button
-#            entity: script.homeassistant_upgrade
-#            tap_action:
-#              action: call-service
-#              service: script.turn_on
-#              service_data:
-#                entity_id: script.homeassistant_upgrade
-
-        - type: horizontal-stack
-          cards:
-          - type: entities
-            title: Operazione sui Dispositivi
-            show_header_toggle: false
-            entities:
-            - script.shelly_upgrade
-            - script.shelly_reboot
+        - type: entities
+          title: Controlli
+          show_header_toggle: false
+          entities:
+          - script.homeassistant_restart
+          - script.homeassistant_clearlog
+          - script.homeassistant_upgrade
+          - script.homeassistant_google_home_sync
+        - type: entities
+          title: Operazione sui Dispositivi
+          show_header_toggle: false
+          entities:
+          - script.shelly_upgrade
+          - script.shelly_reboot
