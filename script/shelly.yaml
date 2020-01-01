@@ -75,7 +75,6 @@ shelly_upgrade:
     # Shelly Door/Window
     - service: mqtt.publish
       data:
-      data:
         topic: 'shellies/shellydw-B88F53/command'
         payload: 'update_fw'
         
