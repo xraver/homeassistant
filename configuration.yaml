@@ -19,7 +19,7 @@ homeassistant:
 # Enables the frontend
 frontend:
   javascript_version: latest
-  themes: !include_dir_named themes/
+  themes: !include_dir_merge_named themes
 
 # Enables configuration UI
 config:
@@ -163,7 +163,4 @@ mobile_app:
 mercedesmeapi: !include components/mercedesme.yaml
 
 # HACS
-# hacs: !include components/hacs.yaml
-
-# Shelly for Hass
-#shelly: !include components/shelly.yaml
+hacs: !include components/hacs.yaml
