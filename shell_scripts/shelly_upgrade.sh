@@ -17,6 +17,7 @@ SHELLY_ID=(
 	shelly1-24D1A8
 	shellybulb-BC8610
 	shellyem-B9E1A0
+	shellydw-B88F53
 	shellyplug-s-7A31CB
 )
 
