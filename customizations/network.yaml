@@ -24,5 +24,7 @@ sensor.freebsd_router_kbyte_sec_sent:
 
 sensor.ip_1:
  friendly_name: xraver.dnsduck.org
+ icon: mdi:ip-network
 sensor.ip_2:
  friendly_name: xraver2.dnsduck.org
+ icon: mdi:ip-network
