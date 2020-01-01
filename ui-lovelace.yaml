@@ -5,9 +5,7 @@
 title: Casa Ravera-Testa
 
 resources:
-  - url: /local/custom-cards/tracker-card.js?track=true
-    type: module
-  - url: /local/custom-cards/button-card.js
+  - url: /community_plugin/button-card/button-card.js
     type: module
 
 views:

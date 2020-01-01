@@ -18,7 +18,7 @@
       data_template:
         name: >-
           {% if trigger.to_state.state == 'on' %}
-            midnight
+            midnight_blue
           {% else %}
             default
           {% endif %}  
