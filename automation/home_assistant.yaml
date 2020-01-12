@@ -110,25 +110,6 @@
         entity_id: input_boolean.speech_notifications
    
 ######################################################################
-# Home Assistant: Update Available Notifications
-######################################################################
-
-- alias: "Home Assistant: Notifica aggiornamento"
-  initial_state: 'on'
-
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.updater
-      to: 'on'
-
-  action:
-    - service: script.notify_text
-      data_template:
-        title: "Home Assistant - Aggiornamento"
-        message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
-        enable_persistant: true
-
-######################################################################
 # Home Assistant: Startup Automation
 # - Sync with Google Assistant
 ######################################################################
