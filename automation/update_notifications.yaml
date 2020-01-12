@@ -11,11 +11,11 @@
       to: 'on'
 
   action:
-    - service: script.notify_text
-      data_template:
+    service: script.notify_text
+    data_template:
       title: "Home Assistant - Aggiornamento"
-        message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
-        enable_persistant: true
+      message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
+      enable_persistant: true
 
 ######################################################################
 # Update Notification: Shelly
@@ -54,4 +54,3 @@
       title: "HACS - Aggiornamento"
       message: "Sono disponibili aggiornamenti per i dispositivi Shelly"
       enable_persistant: true
-
