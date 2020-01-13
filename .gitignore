@@ -3,9 +3,9 @@ deps/
 .google_maps_location_sharing.cookies.*
 .HA_VERSION
 bravia.conf
+home-assistant.log
 home-assistant_v2.db
 html5_push_registrations.conf
-log/
 .mercedesme-token-cache
 secrets.yaml
 .storage
