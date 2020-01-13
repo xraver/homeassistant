@@ -129,6 +129,9 @@ automation: !include_dir_merge_list automation/
 script: !include_dir_merge_named script/
 
 # Components:
+# Google Cast
+cast: !include components/cast.yaml
+
 # UPNP
 upnp:
   port_mapping: false
