@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HASS_HOME="/var/lib/homeassistant/.homeassistant"
+HASS_HOME="/config"
 HOST=$(awk '/mqtt_host/ { print  $2 }' $HASS_HOME/secrets.yaml)
 USER=$(awk '/mqtt_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
 PASSWORD=$(awk '/mqtt_password/ { print  $2 }' $HASS_HOME/secrets.yaml)

@@ -2,7 +2,7 @@
 
 set -e
 
-HASS_HOME="/var/lib/homeassistant/.homeassistant"
+HASS_HOME="/config"
 IP=$(awk -F'"' '{print $2}' $HASS_HOME/bravia.conf)
 PIN=$(awk -F'"' '{print $6}' $HASS_HOME/bravia.conf)
 IRCC_CMD=$1

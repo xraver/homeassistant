@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HASS_HOME="/var/lib/homeassistant/.homeassistant"
+HASS_HOME="/config"
 USER=$(awk '/shelly_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
 PASSWORD=$(awk '/shelly_password/ { print  $2 }' $HASS_HOME/secrets.yaml)
 SHELLY_ID=(
