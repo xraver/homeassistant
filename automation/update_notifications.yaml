@@ -52,5 +52,5 @@
     service: script.notify_text
     data_template:
       title: "HACS - Aggiornamento"
-      message: "Sono disponibili aggiornamenti per i dispositivi Shelly"
+      message: "Sono disponibili aggiornamenti per i moduli HACS"
       enable_persistant: true
