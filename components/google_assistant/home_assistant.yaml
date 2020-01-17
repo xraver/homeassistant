@@ -18,10 +18,6 @@ script.homeassistant_restart:
   name: Riavvia Homeassistant
   expose: true
   room: Generale
-script.homeassistant_upgrade:
-  name: Aggiorna Homeassistant  
-  expose: true
-  room: Generale   
 script.homeassistant_google_home_sync:
   name: Sincronizza Homeassistant
   expose: true

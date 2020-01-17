@@ -25,18 +25,8 @@ homeassistant_clearlog:
         keep_days: 0
 
 ######################################################################
-# Home Assistant: Upgrade
-# - homeassistant.restart
-######################################################################
-
-homeassistant_upgrade:
-  alias: "Aggiornamento"
-  sequence:
-    - service: shell_command.homeassistant_upgrade
-
-######################################################################
 # Home Assistant: Sync with Google Home
-# - homeassistant.restart
+# - google_assistant.request_sync
 ######################################################################
 
 homeassistant_google_home_sync:

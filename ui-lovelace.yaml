@@ -1404,7 +1404,6 @@ views:
           entities:
           - script.homeassistant_restart
           - script.homeassistant_clearlog
-          - script.homeassistant_upgrade
           - script.homeassistant_google_home_sync
         - type: entities
           title: Operazione sui Dispositivi
