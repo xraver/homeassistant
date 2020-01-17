@@ -67,6 +67,12 @@ exclude:
     # Energy Sensors
     - sensor.potenza_reattiva
     - sensor.tensione
+    # Zigbee2mqtt
+    - sensor.zigbee2mqtt_networkmap
+    - sensor.porta_casa_batteria
+    - sensor.porta_casa_stato_link
+    - sensor.pulsante_batteria
+    - sensor.pulsante_stato_link
   domains:
     - automation
     - group
