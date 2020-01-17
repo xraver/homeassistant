@@ -15,7 +15,7 @@ tts/
 *.log
 
 # Disabled Files
-*.disabled
+#*.disabled
 
 # HACS Plugins & Git Repos
 custom_components/

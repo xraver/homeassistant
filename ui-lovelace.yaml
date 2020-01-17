@@ -1316,11 +1316,11 @@ views:
         - sensor.speedtest_ping
         - sensor.speedtest_download
         - sensor.speedtest_upload          
-      - type: glance
-        title: pfSense
-        entities: 
-          - sensor.freebsd_router_kbyte_sec_received
-          - sensor.freebsd_router_kbyte_sec_sent
+      #- type: glance
+      #  title: pfSense
+      #  entities: 
+      #    - sensor.freebsd_router_kbyte_sec_received
+      #    - sensor.freebsd_router_kbyte_sec_sent
 
 ######################################################################
 # Weather
@@ -1385,7 +1385,6 @@ views:
           title: Automazioni
           show_header_toggle: false
           entities:
-          - group.all_automations
           #- automation.modalita_notte
           - automation.risveglio_giorgio
           #- automation.saluto_di_benvenuto

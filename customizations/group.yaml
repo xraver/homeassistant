@@ -1,8 +1,0 @@
-######################################################################
-# Group Customization for the order view
-######################################################################
-
-group.all_automations:
-  hidden: false
-  control: hidden
-  friendly_name: Automazioni
