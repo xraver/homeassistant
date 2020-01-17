@@ -1,0 +1,43 @@
+######################################################################
+# Xiaomi Aqara MCCGQ11LM
+######################################################################
+
+- platform: "mqtt"
+  name: "Porta Casa: Batteria"
+  state_topic: "zigbee2mqtt/0x00158d0002caf32f"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
+
+- platform: "mqtt"
+  name: "Porta Casa: Stato Link"
+  state_topic: "zigbee2mqtt/0x00158d0002caf32f"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+    
+######################################################################
+# Shelly Door/Window
+######################################################################
+
+#- platform: mqtt
+#  name: "Porta Casa: Batteria"
+#  state_topic: "shellies/shellydw-B88F53/sensor/battery"
+#  unit_of_measurement: '%'
+#  #availability_topic: "shellies/shellydw-B88F53/online"
+#  #payload_available: "true"
+#  #payload_not_available: "false"
+#  qos: 0
+#  device_class: battery
+
+#- platform: mqtt
+#  name: "Porta Casa: Luce"
+#  state_topic: "shellies/shellydw-B88F53/sensor/lux"
+#  unit_of_measurement: 'lux'
+#  #availability_topic: "shellies/shellydw-B88F53/online"
+#  #payload_available: "true"
+#  #payload_not_available: "false"
+#  qos: 0
+#  device_class: illuminance
+
