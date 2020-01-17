@@ -33,8 +33,7 @@ tv_sala_on:
   sequence:
     #- service: shell_command.bravia_tvpower
     - service: media_player.toggle
-      data_template:
-        entity_id: 'media_player.tv_sala'
+      entity_id: media_player.tv_sala
 
 ######################################################################
 # Script: TV Sala Off
@@ -50,5 +49,4 @@ tv_sala_off:
   sequence:
     #- service: shell_command.bravia_poweroff
     - service: media_player.toggle
-      data_template:
-        entity_id: 'media_player.tv_sala'
+      entity_id: media_player.tv_sala
