@@ -307,7 +307,7 @@ views:
                 action: call-service
                 service: script.turn_on
                 service_data:
-                  entity_id: script.tv_toggle
+                  entity_id: script.tv_sala_toggle
         # Top Buttons 2
         - type: horizontal-stack
           cards:
