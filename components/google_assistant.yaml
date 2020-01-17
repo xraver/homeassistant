@@ -3,7 +3,7 @@
 ######################################################################
 
 project_id: !secret google_project
-api_key: !secret google_api_key
+service_account: !include google_assistant/service_account.json
 expose_by_default: false
 exposed_domains:
   - climate
