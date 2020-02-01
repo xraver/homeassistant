@@ -26,32 +26,42 @@
   condition: []
 
   action:
+#    - wait_template: >-
+#        {# Giorgio #}
+#        {% if trigger.entity_id == 'device_tracker.google_maps_115265981849847357125' %}
+#          {% if is_state('device_tracker.s9', 'home') %}
+#            true
+#          {% else %}
+#            false
+#          {% endif %}
+#        
+#        {# Laura #}
+#        {% elif trigger.entity_id == 'device_tracker.google_maps_103158638433668748797' %}
+#          {% if is_state('device_tracker.a5', 'home') %}
+#            true
+#          {% else %}
+#            false
+#          {% endif %}
+#        
+#        {# Anna #}
+#        {% elif trigger.entity_id == 'device_tracker.google_maps_113099283296073047871' %}
+#          {% if is_state('device_tracker.a3', 'home') %}
+#            true
+#          {% else %}
+#            false
+#          {% endif %}
+#       
+#        {# Others #}
+#        {% else %}
+#          false
+#        {% endif %}
+#
+#      timeout: '00:30:00'
+#      continue_on_timeout: 'false'
+
     - wait_template: >-
-        {# Giorgio #}
-        {% if trigger.entity_id == 'device_tracker.google_maps_115265981849847357125' %}
-          {% if is_state('device_tracker.s9', 'home') %}
-            true
-          {% else %}
-            false
-          {% endif %}
-        
-        {# Laura #}
-        {% elif trigger.entity_id == 'device_tracker.google_maps_103158638433668748797' %}
-          {% if is_state('device_tracker.a5', 'home') %}
-            true
-          {% else %}
-            false
-          {% endif %}
-        
-        {# Anna #}
-        {% elif trigger.entity_id == 'device_tracker.google_maps_113099283296073047871' %}
-          {% if is_state('device_tracker.a3', 'home') %}
-            true
-          {% else %}
-            false
-          {% endif %}
-        
-        {# Others #}
+        {% if is_state('binary_sensor.porta_casa_stato', 'on') %}
+          true
         {% else %}
           false
         {% endif %}
@@ -59,7 +69,7 @@
       timeout: '00:30:00'
       continue_on_timeout: 'false'
 
-    - delay: 00:00:30
+    - delay: 00:00:05
 
     - service: script.speech_engine
       data_template:
