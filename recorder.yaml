@@ -73,6 +73,8 @@ exclude:
     - sensor.zigbee2mqtt_networkmap
     - sensor.porta_casa_batteria
     - sensor.porta_casa_stato_link
+    - sensor.porta_2_casa_batteria
+    - sensor.porta_2_casa_stato_link
     - sensor.pulsante_batteria
     - sensor.pulsante_stato_link
   domains:

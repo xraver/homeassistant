@@ -1,0 +1,56 @@
+######################################################################
+# Home Door: Switch on Lights
+#
+# Actions:
+# - light.turn_on
+# - delay
+#
+# Note: delay is necessary to avoid multiple opening in 5 minutes
+######################################################################
+
+- alias: "Porta Casa: Accendi Luce Corridoio"
+  initial_state: 'on'
+
+  trigger:
+    platform: state
+    entity_id: binary_sensor.porta_casa_stato
+    to: 'on'
+
+  condition:
+  - condition: time
+    after: '23:00:00'
+    before: '06:00:00'
+
+  action:
+    - service: light.turn_on
+      entity_id: light.luce_corridoio
+    - delay: '00:05:00'
+
+######################################################################
+# Home Door: Alarm
+#
+# Actions:
+# - script.notify_all
+######################################################################
+
+- alias: "Porta Casa: Allarme"
+  initial_state: 'on'
+
+  trigger:
+    platform: state
+    entity_id: binary_sensor.porta_casa_stato
+    to: 'on'
+    
+  condition:
+    condition: state
+    entity_id: binary_sensor.guard_mode
+    state: 'on'
+
+  action:
+    service: script.notify_all
+    data_template:
+      title: "Home Assistant - Presenza non autorizzata"
+      volume_level: '0.4'
+      language: 'it'
+      message: "È stata rilevata una presenza non autorizzata."
+      enable_persistent: 1
