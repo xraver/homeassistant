@@ -1,2 +1,1 @@
-shelly_upgrade: 'bash /config/shell_scripts/shelly_upgrade.sh'
 shelly_reboot: 'bash /config/shell_scripts/shelly_reboot.sh'
