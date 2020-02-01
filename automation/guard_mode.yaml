@@ -18,8 +18,8 @@
   condition:
     condition: template
     value_template: >-
-      {{ (not is_state('device_tracker.google_maps_115265981849847357125', 'Casa')) and
-         (not is_state('device_tracker.google_maps_103158638433668748797', 'Casa')) }}
+      {{ (not is_state('device_tracker.google_maps_115265981849847357125', state_attr('zone.casa', 'friendly_name'))) and
+         (not is_state('device_tracker.google_maps_103158638433668748797', state_attr('zone.casa', 'friendly_name'))) }}
 # condition:
 #    condition: and
 #    conditions:

@@ -106,7 +106,7 @@ speech_engine:
           
           {# Car Status #}
           {%- macro status_car() -%}
-            {% if is_state('device_tracker.wdd1760081v167576', 'Casa') %}
+            {% if is_state('device_tracker.wdd1760081v167576', state_attr('zone.casa', 'friendly_name')) %}
               {% set car_position = "in garage" %}
             {% else %}
               {% set car_position = "fuori" %}
