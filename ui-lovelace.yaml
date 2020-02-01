@@ -1114,6 +1114,27 @@ views:
               service: script.turn_on
               service_data:
                 entity_id: script.laura_voice_3
+                
+        - type: horizontal-stack
+          cards:
+          - type: entity-button
+            name: I'm Babu
+            icon: mdi:numeric-1
+            entity: script.babu_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.babu_voice_1
+          - type: entity-button
+            name: Heheeeee
+            icon: mdi:numeric-2
+            entity: script.babu_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.babu_voice_2
 
 ######################################################################
 # People
