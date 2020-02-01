@@ -1,10 +1,10 @@
 ######################################################################
-# Xiaomi Aqara Door Window Sensor (MCCGQ11LM)
+# Xiaomi MiJia Door & Window Contact Sensor (MCCGQ01LM)
 ######################################################################
 
 - platform: "mqtt"
   name: "Porta Casa: Batteria"
-  state_topic: "zigbee2mqtt/0x00158d0002caf32f"
+  state_topic: "zigbee2mqtt/0x00158d0003e79145"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
   device_class: "battery"
@@ -12,11 +12,30 @@
 
 - platform: "mqtt"
   name: "Porta Casa: Stato Link"
+  state_topic: "zigbee2mqtt/0x00158d0003e79145"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  value_template: "{{ value_json.linkquality }}"
+
+######################################################################
+# Xiaomi Aqara Door & Window Contact Sensor (MCCGQ11LM)
+######################################################################
+
+- platform: "mqtt"
+  name: "Porta Casa 2: Batteria"
+  state_topic: "zigbee2mqtt/0x00158d0002caf32f"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
+
+- platform: "mqtt"
+  name: "Porta Casa 2: Stato Link"
   state_topic: "zigbee2mqtt/0x00158d0002caf32f"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
   value_template: "{{ value_json.linkquality }}"
-    
+
 ######################################################################
 # Shelly Door/Window
 ######################################################################
