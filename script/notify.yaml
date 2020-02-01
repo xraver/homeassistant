@@ -146,6 +146,8 @@ notify_voice:
           {% endif %}
           {{ language }}
         message: "{{ message }}"
+        
+    - service: script.volume_manager
 
 ######################################################################
 # Script: Global Notification (Text+Voice)

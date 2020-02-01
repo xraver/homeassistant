@@ -15,7 +15,7 @@
     data_template:
       title: "Home Assistant - Aggiornamento"
       message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
-      enable_persistant: true
+      enable_persistent: 1
 
 ######################################################################
 # Update Notification: Shelly
@@ -34,7 +34,7 @@
     data_template:
       title: "Shelly - Aggiornamento"
       message: "Sono disponibili aggiornamenti per i dispositivi Shelly"
-      enable_persistant: true
+      enable_persistent: 1
 
 ######################################################################
 # Update Notification: HACS
@@ -53,4 +53,4 @@
     data_template:
       title: "HACS - Aggiornamento"
       message: "Sono disponibili aggiornamenti per i moduli HACS"
-      enable_persistant: true
+      enable_persistent: 1
