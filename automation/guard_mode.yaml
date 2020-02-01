@@ -20,15 +20,6 @@
     value_template: >-
       {{ (not is_state('device_tracker.google_maps_115265981849847357125', state_attr('zone.casa', 'friendly_name'))) and
          (not is_state('device_tracker.google_maps_103158638433668748797', state_attr('zone.casa', 'friendly_name'))) }}
-# condition:
-#    condition: and
-#    conditions:
-#      - condition: zone
-#        entity_id: device_tracker.google_maps_115265981849847357125
-#        zone: not zone.casa
-#      - condition: template
-#        entity_id: device_tracker.google_maps_103158638433668748797
-#        zone: not zone.casa
 
   action:
     - service: input_boolean.turn_on
