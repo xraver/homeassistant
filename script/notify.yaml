@@ -3,6 +3,7 @@
 # Inputs:
 # - title
 # - message
+# - notification_id
 # - enable_persistent
 #
 # Operations:
@@ -40,6 +41,12 @@ notify_text_internal:
       data_template:
        title: "{{ title }}"
        message: "{{ message }}"
+       notification_id: >-
+         {# Check Null Input #}
+         {% if notification_id | length == 0 %}
+           {% set notification_id = 'generic' %}
+         {% endif %}
+         {{ notification_id }}
 
 notify_text:
   alias: Notifiche testuali
@@ -57,6 +64,7 @@ notify_text:
           {% endif %}
           {{ title }}
         message: "{{ message }}"
+        notification_id: "{{ notification_id }}"
         enable_persistent: "{{ enable_persistent }}"
 
 ######################################################################
@@ -157,6 +165,7 @@ notify_voice:
 # - volume_level
 # _ language
 # - message
+# - notification_id
 # - enable_persistent
 #
 # Operations:
@@ -171,6 +180,7 @@ notify_all:
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
+        notification_id: "{{ notification_id }}"
         enable_persistent: "{{ enable_persistent }}"
 
     - service: script.notify_voice
