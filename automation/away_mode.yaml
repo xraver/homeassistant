@@ -6,9 +6,9 @@
   initial_state: 'on'
 
   trigger:
-    platform: state
-    entity_id: input_boolean.home_mode_away
-    to: 'on'
+    - platform: state
+      entity_id: input_boolean.home_mode_away
+      to: 'on'
 
   action:
     - service: script.notify_voice
@@ -23,9 +23,9 @@
   initial_state: 'on'
 
   trigger:
-    platform: state
-    entity_id: input_boolean.home_mode_away
-    to: 'off'
+    - platform: state
+      entity_id: input_boolean.home_mode_away
+      to: 'off'
 
   action:
     - service: script.notify_voice
@@ -40,13 +40,9 @@
   initial_state: 'on'
  
   trigger:
-    - platform: zone
-      entity_id:
-        - device_tracker.google_maps_115265981849847357125
-        - device_tracker.google_maps_103158638433668748797
-        # - device_tracker.google_maps_113099283296073047871
-      zone: zone.casa
-      event: enter
+    - platform: state
+      entity_id: group.residents
+      to: 'home'
     - platform: template
       value_template: "{{ states('sensor.time_date') == (state_attr('input_datetime.away_mode_end', 'timestamp') | int | timestamp_custom('%H:%M, %Y-%m-%d', true)) }}"
 

@@ -6,20 +6,16 @@
   initial_state: 'on'
 
   trigger:
-    - platform: zone
-      entity_id: 
-        - device_tracker.google_maps_115265981849847357125
-        - device_tracker.google_maps_103158638433668748797
-      zone: zone.casa
-      event: leave
+    - platform: state
+      entity_id: group.residents
+      from: 'home'
     - platform: homeassistant
       event: start  
 
   condition:
     condition: template
     value_template: >-
-      {{ (not is_state('device_tracker.google_maps_115265981849847357125', state_attr('zone.casa', 'friendly_name'))) and
-         (not is_state('device_tracker.google_maps_103158638433668748797', state_attr('zone.casa', 'friendly_name'))) }}
+       {{ not is_state('group.residents', 'home') }}
 
   action:
     - service: input_boolean.turn_on
@@ -34,24 +30,16 @@
   initial_state: 'on'
 
   trigger:
-    - platform: zone
-      entity_id: 
-        - device_tracker.google_maps_115265981849847357125
-        - device_tracker.google_maps_103158638433668748797
-      zone: zone.casa
-      event: enter
+    - platform: state
+      entity_id: group.residents
+      to: 'home'
     - platform: homeassistant
       event: start 
 
   condition:
-    condition: or    
-    conditions:
-      - condition: zone
-        entity_id: device_tracker.google_maps_115265981849847357125
-        zone: zone.casa
-      - condition: zone
-        entity_id: device_tracker.google_maps_103158638433668748797
-        zone: zone.casa
+    condition: template
+    value_template: >-
+       {{ is_state('group.residents', 'home') }}
 
   action:
     - service: input_boolean.turn_off
