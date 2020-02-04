@@ -1,25 +1,18 @@
 ######################################################################
-# Alarm: Start Alarm
+# Alarm: Start Alarm Sound
 #
 # Operations:
-# - script.notify_text
 # - media_player.volume_set
 # - media_player.play_media
 ######################################################################
 
-start_alarm:
-  alias: "Attiva Allarme"
+start_alarm_sound:
+  alias: "Allarmi: Avvia Suono"
   sequence:
-    - service: script.notify_text
-      data_template: 
-        title: "Allarme"
-        message: "Rilevato allarme"
-        enable_persistent: 1
-
     - service: media_player.volume_set
       data_template:
         entity_id: 'media_player.google_home'
-        volume_level: 0.5
+        volume_level: 0.4
 
     - service: media_player.play_media
       data_template:
@@ -28,15 +21,15 @@ start_alarm:
         media_content_id: 'https://home.giorgioravera.it/local/audio/alarm.mp3'
 
 ######################################################################
-# Alarm: Stop Alarm
+# Alarm: Stop Alarm Sound
 #
 # Operations:
 # - media_player.media_stop
 # - script.volume_manager
 ######################################################################
 
-stop_alarm:
-  alias: "Interrompi Allarme"
+stop_alarm_sound:
+  alias: "Allarmi: Interrompi Suono"
   sequence:
     - service: media_player.media_stop
       data_template:
@@ -45,3 +38,75 @@ stop_alarm:
     - service: script.volume_manager
       data_template:
         media_player: 'media_player.google_home'
+
+######################################################################
+# Alarm: Start Alarm Level 1
+# Inputs:
+# - title
+# - message
+#
+# Operations:
+# - script.notify_text
+######################################################################
+
+start_alarm_level_1:
+  alias: "Allarmi: Attiva Allarme 1"
+  sequence:
+    - service: script.notify_all
+      data_template:
+        volume_level: 0.4
+        language: 'it'
+        title: >-
+          {# Check Null Input #}
+          {% if title | length == 0 %}
+            {% set title = 'Allarme Generico' %}
+          {% endif %}
+          Home Assistant - {{ title }}
+        message: >-
+          {# Check Null Input #}
+          {% if message | length == 0 %}
+            {% set message = 'Allarme Generico' %}
+          {% endif %}
+          {{ message }}
+        enable_persistent: 1
+        notification_id: "alarm"
+#    - service: input_boolean.turn_on
+#      entity_id: input_boolean.{{ alarm_type }}
+
+######################################################################
+# Alarm: Start Alarm
+# Inputs:
+# - title
+# - message
+# - level
+#
+# Operations:
+# - input_boolean.turn_on
+# - script.start_alarm_level_1
+# - script.start_alarm_level_2
+######################################################################
+
+start_alarm:
+  alias: "Allarmi: Attiva Allarme"
+  sequence:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.alarms
+
+    - service: script.start_alarm_level_1
+      data_template:
+        title: "{{ title }}"
+        message:  "{{ message }}"
+
+######################################################################
+# Alarm: Stop Alarm
+#
+# Operations:
+# - persistent_notification.dismiss
+######################################################################
+
+stop_alarm:
+  alias: "Allarmi: Disattiva Allarme"
+  sequence:
+    - service: persistent_notification.dismiss
+      data_template:
+        notification_id: "alarm"

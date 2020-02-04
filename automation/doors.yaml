@@ -12,16 +12,18 @@
   initial_state: 'on'
 
   trigger:
-    platform: state
-    entity_id: binary_sensor.porta_casa_stato
-    to: 'on'
+    - platform: state
+      entity_id: binary_sensor.porta_casa_stato
+      to: 'on'
 
   condition:
-  - condition: time
-    after: '23:00:00'
-    before: '06:00:00'
+     - condition: numeric_state
+       entity_id: sun.sun
+       value_template: "{{ state_attr('sun.sun', 'elevation') }}"
+       below: -10
 
   action:
+    - delay: 00:00:01
     - service: light.turn_on
       entity_id: light.luce_corridoio
     - delay: '00:05:00'
@@ -37,20 +39,18 @@
   initial_state: 'on'
 
   trigger:
-    platform: state
-    entity_id: binary_sensor.porta_casa_stato
-    to: 'on'
+    - platform: state
+      entity_id: binary_sensor.porta_casa_stato
+      to: 'on'
     
   condition:
-    condition: state
-    entity_id: binary_sensor.guard_mode
-    state: 'on'
+    - condition: state
+      entity_id: binary_sensor.guard_mode
+      state: 'on'
 
   action:
-    service: script.notify_all
-    data_template:
-      title: "Home Assistant - Presenza non autorizzata"
-      volume_level: '0.4'
-      language: 'it'
-      message: "È stata rilevata una presenza non autorizzata."
-      enable_persistent: 1
+    - service: script.start_alarm
+      data_template:
+        title: "Presenza non autorizzata"
+        message: "È stata rilevata una presenza non autorizzata."
+        level: 1

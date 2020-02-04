@@ -1,0 +1,16 @@
+######################################################################
+# Alarm: Aknowledge Alarms
+#
+# Actions:
+# - script.stop_alarm
+######################################################################
+- alias: "Alarms: Riconoscimento Allarmi"
+  initial_state: 'on'
+
+  trigger:
+    platform: state
+    entity_id: input_boolean.alarms
+    to: 'off'
+
+  action:
+    - service: script.stop_alarm
