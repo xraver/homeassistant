@@ -7,18 +7,25 @@
 
   trigger:
     - platform: state
-      entity_id: input_boolean.home_mode_night
+      entity_id: input_boolean.home_mode_day
       to: 'on'
     - platform: state
       entity_id: input_boolean.home_mode_night
-      to: 'off'
-      
+      to: 'on'
+    - platform: state
+      entity_id: input_boolean.home_mode_away
+      to: 'on'
+
   action:
     - service: frontend.set_theme
       data_template:
         name: >-
-          {% if trigger.to_state.state == 'on' %}
-            midnight_blue
-          {% else %}
+          {% if trigger.entity_id == 'input_boolean.home_mode_day' %}
             default
-          {% endif %}  
+          {% endif %}
+          {% if trigger.entity_id == 'input_boolean.home_mode_night' %}
+            midnight_blue
+          {% endif %}
+          {% if trigger.entity_id == 'input_boolean.home_mode_away' %}
+            reeder_dark
+          {% endif %}
