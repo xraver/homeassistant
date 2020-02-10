@@ -1478,3 +1478,11 @@ views:
           entities:
           - script.shelly_upgrade
           - script.shelly_reboot
+
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Informazioni Varie
+          show_header_toggle: false
+          entities:
+          - input_boolean.update
