@@ -26,6 +26,7 @@ views:
       - binary_sensor.guard_mode
       - binary_sensor.speech_notifications
       - binary_sensor.text_notifications
+      - binary_sensor.alarms
       - sensor.potenza_istantanea
     cards:
     - type: picture-glance
@@ -1373,6 +1374,21 @@ views:
             --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
           }
 
+######################################################################
+# Alarms
+######################################################################
+  - title: Allarmi
+    id: allarmi
+    icon: mdi:alarm-light-outline
+    badges:
+      - binary_sensor.alarms
+    cards:
+    - type: entities
+      title: Allarmi Casa
+      show_header_toggle: false
+      entities:
+      - input_boolean.alarms
+      
 ######################################################################
 # Weather
 ######################################################################
