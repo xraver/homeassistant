@@ -11,12 +11,15 @@
       to: 'on'
 
   action:
-    service: script.notify_text
-    data_template:
-      title: "Home Assistant - Aggiornamento"
-      message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
-      notification_id: "update"
-      enable_persistent: 1
+    - service: script.notify_text
+      data_template:
+        title: "Home Assistant - Aggiornamento"
+        message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
+        notification_id: "update"
+        enable_persistent: 1
+    
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.update
 
 ######################################################################
 # Update Notification: Shelly
@@ -31,12 +34,15 @@
       to: 'on'
 
   action:
-    service: script.notify_text
-    data_template:
-      title: "Shelly - Aggiornamento"
-      message: "Sono disponibili aggiornamenti per i dispositivi Shelly"
-      notification_id: "update"
-      enable_persistent: 1
+    - service: script.notify_text
+      data_template:
+        title: "Shelly - Aggiornamento"
+        message: "Sono disponibili aggiornamenti per i dispositivi Shelly"
+        notification_id: "update"
+        enable_persistent: 1
+
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.update
 
 ######################################################################
 # Update Notification: HACS
@@ -51,9 +57,31 @@
       above: 0
 
   action:
-    service: script.notify_text
-    data_template:
-      title: "HACS - Aggiornamento"
-      message: "Sono disponibili aggiornamenti per i moduli HACS"
-      notification_id: "update"
-      enable_persistent: 1
+    - service: script.notify_text
+      data_template:
+        title: "HACS - Aggiornamento"
+        message: "Sono disponibili aggiornamenti per i moduli HACS"
+        notification_id: "update"
+        enable_persistent: 1
+
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.update
+
+######################################################################
+# Update: Aknowledge update
+#
+# Actions:
+# - persistent_notification.dismiss
+######################################################################
+- alias: "Update: Riconoscimento Aggiornamenti"
+  initial_state: 'on'
+
+  trigger:
+    platform: state
+    entity_id: input_boolean.update
+    to: 'off'
+
+  action:
+    - service: persistent_notification.dismiss
+      data_template:
+        notification_id: "update"

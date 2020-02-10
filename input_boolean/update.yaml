@@ -1,0 +1,8 @@
+######################################################################
+# Update: Generic 
+######################################################################
+
+update:
+  name: Disponibilità Aggiornamenti
+  initial: off
+  icon: mdi:cellphone-arrow-down
