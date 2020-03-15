@@ -4,7 +4,6 @@
 
 lights_bathroom:
   name: Luci Bagno
-  view: true
   icon: mdi:lightbulb
   entities:
     - light.luce_bagno

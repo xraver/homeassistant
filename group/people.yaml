@@ -4,7 +4,6 @@
 
 people:
   name: Persone
-  view: true
   icon: mdi:account-multiple
   entities:
     # Giorgio
@@ -24,7 +23,6 @@ people:
 
 residents:
   name: Abitanti Casa
-  view: true
   icon: mdi:account-multiple
   entities:
     # Giorgio

@@ -4,7 +4,6 @@
 
 climate:
   name: Termostato
-  view: true
   icon: mdi:thermometer
   entities:
     - sensor.termostato_cucina

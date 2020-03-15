@@ -4,7 +4,6 @@
 
 shelly:
   name: Shelly Devices
-  view: true
   #icon: mdi:thermometer
   entities:
     - sensor.shelly1_status

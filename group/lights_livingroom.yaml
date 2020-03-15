@@ -4,7 +4,6 @@
 
 lights_livingroom:
   name: Luci Sala
-  view: true
   icon: mdi:lightbulb
   entities:
     - light.luce_sala

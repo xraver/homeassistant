@@ -4,7 +4,6 @@
 
 lights:
   name: Luci
-  view: true
   icon: mdi:lightbulb
   entities:
     - light.luce_cucina

@@ -11,4 +11,3 @@
   # consider_home: 600
   new_device_defaults:
     track_new_devices: yes
-    hide_if_away: false
