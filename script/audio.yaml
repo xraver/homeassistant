@@ -5,6 +5,7 @@
 #         1 -> bell'affare
 #         2 -> belan
 #         3 -> una schifezza
+#         3 -> ma che schifo è?
 #
 # Operations:
 # - script.volume_manager
@@ -63,6 +64,13 @@ laura_voice_3:
   - service: script.laura_voice
     data:
       type: '3'
+
+laura_voice_4:
+  alias: Voce Laura 4
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '4'
 
 ######################################################################
 # Script: Babu Frik
