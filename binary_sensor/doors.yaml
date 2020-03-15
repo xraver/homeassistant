@@ -3,7 +3,7 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Porta Casa: Stato"
+  name: "Porta Casa"
   state_topic: "zigbee2mqtt/0x00158d0003e79145"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false
@@ -16,7 +16,7 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Porta Casa 2: Stato"
+  name: "Porta Casa 2"
   state_topic: "zigbee2mqtt/0x00158d0002caf32f"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false
@@ -29,7 +29,7 @@
 ######################################################################
 
 #- platform: mqtt
-#  name: "Porta Casa: Stato"
+#  name: "Porta Casa 3"
 #  state_topic: "shellies/shellydw-B88F53/sensor/state"
 #  payload_on: "open"
 #  payload_off: "close"
