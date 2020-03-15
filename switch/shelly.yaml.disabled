@@ -1,0 +1,15 @@
+######################################################################
+# Switch: Shelly
+######################################################################
+
+- platform: mqtt
+  name: Presa TV
+  command_topic: "shellies/shellyplug-s-7A31CB/relay/0/command"
+  state_topic: "shellies/shellyplug-s-7A31CB/relay/0"
+  payload_on: "on"
+  payload_off: "off"
+  state_on: "on"
+  state_off: "off"
+  retain: false
+  qos: 0
+  optimistic: false
