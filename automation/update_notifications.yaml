@@ -10,6 +10,14 @@
       entity_id: binary_sensor.updater
       to: 'on'
 
+    - platform: homeassistant
+      event: start
+
+  condition:
+    condition: state
+    entity_id: binary_sensor.updater
+    state: 'on'
+
   action:
     - service: script.notify_text
       data_template:
@@ -32,6 +40,14 @@
     - platform: state
       entity_id: group.shelly
       to: 'on'
+      
+    - platform: homeassistant
+      event: start
+      
+  condition:
+    condition: state
+    entity_id: group.shelly
+    state: 'on'
 
   action:
     - service: script.notify_text

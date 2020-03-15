@@ -153,6 +153,9 @@ start_alarm:
 stop_alarm:
   alias: "Allarmi: Disattiva Allarme"
   sequence:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.alarms
+
     - service: script.stop_alarm_sound
 
     - service: persistent_notification.dismiss

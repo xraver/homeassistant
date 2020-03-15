@@ -9,6 +9,8 @@ resources:
     type: module
   - url: /community_plugin/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?v=0.6.0
     type: module
+  - url: /community_plugin/lovelace-battery-entity/battery-entity.js?v=1
+    type: module
 
 views:
 ######################################################################
@@ -22,10 +24,11 @@ views:
       - device_tracker.google_maps_103158638433668748797
       - device_tracker.wdd1760081v167576    
       - sensor.time
+      - binary_sensor.porta_casa
       - binary_sensor.home_mode
       - binary_sensor.guard_mode
       - binary_sensor.speech_notifications
-      - binary_sensor.text_notifications
+      #- binary_sensor.text_notifications
       - binary_sensor.alarms
       - sensor.potenza_istantanea
     cards:
@@ -133,6 +136,19 @@ views:
       show_header_toggle: false
       entities:
       - input_datetime.away_mode_end
+
+    - type: entity-filter
+      title: Eventi da Segnalare
+      entities:
+        - input_boolean.alarms
+        - input_boolean.door_alarm
+        - input_boolean.update      
+        - binary_sensor.ff590mr_engine_light_warning
+        - binary_sensor.ff590mr_warning_brakefluid
+        - binary_sensor.ff590mr_warning_washwater
+        - binary_sensor.ff590mr_warning_coolantlevellow
+      state_filter:
+      - "on"
       
 ######################################################################
 # Lights
@@ -1115,6 +1131,15 @@ views:
               service: script.turn_on
               service_data:
                 entity_id: script.laura_voice_3
+          - type: entity-button
+            name: Che Schifo è?
+            icon: mdi:numeric-4
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice_4
                 
         - type: horizontal-stack
           cards:
@@ -1290,7 +1315,7 @@ views:
 # Power Status
 ######################################################################
   - title: Monitoraggio Energetico
-    id: network
+    id: power
     icon: mdi:flash
     badges:
       - sensor.potenza_istantanea
@@ -1345,7 +1370,6 @@ views:
       #  entities: 
       #    - sensor.freebsd_router_kbyte_sec_received
       #    - sensor.freebsd_router_kbyte_sec_sent
-
     #panel: true # this renders the first card on full width, other cards in this view will not be rendered
     #cards:
       - type: custom:zigbee2mqtt-networkmap
@@ -1373,6 +1397,16 @@ views:
             --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
             --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
           }
+      - type: entities
+        title: Stato Batteria ZigBee Devices
+        show_header_toggle: false
+        entities:
+        - type: custom:battery-entity
+          entity: sensor.porta_casa_batteria
+        - type: custom:battery-entity
+          entity: sensor.porta_casa_2_batteria
+        - type: custom:battery-entity
+          entity: sensor.pulsante_batteria
 
 ######################################################################
 # Alarms
