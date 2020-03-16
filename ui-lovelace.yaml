@@ -11,6 +11,8 @@ resources:
     type: module
   - url: /community_plugin/lovelace-battery-entity/battery-entity.js?v=1
     type: module
+  - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
+    type: module
 
 views:
 ######################################################################
@@ -149,7 +151,7 @@ views:
         - binary_sensor.ff590mr_warning_coolantlevellow
       state_filter:
       - "on"
-      
+
 ######################################################################
 # Lights
 ######################################################################
@@ -244,10 +246,25 @@ views:
         show_header_toggle: false
         entities:
           - cover.tapparelle_casa
+          - type: custom:slider-entity-row
+            entity: cover.tapparelle_casa
+            full_row: true
           - cover.tapparella_cucina
+          - type: custom:slider-entity-row
+            entity: cover.tapparella_cucina
+            full_row: true
           - cover.tapparella_sala
+          - type: custom:slider-entity-row
+            entity: cover.tapparella_sala
+            full_row: true
           - cover.tapparella_studio
+          - type: custom:slider-entity-row
+            entity: cover.tapparella_studio
+            full_row: true
           - cover.tapparella_camera
+          - type: custom:slider-entity-row
+            entity: cover.tapparella_camera
+            full_row: true
 
 ######################################################################
 # Climate
