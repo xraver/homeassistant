@@ -39,8 +39,11 @@ laura_voice:
           {{ media_player }}
         media_content_type: 'audio/mp4'
         media_content_id: >-
+          {%- macro set_type() -%}
+            {{ range(1,5,1) | random }}
+          {%- endmacro -%}
           {% if type is not defined %}
-            {% set type = 1 %}
+            {% set type = set_type() %}
           {% endif %}
           https://home.giorgioravera.it/local/audio/laura/{{type}}.mp3
 
