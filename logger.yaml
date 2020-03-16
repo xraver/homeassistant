@@ -11,4 +11,5 @@ logs:
   homeassistant.components.discovery: warn
   homeassistant.components.input_text: info
   homeassistant.components.sensor: warn
+  homeassistant.components.websocket_api: info
   custom_components.mercedesmeapi: warn
