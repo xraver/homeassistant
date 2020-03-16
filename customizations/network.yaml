@@ -1,5 +1,5 @@
 ######################################################################
-# Speed Test
+# Customization: Speed Test
 ######################################################################
 
 sensor.speedtest_ping:
@@ -10,7 +10,7 @@ sensor.speedtest_upload:
   friendly_name: Upload
 
 ######################################################################
-# pfSense
+# # Customization: pfSense
 ######################################################################
 
 sensor.freebsd_router_kbyte_sec_received:
@@ -19,7 +19,7 @@ sensor.freebsd_router_kbyte_sec_sent:
   friendly_name: Traffico in uscita
 
 ######################################################################
-# DNS
+# # Customization: DNS
 ######################################################################
 
 sensor.ip_1:

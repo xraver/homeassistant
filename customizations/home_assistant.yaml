@@ -1,5 +1,5 @@
 ######################################################################
-# Home Assistant Customizations
+# Customization: Home Assistant
 ######################################################################
 
 script.homeassistant_restart:
