@@ -16,6 +16,7 @@ shelly:
     - sensor.shelly8_status
     - sensor.shelly9_status
     - sensor.shelly10_status
+    - sensor.shelly11_status
     - sensor.shellybulb_status
     - sensor.shellyem_status
     - sensor.shellydw_status

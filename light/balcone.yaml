@@ -1,0 +1,13 @@
+######################################################################
+# Balcony Light
+######################################################################
+
+- platform: mqtt
+  name: Luce Balcone
+  command_topic: "shellies/shelly1-C423C8/relay/0/command"
+  state_topic: "shellies/shelly1-C423C8/relay/0"
+  payload_on: "on"
+  payload_off: "off"
+  retain: false
+  qos: 0
+  optimistic: false

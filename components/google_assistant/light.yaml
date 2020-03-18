@@ -26,3 +26,6 @@ light.luce_studio:
 light.luce_camera:
   expose: true
   room: Camera
+light.luce_balcone:
+  expose: true
+  room: Balcone

@@ -72,6 +72,12 @@ shelly_upgrade:
         topic: 'shellies/shelly1-24D1A8/command'
         payload: 'update_fw'
 
+    # Shelly 1 Luce Balcone
+    - service: mqtt.publish
+      data:
+        topic: 'shellies/shelly1-C423C8/command'
+        payload: 'update_fw'
+
     # Shelly EM
     - service: mqtt.publish
       data:

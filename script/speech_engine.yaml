@@ -73,7 +73,19 @@ speech_engine:
             {% set year = now().strftime('%Y') %}
             Sono le {{ hour }} e {{ min }} del {{ day }} {{ mounth }} {{ year }}
           {%- endmacro -%}
-            
+          
+          {# Door Status #}
+          {%- macro status_door() -%}
+            {% for entity_id in states.group.doors.attributes.entity_id  %}
+              {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+              {% if is_state(entity_id, 'off') %}
+                La {{ name }} è chiusa.
+              {% else %}
+                La {{ name }} è aperta.
+              {% endif %}
+            {%- endfor %}
+          {%- endmacro -%}
+          
           {# Lights Status #}
           {%- macro status_lights() -%}
             {% for entity_id in states.group.lights.attributes.entity_id  %}
@@ -172,7 +184,9 @@ speech_engine:
           {% if enable_status | int == 1 %}
               
             {{ time_and_date() }}
-              
+            
+            {{ status_door() }}
+            
             {{ status_lights() }}
               
             {{ status_covers() }}
