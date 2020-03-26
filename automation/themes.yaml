@@ -24,7 +24,7 @@
             default
           {% endif %}
           {% if trigger.entity_id == 'input_boolean.home_mode_night' %}
-            noctis-grey
+            darkish
           {% endif %}
           {% if trigger.entity_id == 'input_boolean.home_mode_away' %}
             reeder_dark
