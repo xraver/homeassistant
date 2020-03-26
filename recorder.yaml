@@ -53,7 +53,7 @@ exclude:
     - sensor.ff590mr_tire_pressure_rear_right
     - sensor.ff590mr_trunk
     # System
-    - sensor.scadenza_certificato_ssl
+    - sensor.ssl_certificate
     # Shelly
     - sensor.shelly1_status
     - sensor.shelly2_status
@@ -64,6 +64,8 @@ exclude:
     - sensor.shelly7_status
     - sensor.shelly8_status
     - sensor.shelly9_status
+    - sensor.shelly10_status
+    - sensor.shelly11_status
     - sensor.shellybulb_status
     - sensor.shellyem_status
     - sensor.shellydw_status
