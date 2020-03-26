@@ -5,14 +5,16 @@
 title: Casa Ravera-Testa
 
 resources:
-  - url: /community_plugin/button-card/button-card.js
+  - url: /hacsfiles/button-card/button-card.js
     type: module
-  - url: /community_plugin/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?v=0.6.0
+  - url: /hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?v=0.6.0
     type: module
-  - url: /community_plugin/lovelace-battery-entity/battery-entity.js?v=1
+  - url: /hacsfiles/lovelace-battery-entity/battery-entity.js?v=1
     type: module
-  - url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
+  - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
     type: module
+
+background: var(--background-image)
 
 views:
 ######################################################################
@@ -109,6 +111,16 @@ views:
       - cover.tapparella_camera
       - climate.camera_termostato_camera
 
+    - type: picture-glance
+      title: Balcone
+      show_state: true
+      state_image:
+        "on": /local/images/rooms/balcone_on.jpg
+        "off": /local/images/rooms/balcone_off.jpg
+      entity: light.luce_balcone
+      entities: 
+      - light.luce_balcone
+
     - type: entities
       title: Modalità Casa
       show_header_toggle: false
@@ -167,6 +179,7 @@ views:
       - light.luce_specchio
       - light.luce_studio
       - light.luce_camera
+      - light.luce_balcone
     cards:
     - type: entities
       title: Comandi luci
@@ -178,12 +191,12 @@ views:
         - light.luci_sala
         - light.luce_sala
         - light.luce_divano
-        #- light.luce_divano_bianca
         - light.luci_bagno
         - light.luce_bagno
         - light.luce_specchio
         - light.luce_studio
         - light.luce_camera
+        - light.luce_balcone
     
     - type: light
       name: Luci Casa
@@ -205,10 +218,6 @@ views:
       name: Luce Divano
       entity: light.luce_divano
 
-#    - type: light
-#      name: Luce Divano Bianca
-#      entity: light.luce_divano_bianca
-
     - type: light
       name: Luci Bagno
       entity: light.luci_bagno
@@ -229,12 +238,17 @@ views:
       name: Luce Camera
       entity: light.luce_camera
 
+    - type: light
+      name: Luce Balcone
+      entity: light.luce_balcone
+
 ######################################################################
 # Covers
 ######################################################################
   - title: Tapparelle
     id: covers
-    icon: mdi:window-closed
+    #icon: mdi:window-closed
+    icon: mdi:window-shutter
     badges:
       - sensor.tapparella_cucina
       - sensor.tapparella_sala

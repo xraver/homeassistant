@@ -4,7 +4,8 @@
 
 covers:
   name: Tapparelle
-  icon: mdi:window-closed
+  #icon: mdi:window-closed
+  icon: mdi:window-shutter
   entities:
     - cover.tapparella_cucina
     - cover.tapparella_sala

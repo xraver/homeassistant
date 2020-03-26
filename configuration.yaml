@@ -160,6 +160,9 @@ speedtestdotnet: !include components/speedtest.yaml
 # Mobile App
 mobile_app:
 
+# Panel Iframe: 
+# panel_iframe: !include components/panel_iframe.yaml
+
 ###########################################################
 # Custom Components
 ###########################################################
