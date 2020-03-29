@@ -1453,6 +1453,7 @@ views:
       show_header_toggle: false
       entities:
       - input_boolean.alarms
+      #- input_boolean.door_alarm
       
 ######################################################################
 # Weather
@@ -1550,4 +1551,5 @@ views:
           title: Informazioni Varie
           show_header_toggle: false
           entities:
+          - sensor.ssl_certificate
           - input_boolean.update
