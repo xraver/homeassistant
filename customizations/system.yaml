@@ -1,0 +1,7 @@
+######################################################################
+# Customization: System
+######################################################################
+
+sensor.ssl_certificate:
+  friendly_name: Scadenza Certificato SSL
+  unit_of_measurement: giorni

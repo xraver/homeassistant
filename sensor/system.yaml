@@ -10,8 +10,11 @@
 ######################################################################
 # Sensor: Letsencrypt
 ######################################################################
-- platform: command_line
-  name: Scadenza Certificato SSL
-  unit_of_measurement: giorni
-  scan_interval: 86400
-  command: "ssl-cert-check -b -c /etc/letsencrypt/live/server.giorgioravera.it/cert.pem | awk '{ print $NF }'"
+#- platform: command_line
+#  name: Scadenza Certificato SSL
+#  unit_of_measurement: giorni
+#  scan_interval: 86400
+#  command: "ssl-cert-check -b -c /etc/letsencrypt/live/server.giorgioravera.it/cert.pem | awk '{ print $NF }'"
+
+- platform: cert_expiry
+  host: home.giorgioravera.it
