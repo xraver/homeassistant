@@ -1401,8 +1401,44 @@ views:
       #  entities: 
       #    - sensor.freebsd_router_kbyte_sec_received
       #    - sensor.freebsd_router_kbyte_sec_sent
+      
+######################################################################
+# Zigbee
+######################################################################
+  - title: Zigbee
+    id: zigbee
+    icon: mdi:zigbee
+    cards:
     #panel: true # this renders the first card on full width, other cards in this view will not be rendered
-    #cards:
+    cards:
+      - type: entities
+        title: Stato Sistema Zigbee2mqtt
+        show_header_toggle: false
+        entities:
+          - sensor.zigbee2mqtt_stato_bridge
+          - sensor.zigbee2mqtt_stato_permit_join
+          - sensor.zigbee2mqtt_stato_log_level
+          - sensor.zigbee2mqtt_versione_bridge
+          - sensor.zigbee2mqtt_versione_coordinator
+          
+      - type: entities
+        title: Operazioni Sistema Zigbee2mqtt
+        show_header_toggle: false
+        entities:
+          - switch.zigbee2mqtt_abilita_join
+          - input_select.zigbee2mqtt_log_level
+
+      - type: entities
+        title: Stato Batteria ZigBee Devices
+        show_header_toggle: false
+        entities:
+        - type: custom:battery-entity
+          entity: sensor.porta_casa_batteria
+        - type: custom:battery-entity
+          entity: sensor.porta_casa_2_batteria
+        - type: custom:battery-entity
+          entity: sensor.pulsante_batteria
+
       - type: custom:zigbee2mqtt-networkmap
         title: Zigbee2mqtt Network Map
         entity: sensor.zigbee2mqtt_networkmap
@@ -1428,16 +1464,6 @@ views:
             --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
             --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
           }
-      - type: entities
-        title: Stato Batteria ZigBee Devices
-        show_header_toggle: false
-        entities:
-        - type: custom:battery-entity
-          entity: sensor.porta_casa_batteria
-        - type: custom:battery-entity
-          entity: sensor.porta_casa_2_batteria
-        - type: custom:battery-entity
-          entity: sensor.pulsante_batteria
 
 ######################################################################
 # Alarms
