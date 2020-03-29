@@ -1,0 +1,67 @@
+######################################################################
+# Alarm Package
+######################################################################
+
+######################################################################
+# Input Booleans
+######################################################################
+input_boolean:
+
+######################################################################
+# Alarms: Generic 
+######################################################################
+  alarms:
+    name: Allarme
+    icon: mdi:alarm-light-outline
+
+######################################################################
+# Alarms: Door
+######################################################################
+#  door_alarm:
+#    name: Allarme Porta
+#    icon: mdi:door-open
+
+######################################################################
+# Binary Sensors
+######################################################################
+binary_sensor:
+
+######################################################################
+# Alarm Binary Sensor
+######################################################################
+  - platform: template
+    sensors:
+      alarms:
+        friendly_name: Allarmi
+        entity_id: input_boolean.alarms
+        value_template: >-
+          {{ is_state('input_boolean.alarms', 'on') }}
+        icon_template: >-
+          {% if is_state('input_boolean.alarms', 'on') %}
+             mdi:alarm-light
+          {% else %}
+             mdi:alarm-light-outline
+          {% endif %}
+
+######################################################################
+# Automations
+######################################################################
+automation:
+
+######################################################################
+# Alarm Automation: Aknowledge Alarms
+#
+# Actions:
+# - persistent_notification.dismiss
+# - script.stop_alarm
+######################################################################
+  - alias: "Alarms: Riconoscimento Allarmi"
+    initial_state: 'on'
+
+    trigger:
+      platform: state
+      entity_id: input_boolean.alarms
+      to: 'off'
+
+    action:
+      - service: script.stop_alarm

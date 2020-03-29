@@ -12,6 +12,8 @@ homeassistant:
   time_zone: Europe/Rome
   # Customization folder
   customize: !include_dir_merge_named customizations/
+  # Packages:
+  packages: !include_dir_named packages/
 
 # Show links to resources in log and frontend
 # introduction:
