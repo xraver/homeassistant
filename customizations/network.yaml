@@ -10,16 +10,28 @@ sensor.speedtest_upload:
   friendly_name: Upload
 
 ######################################################################
-# # Customization: pfSense
+# Customization: pfSense
 ######################################################################
 
-sensor.freebsd_router_kbyte_sec_received:
-  friendly_name: Traffico in ingresso
-sensor.freebsd_router_kbyte_sec_sent:
-  friendly_name: Traffico in uscita
+sensor.freebsd_router_kib_sec_received:
+  friendly_name: "pfSense: Kbps/s in entrata"
+sensor.freebsd_router_kib_sec_sent:
+  friendly_name: "pfSense: Kbps/s in uscita"
+sensor.freebsd_router_bytes_received:
+  friendly_name: "pfSense: Byte ricevuti"
+sensor.freebsd_router_bytes_sent:
+  friendly_name: "pfSense: Byte inviati"  
+sensor.freebsd_router_packets_received:
+  friendly_name: "pfSense: Pacchetti ricevuti"
+sensor.freebsd_router_packets_sent:
+  friendly_name: "pfSense: Pacchetti inviati"
+sensor.freebsd_router_packets_sec_received:
+  friendly_name: "pfSense: Pacchetti/s ricevuti"
+sensor.freebsd_router_packets_sec_sent:
+  friendly_name: "pfSense: Pacchetti/s inviati"
 
 ######################################################################
-# # Customization: DNS
+# Customization: DNS
 ######################################################################
 
 sensor.ip_1:

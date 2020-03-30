@@ -1,0 +1,138 @@
+######################################################################
+# Mercedes Package - Log
+######################################################################
+
+######################################################################
+# History
+######################################################################
+history:
+  exclude:
+    entities:
+    # Mercedes Me
+    - binary_sensor.ff590mr_door_front_left
+    - binary_sensor.ff590mr_door_front_right
+    - binary_sensor.ff590mr_door_rear_left
+    - binary_sensor.ff590mr_door_rear_right
+    #- binary_sensor.ff590mr_doors_closed
+    - binary_sensor.ff590mr_engine_light_warning
+    #- binary_sensor.ff590mr_locked
+    - binary_sensor.ff590mr_park_brake_status
+    - binary_sensor.ff590mr_tire_warning
+    - binary_sensor.ff590mr_trunk
+    - binary_sensor.ff590mr_fuel_lid
+    #- binary_sensor.ff590mr_warning_brakefluid
+    #- binary_sensor.ff590mr_warning_coolantlevellow
+    #- binary_sensor.ff590mr_warning_washwater
+    - binary_sensor.ff590mr_window_front_left
+    - binary_sensor.ff590mr_window_front_right
+    - binary_sensor.ff590mr_window_rear_left
+    - binary_sensor.ff590mr_window_rear_right
+    - binary_sensor.ff590mr_windows_closed
+    - lock.ff590mr_lock
+    - sensor.ff590mr_distance_since_reset
+    - sensor.ff590mr_distance_since_start
+    - sensor.ff590mr_door_front_left
+    - sensor.ff590mr_door_front_right
+    - sensor.ff590mr_door_rear_left
+    - sensor.ff590mr_door_rear_right
+    #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_liquid_consumption_reset
+    - sensor.ff590mr_liquid_consumption_start
+    - sensor.ff590mr_lock
+    #- sensor.ff590mr_odometer
+    - sensor.ff590mr_service_interval_days
+    - sensor.ff590mr_tire_pressure_front_left
+    - sensor.ff590mr_tire_pressure_front_right
+    - sensor.ff590mr_tire_pressure_rear_left
+    - sensor.ff590mr_tire_pressure_rear_right
+    - sensor.ff590mr_trunk
+
+######################################################################
+# Logbook
+######################################################################
+logbook:
+  exclude:
+    entities:
+    # Mercedes Me
+    - binary_sensor.ff590mr_door_front_left
+    - binary_sensor.ff590mr_door_front_right
+    - binary_sensor.ff590mr_door_rear_left
+    - binary_sensor.ff590mr_door_rear_right
+    #- binary_sensor.ff590mr_doors_closed
+    - binary_sensor.ff590mr_engine_light_warning
+    #- binary_sensor.ff590mr_locked
+    - binary_sensor.ff590mr_park_brake_status
+    - binary_sensor.ff590mr_tire_warning
+    - binary_sensor.ff590mr_trunk
+    - binary_sensor.ff590mr_fuel_lid
+    #- binary_sensor.ff590mr_warning_brakefluid
+    #- binary_sensor.ff590mr_warning_coolantlevellow
+    #- binary_sensor.ff590mr_warning_washwater
+    - binary_sensor.ff590mr_window_front_left
+    - binary_sensor.ff590mr_window_front_right
+    - binary_sensor.ff590mr_window_rear_left
+    - binary_sensor.ff590mr_window_rear_right
+    - binary_sensor.ff590mr_windows_closed
+    - lock.ff590mr_lock
+    - sensor.ff590mr_distance_since_reset
+    - sensor.ff590mr_distance_since_start
+    - sensor.ff590mr_door_front_left
+    - sensor.ff590mr_door_front_right
+    - sensor.ff590mr_door_rear_left
+    - sensor.ff590mr_door_rear_right
+    #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_liquid_consumption_reset
+    - sensor.ff590mr_liquid_consumption_start
+    - sensor.ff590mr_lock
+    #- sensor.ff590mr_odometer
+    - sensor.ff590mr_service_interval_days
+    - sensor.ff590mr_tire_pressure_front_left
+    - sensor.ff590mr_tire_pressure_front_right
+    - sensor.ff590mr_tire_pressure_rear_left
+    - sensor.ff590mr_tire_pressure_rear_right
+    - sensor.ff590mr_trunk
+
+######################################################################
+# Recorder
+######################################################################
+recorder:
+  exclude:
+    entities:
+    # Mercedes Me
+    - binary_sensor.ff590mr_door_front_left
+    - binary_sensor.ff590mr_door_front_right
+    - binary_sensor.ff590mr_door_rear_left
+    - binary_sensor.ff590mr_door_rear_right
+    #- binary_sensor.ff590mr_doors_closed
+    - binary_sensor.ff590mr_engine_light_warning
+    #- binary_sensor.ff590mr_locked
+    - binary_sensor.ff590mr_park_brake_status
+    - binary_sensor.ff590mr_tire_warning
+    - binary_sensor.ff590mr_trunk
+    - binary_sensor.ff590mr_fuel_lid
+    #- binary_sensor.ff590mr_warning_brakefluid
+    #- binary_sensor.ff590mr_warning_coolantlevellow
+    #- binary_sensor.ff590mr_warning_washwater
+    - binary_sensor.ff590mr_window_front_left
+    - binary_sensor.ff590mr_window_front_right
+    - binary_sensor.ff590mr_window_rear_left
+    - binary_sensor.ff590mr_window_rear_right
+    - binary_sensor.ff590mr_windows_closed
+    - lock.ff590mr_lock
+    - sensor.ff590mr_distance_since_reset
+    - sensor.ff590mr_distance_since_start
+    - sensor.ff590mr_door_front_left
+    - sensor.ff590mr_door_front_right
+    - sensor.ff590mr_door_rear_left
+    - sensor.ff590mr_door_rear_right
+    #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_liquid_consumption_reset
+    - sensor.ff590mr_liquid_consumption_start
+    - sensor.ff590mr_lock
+    #- sensor.ff590mr_odometer
+    - sensor.ff590mr_service_interval_days
+    - sensor.ff590mr_tire_pressure_front_left
+    - sensor.ff590mr_tire_pressure_front_right
+    - sensor.ff590mr_tire_pressure_rear_left
+    - sensor.ff590mr_tire_pressure_rear_right
+    - sensor.ff590mr_trunk
