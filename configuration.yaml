@@ -38,9 +38,11 @@ http:
    # ssl_certificate: /var/lib/homeassistant/.homeassistant/fullchain.pem
    # ssl_key: /var/lib/homeassistant/.homeassistant/privkey.pem
    use_x_forwarded_for: true
-   trusted_proxies: 
+   trusted_proxies:
+     - 127.0.0.1       # traefik and home assistant in host mode
+#     - 172.18.0.1      # traefik in host mode and homeassistant in network mode
+#     - 172.18.0.200    # traefik and home in network mode
      - 192.168.0.1
-     - 172.18.0.200
    # trusted_networks:
    #   - 192.168.0.0
    #   - 192.168.2.0
