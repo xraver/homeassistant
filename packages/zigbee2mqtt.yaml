@@ -115,7 +115,6 @@ automation:
   - id: zigbee2mqtt_change_log_level
     alias: "Zigbee2mqtt: Cambia Log Level"
     initial_state: "on"
-    hide_entity: true
     trigger:
       platform: state
       entity_id: input_select.zigbee2mqtt_log_level
@@ -131,7 +130,6 @@ automation:
   - id: zigbee2mqtt_join_enabled
     alias: "Zigbee2mqtt: Abilita Join"
     initial_state: "on"
-    hide_entity: true
     trigger:
       platform: state
       entity_id: switch.Zigbee2mqtt_Abilita_join
@@ -146,7 +144,6 @@ automation:
   - id: zigbee2mqtt_join_disabled
     alias: "Zigbee2mqtt: Disabilita Join"
     initial_state: "on"
-    hide_entity: true
     trigger:
       - platform: event
         event_type: timer.finished
@@ -175,6 +172,7 @@ history:
       - sensor.zigbee2mqtt_versione_coordinator
       #- sensor.zigbee2mqtt_nuova_versione_disponibile
       - sensor.zigbee2mqtt_networkmap
+      - timer.zigbee_permit_join
 
 ######################################################################
 # Logbook
@@ -189,6 +187,7 @@ logbook:
       - sensor.zigbee2mqtt_versione_coordinator
       #- sensor.zigbee2mqtt_nuova_versione_disponibile
       - sensor.zigbee2mqtt_networkmap
+      - timer.zigbee_permit_join
 
 ######################################################################
 # Recorder
@@ -203,3 +202,4 @@ recorder:
       - sensor.zigbee2mqtt_versione_coordinator
       #- sensor.zigbee2mqtt_nuova_versione_disponibile
       - sensor.zigbee2mqtt_networkmap
+      - timer.zigbee_permit_join
