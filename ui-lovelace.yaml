@@ -1396,12 +1396,12 @@ views:
         - sensor.speedtest_ping
         - sensor.speedtest_download
         - sensor.speedtest_upload          
-      #- type: glance
-      #  title: pfSense
-      #  entities: 
-      #    - sensor.freebsd_router_kbyte_sec_received
-      #    - sensor.freebsd_router_kbyte_sec_sent
-      
+      - type: glance
+        title: pfSense
+        entities: 
+          - sensor.freebsd_router_kib_sec_received
+          - sensor.freebsd_router_kib_sec_sent
+
 ######################################################################
 # Zigbee
 ######################################################################
@@ -1577,5 +1577,8 @@ views:
           title: Informazioni Varie
           show_header_toggle: false
           entities:
+          - sensor.home_assistant_current_version
+          - sensor.zigbee2mqtt_versione_bridge
+          - sensor.zigbee2mqtt_versione_coordinator
           - sensor.ssl_certificate
           - input_boolean.update
