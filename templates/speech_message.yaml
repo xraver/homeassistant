@@ -1,0 +1,190 @@
+######################################################################
+# Speech Engine Message
+######################################################################
+
+>-
+  {# *********************************************** #}
+  {# ***************** Check Input ***************** #}
+  {# *********************************************** #}
+  {% if enable_greeting is not defined %}
+    {% set enable_greeting=0 %}
+  {% endif %}
+  {% if enable_status is not defined %}
+    {% set enable_status=0 %}
+  {% endif %}
+  {% if enable_location is not defined %}
+    {% set enable_location=0 %}
+  {% endif %}
+  {% if location_people_start is not defined %}
+    {% set location_people_start=1 %}
+  {% endif %}
+  {% if location_people_num is not defined %}
+    {% set location_people_num=2 %}
+  {% endif %}          
+  {% if enable_car is not defined %}
+    {% set enable_car=0 %}
+  {% endif %}
+  
+  {# *********************************************** #}
+  {# ******************** Macro ******************** #}
+  {# *********************************************** #}
+  
+  {# Greeting Message #}
+  {%- macro greeting() -%}
+    {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 12 %}
+      Buongiorno.
+    {% elif now().strftime('%H')|int >= 12 and now().strftime('%H')|int < 17 %}
+      Buonpomeriggio.
+    {% elif now().strftime('%H')|int >= 17 and now().strftime('%H')|int < 23 %}
+      Buonasera.
+    {% else %}
+      Buonanotte.
+    {% endif %}
+  {%- endmacro -%}
+  
+  {# Time & Date #}
+  {%- macro time_and_date() -%}
+    {% set hour = now().strftime('%H') %}
+    {% set min = now().strftime('%M') %}
+    {% set day = now().strftime('%d') %}
+    {% set mounth = now().strftime('%B') %}
+    {% set year = now().strftime('%Y') %}
+    Sono le {{ hour }} e {{ min }} del {{ day }} {{ mounth }} {{ year }}
+  {%- endmacro -%}
+  
+  {# Door Status #}
+  {%- macro status_door() -%}
+    {% for entity_id in states.group.doors.attributes.entity_id  %}
+      {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+      {% if is_state(entity_id, 'off') %}
+        La {{ name }} è chiusa.
+      {% else %}
+        La {{ name }} è aperta.
+      {% endif %}
+    {%- endfor %}
+  {%- endmacro -%}
+  
+  {# Lights Status #}
+  {%- macro status_lights() -%}
+    {% for entity_id in states.group.lights.attributes.entity_id  %}
+      {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+      {% if is_state(entity_id, 'off') %}
+        La {{ name }} è spenta.
+      {% else %}
+        La {{ name }} è accesa.
+      {% endif %}
+    {%- endfor %}
+  {%- endmacro -%}
+  
+  {# Covers Status #}
+  {%- macro status_covers() -%}
+    {% for entity_id in states.group.covers.attributes.entity_id %}
+      {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+      {% set perc = state_attr(entity_id, 'current_position') %}
+      {% if perc | int < 25 %}
+        La {{ name }} è chiusa.
+      {% else %}
+        La {{ name }} è aperta al {{ perc }} percento.
+      {% endif %}
+    {%- endfor %}
+  {%- endmacro -%}
+  
+  {# Consumption Status #}
+  {%- macro status_consumption() -%}
+  "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"
+  {%- endmacro -%}
+  
+  {# Car Status #}
+  {%- macro status_car() -%}
+    {% if is_state('device_tracker.wdd1760081v167576', state_attr('zone.home', 'friendly_name')) %}
+      {% set car_position = "in garage" %}
+    {% else %}
+      {% set car_position = "fuori" %}
+    {% endif %}
+    {% if is_state('binary_sensor.ff590mr_locked', 'off') %}
+      {% set car_lock = "chiusa" %}
+    {% else %}
+      {% set car_lock = "aperta" %}
+    {% endif %}
+    {% if is_state('binary_sensor.ff590mr_windows_closed_2', 'off') %}
+      {% set car_windows = "chiusi" %}
+    {% else %}
+      {% set car_windows = "aperti" %}
+    {% endif %}
+    La Mercedes si trova {{ car_position }}. è {{ car_lock }} con i finestrini {{ car_windows }}.
+    Il livello del carburante è {{ states('sensor.ff590mr_fuel_level') }} percento.
+    {% if is_state('binary_sensor.ff590mr_warning_brakefluid', 'on') or
+          is_state('binary_sensor.ff590mr_warning_coolantlevellow', 'on') or
+          is_state('binary_sensor.ff590mr_warning_washwater', 'on') %}
+      Sono inoltre presenti allarmi.
+    {% endif %}
+  {%- endmacro -%}
+  
+  {# Location Status #}
+  {%- macro status_location(start, num) -%}
+    {% for entity_id in states.group.people.attributes.entity_id %}
+      {% set name = state_attr(entity_id, 'friendly_name') %}
+      {% if is_state(entity_id, 'not_home') %}
+        {% set position = state_attr(entity_id, 'address') %}
+      {% else %}
+        {% set position = states(entity_id) %}
+      {% endif %}
+      
+      {% if (loop.index >= start|int) and (loop.index < num|int+start|int) %}
+        La posizione di {{ name }} è {{ position }}.
+      {% endif %}              
+    {%- endfor %}
+  {%- endmacro -%}
+  
+  {# End Message #}
+  {%- macro end_message() -%}
+    {% if enable_status | int == 1 %}
+      {{ [
+      "Spero che il report ti abbia soddisfatto!",
+      "Il report è concluso.",
+      "Alla prossima!",
+      "Buon proseguimento!",
+      "Non ho altro da comunicare."
+      ] | random }}
+    {% endif %}
+  {%- endmacro -%}
+  
+  {# *********************************************** #}
+  {# ******************* Message ******************* #}
+  {# *********************************************** #}
+  
+  {# Greeting Message #}
+  {% if enable_greeting | int == 1 %}
+    {{ greeting() }}
+  {% endif %}
+  
+  {# Home Status #}
+  {% if enable_status | int == 1 %}
+      
+    {{ time_and_date() }}
+    
+    {{ status_door() }}
+    
+    {{ status_lights() }}
+      
+    {{ status_covers() }}
+    
+    {{ status_consumption() }}
+                    
+  {% endif %}
+  
+  {# Location Info #}
+  {% if (enable_status | int == 1) or (enable_location | int == 1) %}
+    {{ status_location(location_people_start, location_people_num) }}
+  {% endif %}
+  
+  {# Car Status #}          
+  {% if (enable_status | int == 1) or (enable_car | int == 1) %}              
+    {{ status_car() }}
+  {% endif %}
+  
+  {# generic message #}
+  {{ message }}
+  
+  {# end message #}
+  {{ end_message() }}
