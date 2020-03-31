@@ -27,8 +27,7 @@ frontend:
 config:
 
 # Lovelace UI Mode
-lovelace:
-  mode: yaml
+lovelace: !include lovelace.yaml
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
@@ -118,6 +117,9 @@ shell_command: !include_dir_merge_named shell_command
 
 # Device Tracker
 device_tracker: !include_dir_merge_list device_tracker/
+
+# Proximity sensor:
+#proximity: !include_dir_merge_list proximity/
 
 # Notification
 notify: !include_dir_merge_list notify/

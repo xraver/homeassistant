@@ -1,0 +1,150 @@
+######################################################################
+# Lovelace UI - Sistema
+######################################################################
+
+title: Sistema Home Assistant
+background: var(--background-image)
+views:
+######################################################################
+# Settings
+######################################################################
+  - title: Configurazione
+    id: settings
+    icon: mdi:settings
+    badges:
+      - binary_sensor.home_mode
+      - binary_sensor.guard_mode
+      - binary_sensor.speech_notifications
+      - binary_sensor.text_notifications
+#    panel: true
+    cards:
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Automazioni
+          show_header_toggle: false
+          entities:
+          #- automation.modalita_notte
+          - automation.risveglio_giorgio
+          #- automation.saluto_di_benvenuto
+          #- automation.saluto_orario
+        - type: entities
+          title: Configurazione Notifiche
+          show_header_toggle: false
+          entities:
+          - input_boolean.speech_notifications
+          - input_boolean.text_notifications
+
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Controlli
+          show_header_toggle: false
+          entities:
+          - script.homeassistant_restart
+          - script.homeassistant_clearlog
+          - script.homeassistant_google_home_sync
+        - type: entities
+          title: Operazione sui Dispositivi
+          show_header_toggle: false
+          entities:
+          - script.shelly_upgrade
+          - script.shelly_reboot
+
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Informazioni Varie
+          show_header_toggle: false
+          entities:
+          - sensor.home_assistant_current_version
+          - sensor.zigbee2mqtt_versione_bridge
+          - sensor.zigbee2mqtt_versione_coordinator
+          - sensor.ssl_certificate
+          - input_boolean.update
+
+######################################################################
+# Network
+######################################################################
+  - title: Dispositivi di Rete
+    id: network
+    icon: mdi:lan
+    cards:
+      - type: glance
+        title: External IP 
+        entities:
+          - sensor.ip_1
+          - sensor.ip_2
+      - type: glance
+        title: Speed Test
+        entities:
+        - sensor.speedtest_ping
+        - sensor.speedtest_download
+        - sensor.speedtest_upload          
+      - type: glance
+        title: pfSense
+        entities: 
+          - sensor.freebsd_router_kib_sec_received
+          - sensor.freebsd_router_kib_sec_sent
+
+######################################################################
+# Zigbee
+######################################################################
+  - title: Zigbee
+    id: zigbee
+    icon: mdi:zigbee
+    #panel: true # this renders the first card on full width, other cards in this view will not be rendered
+    cards:
+      - type: entities
+        title: Stato Sistema Zigbee2mqtt
+        show_header_toggle: false
+        entities:
+          - sensor.zigbee2mqtt_stato_bridge
+          - sensor.zigbee2mqtt_stato_permit_join
+          - sensor.zigbee2mqtt_stato_log_level
+          - sensor.zigbee2mqtt_versione_bridge
+          - sensor.zigbee2mqtt_versione_coordinator
+          
+      - type: entities
+        title: Operazioni Sistema Zigbee2mqtt
+        show_header_toggle: false
+        entities:
+          - switch.zigbee2mqtt_abilita_join
+          - input_select.zigbee2mqtt_log_level
+
+      - type: entities
+        title: Stato Batteria ZigBee Devices
+        show_header_toggle: false
+        entities:
+        - type: custom:battery-entity
+          entity: sensor.porta_casa_batteria
+        - type: custom:battery-entity
+          entity: sensor.porta_casa_2_batteria
+        - type: custom:battery-entity
+          entity: sensor.pulsante_batteria
+
+      - type: custom:zigbee2mqtt-networkmap
+        title: Zigbee2mqtt Network Map
+        entity: sensor.zigbee2mqtt_networkmap
+        # the following are optional:
+        mqtt_base_topic: zigbee2mqtt # if you change base_topic of Zigbee2mqtt, change it accordingly
+        force: 3000 # decrease it to get smaller map if you have many devices
+        node_size: 16
+        font_size: 12
+        link_width: 2
+        height: 400 # height of the card
+        # use this css config or use whatever css tech to change look and feel,
+        # the same variable can also be used in Home Assistant themes, see https://www.home-assistant.io/components/frontend/#defining-themes
+        css: |
+          :host {
+            --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);
+            --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;
+            --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);
+            --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);
+            --zigbee2mqtt-networkmap-hover-color: #be385d;
+            --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);
+            --zigbee2mqtt-networkmap-label-color: #127862;
+            --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);
+            --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);
+            --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);
+          }

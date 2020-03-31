@@ -1,0 +1,903 @@
+######################################################################
+# Lovelace UI Multimedia
+######################################################################
+
+title: Multimedia
+background: var(--background-image)
+views:
+######################################################################
+# Multimedia
+######################################################################
+  - title: TV Sony
+    id: multimedia
+    icon: mdi:television
+    cards:
+      - type: vertical-stack
+        title: TV Sala
+        cards:
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: Sony KD-55XF8596
+              style:
+                - background-color: rgb(46, 46, 46)
+                - color: white
+        # Top Botton
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              icon: mdi:television
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              size: 20%
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_input
+            - type: "custom:button-card"
+              icon: mdi:microphone
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              size: 20%
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_assists
+            - type: "custom:button-card"
+              entity: media_player.tv_sala
+              icon: mdi:power
+              size: 20%
+              show_name: false
+              show_state: false
+              state:
+                - value: 'off'
+                  color: red
+                - value: 'on'
+                  color: green
+              tap_action:
+                action: call-service
+                service: script.turn_on
+                service_data:
+                  entity_id: script.tv_sala_toggle
+        # Top Buttons 2
+        - type: horizontal-stack
+          cards:
+            - type: picture-elements
+              image: /local/images/remote/backgrounds/bg_app_top.png
+              elements:
+              # Digital / Analog
+              - type: image
+                image: /local/images/remote/labels/digital_analog.png
+                style:
+                  top: 30%
+                  left: 16%
+                  width: 16%
+                tap_action:
+                  action: none
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 65%
+                  left: 15%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_digital
+              # TV / Radio
+              - type: image
+                image: /local/images/remote/labels/tv_radio.png
+                style:
+                  top: 30%
+                  left: 38%
+                  width: 16%
+                tap_action:
+                  action: none
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 65%
+                  left: 38%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_tv_radio
+              # Exit
+              - type: image
+                image: /local/images/remote/labels/exit.png
+                style:
+                  top: 30%
+                  left: 62%
+                  width: 16%
+                tap_action:
+                  action: none
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 65%
+                  left: 62%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_exit
+              # Ext.Box Menu
+              - type: image
+                image: /local/images/remote/labels/ext_box_menu.png
+                style:
+                  top: 30%
+                  left: 85%
+                  width: 16%
+                tap_action:
+                  action: none
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 65%
+                  left: 85%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_exit
+        # Numeric Button
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '1 ./'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num1
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '2 abc'
+              show_icon: false
+              style:
+                - font-size: 7px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num2
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '3 def'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num3
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '4 ghi'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num4
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '5 jkl'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num5
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '6 mno'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num6
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '7 pqrs'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num7
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '8 tuv'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num8
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '9 wyz'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num9
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '?'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_display
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: '0'
+              show_icon: false
+              style:
+                - font-size: 12px
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_num0
+            - type: "custom:button-card"
+              icon: mdi:card-text-outline
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              size: 12%
+              tap_action:
+                action: call-service
+                service: shell_command.bravia_teletext
+        # Google Play & Netflix
+        - type: horizontal-stack
+          cards:
+          - type: picture-elements
+            image: /local/images/remote/backgrounds/bg_app.png
+            elements:
+              - type: image
+                image: /local/images/remote/google_play.png
+                style:
+                  top: 50%
+                  left: 25%
+                  width: 35%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_googleplay
+              - type: image
+                image: /local/images/remote/netflix.png
+                style:
+                  top: 50%
+                  left: 75%
+                  width: 35%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_netflix
+        # Colored Buttons
+        - type: horizontal-stack
+          cards:
+            - type: picture-elements
+              image: /local/images/remote/backgrounds/bg_app.png
+              elements:
+              - type: image
+                image: /local/images/remote/red_button.png
+                style:
+                  top: 50%
+                  left: 15%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_red
+              - type: image
+                image: /local/images/remote/green_button.png
+                style:
+                  top: 50%
+                  left: 38%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_green
+              - type: image
+                image: /local/images/remote/yellow_button.png
+                style:
+                  top: 50%
+                  left: 62%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_yellow
+              - type: image
+                image: /local/images/remote/blue_button.png
+                style:
+                  top: 50%
+                  left: 85%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_blue
+        # Dpad buttons
+        - type: horizontal-stack
+          cards:
+            - type: picture-elements
+              image: /local/images/remote/backgrounds/dpad.png
+              elements:
+                - type: image
+                  image: /local/images/remote/confirm.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_confirm
+                  style:
+                    top: 50%
+                    left: 50%
+                    width: 10%
+                - type: image
+                  image: /local/images/remote/arrow_left.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_left
+                  style:
+                    top: 50%
+                    left: 27%
+                    width: 15%
+                - type: image
+                  image: /local/images/remote/arrow_right.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_right
+                  style:
+                    top: 50%
+                    left: 73%
+                    width: 15%
+                - type: image
+                  image: /local/images/remote/arrow_up.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_up
+                  style:
+                    top: 23%
+                    left: 50%
+                    width: 15%
+                - type: image
+                  image: /local/images/remote/arrow_down.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_down
+                  style:
+                    top: 77%
+                    left: 50%
+                    width: 15%
+                - type: image
+                  image: /local/images/remote/labels/action_menu.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_actionmenu
+                  style:
+                    top: 6%
+                    left: 50%
+                    width: 45%
+                - type: image
+                  image: /local/images/remote/labels/guide.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_gguide
+                  style:
+                    top: 23%
+                    left: 13%
+                    width: 20%
+                - type: image
+                  image: /local/images/remote/labels/apps.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_applicationlauncher
+                  style:
+                    top: 23%
+                    left: 87%
+                    width: 20%
+                - type: image
+                  image: /local/images/remote/labels/back.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_return
+                  style:
+                    top: 77%
+                    left: 13%
+                    width: 20%
+                - type: image
+                  image: /local/images/remote/labels/home.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_home
+                  style:
+                    top: 77%
+                    left: 87%
+                    width: 20%
+                - type: image
+                  image: /local/images/remote/labels/tv.png
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_tv
+                  style:
+                    top: 94%
+                    left: 50%
+                    width: 20%
+        # Volume & Channels Buttons
+        - type: horizontal-stack
+          cards:
+            - type: picture-elements
+              image: /local/images/remote/backgrounds/bg_volume.png
+              elements:
+                # Jump
+                - type: icon
+                  icon: mdi:repeat
+                  style:
+                    top: 34%
+                    left: 65%
+                    color: white
+                    --iron-icon-height: 16%
+                    --iron-icon-width: 16%
+                  tap_action:
+                    action: none
+                - type: image
+                  image: /local/images/remote/black_button.png
+                  style:
+                    top: 46%
+                    left: 50%
+                    width: 15%
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_jump
+                # Volume Mute
+                - type: icon
+                  icon: mdi:volume-mute
+                  style:
+                    top: 64%
+                    left: 65%
+                    color: white
+                    --iron-icon-height: 16%
+                    --iron-icon-width: 16%
+                  tap_action:
+                    action: none
+                - type: image
+                  image: /local/images/remote/black_button.png
+                  style:
+                    top: 76%
+                    left: 50%
+                    width: 15%
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_mute
+                # Volume Up/Down
+                - type: image
+                  image: /local/images/remote/labels/volume.png
+                  style:
+                    top: 15%
+                    left: 20%
+                    width: 20%
+                  tap_action:
+                    action: none
+                - type: image
+                  image: /local/images/remote/chngbtn.png
+                  style:
+                    top: 60%
+                    left: 20%
+                    width: 15%
+                - type: image
+                  image: /local/images/remote/plus.png
+                  style:
+                    top: 40%
+                    left: 20%
+                    width: 10%
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_volumeup
+                - type: image
+                  image: /local/images/remote/minus.png
+                  style:
+                    top: 80%
+                    left: 20%
+                    width: 10%
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_volumedown
+                # Channels Up/Down
+                - type: image
+                  image: /local/images/remote/labels/prog.png
+                  style:
+                    top: 15%
+                    left: 80%
+                    width: 20%
+                  tap_action:
+                    action: none
+                - type: image
+                  image: /local/images/remote/chngbtn.png
+                  tap_action:
+                    action: call-service
+                  style:
+                    top: 60%
+                    left: 80%
+                    width: 15%
+                - type: image
+                  image: /local/images/remote/plus.png
+                  style:
+                    top: 40%
+                    left: 80%
+                    width: 10%
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_channelup
+                - type: image
+                  image: /local/images/remote/minus.png
+                  style:
+                    top: 80%
+                    left: 80%
+                    width: 10%
+                  tap_action:
+                    action: call-service
+                    service: shell_command.bravia_channeldown
+        # Play Pause Block
+        - type: horizontal-stack
+          cards:
+            - type: picture-elements
+              image: /local/images/remote/backgrounds/bg_volume.png
+              elements:
+              # First Raw
+              # Audio
+              - type: image
+                image: /local/images/remote/labels/audio.png
+                style:
+                  top: 10%
+                  left: 15%
+                  width: 16%
+                tap_action:
+                  action: none
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 25%
+                  left: 15%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_audio
+              # Rewind
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 25%
+                  left: 38%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:rewind
+                style:
+                  top: 25%
+                  left: 56%
+                  --iron-icon-height: 16%
+                  --iron-icon-width: 16%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_rewind
+              # Play
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 25%
+                  left: 62%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:play
+                style:
+                  top: 25%
+                  left: 73%
+                  --iron-icon-height: 24%
+                  --iron-icon-width: 24%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_play
+              # Forward
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 25%
+                  left: 85%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:fast-forward
+                style:
+                  top: 25%
+                  left: 88%
+                  --iron-icon-height: 60%
+                  --iron-icon-width: 60%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_forward
+              # Second Raw
+              # Subtitles
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 50%
+                  left: 15%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:subtitles-outline
+                style:
+                  top: 50%
+                  left: 42%
+                  --iron-icon-height: 9%
+                  --iron-icon-width: 9%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_subtitle
+              # Prev
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 50%
+                  left: 38%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:skip-backward
+                style:
+                  top: 50%
+                  left: 56%
+                  --iron-icon-height: 15%
+                  --iron-icon-width: 15%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_prev
+              # Pause
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 50%
+                  left: 62%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:pause
+                style:
+                  top: 50%
+                  left: 73%
+                  --iron-icon-height: 24%
+                  --iron-icon-width: 24%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_pause
+              # Next
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 50%
+                  left: 85%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:skip-forward
+                style:
+                  top: 50%
+                  left: 88%
+                  --iron-icon-height: 55%
+                  --iron-icon-width: 55%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_next
+              # Third Raw
+              # Help
+              - type: image
+                image: /local/images/remote/labels/help.png
+                style:
+                  top: 60%
+                  left: 15%
+                  width: 16%
+                tap_action:
+                  action: none
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 75%
+                  left: 15%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_help
+              # Rec
+              - type: image
+                image: /local/images/remote/labels/rec.png
+                style:
+                  top: 60%
+                  left: 38%
+                  width: 16%
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 75%
+                  left: 38%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_rec
+              - type: image
+                image: /local/images/remote/labels/rec_button.png
+                style:
+                  top: 75%
+                  left: 38%
+                  width: 5%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_rec
+              # Stop
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 75%
+                  left: 62%
+                  width: 15%
+                tap_action:
+                  action: none
+              - type: icon
+                icon: mdi:stop
+                style:
+                  top: 75%
+                  left: 73%
+                  --iron-icon-height: 24%
+                  --iron-icon-width: 24%
+                  color: white
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_stop
+              # Title List
+              # GRGR
+              - type: image
+                image: /local/images/remote/labels/title_list.png
+                style:
+                  top: 60%
+                  left: 85%
+                  width: 16%
+              - type: image
+                image: /local/images/remote/black_button.png
+                style:
+                  top: 75%
+                  left: 85%
+                  width: 15%
+                tap_action:
+                  action: call-service
+                  service: shell_command.bravia_forward
+
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: S O N Y
+              style:
+                - background-color: rgb(46, 46, 46)
+                - color: white
+        - type: horizontal-stack
+          cards:
+            - type: "custom:button-card"
+              color_type: label-card
+              color: rgb(46, 46, 46)
+              name: TV
+              style:
+                - background-color: rgb(46, 46, 46)
+                - color: white
+
+      - type: vertical-stack
+        title: TV Sala
+        cards:
+        - type: media-control
+          entity: media_player.tv_sala
+
+######################################################################
+# Google Home
+######################################################################
+#  - title: Google Home
+#    id: settings
+#    icon: mdi:google
+#    panel: true
+#    cards:
+      # Google Home
+      - type: vertical-stack
+        title: Google Home Mini
+        cards:
+        
+        - type: entities
+          title: Google Mini Home Cucina
+          show_header_toggle: false
+          entities:
+          - media_player.google_home
+          - input_text.google_home_speak
+        
+        - type: horizontal-stack
+          cards:
+          - type: entity-button
+            name: Affare
+            icon: mdi:numeric-1
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice_1
+          - type: entity-button
+            name: Belan
+            icon: mdi:numeric-2
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice_2
+          - type: entity-button
+            name: Schifezza
+            icon: mdi:numeric-3
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice_3
+          - type: entity-button
+            name: Che Schifo è?
+            icon: mdi:numeric-4
+            entity: script.laura_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.laura_voice_4
+                
+        - type: horizontal-stack
+          cards:
+          - type: entity-button
+            name: I'm Babu
+            icon: mdi:numeric-1
+            entity: script.babu_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.babu_voice_1
+          - type: entity-button
+            name: Heheeeee
+            icon: mdi:numeric-2
+            entity: script.babu_voice
+            tap_action:
+              action: call-service
+              service: script.turn_on
+              service_data:
+                entity_id: script.babu_voice_2
