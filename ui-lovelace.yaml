@@ -1408,7 +1408,6 @@ views:
   - title: Zigbee
     id: zigbee
     icon: mdi:zigbee
-    cards:
     #panel: true # this renders the first card on full width, other cards in this view will not be rendered
     cards:
       - type: entities
