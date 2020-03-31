@@ -14,6 +14,11 @@ exclude:
     - sensor.date
     - sensor.time
     - sensor.time_date
+    # Sun & Weather
+    - sun.sun
+    - sensor.yr_symbol
+    # Hacs
+    - sensor.hacs
     # System
     - sensor.home_assistant_current_version
     - sensor.ssl_certificate
