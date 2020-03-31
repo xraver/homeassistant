@@ -1,34 +1,26 @@
 ######################################################################
-# Alarm Package
+# Alarm Package - Input Booleans
 ######################################################################
 
-######################################################################
-# Input Booleans
-######################################################################
 input_boolean:
 
-######################################################################
-# Alarms: Generic 
-######################################################################
+  # Generic Alarms
   alarms:
     name: Allarme
     icon: mdi:alarm-light-outline
 
-######################################################################
-# Alarms: Door
-######################################################################
+#  # Alarms: Door
 #  door_alarm:
 #    name: Allarme Porta
 #    icon: mdi:door-open
 
 ######################################################################
-# Binary Sensors
+# Alarm Package - Binary Sensors
 ######################################################################
+
 binary_sensor:
 
-######################################################################
-# Alarm Binary Sensor
-######################################################################
+  # Generic Alarms
   - platform: template
     sensors:
       alarms:
@@ -44,17 +36,19 @@ binary_sensor:
           {% endif %}
 
 ######################################################################
-# Automations
+# Alarm Package - Automation
 ######################################################################
+
 automation:
 
-######################################################################
-# Alarm Automation: Aknowledge Alarms
-#
-# Actions:
-# - persistent_notification.dismiss
-# - script.stop_alarm
-######################################################################
+  ######################################################################
+  # Alarm Automation: Aknowledge Alarms
+  #
+  # Actions:
+  # - persistent_notification.dismiss
+  # - script.stop_alarm
+  ######################################################################
+
   - alias: "Alarms: Riconoscimento Allarmi"
     initial_state: 'on'
 
@@ -62,6 +56,6 @@ automation:
       platform: state
       entity_id: input_boolean.alarms
       to: 'off'
-
+      
     action:
       - service: script.stop_alarm

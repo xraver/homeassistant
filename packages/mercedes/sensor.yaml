@@ -1,11 +1,12 @@
 ######################################################################
 # Mercedes Package - Sensor
 ######################################################################
+
 sensor:
 
-######################################################################
-# Sensor: Tire Pressure Front Left
-######################################################################
+  ######################################################################
+  # Sensor: Tire Pressure Front Left
+  ######################################################################
 
   - platform: template
     sensors:
@@ -17,9 +18,9 @@ sensor:
         icon_template: mdi:car-tire-alert
         device_class: pressure
       
-######################################################################
-# Sensor: Tire Pressure Front Right
-######################################################################
+  ######################################################################
+  # Sensor: Tire Pressure Front Right
+  ######################################################################
 
   - platform: template
     sensors:
@@ -31,9 +32,9 @@ sensor:
         icon_template: mdi:car-tire-alert
         device_class: pressure
       
-######################################################################
-# Sensor: Tire Pressure Rear Left
-######################################################################
+  ######################################################################
+  # Sensor: Tire Pressure Rear Left
+  ######################################################################
 
   - platform: template
     sensors:
@@ -45,9 +46,9 @@ sensor:
         icon_template: mdi:car-tire-alert
         device_class: pressure
 
-######################################################################
-# Sensor: Tire Pressure Rear Right
-######################################################################
+  ######################################################################
+  # Sensor: Tire Pressure Rear Right
+  ######################################################################
 
   - platform: template
     sensors:
@@ -59,104 +60,104 @@ sensor:
         icon_template: mdi:car-tire-alert
         device_class: pressure
 
-######################################################################
-# Sensor: Door Front Left
-######################################################################
+  ######################################################################
+  # Sensor: Door Front Left
+  ######################################################################
 
-#- platform: template
-#  sensors:
-#    ff590mr_door_front_left:
-#      friendly_name: Anteriore Sinistra
-#      entity_id: sensor.ff590mr_lock
-#      value_template: >-
-#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-#          Chiusa e Bloccata
-#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-#          Chiuse
-#        {% else %}
-#          Aperta
-#        {% endif %}
-#      icon_template: mdi:car-door
+  #- platform: template
+  #  sensors:
+  #    ff590mr_door_front_left:
+  #      friendly_name: Anteriore Sinistra
+  #      entity_id: sensor.ff590mr_lock
+  #      value_template: >-
+  #        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+  #          Chiusa e Bloccata
+  #        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+  #          Chiuse
+  #        {% else %}
+  #          Aperta
+  #        {% endif %}
+  #      icon_template: mdi:car-door
 
-######################################################################
-# Sensor: Door Front Right
-######################################################################
+  ######################################################################
+  # Sensor: Door Front Right
+  ######################################################################
 
-#- platform: template
-#  sensors:
-#    ff590mr_door_front_right:
-#      friendly_name: Anteriore Destra
-#      entity_id: sensor.ff590mr_lock
-#      value_template: >-
-#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-#          Chiusa e Bloccata
-#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-#          Chiuse
-#        {% else %}
-#          Aperta
-#        {% endif %}
-#      icon_template: mdi:car-door
+  #- platform: template
+  #  sensors:
+  #    ff590mr_door_front_right:
+  #      friendly_name: Anteriore Destra
+  #      entity_id: sensor.ff590mr_lock
+  #      value_template: >-
+  #        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+  #          Chiusa e Bloccata
+  #        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+  #          Chiuse
+  #        {% else %}
+  #          Aperta
+  #        {% endif %}
+  #      icon_template: mdi:car-door
 
-######################################################################
-# Sensor: Door Rear Left
-######################################################################
+  ######################################################################
+  # Sensor: Door Rear Left
+  ######################################################################
 
-#- platform: template
-#  sensors:
-#    ff590mr_door_rear_left:
-#      friendly_name: Posteriore Sinistra
-#      entity_id: sensor.ff590mr_lock
-#      value_template: >-
-#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-#          Chiusa e Bloccata
-#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-#          Chiuse
-#        {% else %}
-#          Aperta
-#        {% endif %}
-#      icon_template: mdi:car-door
+  #- platform: template
+  #  sensors:
+  #    ff590mr_door_rear_left:
+  #      friendly_name: Posteriore Sinistra
+  #      entity_id: sensor.ff590mr_lock
+  #      value_template: >-
+  #        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+  #          Chiusa e Bloccata
+  #        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+  #          Chiuse
+  #        {% else %}
+  #          Aperta
+  #        {% endif %}
+  #      icon_template: mdi:car-door
 
-######################################################################
-# Sensor: Door Rear Right
-######################################################################
+  ######################################################################
+  # Sensor: Door Rear Right
+  ######################################################################
 
-#- platform: template
-#  sensors:
-#    ff590mr_door_rear_right:
-#      friendly_name: Posteriore Destra
-#      entity_id: sensor.ff590mr_lock
-#      value_template: >-
-#        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
-#          Chiusa e Bloccata
-#        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
-#          Chiuse
-#        {% else %}
-#          Aperta
-#        {% endif %}
-#      icon_template: mdi:car-door
+  #- platform: template
+  #  sensors:
+  #    ff590mr_door_rear_right:
+  #      friendly_name: Posteriore Destra
+  #      entity_id: sensor.ff590mr_lock
+  #      value_template: >-
+  #        {% if is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') %}
+  #          Chiusa e Bloccata
+  #        {% elif is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED') %}
+  #          Chiuse
+  #        {% else %}
+  #          Aperta
+  #        {% endif %}
+  #      icon_template: mdi:car-door
 
-######################################################################
-# Sensor: Trunk
-######################################################################
+  ######################################################################
+  # Sensor: Trunk
+  ######################################################################
 
-#- platform: template
-#  sensors:
-#    ff590mr_trunk:
-#      friendly_name: Bagagliaio
-#      entity_id: sensor.ff590mr_lock
-#      value_template: >-
-#        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') %}
-#          Chiuso e Bloccato
-#        {% elif is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED') %}
-#          Chiuso
-#        {% else %}
-#          Aperto
-#        {% endif %}
-#      icon_template: mdi:car-door
+  #- platform: template
+  #  sensors:
+  #    ff590mr_trunk:
+  #      friendly_name: Bagagliaio
+  #      entity_id: sensor.ff590mr_lock
+  #      value_template: >-
+  #        {% if is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') %}
+  #          Chiuso e Bloccato
+  #        {% elif is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED') %}
+  #          Chiuso
+  #        {% else %}
+  #          Aperto
+  #        {% endif %}
+  #      icon_template: mdi:car-door
 
-######################################################################
-# Sensor: Distance from Start
-######################################################################
+  ######################################################################
+  # Sensor: Distance from Start
+  ######################################################################
 
   - platform: template
     sensors:
@@ -167,9 +168,9 @@ sensor:
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceStart') }}"
         icon_template: mdi:road-variant
 
-######################################################################
-# Sensor: Distance from Reset
-######################################################################
+  ######################################################################
+  # Sensor: Distance from Reset
+  ######################################################################
 
   - platform: template
     sensors:
@@ -180,9 +181,9 @@ sensor:
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceReset') }}"
         icon_template: mdi:road-variant
 
-######################################################################
-# Sensor: Liquid Consumption from Start
-######################################################################
+  ######################################################################
+  # Sensor: Liquid Consumption from Start
+  ######################################################################
 
   - platform: template
     sensors:
@@ -193,9 +194,9 @@ sensor:
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionstart') }}"
         icon_template: mdi:gas-station
 
-######################################################################
-# Sensor: Liquid Consumption from Reset
-######################################################################
+  ######################################################################
+  # Sensor: Liquid Consumption from Reset
+  ######################################################################
 
   - platform: template
     sensors:
@@ -206,9 +207,9 @@ sensor:
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionreset') }}"
         icon_template: mdi:gas-station
 
-######################################################################
-# Sensor: Service Interval Days
-######################################################################
+  ######################################################################
+  # Sensor: Service Interval Days
+  ######################################################################
 
   - platform: template
     sensors:

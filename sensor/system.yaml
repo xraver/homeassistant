@@ -10,6 +10,7 @@
 ######################################################################
 # Sensor: Letsencrypt
 ######################################################################
+
 #- platform: command_line
 #  name: Scadenza Certificato SSL
 #  unit_of_measurement: giorni

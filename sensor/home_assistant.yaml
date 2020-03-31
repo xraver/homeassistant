@@ -29,6 +29,7 @@
 ######################################################################
 # Sensor: Home Assistant version
 ######################################################################
+
 - platform: version
   name: "Home Assistant: Current Version"
   source: docker

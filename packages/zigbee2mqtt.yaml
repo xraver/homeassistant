@@ -1,69 +1,66 @@
 ######################################################################
-# Zigbee2mqtt Package
+# Zigbee2mqtt Package - Sensor
 ######################################################################
 
-######################################################################
-# Timer for joining time remaining (120 sec = 2 min)
-######################################################################
 sensor:
 
-######################################################################
-# Sensor for monitoring the bridge state
-######################################################################
+  ######################################################################
+  # Sensor for monitoring the bridge state
+  ######################################################################
   - platform: mqtt
     name: "Zigbee2mqtt: Stato Bridge"
     state_topic: "zigbee2mqtt/bridge/state"
     icon: mdi:router-wireless
 
-######################################################################
-# Sensor for monitoring the permit_join state
-######################################################################
+  ######################################################################
+  # Sensor for monitoring the permit_join state
+  ######################################################################
   - platform: mqtt
     name: "Zigbee2mqtt: Stato permit join"
     state_topic: "zigbee2mqtt/bridge/config"
     value_template: "{{ value_json.permit_join }}"
     icon: mdi:link-lock
     
-######################################################################
-# Sensor for monitoring the log_level state
-######################################################################
+  ######################################################################
+  # Sensor for monitoring the log_level state
+  ######################################################################
   - platform: mqtt
     name: "Zigbee2mqtt: Stato log level"
     state_topic: "zigbee2mqtt/bridge/config"
     value_template: "{{ value_json.log_level }}"
     icon: mdi:file-document-outline
 
-######################################################################
-# Sensor for Showing the Zigbee2mqtt Version
-######################################################################
+  ######################################################################
+  # Sensor for Showing the Zigbee2mqtt Version
+  ######################################################################
   - platform: mqtt
     name: "Zigbee2mqtt: Versione Bridge"
     state_topic: "zigbee2mqtt/bridge/config"
     value_template: "{{ value_json.version }}"
     icon: mdi:zigbee
 
-######################################################################
-# Sensor for Showing the Coordinator Version
-######################################################################
+  ######################################################################
+  # Sensor for Showing the Coordinator Version
+  ######################################################################
   - platform: mqtt
     name: "Zigbee2mqtt: Versione Coordinator"
     state_topic: "zigbee2mqtt/bridge/config"
     value_template: "{{ value_json.coordinator.meta.revision }}"
     icon: mdi:chip
 
-######################################################################
-# Sensor for Showing the new Zigbee2mqtt Version
-######################################################################
-#  - platform: command_line
-#    name: "Zigbee2mqtt: nuova versione disponibile"
-#    command: 'curl https://api.github.com/repos/Koenkk/zigbee2mqtt/releases/latest'
-#    scan_interval: 3600
-#    value_template: '{{ value_json.tag_name }}'
-#    #icon: mdi:folder-download
+  ######################################################################
+  # Sensor for Showing the new Zigbee2mqtt Version
+  ######################################################################
+  #  - platform: command_line
+  #    name: "Zigbee2mqtt: nuova versione disponibile"
+  #    command: 'curl https://api.github.com/repos/Koenkk/zigbee2mqtt/releases/latest'
+  #    scan_interval: 3600
+  #    value_template: '{{ value_json.tag_name }}'
+  #    #icon: mdi:folder-download
 
-######################################################################
-# Zigbee2mqtt Networkmap
-######################################################################
+  ######################################################################
+  # Zigbee2mqtt Networkmap
+  ######################################################################
   - platform: mqtt
     name: "Zigbee2mqtt: Networkmap"
     state_topic: zigbee2mqtt/bridge/networkmap/raw
@@ -72,9 +69,12 @@ sensor:
     json_attributes_topic: zigbee2mqtt/bridge/networkmap/raw
 
 ######################################################################
-# Switch for enabling joining
+# Zigbee2mqtt Package - Switch
 ######################################################################
+
 switch:
+
+  # Switch for enabling joining 
   - platform: mqtt
     name: "Zigbee2mqtt: Abilita join"
     state_topic: "zigbee2mqtt/bridge/config/permit_join"
@@ -83,9 +83,12 @@ switch:
     payload_off: "false"
 
 ######################################################################
-# Input select for Zigbee2mqtt log level
+# Zigbee2mqtt Package - Input select
 ######################################################################
+
 input_select:
+
+  # Zigbee2mqtt log level
   zigbee2mqtt_log_level:
     name: "Zigbee2mqtt Log Level"
     options:
@@ -97,21 +100,25 @@ input_select:
     icon: mdi:format-list-bulleted
 
 ######################################################################
-# Timer for joining time remaining (120 sec = 2 min)
+# Zigbee2mqtt Package - Timer
 ######################################################################
+
 timer:
+
+  # Timer for joining time remaining (120 sec = 2 min)
   zigbee_permit_join:
     name: Tempo rimasto per il join
     duration: 120
 
 ######################################################################
-# Automations
+# Zigbee2mqtt Package - Automation
 ######################################################################
+
 automation:
 
-######################################################################
-# Automation to change log level
-######################################################################
+  ######################################################################
+  # Automation to change log level
+  ######################################################################
   - id: zigbee2mqtt_change_log_level
     alias: "Zigbee2mqtt: Cambia Log Level"
     initial_state: "on"
@@ -124,9 +131,9 @@ automation:
           payload_template: "{{ states('input_select.zigbee2mqtt_log_level') }}"
           topic: zigbee2mqtt/bridge/config/log_level
 
-######################################################################
-# Automation to start timer when enable join is turned on
-######################################################################
+  ######################################################################
+  # Automation to start timer when enable join is turned on
+  ######################################################################
   - id: zigbee2mqtt_join_enabled
     alias: "Zigbee2mqtt: Abilita Join"
     initial_state: "on"
@@ -138,9 +145,9 @@ automation:
       service: timer.start
       entity_id: timer.zigbee_permit_join
 
-######################################################################
-# Automation to stop timer when switch turned off and turn off switch when timer finished
-######################################################################
+  ######################################################################
+  # Automation to stop timer when switch turned off and turn off switch when timer finished
+  ######################################################################
   - id: zigbee2mqtt_join_disabled
     alias: "Zigbee2mqtt: Disabilita Join"
     initial_state: "on"
@@ -160,8 +167,9 @@ automation:
         entity_id: switch.Zigbee2mqtt_Abilita_join
 
 ######################################################################
-# History
+# Zigbee2mqtt Package - History
 ######################################################################
+
 history:
   exclude:
     entities:
@@ -175,8 +183,9 @@ history:
       - timer.zigbee_permit_join
 
 ######################################################################
-# Logbook
+# Zigbee2mqtt Package - Logbook
 ######################################################################
+
 logbook:
   exclude:
     entities:
@@ -190,8 +199,9 @@ logbook:
       - timer.zigbee_permit_join
 
 ######################################################################
-# Recorder
+# Zigbee2mqtt Package - Recorder
 ######################################################################
+
 recorder:
   exclude:
     entities:

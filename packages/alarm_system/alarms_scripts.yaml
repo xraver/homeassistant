@@ -2,18 +2,15 @@
 # Alarm Script Package
 ######################################################################
 
-######################################################################
-# Scripts
-######################################################################
 script: 
 
-######################################################################
-# Alarm: Start Alarm Sound
-#
-# Operations:
-# - media_player.volume_set
-# - media_player.play_media
-######################################################################
+  ######################################################################
+  # Alarm: Start Alarm Sound
+  #
+  # Operations:
+  # - media_player.volume_set
+  # - media_player.play_media
+  ######################################################################
 
   start_alarm_sound:
     alias: "Allarmi: Avvia Suono"
@@ -29,13 +26,13 @@ script:
           media_content_type: 'audio/mp4'
           media_content_id: 'https://home.giorgioravera.it/local/audio/alarm.mp3'
 
-######################################################################
-# Alarm: Stop Alarm Sound
-#
-# Operations:
-# - media_player.media_stop
-# - script.volume_manager
-######################################################################
+  ######################################################################
+  # Alarm: Stop Alarm Sound
+  #
+  # Operations:
+  # - media_player.media_stop
+  # - script.volume_manager
+  ######################################################################
 
   stop_alarm_sound:
     alias: "Allarmi: Interrompi Suono"
@@ -48,15 +45,15 @@ script:
         data_template:
           media_player: 'media_player.google_home'
 
-######################################################################
-# Alarm: Start Alarm Level 1
-# Inputs:
-# - title
-# - message
-#
-# Operations:
-# - script.notify_text
-######################################################################
+  ######################################################################
+  # Alarm: Start Alarm Level 1
+  # Inputs:
+  # - title
+  # - message
+  #
+  # Operations:
+  # - script.notify_text
+  ######################################################################
 
   start_alarm_level_1:
     alias: "Allarmi: Attiva Allarme 1"
@@ -93,14 +90,14 @@ script:
           enable_persistent: 1
           notification_id: "alarm"
         
-######################################################################
-# Alarm: Start Alarm Level 2
-# Inputs:
-# - level
-#
-# Operations:
-# - start_alarm_sound
-######################################################################
+  ######################################################################
+  # Alarm: Start Alarm Level 2
+  # Inputs:
+  # - level
+  #
+  # Operations:
+  # - start_alarm_sound
+  ######################################################################
 
   start_alarm_level_2:
     alias: "Allarmi: Attiva Allarme 2"
@@ -120,18 +117,18 @@ script:
     
       - service: script.start_alarm_sound
 
-######################################################################
-# Alarm: Start Alarm
-# Inputs:
-# - title
-# - message
-# - level
-#
-# Operations:
-# - input_boolean.turn_on
-# - script.start_alarm_level_1
-# - script.start_alarm_level_2
-######################################################################
+  ######################################################################
+  # Alarm: Start Alarm
+  # Inputs:
+  # - title
+  # - message
+  # - level
+  #
+  # Operations:
+  # - input_boolean.turn_on
+  # - script.start_alarm_level_1
+  # - script.start_alarm_level_2
+  ######################################################################
 
   start_alarm:
     alias: "Allarmi: Attiva Allarme"
@@ -151,13 +148,13 @@ script:
           message:  "{{ message }}"
           level: "{{ level }}"
 
-######################################################################
-# Alarm: Stop Alarm
-#
-# Operations:
-# - stop_alarm_sound
-# - persistent_notification.dismiss
-######################################################################
+  ######################################################################
+  # Alarm: Stop Alarm
+  #
+  # Operations:
+  # - stop_alarm_sound
+  # - persistent_notification.dismiss
+  ######################################################################
 
   stop_alarm:
     alias: "Allarmi: Disattiva Allarme"
