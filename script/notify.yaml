@@ -133,6 +133,12 @@ notify_voice:
     - condition: state
       entity_id: input_boolean.speech_notifications
       state: 'on'
+      
+    - wait_template: >-
+        {% if media_player | length == 0 %}
+          {% set media_player = 'media_player.google_home' %}
+        {% endif %}
+        {{ not is_state(media_player, 'playing') }}
   
     - service: script.volume_manager
       data_template:
