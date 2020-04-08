@@ -1,5 +1,5 @@
 ######################################################################
-# Xiaomi MiJia Door & Window Contact Sensor (MCCGQ01LM)
+# MCCGQ01LM - Xiaomi MiJia door & window contact sensor
 ######################################################################
 
 - platform: "mqtt"
@@ -18,7 +18,7 @@
   value_template: "{{ value_json.linkquality }}"
 
 ######################################################################
-# Xiaomi Aqara Door & Window Contact Sensor (MCCGQ11LM)
+# MCCGQ11LM - Xiaomi Aqara door & window contact sensor
 ######################################################################
 
 - platform: "mqtt"
@@ -37,26 +37,27 @@
   value_template: "{{ value_json.linkquality }}"
 
 ######################################################################
-# Shelly Door/Window
+# WXKG01LM - Xiaomi MiJia wireless switch
 ######################################################################
 
-#- platform: mqtt
-#  name: "Porta Casa 3: Batteria"
-#  state_topic: "shellies/shellydw-B88F53/sensor/battery"
-#  unit_of_measurement: '%'
-#  #availability_topic: "shellies/shellydw-B88F53/online"
-#  #payload_available: "true"
-#  #payload_not_available: "false"
-#  qos: 0
-#  device_class: battery
+- platform: "mqtt"
+  name: "Pulsante: Stato"
+  state_topic: "zigbee2mqtt/0x00158d0004081917"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  icon: "mdi:toggle-switch"
+  value_template: "{{ value_json.click }}"
 
-#- platform: mqtt
-#  name: "Porta Casa 3: Luce"
-#  state_topic: "shellies/shellydw-B88F53/sensor/lux"
-#  unit_of_measurement: 'lux'
-#  #availability_topic: "shellies/shellydw-B88F53/online"
-#  #payload_available: "true"
-#  #payload_not_available: "false"
-#  qos: 0
-#  device_class: illuminance
+- platform: "mqtt"
+  name: "Pulsante: Batteria"
+  state_topic: "zigbee2mqtt/0x00158d0004081917"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
 
+- platform: "mqtt"
+  name: "Pulsante: Stato Link"
+  state_topic: "zigbee2mqtt/0x00158d0004081917"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "-"
+  value_template: "{{ value_json.linkquality }}"
