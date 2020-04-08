@@ -11,8 +11,9 @@
       above: 2950
 
   action:
-    service: script.notify_text
+    service: script.notify_all
     data_template:
       title: "Home Assistant - Allarme Consumo Energetico"
       message: "Consumo energetico elevato ({{ states.sensor.potenza_istantanea.state }})."
       enable_persistent: 0
+      volume_level: 0.4
