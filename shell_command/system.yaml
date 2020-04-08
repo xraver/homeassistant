@@ -1,0 +1,2 @@
+# Docker Restart
+docker_restart: '/sbin/reboot'

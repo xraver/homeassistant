@@ -5,6 +5,12 @@
 script.homeassistant_restart:
   icon: mdi:restart
 
+script.homeassistant_reload_scripts:
+  icon: mdi:reload
+
+script.homeassistant_reload_automations:
+  icon: mdi:reload
+
 script.homeassistant_clearlog:
   icon: mdi:file-document
 
@@ -12,7 +18,7 @@ script.homeassistant_upgrade:
   icon: mdi:update
 
 script.homeassistant_google_home_sync:
-  icon: mdi:google
+  icon: mdi:google-home
 
 input_datetime.away_mode_end:
   icon: mdi:airplane-takeoff

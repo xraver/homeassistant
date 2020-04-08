@@ -1,12 +1,32 @@
 ######################################################################
 # Home Assistant: Restart
-# - homeassistant.restart
+# - shell_command.docker_restart
 ######################################################################
 
 homeassistant_restart:
-  alias: "Riavvio servizio"
+  alias: "Riavvia Home Assistant"
   sequence:
-    - service: homeassistant.restart
+    - service: shell_command.docker_restart
+
+######################################################################
+# Home Assistant: Ricarica Script
+# - script.reload
+######################################################################
+
+homeassistant_reload_scripts:
+  alias: "Ricarica Script"
+  sequence:
+    - service: script.reload
+
+######################################################################
+# Home Assistant: Ricarica Automazioni
+# - script.reload
+######################################################################
+
+homeassistant_reload_automations:
+  alias: "Ricarica Automazioni"
+  sequence:
+    - service: automation.reload
 
 ######################################################################
 # Home Assistant: Clear Log

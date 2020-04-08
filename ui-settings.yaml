@@ -24,6 +24,8 @@ views:
           title: Automazioni
           show_header_toggle: false
           entities:
+          - automation.startup_restart_on_error
+          - automation.startup_google_sync
           #- automation.modalita_notte
           - automation.risveglio_giorgio
           #- automation.saluto_di_benvenuto
@@ -42,6 +44,8 @@ views:
           show_header_toggle: false
           entities:
           - script.homeassistant_restart
+          - script.homeassistant_reload_scripts
+          - script.homeassistant_reload_automations
           - script.homeassistant_clearlog
           - script.homeassistant_google_home_sync
         - type: entities

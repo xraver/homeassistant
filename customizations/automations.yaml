@@ -4,3 +4,9 @@
 
 automation.risveglio_giorgio:
   icon: mdi:alarm
+
+automation.startup_restart_on_error:
+  icon: mdi:restart-alert
+  
+automation.startup_google_sync:
+  icon: mdi:google-home

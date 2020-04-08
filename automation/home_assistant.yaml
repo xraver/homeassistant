@@ -108,23 +108,7 @@
         {% endif %}
       data:
         entity_id: input_boolean.speech_notifications
-   
-######################################################################
-# Home Assistant: Startup Automation
-# - Sync with Google Assistant
-######################################################################
 
-- alias: "Home Assistant: Startup automations"
-  initial_state: 'off'
-
-  trigger:
-    - platform: homeassistant
-      event: start
-
-  action: 
-    - delay: 00:05
-    - service: google_assistant.request_sync
-    
 ######################################################################
 # Home Assistant: Weekly Clean Log
 # - script.homeassistant_clearlog
