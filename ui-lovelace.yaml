@@ -291,6 +291,46 @@ views:
         entity: climate.studio_termostato_studio
       - type: thermostat
         entity: climate.camera_termostato_camera
+        
+      - type: entities
+        title: Operazione sui Dispositivi
+        show_header_toggle: false
+        entities:
+        - type: call-service
+          name: Cucina
+          action_name: Attiva Boost
+          service: climate.set_preset_mode
+          service_data:
+            entity_id: climate.cucina_termostato_cucina
+            preset_mode: boost
+        - type: call-service
+          name: Sala
+          action_name: Attiva Boost
+          service: climate.set_preset_mode
+          service_data:
+            entity_id: climate.sala_termostato_sala
+            preset_mode: boost
+        - type: call-service
+          name: Bagno
+          action_name: Attiva Boost
+          service: climate.set_preset_mode
+          service_data:
+            entity_id: climate.bagno_termostato_bagno
+            preset_mode: boost
+        - type: call-service
+          name: Studio
+          action_name: Attiva Boost
+          service: climate.set_preset_mode
+          service_data:
+            entity_id: climate.studio_termostato_studio
+            preset_mode: boost
+        - type: call-service
+          name: Camera
+          action_name: Attiva Boost
+          service: climate.set_preset_mode
+          service_data:
+            entity_id: climate.camera_termostato_camera
+            preset_mode: boost
 
 ######################################################################
 # People
@@ -310,24 +350,28 @@ views:
         default_zoom: 15
         entities:
         - device_tracker.google_maps_115265981849847357125
+        hours_to_show: 48
       - type: map
         #title: Laura
         aspect_ratio: 16:9
         default_zoom: 15
         entities:
         - device_tracker.google_maps_103158638433668748797
+        hours_to_show: 48
       - type: map
         #title: Anna
         aspect_ratio: 16:9
         default_zoom: 15
         entities:
         - device_tracker.google_maps_113099283296073047871
+        hours_to_show: 48
       - type: map
         #title: Assunta
         aspect_ratio: 16:9
         default_zoom: 15
         entities:
         - device_tracker.google_maps_108517379615429477419
+        hours_to_show: 48
 
 ######################################################################
 # Car

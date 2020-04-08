@@ -38,7 +38,7 @@ climate_daily_schedule:
           {% endif %}
 
 ######################################################################
-# Climate: Away Mode
+# Climate: Away Mode On
 # Inputs:
 # - entity_id
 # - mode
@@ -48,25 +48,44 @@ climate_daily_schedule:
 # - climate.set_temperature
 ######################################################################
 
-climate_away_mode:
-  alias: "Termosifoni: Modalità vacanza"
+climate_away_mode_on:
+  alias: "Termosifoni: Attviva Modalità vacanza"
   sequence:
-    - service: climate.set_operation_mode
+    - service: climate.set_preset_mode
       data_template:
         entity_id: "{{ entity_id }}"
-        operation_mode: >-
-          {% if mode == 'on' %}
-            vacation
-          {% else %}
-            auto
-          {% endif %}
-    - delay: '00:00:30'
+        preset_mode: manual
+    - delay: '00:00:5'
     - service: climate.set_temperature
       data_template:
         entity_id: "{{ entity_id }}"
-        temperature: >-
-          {% if mode == 'on' %}
-            10
-          {% else %}
-            19
-          {% endif %}
+        temperature: 5
+    - delay: '00:00:5'
+    - service: climate.set_preset_mode
+      data_template:
+        entity_id: "{{ entity_id }}"
+        preset_mode: vacation
+    - delay: '00:00:5'
+    - service: climate.set_preset_mode
+      data_template:
+        entity_id: "{{ entity_id }}"
+        preset_mode: vacation
+
+######################################################################
+# Climate: Away Mode Off
+# Inputs:
+# - entity_id
+# - mode
+#
+# Operations:
+# - climate.set_operation_mode
+# - climate.set_temperature
+######################################################################
+
+climate_away_mode_off:
+  alias: "Termosifoni: Disattiva Modalità vacanza"
+  sequence:
+    - service: climate.set_preset_mode
+      data_template:
+        entity_id: "{{ entity_id }}"
+        preset_mode: auto
