@@ -121,6 +121,9 @@ device_tracker: !include_dir_merge_list device_tracker/
 # Proximity sensor:
 #proximity: !include_dir_merge_list proximity/
 
+# Person:
+# person: !include_dir_merge_list person/
+
 # Notification
 notify: !include_dir_merge_list notify/
 

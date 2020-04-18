@@ -14,8 +14,6 @@ resources:
   - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
     type: module
 
-#background: var(--background-image)
-
 dashboards:
   lovelace-multimedia:
     mode: yaml
@@ -23,11 +21,11 @@ dashboards:
     title: Multimedia
     icon: mdi:television
     show_in_sidebar: true
-    require_admin: true
+    require_admin: false
   lovelace-settings:
     mode: yaml
     filename: "ui-settings.yaml"
     title: Sistema
     icon: mdi:settings
     show_in_sidebar: true
-    require_admin: false
+    require_admin: true
