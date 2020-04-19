@@ -41,13 +41,6 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Pulsante: Stato"
-  state_topic: "zigbee2mqtt/0x00158d0004081917"
-  availability_topic: "zigbee2mqtt/bridge/state"
-  icon: "mdi:toggle-switch"
-  value_template: "{{ value_json.click }}"
-
-- platform: "mqtt"
   name: "Pulsante: Batteria"
   state_topic: "zigbee2mqtt/0x00158d0004081917"
   availability_topic: "zigbee2mqtt/bridge/state"

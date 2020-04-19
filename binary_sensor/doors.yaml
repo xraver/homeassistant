@@ -23,19 +23,3 @@
   payload_off: true
   value_template: "{{ value_json.contact }}"
   device_class: "door"
-
-######################################################################
-# Shelly Door/Window
-######################################################################
-
-#- platform: mqtt
-#  name: "Porta Casa 3"
-#  state_topic: "shellies/shellydw-B88F53/sensor/state"
-#  payload_on: "open"
-#  payload_off: "close"
-#  #availability_topic: "shellies/shellydw-B88F53/online"
-#  #payload_available: "true"
-#  #payload_not_available: "false"
-#  qos: 0
-#  device_class: opening
-

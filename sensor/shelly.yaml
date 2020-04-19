@@ -363,34 +363,6 @@
     - uptime
 
 ######################################################################
-# Sensor: Shelly Door/Window
-######################################################################
-
-#- platform: rest
-#  scan_interval: 43200
-#  resource: http://shellydw.giorgioravera.it/status
-#  method: GET
-#  name: shellyplugs_status
-#  #value_template: '{{ value_json.has_update }}'
-#  value_template: >-
-#    {% if value_json.has_update == True %}
-#      on
-#    {% else %}
-#      off
-#    {% endif %}
-#  authentication: basic
-#  username: !secret shelly_user
-#  password: !secret shelly_password
-#  json_attributes:
-#  #  - wifi_sta
-#  #  - mqtt
-#  #  - time
-#  #  - has_update
-#    - mac
-#    - update
-#    - uptime
-
-######################################################################
 # Sensor: Shelly Plug S
 ######################################################################
 
@@ -417,27 +389,3 @@
 #    - mac
 #    - update
 #    - uptime
-
-######################################################################
-# Shelly Door/Window
-######################################################################
-
-#- platform: mqtt
-#  name: "Porta Casa 3: Batteria"
-#  state_topic: "shellies/shellydw-B88F53/sensor/battery"
-#  unit_of_measurement: '%'
-#  #availability_topic: "shellies/shellydw-B88F53/online"
-#  #payload_available: "true"
-#  #payload_not_available: "false"
-#  qos: 0
-#  device_class: battery
-
-#- platform: mqtt
-#  name: "Porta Casa 3: Luce"
-#  state_topic: "shellies/shellydw-B88F53/sensor/lux"
-#  unit_of_measurement: 'lux'
-#  #availability_topic: "shellies/shellydw-B88F53/online"
-#  #payload_available: "true"
-#  #payload_not_available: "false"
-#  qos: 0
-#  device_class: illuminance

@@ -31,20 +31,15 @@ lovelace: !include lovelace.yaml
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-   # api_password: !secret http_password
    base_url: !secret base_url
-   # server_port: 80
-   # ssl_certificate: /var/lib/homeassistant/.homeassistant/fullchain.pem
-   # ssl_key: /var/lib/homeassistant/.homeassistant/privkey.pem
+   # ssl_certificate: /config/certs/fullchain.pem
+   # ssl_key: /config/certs/privkey.pem
    use_x_forwarded_for: true
    trusted_proxies:
      - 127.0.0.1       # traefik and home assistant in host mode
 #     - 172.18.0.1      # traefik in host mode and homeassistant in network mode
 #     - 172.18.0.200    # traefik and home in network mode
      - 192.168.0.1
-   # trusted_networks:
-   #   - 192.168.0.0
-   #   - 192.168.2.0
    ip_ban_enabled: True
    login_attempts_threshold: 3
 
