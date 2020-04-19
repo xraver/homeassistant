@@ -6,27 +6,15 @@ input_boolean.home_mode_away:
   name: Modalità Vacanza
   room: Generale
   expose: true
-script.speech_status:
-  name: Stato Casa
-  expose: true
-  room: Generale
-script.speech_consumption:
-  name: Consumo Casa
-  expose: true
-  room: Generale
 script.homeassistant_restart:
   name: Riavvia Homeassistant
   expose: true
   room: Generale
-script.homeassistant_google_home_sync:
-  name: Sincronizza Homeassistant
-  expose: true
-  room: Generale
-script.shelly_upgrade:
-  name: Aggiorna Shelly
-  expose: true
-  room: Generale
-script.stop_alarm:
-  name: Disattiva Allarmi
-  expose: true
-  room: Generale
+#script.homeassistant_google_home_sync:
+#  name: Sincronizza Homeassistant
+#  expose: true
+#  room: Generale
+#script.shelly_upgrade:
+#  name: Aggiorna Shelly
+#  expose: true
+#  room: Generale

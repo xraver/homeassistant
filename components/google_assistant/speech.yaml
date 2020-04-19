@@ -1,0 +1,12 @@
+######################################################################
+# Google Assistant: Speech
+######################################################################
+
+script.speech_status:
+  name: Stato Casa
+  expose: true
+  room: Generale
+script.speech_consumption:
+  name: Consumo Casa
+  expose: true
+  room: Generale

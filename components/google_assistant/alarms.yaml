@@ -1,0 +1,8 @@
+######################################################################
+# Google Assistant: Alarms
+######################################################################
+
+script.stop_alarm:
+  name: Disattiva Allarmi
+  expose: true
+  room: Generale

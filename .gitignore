@@ -1,6 +1,7 @@
 # Home Assistant Components
 deps/
 .HA_VERSION
+home-assistant.log
 home-assistant_v2.db
 html5_push_registrations.conf
 .storage
@@ -12,10 +13,7 @@ tts/
 .mercedesme-token-cache
 bravia.conf
 secrets.yaml
-components/google_assistant/service_account.json
-
-# Log Files
-*.log
+credentials/
 
 # Disabled Files
 #*.disabled
