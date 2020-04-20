@@ -1,5 +1,5 @@
 ######################################################################
-# Alarm Package - Input Booleans
+# Alarm Package - Alarm Engine - Input Booleans
 ######################################################################
 
 input_boolean:
@@ -15,7 +15,7 @@ input_boolean:
 #    icon: mdi:door-open
 
 ######################################################################
-# Alarm Package - Binary Sensors
+# Alarm Package - Alarm Engine - Binary Sensors
 ######################################################################
 
 binary_sensor:
@@ -36,7 +36,7 @@ binary_sensor:
           {% endif %}
 
 ######################################################################
-# Alarm Package - Automation
+# Alarm Package - Alarm Engine - Automations
 ######################################################################
 
 automation:
