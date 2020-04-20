@@ -2,6 +2,6 @@
 # Customization: System
 ######################################################################
 
-sensor.ssl_certificate:
+sensor.cert_expiry_home_giorgioravera_it:
   friendly_name: Scadenza Certificato SSL
   unit_of_measurement: giorni
