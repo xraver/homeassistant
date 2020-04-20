@@ -3,7 +3,8 @@
 ######################################################################
 
 platform: google_translate
-language: 'it'
 cache: true
+cache_dir: ./tts
 time_memory: 300
 base_url: !secret base_url
+language: 'it'
