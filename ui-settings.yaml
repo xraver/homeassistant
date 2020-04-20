@@ -64,7 +64,7 @@ views:
           - sensor.home_assistant_current_version
           - sensor.zigbee2mqtt_versione_bridge
           - sensor.zigbee2mqtt_versione_coordinator
-          - sensor.ssl_certificate
+          - sensor.cert_expiry_home_giorgioravera_it
           - input_boolean.update
 
 ######################################################################

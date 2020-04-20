@@ -21,7 +21,7 @@ exclude:
     - sensor.hacs
     # System
     - sensor.home_assistant_current_version
-    - sensor.ssl_certificate
+    - sensor.cert_expiry_home_giorgioravera_it
     # Shelly
     - sensor.shelly1_status
     - sensor.shelly2_status
