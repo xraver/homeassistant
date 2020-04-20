@@ -7,13 +7,15 @@ mode: yaml
 resources:
   - url: /hacsfiles/button-card/button-card.js
     type: module
-  - url: /hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?v=0.6.0
+  - url: /hacsfiles/bar-card/bar-card.js
     type: module
   - url: /hacsfiles/lovelace-battery-entity/battery-entity.js?v=1
     type: module
   - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
     type: module
-
+  - url: /hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?v=0.6.0
+    type: module
+   
 dashboards:
   lovelace-multimedia:
     mode: yaml
