@@ -6,3 +6,8 @@ switch.ff590mr_lock:
   name: Blocco Auto
   expose: true
   room: Generale
+
+#lock.ff590mr_lock:
+#  name: Auto
+#  expose: true
+#  room: Generale

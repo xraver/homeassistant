@@ -53,3 +53,5 @@ homeassistant_google_home_sync:
   alias: "Sincronizza Google Home"
   sequence:
     - service: google_assistant.request_sync
+      data:
+        agent_user_id: !secret google_agent

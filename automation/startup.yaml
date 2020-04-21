@@ -20,12 +20,10 @@
 ######################################################################
 
 - alias: "Startup: Google Sync"
-  initial_state: 'off'
 
   trigger:
     - platform: homeassistant
       event: start
 
   action:
-    - delay: 0:10:00
-    - service: google_assistant.request_sync
+    - service: script.homeassistant_google_home_sync
