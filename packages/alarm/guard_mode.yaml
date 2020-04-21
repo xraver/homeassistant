@@ -13,7 +13,7 @@ input_boolean:
 # Alarm Package - Guard Mode - Automations
 ######################################################################
 
-automations:
+automation:
 
   ######################################################################
   # Guard Mode: Enable
