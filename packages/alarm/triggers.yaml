@@ -1,5 +1,5 @@
 ######################################################################
-# Alarms Package - Automation Triggers
+# Alarms Package - Triggers - Automations
 ######################################################################
 
 automation:
@@ -16,7 +16,7 @@ automation:
 
     trigger:
       - platform: state
-        entity_id: binary_sensor.porta_casa
+        entity_id: group.doors
         to: 'on'
       
     condition:
@@ -27,6 +27,6 @@ automation:
     action:
       - service: script.start_alarm
         data_template:
-          title: "Presenza non autorizzata"
+          entity_id: input_boolean.door_alarm
           message: "È stata rilevata una presenza non autorizzata."
           level: 1

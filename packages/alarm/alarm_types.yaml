@@ -1,0 +1,26 @@
+######################################################################
+# Alarm Package - Types - Input Booleans
+######################################################################
+
+input_boolean:
+
+  # Generic Alarms
+  generic_alarm:
+    name: Allarme Generico
+    icon: mdi:alarm-light-outline
+
+  # Alarms: Door
+  door_alarm:
+    name: Allarme Porta
+    icon: mdi:door-open
+
+######################################################################
+# Alarm Package - Types - Group
+######################################################################
+group:
+  alarms:
+    name: Allarmi
+    icon: mdi:alarm-light-outline
+    entities:
+      - input_boolean.generic_alarm
+      - input_boolean.door_alarm

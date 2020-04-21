@@ -1,20 +1,4 @@
 ######################################################################
-# Alarm Package - Alarm Engine - Input Booleans
-######################################################################
-
-input_boolean:
-
-  # Generic Alarms
-  alarms:
-    name: Allarme
-    icon: mdi:alarm-light-outline
-
-#  # Alarms: Door
-#  door_alarm:
-#    name: Allarme Porta
-#    icon: mdi:door-open
-
-######################################################################
 # Alarm Package - Alarm Engine - Binary Sensors
 ######################################################################
 
@@ -25,11 +9,11 @@ binary_sensor:
     sensors:
       alarms:
         friendly_name: Allarmi
-        entity_id: input_boolean.alarms
+        entity_id: group.alarms
         value_template: >-
-          {{ is_state('input_boolean.alarms', 'on') }}
+          {{ is_state('group.alarms', 'on') }}
         icon_template: >-
-          {% if is_state('input_boolean.alarms', 'on') %}
+          {% if is_state('group.alarms', 'on') %}
              mdi:alarm-light
           {% else %}
              mdi:alarm-light-outline
@@ -54,7 +38,7 @@ automation:
 
     trigger:
       platform: state
-      entity_id: input_boolean.alarms
+      entity_id: group.alarms
       to: 'off'
       
     action:

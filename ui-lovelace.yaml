@@ -142,8 +142,7 @@ views:
     - type: entity-filter
       title: Eventi da Segnalare
       entities:
-        - input_boolean.alarms
-        - input_boolean.door_alarm
+        - group.alarms
         - input_boolean.update      
         - binary_sensor.ff590mr_engine_light_warning
         - binary_sensor.ff590mr_warning_brakefluid
@@ -534,8 +533,9 @@ views:
       title: Allarmi Casa
       show_header_toggle: false
       entities:
-      - input_boolean.alarms
-      #- input_boolean.door_alarm
+      - group.alarms
+      - input_boolean.generic_alarm
+      - input_boolean.door_alarm
       
 ######################################################################
 # Weather
