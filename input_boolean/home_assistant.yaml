@@ -28,3 +28,11 @@ text_notifications:
   name: Notifiche Testuali
   icon: mdi:message-bulleted
   initial: on
+
+######################################################################
+# Inputs: Test Mode
+######################################################################
+
+test_mode:
+  name: Modalità Test
+  icon: mdi:bug-check

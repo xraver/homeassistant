@@ -48,6 +48,8 @@ views:
           - script.homeassistant_reload_automations
           - script.homeassistant_clearlog
           - script.homeassistant_google_home_sync
+          - input_boolean.test_mode
+
         - type: entities
           title: Operazione sui Dispositivi
           show_header_toggle: false
