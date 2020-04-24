@@ -1,0 +1,10 @@
+######################################################################
+# Mercedes Package - Google Assistant
+######################################################################
+
+google_assistant:
+  entity_config:
+    script.stop_alarm:
+      name: Disattiva Allarmi
+      expose: true
+      room: Generale
