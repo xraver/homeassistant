@@ -76,23 +76,34 @@ views:
     id: network
     icon: mdi:lan
     cards:
-      - type: glance
-        title: External IP 
-        entities:
-          - sensor.ip_1
-          - sensor.ip_2
-      - type: glance
-        title: Speed Test
-        entities:
-        - sensor.speedtest_ping
-        - sensor.speedtest_download
-        - sensor.speedtest_upload          
-      - type: glance
-        title: pfSense
-        entities: 
-          - sensor.freebsd_router_kib_sec_received
-          - sensor.freebsd_router_kib_sec_sent
-
+      - type: vertical-stack
+        cards:
+        - type: glance
+          title: External IP 
+          entities:
+            - sensor.ip_1
+            - sensor.ip_2
+        - type: glance
+          title: Speed Test
+          entities:
+          - sensor.speedtest_ping
+          - sensor.speedtest_download
+          - sensor.speedtest_upload          
+        - type: glance
+          title: pfSense
+          entities: 
+            - sensor.freebsd_router_kib_sec_received
+            - sensor.freebsd_router_kib_sec_sent
+      - type: vertical-stack
+        cards:
+        - type: entities
+          title: Nas
+          show_header_toggle: false
+          entities:
+          - switch.nas
+          - script.plex_start
+          - script.plex_stop
+      
 ######################################################################
 # Zigbee
 ######################################################################

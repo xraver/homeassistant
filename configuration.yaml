@@ -134,6 +134,12 @@ automation: !include_dir_merge_list automation/
 # Scripts
 script: !include_dir_merge_named script/
 
+# Mobile App
+mobile_app:
+
+# Wake on Lan
+wake_on_lan:
+
 # Components:
 # Google Cast
 cast: !include components/cast.yaml
@@ -160,9 +166,6 @@ weather: !include components/weather.yaml
 
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
-
-# Mobile App
-mobile_app:
 
 # Panel Iframe: 
 # panel_iframe: !include components/panel_iframe.yaml

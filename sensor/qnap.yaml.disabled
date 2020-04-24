@@ -3,9 +3,9 @@
 ######################################################################
 
 - platform: qnap
-  host: !secret qnap_host
-  username: !secret qnap_username
-  password: !secret qnap_password
+  host: !secret nas_host
+  username: !secret nas_username
+  password: !secret nas_password
   monitored_conditions:
     - status
     - system_temp

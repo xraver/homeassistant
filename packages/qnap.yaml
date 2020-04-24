@@ -1,0 +1,87 @@
+######################################################################
+# QNAP Package - Switch
+######################################################################
+
+switch:
+
+  - platform: wake_on_lan
+    mac: !secret nas_mac
+    name: NAS
+    host: !secret nas_host
+    turn_off: 
+      service: shell_command.nas_turn_off
+      data:
+        nas_host: !secret nas_host
+        nas_username: !secret nas_username
+
+######################################################################
+# QNAP Package - Shell Command
+######################################################################
+
+shell_command:
+
+  nas_turn_off: 'ssh {{nas_username}}@{{ nas_host }} -i /config/credentials/id_rsa halt'
+  plex_start: 'ssh {{nas_username}}@{{ nas_host }} -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh start'
+  plex_restart: 'ssh {{nas_username}}@{{ nas_host }} -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh restart'
+  plex_stop: 'ssh {{nas_username}}@{{ nas_host }} -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh stop'
+
+######################################################################
+# QNAP Package - Script
+######################################################################
+
+script:
+
+  plex_start:
+    alias: "Avvia Plex"
+    sequence:
+      - service: shell_command.plex_start
+        data:
+          nas_host: !secret nas_host
+          nas_username: !secret nas_username
+
+  plex_restart:
+    alias: "Riavvia Plex"
+    sequence:
+      - service: shell_command.plex_restart
+        data:
+          nas_host: !secret nas_host
+          nas_username: !secret nas_username
+
+  plex_stop:
+    alias: "Ferma Plex"
+    sequence:
+      - service: shell_command.plex_stop
+        data:
+          nas_host: !secret nas_host
+          nas_username: !secret nas_username
+
+
+######################################################################
+# QNAP Package - Google Assistant
+######################################################################
+
+google_assistant:
+  entity_config:
+    switch.nas:
+      name: NAS
+      expose: true
+      room: Generale
+    script.plex_start:
+      name: Avvia Plex
+      expose: true
+      room: Generale
+    script.plex_stop:
+      name: Ferma Plex
+      expose: true
+      room: Generale
+
+homeassistant:
+  customize:
+    switch.nas:
+      icon: mdi:nas
+    script.plex_start:
+      icon: mdi:plex
+    script.plex_restart:
+      icon: mdi:plex
+    script.plex_stop:
+      icon: mdi:plex
