@@ -75,6 +75,10 @@ google_assistant:
       expose: true
       room: Generale
 
+######################################################################
+# QNAP Package - Customizations
+######################################################################
+
 homeassistant:
   customize:
     switch.nas:
