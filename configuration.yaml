@@ -113,9 +113,6 @@ shell_command: !include_dir_merge_named shell_command
 # Device Tracker
 device_tracker: !include_dir_merge_list device_tracker/
 
-# Proximity sensor:
-#proximity: !include_dir_merge_list proximity/
-
 # Person:
 # person: !include_dir_merge_list person/
 
@@ -166,9 +163,6 @@ weather: !include components/weather.yaml
 
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
-
-# Panel Iframe: 
-# panel_iframe: !include components/panel_iframe.yaml
 
 ###########################################################
 # Custom Components
