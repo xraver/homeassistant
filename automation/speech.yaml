@@ -67,29 +67,7 @@
 
     - service: script.speech_engine
       data_template:
-        language: 'it'
-        message: >-
-          {% set name = state_attr(trigger.entity_id, 'friendly_name') %}
-          {%- macro greeting_sentence(name) -%}
-          {{ [
-          "Ciao " ~ name + " è un piacere rivederti a casa",
-          "Finalmente a casa " ~ name + "!",
-          "Indovina chi è a casa? " ~ name + "!",
-          name + " è ora a casa!",
-          "Che bello! " ~ name + " è a casa",
-          name + " sei a casa!",
-          "Il sistema di domotica Casa Ravera-Testa notifica che " ~ name + " è a casa!",
-          "Annuncio: " ~ name + " è ora a casa!",
-          "Rilevo una presenza! " ~ name + " è a casa!",
-          "Ciao " ~ name + " che la forza sia con te",
-          "Sento un tremito nella forza! " ~ name + " è a casa",
-          "Sento un interferenza nella Forza! " ~ name + " è qui",
-          "Menomale che sei qui " ~ name + "! Mi sentivo solo",
-          "Menomale che sei qui " ~ name + "! La casa è vuota senza di te!",
-          "Ciao " ~ name + "! Casa è sempre la casa!"
-          ] | random }}
-          {%- endmacro -%}
-          {{ greeting_sentence(name) }}
+        message: !include ../templates/welcome_message.yaml
         enable_greeting: 0
 
 ######################################################################

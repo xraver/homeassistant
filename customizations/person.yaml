@@ -1,0 +1,15 @@
+######################################################################
+# Customization: Person
+######################################################################
+
+person.giorgio:
+  entity_picture: "https://lh5.googleusercontent.com/-XA71SeQatCE/AAAAAAAAAAI/AAAAAAABf8U/EWQJ3bwMgK8/photo.jpg"
+
+person.laura:
+  entity_picture: "https://lh4.googleusercontent.com/-MzGTo7hJlzQ/AAAAAAAAAAI/AAAAAAAAHBg/enCMtB-4rrs/photo.jpg"
+
+person.anna:
+  entity_picture: "https://lh3.googleusercontent.com/-jKAuS0EKCo0/AAAAAAAAAAI/AAAAAAAAIz4/Edk7vyRSPc4/photo.jpg"
+
+person.assunta:
+  entity_picture: "https://lh6.googleusercontent.com/-4VDO1evGw1U/AAAAAAAAAAI/AAAAAAAAAC4/5BymNaSNWcc/photo.jpg"

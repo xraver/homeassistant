@@ -22,7 +22,6 @@ speech_engine:
       data_template:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
-        language: "{{ language }}"
         message: !include ../templates/speech_message.yaml
 
 ######################################################################
@@ -52,6 +51,5 @@ speech_consumption:
   sequence:
     - service: script.speech_engine
       data_template:
-        language: 'it'
         message: >-
           "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"
