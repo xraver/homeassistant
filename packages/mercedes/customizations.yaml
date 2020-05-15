@@ -4,7 +4,6 @@
 
 homeassistant:
   customize:
-
     # Stato Generale
     binary_sensor.ff590mr_engine_light_warning:
       friendly_name: Stato Generale

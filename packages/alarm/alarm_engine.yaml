@@ -3,7 +3,6 @@
 ######################################################################
 
 binary_sensor:
-
   # Generic Alarms
   - platform: template
     sensors:
@@ -24,7 +23,6 @@ binary_sensor:
 ######################################################################
 
 automation:
-
   ######################################################################
   # Alarm Automation: Aknowledge Alarms
   #
@@ -32,7 +30,6 @@ automation:
   # - persistent_notification.dismiss
   # - script.stop_alarm
   ######################################################################
-
   - alias: "Alarms: Riconoscimento Allarmi"
     initial_state: 'on'
 

@@ -3,7 +3,6 @@
 ######################################################################
 
 switch:
-
   - platform: wake_on_lan
     mac: !secret nas_mac
     name: NAS
@@ -19,7 +18,6 @@ switch:
 ######################################################################
 
 shell_command:
-
   nas_turn_off: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa halt'
   plex_start: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh start'
   plex_restart: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh restart'
@@ -30,7 +28,6 @@ shell_command:
 ######################################################################
 
 script:
-
   plex_start:
     alias: "Avvia Plex"
     sequence:

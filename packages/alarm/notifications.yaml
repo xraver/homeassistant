@@ -3,7 +3,6 @@
 ######################################################################
 
 script: 
-
   ######################################################################
   # Alarm: Start Alarm Sound
   #
@@ -11,7 +10,6 @@ script:
   # - media_player.volume_set
   # - media_player.play_media
   ######################################################################
-
   start_alarm_sound:
     alias: "Allarmi: Avvia Suono"
     sequence:
@@ -33,7 +31,6 @@ script:
   # - media_player.media_stop
   # - script.volume_manager
   ######################################################################
-
   stop_alarm_sound:
     alias: "Allarmi: Interrompi Suono"
     sequence:
@@ -58,7 +55,6 @@ script:
   # - script.notify_all
   # - script.start_alarm_sound
   ######################################################################
-
   start_alarm:
     alias: "Allarmi: Attiva Allarme"
     sequence:
@@ -121,7 +117,6 @@ script:
   # - stop_alarm_sound
   # - persistent_notification.dismiss
   ######################################################################
-
   stop_alarm:
     alias: "Allarmi: Disattiva Allarme"
     sequence:

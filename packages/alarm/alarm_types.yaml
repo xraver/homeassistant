@@ -3,7 +3,6 @@
 ######################################################################
 
 input_boolean:
-
   # Generic Alarms
   generic_alarm:
     name: Allarme Generico
@@ -17,6 +16,7 @@ input_boolean:
 ######################################################################
 # Alarm Package - Types - Group
 ######################################################################
+
 group:
   alarms:
     name: Allarmi
