@@ -3,7 +3,6 @@
 ######################################################################
 
 sensor:
-
   ######################################################################
   # Sensor for monitoring the bridge state
   ######################################################################
@@ -73,7 +72,6 @@ sensor:
 ######################################################################
 
 switch:
-
   # Switch for enabling joining 
   - platform: mqtt
     name: "Zigbee2mqtt: Abilita join"
@@ -87,7 +85,6 @@ switch:
 ######################################################################
 
 input_select:
-
   # Zigbee2mqtt log level
   zigbee2mqtt_log_level:
     name: "Zigbee2mqtt Log Level"
@@ -98,13 +95,26 @@ input_select:
       - error
     initial: info
     icon: mdi:format-list-bulleted
+    
+######################################################################
+# Zigbee2mqtt Package - Input Text
+######################################################################
+
+input_text:
+  zigbee2mqtt_old_name:
+    name: "Device da Rinominare"
+
+  zigbee2mqtt_new_name:
+    name: "Nuovo nome Device"
+
+  zigbee2mqtt_remove:
+    name: "Device da Rimuovere"
 
 ######################################################################
 # Zigbee2mqtt Package - Timer
 ######################################################################
 
 timer:
-
   # Timer for joining time remaining (120 sec = 2 min)
   zigbee_permit_join:
     name: Tempo rimasto per il join
@@ -114,8 +124,39 @@ timer:
 # Zigbee2mqtt Package - Automation
 ######################################################################
 
-automation:
+script:
+  ######################################################################
+  # Rename Device
+  ######################################################################
+  zigbee2mqtt_rename:
+    alias: "Zigbee2mqtt: Rinomina Device"
+    sequence:
+      service: mqtt.publish
+      data_template:
+        topic: zigbee2mqtt/bridge/config/rename
+        payload_template: >-
+          {
+            "old": "{{ states.input_text.zigbee2mqtt_old_name.state | string }}",
+            "new": "{{ states.input_text.zigbee2mqtt_new_name.state | string }}"
+          }
 
+  ######################################################################
+  # Delete Device
+  ######################################################################
+  zigbee2mqtt_remove:
+    alias: "Zigbee2mqtt: Rimuovi Device"
+    sequence:
+      service: mqtt.publish
+      data_template:
+        topic: zigbee2mqtt/bridge/config/remove
+        payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
+
+
+######################################################################
+# Zigbee2mqtt Package - Automation
+######################################################################
+
+automation:
   ######################################################################
   # Automation to change log level
   ######################################################################
