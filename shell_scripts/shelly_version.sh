@@ -14,10 +14,10 @@ SHELLY_ID=(
 	shelly8.giorgioravera.it
 	shelly9.giorgioravera.it
 	shelly10.giorgioravera.it
-  shelly11.giorgioravera.it
+	shelly11.giorgioravera.it
 	shellybulb.giorgioravera.it
 	shellyem.giorgioravera.it
-	shellydw.giorgioravera.it
+	#shellydw.giorgioravera.it
 	shellyplugs.giorgioravera.it
 )
 

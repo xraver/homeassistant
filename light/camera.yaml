@@ -3,11 +3,24 @@
 ######################################################################
 
 - platform: mqtt
+  schema: template
   name: Luce Camera
-  command_topic: "shellies/shelly1-24D1A8/relay/0/command"
-  state_topic: "shellies/shelly1-24D1A8/relay/0"
-  payload_on: "on"
-  payload_off: "off"
+  state_topic: "shellies/shellydimmer-D46CF2/light/0/status"
+  state_template: > 
+    {% if value_json.ison %}
+      on
+    {% else %}
+      off
+    {% endif %}
+  command_topic: "shellies/shellydimmer-D46CF2/light/0/set"
+  command_on_template: >
+    {"turn": "on"
+      {% if brightness is defined %} 
+        , "brightness": {{ brightness | float | multiply(0.3922) | round(0) }}
+      {% endif %}
+    }  
+  command_off_template: '{ "turn" : "off" }'
+  brightness_template: "{{ value_json.brightness | float | multiply(2.55) | round(0) }}"  
   retain: false
   qos: 0
   optimistic: false

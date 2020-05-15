@@ -66,10 +66,10 @@ shelly_upgrade:
         topic: 'shellies/shelly1-59E18C/command'
         payload: 'update_fw'
 
-    # Shelly 1 Luce Camera
+    # Shelly Dimmer Luce Camera
     - service: mqtt.publish
       data:
-        topic: 'shellies/shelly1-24D1A8/command'
+        topic: 'shellies/shellydimmer-D46CF2/command'
         payload: 'update_fw'
 
     # Shelly 1 Luce Balcone
@@ -95,6 +95,12 @@ shelly_upgrade:
       data:
         topic: 'shellies/shellyplug-s-7A31CB/command'
         payload: 'update_fw'
+
+#    # Shelly 1 TBD
+#    - service: mqtt.publish
+#      data:
+#        topic: 'shellies/shelly1-24D1A8/command'
+#        payload: 'update_fw'
 
 ######################################################################
 # Shelly: Reboot
