@@ -19,6 +19,7 @@
     state: 'on'
 
   action:
+    - delay: '00:00:5'
     - service: script.notify_text
       data_template:
         title: "Home Assistant - Aggiornamento"
@@ -50,6 +51,7 @@
     state: 'on'
 
   action:
+    - delay: '00:00:10'
     - service: script.notify_text
       data_template:
         title: "Shelly - Aggiornamento"
@@ -73,6 +75,7 @@
       above: 0
 
   action:
+    - delay: '00:00:15'
     - service: script.notify_text
       data_template:
         title: "HACS - Aggiornamento"
