@@ -10,6 +10,8 @@ exclude:
     - device_tracker.a3
     - device_tracker.a5
     - device_tracker.s9
+    - device_tracker.google_maps_115265981849847357125
+    - device_tracker.google_maps_103158638433668748797
     # Time & Date
     - sensor.date
     - sensor.time
@@ -49,12 +51,14 @@ exclude:
     - sensor.pulsante_batteria
     - sensor.pulsante_stato_link
     # pfSense
-    - sensor.freebsd_router_bytes_received
-    - sensor.freebsd_router_bytes_sent
+    #- sensor.freebsd_router_kib_s_received
+    #- sensor.freebsd_router_kib_s_sent
+    - sensor.freebsd_router_b_received
+    - sensor.freebsd_router_b_sent
     - sensor.freebsd_router_packets_received
     - sensor.freebsd_router_packets_sent
-    - sensor.freebsd_router_packets_sec_received
-    - sensor.freebsd_router_packets_sec_sent
+    - sensor.freebsd_router_packets_s_received
+    - sensor.freebsd_router_packets_s_sent
   domains:
     - automation
     - group

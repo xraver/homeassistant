@@ -142,8 +142,6 @@ cast: !include components/cast.yaml
 
 # UPNP
 upnp:
-  port_mapping: false
-  sensors: true
 
 # Text to speech
 tts: !include components/tts.yaml
