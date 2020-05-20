@@ -11,8 +11,8 @@
   trigger:
     - platform: zone
       entity_id:
-        - device_tracker.google_maps_115265981849847357125
-        - device_tracker.google_maps_103158638433668748797
+        - person.giorgio
+        - person.laura
         # - device_tracker.google_maps_113099283296073047871
       zone: zone.home
       event: enter
@@ -28,7 +28,7 @@
   action:
 #    - wait_template: >-
 #        {# Giorgio #}
-#        {% if trigger.entity_id == 'device_tracker.google_maps_115265981849847357125' %}
+#        {% if trigger.entity_id == 'person.giorgio' %}
 #          {% if is_state('device_tracker.s9', 'home') %}
 #            true
 #          {% else %}
@@ -36,7 +36,7 @@
 #          {% endif %}
 #        
 #        {# Laura #}
-#        {% elif trigger.entity_id == 'device_tracker.google_maps_103158638433668748797' %}
+#        {% elif trigger.entity_id == 'person.laura' %}
 #          {% if is_state('device_tracker.a5', 'home') %}
 #            true
 #          {% else %}

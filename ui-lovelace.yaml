@@ -12,8 +12,8 @@ views:
     id: main
     icon: mdi:home
     badges:
-      - device_tracker.google_maps_115265981849847357125
-      - device_tracker.google_maps_103158638433668748797
+      - person.giorgio
+      - person.laura
       - device_tracker.wdd1760081v167576    
       - sensor.time
       - binary_sensor.porta_casa
@@ -338,8 +338,8 @@ views:
     id: people
     icon: mdi:account-multiple
     badges:
-      - device_tracker.google_maps_115265981849847357125
-      - device_tracker.google_maps_103158638433668748797
+      - person.giorgio
+      - person.laura
       - device_tracker.google_maps_113099283296073047871
       - device_tracker.google_maps_108517379615429477419
     cards:
@@ -348,14 +348,14 @@ views:
         aspect_ratio: 16:9
         default_zoom: 15
         entities:
-        - device_tracker.google_maps_115265981849847357125
+        - person.giorgio
         hours_to_show: 24
       - type: map
         #title: Laura
         aspect_ratio: 16:9
         default_zoom: 15
         entities:
-        - device_tracker.google_maps_103158638433668748797
+        - person.laura
         hours_to_show: 24
       - type: map
         #title: Anna

@@ -7,9 +7,9 @@ people:
   icon: mdi:account-multiple
   entities:
     # Giorgio
-    - device_tracker.google_maps_115265981849847357125
+    - person.giorgio
     # Laura
-    - device_tracker.google_maps_103158638433668748797
+    - person.laura
     # Anna
     - device_tracker.google_maps_113099283296073047871
     # Assunta
@@ -26,9 +26,9 @@ residents:
   icon: mdi:account-multiple
   entities:
     # Giorgio
-    - device_tracker.google_maps_115265981849847357125
+    - person.giorgio
     # Laura
-    - device_tracker.google_maps_103158638433668748797
+    - person.laura
     # Anna
     #- device_tracker.google_maps_113099283296073047871
     # Assunta

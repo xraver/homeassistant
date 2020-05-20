@@ -88,12 +88,12 @@ views:
           entities:
           - sensor.speedtest_ping
           - sensor.speedtest_download
-          - sensor.speedtest_upload          
+          - sensor.speedtest_upload
         - type: glance
           title: pfSense
           entities: 
-            - sensor.freebsd_router_kib_sec_received
-            - sensor.freebsd_router_kib_sec_sent
+            - sensor.freebsd_router_kib_s_received
+            - sensor.freebsd_router_kib_s_sent
       - type: vertical-stack
         cards:
         - type: entities
