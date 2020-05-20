@@ -11,11 +11,9 @@ people:
     # Laura
     - person.laura
     # Anna
-    - device_tracker.google_maps_113099283296073047871
+    - person.anna
     # Assunta
-    - device_tracker.google_maps_108517379615429477419
-    # Mercedes
-    - device_tracker.wdd1760081v167576
+    - person.assunta
 
 ######################################################################
 # Residents
@@ -30,8 +28,6 @@ residents:
     # Laura
     - person.laura
     # Anna
-    #- device_tracker.google_maps_113099283296073047871
+    #- person.anna
     # Assunta
-    #- device_tracker.google_maps_108517379615429477419
-    # Mercedes
-    #- device_tracker.wdd1760081v167576
+    #- person.assunta

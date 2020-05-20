@@ -13,7 +13,7 @@
       entity_id:
         - person.giorgio
         - person.laura
-        # - device_tracker.google_maps_113099283296073047871
+        # - person.anna
       zone: zone.home
       event: enter
 #    - platform: state
@@ -44,7 +44,7 @@
 #          {% endif %}
 #        
 #        {# Anna #}
-#        {% elif trigger.entity_id == 'device_tracker.google_maps_113099283296073047871' %}
+#        {% elif trigger.entity_id == 'person.anna' %}
 #          {% if is_state('device_tracker.a3', 'home') %}
 #            true
 #          {% else %}

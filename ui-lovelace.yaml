@@ -340,8 +340,8 @@ views:
     badges:
       - person.giorgio
       - person.laura
-      - device_tracker.google_maps_113099283296073047871
-      - device_tracker.google_maps_108517379615429477419
+      - person.anna
+      - person.assunta
     cards:
       - type: map
         #title: Giorgio
