@@ -153,7 +153,7 @@ device_tracker: !include_dir_merge_list device_tracker/
 # Notification
 notify: !include_dir_merge_list notify/
 
-# Person
+# Person (moved to UI)
 # person: !include_dir_merge_list person/
 
 # Shell commands
@@ -169,17 +169,17 @@ weather: !include components/weather.yaml
 # Integrations
 ######################################################################
 
-# Google Cast
-cast: !include components/cast.yaml
+# Google Cast (moved to UI)
+#cast: !include components/cast.yaml
 
-# UPNP
-upnp:
+# UPNP (moved to UI)
+#upnp:
 
-# Multimedia
-media_player: !include_dir_merge_list media_player/
+# Multimedia (moved to UI)
+#media_player: !include_dir_merge_list media_player/
 
 # MQTT
-mqtt: !include components/mqtt.yaml
+#mqtt: !include components/mqtt.yaml
 
 # EQ3 Max Cube
 maxcube: !include components/eq3max.yaml
@@ -194,8 +194,8 @@ speedtestdotnet: !include components/speedtest.yaml
 # Custom Components
 ###########################################################
 
-# HACS
-hacs: !include components/hacs.yaml
+# HACS (moved to UI)
+#hacs: !include components/hacs.yaml
 
 # Mercedes Me
 mercedesmeapi: !include components/mercedesme.yaml
