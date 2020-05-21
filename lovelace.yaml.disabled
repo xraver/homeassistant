@@ -16,18 +16,18 @@ resources:
   - url: /hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?v=0.6.0
     type: module
    
-#dashboards:
-#  lovelace-multimedia:
-#    mode: yaml
-#    filename: "ui-multimedia.yaml"
-#    title: Multimedia
-#    icon: mdi:television
-#    show_in_sidebar: true
-#    require_admin: false
-#  lovelace-settings:
-#    mode: yaml
-#    filename: "ui-settings.yaml"
-#    title: Sistema
-#    icon: mdi:settings
-#    show_in_sidebar: true
-#    require_admin: true
+dashboards:
+  lovelace-multimedia:
+    mode: yaml
+    filename: "ui-multimedia.yaml"
+    title: Multimedia
+    icon: mdi:television
+    show_in_sidebar: true
+    require_admin: false
+  lovelace-settings:
+    mode: yaml
+    filename: "ui-settings.yaml"
+    title: Sistema
+    icon: mdi:settings
+    show_in_sidebar: true
+    require_admin: true

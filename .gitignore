@@ -1,17 +1,16 @@
 # Home Assistant Components
-deps/
 .HA_VERSION
+.storage
+.uuid
+deps/
 home-assistant.log
 home-assistant_v2.db
 html5_push_registrations.conf
-.storage
 tts/
-.uuid
 
 # Credentials Files
 .google_maps_location_sharing.cookies.*
 .mercedesme-token-cache
-bravia.conf
 secrets.yaml
 credentials/
 

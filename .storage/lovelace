@@ -1,0 +1,621 @@
+{
+    "data": {
+        "config": {
+            "title": "Panoramica",
+            "views": [
+                {
+                    "badges": [
+                        "person.giorgio",
+                        "person.laura",
+                        "device_tracker.wdd1760081v167576",
+                        "sensor.time",
+                        "binary_sensor.main_door_contact",
+                        "binary_sensor.home_mode",
+                        "binary_sensor.guard_mode",
+                        "binary_sensor.speech_notifications",
+                        "binary_sensor.alarms",
+                        "sensor.potenza_istantanea"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                "light.luce_cucina",
+                                "cover.tapparella_cucina",
+                                "climate.cucina_termostato_cucina",
+                                "media_player.google_home"
+                            ],
+                            "entity": "light.luce_cucina",
+                            "show_state": true,
+                            "state_image": {
+                                "off": "/local/images/rooms/cucina_off.jpg",
+                                "on": "/local/images/rooms/cucina_on.jpg"
+                            },
+                            "title": "Cucina",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                "light.luce_sala",
+                                "light.luce_divano",
+                                "cover.tapparella_sala",
+                                "climate.sala_termostato_sala",
+                                "media_player.sony_bravia_tv"
+                            ],
+                            "entity": "group.lights_livingroom",
+                            "show_state": true,
+                            "state_image": {
+                                "off": "/local/images/rooms/sala_off.jpg",
+                                "on": "/local/images/rooms/sala_on.jpg"
+                            },
+                            "title": "Sala",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                "light.luce_corridoio"
+                            ],
+                            "entity": "light.luce_corridoio",
+                            "image": null,
+                            "show_state": true,
+                            "state_image": {
+                                "off": "/local/images/rooms/corridoio_off.jpg",
+                                "on": "/local/images/rooms/corridoio_on.jpg"
+                            },
+                            "title": "Corridoio",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                "light.luce_bagno",
+                                "light.luce_specchio",
+                                "climate.bagno_termostato_bagno"
+                            ],
+                            "entity": "group.lights_bathroom",
+                            "show_state": true,
+                            "state_image": {
+                                "off": "/local/images/rooms/bagno_off.jpg",
+                                "on": "/local/images/rooms/bagno_on.jpg"
+                            },
+                            "title": "Bagno",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                "light.luce_studio",
+                                "cover.tapparella_studio",
+                                "climate.studio_termostato_studio"
+                            ],
+                            "entity": "light.luce_studio",
+                            "show_state": true,
+                            "state_image": {
+                                "off": "/local/images/rooms/studio_off.jpg",
+                                "on": "/local/images/rooms/studio_on.jpg"
+                            },
+                            "title": "Studio",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                "light.luce_camera",
+                                "cover.tapparella_camera",
+                                "climate.camera_termostato_camera"
+                            ],
+                            "entity": "light.luce_camera",
+                            "show_state": true,
+                            "state_image": {
+                                "off": "/local/images/rooms/camera_off.jpg",
+                                "on": "/local/images/rooms/camera_on.jpg"
+                            },
+                            "title": "Camera",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                "light.luce_balcone"
+                            ],
+                            "entity": "light.luce_balcone",
+                            "show_state": true,
+                            "state_image": {
+                                "off": "/local/images/rooms/balcone_off.jpg",
+                                "on": "/local/images/rooms/balcone_on.jpg"
+                            },
+                            "title": "Balcone",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                "input_boolean.home_mode_day",
+                                "input_boolean.home_mode_night",
+                                "input_boolean.home_mode_away",
+                                "input_boolean.guard_mode"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Modalit\u00e0 Casa",
+                            "type": "entities"
+                        },
+                        {
+                            "detail": 2,
+                            "entity": "sensor.potenza_istantanea",
+                            "graph": "line",
+                            "name": "Consumo Energetico",
+                            "type": "sensor",
+                            "unit": "W"
+                        },
+                        {
+                            "entities": [
+                                "script.speech_status",
+                                "script.speech_consumption",
+                                "automation.risveglio_giorgio"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Controlli Vari",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "input_datetime.away_mode_end"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Eventi",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "group.alarms",
+                                "input_boolean.update",
+                                "binary_sensor.ff590mr_engine_light_warning",
+                                "binary_sensor.ff590mr_warning_brakefluid",
+                                "binary_sensor.ff590mr_warning_washwater",
+                                "binary_sensor.ff590mr_warning_coolantlevellow"
+                            ],
+                            "state_filter": [
+                                "on"
+                            ],
+                            "title": "Eventi da Segnalare",
+                            "type": "entity-filter"
+                        }
+                    ],
+                    "icon": "mdi:home",
+                    "path": "principale",
+                    "title": "Principale"
+                },
+                {
+                    "badges": [
+                        "light.luce_cucina",
+                        "light.luce_corridoio",
+                        "light.luce_sala",
+                        "light.luce_divano",
+                        "light.luce_bagno",
+                        "light.luce_specchio",
+                        "light.luce_studio",
+                        "light.luce_camera",
+                        "light.luce_balcone"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                "light.luci_casa",
+                                "light.luce_cucina",
+                                "light.luce_corridoio",
+                                "light.luci_sala",
+                                "light.luce_sala",
+                                "light.luce_divano",
+                                "light.luci_bagno",
+                                "light.luce_bagno",
+                                "light.luce_specchio",
+                                "light.luce_studio",
+                                "light.luce_camera",
+                                "light.luce_balcone"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Comandi luci",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "light.luci_casa",
+                            "name": "Luci Casa",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_cucina",
+                            "name": "Luce Cucina",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_corridoio",
+                            "name": "Luce Corridoio",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luci_sala",
+                            "name": "Luci Sala",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_divano",
+                            "name": "Luce Divano",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luci_bagno",
+                            "name": "Luci Bagno",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_bagno",
+                            "name": "Luce Bagno",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_specchio",
+                            "name": "Luce Specchio",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_studio",
+                            "name": "Luce Studio",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_camera",
+                            "name": "Luce Camera",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.luce_balcone",
+                            "name": "Luce Balcone",
+                            "type": "light"
+                        }
+                    ],
+                    "icon": "mdi:lightbulb",
+                    "id": "light",
+                    "title": "Luci"
+                },
+                {
+                    "badges": [
+                        "sensor.tapparella_cucina",
+                        "sensor.tapparella_sala",
+                        "sensor.tapparella_studio",
+                        "sensor.tapparella_camera"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                "cover.tapparelle_casa",
+                                {
+                                    "entity": "cover.tapparelle_casa",
+                                    "full_row": true,
+                                    "type": "custom:slider-entity-row"
+                                },
+                                "cover.tapparella_cucina",
+                                {
+                                    "entity": "cover.tapparella_cucina",
+                                    "full_row": true,
+                                    "type": "custom:slider-entity-row"
+                                },
+                                "cover.tapparella_sala",
+                                {
+                                    "entity": "cover.tapparella_sala",
+                                    "full_row": true,
+                                    "type": "custom:slider-entity-row"
+                                },
+                                "cover.tapparella_studio",
+                                {
+                                    "entity": "cover.tapparella_studio",
+                                    "full_row": true,
+                                    "type": "custom:slider-entity-row"
+                                },
+                                "cover.tapparella_camera",
+                                {
+                                    "entity": "cover.tapparella_camera",
+                                    "full_row": true,
+                                    "type": "custom:slider-entity-row"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Comandi tapparelle",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:window-shutter",
+                    "id": "covers",
+                    "title": "Tapparelle"
+                },
+                {
+                    "badges": [
+                        "sensor.termostato_cucina",
+                        "sensor.termostato_sala",
+                        "sensor.termostato_bagno",
+                        "sensor.termostato_studio",
+                        "sensor.termostato_camera"
+                    ],
+                    "cards": [
+                        {
+                            "entity": "climate.cucina_termostato_cucina",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.sala_termostato_sala",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.bagno_termostato_bagno",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.studio_termostato_studio",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.camera_termostato_camera",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "action_name": "Attiva Boost",
+                                    "name": "Cucina",
+                                    "service": "climate.set_preset_mode",
+                                    "service_data": {
+                                        "entity_id": "climate.cucina_termostato_cucina",
+                                        "preset_mode": "boost"
+                                    },
+                                    "type": "call-service"
+                                },
+                                {
+                                    "action_name": "Attiva Boost",
+                                    "name": "Sala",
+                                    "service": "climate.set_preset_mode",
+                                    "service_data": {
+                                        "entity_id": "climate.sala_termostato_sala",
+                                        "preset_mode": "boost"
+                                    },
+                                    "type": "call-service"
+                                },
+                                {
+                                    "action_name": "Attiva Boost",
+                                    "name": "Bagno",
+                                    "service": "climate.set_preset_mode",
+                                    "service_data": {
+                                        "entity_id": "climate.bagno_termostato_bagno",
+                                        "preset_mode": "boost"
+                                    },
+                                    "type": "call-service"
+                                },
+                                {
+                                    "action_name": "Attiva Boost",
+                                    "name": "Studio",
+                                    "service": "climate.set_preset_mode",
+                                    "service_data": {
+                                        "entity_id": "climate.studio_termostato_studio",
+                                        "preset_mode": "boost"
+                                    },
+                                    "type": "call-service"
+                                },
+                                {
+                                    "action_name": "Attiva Boost",
+                                    "name": "Camera",
+                                    "service": "climate.set_preset_mode",
+                                    "service_data": {
+                                        "entity_id": "climate.camera_termostato_camera",
+                                        "preset_mode": "boost"
+                                    },
+                                    "type": "call-service"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Operazione sui Dispositivi",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:thermometer",
+                    "id": "climate",
+                    "title": "Termostato"
+                },
+                {
+                    "badges": [
+                        "person.giorgio",
+                        "person.laura",
+                        "person.anna",
+                        "person.assunta"
+                    ],
+                    "cards": [
+                        {
+                            "aspect_ratio": 969,
+                            "default_zoom": 15,
+                            "entities": [
+                                "person.giorgio"
+                            ],
+                            "hours_to_show": 24,
+                            "type": "map"
+                        },
+                        {
+                            "aspect_ratio": 969,
+                            "default_zoom": 15,
+                            "entities": [
+                                "person.laura"
+                            ],
+                            "hours_to_show": 24,
+                            "type": "map"
+                        },
+                        {
+                            "aspect_ratio": 969,
+                            "default_zoom": 15,
+                            "entities": [
+                                "device_tracker.google_maps_113099283296073047871"
+                            ],
+                            "hours_to_show": 24,
+                            "type": "map"
+                        },
+                        {
+                            "aspect_ratio": 969,
+                            "default_zoom": 15,
+                            "entities": [
+                                "device_tracker.google_maps_108517379615429477419"
+                            ],
+                            "hours_to_show": 24,
+                            "type": "map"
+                        }
+                    ],
+                    "icon": "mdi:account-multiple",
+                    "id": "people",
+                    "title": "People"
+                },
+                {
+                    "badges": [
+                        "device_tracker.wdd1760081v167576",
+                        "sensor.ff590mr_odometer",
+                        "sensor.ff590mr_fuel_level",
+                        "binary_sensor.ff590mr_locked",
+                        "binary_sensor.ff590mr_doors_closed",
+                        "binary_sensor.ff590mr_windows_closed_2"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                "switch.ff590mr_lock",
+                                "binary_sensor.ff590mr_doors_closed",
+                                "binary_sensor.ff590mr_windows_closed_2"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mercedes A200d: Sensori",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "binary_sensor.ff590mr_engine_light_warning",
+                                "binary_sensor.ff590mr_warning_brakefluid",
+                                "binary_sensor.ff590mr_warning_washwater",
+                                "binary_sensor.ff590mr_warning_coolantlevellow"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mercedes A200d: Allarmi",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.ff590mr_tire_pressure_front_left",
+                                "sensor.ff590mr_tire_pressure_front_right",
+                                "sensor.ff590mr_tire_pressure_rear_left",
+                                "sensor.ff590mr_tire_pressure_rear_right"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mercedes A200d: Pneumatici",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "binary_sensor.ff590mr_door_front_left",
+                                "binary_sensor.ff590mr_door_front_right",
+                                "binary_sensor.ff590mr_door_rear_left",
+                                "binary_sensor.ff590mr_door_rear_right",
+                                "binary_sensor.ff590mr_trunk",
+                                "binary_sensor.ff590mr_fuel_lid"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mercedes A200d: Porte",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "binary_sensor.ff590mr_window_front_left",
+                                "binary_sensor.ff590mr_window_front_right",
+                                "binary_sensor.ff590mr_window_rear_left",
+                                "binary_sensor.ff590mr_window_rear_right"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mercedes A200d: Finestrini",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.ff590mr_odometer",
+                                "sensor.ff590mr_distance_since_start",
+                                "sensor.ff590mr_distance_since_reset",
+                                "sensor.ff590mr_fuel_level",
+                                "sensor.ff590mr_liquid_consumption_start",
+                                "sensor.ff590mr_liquid_consumption_reset",
+                                "sensor.ff590mr_service_interval_days"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Mercedes A200d: Dati",
+                            "type": "entities"
+                        },
+                        {
+                            "aspect_ratio": 969,
+                            "default_zoom": 15,
+                            "entities": [
+                                "device_tracker.wdd1760081v167576"
+                            ],
+                            "type": "map"
+                        }
+                    ],
+                    "icon": "mdi:car",
+                    "id": "car",
+                    "title": "Auto"
+                },
+                {
+                    "badges": [
+                        "sensor.potenza_istantanea",
+                        "sensor.potenza_reattiva",
+                        "sensor.tensione"
+                    ],
+                    "cards": [
+                        {
+                            "detail": 2,
+                            "entity": "sensor.potenza_istantanea",
+                            "graph": "line",
+                            "name": "Consumo Energetico",
+                            "type": "sensor",
+                            "unit": "W"
+                        }
+                    ],
+                    "icon": "mdi:flash",
+                    "id": "power",
+                    "title": "Monitoraggio Energetico"
+                },
+                {
+                    "badges": [
+                        "binary_sensor.alarms"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                "group.alarms",
+                                "input_boolean.generic_alarm",
+                                "input_boolean.door_alarm"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Allarmi Casa",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:alarm-light-outline",
+                    "id": "allarmi",
+                    "title": "Allarmi"
+                },
+                {
+                    "badges": [
+                        "sun.sun",
+                        "sensor.yr_symbol"
+                    ],
+                    "cards": [
+                        {
+                            "entity": "weather.meteo_savona",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entity": "weather.meteo_morgex",
+                            "type": "weather-forecast"
+                        }
+                    ],
+                    "icon": "mdi:weather-sunny",
+                    "id": "meteo",
+                    "title": "Meteo"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

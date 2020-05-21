@@ -465,8 +465,8 @@ views:
                 - type: icon
                   icon: mdi:volume-mute
                   style:
-                    top: 50%
-                    left: 65%
+                    top: 64%
+                    left: 50%
                     color: white
                     --iron-icon-height: 16%
                     --iron-icon-width: 16%
