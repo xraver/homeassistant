@@ -42,7 +42,7 @@ homeassistant_clearlog:
     - service: system_log.clear
     - service: recorder.purge
       data:
-        keep_days: 0
+        keep_days: 6
 
 ######################################################################
 # Home Assistant: Sync with Google Home

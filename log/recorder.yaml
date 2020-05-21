@@ -2,8 +2,8 @@
 # Recorder Configuration
 ######################################################################
 
-purge_keep_days: 10
-purge_interval: 1
+purge_keep_days: 6
+auto_purge: true
 exclude:
   entities:
     # Device Trackers
@@ -25,7 +25,7 @@ exclude:
     - sensor.hacs
     # System
     - sensor.home_assistant_current_version
-    - sensor.cert_expiry_home_giorgioravera_it
+    - sensor.cert_expiry_server_giorgioravera_it
     # Shelly
     - sensor.shelly1_status
     - sensor.shelly2_status
