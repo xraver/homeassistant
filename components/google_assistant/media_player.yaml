@@ -2,6 +2,6 @@
 # Google Assistant: Media Player
 ######################################################################
 
-media_player.tv_sala:
+media_player.sony_bravia_tv:
   expose: true
   room: Sala

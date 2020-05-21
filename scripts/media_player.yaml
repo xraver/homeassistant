@@ -13,7 +13,7 @@ tv_sala_toggle:
     - service: script.turn_on
       data_template:
         entity_id: >-
-          {% if is_state('media_player.tv_sala', 'on') %}
+          {% if is_state('media_player.sony_bravia_tv', 'on') %}
             script.tv_sala_off
           {% else %}
             script.tv_sala_on
@@ -33,7 +33,7 @@ tv_sala_on:
   sequence:
     #- service: shell_command.bravia_tvpower
     - service: media_player.toggle
-      entity_id: media_player.tv_sala
+      entity_id: media_player.sony_bravia_tv
 
 ######################################################################
 # Script: TV Sala Off
@@ -49,4 +49,4 @@ tv_sala_off:
   sequence:
     #- service: shell_command.bravia_poweroff
     - service: media_player.toggle
-      entity_id: media_player.tv_sala
+      entity_id: media_player.sony_bravia_tv

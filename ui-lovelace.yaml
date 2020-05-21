@@ -50,7 +50,7 @@ views:
       #- light.luce_divano_bianca
       - cover.tapparella_sala
       - climate.sala_termostato_sala
-      - media_player.tv_sala
+      - media_player.sony_bravia_tv
 
     - type: picture-glance
       title: Corridoio

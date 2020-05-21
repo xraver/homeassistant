@@ -44,7 +44,7 @@ views:
                 action: call-service
                 service: shell_command.bravia_assists
             - type: "custom:button-card"
-              entity: media_player.tv_sala
+              entity: media_player.sony_bravia_tv
               icon: mdi:power
               size: 20%
               show_name: false
@@ -820,7 +820,7 @@ views:
         title: TV Sala
         cards:
         - type: media-control
-          entity: media_player.tv_sala
+          entity: media_player.sony_bravia_tv
 
 ######################################################################
 # Google Home

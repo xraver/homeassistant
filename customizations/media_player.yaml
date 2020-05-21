@@ -3,7 +3,7 @@
 ######################################################################
 
 # Sony Bravia KD-55XF8596
-media_player.tv_sala:
+media_player.sony_bravia_tv:
   friendly_name: TV Sala
   
 # Samsung BD-F6500
