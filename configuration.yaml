@@ -1,3 +1,7 @@
+######################################################################
+# Main Config
+######################################################################
+
 homeassistant:
   # Name of the location where Home Assistant is running
   name: Casa Ravera-Testa
@@ -18,12 +22,8 @@ homeassistant:
   # Packages:
   packages: !include_dir_named packages/
 
-# Show links to resources in log and frontend
-# introduction:
-
 # Enables the frontend
 frontend:
-  javascript_version: latest
   themes: !include_dir_merge_named themes
 
 # Enables configuration UI
@@ -54,13 +54,39 @@ updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
-# Discover some devices automatically
-discovery:
-#  ignore:
-#    - roku
+# Enables a map showing the location of tracked devices
+map:
 
-# Allows you to issue voice commands from the frontend in enabled browsers
-#conversation:
+# Track the sun
+sun:
+
+# Allow diagnosing system problems
+system_health:
+
+# Cloud
+# cloud:
+
+# Mobile App
+mobile_app:
+
+# Text to speech
+tts: !include components/tts.yaml
+
+# Zones
+zone: !include_dir_list zone/
+
+# Group
+group: !include_dir_merge_named groups/
+
+# Automations
+automation: !include_dir_merge_list automations/
+
+# Scripts
+script: !include_dir_merge_named scripts/
+
+######################################################################
+# Logs
+######################################################################
 
 # Enables support for tracking state changes over time
 history: !include log/history.yaml
@@ -74,79 +100,74 @@ logger: !include log/logger.yaml
 # Record Management
 recorder: !include log/recorder.yaml
 
-# Enables a map showing the location of tracked devices
-map:
+######################################################################
+# Main Elements
+######################################################################
 
-# Track the sun
-sun:
+# Covers
+cover: !include_dir_merge_list cover/
 
-# Allow diagnosing system problems
-system_health:
+# Inputs
+input_boolean: !include_dir_merge_named input_boolean/
+input_datetime: !include_dir_merge_named input_datetime/
+#input_number: !include_dir_merge_list input_number/
+#input_select: !include_dir_merge_list input_select/
+input_text: !include_dir_merge_named input_text/
 
-# Cloud
-# cloud:
+# Lights
+light: !include_dir_merge_list light/ 
 
 # Sensors
 sensor: !include_dir_merge_list sensor/
 binary_sensor: !include_dir_merge_list binary_sensor/
 
-# Lights
-light: !include_dir_merge_list light/ 
-
-# Covers
-cover: !include_dir_merge_list cover/
-
 # Switches
 switch: !include_dir_merge_list switch/
 
-# Multimedia
-media_player: !include_dir_merge_list media_player/
+######################################################################
+# Discovery Protocols
+######################################################################
 
-# Inputs
-input_boolean: !include_dir_merge_named input_boolean/
-input_text: !include_dir_merge_named input_text/
-input_datetime: !include_dir_merge_named input_datetime/
-#input_number: !include_dir_merge_list input_number/
+# Discover some devices automatically
+discovery:
 
-# Shell commands
-shell_command: !include_dir_merge_named shell_command/
+######################################################################
+# Additional Components
+######################################################################
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
 
 # Device Tracker
 device_tracker: !include_dir_merge_list device_tracker/
 
-# Person:
-# person: !include_dir_merge_list person/
-
 # Notification
 notify: !include_dir_merge_list notify/
 
-# Zones
-zone: !include_dir_list zone/
+# Person
+# person: !include_dir_merge_list person/
 
-# Group
-group: !include_dir_merge_named group/
-
-# Automations
-automation: !include_dir_merge_list automation/
-
-# Scripts
-script: !include_dir_merge_named script/
-
-# Mobile App
-mobile_app:
+# Shell commands
+shell_command: !include_dir_merge_named shell_command/
 
 # Wake on Lan
 wake_on_lan:
 
-# Components:
+# Weather
+weather: !include components/weather.yaml
+
+######################################################################
+# Integrations
+######################################################################
+
 # Google Cast
 cast: !include components/cast.yaml
 
 # UPNP
 upnp:
 
-# Text to speech
-tts: !include components/tts.yaml
+# Multimedia
+media_player: !include_dir_merge_list media_player/
 
 # MQTT
 mqtt: !include components/mqtt.yaml
@@ -157,9 +178,6 @@ maxcube: !include components/eq3max.yaml
 # Google Assistant
 google_assistant: !include components/google_assistant.yaml
 
-# Weather
-weather: !include components/weather.yaml
-
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
 
@@ -167,8 +185,9 @@ speedtestdotnet: !include components/speedtest.yaml
 # Custom Components
 ###########################################################
 
+# HACS
+hacs: !include components/hacs.yaml
+
 # Mercedes Me
 mercedesmeapi: !include components/mercedesme.yaml
 
-# HACS
-hacs: !include components/hacs.yaml
