@@ -18,4 +18,4 @@
 #  command: "ssl-cert-check -b -c /etc/letsencrypt/live/server.giorgioravera.it/cert.pem | awk '{ print $NF }'"
 
 - platform: cert_expiry
-  host: home.giorgioravera.it
+  host: server.giorgioravera.it
