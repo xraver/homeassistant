@@ -40,7 +40,6 @@ exclude:
     - sensor.shelly11_status
     - sensor.shellybulb_status
     - sensor.shellyem_status
-    - sensor.shellydw_status
     - sensor.shellyplugs_status
     # Energy Sensors
     - sensor.potenza_reattiva

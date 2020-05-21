@@ -17,7 +17,6 @@ SHELLY_ID=(
 	shelly11.giorgioravera.it
 	shellybulb.giorgioravera.it
 	shellyem.giorgioravera.it
-	#shellydw.giorgioravera.it
 	shellyplugs.giorgioravera.it
 )
 
