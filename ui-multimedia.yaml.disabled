@@ -446,7 +446,7 @@ views:
                   icon: mdi:repeat
                   style:
                     top: 34%
-                    left: 65%
+                    left: 50%
                     color: white
                     --iron-icon-height: 16%
                     --iron-icon-width: 16%
@@ -465,7 +465,7 @@ views:
                 - type: icon
                   icon: mdi:volume-mute
                   style:
-                    top: 64%
+                    top: 50%
                     left: 65%
                     color: white
                     --iron-icon-height: 16%
@@ -587,7 +587,7 @@ views:
                 icon: mdi:rewind
                 style:
                   top: 25%
-                  left: 56%
+                  left: 38%
                   --iron-icon-height: 16%
                   --iron-icon-width: 16%
                   color: white
@@ -607,7 +607,7 @@ views:
                 icon: mdi:play
                 style:
                   top: 25%
-                  left: 73%
+                  left: 62%
                   --iron-icon-height: 24%
                   --iron-icon-width: 24%
                   color: white
@@ -627,7 +627,7 @@ views:
                 icon: mdi:fast-forward
                 style:
                   top: 25%
-                  left: 88%
+                  left: 85%
                   --iron-icon-height: 60%
                   --iron-icon-width: 60%
                   color: white
@@ -668,7 +668,7 @@ views:
                 icon: mdi:skip-backward
                 style:
                   top: 50%
-                  left: 56%
+                  left: 38%
                   --iron-icon-height: 15%
                   --iron-icon-width: 15%
                   color: white
@@ -688,7 +688,7 @@ views:
                 icon: mdi:pause
                 style:
                   top: 50%
-                  left: 73%
+                  left: 62%
                   --iron-icon-height: 24%
                   --iron-icon-width: 24%
                   color: white
@@ -708,7 +708,7 @@ views:
                 icon: mdi:skip-forward
                 style:
                   top: 50%
-                  left: 88%
+                  left: 85%
                   --iron-icon-height: 55%
                   --iron-icon-width: 55%
                   color: white
@@ -772,7 +772,7 @@ views:
                 icon: mdi:stop
                 style:
                   top: 75%
-                  left: 73%
+                  left: 62%
                   --iron-icon-height: 24%
                   --iron-icon-width: 24%
                   color: white

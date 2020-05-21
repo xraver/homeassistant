@@ -1,0 +1,237 @@
+{
+    "data": {
+        "config": {
+            "title": "Sistema Home Assistant",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "binary_sensor.home_mode"
+                        },
+                        {
+                            "entity": "binary_sensor.guard_mode"
+                        },
+                        {
+                            "entity": "binary_sensor.speech_notifications"
+                        },
+                        {
+                            "entity": "binary_sensor.text_notifications"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "automation.startup_restart_on_error",
+                                        "automation.startup_google_sync",
+                                        "automation.risveglio_giorgio"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Automazioni",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        "input_boolean.speech_notifications",
+                                        "input_boolean.text_notifications"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Configurazione Notifiche",
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "script.homeassistant_restart",
+                                        "script.homeassistant_reload_scripts",
+                                        "script.homeassistant_reload_automations",
+                                        "script.homeassistant_clearlog",
+                                        "script.homeassistant_google_home_sync",
+                                        "input_boolean.test_mode"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Controlli",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        "script.shelly_upgrade",
+                                        "script.shelly_reboot"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Operazione sui Dispositivi",
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "sensor.home_assistant_current_version",
+                                        "sensor.zigbee2mqtt_versione_bridge",
+                                        "sensor.zigbee2mqtt_versione_coordinator",
+                                        "sensor.cert_expiry_server_giorgioravera_it",
+                                        "input_boolean.update"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Informazioni Varie",
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:settings",
+                    "title": "Configurazione"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "sensor.ip_1",
+                                        "sensor.ip_2"
+                                    ],
+                                    "title": "External IP",
+                                    "type": "glance"
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.speedtest_ping",
+                                        "sensor.speedtest_download",
+                                        "sensor.speedtest_upload"
+                                    ],
+                                    "title": "Speed Test",
+                                    "type": "glance"
+                                },
+                                {
+                                    "entities": [
+                                        "sensor.freebsd_router_kib_s_received",
+                                        "sensor.freebsd_router_kib_s_sent"
+                                    ],
+                                    "title": "pfSense",
+                                    "type": "glance"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "switch.nas",
+                                        "script.plex_start",
+                                        "script.plex_stop"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Nas",
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:lan",
+                    "title": "Dispositivi di Rete"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                "sensor.zigbee2mqtt_stato_bridge",
+                                "sensor.zigbee2mqtt_stato_permit_join",
+                                "sensor.zigbee2mqtt_stato_log_level",
+                                "sensor.zigbee2mqtt_versione_bridge",
+                                "sensor.zigbee2mqtt_versione_coordinator"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Stato Sistema Zigbee2mqtt",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "switch.zigbee2mqtt_abilita_join",
+                                {
+                                    "entity": "timer.zigbee_permit_join"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "input_text.zigbee2mqtt_old_name"
+                                },
+                                {
+                                    "entity": "input_text.zigbee2mqtt_new_name"
+                                },
+                                {
+                                    "entity": "script.zigbee2mqtt_rename"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                {
+                                    "entity": "input_text.zigbee2mqtt_remove"
+                                },
+                                {
+                                    "entity": "script.zigbee2mqtt_remove"
+                                },
+                                {
+                                    "type": "divider"
+                                },
+                                "input_select.zigbee2mqtt_log_level"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Operazioni Sistema Zigbee2mqtt",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.main_door_battery",
+                                    "type": "custom:battery-entity"
+                                },
+                                {
+                                    "entity": "sensor.spare_door_battery",
+                                    "type": "custom:battery-entity"
+                                },
+                                {
+                                    "entity": "sensor.wireless_switch_battery",
+                                    "type": "custom:battery-entity"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Stato Batteria ZigBee Devices",
+                            "type": "entities"
+                        },
+                        {
+                            "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n",
+                            "entity": "sensor.zigbee2mqtt_networkmap",
+                            "font_size": 12,
+                            "force": 3000,
+                            "height": 400,
+                            "link_width": 2,
+                            "mqtt_base_topic": "zigbee2mqtt",
+                            "node_size": 16,
+                            "title": "Zigbee2mqtt Network Map",
+                            "type": "custom:zigbee2mqtt-networkmap"
+                        }
+                    ],
+                    "icon": "mdi:zigbee",
+                    "title": "Zigbee"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_test",
+    "version": 1
+}

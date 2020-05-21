@@ -1,0 +1,26 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:television",
+                "id": "lovelace_multimedia",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Multimedia",
+                "url_path": "lovelace-media"
+            },
+            {
+                "icon": "mdi:settings",
+                "id": "lovelace_settings",
+                "mode": "storage",
+                "require_admin": true,
+                "show_in_sidebar": true,
+                "title": "Sistema",
+                "url_path": "lovelace-test"
+            }
+        ]
+    },
+    "key": "lovelace_dashboards",
+    "version": 1
+}
