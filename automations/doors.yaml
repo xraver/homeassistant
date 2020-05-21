@@ -13,7 +13,7 @@
 
   trigger:
     - platform: state
-      entity_id: binary_sensor.porta_casa
+      entity_id: binary_sensor.main_door_contact
       to: 'on'
 
   condition:

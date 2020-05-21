@@ -143,11 +143,11 @@ views:
         show_header_toggle: false
         entities:
         - type: custom:battery-entity
-          entity: sensor.porta_casa_batteria
+          entity: sensor.main_door_battery
         - type: custom:battery-entity
-          entity: sensor.porta_casa_2_batteria
+          entity: sensor.spare_door_battery
         - type: custom:battery-entity
-          entity: sensor.pulsante_batteria
+          entity: sensor.wireless_switch_battery
 
       - type: custom:zigbee2mqtt-networkmap
         title: Zigbee2mqtt Network Map

@@ -23,7 +23,7 @@ exclude:
     - sensor.hacs
     # System
     - sensor.home_assistant_current_version
-    - sensor.cert_expiry_home_giorgioravera_it
+    - sensor.cert_expiry_server_giorgioravera_it
     # Shelly
     - sensor.shelly1_status
     - sensor.shelly2_status
@@ -44,12 +44,14 @@ exclude:
     - sensor.potenza_reattiva
     - sensor.tensione
     # Zigbee2mqtt
-    - sensor.porta_casa_batteria
-    - sensor.porta_casa_stato_link
-    - sensor.porta_casa_2_batteria
-    - sensor.porta_casa_2_stato_link
-    - sensor.pulsante_batteria
-    - sensor.pulsante_stato_link
+    - sensor.main_door_battery
+    - sensor.main_door_linkquality
+    - binary_sensor.spare_door_contact
+    - sensor.spare_door_battery
+    - sensor.spare_door_linkquality
+    - sensor.wireless_switch_battery
+    - sensor.wireless_switch_click
+    - sensor.wireless_switch_linkquality
     # pfSense
     #- sensor.freebsd_router_kib_s_received
     #- sensor.freebsd_router_kib_s_sent

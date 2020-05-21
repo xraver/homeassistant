@@ -3,7 +3,7 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Porta Casa: Batteria"
+  name: "main_door_battery"
   state_topic: "zigbee2mqtt/main_door"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -11,7 +11,7 @@
   value_template: "{{ value_json.battery }}"
 
 - platform: "mqtt"
-  name: "Porta Casa: Stato Link"
+  name: "main_door_linkquality"
   state_topic: "zigbee2mqtt/main_door"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -22,7 +22,7 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Porta Casa 2: Batteria"
+  name: "spare_door_battery"
   state_topic: "zigbee2mqtt/spare_door"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -30,7 +30,7 @@
   value_template: "{{ value_json.battery }}"
 
 - platform: "mqtt"
-  name: "Porta Casa 2: Stato Link"
+  name: "spare_door_linkquality"
   state_topic: "zigbee2mqtt/spare_door"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -41,7 +41,7 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Pulsante: Batteria"
+  name: "wireless_switch_battery"
   state_topic: "zigbee2mqtt/wireless_switch"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "%"
@@ -49,7 +49,14 @@
   value_template: "{{ value_json.battery }}"
 
 - platform: "mqtt"
-  name: "Pulsante: Stato Link"
+  name: "wireless_switch_click"
+  state_topic: "zigbee2mqtt/wireless_switch"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  icon: "mdi:toggle-switch"
+  value_template: "{{ value_json.click }}"
+
+- platform: "mqtt"
+  name: "wireless_switch_linkquality"
   state_topic: "zigbee2mqtt/wireless_switch"
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "-"

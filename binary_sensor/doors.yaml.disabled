@@ -3,7 +3,7 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Porta Casa"
+  name: "main_door_contact"
   state_topic: "zigbee2mqtt/main_door"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false
@@ -16,7 +16,7 @@
 ######################################################################
 
 - platform: "mqtt"
-  name: "Porta Casa 2"
+  name: "spare_door_contact"
   state_topic: "zigbee2mqtt/spare_door"
   availability_topic: "zigbee2mqtt/bridge/state"
   payload_on: false

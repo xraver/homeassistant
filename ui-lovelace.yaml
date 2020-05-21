@@ -16,7 +16,7 @@ views:
       - person.laura
       - device_tracker.wdd1760081v167576    
       - sensor.time
-      - binary_sensor.porta_casa
+      - binary_sensor.main_door_contact
       - binary_sensor.home_mode
       - binary_sensor.guard_mode
       - binary_sensor.speech_notifications

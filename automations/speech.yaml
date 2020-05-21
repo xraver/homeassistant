@@ -59,7 +59,7 @@
 #      timeout: '00:30:00'
 #      continue_on_timeout: 'false'
 
-    - wait_template: "{{ is_state('binary_sensor.porta_casa', 'on') }}"
+    - wait_template: "{{ is_state('binary_sensor.main_door_contact', 'on') }}"
       timeout: '00:30:00'
       continue_on_timeout: 'false'
 

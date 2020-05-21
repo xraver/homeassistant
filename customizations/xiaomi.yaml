@@ -1,0 +1,24 @@
+######################################################################
+# Customization: Xiaomi
+######################################################################
+
+binary_sensor.main_door_contact:
+  friendly_name: "Porta Casa"
+sensor.main_door_battery:
+  friendly_name: "Porta Casa: Batteria"
+sensor.main_door_linkquality:
+  friendly_name: "Porta Casa: Stato Link"
+  
+binary_sensor.spare_door_contact:
+  friendly_name: "Porta Casa 2"
+sensor.spare_door_battery:
+  friendly_name: "Porta Casa 2: Batteria"
+sensor.spare_door_linkquality:
+  friendly_name: "Porta Casa 2: Stato Link"
+
+sensor.wireless_switch_battery:
+  friendly_name: "Pulsante: Batteria"
+sensor.wireless_switch_click:
+  friendly_name: "Pulsante"
+sensor.wireless_switch_linkquality:
+  friendly_name: "Pulsante: Stato Link"
