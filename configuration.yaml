@@ -84,6 +84,9 @@ automation: !include_dir_merge_list automations/
 # Scripts
 script: !include_dir_merge_named scripts/
 
+# Scene
+scene: !include_dir_merge_list scenes.yaml
+
 ######################################################################
 # Logs
 ######################################################################
@@ -130,6 +133,12 @@ switch: !include_dir_merge_list switch/
 
 # Discover some devices automatically
 discovery:
+
+# Simple Service Discovery Protocol (SSDP)
+ssdp:
+
+# Zero-configuration networking (zeroconf)
+zeroconf:
 
 ######################################################################
 # Additional Components
