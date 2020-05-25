@@ -154,7 +154,7 @@
         service: light.turn_off
         entity_id: "light.luce_sala, light.luce_divano"
       value_template: >-
-        {% if is_state('light.luce_divano', 'on') or is_state('light.luce_divano_bianca', 'on') %}
+        {% if is_state('light.luce_sala', 'on') or is_state('light.luce_divano', 'on') %}
           on
         {% else %}
           off
