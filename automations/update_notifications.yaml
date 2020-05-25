@@ -28,7 +28,7 @@
         enable_persistent: 1
     
     - service: input_boolean.turn_on
-      entity_id: input_boolean.update
+      entity_id: input_boolean.update_homeassistant
 
 ######################################################################
 # Update Notification: Shelly
@@ -60,7 +60,7 @@
         enable_persistent: 1
 
     - service: input_boolean.turn_on
-      entity_id: input_boolean.update
+      entity_id: input_boolean.update_shelly
 
 ######################################################################
 # Update Notification: HACS
@@ -84,7 +84,7 @@
         enable_persistent: 1
 
     - service: input_boolean.turn_on
-      entity_id: input_boolean.update
+      entity_id: input_boolean.update_hacs
 
 ######################################################################
 # Update: Aknowledge update

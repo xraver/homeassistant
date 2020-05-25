@@ -143,7 +143,7 @@ views:
       title: Eventi da Segnalare
       entities:
         - group.alarms
-        - input_boolean.update      
+        - group.update
         - binary_sensor.ff590mr_engine_light_warning
         - binary_sensor.ff590mr_warning_brakefluid
         - binary_sensor.ff590mr_warning_washwater

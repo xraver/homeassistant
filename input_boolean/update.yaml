@@ -1,8 +1,26 @@
 ######################################################################
-# Update: Generic 
+# Update: Home Assistant 
 ######################################################################
 
-update:
-  name: Disponibilità Aggiornamenti
+update_homeassistant:
+  name: Aggiornamento Home Assistant
+  initial: off
+  icon: mdi:cellphone-arrow-down
+
+######################################################################
+# Update: Shelly 
+######################################################################
+
+update_shelly:
+  name: Aggiornamento Shelly
+  initial: off
+  icon: mdi:cellphone-arrow-down
+
+######################################################################
+# Update: HACS 
+######################################################################
+
+update_hacs:
+  name: Aggiornamenti HACS
   initial: off
   icon: mdi:cellphone-arrow-down
