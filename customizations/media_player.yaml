@@ -7,7 +7,7 @@ media_player.sony_bravia_tv:
   friendly_name: TV Sala
   
 # Samsung BD-F6500
-media_player.bdf6500_bdf6500:
+media_player.samsung_bd_f6500:
   friendly_name: Blu-Ray Camera
 
 # NowTV

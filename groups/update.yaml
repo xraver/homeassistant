@@ -1,0 +1,11 @@
+######################################################################
+# Group Update Availability
+######################################################################
+
+update:
+  name: Aggiornamenti Disponibili
+  icon: mdi:cellphone-arrow-down
+  entities:
+    - input_boolean.update_homeassistant
+    - input_boolean.update_shelly
+    - input_boolean.update_hacs
