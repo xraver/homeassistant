@@ -74,11 +74,21 @@
                             "cards": [
                                 {
                                     "entities": [
-                                        "sensor.home_assistant_current_version",
-                                        "sensor.zigbee2mqtt_versione_bridge",
-                                        "sensor.zigbee2mqtt_versione_coordinator",
-                                        "sensor.cert_expiry_server_giorgioravera_it",
-                                        "input_boolean.update"
+                                        {
+                                            "entity": "sensor.home_assistant_current_version"
+                                        },
+                                        {
+                                            "entity": "sensor.zigbee2mqtt_versione_bridge"
+                                        },
+                                        {
+                                            "entity": "sensor.zigbee2mqtt_versione_coordinator"
+                                        },
+                                        {
+                                            "entity": "sensor.cert_expiry_server_giorgioravera_it"
+                                        },
+                                        {
+                                            "entity": "group.update"
+                                        }
                                     ],
                                     "show_header_toggle": false,
                                     "title": "Informazioni Varie",
@@ -232,6 +242,6 @@
             ]
         }
     },
-    "key": "lovelace.lovelace_test",
+    "key": "lovelace.lovelace_settings",
     "version": 1
 }

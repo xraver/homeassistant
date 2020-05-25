@@ -5,27 +5,55 @@
             "views": [
                 {
                     "badges": [
-                        "person.giorgio",
-                        "person.laura",
-                        "device_tracker.wdd1760081v167576",
-                        "sensor.time",
-                        "binary_sensor.main_door_contact",
-                        "binary_sensor.home_mode",
-                        "binary_sensor.guard_mode",
-                        "binary_sensor.speech_notifications",
-                        "binary_sensor.alarms",
-                        "sensor.potenza_istantanea"
+                        {
+                            "entity": "person.giorgio"
+                        },
+                        {
+                            "entity": "person.laura"
+                        },
+                        {
+                            "entity": "device_tracker.wdd1760081v167576"
+                        },
+                        {
+                            "entity": "sensor.time"
+                        },
+                        {
+                            "entity": "binary_sensor.main_door_contact"
+                        },
+                        {
+                            "entity": "binary_sensor.home_mode"
+                        },
+                        {
+                            "entity": "binary_sensor.guard_mode"
+                        },
+                        {
+                            "entity": "binary_sensor.speech_notifications"
+                        },
+                        {
+                            "entity": "binary_sensor.alarms"
+                        },
+                        {
+                            "entity": "sensor.potenza_istantanea"
+                        }
                     ],
                     "cards": [
                         {
+                            "aspect_ratio": "0%",
                             "entities": [
-                                "light.luce_cucina",
-                                "cover.tapparella_cucina",
-                                "climate.cucina_termostato_cucina",
-                                "media_player.google_home"
+                                {
+                                    "entity": "light.luce_cucina"
+                                },
+                                {
+                                    "entity": "cover.tapparella_cucina"
+                                },
+                                {
+                                    "entity": "climate.cucina_termostato_cucina"
+                                },
+                                {
+                                    "entity": "media_player.google_home"
+                                }
                             ],
                             "entity": "light.luce_cucina",
-                            "show_state": true,
                             "state_image": {
                                 "off": "/local/images/rooms/cucina_off.jpg",
                                 "on": "/local/images/rooms/cucina_on.jpg"
@@ -34,15 +62,25 @@
                             "type": "picture-glance"
                         },
                         {
+                            "aspect_ratio": "0%",
                             "entities": [
-                                "light.luce_sala",
-                                "light.luce_divano",
-                                "cover.tapparella_sala",
-                                "climate.sala_termostato_sala",
-                                "media_player.sony_bravia_tv"
+                                {
+                                    "entity": "light.luce_sala"
+                                },
+                                {
+                                    "entity": "light.luce_divano"
+                                },
+                                {
+                                    "entity": "cover.tapparella_sala"
+                                },
+                                {
+                                    "entity": "climate.sala_termostato_sala"
+                                },
+                                {
+                                    "entity": "media_player.sony_bravia_tv"
+                                }
                             ],
                             "entity": "group.lights_livingroom",
-                            "show_state": true,
                             "state_image": {
                                 "off": "/local/images/rooms/sala_off.jpg",
                                 "on": "/local/images/rooms/sala_on.jpg"
@@ -51,12 +89,13 @@
                             "type": "picture-glance"
                         },
                         {
+                            "aspect_ratio": "0%",
                             "entities": [
-                                "light.luce_corridoio"
+                                {
+                                    "entity": "light.luce_corridoio"
+                                }
                             ],
                             "entity": "light.luce_corridoio",
-                            "image": null,
-                            "show_state": true,
                             "state_image": {
                                 "off": "/local/images/rooms/corridoio_off.jpg",
                                 "on": "/local/images/rooms/corridoio_on.jpg"
@@ -65,13 +104,19 @@
                             "type": "picture-glance"
                         },
                         {
+                            "aspect_ratio": "0%",
                             "entities": [
-                                "light.luce_bagno",
-                                "light.luce_specchio",
-                                "climate.bagno_termostato_bagno"
+                                {
+                                    "entity": "light.luce_bagno"
+                                },
+                                {
+                                    "entity": "light.luce_specchio"
+                                },
+                                {
+                                    "entity": "climate.bagno_termostato_bagno"
+                                }
                             ],
-                            "entity": "group.lights_bathroom",
-                            "show_state": true,
+                            "entity": "light.luci_bagno",
                             "state_image": {
                                 "off": "/local/images/rooms/bagno_off.jpg",
                                 "on": "/local/images/rooms/bagno_on.jpg"
@@ -80,13 +125,19 @@
                             "type": "picture-glance"
                         },
                         {
+                            "aspect_ratio": "0%",
                             "entities": [
-                                "light.luce_studio",
-                                "cover.tapparella_studio",
-                                "climate.studio_termostato_studio"
+                                {
+                                    "entity": "light.luce_studio"
+                                },
+                                {
+                                    "entity": "cover.tapparella_studio"
+                                },
+                                {
+                                    "entity": "climate.studio_termostato_studio"
+                                }
                             ],
                             "entity": "light.luce_studio",
-                            "show_state": true,
                             "state_image": {
                                 "off": "/local/images/rooms/studio_off.jpg",
                                 "on": "/local/images/rooms/studio_on.jpg"
@@ -95,13 +146,19 @@
                             "type": "picture-glance"
                         },
                         {
+                            "aspect_ratio": "0%",
                             "entities": [
-                                "light.luce_camera",
-                                "cover.tapparella_camera",
-                                "climate.camera_termostato_camera"
+                                {
+                                    "entity": "light.luce_camera"
+                                },
+                                {
+                                    "entity": "cover.tapparella_camera"
+                                },
+                                {
+                                    "entity": "climate.camera_termostato_camera"
+                                }
                             ],
                             "entity": "light.luce_camera",
-                            "show_state": true,
                             "state_image": {
                                 "off": "/local/images/rooms/camera_off.jpg",
                                 "on": "/local/images/rooms/camera_on.jpg"
@@ -110,11 +167,13 @@
                             "type": "picture-glance"
                         },
                         {
+                            "aspect_ratio": "0%",
                             "entities": [
-                                "light.luce_balcone"
+                                {
+                                    "entity": "light.luce_balcone"
+                                }
                             ],
                             "entity": "light.luce_balcone",
-                            "show_state": true,
                             "state_image": {
                                 "off": "/local/images/rooms/balcone_off.jpg",
                                 "on": "/local/images/rooms/balcone_on.jpg"
@@ -124,12 +183,19 @@
                         },
                         {
                             "entities": [
-                                "input_boolean.home_mode_day",
-                                "input_boolean.home_mode_night",
-                                "input_boolean.home_mode_away",
-                                "input_boolean.guard_mode"
+                                {
+                                    "entity": "input_boolean.home_mode_day"
+                                },
+                                {
+                                    "entity": "input_boolean.home_mode_night"
+                                },
+                                {
+                                    "entity": "input_boolean.home_mode_away"
+                                },
+                                {
+                                    "entity": "input_boolean.guard_mode"
+                                }
                             ],
-                            "show_header_toggle": false,
                             "title": "Modalit\u00e0 Casa",
                             "type": "entities"
                         },
@@ -137,46 +203,61 @@
                             "detail": 2,
                             "entity": "sensor.potenza_istantanea",
                             "graph": "line",
-                            "name": "Consumo Energetico",
                             "type": "sensor",
                             "unit": "W"
                         },
                         {
-                            "entities": [
-                                "script.speech_status",
-                                "script.speech_consumption",
-                                "automation.risveglio_giorgio"
+                            "cards": [
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "script.speech_status"
+                                        },
+                                        {
+                                            "entity": "script.speech_consumption"
+                                        },
+                                        {
+                                            "entity": "script.homeassistant_restart"
+                                        },
+                                        {
+                                            "entity": "automation.risveglio_giorgio"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Controlli Vari",
+                                    "type": "entities"
+                                },
+                                {
+                                    "entities": [
+                                        "group.alarms",
+                                        "group.update",
+                                        "binary_sensor.ff590mr_engine_light_warning",
+                                        "binary_sensor.ff590mr_warning_brakefluid",
+                                        "binary_sensor.ff590mr_warning_washwater",
+                                        "binary_sensor.ff590mr_warning_coolantlevellow"
+                                    ],
+                                    "state_filter": [
+                                        "on"
+                                    ],
+                                    "title": "Eventi da Segnalare",
+                                    "type": "entity-filter"
+                                }
                             ],
-                            "show_header_toggle": false,
-                            "title": "Controlli Vari",
-                            "type": "entities"
+                            "type": "vertical-stack"
                         },
                         {
                             "entities": [
-                                "input_datetime.away_mode_end"
+                                {
+                                    "entity": "input_datetime.away_mode_end"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Eventi",
                             "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                "group.alarms",
-                                "input_boolean.update",
-                                "binary_sensor.ff590mr_engine_light_warning",
-                                "binary_sensor.ff590mr_warning_brakefluid",
-                                "binary_sensor.ff590mr_warning_washwater",
-                                "binary_sensor.ff590mr_warning_coolantlevellow"
-                            ],
-                            "state_filter": [
-                                "on"
-                            ],
-                            "title": "Eventi da Segnalare",
-                            "type": "entity-filter"
                         }
                     ],
                     "icon": "mdi:home",
-                    "path": "principale",
+                    "id": "main",
                     "title": "Principale"
                 },
                 {
