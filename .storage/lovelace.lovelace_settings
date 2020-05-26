@@ -217,6 +217,10 @@
                                 {
                                     "entity": "sensor.wireless_switch_battery",
                                     "type": "custom:battery-entity"
+                                },
+                                {
+                                    "entity": "sensor.front_balcony_battery",
+                                    "type": "custom:battery-entity"
                                 }
                             ],
                             "show_header_toggle": false,

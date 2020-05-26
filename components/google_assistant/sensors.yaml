@@ -1,0 +1,8 @@
+######################################################################
+# Google Assistant: Sensors
+######################################################################
+
+sensor.front_balcony_temperature:
+  name: Temperatura Balcone
+  expose: true
+  room: Balcone

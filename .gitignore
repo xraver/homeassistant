@@ -2,6 +2,7 @@
 .HA_VERSION
 .storage
 .uuid
+backups/
 deps/
 home-assistant.log
 home-assistant_v2.db

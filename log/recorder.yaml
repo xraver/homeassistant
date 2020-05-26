@@ -53,6 +53,8 @@ exclude:
     - sensor.wireless_switch_battery
     - sensor.wireless_switch_click
     - sensor.wireless_switch_linkquality
+    - sensor.front_balcony_battery
+    - sensor.front_balcony_linkquality
     # pfSense
     #- sensor.freebsd_router_kib_s_received
     #- sensor.freebsd_router_kib_s_sent

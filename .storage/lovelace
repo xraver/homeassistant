@@ -34,6 +34,12 @@
                         },
                         {
                             "entity": "sensor.potenza_istantanea"
+                        },
+                        {
+                            "entity": "sensor.front_balcony_temperature"
+                        },
+                        {
+                            "entity": "sensor.front_balcony_humidity"
                         }
                     ],
                     "cards": [
@@ -200,13 +206,6 @@
                             "type": "entities"
                         },
                         {
-                            "detail": 2,
-                            "entity": "sensor.potenza_istantanea",
-                            "graph": "line",
-                            "type": "sensor",
-                            "unit": "W"
-                        },
-                        {
                             "cards": [
                                 {
                                     "entities": [
@@ -241,19 +240,33 @@
                                     ],
                                     "title": "Eventi da Segnalare",
                                     "type": "entity-filter"
+                                },
+                                {
+                                    "entities": [
+                                        {
+                                            "entity": "input_datetime.away_mode_end"
+                                        }
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "Eventi",
+                                    "type": "entities"
                                 }
                             ],
                             "type": "vertical-stack"
                         },
                         {
-                            "entities": [
-                                {
-                                    "entity": "input_datetime.away_mode_end"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Eventi",
-                            "type": "entities"
+                            "detail": 2,
+                            "entity": "sensor.potenza_istantanea",
+                            "graph": "line",
+                            "type": "sensor",
+                            "unit": "W"
+                        },
+                        {
+                            "detail": 2,
+                            "entity": "sensor.front_balcony_temperature",
+                            "graph": "line",
+                            "name": "Temperatura Balcone",
+                            "type": "sensor"
                         }
                     ],
                     "icon": "mdi:home",

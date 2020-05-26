@@ -61,3 +61,36 @@
   availability_topic: "zigbee2mqtt/bridge/state"
   unit_of_measurement: "-"
   value_template: "{{ value_json.linkquality }}"
+  
+######################################################################
+# Xiaomi MiJia temperature & humidity sensor
+######################################################################
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/front_balcony"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "°C"
+  device_class: "temperature"
+  value_template: "{{ value_json.temperature }}"
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/front_balcony"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "humidity"
+  value_template: "{{ value_json.humidity }}"
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/front_balcony"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  unit_of_measurement: "%"
+  device_class: "battery"
+  value_template: "{{ value_json.battery }}"
+
+- platform: "mqtt"
+  state_topic: "zigbee2mqtt/front_balcony"
+  availability_topic: "zigbee2mqtt/bridge/state"
+  icon: "mdi:signal"
+  unit_of_measurement: "lqi"
+  value_template: "{{ value_json.linkquality }}"
+  
