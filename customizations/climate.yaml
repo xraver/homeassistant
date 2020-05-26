@@ -4,11 +4,15 @@
 
 climate.cucina_termostato_cucina:
   friendly_name: Termostato Cucina
+
 climate.sala_termostato_sala:
   friendly_name: Termostato Sala
+
 climate.bagno_termostato_bagno:
   friendly_name: Termostato Bagno
+
 climate.studio_termostato_studio:
   friendly_name: Termostato Studio
+
 climate.camera_termostato_camera:
   friendly_name: Termostato Camera
