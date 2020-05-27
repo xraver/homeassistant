@@ -2,14 +2,6 @@
 # Customization: Media Player Devices
 ######################################################################
 
-# Sony Bravia KD-55XF8596
-#media_player.sony_bravia_tv:
-#  friendly_name: TV Sala
-  
-# Samsung BD-F6500
-#media_player.samsung_bd_f6500:
-#  friendly_name: Blu-Ray Camera
-
 # NowTV
 media_player.roku_yd00df095157:
   friendly_name: NowTV Anna

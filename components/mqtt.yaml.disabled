@@ -1,9 +1,0 @@
-######################################################################
-# Component: mqtt borker (mosquitto)
-######################################################################
-
-broker: !secret mqtt_host
-port: 1883
-client_id: homeassistant
-username: !secret mqtt_user
-password: !secret mqtt_password
