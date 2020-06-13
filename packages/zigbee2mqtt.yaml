@@ -121,10 +121,28 @@ timer:
     duration: 120
 
 ######################################################################
-# Zigbee2mqtt Package - Automation
+# Zigbee2mqtt Package - Shell Command
+######################################################################
+
+shell_command:
+  zigbee2mqtt_restart: 'ssh {{ docker_username }}@{{ docker_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa docker container restart zigbee2mqtt'
+
+######################################################################
+# Zigbee2mqtt Package - Script
 ######################################################################
 
 script:
+  ######################################################################
+  # Restart Bridge
+  ######################################################################
+  zigbee2mqtt_restart:
+    alias: "Zigbee2mqtt: Riavvia Bridge"
+    sequence:
+      - service: shell_command.zigbee2mqtt_restart
+        data:
+          docker_host: !secret docker_host
+          docker_username: !secret docker_username
+
   ######################################################################
   # Rename Device
   ######################################################################
@@ -206,6 +224,18 @@ automation:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
         entity_id: switch.Zigbee2mqtt_Abilita_join
+
+  ######################################################################
+  # Automation to restart zigbee2mqtt to refresh sensor state
+  ######################################################################
+  - id: zigbee2mqtt_startup_automation
+    alias: "Zigbee2mqtt: Startup Automation"
+    initial_state: "on"
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - service: script.zigbee2mqtt_restart
 
 ######################################################################
 # Zigbee2mqtt Package - History
