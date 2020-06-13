@@ -170,6 +170,12 @@
                         },
                         {
                             "entities": [
+                                {
+                                    "entity": "script.zigbee2mqtt_restart"
+                                },
+                                {
+                                    "type": "divider"
+                                },
                                 "switch.zigbee2mqtt_abilita_join",
                                 {
                                     "entity": "timer.zigbee_permit_join"
@@ -211,15 +217,19 @@
                                     "type": "custom:battery-entity"
                                 },
                                 {
+                                    "entity": "sensor.front_balcony_battery",
+                                    "type": "custom:battery-entity"
+                                },
+                                {
+                                    "entity": "sensor.rear_balcony_battery",
+                                    "type": "custom:battery-entity"
+                                },
+                                {
                                     "entity": "sensor.spare_door_battery",
                                     "type": "custom:battery-entity"
                                 },
                                 {
                                     "entity": "sensor.wireless_switch_battery",
-                                    "type": "custom:battery-entity"
-                                },
-                                {
-                                    "entity": "sensor.front_balcony_battery",
                                     "type": "custom:battery-entity"
                                 }
                             ],

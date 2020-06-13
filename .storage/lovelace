@@ -39,7 +39,7 @@
                             "entity": "sensor.front_balcony_temperature"
                         },
                         {
-                            "entity": "sensor.front_balcony_humidity"
+                            "entity": "sensor.rear_balcony_temperature"
                         }
                     ],
                     "cards": [
@@ -262,11 +262,23 @@
                             "unit": "W"
                         },
                         {
-                            "detail": 2,
-                            "entity": "sensor.front_balcony_temperature",
-                            "graph": "line",
-                            "name": "Temperatura Balcone",
-                            "type": "sensor"
+                            "cards": [
+                                {
+                                    "detail": 1,
+                                    "entity": "sensor.front_balcony_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatura Balcone",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 1,
+                                    "entity": "sensor.rear_balcony_temperature",
+                                    "graph": "line",
+                                    "name": "Temperatura Veranda",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:home",

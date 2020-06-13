@@ -6,3 +6,8 @@ sensor.front_balcony_temperature:
   name: Temperatura Balcone
   expose: true
   room: Balcone
+
+sensor.rear_balcony_temperature:
+  name: Temperatura Veranda
+  expose: true
+  room: Veranda

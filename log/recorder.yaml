@@ -55,6 +55,8 @@ exclude:
     - sensor.wireless_switch_linkquality
     - sensor.front_balcony_battery
     - sensor.front_balcony_linkquality
+    - sensor.rear_balcony_battery
+    - sensor.rear_balcony_linkquality
     # pfSense
     #- sensor.freebsd_router_kib_s_received
     #- sensor.freebsd_router_kib_s_sent
@@ -64,6 +66,13 @@ exclude:
     - sensor.freebsd_router_packets_sent
     - sensor.freebsd_router_packets_s_received
     - sensor.freebsd_router_packets_s_sent
+    # Canon
+    - sensor.canon_tr8500_series
+    - sensor.canon_tr8500_series_black_bk
+    - sensor.canon_tr8500_series_black_pgbk
+    - sensor.canon_tr8500_series_cyan
+    - sensor.canon_tr8500_series_magenta
+    - sensor.canon_tr8500_series_yellow
   domains:
     - automation
     - group
