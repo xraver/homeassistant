@@ -11,11 +11,11 @@ SHELLY_ID=(
 	shellyswitch-559C49
 	shelly1-24D1EE
 	shelly1-93B27D
-	shelly1-C426F9
+	shellydimmer-D3EA58
 	shellyswitch25-7457D8
 	shelly1-59E18C
-  shellydimmer-D46CF2
-  shelly1-C423C8
+	shellydimmer-D46CF2
+	shelly1-C423C8
 	shellybulb-BC8610
 	shellyem-B9E1A0
 	shellyplug-s-7A31CB

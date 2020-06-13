@@ -42,10 +42,10 @@ shelly_upgrade:
         topic: 'shellies/shelly1-93B27D/command'
         payload: 'update_fw'
 
-    # Shelly 1 Luce Sala
+    # Shelly Dimmer Luce Sala
     - service: mqtt.publish
       data:
-        topic: 'shellies/shelly1-C426F9/command'
+        topic: 'shellies/shellydimmer-D3EA58/command'
         payload: 'update_fw'
 
     # Shelly 2.5 Luci Bagno
