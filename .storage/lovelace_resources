@@ -9,7 +9,7 @@
             {
                 "id": "186fbe23b9fa4a038bef851319b2a8a5",
                 "type": "module",
-                "url": "/hacsfiles/lovelace-battery-entity/battery-entity.js?v=0.2"
+                "url": "/hacsfiles/lovelace-battery-entity/battery-entity.js"
             },
             {
                 "id": "526736e722ab4339b6797eb75773cdd6",
@@ -24,7 +24,7 @@
             {
                 "id": "30e56555d1eb432abe3fcc5b9cb16be1",
                 "type": "module",
-                "url": "/hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?v=0.6.0"
+                "url": "/hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js"
             },
             {
                 "id": "6c8988516c824aa99cbd556a0b4ff39c",
