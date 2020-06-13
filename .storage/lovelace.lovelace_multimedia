@@ -1194,13 +1194,11 @@
                                 {
                                     "entity": "media_player.sony_bravia_tv",
                                     "type": "media-control"
-                                }
-                            ],
-                            "title": "TV Sala",
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
+                                },
+                                {
+                                    "entity": "media_player.samsung_bd_f6500",
+                                    "type": "media-control"
+                                },
                                 {
                                     "entities": [
                                         "media_player.google_home",
@@ -1299,7 +1297,7 @@
                                     "type": "horizontal-stack"
                                 }
                             ],
-                            "title": "Google Home Mini",
+                            "title": "Media Players",
                             "type": "vertical-stack"
                         }
                     ],
