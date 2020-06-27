@@ -113,9 +113,10 @@
     {% endif %}
     La Mercedes si trova {{ car_position }}. è {{ car_lock }} con i finestrini {{ car_windows }}.
     Il livello del carburante è {{ states('sensor.ff590mr_fuel_level') }} percento.
-    {% if is_state('binary_sensor.ff590mr_warning_brakefluid', 'on') or
-          is_state('binary_sensor.ff590mr_warning_coolantlevellow', 'on') or
-          is_state('binary_sensor.ff590mr_warning_washwater', 'on') %}
+    {% if is_state('binary_sensor.ff590mr_low_brake_fluid_warning', 'on') or
+          is_state('binary_sensor.ff590mr_low_coolant_level_warning', 'on') or
+          is_state('binary_sensor.ff590mr_low_wash_water_warning', 'on') or
+          is_state('binary_sensor.ff590mr_tire_warning', 'on') %}
       Sono inoltre presenti allarmi.
     {% endif %}
   {%- endmacro -%}

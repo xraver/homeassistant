@@ -17,9 +17,6 @@ history:
     - binary_sensor.ff590mr_tire_warning
     - binary_sensor.ff590mr_trunk
     - binary_sensor.ff590mr_fuel_lid
-    #- binary_sensor.ff590mr_warning_brakefluid
-    #- binary_sensor.ff590mr_warning_coolantlevellow
-    #- binary_sensor.ff590mr_warning_washwater
     - binary_sensor.ff590mr_window_front_left
     - binary_sensor.ff590mr_window_front_right
     - binary_sensor.ff590mr_window_rear_left
@@ -62,9 +59,6 @@ logbook:
     - binary_sensor.ff590mr_tire_warning
     - binary_sensor.ff590mr_trunk
     - binary_sensor.ff590mr_fuel_lid
-    #- binary_sensor.ff590mr_warning_brakefluid
-    #- binary_sensor.ff590mr_warning_coolantlevellow
-    #- binary_sensor.ff590mr_warning_washwater
     - binary_sensor.ff590mr_window_front_left
     - binary_sensor.ff590mr_window_front_right
     - binary_sensor.ff590mr_window_rear_left
@@ -107,9 +101,6 @@ recorder:
     - binary_sensor.ff590mr_tire_warning
     - binary_sensor.ff590mr_trunk
     - binary_sensor.ff590mr_fuel_lid
-    #- binary_sensor.ff590mr_warning_brakefluid
-    #- binary_sensor.ff590mr_warning_coolantlevellow
-    #- binary_sensor.ff590mr_warning_washwater
     - binary_sensor.ff590mr_window_front_left
     - binary_sensor.ff590mr_window_front_right
     - binary_sensor.ff590mr_window_rear_left

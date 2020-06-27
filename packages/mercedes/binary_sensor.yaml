@@ -228,39 +228,3 @@ binary_sensor:
             mdi:window-open
           {% endif %}   
         device_class: opening
-
-  ######################################################################
-  # Binary Sensor: Warning Brake fluid
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_warning_brakefluid:
-        friendly_name: Liquido freni
-        entity_id: binary_sensor.ff590mr_engine_light_warning
-        value_template: >-
-          {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningbrakefluid', 'true') }}
-        device_class: problem
-
-  ######################################################################
-  # Binary Sensor: Warning Wash Water
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_warning_washwater:
-        friendly_name: Liquido lavacristalli
-        entity_id: binary_sensor.ff590mr_engine_light_warning
-        value_template: >-
-          {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningwashwater', 'true') }}
-        device_class: problem
-
-  ######################################################################
-  # Binary Sensor: Warning Coolant Level Low
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_warning_coolantlevellow:
-        friendly_name: Liquido raffreddamento
-        entity_id: binary_sensor.ff590mr_engine_light_warning
-        value_template: >-
-          {{ is_state_attr('binary_sensor.ff590mr_engine_light_warning', 'warningcoolantlevellow', 'true') }}
-        device_class: problem
