@@ -202,6 +202,7 @@
                                     "entity": "input_boolean.guard_mode"
                                 }
                             ],
+                            "show_header_toggle": false,
                             "title": "Modalit\u00e0 Casa",
                             "type": "entities"
                         },
@@ -589,10 +590,21 @@
                         },
                         {
                             "entities": [
-                                "binary_sensor.ff590mr_engine_light_warning",
-                                "binary_sensor.ff590mr_warning_brakefluid",
-                                "binary_sensor.ff590mr_warning_washwater",
-                                "binary_sensor.ff590mr_warning_coolantlevellow"
+                                {
+                                    "entity": "binary_sensor.ff590mr_engine_light_warning"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_low_brake_fluid_warning"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_low_coolant_level_warning"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_low_wash_water_warning"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_tire_warning"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Mercedes A200d: Allarmi",
@@ -674,6 +686,31 @@
                             "name": "Consumo Energetico",
                             "type": "sensor",
                             "unit": "W"
+                        },
+                        {
+                            "entity": "sensor.potenza_istantanea",
+                            "max": 4000,
+                            "min": 0,
+                            "name": "Potenza Istantanea",
+                            "severity": {
+                                "green": 0,
+                                "red": 3000,
+                                "yellow": 2000
+                            },
+                            "type": "gauge",
+                            "unit": "W"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.consumo_energetico_giornaliero"
+                                },
+                                {
+                                    "entity": "sensor.consumo_energetico_mensile"
+                                }
+                            ],
+                            "title": "Consumi",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:flash",
@@ -713,6 +750,30 @@
                         {
                             "entity": "weather.meteo_morgex",
                             "type": "weather-forecast"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.front_balcony_temperature"
+                                },
+                                {
+                                    "entity": "sensor.front_balcony_humidity"
+                                }
+                            ],
+                            "title": "Balcone",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.rear_balcony_temperature"
+                                },
+                                {
+                                    "entity": "sensor.rear_balcony_humidity"
+                                }
+                            ],
+                            "title": "Veranda",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:weather-sunny",
