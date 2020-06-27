@@ -1,0 +1,9 @@
+######################################################################
+# Customization: Energy
+######################################################################
+
+sensor.consumo_energetico_giornaliero:
+  friendly_name: Consumo Energetico Giornaliero
+
+sensor.consumo_energetico_mensile:
+  friendly_name: Consumo Energetico Mensile

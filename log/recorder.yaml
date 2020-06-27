@@ -44,6 +44,9 @@ exclude:
     # Energy Sensors
     - sensor.potenza_reattiva
     - sensor.tensione
+    - sensor.consumo_energetico
+    - sensor.consumo_energetico_giornaliero
+    - sensor.consumo_energetico_mensile
     # Zigbee2mqtt
     - sensor.main_door_battery
     - sensor.main_door_linkquality

@@ -30,6 +30,14 @@
 #  qos: 0
 #  device_class: power
 
+- platform: mqtt
+  name: "Consumo Energetico"
+  state_topic: "shellies/shellyem-B9E1A0/emeter/0/total"
+  unit_of_measurement: 'kWh'
+  value_template: "{{ (( value|float )/(1000)) | round(2) }}"
+  qos: 0
+  device_class: power
+
 #- platform: mqtt
 #  name: "Energia Restituita"
 #  state_topic: "shellies/shellyem-B9E1A0/emeter/0/returned_energy"

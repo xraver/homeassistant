@@ -1,0 +1,11 @@
+######################################################################
+# Energy Meter
+######################################################################
+
+consumo_energetico_giornaliero:
+  source: sensor.consumo_energetico
+  cycle: daily
+
+consumo_energetico_mensile:
+  source: sensor.consumo_energetico
+  cycle: monthly
