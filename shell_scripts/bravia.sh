@@ -3,8 +3,8 @@
 set -e
 
 HASS_HOME="/config"
-IP=$(awk -F'"' '{print $2}' $HASS_HOME/bravia.conf)
-PIN=$(awk -F'"' '{print $6}' $HASS_HOME/bravia.conf)
+IP=$(awk -F'"' '{print $2}' $HASS_HOME/credentials/bravia.conf)
+PIN=$(awk -F'"' '{print $6}' $HASS_HOME/credentials/bravia.conf)
 IRCC_CMD=$1
 
 if [ "$1" = "" ]; then
