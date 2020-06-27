@@ -4,17 +4,17 @@
 
 input_boolean.home_mode_away:
   name: Modalità Vacanza
-  room: Generale
   expose: true
+  room: Generale
 script.homeassistant_restart:
   name: Riavvia Homeassistant
   expose: true
-  room: Generale
+  room: Routine
 #script.homeassistant_google_home_sync:
 #  name: Sincronizza Homeassistant
 #  expose: true
-#  room: Generale
+#  room: Routine
 #script.shelly_upgrade:
 #  name: Aggiorna Shelly
 #  expose: true
-#  room: Generale
+#  room: Routine

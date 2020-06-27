@@ -5,8 +5,8 @@
 script.speech_status:
   name: Stato Casa
   expose: true
-  room: Generale
+  room: Routine
 script.speech_consumption:
   name: Consumo Casa
   expose: true
-  room: Generale
+  room: Routine

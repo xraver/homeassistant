@@ -5,4 +5,4 @@
 script.laura_voice:
   name: Voce Laura
   expose: true
-  room: Generale
+  room: Routine
