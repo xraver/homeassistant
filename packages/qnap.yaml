@@ -62,15 +62,15 @@ google_assistant:
     switch.nas:
       name: NAS
       expose: true
-      room: Generale
+      room: Studio
     script.plex_start:
       name: Avvia Plex
       expose: true
-      room: Generale
+      room: Routine
     script.plex_stop:
       name: Ferma Plex
       expose: true
-      room: Generale
+      room: Routine
 
 ######################################################################
 # QNAP Package - Customizations
