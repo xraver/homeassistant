@@ -1,0 +1,48 @@
+######################################################################
+# Away Mode - Engine
+######################################################################
+
+automation:
+
+  ######################################################################
+  # Away Mode: Enable Action
+  ######################################################################
+  - alias: "Modalità Vacanza: Azione on"
+    initial_state: 'on'
+
+    trigger:
+      - platform: state
+        entity_id: input_boolean.home_mode_away
+        to: 'on'
+
+    action:
+      - service: script.notify_voice
+        data_template:
+          message: "Modalità vacanza abilitata"
+
+  ######################################################################
+  # Away Mode: Disable Action
+  ######################################################################
+  - alias: "Modalità Vacanza: Azione off"
+    initial_state: 'on'
+
+    trigger:
+      # Manual Disable
+      - platform: state
+        entity_id: input_boolean.home_mode_away
+        to: 'off'
+      # Back home
+      - platform: state
+        entity_id: group.residents
+        to: 'home'
+      # End of Away Period
+      - platform: template
+        value_template: "{{ states('sensor.time_date') == (state_attr('input_datetime.away_mode_end', 'timestamp') | int | timestamp_custom('%H:%M, %Y-%m-%d', true)) }}"
+
+    action:
+      - service: script.notify_voice
+        data_template:
+          message: "Modalità vacanza disabilitata"
+      - service: input_boolean.turn_off
+        data:
+          entity_id: input_boolean.home_mode_away

@@ -1,0 +1,45 @@
+######################################################################
+# Away Mode - Covers Management
+######################################################################
+
+automation:
+
+  ######################################################################
+  # Automation to manage cover in away mode
+  ######################################################################
+  - alias: "Modalità Vacanza: Gestione Tapparelle"
+    #initial_state: 'on'
+
+    trigger:
+      - platform: time
+        at: '09:00:00'
+      - platform: time
+        at: '18:00:00'
+
+    condition:
+      - condition: state
+        entity_id: input_boolean.home_mode_away
+        state: 'on'
+
+    action:
+      - service: cover.set_cover_position
+        data_template:
+          entity_id:
+            - cover.tapparella_sala
+            - cover.tapparella_camera
+          position: >
+            {% if now().strftime('%H')|int >= 9 and now().strftime('%H')|int < 18 %}
+              50
+            {% else %}
+              0
+            {% endif %}
+
+######################################################################
+# Mercedes Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+    # Covers Away Automation
+    automation.modalita_vacanza_gestione_tapparelle:
+      icon: mdi:window-shutter
