@@ -30,6 +30,11 @@
                 "id": "6c8988516c824aa99cbd556a0b4ff39c",
                 "type": "module",
                 "url": "/hacsfiles/lovelace-layout-card/layout-card.js"
+            },
+            {
+                "id": "b28e5c5a648145f0828a10f89b1b7770",
+                "type": "module",
+                "url": "/hacsfiles/hass-shutter-card/hass-shutter-card.js"
             }
         ]
     },

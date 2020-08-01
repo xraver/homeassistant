@@ -388,40 +388,47 @@
                     "cards": [
                         {
                             "entities": [
-                                "cover.tapparelle_casa",
                                 {
-                                    "entity": "cover.tapparelle_casa",
-                                    "full_row": true,
-                                    "type": "custom:slider-entity-row"
-                                },
-                                "cover.tapparella_cucina",
-                                {
+                                    "buttons_position": "left",
                                     "entity": "cover.tapparella_cucina",
-                                    "full_row": true,
-                                    "type": "custom:slider-entity-row"
-                                },
-                                "cover.tapparella_sala",
-                                {
-                                    "entity": "cover.tapparella_sala",
-                                    "full_row": true,
-                                    "type": "custom:slider-entity-row"
-                                },
-                                "cover.tapparella_studio",
-                                {
-                                    "entity": "cover.tapparella_studio",
-                                    "full_row": true,
-                                    "type": "custom:slider-entity-row"
-                                },
-                                "cover.tapparella_camera",
-                                {
-                                    "entity": "cover.tapparella_camera",
-                                    "full_row": true,
-                                    "type": "custom:slider-entity-row"
+                                    "name": "Tapparella Cucina",
+                                    "title_position": "top"
                                 }
                             ],
-                            "show_header_toggle": false,
-                            "title": "Comandi tapparelle",
-                            "type": "entities"
+                            "type": "custom:shutter-card"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "buttons_position": "left",
+                                    "entity": "cover.tapparella_sala",
+                                    "name": "Tapparella Sala",
+                                    "title_position": "top"
+                                }
+                            ],
+                            "type": "custom:shutter-card"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "buttons_position": "left",
+                                    "entity": "cover.tapparella_studio",
+                                    "name": "Tapparella Studio",
+                                    "title_position": "top"
+                                }
+                            ],
+                            "type": "custom:shutter-card"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "buttons_position": "left",
+                                    "entity": "cover.tapparella_camera",
+                                    "name": "Tapparella Camera",
+                                    "title_position": "top"
+                                }
+                            ],
+                            "type": "custom:shutter-card"
                         }
                     ],
                     "icon": "mdi:window-shutter",
