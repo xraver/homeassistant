@@ -124,7 +124,7 @@ volume_manager:
 #
 # Operations:
 # - script.notify_volume_manager
-# - tts.google_translate_say
+# - tts.google_say
 ######################################################################
 
 notify_voice:
@@ -145,7 +145,7 @@ notify_voice:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
 
-    - service: tts.google_translate_say
+    - service: tts.google_say
       data_template:
         entity_id: >-
           {# Check Null Input #}
