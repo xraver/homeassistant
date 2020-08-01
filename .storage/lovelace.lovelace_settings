@@ -98,7 +98,7 @@
                             "type": "vertical-stack"
                         }
                     ],
-                    "icon": "mdi:settings",
+                    "icon": "mdi:cog",
                     "title": "Configurazione"
                 },
                 {
