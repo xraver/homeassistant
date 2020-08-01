@@ -23,9 +23,18 @@
                             "cards": [
                                 {
                                     "entities": [
-                                        "automation.startup_restart_on_error",
-                                        "automation.startup_google_sync",
-                                        "automation.risveglio_giorgio"
+                                        {
+                                            "entity": "automation.startup_restart_on_error"
+                                        },
+                                        {
+                                            "entity": "automation.modalita_vacanza_gestione_tapparelle"
+                                        },
+                                        {
+                                            "entity": "automation.startup_google_sync"
+                                        },
+                                        {
+                                            "entity": "automation.risveglio_giorgio"
+                                        }
                                     ],
                                     "show_header_toggle": false,
                                     "title": "Automazioni",
