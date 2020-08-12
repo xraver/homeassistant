@@ -6,6 +6,8 @@
   initial_state: 'on'
 
   trigger:
+    - platform: homeassistant
+      event: start
     - platform: state
       entity_id: input_boolean.home_mode_day
       to: 'on'
@@ -20,12 +22,12 @@
     - service: frontend.set_theme
       data_template:
         name: >-
-          {% if trigger.entity_id == 'input_boolean.home_mode_day' %}
+          {% if is_state('sensor.home_mode', 'giorno') %}
             default
           {% endif %}
-          {% if trigger.entity_id == 'input_boolean.home_mode_night' %}
+          {% if is_state('sensor.home_mode', 'notte') %}
             darkish
           {% endif %}
-          {% if trigger.entity_id == 'input_boolean.home_mode_away' %}
+          {% if is_state('sensor.home_mode', 'vacanza') %}
             reeder_dark
           {% endif %}
