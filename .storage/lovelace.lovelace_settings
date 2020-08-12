@@ -167,11 +167,27 @@
                     "cards": [
                         {
                             "entities": [
-                                "sensor.zigbee2mqtt_stato_bridge",
-                                "sensor.zigbee2mqtt_stato_permit_join",
-                                "sensor.zigbee2mqtt_stato_log_level",
-                                "sensor.zigbee2mqtt_versione_bridge",
-                                "sensor.zigbee2mqtt_versione_coordinator"
+                                {
+                                    "entity": "sensor.zigbee2mqtt_stato_bridge"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_stato_permit_join"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_stato_log_level"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_versione_bridge"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_versione_coordinator"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_canale"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_panid"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Stato Sistema Zigbee2mqtt",

@@ -58,6 +58,33 @@ sensor:
   #    #icon: mdi:folder-download
 
   ######################################################################
+  # Sensor for Showing the Channel
+  ######################################################################
+  - platform: mqtt
+    name: "Zigbee2mqtt: Canale"
+    state_topic: "zigbee2mqtt/bridge/config"
+    value_template: "{{ value_json.network.channel }}"
+    icon: mdi:access-point-network
+
+  ######################################################################
+  # Sensor for Showing the PanID
+  ######################################################################
+  - platform: mqtt
+    name: "Zigbee2mqtt: PanID"
+    state_topic: "zigbee2mqtt/bridge/config"
+    value_template: "{{ value_json.network.panID }}"
+    icon: mdi:lan
+
+  ######################################################################
+  # Sensor for Showing the Extended PanID
+  ######################################################################
+  #- platform: mqtt
+  #  name: "Zigbee2mqtt: Extended PanID"
+  #  state_topic: "zigbee2mqtt/bridge/config"
+  #  value_template: "{{ value_json.network.extendedPanID }}"
+  #  icon: mdi:lan
+
+  ######################################################################
   # Zigbee2mqtt Networkmap
   ######################################################################
   - platform: mqtt
@@ -250,6 +277,9 @@ history:
       - sensor.zigbee2mqtt_versione_bridge
       - sensor.zigbee2mqtt_versione_coordinator
       #- sensor.zigbee2mqtt_nuova_versione_disponibile
+      - sensor.zigbee2mqtt_channel
+      - sensor.zigbee2mqtt_panid
+      - sensor.zigbee2mqtt_extended_panid
       - sensor.zigbee2mqtt_networkmap
       - timer.zigbee_permit_join
 
@@ -266,6 +296,9 @@ logbook:
       - sensor.zigbee2mqtt_versione_bridge
       - sensor.zigbee2mqtt_versione_coordinator
       #- sensor.zigbee2mqtt_nuova_versione_disponibile
+      - sensor.zigbee2mqtt_channel
+      - sensor.zigbee2mqtt_panid
+      - sensor.zigbee2mqtt_extended_panid
       - sensor.zigbee2mqtt_networkmap
       - timer.zigbee_permit_join
 
@@ -282,5 +315,8 @@ recorder:
       - sensor.zigbee2mqtt_versione_bridge
       - sensor.zigbee2mqtt_versione_coordinator
       #- sensor.zigbee2mqtt_nuova_versione_disponibile
+      - sensor.zigbee2mqtt_channel
+      - sensor.zigbee2mqtt_panid
+      - sensor.zigbee2mqtt_extended_panid
       - sensor.zigbee2mqtt_networkmap
       - timer.zigbee_permit_join
