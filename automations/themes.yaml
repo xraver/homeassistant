@@ -19,6 +19,8 @@
       to: 'on'
 
   action:
+    - delay:
+        milliseconds: 50
     - service: frontend.set_theme
       data_template:
         name: >-
