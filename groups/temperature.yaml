@@ -1,0 +1,10 @@
+######################################################################
+# Group Temperature
+######################################################################
+
+temperature:
+  name: Temperature
+  icon: mdi:home-thermometer
+  entities:
+    - sensor.front_balcony_temperature
+    - sensor.rear_balcony_temperature

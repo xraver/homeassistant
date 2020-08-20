@@ -12,6 +12,9 @@
   {% if enable_status is not defined %}
     {% set enable_status=0 %}
   {% endif %}
+  {% if enable_consumption is not defined %}
+    {% set enable_consumption=0 %}  
+  {% endif %}  
   {% if enable_location is not defined %}
     {% set enable_location=0 %}
   {% endif %}
@@ -55,7 +58,7 @@
   {# Door Status #}
   {%- macro status_door() -%}
     {% for entity_id in states.group.doors.attributes.entity_id  %}
-      {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+      {% set name = state_attr(entity_id, 'friendly_name') %}
       {% if is_state(entity_id, 'off') %}
         La {{ name }} è chiusa.
       {% else %}
@@ -67,7 +70,7 @@
   {# Lights Status #}
   {%- macro status_lights() -%}
     {% for entity_id in states.group.lights.attributes.entity_id  %}
-      {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+      {% set name = state_attr(entity_id, 'friendly_name') %}
       {% if is_state(entity_id, 'off') %}
         La {{ name }} è spenta.
       {% else %}
@@ -79,13 +82,22 @@
   {# Covers Status #}
   {%- macro status_covers() -%}
     {% for entity_id in states.group.covers.attributes.entity_id %}
-      {% set name = entity_id.split('.')[1]|replace('_', ' ') %}
+      {% set name = state_attr(entity_id, 'friendly_name') %}
       {% set perc = state_attr(entity_id, 'current_position') %}
       {% if perc | int < 25 %}
         La {{ name }} è chiusa.
       {% else %}
         La {{ name }} è aperta al {{ perc }} percento.
       {% endif %}
+    {%- endfor %}
+  {%- endmacro -%}
+  
+  {# Temperature Status #}
+  {%- macro status_temperature() -%}
+    {% for entity_id in states.group.temperature.attributes.entity_id %}
+      {% set name = state_attr(entity_id, 'friendly_name') %}
+      {% set temp = states(entity_id) %}
+      La {{ name }} è {{ temp }} gradi.
     {%- endfor %}
   {%- endmacro -%}
   
@@ -99,7 +111,8 @@
     {% for entity_id in states.group.people.attributes.entity_id %}
       {% set name = state_attr(entity_id, 'friendly_name') %}
       {% if is_state(entity_id, 'not_home') %}
-        {% set position = state_attr(entity_id, 'address') %}
+        {% set source = state_attr(entity_id, 'source') %}
+        {% set position = state_attr(source, 'address')|replace('Province of', 'Provincia di') %}
       {% else %}
         {% set position = states(entity_id) %}
       {% endif %}
@@ -161,18 +174,22 @@
   
   {# Home Status #}
   {% if enable_status | int == 1 %}
-      
+    
     {{ time_and_date() }}
     
     {{ status_door() }}
     
     {{ status_lights() }}
-      
+    
     {{ status_covers() }}
     
-    {{ status_consumption() }}
-                    
+    {{ status_temperature() }}
+    
   {% endif %}
+
+  {% if (enable_status | int == 1) or (enable_consumption | int == 1) %}
+    {{ status_consumption() }}
+  {% endif %}    
   
   {# Location Status #}
   {% if (enable_status | int == 1) or (enable_location | int == 1) %}
@@ -180,7 +197,7 @@
   {% endif %}
   
   {# Car Status #}          
-  {% if (enable_status | int == 1) or (enable_car | int == 1) %}              
+  {% if (enable_status | int == 1) or (enable_car | int == 1) %}
     {{ status_car() }}
   {% endif %}
   

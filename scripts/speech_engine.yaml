@@ -50,6 +50,5 @@ speech_consumption:
   alias: Consumo Energetico
   sequence:
     - service: script.speech_engine
-      data_template:
-        message: >-
-          "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"
+      data:
+        enable_consumption: 1
