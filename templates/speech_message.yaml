@@ -94,6 +94,22 @@
   "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"
   {%- endmacro -%}
   
+  {# Location Status #}
+  {%- macro status_location(start, num) -%}
+    {% for entity_id in states.group.people.attributes.entity_id %}
+      {% set name = state_attr(entity_id, 'friendly_name') %}
+      {% if is_state(entity_id, 'not_home') %}
+        {% set position = state_attr(entity_id, 'address') %}
+      {% else %}
+        {% set position = states(entity_id) %}
+      {% endif %}
+      
+      {% if (loop.index >= start|int) and (loop.index < num|int+start|int) %}
+        La posizione di {{ name }} è {{ position }}.
+      {% endif %}              
+    {%- endfor %}
+  {%- endmacro -%}
+  
   {# Car Status #}
   {%- macro status_car() -%}
     {% if is_state('device_tracker.wdd1760081v167576', state_attr('zone.home', 'friendly_name')) %}
@@ -119,22 +135,6 @@
           is_state('binary_sensor.ff590mr_tire_warning', 'on') %}
       Sono inoltre presenti allarmi.
     {% endif %}
-  {%- endmacro -%}
-  
-  {# Location Status #}
-  {%- macro status_location(start, num) -%}
-    {% for entity_id in states.group.people.attributes.entity_id %}
-      {% set name = state_attr(entity_id, 'friendly_name') %}
-      {% if is_state(entity_id, 'not_home') %}
-        {% set position = state_attr(entity_id, 'address') %}
-      {% else %}
-        {% set position = states(entity_id) %}
-      {% endif %}
-      
-      {% if (loop.index >= start|int) and (loop.index < num|int+start|int) %}
-        La posizione di {{ name }} è {{ position }}.
-      {% endif %}              
-    {%- endfor %}
   {%- endmacro -%}
   
   {# End Message #}
@@ -174,7 +174,7 @@
                     
   {% endif %}
   
-  {# Location Info #}
+  {# Location Status #}
   {% if (enable_status | int == 1) or (enable_location | int == 1) %}
     {{ status_location(location_people_start, location_people_num) }}
   {% endif %}
