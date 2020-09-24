@@ -1,15 +1,12 @@
 {
+    "version": 1,
+    "key": "lovelace_resources",
     "data": {
         "items": [
             {
                 "id": "918a79dbe1ab4b3497732d9d595d0501",
                 "type": "module",
                 "url": "/hacsfiles/bar-card/bar-card.js"
-            },
-            {
-                "id": "186fbe23b9fa4a038bef851319b2a8a5",
-                "type": "module",
-                "url": "/hacsfiles/lovelace-battery-entity/battery-entity.js"
             },
             {
                 "id": "526736e722ab4339b6797eb75773cdd6",
@@ -35,9 +32,12 @@
                 "id": "b28e5c5a648145f0828a10f89b1b7770",
                 "type": "module",
                 "url": "/hacsfiles/hass-shutter-card/hass-shutter-card.js"
+            },
+            {
+                "url": "/hacsfiles/battery-state-card/battery-state-card.js",
+                "type": "module",
+                "id": "74408ca439a142a1838d883c03a0142c"
             }
         ]
-    },
-    "key": "lovelace_resources",
-    "version": 1
+    }
 }
