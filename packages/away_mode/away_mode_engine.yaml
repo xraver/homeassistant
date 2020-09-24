@@ -39,6 +39,20 @@ automation:
       - platform: template
         value_template: "{{ states('sensor.time_date') == (state_attr('input_datetime.away_mode_end', 'timestamp') | int | timestamp_custom('%H:%M, %Y-%m-%d', true)) }}"
 
+    condition:
+      condition: or
+      conditions:
+        - condition: template
+          value_template: >-
+            {% if trigger.entity_id == 'input_boolean.home_mode_away' %}
+              true
+            {% else %}
+              false
+            {% endif %}
+        - condition: state
+          entity_id: input_boolean.home_mode_away
+          state: 'on'
+
     action:
       - service: script.notify_voice
         data_template:
