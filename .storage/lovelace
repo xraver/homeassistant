@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "title": "Panoramica",
@@ -745,9 +747,19 @@
                     "title": "Allarmi"
                 },
                 {
+                    "icon": "mdi:weather-sunny",
+                    "id": "meteo",
+                    "title": "Meteo",
                     "badges": [
-                        "sun.sun",
-                        "sensor.yr_symbol"
+                        {
+                            "entity": "sun.sun"
+                        },
+                        {
+                            "entity": "sensor.front_balcony_temperature"
+                        },
+                        {
+                            "entity": "sensor.rear_balcony_temperature"
+                        }
                     ],
                     "cards": [
                         {
@@ -782,14 +794,9 @@
                             "title": "Veranda",
                             "type": "entities"
                         }
-                    ],
-                    "icon": "mdi:weather-sunny",
-                    "id": "meteo",
-                    "title": "Meteo"
+                    ]
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }

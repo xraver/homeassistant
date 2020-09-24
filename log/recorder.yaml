@@ -20,7 +20,6 @@ exclude:
     - sensor.time_date
     # Sun & Weather
     - sun.sun
-    - sensor.yr_symbol
     # Hacs
     - sensor.hacs
     # System
