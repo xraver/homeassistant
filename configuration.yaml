@@ -201,5 +201,5 @@ speedtestdotnet: !include components/speedtest.yaml
 #hacs: !include components/hacs.yaml
 
 # Mercedes Me
-mercedesmeapi: !include components/mercedesme.yaml
+#mercedesmeapi: !include components/mercedesme.yaml
 
