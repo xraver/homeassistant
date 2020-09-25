@@ -24,3 +24,7 @@ custom_components/
 themes/
 www/community
 git_repos/
+
+# Templates Files
+www/images/remote/labels/template_2.xcf
+www/images/remote/labels/template.xcf
