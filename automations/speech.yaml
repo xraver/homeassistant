@@ -6,6 +6,7 @@
 ######################################################################
 
 - alias: Saluto di benvenuto
+  mode: parallel
   initial_state: 'on'
 
   trigger:
