@@ -537,7 +537,6 @@
                     ],
                     "cards": [
                         {
-                            "aspect_ratio": 969,
                             "default_zoom": 15,
                             "entities": [
                                 "person.giorgio"
@@ -546,7 +545,6 @@
                             "type": "map"
                         },
                         {
-                            "aspect_ratio": 969,
                             "default_zoom": 15,
                             "entities": [
                                 "person.laura"
@@ -555,19 +553,17 @@
                             "type": "map"
                         },
                         {
-                            "aspect_ratio": 969,
                             "default_zoom": 15,
                             "entities": [
-                                "device_tracker.google_maps_113099283296073047871"
+                                "person.anna"
                             ],
                             "hours_to_show": 24,
                             "type": "map"
                         },
                         {
-                            "aspect_ratio": 969,
                             "default_zoom": 15,
                             "entities": [
-                                "device_tracker.google_maps_108517379615429477419"
+                                "person.assunta"
                             ],
                             "hours_to_show": 24,
                             "type": "map"
