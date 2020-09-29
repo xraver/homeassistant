@@ -25,6 +25,9 @@ themes/
 www/community
 git_repos/
 
+# VS Code
+.vscode
+
 # Templates Files
 www/images/remote/labels/template_2.xcf
 www/images/remote/labels/template.xcf
