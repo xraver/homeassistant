@@ -36,8 +36,8 @@ automation:
         entity_id: group.residents
         to: 'home'
       # End of Away Period
-      - platform: template
-        value_template: "{{ states('sensor.time_date') == (state_attr('input_datetime.away_mode_end', 'timestamp') | int | timestamp_custom('%H:%M, %Y-%m-%d', true)) }}"
+      - platform: time
+        at: input_datetime.away_mode_end
 
     condition:
       condition: or
@@ -54,9 +54,9 @@ automation:
           state: 'on'
 
     action:
-      - service: script.notify_voice
-        data_template:
-          message: "Modalità vacanza disabilitata"
       - service: input_boolean.turn_off
         data:
           entity_id: input_boolean.home_mode_away
+      - service: script.notify_voice
+        data_template:
+          message: "Modalità vacanza disabilitata"
