@@ -60,8 +60,12 @@
 #      timeout: '00:30:00'
 #      continue_on_timeout: 'false'
 
-    - wait_template: "{{ is_state('binary_sensor.main_door_contact', 'on') }}"
-      timeout: '00:30:00'
+    - wait_for_trigger:
+        - platform: state
+          entity_id: binary_sensor.main_door_contact
+          to: "on"
+      timeout: 
+        minutes: 30
       continue_on_timeout: 'false'
 
     - delay: 00:00:05
