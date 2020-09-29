@@ -5,7 +5,7 @@ This repository contains the Home Assistant Configuration for my house: Casa Rav
 Below the Open Points:
 1) Lovelace:
    - Point and click on rooms
-   - hose plant
+   - house plant
    - Mercedes
 2) Routine
 3) Train
