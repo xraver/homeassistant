@@ -10,7 +10,6 @@
 
 - alias: "Porta Casa: Accendi Luce Corridoio"
   mode: single
-  initial_state: 'on'
 
   trigger:
     - platform: state

@@ -3,7 +3,6 @@
 ######################################################################
 
 - alias: "Allarme Consumo Energetico"
-  initial_state: 'on'
 
   trigger:
     - platform: numeric_state

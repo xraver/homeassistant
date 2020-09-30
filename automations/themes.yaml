@@ -3,7 +3,6 @@
 ######################################################################
 
 - alias: "Temi: Modalità giorno/Notte"
-  initial_state: 'on'
 
   trigger:
     - platform: homeassistant

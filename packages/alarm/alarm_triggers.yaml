@@ -10,7 +10,6 @@ automation:
   # - script.notify_all
   ######################################################################
   - alias: "Allarme Porta Casa"
-    initial_state: 'on'
 
     trigger:
       - platform: state

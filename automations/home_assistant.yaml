@@ -3,7 +3,6 @@
 ######################################################################
 
 - alias: "Home Assistant: Cambio modalità On"
-  initial_state: 'on'
 
   trigger:
     platform: state
@@ -20,7 +19,6 @@
           {{ booleans | list | join(', ') }}
 
 - alias: "Home Assistant: Cambio modalità Off"
-  initial_state: 'on'
 
   trigger:
     platform: state
@@ -57,7 +55,6 @@
 ######################################################################
        
 - alias: "Home Assistant: Modalità Giorno/Notte"
-  initial_state: 'on'
 
   trigger:
     - platform: time
@@ -89,7 +86,6 @@
 ######################################################################
 
 - alias: "Home Assistant: Gestione notifiche vocali"
-  initial_state: 'on'
 
   trigger:
     - platform: state
@@ -100,7 +96,7 @@
       to: 'off'
 
   action:
-    - service_template: >-
+    - service: >-
         {% if trigger.to_state.state == 'on' %}
           input_boolean.turn_off
         {% else %}
@@ -115,7 +111,6 @@
 ######################################################################
 
 - alias: "Home Assistant: Pulitura settimanale log"
-  initial_state: 'on'
 
   trigger: 
     - platform: time

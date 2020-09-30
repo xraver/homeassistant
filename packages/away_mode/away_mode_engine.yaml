@@ -8,7 +8,6 @@ automation:
   # Away Mode: Enable Action
   ######################################################################
   - alias: "Modalità Vacanza: Azione on"
-    initial_state: 'on'
 
     trigger:
       - platform: state
@@ -24,7 +23,6 @@ automation:
   # Away Mode: Disable Action
   ######################################################################
   - alias: "Modalità Vacanza: Azione off"
-    initial_state: 'on'
 
     trigger:
       # Manual Disable

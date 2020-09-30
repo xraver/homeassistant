@@ -4,7 +4,7 @@
 ######################################################################
 
 - alias: "Termosifoni: Schedulazione giornaliera feriale"
-  initial_state: 'off'
+  initial_state: false
 
   trigger:
     - platform: time
@@ -84,7 +84,7 @@
 ######################################################################
 
 - alias: "Termosifoni: Modalità vacanza"
-  initial_state: 'off'
+  initial_state: false
 
   trigger:
     - platform: state

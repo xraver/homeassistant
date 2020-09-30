@@ -4,7 +4,6 @@
 ######################################################################
 
 - alias: "Google Home: Pronuncia testo"
-  initial_state: 'on'
 
   trigger:
     - platform: state

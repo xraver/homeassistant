@@ -3,7 +3,6 @@
 ######################################################################
 
 - alias: "Modalità Test: Azione on"
-  initial_state: 'on'
 
   trigger:
     - platform: state
@@ -23,7 +22,6 @@
 ######################################################################
 
 - alias: "Modalità Test: Azione off"
-  initial_state: 'on'
 
   trigger:
     - platform: state

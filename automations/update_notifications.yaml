@@ -3,7 +3,6 @@
 ######################################################################
 
 - alias: "Update Notification: Home Assistant"
-  initial_state: 'on'
 
   trigger:
     - platform: state
@@ -35,7 +34,6 @@
 ######################################################################
 
 - alias: "Update Notification: Shelly"
-  initial_state: 'on'
 
   trigger:
     - platform: state
@@ -67,7 +65,6 @@
 ######################################################################
 
 - alias: "Update Notification: HACS"
-  initial_state: 'on'
 
   trigger:
     - platform: numeric_state
@@ -93,7 +90,6 @@
 # - persistent_notification.dismiss
 ######################################################################
 - alias: "Update: Riconoscimento Aggiornamenti"
-  initial_state: 'on'
 
   trigger:
     platform: state

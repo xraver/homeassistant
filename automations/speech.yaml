@@ -7,7 +7,6 @@
 
 - alias: Saluto di benvenuto
   mode: parallel
-  initial_state: 'on'
 
   trigger:
     - platform: zone
@@ -66,7 +65,7 @@
           to: "on"
       timeout: 
         minutes: 30
-      continue_on_timeout: 'false'
+      continue_on_timeout: false
 
     - delay: 00:00:05
 
@@ -83,7 +82,7 @@
 ######################################################################
 
 - alias: "Saluto orario"
-  initial_state: 'off'
+  initial_state: false
   
   trigger:
     - platform: time

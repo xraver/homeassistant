@@ -207,7 +207,6 @@ automation:
   ######################################################################
   - id: zigbee2mqtt_change_log_level
     alias: "Zigbee2mqtt: Cambia Log Level"
-    initial_state: "on"
     trigger:
       platform: state
       entity_id: input_select.zigbee2mqtt_log_level
@@ -222,10 +221,9 @@ automation:
   ######################################################################
   - id: zigbee2mqtt_join_enabled
     alias: "Zigbee2mqtt: Abilita Join"
-    initial_state: "on"
     trigger:
       platform: state
-      entity_id: switch.Zigbee2mqtt_Abilita_join
+      entity_id: switch.zigbee2mqtt_abilita_join
       to: "on"
     action:
       service: timer.start
@@ -236,28 +234,26 @@ automation:
   ######################################################################
   - id: zigbee2mqtt_join_disabled
     alias: "Zigbee2mqtt: Disabilita Join"
-    initial_state: "on"
     trigger:
       - platform: event
         event_type: timer.finished
         event_data:
           entity_id: timer.zigbee_permit_join
       - platform: state
-        entity_id: switch.Zigbee2mqtt_Abilita_join
+        entity_id: switch.zigbee2mqtt_abilita_join
         to: "off"
     action:
       - service: timer.cancel
         data:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
-        entity_id: switch.Zigbee2mqtt_Abilita_join
+        entity_id: switch.zigbee2mqtt_abilita_join
 
   ######################################################################
   # Automation to restart zigbee2mqtt to refresh sensor state
   ######################################################################
   - id: zigbee2mqtt_startup_automation
     alias: "Zigbee2mqtt: Startup Automation"
-    initial_state: "on"
     trigger:
       - platform: homeassistant
         event: start
