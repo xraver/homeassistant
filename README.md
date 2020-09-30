@@ -1,4 +1,4 @@
-# Home Assistant Configuration
+# Home Assistant Configuration [![Build Status](https://travis-ci.com/xraver/homeassistant.svg?token=PXJbvzDqQ7KXsH82AB4z&branch=master)](https://travis-ci.org/xraver/homeassistant)
 This repository contains the Home Assistant Configuration for my house: Casa Ravera-Testa
 
 ## To Do List
