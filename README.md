@@ -23,7 +23,7 @@ All files are edited with [Visual Studio Code](https://code.visualstudio.com/).
 All files are tested using the latest stable version of Home Assistant using [Travis](https://travis-ci.com/github/xraver/homeassistant).
 
 ## To Do List
-Below the open points:
+* NFC
 * Lovelace:
    - Point and click on rooms
    - House lant
