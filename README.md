@@ -36,6 +36,8 @@ All files are tested using the latest stable version of Home Assistant using [Tr
 * [Presence Simulator](https://indomus.it/progetti/simulare-automaticamente-la-presenza-in-casa-tramite-la-domotica-home-assistant/)
 * Netatmo (thermostatic valve + doorbell)
 * ESP8266 (ESP01 + NodeMCU)
+* Scene
+* Xiaomi Switch + Shelly Plug S
 
 ## License
 [MIT](http://opensource.org/licenses/MIT) © Giorgio Ravera
