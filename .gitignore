@@ -2,24 +2,27 @@
 .HA_VERSION
 .storage
 .uuid
-backups/
 deps/
 home-assistant.log
 home-assistant_v2.db*
-html5_push_registrations.conf
-image
+image/
 tts/
 
-# Credentials Files
+# Credentials Files & Token
 .google_maps_location_sharing.cookies.*
 .mercedesme-token-cache
-secrets.yaml
 credentials/
+html5_push_registrations.conf
+known_devices.yaml
+secrets.yaml
 
 # Disabled Files
 #*.disabled
 
-# HACS Plugins & Git Repos
+# Local Backups
+backups/
+
+# HACS & Git Repos
 custom_components/
 themes/
 www/community
