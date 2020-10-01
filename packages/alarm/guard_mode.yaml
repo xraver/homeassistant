@@ -44,10 +44,7 @@ automation:
       - platform: homeassistant
         event: start  
 
-    condition:
-      condition: template
-      value_template: >-
-         {{ not is_state('group.residents', 'home') }}
+    condition: "{{ not is_state('group.residents', 'home') }}"
 
     action:
       - service: input_boolean.turn_on
@@ -66,10 +63,7 @@ automation:
       - platform: homeassistant
         event: start 
 
-    condition:
-      condition: template
-      value_template: >-
-         {{ is_state('group.residents', 'home') }}
+    condition: "{{ is_state('group.residents', 'home') }}"
 
     action:
       - service: input_boolean.turn_off
