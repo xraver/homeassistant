@@ -1,0 +1,48 @@
+######################################################################
+# Customization: Xiaomi Devices
+######################################################################
+
+# Main Door Sensor
+binary_sensor.main_door_contact:
+  friendly_name: 'Porta Casa'
+sensor.main_door_battery:
+  friendly_name: 'Porta Casa: Batteria'
+sensor.main_door_linkquality:
+  friendly_name: 'Porta Casa: Link'
+
+# Spare Door Sensor
+binary_sensor.spare_door_contact:
+  friendly_name: 'Spare Door'
+sensor.spare_door_battery:
+  friendly_name: 'Spare Door: Batteria'
+sensor.spare_door_linkquality:
+  friendly_name: 'Spare Door: Link'
+
+# Front Balcony Temperature Sensor
+sensor.front_balcony_temperature:
+  friendly_name: 'Temperatura Balcone'
+sensor.front_balcony_humidity:
+  friendly_name: 'Umidità Balcone'
+sensor.front_balcony_battery:
+  friendly_name: 'Temperatura Balcone: Batteria'
+sensor.front_balcony_linkquality:
+  friendly_name: 'Temperatura Balcone: Link'
+
+# Rear Balcony Temperature Sensor
+sensor.rear_balcony_temperature:
+  friendly_name: 'Temperatura Veranda'
+sensor.rear_balcony_humidity:
+  friendly_name: 'Umidità Veranda'
+sensor.rear_balcony_battery:
+  friendly_name: 'Temperatura Veranda: Batteria'
+sensor.rear_balcony_linkquality:
+  friendly_name: 'Temperatura Veranda: Link'
+
+# Wireless Switch
+sensor.wireless_switch_click:
+  friendly_name: 'Wireless Switch'
+sensor.wireless_switch_battery:
+  friendly_name: 'Wireless Switch: Batteria'
+sensor.wireless_switch_linkquality:
+  friendly_name: 'Wireless Switch: Link'
+

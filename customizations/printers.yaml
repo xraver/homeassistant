@@ -1,0 +1,16 @@
+######################################################################
+# Customization: Person
+######################################################################
+
+sensor.canon_tr8500_series:
+  friendly_name: Canon TR8550
+sensor.canon_tr8500_series_black_bk:
+  friendly_name: Canon TR8550 Nero
+sensor.canon_tr8500_series_black_pgbk:
+  friendly_name: Canon TR8550 Pigmento
+sensor.canon_tr8500_series_cyan:
+  friendly_name: Canon TR8550 Ciano
+sensor.canon_tr8500_series_magenta:
+  friendly_name: Canon TR8550 Magenta
+sensor.canon_tr8500_series_yellow:
+  friendly_name: Canon TR8550 Giallo
