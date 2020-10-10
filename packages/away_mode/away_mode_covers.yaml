@@ -29,7 +29,7 @@ automation:
             - cover.tapparella_camera
           position: >
             {% if now().strftime('%H')|int >= 9 and now().strftime('%H')|int < 18 %}
-              50
+              80
             {% else %}
               0
             {% endif %}
