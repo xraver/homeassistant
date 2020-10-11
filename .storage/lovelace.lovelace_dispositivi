@@ -1,0 +1,139 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_dispositivi",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "title": "NAS",
+                    "path": "nas",
+                    "icon": "mdi:nas",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entities": [
+                                        "switch.nas",
+                                        "script.plex_start",
+                                        "script.plex_stop"
+                                    ],
+                                    "show_header_toggle": false,
+                                    "title": "NAS QNAP TS-228A",
+                                    "type": "entities"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ]
+                },
+                {
+                    "title": "Stampanti",
+                    "path": "stampanti",
+                    "icon": "mdi:printer",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:bar-card",
+                            "entities": [
+                                {
+                                    "entity": "sensor.canon_tr8500_series_black_bk",
+                                    "name": "BK",
+                                    "color": "black",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.canon_tr8500_series_black_pgbk",
+                                    "name": "PGBK",
+                                    "color": "black",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.canon_tr8500_series_cyan",
+                                    "name": "C",
+                                    "color": "cyan",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.canon_tr8500_series_magenta",
+                                    "name": "M",
+                                    "color": "magenta",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.canon_tr8500_series_yellow",
+                                    "name": "Y",
+                                    "color": "yellow",
+                                    "width": "85%"
+                                }
+                            ],
+                            "title": "Canon TR8550: Livello Inchiostro",
+                            "show_header_toggle": false,
+                            "state_color": false,
+                            "positions": {
+                                "icon": "off",
+                                "indicator": "off",
+                                "name": "outside",
+                                "value": "outside"
+                            }
+                        },
+                        {
+                            "type": "entity",
+                            "entity": "sensor.canon_tr8500_series",
+                            "name": "Canon TR8550: Stato"
+                        }
+                    ]
+                },
+                {
+                    "title": "Zigbee",
+                    "path": "zigbee",
+                    "icon": "mdi:zigbee",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:battery-state-card",
+                            "title": "Batteria Dispositivi ZigBee",
+                            "sort_by_level": "desc",
+                            "entities": [
+                                {
+                                    "entity": "sensor.main_door_battery",
+                                    "name": "Porta Casa"
+                                },
+                                {
+                                    "entity": "sensor.front_balcony_battery",
+                                    "name": "Temperatura Balcone"
+                                },
+                                {
+                                    "entity": "sensor.rear_balcony_battery",
+                                    "name": "Temperatura Veranda"
+                                },
+                                {
+                                    "entity": "sensor.spare_door_battery",
+                                    "name": "Spare Door"
+                                },
+                                {
+                                    "entity": "sensor.wireless_switch_battery",
+                                    "name": "Wireless Switch"
+                                }
+                            ]
+                        },
+                        {
+                            "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n",
+                            "entity": "sensor.zigbee2mqtt_networkmap",
+                            "font_size": 12,
+                            "force": 3000,
+                            "height": 400,
+                            "link_width": 2,
+                            "mqtt_base_topic": "zigbee2mqtt",
+                            "node_size": 16,
+                            "title": "Zigbee2mqtt Network Map",
+                            "type": "custom:zigbee2mqtt-networkmap"
+                        }
+                    ]
+                }
+            ],
+            "title": "Dispositivi"
+        }
+    }
+}

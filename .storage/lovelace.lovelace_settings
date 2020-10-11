@@ -89,12 +89,6 @@
                                             "entity": "sensor.home_assistant_current_version"
                                         },
                                         {
-                                            "entity": "sensor.zigbee2mqtt_versione_bridge"
-                                        },
-                                        {
-                                            "entity": "sensor.zigbee2mqtt_versione_coordinator"
-                                        },
-                                        {
                                             "entity": "sensor.cert_expiry_server_giorgioravera_it"
                                         },
                                         {
@@ -141,21 +135,6 @@
                                     ],
                                     "title": "pfSense",
                                     "type": "glance"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entities": [
-                                        "switch.nas",
-                                        "script.plex_start",
-                                        "script.plex_stop"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "title": "Nas",
-                                    "type": "entities"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -239,7 +218,7 @@
                         },
                         {
                             "type": "custom:battery-state-card",
-                            "title": "Sato Batteria ZigBee Devices",
+                            "title": "Batteria Dispositivi ZigBee",
                             "sort_by_level": "desc",
                             "entities": [
                                 {

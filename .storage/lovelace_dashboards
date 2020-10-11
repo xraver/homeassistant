@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace_dashboards",
     "data": {
         "items": [
             {
@@ -18,9 +20,16 @@
                 "show_in_sidebar": true,
                 "title": "Sistema",
                 "url_path": "lovelace-test"
+            },
+            {
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "icon": "mdi:devices",
+                "title": "Dispositivi",
+                "url_path": "lovelace-dispositivi",
+                "mode": "storage",
+                "id": "lovelace_dispositivi"
             }
         ]
-    },
-    "key": "lovelace_dashboards",
-    "version": 1
+    }
 }
