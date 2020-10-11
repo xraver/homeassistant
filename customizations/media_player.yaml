@@ -9,6 +9,6 @@ media_player.roku_yd00dm481414:
   friendly_name: NowTV Giorgio
 
 # Script di comando
-script.tv_toggle:
+script.tv_sala_toggle:
   friendly_name: Accendi/Spegni
   icon: mdi:power

@@ -4,20 +4,23 @@
 # - tv
 #
 # Operations:
-# -  script.turn_on
+# - media_player.toggle
+# - script.turn_on
 ######################################################################
 
 tv_sala_toggle:
   alias: "TV Sala: Accendi/Spegni"
   sequence:
-    - service: script.turn_on
-      data_template:
-        entity_id: >-
-          {% if is_state('media_player.sony_bravia_tv', 'on') %}
-            script.tv_sala_off
-          {% else %}
-            script.tv_sala_on
-          {% endif %}
+    - service: media_player.toggle
+      entity_id: media_player.sony_bravia_tv
+#    - service: script.turn_on
+#      data_template:
+#        entity_id: >-
+#          {% if is_state('media_player.sony_bravia_tv', 'on') %}
+#            script.tv_sala_off
+#          {% else %}
+#            script.tv_sala_on
+#          {% endif %}
 
 ######################################################################
 # Script: TV Sala On
@@ -25,15 +28,13 @@ tv_sala_toggle:
 # - tv
 #
 # Operations:
-# -  script.turn_on
+# - shell_command.bravia_tvpower
 ######################################################################
 
-tv_sala_on:
-  alias: "TV Sala: Accendi"
-  sequence:
-    #- service: shell_command.bravia_tvpower
-    - service: media_player.toggle
-      entity_id: media_player.sony_bravia_tv
+#tv_sala_on:
+#  alias: "TV Sala: Accendi"
+#  sequence:
+#    - service: shell_command.bravia_tvpower
 
 ######################################################################
 # Script: TV Sala Off
@@ -41,12 +42,10 @@ tv_sala_on:
 # - tv
 #
 # Operations:
-# -  script.turn_on
+# - shell_command.bravia_poweroff
 ######################################################################
 
-tv_sala_off:
-  alias: "TV Sala: Spegni"
-  sequence:
-    #- service: shell_command.bravia_poweroff
-    - service: media_player.toggle
-      entity_id: media_player.sony_bravia_tv
+#tv_sala_off:
+#  alias: "TV Sala: Spegni"
+#  sequence:
+#    - service: shell_command.bravia_poweroff
