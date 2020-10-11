@@ -10,7 +10,6 @@ binary_sensor:
     sensors:
       ff590mr_locked:
         friendly_name: Vettura Bloccata
-        entity_id: lock.ff590mr_lock
         value_template: >-
           {{ not is_state('lock.ff590mr_lock', 'locked') }}
         icon_template: >-
@@ -28,7 +27,6 @@ binary_sensor:
     sensors:
       ff590mr_doors_closed:
         friendly_name: Porte
-        entity_id: sensor.ff590mr_lock
         value_template: >-
           {{ not is_state_attr('sensor.ff590mr_lock', 'doorsClosed', true) }}
         icon_template: >-
@@ -46,7 +44,6 @@ binary_sensor:
     sensors:
       ff590mr_door_front_left:
         friendly_name: Anteriore Sinistra
-        entity_id: sensor.ff590mr_lock
         value_template: >-
           {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
                   is_state_attr('sensor.ff590mr_lock', 'doorStateFrontLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
@@ -60,7 +57,6 @@ binary_sensor:
     sensors:
       ff590mr_door_front_right:
         friendly_name: Anteriore Destra
-        entity_id: sensor.ff590mr_lock
         value_template: >-
           {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
                   is_state_attr('sensor.ff590mr_lock', 'doorStateFrontRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
@@ -74,7 +70,6 @@ binary_sensor:
     sensors:
       ff590mr_door_rear_left:
         friendly_name: Posteriore Sinistra
-        entity_id: sensor.ff590mr_lock
         value_template: >-     
           {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
                   is_state_attr('sensor.ff590mr_lock', 'doorStateRearLeft', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
@@ -88,7 +83,6 @@ binary_sensor:
     sensors:
       ff590mr_door_rear_right:
         friendly_name: Posteriore Destra
-        entity_id: sensor.ff590mr_lock
         value_template: >-
           {{ not (is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_LOCKED') or
                   is_state_attr('sensor.ff590mr_lock', 'doorStateRearRight', 'DOOR_CLOSED_AND_DOOR_UNLOCKED')) }}
@@ -102,7 +96,6 @@ binary_sensor:
     sensors:
       ff590mr_trunk:
         friendly_name: Bagagliaio
-        entity_id: sensor.ff590mr_lock
         value_template: >-
           {{ not (is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_LOCKED') or
                   is_state_attr('sensor.ff590mr_lock', 'trunkStateRollup', 'CLOSED_AND_UNLOCKED')) }}
@@ -122,7 +115,6 @@ binary_sensor:
     sensors:
       ff590mr_fuel_lid:
         friendly_name: Serbatoio
-        entity_id: sensor.ff590mr_lock
         value_template: >-
           {{ not is_state_attr('sensor.ff590mr_lock', 'fuelLidClosed', true) }}
         icon_template: >-
@@ -140,7 +132,6 @@ binary_sensor:
     sensors:
       ff590mr_windows_closed_2:
         friendly_name: Finestrini
-        entity_id: binary_sensor.ff590mr_windows_closed
         value_template: >-
           {{ not (is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', 'CLOSED') and
                   is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', 'CLOSED') and
@@ -164,7 +155,6 @@ binary_sensor:
     sensors:
       ff590mr_window_front_left:
         friendly_name: Anteriore Sinistro
-        entity_id: binary_sensor.ff590mr_windows_closed
         value_template: >-
           {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', 'CLOSED') }}
         icon_template: >-
@@ -182,7 +172,6 @@ binary_sensor:
     sensors:
       ff590mr_window_front_right:
         friendly_name: Anteriore Destro
-        entity_id: binary_sensor.ff590mr_windows_closed
         value_template: >-
           {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', 'CLOSED') }}
         icon_template: >-
@@ -200,7 +189,6 @@ binary_sensor:
     sensors:
       ff590mr_window_rear_left:
         friendly_name: Posteriore Sinistro
-        entity_id: binary_sensor.ff590mr_windows_closed
         value_template: >-
           {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', 'CLOSED') }}
         icon_template: >-
@@ -218,7 +206,6 @@ binary_sensor:
     sensors:
       ff590mr_window_rear_right:
         friendly_name: Posteriore Destro
-        entity_id: binary_sensor.ff590mr_windows_closed
         value_template: >-
           {{ not is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', 'CLOSED') }}
         icon_template: >-

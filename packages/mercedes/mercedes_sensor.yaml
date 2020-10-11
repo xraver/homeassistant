@@ -10,7 +10,6 @@ sensor:
     sensors:
       ff590mr_tire_pressure_front_left:
         friendly_name: Anteriore Sinistra
-        entity_id: sensor.ff590mr_lock
         unit_of_measurement: 'kPa'
         value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontLeft') }}"
         icon_template: mdi:car-tire-alert
@@ -23,7 +22,6 @@ sensor:
     sensors:
       ff590mr_tire_pressure_front_right:
         friendly_name: Anteriore Destra
-        entity_id: sensor.ff590mr_lock
         unit_of_measurement: 'kPa'
         value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontRight') }}"
         icon_template: mdi:car-tire-alert
@@ -36,7 +34,6 @@ sensor:
     sensors:
       ff590mr_tire_pressure_rear_left:
         friendly_name: Posteriore Sinistra
-        entity_id: sensor.ff590mr_lock
         unit_of_measurement: 'kPa'
         value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearLeft') }}"
         icon_template: mdi:car-tire-alert
@@ -49,7 +46,6 @@ sensor:
     sensors:
       ff590mr_tire_pressure_rear_right:
         friendly_name: Posteriore Destra
-        entity_id: sensor.ff590mr_lock
         unit_of_measurement: 'kPa'
         value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearRight') }}"
         icon_template: mdi:car-tire-alert
@@ -152,7 +148,6 @@ sensor:
     sensors:
       ff590mr_distance_since_start:
         friendly_name: Distanza dalla partenza
-        entity_id: sensor.ff590mr_odometer
         unit_of_measurement: 'Km'
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceStart') }}"
         icon_template: mdi:road-variant
@@ -164,7 +159,6 @@ sensor:
     sensors:
       ff590mr_distance_since_reset:
         friendly_name: Distanza dal reset
-        entity_id: sensor.ff590mr_odometer
         unit_of_measurement: 'Km'
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceReset') }}"
         icon_template: mdi:road-variant
@@ -176,7 +170,6 @@ sensor:
     sensors:
       ff590mr_liquid_consumption_start:
         friendly_name: Consumo dalla partenza
-        entity_id: sensor.ff590mr_odometer
         unit_of_measurement: 'l/100Km'
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionstart') }}"
         icon_template: mdi:gas-station
@@ -188,7 +181,6 @@ sensor:
     sensors:
       ff590mr_liquid_consumption_reset:
         friendly_name: Consumo dal reset
-        entity_id: sensor.ff590mr_odometer
         unit_of_measurement: 'l/100Km'
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionreset') }}"
         icon_template: mdi:gas-station
@@ -200,7 +192,6 @@ sensor:
     sensors:
       ff590mr_service_interval_days:
         friendly_name: Prossimo Tagliando
-        entity_id: sensor.ff590mr_odometer
         unit_of_measurement: 'giorni'
         value_template: "{{ state_attr('sensor.ff590mr_odometer', 'serviceintervaldays') }}"
         icon_template: mdi:wrench

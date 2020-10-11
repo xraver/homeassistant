@@ -7,7 +7,6 @@ switch:
     switches:
       ff590mr_lock:
         friendly_name: Blocco Auto
-        entity_id: lock.ff590mr_lock
         value_template: "{{ is_state('lock.ff590mr_lock', 'locked') }}"
         turn_on:
           - service: lock.lock

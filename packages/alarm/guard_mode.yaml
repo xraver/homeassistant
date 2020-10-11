@@ -7,7 +7,6 @@ binary_sensor:
     sensors:
       guard_mode:
         friendly_name: Modalità Guardia
-        entity_id: input_boolean.guard_mode
         value_template: >-
           {{ is_state('input_boolean.guard_mode', 'on') }}
         icon_template: >-

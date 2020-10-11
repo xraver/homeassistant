@@ -6,9 +6,6 @@
   sensors:
     home_mode:
       friendly_name: Modalità Casa
-      entity_id: input_boolean.home_mode_day,
-                 input_boolean.home_mode_night,
-                 input_boolean.home_mode_away
       value_template: >-
         {% if is_state('input_boolean.home_mode_day', 'on') %}
           giorno

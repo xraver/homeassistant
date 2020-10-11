@@ -6,7 +6,6 @@
   sensors:
     home_mode:
       friendly_name: Modalità Casa
-      entity_id: sensor.home_mode
       value_template: >-
         {{ is_state('sensor.home_mode', 'giorno') 
            or is_state('sensor.home_mode', 'notte')
@@ -28,7 +27,6 @@
   sensors:
     text_notifications:
       friendly_name: Notifiche testuali
-      entity_id: input_boolean.text_notifications
       value_template: >-
         {{ is_state('input_boolean.text_notifications', 'on') }}
       icon_template: >-
@@ -46,7 +44,6 @@
   sensors:
     speech_notifications:
       friendly_name: Notifiche vocali
-      entity_id: input_boolean.speech_notifications
       value_template: >-
         {{ is_state('input_boolean.speech_notifications', 'on') }}
       icon_template: >-
