@@ -181,7 +181,7 @@ weather: !include components/weather.yaml
 # Multimedia (moved to UI)
 #media_player: !include_dir_merge_list media_player/
 
-# MQTT
+# MQTT (moved to UI)
 #mqtt: !include components/mqtt.yaml
 
 # EQ3 Max Cube
@@ -202,4 +202,3 @@ speedtestdotnet: !include components/speedtest.yaml
 
 # Mercedes Me
 #mercedesmeapi: !include components/mercedesme.yaml
-

@@ -16,6 +16,25 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * QNAP NAS (TS-228A)
 * ~~Mercedes Me (Mercedes-Benz A200d)~~
 
+## Installation
+* Clone repository
+* Add the following files:
+  * credentials/*
+  * .google_maps_location_sharing.cookies.EMAIL_gmail_com
+  * known_devices.yaml
+  * secrets.yaml
+* Start Home Assistant
+* Create Users/People
+* Configure the following integrations using UI:
+  * Certificate Expiry
+  * Google Cast
+  * HACS
+  * Internet Printing Protocol 
+  * MQTT
+  * Sony Bravia
+  * UPNP
+* Restart Home Assistant
+
 ## Editor
 All files are edited with [Visual Studio Code](https://code.visualstudio.com/).
 
