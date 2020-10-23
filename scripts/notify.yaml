@@ -12,9 +12,21 @@
 # - persistent_notification.create (if enable_persistent)
 ######################################################################
 
-notify_text_internal:
+notify_text:
   alias: Notifiche testuali
+  variables:
+    title: >-
+      {# Check Null Input #}
+      {% if title | length == 0 %}
+        {% set title = 'Home Assistant' %}
+      {% endif %}
+      {{ title }}
+
   sequence:
+    - condition: state
+      entity_id: input_boolean.text_notifications
+      state: 'on'
+
     - service: notify.mail
       data_template:
         title: "{{ title }}"
@@ -47,25 +59,6 @@ notify_text_internal:
            {% set notification_id = 'generic' %}
          {% endif %}
          {{ notification_id }}
-
-notify_text:
-  alias: Notifiche testuali
-  sequence:
-    - condition: state
-      entity_id: input_boolean.text_notifications
-      state: 'on'
-
-    - service: script.notify_text_internal
-      data_template:
-        title: >-
-          {# Check Null Input #}
-          {% if title | length == 0 %}
-            {% set title = 'Home Assistant' %}
-          {% endif %}
-          {{ title }}
-        message: "{{ message }}"
-        notification_id: "{{ notification_id }}"
-        enable_persistent: "{{ enable_persistent }}"
 
 ######################################################################
 # Script: Volume Manager
