@@ -10,7 +10,7 @@ tts/
 
 # Credentials Files & Token
 .google_maps_location_sharing.cookies.*
-.mercedesme-token-cache
+.mercedesme*
 credentials/
 html5_push_registrations.conf
 known_devices.yaml
