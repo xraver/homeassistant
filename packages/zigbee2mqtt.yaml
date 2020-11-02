@@ -260,6 +260,23 @@ automation:
     action:
       - service: script.zigbee2mqtt_restart
 
+  ######################################################################
+  # Automation to restart zigbee2mqtt in case of bridge offline for 1m
+  ######################################################################
+  - id: zigbee2mqtt_restart_automation
+    alias: "Zigbee2mqtt: Restart Automation"
+    trigger:
+      - platform: state
+        entity_id: sensor.zigbee2mqtt_stato_bridge
+        to: "offline"
+        for: "00:01:00"
+    action:
+      - service: script.zigbee2mqtt_restart
+      - service: script.notify_text
+        data:
+          title: "Restart Zigbee2mqtt"
+          message: "Zigbee2mqtt bridge offline: force restart"
+
 ######################################################################
 # Zigbee2mqtt Package - History
 ######################################################################
