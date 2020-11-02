@@ -1,4 +1,4 @@
-# Home Assistant Configuration [![Build Status](https://travis-ci.com/xraver/homeassistant.svg?token=PXJbvzDqQ7KXsH82AB4z&branch=master)](https://travis-ci.com/github/xraver/homeassistant)
+# Home Assistant Configuration [![Build Status](https://api.travis-ci.org/xraver/homeassistant.svg?branch=master)](https://travis-ci.org/github/xraver/homeassistant) [![Last Commit](https://img.shields.io/github/last-commit/xraver/homeassistant)](https://github.com/xraver/homeassistant/commits/master) [![License Status](https://img.shields.io/github/license/xraver/homeassistant)](https://github.com/xraver/homeassistant/blob/master/LICENSE)
 This repository contains the [Home Assistant](https://www.home-assistant.io/) configuration for my house: Casa Ravera-Testa.
 
 ## Running System
