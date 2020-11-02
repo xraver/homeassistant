@@ -37,6 +37,11 @@
                 "url": "/hacsfiles/battery-state-card/battery-state-card.js",
                 "type": "module",
                 "id": "74408ca439a142a1838d883c03a0142c"
+            },
+            {
+                "url": "/hacsfiles/lovelace-swipe-navigation/swipe-navigation.js",
+                "type": "module",
+                "id": "737d0af49e4a49c881d60ef2c724203a"
             }
         ]
     }
