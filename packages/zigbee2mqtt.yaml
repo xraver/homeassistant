@@ -48,16 +48,6 @@ sensor:
     icon: mdi:chip
 
   ######################################################################
-  # Sensor for Showing the new Zigbee2mqtt Version
-  ######################################################################
-  #  - platform: command_line
-  #    name: "Zigbee2mqtt: nuova versione disponibile"
-  #    command: 'curl https://api.github.com/repos/Koenkk/zigbee2mqtt/releases/latest'
-  #    scan_interval: 3600
-  #    value_template: '{{ value_json.tag_name }}'
-  #    #icon: mdi:folder-download
-
-  ######################################################################
   # Sensor for Showing the Channel
   ######################################################################
   - platform: mqtt
@@ -122,7 +112,7 @@ input_select:
       - error
     initial: info
     icon: mdi:format-list-bulleted
-    
+
 ######################################################################
 # Zigbee2mqtt Package - Input Text
 ######################################################################
@@ -196,7 +186,6 @@ script:
         topic: zigbee2mqtt/bridge/config/remove
         payload_template: "{{ states.input_text.zigbee2mqtt_remove.state | string }}"
 
-
 ######################################################################
 # Zigbee2mqtt Package - Automation
 ######################################################################
@@ -248,6 +237,25 @@ automation:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
         entity_id: switch.zigbee2mqtt_abilita_join
+
+  ######################################################################
+  # Automation to notify when a device joined zigbee2mqtt network
+  ######################################################################
+  - id: "zigbee2mqtt_notification_on_successfull_interview"
+    alias: "Zigbee2mqtt: Device aggiunto alla rete Zigbee2mqtt"
+    trigger:
+      platform: mqtt
+      topic: 'zigbee2mqtt/bridge/log'
+    condition:
+      condition: template
+      value_template: '{{trigger.payload_json.type == "pairing" and trigger.payload_json.message == "interview_successful"}}'
+    action:
+      - service: persistent_notification.create
+        data_template:
+          title: "Device aggiunto alla rete Zigbee2mqtt"
+          message: "Name: {{trigger.payload_json.meta.friendly_name}},
+                    Vendor: {{trigger.payload_json.meta.vendor}},
+                    Description: {{trigger.payload_json.meta.description}}"
 
   ######################################################################
   # Automation to restart zigbee2mqtt to refresh sensor state

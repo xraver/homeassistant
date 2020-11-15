@@ -1,4 +1,9 @@
-# Home Assistant Configuration [![Build Status](https://api.travis-ci.org/xraver/homeassistant.svg?branch=master)](https://travis-ci.org/github/xraver/homeassistant) [![Last Commit](https://img.shields.io/github/last-commit/xraver/homeassistant)](https://github.com/xraver/homeassistant/commits/master) [![License Status](https://img.shields.io/github/license/xraver/homeassistant)](https://github.com/xraver/homeassistant/blob/master/LICENSE)
+# Home Assistant Configuration 
+[![Build Status][build-status-img]][build-status-url]
+[![Last Commit][last-commit-img]][last-commit-url]
+[![License Status][license-img]][license-url]
+[![BuyMeCoffee][buymecoffee-img]][buymecoffee-url]
+
 This repository contains the [Home Assistant](https://www.home-assistant.io/) configuration for my house: Casa Ravera-Testa.
 
 ## Running System
@@ -42,6 +47,7 @@ All files are edited with [Visual Studio Code](https://code.visualstudio.com/).
 All files are tested using the latest stable version of Home Assistant using [Travis](https://travis-ci.com/github/xraver/homeassistant).
 
 ## To Do List
+* Script review (Native types support for templates after release 117)
 * NFC
 * Lovelace:
    - Point and click on rooms
@@ -62,6 +68,18 @@ All files are tested using the latest stable version of Home Assistant using [Tr
 [MIT](http://opensource.org/licenses/MIT) © Giorgio Ravera
 
 ## Donate
-If you want to offer me a coffee:
+[![BuyMeCoffee][buymecoffee-button]][buymecoffee-url]
 
-[![paypal](https://www.paypalobjects.com/en_US/IT/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=giorgio.ravera%40gmail.com&currency_code=EUR)
+---
+
+[build-status-img]: https://api.travis-ci.org/xraver/homeassistant.svg?branch=master
+[build-status-url]: https://travis-ci.org/github/xraver/homeassistant
+[license-img]: https://img.shields.io/github/license/xraver/homeassistant
+[license-url]: LICENSE
+[releases-img]: https://img.shields.io/github/v/release/xraver/homeassistant
+[releases-url]: https://github.com/xraver/homeassistant/releases
+[last-commit-img]: https://img.shields.io/github/last-commit/xraver/homeassistant
+[last-commit-url]: https://github.com/xraver/homeassistant/commits/master
+[buymecoffee-img]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg
+[buymecoffee-button]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
+[buymecoffee-url]: https://www.buymeacoffee.com/raverag
