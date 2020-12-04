@@ -190,6 +190,9 @@ maxcube: !include components/eq3max.yaml
 # Google Assistant
 google_assistant: !include components/google_assistant.yaml
 
+# Google Calendar
+google: !include components/google_calendar.yaml
+
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
 

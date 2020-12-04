@@ -10,6 +10,7 @@ tts/
 
 # Credentials Files & Token
 .google_maps_location_sharing.cookies.*
+.google.token
 .mercedesme*
 credentials/
 html5_push_registrations.conf

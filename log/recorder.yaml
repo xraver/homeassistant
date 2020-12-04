@@ -81,6 +81,7 @@ exclude:
     - sensor.canon_tr8500_series_yellow
   domains:
     - automation
+    - calendar
     - group
     - input_boolean
     - input_datetime
