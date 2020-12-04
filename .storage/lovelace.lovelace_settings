@@ -110,34 +110,57 @@
                     "badges": [],
                     "cards": [
                         {
+                            "entities": [
+                                "sensor.ip_1",
+                                "sensor.ip_2"
+                            ],
+                            "title": "External IP",
+                            "type": "glance"
+                        },
+                        {
+                            "type": "vertical-stack",
                             "cards": [
                                 {
+                                    "type": "glance",
                                     "entities": [
-                                        "sensor.ip_1",
-                                        "sensor.ip_2"
+                                        {
+                                            "entity": "sensor.speedtest_ping"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_download"
+                                        },
+                                        {
+                                            "entity": "sensor.speedtest_upload"
+                                        }
                                     ],
-                                    "title": "External IP",
-                                    "type": "glance"
+                                    "title": "Speed Test"
                                 },
                                 {
-                                    "entities": [
-                                        "sensor.speedtest_ping",
-                                        "sensor.speedtest_download",
-                                        "sensor.speedtest_upload"
-                                    ],
-                                    "title": "Speed Test",
-                                    "type": "glance"
+                                    "type": "button",
+                                    "entity": "sensor.speedtest_download",
+                                    "show_icon": true,
+                                    "name": "Aggiorna Valori",
+                                    "icon_height": "25px",
+                                    "tap_action": {
+                                        "action": "call-service",
+                                        "service": "speedtestdotnet.speedtest"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "sensor.freebsd_router_kib_s_received"
                                 },
                                 {
-                                    "entities": [
-                                        "sensor.freebsd_router_kib_s_received",
-                                        "sensor.freebsd_router_kib_s_sent"
-                                    ],
-                                    "title": "pfSense",
-                                    "type": "glance"
+                                    "entity": "sensor.freebsd_router_kib_s_sent"
                                 }
                             ],
-                            "type": "vertical-stack"
+                            "title": "pfSense",
+                            "refresh_interval": 0,
+                            "hours_to_show": 2
                         }
                     ],
                     "icon": "mdi:lan",
