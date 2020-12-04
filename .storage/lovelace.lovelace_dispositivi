@@ -8,80 +8,94 @@
                     "title": "NAS",
                     "path": "nas",
                     "icon": "mdi:nas",
+                    "panel": true,
                     "badges": [],
                     "cards": [
                         {
+                            "type": "custom:layout-card",
+                            "layout": "vertical",
                             "cards": [
                                 {
-                                    "entities": [
-                                        "switch.nas",
-                                        "script.plex_start",
-                                        "script.plex_stop"
-                                    ],
-                                    "show_header_toggle": false,
+                                    "type": "vertical-stack",
                                     "title": "NAS QNAP TS-228A",
-                                    "type": "entities"
+                                    "cards": [
+                                        {
+                                            "type": "picture",
+                                            "image": "/local/images/devices/qnap_ts228a.png"
+                                        },
+                                        {
+                                            "type": "entities",
+                                            "show_header_toggle": false,
+                                            "entities": [
+                                                "switch.nas",
+                                                "script.plex_start",
+                                                "script.plex_stop"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "break",
+                                {
+                                    "type": "vertical-stack",
+                                    "title": "Canon PIXMA TR8550",
+                                    "cards": [
+                                        {
+                                            "type": "picture",
+                                            "title": "Canon PIXMA TR8550",
+                                            "image": "/local/images/devices/canon_tr8550.png"
+                                        },
+                                        {
+                                            "type": "entity",
+                                            "entity": "sensor.canon_tr8500_series",
+                                            "name": "Stato"
+                                        },
+                                        {
+                                            "type": "custom:bar-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.canon_tr8500_series_black_bk",
+                                                    "name": "BK",
+                                                    "color": "black",
+                                                    "width": "85%"
+                                                },
+                                                {
+                                                    "entity": "sensor.canon_tr8500_series_black_pgbk",
+                                                    "name": "PGBK",
+                                                    "color": "black",
+                                                    "width": "85%"
+                                                },
+                                                {
+                                                    "entity": "sensor.canon_tr8500_series_cyan",
+                                                    "name": "C",
+                                                    "color": "cyan",
+                                                    "width": "85%"
+                                                },
+                                                {
+                                                    "entity": "sensor.canon_tr8500_series_magenta",
+                                                    "name": "M",
+                                                    "color": "magenta",
+                                                    "width": "85%"
+                                                },
+                                                {
+                                                    "entity": "sensor.canon_tr8500_series_yellow",
+                                                    "name": "Y",
+                                                    "color": "yellow",
+                                                    "width": "85%"
+                                                }
+                                            ],
+                                            "title": "Livello Inchiostro",
+                                            "show_header_toggle": false,
+                                            "state_color": false,
+                                            "positions": {
+                                                "icon": "off",
+                                                "indicator": "off",
+                                                "name": "outside",
+                                                "value": "outside"
+                                            }
+                                        }
+                                    ]
                                 }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ]
-                },
-                {
-                    "title": "Stampanti",
-                    "path": "stampanti",
-                    "icon": "mdi:printer",
-                    "panel": false,
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "custom:bar-card",
-                            "entities": [
-                                {
-                                    "entity": "sensor.canon_tr8500_series_black_bk",
-                                    "name": "BK",
-                                    "color": "black",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.canon_tr8500_series_black_pgbk",
-                                    "name": "PGBK",
-                                    "color": "black",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.canon_tr8500_series_cyan",
-                                    "name": "C",
-                                    "color": "cyan",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.canon_tr8500_series_magenta",
-                                    "name": "M",
-                                    "color": "magenta",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.canon_tr8500_series_yellow",
-                                    "name": "Y",
-                                    "color": "yellow",
-                                    "width": "85%"
-                                }
-                            ],
-                            "title": "Canon TR8550: Livello Inchiostro",
-                            "show_header_toggle": false,
-                            "state_color": false,
-                            "positions": {
-                                "icon": "off",
-                                "indicator": "off",
-                                "name": "outside",
-                                "value": "outside"
-                            }
-                        },
-                        {
-                            "type": "entity",
-                            "entity": "sensor.canon_tr8500_series",
-                            "name": "Canon TR8550: Stato"
+                            ]
                         }
                     ]
                 },
