@@ -5,6 +5,8 @@
 
 default: info
 logs:
+  custom_components.mercedesmeapi: warn
+  googleapiclient.discovery: warn
   homeassistant.components.automation: info
   homeassistant.components.device_tracker: warn
   homeassistant.components.nmap_tracker.device_tracker: warn
@@ -12,4 +14,3 @@ logs:
   homeassistant.components.input_text: info
   homeassistant.components.sensor: warn
   homeassistant.components.websocket_api: info
-  custom_components.mercedesmeapi: warn
