@@ -22,7 +22,14 @@
                                         {
                                             "type": "picture",
                                             "image": "/local/images/devices/qnap_ts228a.png"
-                                        },
+                                        }
+                                    ]
+                                },
+                                "break",
+                                {
+                                    "type": "vertical-stack",
+                                    "title": "Operazioni",
+                                    "cards": [
                                         {
                                             "type": "entities",
                                             "show_header_toggle": false,
@@ -33,8 +40,22 @@
                                             ]
                                         }
                                     ]
-                                },
-                                "break",
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Stampante",
+                    "path": "printer",
+                    "icon": "mdi:printer",
+                    "panel": true,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:layout-card",
+                            "layout": "vertical",
+                            "cards": [
                                 {
                                     "type": "vertical-stack",
                                     "title": "Canon PIXMA TR8550",
@@ -43,7 +64,14 @@
                                             "type": "picture",
                                             "title": "Canon PIXMA TR8550",
                                             "image": "/local/images/devices/canon_tr8550.png"
-                                        },
+                                        }
+                                    ]
+                                },
+                                "break",
+                                {
+                                    "type": "vertical-stack",
+                                    "title": "Dati",
+                                    "cards": [
                                         {
                                             "type": "entity",
                                             "entity": "sensor.canon_tr8500_series",
@@ -106,43 +134,56 @@
                     "badges": [],
                     "cards": [
                         {
-                            "type": "custom:battery-state-card",
+                            "type": "vertical-stack",
                             "title": "Batteria Dispositivi ZigBee",
-                            "sort_by_level": "desc",
-                            "entities": [
+                            "layout": "vertical",
+                            "cards": [
                                 {
-                                    "entity": "sensor.main_door_battery",
-                                    "name": "Porta Casa"
-                                },
-                                {
-                                    "entity": "sensor.front_balcony_battery",
-                                    "name": "Temperatura Balcone"
-                                },
-                                {
-                                    "entity": "sensor.rear_balcony_battery",
-                                    "name": "Temperatura Veranda"
-                                },
-                                {
-                                    "entity": "sensor.spare_door_battery",
-                                    "name": "Spare Door"
-                                },
-                                {
-                                    "entity": "sensor.wireless_switch_battery",
-                                    "name": "Wireless Switch"
+                                    "type": "custom:battery-state-card",
+                                    "sort_by_level": "desc",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.main_door_battery",
+                                            "name": "Porta Casa"
+                                        },
+                                        {
+                                            "entity": "sensor.front_balcony_battery",
+                                            "name": "Temperatura Balcone"
+                                        },
+                                        {
+                                            "entity": "sensor.rear_balcony_battery",
+                                            "name": "Temperatura Veranda"
+                                        },
+                                        {
+                                            "entity": "sensor.spare_door_battery",
+                                            "name": "Spare Door"
+                                        },
+                                        {
+                                            "entity": "sensor.wireless_switch_battery",
+                                            "name": "Wireless Switch"
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n",
-                            "entity": "sensor.zigbee2mqtt_networkmap",
-                            "font_size": 12,
-                            "force": 3000,
-                            "height": 400,
-                            "link_width": 2,
-                            "mqtt_base_topic": "zigbee2mqtt",
-                            "node_size": 16,
-                            "title": "Zigbee2mqtt Network Map",
-                            "type": "custom:zigbee2mqtt-networkmap"
+                            "type": "vertical-stack",
+                            "title": "Mappa Dispositivi",
+                            "layout": "vertical",
+                            "cards": [
+                                {
+                                    "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n",
+                                    "entity": "sensor.zigbee2mqtt_networkmap",
+                                    "font_size": 12,
+                                    "force": 3000,
+                                    "height": 400,
+                                    "link_width": 2,
+                                    "mqtt_base_topic": "zigbee2mqtt",
+                                    "node_size": 16,
+                                    "title": "Zigbee2mqtt Network Map",
+                                    "type": "custom:zigbee2mqtt-networkmap"
+                                }
+                            ]
                         }
                     ]
                 }
