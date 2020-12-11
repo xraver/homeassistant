@@ -468,6 +468,9 @@
                         },
                         {
                             "entity": "sensor.rear_balcony_humidity"
+                        },
+                        {
+                            "entity": "binary_sensor.central_heating"
                         }
                     ],
                     "cards": [
@@ -597,6 +600,32 @@
                             "hours_to_show": 24,
                             "refresh_interval": 0,
                             "title": "Valvola Camera"
+                        },
+                        {
+                            "type": "entities",
+                            "title": "Stato Valvole Netatmo",
+                            "entities": [
+                                {
+                                    "entity": "sensor.valve_cucina_state",
+                                    "name": "Cucina"
+                                },
+                                {
+                                    "entity": "sensor.valve_sala_state",
+                                    "name": "Sala"
+                                },
+                                {
+                                    "entity": "sensor.valve_studio_state",
+                                    "name": "Studio"
+                                },
+                                {
+                                    "entity": "sensor.valve_bagno_state",
+                                    "name": "Bagno"
+                                },
+                                {
+                                    "entity": "sensor.valve_camera_da_letto_state",
+                                    "name": "Camera"
+                                }
+                            ]
                         }
                     ]
                 },
