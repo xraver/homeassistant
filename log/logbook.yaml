@@ -77,17 +77,6 @@ exclude:
     - sensor.canon_tr8500_series_cyan
     - sensor.canon_tr8500_series_magenta
     - sensor.canon_tr8500_series_yellow
-    # Netatmo
-    - sensor.valve_cucina_battery
-    - sensor.valve_sala_battery
-    - sensor.valve_studio_battery
-    - sensor.valve_bagno_battery
-    - sensor.valve_camera_da_letto_battery
-    - sensor.valve_cucina_state
-    - sensor.valve_sala_state
-    - sensor.valve_studio_state
-    - sensor.valve_bagno_state
-    - sensor.valve_camera_da_letto_state
   domains:
     - automation
     - calendar

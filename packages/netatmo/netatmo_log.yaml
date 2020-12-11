@@ -1,0 +1,54 @@
+######################################################################
+# Netatmo Package - History
+######################################################################
+
+history:
+  exclude:
+    entities:
+    # Netatmo
+    - sensor.valve_cucina_battery
+    - sensor.valve_sala_battery
+    - sensor.valve_studio_battery
+    - sensor.valve_bagno_battery
+    - sensor.valve_camera_da_letto_battery
+    - sensor.valve_cucina_state
+    - sensor.valve_sala_state
+    - sensor.valve_studio_state
+    - sensor.valve_bagno_state
+    - sensor.valve_camera_da_letto_state
+
+######################################################################
+# Netatmo Package - Logbook
+######################################################################
+logbook:
+  exclude:
+    entities:
+    # Netatmo
+    - sensor.valve_cucina_battery
+    - sensor.valve_sala_battery
+    - sensor.valve_studio_battery
+    - sensor.valve_bagno_battery
+    - sensor.valve_camera_da_letto_battery
+    - sensor.valve_cucina_state
+    - sensor.valve_sala_state
+    - sensor.valve_studio_state
+    - sensor.valve_bagno_state
+    - sensor.valve_camera_da_letto_state
+
+######################################################################
+# Netatmo Package - Recorder
+######################################################################
+recorder:
+  exclude:
+    entities:
+    # Netatmo
+    - sensor.valve_cucina_battery
+    - sensor.valve_sala_battery
+    - sensor.valve_studio_battery
+    - sensor.valve_bagno_battery
+    - sensor.valve_camera_da_letto_battery
+    - sensor.valve_cucina_state
+    - sensor.valve_sala_state
+    - sensor.valve_studio_state
+    - sensor.valve_bagno_state
+    - sensor.valve_camera_da_letto_state
