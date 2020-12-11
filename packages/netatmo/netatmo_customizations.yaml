@@ -1,0 +1,20 @@
+######################################################################
+# Customization: Climate
+######################################################################
+
+homeassistant:
+  customize:
+    climate.netatmo_cucina:
+      friendly_name: Valvola Cucina
+
+    climate.netatmo_sala:
+      friendly_name: Valvola Sala
+
+    climate.netatmo_bagno:
+      friendly_name: Valvola Bagno
+
+    climate.netatmo_studio:
+      friendly_name: Valvola Studio
+
+    climate.netatmo_camera_da_letto:
+      friendly_name: Valvola Camera

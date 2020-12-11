@@ -1,0 +1,74 @@
+######################################################################
+# Netatmo Package - Automations
+######################################################################
+
+automations:
+
+  ######################################################################
+  # Climate: Away Mode On
+  # - script.turn_on
+  ######################################################################
+  - alias: "Termosifoni: Gestione Modalità vacanza"
+
+    trigger:
+      - platform: state
+        entity_id: input_boolean.home_mode_away
+        to: 'on'
+      - platform: state
+        entity_id: input_boolean.home_mode_away
+        to: 'off'
+
+    condition: []
+
+    action:
+      - choose:
+        # Switch On
+        - conditions:
+          - condition: state
+            entity_id: input_boolean.home_mode_away
+            state: "on"
+          sequence:
+            - service: script.turn_on
+              data:
+                entity_id: script.climate_away_mode_on
+        # Switch Off
+        - conditions:
+          - condition: and
+            conditions:
+              - condition: state
+                entity_id: input_boolean.home_mode_away
+                state: "off"
+              - condition: template
+                value_template: "{{ now().month > 10 or now().month < 5 }}"
+          sequence:
+            - service: script.turn_on
+              data:
+                entity_id: script.climate_away_mode_off
+
+  ######################################################################
+  # Climate: Schedule according to Condominium
+  # - script.turn_on
+  ######################################################################
+  - alias: "Termosifoni: Gestione automatica riscaldamento"
+
+    trigger:
+      - platform: homeassistant
+        event: start
+      - platform: time
+        at: '00:00:00'
+
+    condition:
+      condition: or
+      conditions:
+        - '{{ now().month == 11 and now().day == 1}}'   # Winter
+        - '{{ now().month == 4 and now().day == 15 }}'  # Summer
+
+    action:
+      - service: script.turn_on
+        data_template:
+          entity_id: >- 
+            {% if now().month > 10 or now().month < 5 %}
+              script.climate_away_mode_off
+            {% else %}
+              script.climate_away_mode_on
+            {% endif %}

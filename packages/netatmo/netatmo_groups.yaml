@@ -1,0 +1,14 @@
+######################################################################
+# Netatmo Package - Group
+######################################################################
+
+group:
+  climate:
+    name: Termostato
+    icon: mdi:thermometer
+    entities:
+      - climate.netatmo_cucina
+      - climate.netatmo_sala
+      - climate.netatmo_studio
+      - climate.netatmo_bagno
+      - climate.netatmo_camera_da_letto
