@@ -1,122 +1,67 @@
 ######################################################################
-# Climate: Weekly Schedule
-# - script.climate_daily_schedule
+# Climate: Away Mode On
+# - script.turn_on
 ######################################################################
 
-- alias: "Termosifoni: Schedulazione giornaliera feriale"
-  initial_state: false
-
-  trigger:
-    - platform: time
-      at: '06:30:00'
-    - platform: time
-      at: '07:30:00'
-    - platform: time
-      at: '09:00:00'
-    - platform: time
-      at: '18:30:00'
-    - platform: time
-      at: '22:00:00'
-#    - platform: state
-#      entity_id: input_boolean.home_mode_away
-#      to: 'off'
-
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: input_boolean.home_mode_away
-        state: 'off'
-
-      - condition: time
-        weekday: [mon, tue, wed, thu, fri]
-
-  action:
-    - service: script.climate_daily_schedule
-      data_template:
-        entity_id: climate.cucina_termostato_cucina
-        temp1: 20
-        temp2: 18
-        temp3: 20
-        temp4: 20.5
-        temp5: 16
-
-    - service: script.climate_daily_schedule
-      data_template:
-        entity_id: climate.sala_termostato_sala
-        temp1: 18
-        temp2: 18
-        temp3: 19.5
-        temp4: 20
-        temp5: 16
-
-    - service: script.climate_daily_schedule
-      data_template:
-        entity_id: climate.bagno_termostato_bagno
-        temp1: 19
-        temp2: 18
-        temp3: 19
-        temp4: 19.5
-        temp5: 16
-
-    - service: script.climate_daily_schedule
-      data_template:
-        entity_id: climate.studio_termostato_studio
-        temp1: 18
-        temp2: 18
-        temp3: 19.5
-        temp4: 20
-        temp5: 16
-
-    - service: script.climate_daily_schedule
-      data_template:
-        entity_id: climate.camera_termostato_camera
-        temp1: 19
-        temp2: 18
-        temp3: 19
-        temp4: 19.5
-        temp5: 16
-
-######################################################################
-# Climate: Away Mode
-# - climate.set_operation_mode
-# - climate.set_temperature
-######################################################################
-
-- alias: "Termosifoni: Modalità vacanza"
-  initial_state: false
+- alias: "Termosifoni: Attiva Modalità vacanza"
 
   trigger:
     - platform: state
       entity_id: input_boolean.home_mode_away
       to: 'on'
-    - platform: state
-      entity_id: input_boolean.home_mode_away
-      to: 'off'
 
   condition: []
 
   action:
-    - service: script.climate_away_mode
-      data_template:
-        entity_id: climate.cucina_termostato_cucina
+    - service: script.turn_on
+      data:
+        entity_id: script.climate_away_mode_on
 
-    - service: script.climate_away_mode
-      data_template:
-        entity_id: climate.sala_termostato_sala
-        mode: trigger.to_state.state
+######################################################################
+# Climate: Away Mode Off
+# Note: in summer away mode off is disabled
+# - climate.set_hvac_mode
+######################################################################
 
-    - service: script.climate_away_mode
+- alias: "Termosifoni: Disattiva Modalità vacanza"
+
+  trigger:
+    - platform: state
+      entity_id: input_boolean.home_mode_away
+      to: 'off'
+
+  condition: "{{ now().month > 10 or now().month < 5 }}"
+
+  action:
+    - service: script.turn_on
+      data:
+        entity_id: script.climate_away_mode_off
+
+######################################################################
+# Climate: Schedule according to Condominium
+# - script.turn_on
+######################################################################
+
+- alias: "Termosifoni: Gestione automatica riscaldamento"
+
+  trigger:
+    - platform: homeassistant
+      event: start
+    - platform: time
+      at: '00:00:00'
+
+  condition:
+    condition: or
+    conditions:
+      - '{{ now().month == 11 and now().day == 1}}'   # Winter
+      - '{{ now().month == 4 and now().day == 15 }}'  # Summer
+
+  action:
+    - service: script.turn_on
       data_template:
-        entity_id: climate.bagno_termostato_bagno
-        mode: trigger.to_state.state
-          
-    - service: script.climate_away_mode
-      data_template:
-        entity_id: climate.studio_termostato_studio
-        mode: trigger.to_state.state
-          
-    - service: script.climate_away_mode
-      data_template:
-        entity_id: climate.camera_termostato_camera
-        mode: trigger.to_state.state
+        entity_id: >- 
+          {% if now().month > 10 or now().month < 5 %}
+            script.climate_away_mode_off
+          {% else %}
+            script.climate_away_mode_on
+          {% endif %}

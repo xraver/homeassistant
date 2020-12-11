@@ -186,6 +186,70 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "title": "Netatmo",
+                    "path": "netatmo",
+                    "icon": "mdi:alpha-n-box",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "picture",
+                            "image": "/local/images/devices/netatmo_valve.png"
+                        },
+                        {
+                            "type": "custom:battery-state-card",
+                            "title": "Batteria Valvole Netatmo",
+                            "entities": [
+                                {
+                                    "entity": "sensor.valve_cucina_battery",
+                                    "name": "Cucina"
+                                },
+                                {
+                                    "entity": "sensor.valve_sala_battery",
+                                    "name": "Sala"
+                                },
+                                {
+                                    "entity": "sensor.valve_studio_battery",
+                                    "name": "Studio"
+                                },
+                                {
+                                    "entity": "sensor.valve_bagno_battery",
+                                    "name": "Bagno"
+                                },
+                                {
+                                    "entity": "sensor.valve_camera_da_letto_battery",
+                                    "name": "Camera"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "title": "Stato Valvole Netatmo",
+                            "entities": [
+                                {
+                                    "entity": "sensor.valve_cucina_state",
+                                    "name": "Cucina"
+                                },
+                                {
+                                    "entity": "sensor.valve_sala_state",
+                                    "name": "Sala"
+                                },
+                                {
+                                    "entity": "sensor.valve_studio_state",
+                                    "name": "Studio"
+                                },
+                                {
+                                    "entity": "sensor.valve_bagno_state",
+                                    "name": "Bagno"
+                                },
+                                {
+                                    "entity": "sensor.valve_camera_da_letto_state",
+                                    "name": "Camera"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "title": "Dispositivi"

@@ -184,8 +184,8 @@ weather: !include components/weather.yaml
 # MQTT (moved to UI)
 #mqtt: !include components/mqtt.yaml
 
-# EQ3 Max Cube
-maxcube: !include components/eq3max.yaml
+# Netatmo
+netatmo: !include components/netatmo.yaml
 
 # Google Assistant
 google_assistant: !include components/google_assistant.yaml

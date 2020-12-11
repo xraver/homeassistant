@@ -15,7 +15,8 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * Google (Chromecast, Google Home Mini)
 * Shelly (Shelly1, Shelly2, Shelly2.5, ShellyEM, Shelly Dimmer)
 * Xiaomi (MiJia door & window contact sensor, MiJia temperature & humidity sensor)
-* MAX! eQ-3 (Thermostatic valve)
+* Netatmo Thermostatic valves
+* ~~MAX! eQ-3 (Thermostatic valve)~~
 * Sony Android TV (KD-55XF8596)
 * Canon Printer (TR8550)
 * QNAP NAS (TS-228A)
@@ -32,6 +33,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * Create Users/People
 * Configure the following integrations using UI:
   * Certificate Expiry
+  * Google Calendar
   * Google Cast
   * HACS
   * Internet Printing Protocol 
@@ -47,6 +49,7 @@ All files are edited with [Visual Studio Code](https://code.visualstudio.com/).
 All files are tested using the latest stable version of Home Assistant using [Travis](https://travis-ci.com/github/xraver/homeassistant).
 
 ## To Do List
+* Netatmo automations
 * Script review ([Native types support for templates](https://www.home-assistant.io/blog/2020/10/28/release-117/#native-types-support-for-templates-beta) after release 117)
 * NFC
 * Lovelace:

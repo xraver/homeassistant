@@ -1,91 +1,55 @@
 ######################################################################
-# Climate: Daily Schedule
+# Climate: Valve Boost
 # Inputs:
 # - entity_id
-# - temp1
-# - temp2
-# - temp3
-# - temp4
-# - temp5
 #
 # Operations:
-# - climate.set_temperature
+# - climate.set_hvac_mode
 ######################################################################
-
-climate_daily_schedule:
-  alias: "Termosifoni: Schedulazione giornaliera"
+climate_valve_boost:
+  alias: "Valvole: Boost"
   sequence:
-    - service: climate.set_temperature
+    #- service: climate.set_hvac_mode
+    - service: climate.set_preset_mode
       data_template:
         entity_id: "{{ entity_id }}"
-        temperature: >-
-          {% set current_date_string = now().strftime("%H%M") %}
-          {% set time1_string = "0630" %}
-          {% set time2_string = "0730" %}
-          {% set time3_string = "0900" %}
-          {% set time4_string = "1830" %}
-          {% set time5_string = "2200" %}
-          {% if ((current_date_string|int) >= (time1_string|int)) and ((current_date_string|int) < (time2_string|int)) %}
-            {{ temp1 }}
-          {% elif ((current_date_string|int) >= (time2_string|int)) and ((current_date_string|int) < (time3_string|int)) %}
-            {{ temp2 }}
-          {% elif ((current_date_string|int) >= (time3_string|int)) and ((current_date_string|int) < (time4_string|int)) %}
-            {{ temp3 }}
-          {% elif ((current_date_string|int) >= (time4_string|int)) and ((current_date_string|int) < (time5_string|int)) %}
-            {{ temp4 }}
-          {% else %}
-            {{ temp5 }}
-          {% endif %}
+        #hvac_mode: heat
+        preset_mode: boost
+    - delay: 300
+    - service: climate.set_hvac_mode
+      data_template:
+        entity_id: "{{ entity_id }}"
+        hvac_mode: auto
 
 ######################################################################
 # Climate: Away Mode On
-# Inputs:
-# - entity_id
-# - mode
-#
-# Operations:
-# - climate.set_operation_mode
-# - climate.set_temperature
+# - service: climate.set_preset_mode
 ######################################################################
-
 climate_away_mode_on:
-  alias: "Termosifoni: Attviva Modalità vacanza"
   sequence:
     - service: climate.set_preset_mode
-      data_template:
-        entity_id: "{{ entity_id }}"
-        preset_mode: manual
-    - delay: '00:00:5'
-    - service: climate.set_temperature
-      data_template:
-        entity_id: "{{ entity_id }}"
-        temperature: 5
-    - delay: '00:00:5'
-    - service: climate.set_preset_mode
-      data_template:
-        entity_id: "{{ entity_id }}"
-        preset_mode: vacation
-    - delay: '00:00:5'
-    - service: climate.set_preset_mode
-      data_template:
-        entity_id: "{{ entity_id }}"
-        preset_mode: vacation
+      data:
+        entity_id: 
+          - climate.netatmo_cucina
+          - climate.netatmo_sala
+          - climate.netatmo_studio
+          - climate.netatmo_bagno
+          - climate.netatmo_camera_da_letto
+        preset_mode: away
 
 ######################################################################
 # Climate: Away Mode Off
-# Inputs:
-# - entity_id
-# - mode
-#
-# Operations:
-# - climate.set_operation_mode
-# - climate.set_temperature
+# Note: in summer away mode off is disabled
+# - climate.set_hvac_mode
 ######################################################################
-
 climate_away_mode_off:
-  alias: "Termosifoni: Disattiva Modalità vacanza"
   sequence:
-    - service: climate.set_preset_mode
-      data_template:
-        entity_id: "{{ entity_id }}"
-        preset_mode: auto
+    - service: climate.set_hvac_mode
+      data:
+        entity_id: 
+          - climate.netatmo_cucina
+          - climate.netatmo_sala
+          - climate.netatmo_studio
+          - climate.netatmo_bagno
+          - climate.netatmo_camera_da_letto
+        hvac_mode: auto

@@ -2,18 +2,18 @@
 # Google Assistant: Climate
 ######################################################################
 
-climate.bagno_termostato_bagno:
-  expose: true
-  room: Bagno
-climate.camera_termostato_camera:
-  expose: true
-  room: Camera
-climate.cucina_termostato_cucina:
+climate.netatmo_cucina:
   expose: true
   room: Cucina
-climate.sala_termostato_sala:
+climate.netatmo_sala:
   expose: true
   room: Sala
-climate.studio_termostato_studio:
+climate.netatmo_studio:
   expose: true
   room: Studio
+climate.netatmo_bagno:
+  expose: true
+  room: Bagno
+climate.netatmo_camera_da_letto:
+  expose: true
+  room: Camera

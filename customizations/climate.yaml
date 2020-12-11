@@ -1,18 +1,18 @@
 ######################################################################
-# Customization: MAX EQ3 
+# Customization: Climate
 ######################################################################
 
-climate.cucina_termostato_cucina:
-  friendly_name: Termostato Cucina
+climate.netatmo_cucina:
+  friendly_name: Valvola Cucina
 
-climate.sala_termostato_sala:
-  friendly_name: Termostato Sala
+climate.netatmo_sala:
+  friendly_name: Valvola Sala
 
-climate.bagno_termostato_bagno:
-  friendly_name: Termostato Bagno
+climate.netatmo_bagno:
+  friendly_name: Valvola Bagno
 
-climate.studio_termostato_studio:
-  friendly_name: Termostato Studio
+climate.netatmo_studio:
+  friendly_name: Valvola Studio
 
-climate.camera_termostato_camera:
-  friendly_name: Termostato Camera
+climate.netatmo_camera_da_letto:
+  friendly_name: Valvola Camera

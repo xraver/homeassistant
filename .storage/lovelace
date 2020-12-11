@@ -55,7 +55,7 @@
                                     "entity": "cover.tapparella_cucina"
                                 },
                                 {
-                                    "entity": "climate.cucina_termostato_cucina"
+                                    "entity": "climate.netatmo_cucina"
                                 },
                                 {
                                     "entity": "media_player.google_home"
@@ -82,7 +82,7 @@
                                     "entity": "cover.tapparella_sala"
                                 },
                                 {
-                                    "entity": "climate.sala_termostato_sala"
+                                    "entity": "climate.netatmo_sala"
                                 },
                                 {
                                     "entity": "media_player.sony_bravia_tv"
@@ -121,7 +121,7 @@
                                     "entity": "light.luce_specchio"
                                 },
                                 {
-                                    "entity": "climate.bagno_termostato_bagno"
+                                    "entity": "climate.netatmo_bagno"
                                 }
                             ],
                             "entity": "light.luci_bagno",
@@ -142,7 +142,7 @@
                                     "entity": "cover.tapparella_studio"
                                 },
                                 {
-                                    "entity": "climate.studio_termostato_studio"
+                                    "entity": "climate.netatmo_studio"
                                 }
                             ],
                             "entity": "light.luce_studio",
@@ -163,7 +163,7 @@
                                     "entity": "cover.tapparella_camera"
                                 },
                                 {
-                                    "entity": "climate.camera_termostato_camera"
+                                    "entity": "climate.netatmo_camera_da_letto"
                                 }
                             ],
                             "entity": "light.luce_camera",
@@ -438,32 +438,57 @@
                     "title": "Tapparelle"
                 },
                 {
+                    "icon": "mdi:thermometer",
+                    "id": "climate",
+                    "title": "Termostato",
                     "badges": [
-                        "sensor.termostato_cucina",
-                        "sensor.termostato_sala",
-                        "sensor.termostato_bagno",
-                        "sensor.termostato_studio",
-                        "sensor.termostato_camera"
+                        {
+                            "entity": "sensor.valve_cucina_temperature"
+                        },
+                        {
+                            "entity": "sensor.valve_sala_temperature"
+                        },
+                        {
+                            "entity": "sensor.valve_bagno_temperature"
+                        },
+                        {
+                            "entity": "sensor.valve_studio_temperature"
+                        },
+                        {
+                            "entity": "sensor.valve_camera_da_letto_temperature"
+                        },
+                        {
+                            "entity": "sensor.front_balcony_temperature"
+                        },
+                        {
+                            "entity": "sensor.rear_balcony_temperature"
+                        },
+                        {
+                            "entity": "sensor.front_balcony_humidity"
+                        },
+                        {
+                            "entity": "sensor.rear_balcony_humidity"
+                        }
                     ],
                     "cards": [
                         {
-                            "entity": "climate.cucina_termostato_cucina",
+                            "entity": "climate.netatmo_cucina",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.sala_termostato_sala",
+                            "entity": "climate.netatmo_sala",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.bagno_termostato_bagno",
+                            "entity": "climate.netatmo_bagno",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.studio_termostato_studio",
+                            "entity": "climate.netatmo_studio",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.camera_termostato_camera",
+                            "entity": "climate.netatmo_camera_da_letto",
                             "type": "thermostat"
                         },
                         {
@@ -471,62 +496,109 @@
                                 {
                                     "action_name": "Attiva Boost",
                                     "name": "Cucina",
-                                    "service": "climate.set_preset_mode",
+                                    "service": "script.climate_valve_boost",
                                     "service_data": {
-                                        "entity_id": "climate.cucina_termostato_cucina",
-                                        "preset_mode": "boost"
+                                        "entity_id": "climate.netatmo_cucina"
                                     },
                                     "type": "call-service"
                                 },
                                 {
                                     "action_name": "Attiva Boost",
                                     "name": "Sala",
-                                    "service": "climate.set_preset_mode",
+                                    "service": "script.climate_valve_boost",
                                     "service_data": {
-                                        "entity_id": "climate.sala_termostato_sala",
-                                        "preset_mode": "boost"
+                                        "entity_id": "climate.netatmo_sala"
                                     },
                                     "type": "call-service"
                                 },
                                 {
                                     "action_name": "Attiva Boost",
                                     "name": "Bagno",
-                                    "service": "climate.set_preset_mode",
+                                    "service": "script.climate_valve_boost",
                                     "service_data": {
-                                        "entity_id": "climate.bagno_termostato_bagno",
-                                        "preset_mode": "boost"
+                                        "entity_id": "climate.netatmo_bagno"
                                     },
                                     "type": "call-service"
                                 },
                                 {
                                     "action_name": "Attiva Boost",
                                     "name": "Studio",
-                                    "service": "climate.set_preset_mode",
+                                    "service": "script.climate_valve_boost",
                                     "service_data": {
-                                        "entity_id": "climate.studio_termostato_studio",
-                                        "preset_mode": "boost"
+                                        "entity_id": "climate.netatmo_studio"
                                     },
                                     "type": "call-service"
                                 },
                                 {
                                     "action_name": "Attiva Boost",
                                     "name": "Camera",
-                                    "service": "climate.set_preset_mode",
+                                    "service": "script.climate_valve_boost",
                                     "service_data": {
-                                        "entity_id": "climate.camera_termostato_camera",
-                                        "preset_mode": "boost"
+                                        "entity_id": "climate.netatmo_camera_da_letto"
                                     },
                                     "type": "call-service"
                                 }
                             ],
                             "show_header_toggle": false,
-                            "title": "Operazione sui Dispositivi",
+                            "title": "Operazioni",
                             "type": "entities"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "climate.netatmo_cucina"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Valvola Cucina"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "climate.netatmo_sala"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Valvola Sala"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "climate.netatmo_studio"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Valvola Studio"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "climate.netatmo_bagno"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Valvola Bagno"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "climate.netatmo_camera_da_letto"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Valvola Camera"
                         }
-                    ],
-                    "icon": "mdi:thermometer",
-                    "id": "climate",
-                    "title": "Termostato"
+                    ]
                 },
                 {
                     "badges": [
@@ -749,12 +821,6 @@
                     "badges": [
                         {
                             "entity": "sun.sun"
-                        },
-                        {
-                            "entity": "sensor.front_balcony_temperature"
-                        },
-                        {
-                            "entity": "sensor.rear_balcony_temperature"
                         }
                     ],
                     "cards": [
@@ -765,30 +831,6 @@
                         {
                             "entity": "weather.meteo_morgex",
                             "type": "weather-forecast"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.front_balcony_temperature"
-                                },
-                                {
-                                    "entity": "sensor.front_balcony_humidity"
-                                }
-                            ],
-                            "title": "Balcone",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.rear_balcony_temperature"
-                                },
-                                {
-                                    "entity": "sensor.rear_balcony_humidity"
-                                }
-                            ],
-                            "title": "Veranda",
-                            "type": "entities"
                         }
                     ]
                 }

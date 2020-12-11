@@ -6,8 +6,8 @@ climate:
   name: Termostato
   icon: mdi:thermometer
   entities:
-    - sensor.termostato_cucina
-    - sensor.termostato_sala
-    - sensor.termostato_bagno
-    - sensor.termostato_studio
-    - sensor.termostato_camera
+    - climate.netatmo_cucina
+    - climate.netatmo_sala
+    - climate.netatmo_studio
+    - climate.netatmo_bagno
+    - climate.netatmo_camera_da_letto
