@@ -5,6 +5,7 @@ away_mode_end:
   name: "Fine Vacanza"
   has_time: true
   has_date: true
+  icon: mdi:airplane-takeoff
 
 ######################################################################
 # Washing Machine: End of Work
@@ -14,3 +15,4 @@ away_mode_end:
 #  name: "Avvia Lavatrice"
 #  has_time: true
 #  has_date: false
+#  icon: mdi:washing-machine

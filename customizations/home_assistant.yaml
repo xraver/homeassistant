@@ -19,6 +19,3 @@ script.homeassistant_upgrade:
 
 script.homeassistant_google_home_sync:
   icon: mdi:google-home
-
-input_datetime.away_mode_end:
-  icon: mdi:airplane-takeoff
