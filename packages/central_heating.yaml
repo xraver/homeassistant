@@ -55,9 +55,7 @@ automation:
     action:
       - choose:
         # Switch on
-        - conditions:
-          - condition: template
-            value_template: "{{ now().month == 11 and now().day == 1 }}"
+        - conditions: "{{ now().month == 11 and now().day == 1 }}"
           sequence:
             - service: input_boolean.turn_on
               data_template:
@@ -68,9 +66,7 @@ automation:
                 message: "Il riscaldamento centralizzato è stato acceso"
       
         # Switch off
-        - conditions:
-          - condition: template
-            value_template: "{{ now().month == 4 and now().day == 15 }}"
+        - conditions: "{{ now().month == 4 and now().day == 15 }}"
           sequence:
             - service: input_boolean.turn_on
               data_template:
