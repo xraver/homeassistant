@@ -2,9 +2,5 @@
 # Customization: System
 ######################################################################
 
-sensor.cert_expiry_server_giorgioravera_it:
-  friendly_name: Scadenza Certificato SSL
-  unit_of_measurement: giorni
-
 sensor.cert_expiry_timestamp_server_giorgioravera_it:
-  friendly_name: Scadenza Certificato SSL (Timestamp)
+  friendly_name: Scadenza Certificato SSL
