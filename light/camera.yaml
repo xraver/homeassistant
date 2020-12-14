@@ -6,7 +6,7 @@
   schema: template
   name: Luce Camera
   state_topic: "shellies/shellydimmer-D46CF2/light/0/status"
-  state_template: > 
+  state_template: >
     {% if value_json.ison %}
       on
     {% else %}
@@ -15,12 +15,12 @@
   command_topic: "shellies/shellydimmer-D46CF2/light/0/set"
   command_on_template: >
     {"turn": "on"
-      {% if brightness is defined %} 
+      {% if brightness is defined %}
         , "brightness": {{ brightness | float | multiply(0.3922) | round(0) }}
       {% endif %}
-    }  
+    }
   command_off_template: '{ "turn" : "off" }'
-  brightness_template: "{{ value_json.brightness | float | multiply(2.55) | round(0) }}"  
+  brightness_template: "{{ value_json.brightness | float | multiply(2.55) | round(0) }}"
   retain: false
   qos: 0
   optimistic: false

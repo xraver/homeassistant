@@ -6,7 +6,7 @@
   schema: template
   name: Luce Sala
   state_topic: "shellies/shellydimmer-D3EA58/light/0/status"
-  state_template: > 
+  state_template: >
     {% if value_json.ison %}
       on
     {% else %}
@@ -15,12 +15,12 @@
   command_topic: "shellies/shellydimmer-D3EA58/light/0/set"
   command_on_template: >
     {"turn": "on"
-      {% if brightness is defined %} 
+      {% if brightness is defined %}
         , "brightness": {{ brightness | float | multiply(0.3922) | round(0) }}
       {% endif %}
-    }  
+    }
   command_off_template: '{ "turn" : "off" }'
-  brightness_template: "{{ value_json.brightness | float | multiply(2.55) | round(0) }}"  
+  brightness_template: "{{ value_json.brightness | float | multiply(2.55) | round(0) }}"
   retain: false
   qos: 0
   optimistic: false
@@ -73,7 +73,7 @@
     {
       "turn": "off",
       "mode": "color"
-    }  
+    }
   state_template: >
     {% if value_json.ison == true and value_json.mode == "color" %}
       on
@@ -84,7 +84,7 @@
   red_template: '{{ value_json.red }}'
   green_template: '{{ value_json.green }}'
   blue_template: '{{ value_json.blue }}'
-  white_value_template: '{{ value_json.white }}'    
+  white_value_template: '{{ value_json.white }}'
   effect_template: >
     {%- if value_json.effect == 1 -%}
       Pioggia di Meteore
@@ -139,7 +139,7 @@
 #      "turn": "off",
 #      "mode": "white",
 #      "effect": 0
-#    }  
+#    }
 #  state_template: >
 #    {% if value_json.ison == true and value_json.mode == "white" %}
 #      on
