@@ -84,7 +84,7 @@ automation:
         - conditions:
           - condition: state
             entity_id: input_boolean.central_heating
-            state: "on"
+            state: "off"
           sequence:
             - service: script.turn_on
               data:
@@ -95,7 +95,7 @@ automation:
             conditions:
               - condition: state
                 entity_id: input_boolean.central_heating
-                state: "off"
+                state: "on"
               - condition: state
                 entity_id: input_boolean.home_mode_away
                 state: 'off'
