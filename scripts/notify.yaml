@@ -88,7 +88,7 @@ volume_manager:
           {% set maxNightVolume = 0.20 %}
           
           {# Check Null Input #}
-          {% if volume_level | length == 0 %}
+          {% if volume_level | string | length == 0 %}
             {% set volume_level = defaultVolume %}
           {% endif %}
           

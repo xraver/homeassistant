@@ -99,7 +99,7 @@ script:
       - condition: template
         value_template: >-
           {# Check Null Input #}
-          {% if level | length == 0 %}
+          {% if level | string | length == 0 %}
             {% set level = 1 %}
           {% endif %}
           {% if level | int >= 2 %}
