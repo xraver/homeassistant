@@ -87,7 +87,7 @@ automation:
 history:
   exclude:
     entities:
-    - binary_sensor.central_heating
+      - binary_sensor.central_heating
 
 ######################################################################
 # Netatmo Package - Logbook
