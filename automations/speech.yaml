@@ -16,49 +16,10 @@
         # - person.anna
       zone: zone.home
       event: enter
-#    - platform: state
-#      entity_id: 
-#        - device_tracker.s9
-#        - device_tracker.a5
-#      to: 'home'
-#      for: '00:00:30'
 
   condition: []
 
   action:
-#    - wait_template: >-
-#        {# Giorgio #}
-#        {% if trigger.entity_id == 'person.giorgio' %}
-#          {% if is_state('device_tracker.s9', 'home') %}
-#            true
-#          {% else %}
-#            false
-#          {% endif %}
-#        
-#        {# Laura #}
-#        {% elif trigger.entity_id == 'person.laura' %}
-#          {% if is_state('device_tracker.a5', 'home') %}
-#            true
-#          {% else %}
-#            false
-#          {% endif %}
-#        
-#        {# Anna #}
-#        {% elif trigger.entity_id == 'person.anna' %}
-#          {% if is_state('device_tracker.a3', 'home') %}
-#            true
-#          {% else %}
-#            false
-#          {% endif %}
-#       
-#        {# Others #}
-#        {% else %}
-#          false
-#        {% endif %}
-#
-#      timeout: '00:30:00'
-#      continue_on_timeout: 'false'
-
     - wait_for_trigger:
         - platform: state
           entity_id: binary_sensor.main_door_contact
