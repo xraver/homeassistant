@@ -49,7 +49,7 @@ All files are edited with [Visual Studio Code](https://code.visualstudio.com/).
 All files are tested using the latest stable version of Home Assistant using [Travis](https://travis-ci.com/github/xraver/homeassistant).
 
 ## To Do List
-* Netatmo automations
+* ~~Netatmo automations~~
 * Script review ([Native types support for templates](https://www.home-assistant.io/blog/2020/10/28/release-117/#native-types-support-for-templates-beta) after release 117)
 * NFC
 * Lovelace:
