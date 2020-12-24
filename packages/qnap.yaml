@@ -52,7 +52,6 @@ script:
           nas_host: !secret nas_host
           nas_username: !secret nas_username
 
-
 ######################################################################
 # QNAP Package - Google Assistant
 ######################################################################

@@ -3,7 +3,6 @@
 ######################################################################
 
 binary_sensor:
-  # Central Heating
   - platform: template
     sensors:
       central_heating:
@@ -22,7 +21,6 @@ binary_sensor:
 ######################################################################
 
 input_boolean:
-  # Central Heating
   central_heating:
     name: Riscaldamento Centralizzato
     icon: mdi:home-thermometer
@@ -88,6 +86,7 @@ history:
 ######################################################################
 # Netatmo Package - Logbook
 ######################################################################
+
 logbook:
   exclude:
     entities:
@@ -96,6 +95,7 @@ logbook:
 ######################################################################
 # Netatmo Package - Recorder
 ######################################################################
+
 recorder:
   exclude:
     entities:

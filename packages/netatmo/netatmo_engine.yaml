@@ -4,12 +4,7 @@
 
 script:
   ######################################################################
-  # Climate: Valve Boost
-  # Inputs:
-  # - entity_id
-  #
-  # Operations:
-  # - climate.set_hvac_mode
+  # Activating Valve Boost
   ######################################################################
   climate_valve_boost:
     alias: "Valvole: Boost"
@@ -25,8 +20,7 @@ script:
           hvac_mode: auto
 
   ######################################################################
-  # Climate: Away Mode On
-  # - service: climate.set_preset_mode
+  # Away Mode On
   ######################################################################
   climate_away_mode_on:
     sequence:
@@ -41,9 +35,7 @@ script:
           preset_mode: away
 
   ######################################################################
-  # Climate: Away Mode Off
-  # Note: in summer away mode off is disabled
-  # - climate.set_hvac_mode
+  # Away Mode Off
   ######################################################################
   climate_away_mode_off:
     sequence:
@@ -58,15 +50,15 @@ script:
           hvac_mode: auto
 
 ######################################################################
-# Netatmo Package - Script
+# Netatmo Package - Automations
 ######################################################################
 
 automation:
+
   ######################################################################
-  # Climate: Central Away Mode
-  # - script.turn_on
+  # Sync with central heating
   ######################################################################
-  - alias: "Termosifoni: Modalità vacanza centralizzata"
+  - alias: "Termosifoni: Sincronizzazione con Riscaldamento Centralizzato"
 
     trigger:
       - platform: state
