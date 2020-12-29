@@ -198,30 +198,43 @@
                             "image": "/local/images/devices/netatmo_valve.png"
                         },
                         {
-                            "type": "custom:battery-state-card",
-                            "title": "Batteria Valvole Netatmo",
+                            "type": "custom:bar-card",
                             "entities": [
                                 {
                                     "entity": "sensor.valve_cucina_battery",
-                                    "name": "Cucina"
+                                    "name": "Cucina",
+                                    "width": "85%"
                                 },
                                 {
                                     "entity": "sensor.valve_sala_battery",
-                                    "name": "Sala"
+                                    "name": "Sala",
+                                    "width": "85%"
                                 },
                                 {
                                     "entity": "sensor.valve_studio_battery",
-                                    "name": "Studio"
+                                    "name": "Studio",
+                                    "width": "85%"
                                 },
                                 {
                                     "entity": "sensor.valve_bagno_battery",
-                                    "name": "Bagno"
+                                    "name": "Bagno",
+                                    "width": "85%"
                                 },
                                 {
                                     "entity": "sensor.valve_camera_da_letto_battery",
-                                    "name": "Camera"
+                                    "name": "Camera",
+                                    "width": "85%"
                                 }
-                            ]
+                            ],
+                            "title": "Batteria Valvole Netatmo",
+                            "show_header_toggle": false,
+                            "state_color": false,
+                            "positions": {
+                                "icon": "off",
+                                "indicator": "off",
+                                "name": "outside",
+                                "value": "outside"
+                            }
                         },
                         {
                             "type": "entities",

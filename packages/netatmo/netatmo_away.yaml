@@ -4,22 +4,6 @@
 
 script:
   ######################################################################
-  # Activating Valve Boost
-  ######################################################################
-  climate_valve_boost:
-    alias: "Valvole: Boost"
-    sequence:
-      - service: climate.set_preset_mode
-        data_template:
-          entity_id: "{{ entity_id }}"
-          preset_mode: boost
-      - delay: 300
-      - service: climate.set_hvac_mode
-        data_template:
-          entity_id: "{{ entity_id }}"
-          hvac_mode: auto
-
-  ######################################################################
   # Away Mode On
   ######################################################################
   climate_away_mode_on:
@@ -54,7 +38,6 @@ script:
 ######################################################################
 
 automation:
-
   ######################################################################
   # Sync with central heating
   ######################################################################

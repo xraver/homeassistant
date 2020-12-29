@@ -1,0 +1,90 @@
+######################################################################
+# Netatmo Package - On/Off Engine - Input Boolean
+######################################################################
+
+input_boolean:
+  valvola_cucina:
+    name: Valvola Cucina
+    initial: on
+    icon: mdi:thermometer
+  valvola_sala:
+    name: Valvola Sala
+    initial: on
+    icon: mdi:thermometer
+  valvola_studio:
+    name: Valvola Studio
+    initial: on
+    icon: mdi:thermometer
+  valvola_bagno:
+    name: Valvola Bagno
+    initial: on
+    icon: mdi:thermometer
+  valvola_camera_da_letto:
+    name: Valvola Camera
+    initial: on
+    icon: mdi:thermometer
+
+######################################################################
+# Netatmo Package - On/Off Engine - Automations
+######################################################################
+
+automation:
+  ######################################################################
+  # Switch On Valve
+  ######################################################################
+  - alias: "Termosifoni: Accensione"
+
+    trigger:
+      platform: state
+      entity_id: input_boolean.valvola_cucina,
+                 input_boolean.valvola_sala,
+                 input_boolean.valvola_studio,
+                 input_boolean.valvola_bagno,
+                 input_boolean.valvola_camera_da_letto
+      to: 'on'
+
+    action:
+      - service: climate.turn_on
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'input_boolean.valvola_cucina' %}
+              climate.netatmo_cucina
+            {% elif trigger.entity_id == 'input_boolean.valvola_sala' %}
+              climate.netatmo_sala
+            {% elif trigger.entity_id == 'input_boolean.valvola_studio' %}
+              climate.netatmo_studio
+            {% elif trigger.entity_id == 'input_boolean.valvola_bagno' %}
+              climate.netatmo_bagno
+            {% elif trigger.entity_id == 'input_boolean.valvola_camera_da_letto' %}
+              climate.netatmo_camera_da_letto
+            {% endif %}
+
+  ######################################################################
+  # Switch Off Valve
+  ######################################################################
+  - alias: "Termosifoni: Spegnimento"
+
+    trigger:
+      platform: state
+      entity_id: input_boolean.valvola_cucina,
+                  input_boolean.valvola_sala,
+                  input_boolean.valvola_studio,
+                  input_boolean.valvola_bagno,
+                  input_boolean.valvola_camera_da_letto
+      to: 'off'
+
+    action:
+      - service: climate.turn_off
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'input_boolean.valvola_cucina' %}
+              climate.netatmo_cucina
+            {% elif trigger.entity_id == 'input_boolean.valvola_sala' %}
+              climate.netatmo_sala
+            {% elif trigger.entity_id == 'input_boolean.valvola_studio' %}
+              climate.netatmo_studio
+            {% elif trigger.entity_id == 'input_boolean.valvola_bagno' %}
+              climate.netatmo_bagno
+            {% elif trigger.entity_id == 'input_boolean.valvola_camera_da_letto' %}
+              climate.netatmo_camera_da_letto
+            {% endif %}

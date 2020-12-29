@@ -1,0 +1,131 @@
+######################################################################
+# Netatmo Package - Boost Engine Script
+######################################################################
+
+input_boolean:
+  boost_valvola_cucina:
+    name: Boost Valvola Cucina
+    initial: off
+    icon: mdi:thermometer-plus
+  boost_valvola_sala:
+    name: Boost Valvola Sala
+    initial: off
+    icon: mdi:thermometer-plus
+  boost_valvola_studio:
+    name: Boost Valvola Studio
+    initial: off
+    icon: mdi:thermometer-plus
+  boost_valvola_bagno:
+    name: Boost Valvola Bagno
+    initial: off
+    icon: mdi:thermometer-plus
+  boost_valvola_camera_da_letto:
+    name: Boost Valvola Camera
+    initial: off
+    icon: mdi:thermometer-plus
+
+######################################################################
+# Netatmo Package - Boost Engine Script
+######################################################################
+
+script:
+  ######################################################################
+  # Activating Valve Boost
+  ######################################################################
+  climate_valve_boost:
+    alias: "Termosifoni: Boost"
+    sequence:
+      - service: climate.set_preset_mode
+        data_template:
+          entity_id: "{{ entity_id }}"
+          preset_mode: boost
+      - delay: 300
+      - service: climate.turn_on
+        data_template:
+          entity_id: "{{ entity_id }}"
+
+######################################################################
+# Netatmo Package - Boost Engine Automations
+######################################################################
+
+automation:
+  ######################################################################
+  # Automation: Start Boost
+  ######################################################################
+  - id: netatmo_enable_boost
+    alias: "Termosifoni: Attivazione Boost"
+    mode: parallel
+
+    trigger:
+      platform: state
+      entity_id: input_boolean.boost_valvola_cucina,
+                 input_boolean.boost_valvola_sala,
+                 input_boolean.boost_valvola_studio,
+                 input_boolean.boost_valvola_bagno,
+                 input_boolean.boost_valvola_camera_da_letto
+      to: 'on'      
+
+    variables:
+      entity_id: >-
+        {% if trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
+          climate.netatmo_cucina
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
+          climate.netatmo_sala
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
+          climate.netatmo_studio
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno' %}
+          climate.netatmo_bagno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera_da_letto' %}
+          climate.netatmo_camera_da_letto
+        {% endif %}
+
+    action:
+      - service: climate.set_preset_mode
+        data_template:
+          entity_id: "{{ entity_id }}"
+          preset_mode: boost
+      - delay: 300
+      - service: climate.turn_on
+        data_template:
+          entity_id: "{{ entity_id }}"
+      - service: input_boolean.turn_off
+        data_template:
+          entity_id: "{{ trigger.entity_id }}"
+
+  ######################################################################
+  # Automation: Stop Boost
+  ######################################################################
+  - id: netatmo_disable_boost
+    alias: "Termosifoni: Disattivazione Boost"
+    mode: parallel
+
+    trigger:
+      platform: state
+      entity_id: input_boolean.boost_valvola_cucina,
+                 input_boolean.boost_valvola_sala,
+                 input_boolean.boost_valvola_studio,
+                 input_boolean.boost_valvola_bagno,
+                 input_boolean.boost_valvola_camera_da_letto
+      to: 'off'      
+
+    variables:
+      entity_id: >-
+        {% if trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
+          climate.netatmo_cucina
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
+          climate.netatmo_sala
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
+          climate.netatmo_studio
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno' %}
+          climate.netatmo_bagno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera_da_letto' %}
+          climate.netatmo_camera_da_letto
+        {% endif %}
+
+    action:
+      - service: climate.turn_on
+        data_template:
+          entity_id: "{{ entity_id }}"
+      - service: input_boolean.turn_off
+        data_template:
+          entity_id: "{{ trigger.entity_id }}"
