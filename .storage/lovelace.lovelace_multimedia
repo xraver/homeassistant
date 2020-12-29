@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_multimedia",
     "data": {
         "config": {
             "title": "Multimedia",
@@ -1205,7 +1207,7 @@
                                         "input_text.google_home_speak"
                                     ],
                                     "show_header_toggle": false,
-                                    "title": "Google Mini Home Cucina",
+                                    "title": "Google Nest Mini Cucina",
                                     "type": "entities"
                                 },
                                 {
@@ -1295,6 +1297,16 @@
                                         }
                                     ],
                                     "type": "horizontal-stack"
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "media_player.google_anna"
+                                        }
+                                    ],
+                                    "title": "Google Home Mini Anna",
+                                    "show_header_toggle": false
                                 }
                             ],
                             "title": "Media Players",
@@ -1305,7 +1317,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_multimedia",
-    "version": 1
+    }
 }
