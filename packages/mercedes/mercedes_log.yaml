@@ -12,8 +12,11 @@ history:
     - binary_sensor.ff590mr_door_rear_right
     #- binary_sensor.ff590mr_doors_closed
     - binary_sensor.ff590mr_engine_light_warning
+    - binary_sensor.ff590mr_fuel_lid
     #- binary_sensor.ff590mr_locked
-    - binary_sensor.ff590mr_park_brake_status
+    - binary_sensor.ff590mr_low_brake_fluid_warning
+    - binary_sensor.ff590mr_low_coolant_level_warning
+    - binary_sensor.ff590mr_low_wash_water_warning
     - binary_sensor.ff590mr_tire_warning
     - binary_sensor.ff590mr_trunk
     - binary_sensor.ff590mr_fuel_lid
@@ -25,10 +28,6 @@ history:
     - lock.ff590mr_lock
     - sensor.ff590mr_distance_since_reset
     - sensor.ff590mr_distance_since_start
-    - sensor.ff590mr_door_front_left
-    - sensor.ff590mr_door_front_right
-    - sensor.ff590mr_door_rear_left
-    - sensor.ff590mr_door_rear_right
     #- sensor.ff590mr_fuel_level
     - sensor.ff590mr_liquid_consumption_reset
     - sensor.ff590mr_liquid_consumption_start
@@ -54,8 +53,11 @@ logbook:
     - binary_sensor.ff590mr_door_rear_right
     #- binary_sensor.ff590mr_doors_closed
     - binary_sensor.ff590mr_engine_light_warning
+    - binary_sensor.ff590mr_fuel_lid
     #- binary_sensor.ff590mr_locked
-    - binary_sensor.ff590mr_park_brake_status
+    - binary_sensor.ff590mr_low_brake_fluid_warning
+    - binary_sensor.ff590mr_low_coolant_level_warning
+    - binary_sensor.ff590mr_low_wash_water_warning
     - binary_sensor.ff590mr_tire_warning
     - binary_sensor.ff590mr_trunk
     - binary_sensor.ff590mr_fuel_lid
@@ -67,10 +69,6 @@ logbook:
     - lock.ff590mr_lock
     - sensor.ff590mr_distance_since_reset
     - sensor.ff590mr_distance_since_start
-    - sensor.ff590mr_door_front_left
-    - sensor.ff590mr_door_front_right
-    - sensor.ff590mr_door_rear_left
-    - sensor.ff590mr_door_rear_right
     #- sensor.ff590mr_fuel_level
     - sensor.ff590mr_liquid_consumption_reset
     - sensor.ff590mr_liquid_consumption_start
@@ -96,8 +94,11 @@ recorder:
     - binary_sensor.ff590mr_door_rear_right
     #- binary_sensor.ff590mr_doors_closed
     - binary_sensor.ff590mr_engine_light_warning
+    - binary_sensor.ff590mr_fuel_lid
     #- binary_sensor.ff590mr_locked
-    - binary_sensor.ff590mr_park_brake_status
+    - binary_sensor.ff590mr_low_brake_fluid_warning
+    - binary_sensor.ff590mr_low_coolant_level_warning
+    - binary_sensor.ff590mr_low_wash_water_warning
     - binary_sensor.ff590mr_tire_warning
     - binary_sensor.ff590mr_trunk
     - binary_sensor.ff590mr_fuel_lid
@@ -109,10 +110,6 @@ recorder:
     - lock.ff590mr_lock
     - sensor.ff590mr_distance_since_reset
     - sensor.ff590mr_distance_since_start
-    - sensor.ff590mr_door_front_left
-    - sensor.ff590mr_door_front_right
-    - sensor.ff590mr_door_rear_left
-    - sensor.ff590mr_door_rear_right
     #- sensor.ff590mr_fuel_level
     - sensor.ff590mr_liquid_consumption_reset
     - sensor.ff590mr_liquid_consumption_start

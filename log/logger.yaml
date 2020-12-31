@@ -5,7 +5,7 @@
 
 default: info
 logs:
-  custom_components.mercedesmeapi: warn
+  custom_components.mbapi2020: warn
   googleapiclient.discovery: warn
   homeassistant.components.automation: info
   homeassistant.components.device_tracker: warn

@@ -4,14 +4,14 @@
 
 homeassistant:
   customize:
-    # Stato Generale
+    # Stato Generale - warningenginelight
     binary_sensor.ff590mr_engine_light_warning:
       friendly_name: Stato Generale
       device_class: problem
       icon: mdi:hazard-lights
       # warningbrakefluid, warningwashwater, warningcoolantlevellow, warninglowbattery
     
-    # Freno a Mano
+    # Freno a Mano - parkbrakestatus
     #binary_sensor.ff590mr_park_brake_status:
     #  friendly_name: Freno a mano
     #  device_class: plug
@@ -36,21 +36,25 @@ homeassistant:
       device_class: problem
       icon: mdi:wiper-wash
 
-    # Pneumatici
+    # Pneumatici - tirewarninglamp
     binary_sensor.ff590mr_tire_warning:
       friendly_name: Pneumatici
       device_class: problem
       icon: mdi:car-tire-alert
       # tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft, 
-      # tirewarningsrdk, tirewarningsprwtireMarkerFrontRight, tireMarkerFrontLeft, tireMarkerRearLeft, tireMarkerRearRight, 
-      # tireWarningRollup, lastTirepressureTimestamp
-      
+      # tireMarkerFrontRight, tireMarkerFrontLeft, tireMarkerRearLeft, tireMarkerRearRight, tirewarningsrdk, tirewarningsprw,  
+
     # Finestrini
     binary_sensor.ff590mr_windows_closed:
       friendly_name: Finestrini
       device_class: opening
       icon: mdi:window-closed
       # windowstatusrearleft, windowstatusrearright, windowstatusfrontright, windowstatusfrontleft
+
+    # Device Tracker
+    device_tracker.ff590mr_device_tracker:
+      friendly_name: Mercedes A200d
+      entity_picture: /local/images/device-trackers/mercedes.jpg
 
     # Lock
     lock.ff590mr_lock:
@@ -61,18 +65,23 @@ homeassistant:
     sensor.ff590mr_fuel_level:
       friendly_name: Livello Carburante
       icon: mdi:gas-station
+      # tankLevelAdBlue
     
-    # Blocco Veicolo
+    # Blocco Veicolo - lock
     sensor.ff590mr_lock:
       friendly_name: Veicolo
       icon: mdi:lock-open
       # doorStateFrontLeft, doorStateFrontRight, doorStateRearLeft, doorStateRearRight, 
       # frontLeftDoorLocked, frontRightDoorLocked, rearLeftDoorLocked, rearRightDoorLocked, 
       # frontLeftDoorClosed, frontRightDoorClosed, rearLeftDoorClosed, rearRightDoorClosed, 
-      # doorsClosed, trunkStateRollup, sunroofstatus
+      # doorsClosed, trunkStateRollup, sunroofstatus, fuelLidClosed, engineHoodClosed
       
     # Odometria
     sensor.ff590mr_odometer:
       friendly_name: Km Percorsi
       icon: mdi:road-variant
-      # distanceReset, distanceStart, liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, serviceintervaldays, tanklevelpercent, tankReserveLamp
+      # distanceReset, distanceStart, averageSpeedReset, averageSpeedStart, distanceZEReset, 
+      # drivenTimeZEReset, drivenTimeReset, drivenTimeStart, ecoscoretotal, ecoscorefreewhl, ecoscorebonusrange, ecoscoreconst, ecoscoreaccel, 
+      # gasconsumptionstart, gasconsumptionreset, gasTankRange, gasTankLevel, 
+      # liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, rangeliquid, serviceintervaldays, tanklevelpercent, tankReserveLamp, 
+      # batteryState, tankLevelAdBlue
