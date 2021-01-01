@@ -6,6 +6,9 @@
             "title": "Panoramica",
             "views": [
                 {
+                    "icon": "mdi:home",
+                    "id": "main",
+                    "title": "Principale",
                     "badges": [
                         {
                             "entity": "person.giorgio"
@@ -14,7 +17,7 @@
                             "entity": "person.laura"
                         },
                         {
-                            "entity": "device_tracker.wdd1760081v167576"
+                            "entity": "device_tracker.ff590mr_device_tracker"
                         },
                         {
                             "entity": "sensor.time"
@@ -283,10 +286,7 @@
                             ],
                             "type": "vertical-stack"
                         }
-                    ],
-                    "icon": "mdi:home",
-                    "id": "main",
-                    "title": "Principale"
+                    ]
                 },
                 {
                     "badges": [
@@ -495,56 +495,74 @@
                             "type": "thermostat"
                         },
                         {
+                            "type": "entities",
                             "entities": [
                                 {
-                                    "action_name": "Attiva Boost",
-                                    "name": "Cucina",
-                                    "service": "script.climate_valve_boost",
-                                    "service_data": {
-                                        "entity_id": "climate.netatmo_cucina"
-                                    },
-                                    "type": "call-service"
+                                    "entity": "input_boolean.boost_valvola_cucina"
                                 },
                                 {
-                                    "action_name": "Attiva Boost",
-                                    "name": "Sala",
-                                    "service": "script.climate_valve_boost",
-                                    "service_data": {
-                                        "entity_id": "climate.netatmo_sala"
-                                    },
-                                    "type": "call-service"
+                                    "entity": "input_boolean.boost_valvola_sala"
                                 },
                                 {
-                                    "action_name": "Attiva Boost",
-                                    "name": "Bagno",
-                                    "service": "script.climate_valve_boost",
-                                    "service_data": {
-                                        "entity_id": "climate.netatmo_bagno"
-                                    },
-                                    "type": "call-service"
+                                    "entity": "input_boolean.boost_valvola_studio"
                                 },
                                 {
-                                    "action_name": "Attiva Boost",
-                                    "name": "Studio",
-                                    "service": "script.climate_valve_boost",
-                                    "service_data": {
-                                        "entity_id": "climate.netatmo_studio"
-                                    },
-                                    "type": "call-service"
+                                    "entity": "input_boolean.boost_valvola_bagno"
                                 },
                                 {
-                                    "action_name": "Attiva Boost",
-                                    "name": "Camera",
-                                    "service": "script.climate_valve_boost",
-                                    "service_data": {
-                                        "entity_id": "climate.netatmo_camera_da_letto"
-                                    },
-                                    "type": "call-service"
+                                    "entity": "input_boolean.boost_valvola_camera_da_letto"
                                 }
                             ],
                             "show_header_toggle": false,
-                            "title": "Operazioni",
-                            "type": "entities"
+                            "title": "Modalit\u00e0 Boost"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.valvola_cucina"
+                                },
+                                {
+                                    "entity": "input_boolean.valvola_sala"
+                                },
+                                {
+                                    "entity": "input_boolean.valvola_studio"
+                                },
+                                {
+                                    "entity": "input_boolean.valvola_bagno"
+                                },
+                                {
+                                    "entity": "input_boolean.valvola_camera_da_letto"
+                                }
+                            ],
+                            "title": "Accensione / Spegnimento",
+                            "show_header_toggle": false
+                        },
+                        {
+                            "type": "entities",
+                            "title": "Stato Valvole Netatmo",
+                            "entities": [
+                                {
+                                    "entity": "sensor.valve_cucina_state",
+                                    "name": "Cucina"
+                                },
+                                {
+                                    "entity": "sensor.valve_sala_state",
+                                    "name": "Sala"
+                                },
+                                {
+                                    "entity": "sensor.valve_studio_state",
+                                    "name": "Studio"
+                                },
+                                {
+                                    "entity": "sensor.valve_bagno_state",
+                                    "name": "Bagno"
+                                },
+                                {
+                                    "entity": "sensor.valve_camera_da_letto_state",
+                                    "name": "Camera"
+                                }
+                            ]
                         },
                         {
                             "type": "history-graph",
@@ -600,32 +618,6 @@
                             "hours_to_show": 24,
                             "refresh_interval": 0,
                             "title": "Valvola Camera"
-                        },
-                        {
-                            "type": "entities",
-                            "title": "Stato Valvole Netatmo",
-                            "entities": [
-                                {
-                                    "entity": "sensor.valve_cucina_state",
-                                    "name": "Cucina"
-                                },
-                                {
-                                    "entity": "sensor.valve_sala_state",
-                                    "name": "Sala"
-                                },
-                                {
-                                    "entity": "sensor.valve_studio_state",
-                                    "name": "Studio"
-                                },
-                                {
-                                    "entity": "sensor.valve_bagno_state",
-                                    "name": "Bagno"
-                                },
-                                {
-                                    "entity": "sensor.valve_camera_da_letto_state",
-                                    "name": "Camera"
-                                }
-                            ]
                         }
                     ]
                 },
@@ -675,20 +667,41 @@
                     "title": "People"
                 },
                 {
+                    "icon": "mdi:car",
+                    "id": "car",
+                    "title": "Auto",
                     "badges": [
-                        "device_tracker.wdd1760081v167576",
-                        "sensor.ff590mr_odometer",
-                        "sensor.ff590mr_fuel_level",
-                        "binary_sensor.ff590mr_locked",
-                        "binary_sensor.ff590mr_doors_closed",
-                        "binary_sensor.ff590mr_windows_closed_2"
+                        {
+                            "entity": "device_tracker.ff590mr_device_tracker"
+                        },
+                        {
+                            "entity": "sensor.ff590mr_odometer"
+                        },
+                        {
+                            "entity": "sensor.ff590mr_fuel_level"
+                        },
+                        {
+                            "entity": "binary_sensor.ff590mr_locked"
+                        },
+                        {
+                            "entity": "binary_sensor.ff590mr_doors_closed"
+                        },
+                        {
+                            "entity": "binary_sensor.ff590mr_windows_closed_2"
+                        }
                     ],
                     "cards": [
                         {
                             "entities": [
-                                "switch.ff590mr_lock",
-                                "binary_sensor.ff590mr_doors_closed",
-                                "binary_sensor.ff590mr_windows_closed_2"
+                                {
+                                    "entity": "binary_sensor.ff590mr_locked"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_doors_closed"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_windows_closed_2"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Mercedes A200d: Sensori",
@@ -729,12 +742,21 @@
                         },
                         {
                             "entities": [
-                                "binary_sensor.ff590mr_door_front_left",
-                                "binary_sensor.ff590mr_door_front_right",
-                                "binary_sensor.ff590mr_door_rear_left",
-                                "binary_sensor.ff590mr_door_rear_right",
-                                "binary_sensor.ff590mr_trunk",
-                                "binary_sensor.ff590mr_fuel_lid"
+                                {
+                                    "entity": "binary_sensor.ff590mr_door_front_left"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_door_front_right"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_door_rear_left"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_door_rear_right"
+                                },
+                                {
+                                    "entity": "binary_sensor.ff590mr_fuel_lid"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Mercedes A200d: Porte",
@@ -753,13 +775,24 @@
                         },
                         {
                             "entities": [
-                                "sensor.ff590mr_odometer",
-                                "sensor.ff590mr_distance_since_start",
-                                "sensor.ff590mr_distance_since_reset",
-                                "sensor.ff590mr_fuel_level",
-                                "sensor.ff590mr_liquid_consumption_start",
-                                "sensor.ff590mr_liquid_consumption_reset",
-                                "sensor.ff590mr_service_interval_days"
+                                {
+                                    "entity": "sensor.ff590mr_odometer"
+                                },
+                                {
+                                    "entity": "sensor.ff590mr_distance_since_start"
+                                },
+                                {
+                                    "entity": "sensor.ff590mr_distance_since_reset"
+                                },
+                                {
+                                    "entity": "sensor.ff590mr_fuel_level"
+                                },
+                                {
+                                    "entity": "sensor.ff590mr_liquid_consumption_reset"
+                                },
+                                {
+                                    "entity": "sensor.ff590mr_service_interval_days"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Mercedes A200d: Dati",
@@ -769,14 +802,11 @@
                             "aspect_ratio": 969,
                             "default_zoom": 15,
                             "entities": [
-                                "device_tracker.wdd1760081v167576"
+                                "device_tracker.ff590mr_device_tracker"
                             ],
                             "type": "map"
                         }
-                    ],
-                    "icon": "mdi:car",
-                    "id": "car",
-                    "title": "Auto"
+                    ]
                 },
                 {
                     "badges": [
