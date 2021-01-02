@@ -17,7 +17,7 @@ binary_sensor:
             false
           {% endif %}
         icon_template: >-
-          {% if is_state('sensor.ff590mr_lock' '2') %}
+          {% if is_state('sensor.ff590mr_lock', '2') %}
             mdi:lock
           {% else %}
             mdi:lock-open
