@@ -156,9 +156,6 @@ device_tracker: !include_dir_merge_list device_tracker/
 # Notification
 notify: !include_dir_merge_list notify/
 
-# Person (moved to UI)
-# person: !include_dir_merge_list person/
-
 # Shell commands
 shell_command: !include_dir_merge_named shell_command/
 
@@ -172,26 +169,17 @@ weather: !include components/weather.yaml
 # Integrations
 ######################################################################
 
-# Google Cast (moved to UI)
-#cast: !include components/cast.yaml
-
-# UPNP (moved to UI)
-#upnp:
-
-# Multimedia (moved to UI)
-#media_player: !include_dir_merge_list media_player/
-
-# MQTT (moved to UI)
-#mqtt: !include components/mqtt.yaml
-
-# Netatmo
-netatmo: !include components/netatmo.yaml
-
 # Google Assistant
 google_assistant: !include components/google_assistant.yaml
 
 # Google Calendar
 google: !include components/google_calendar.yaml
+
+# Homekit
+homekit: !include components/homekit.yaml
+
+# Netatmo
+netatmo: !include components/netatmo.yaml
 
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
@@ -199,9 +187,6 @@ speedtestdotnet: !include components/speedtest.yaml
 ###########################################################
 # Custom Components
 ###########################################################
-
-# HACS (moved to UI)
-#hacs: !include components/hacs.yaml
 
 # Mercedes Me
 #mercedesmeapi: !include components/mercedesme.yaml

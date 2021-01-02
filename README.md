@@ -20,7 +20,8 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * Sony Android TV (KD-55XF8596)
 * Canon Printer (TR8550)
 * QNAP NAS (TS-228A)
-* ~~Mercedes Me (Mercedes-Benz A200d)~~
+* Mercedes Me (Mercedes-Benz A200d)
+* HomeKit
 
 ## Installation
 * Clone repository
