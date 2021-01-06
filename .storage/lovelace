@@ -667,6 +667,296 @@
                     "title": "People"
                 },
                 {
+                    "title": "car2",
+                    "path": "car2",
+                    "icon": "mdi:car",
+                    "panel": true,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:layout-card",
+                            "layout": "vertical",
+                            "column_width": "50%",
+                            "cards": [
+                                {
+                                    "type": "picture-elements",
+                                    "image": "/local/images/car/dashboard.png",
+                                    "elements": [
+                                        {
+                                            "entity": "sensor.ff590mr_fuel_level",
+                                            "prefix": "",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(1.3, 1.3)",
+                                                "color": "lightgrey",
+                                                "left": "8%",
+                                                "top": "17%"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.ff590mr_odometer",
+                                            "prefix": " ",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(1.3, 1.3)",
+                                                "color": "lightgrey",
+                                                "left": "28%",
+                                                "top": "17%"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.ff590mr_service_interval_days",
+                                            "prefix": " ",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(1.3, 1.3)",
+                                                "color": "lightgrey",
+                                                "left": "51%",
+                                                "top": "17%"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_tire_warning",
+                                            "prefix": "",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "color": "#FFFFFF",
+                                                "left": "66.5%",
+                                                "top": "17.5%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_low_brake_fluid_warning",
+                                            "prefix": "",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "color": "#FFFFFF",
+                                                "left": "76%",
+                                                "top": "17.5%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_low_coolant_level_warning",
+                                            "prefix": "",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "color": "#FFFFFF",
+                                                "left": "85.5%",
+                                                "top": "17.5%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_low_wash_water_warning",
+                                            "prefix": "",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "color": "#FFFFFF",
+                                                "left": "95%",
+                                                "top": "17.5%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "sensor.ff590mr_tire_pressure_front_right",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.8, 0.8)",
+                                                "color": "lightgrey",
+                                                "left": "38%",
+                                                "top": "32%"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.ff590mr_tire_pressure_rear_right",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.8, 0.8)",
+                                                "color": "lightgrey",
+                                                "left": "84%",
+                                                "top": "32%"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.ff590mr_tire_pressure_front_left",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "color": "lightgrey",
+                                                "left": "38%",
+                                                "top": "90%"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "sensor.ff590mr_tire_pressure_rear_left",
+                                            "style": {
+                                                "transform": "translate(-50%, -50%) scale(0.8, 0.8)",
+                                                "color": "lightgrey",
+                                                "left": "84%",
+                                                "top": "90%"
+                                            },
+                                            "type": "state-label"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_door_front_right",
+                                            "style": {
+                                                "--paper-item-icon-color": "white",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "61%",
+                                                "top": "38%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_door_rear_right",
+                                            "style": {
+                                                "--paper-item-icon-color": "white",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "68%",
+                                                "top": "38%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_door_front_left",
+                                            "style": {
+                                                "--paper-item-icon-color": "white",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "61%",
+                                                "top": "83%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_door_rear_left",
+                                            "style": {
+                                                "--paper-item-icon-color": "white",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "68%",
+                                                "top": "83%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_decklid",
+                                            "style": {
+                                                "--paper-item-icon-color": "white",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "95%",
+                                                "top": "60%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_window_front_right",
+                                            "style": {
+                                                "--paper-item-icon-color": "lightgrey",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "56%",
+                                                "top": "31%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_window_rear_right",
+                                            "style": {
+                                                "--paper-item-icon-color": "lightgrey",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "73%",
+                                                "top": "31%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_window_front_left",
+                                            "style": {
+                                                "--paper-item-icon-color": "lightgrey",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "56%",
+                                                "top": "90%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_window_rear_left",
+                                            "style": {
+                                                "--paper-item-icon-color": "lightgrey",
+                                                "transform": "translate(-50%, -50%) scale(0.7, 0.7)",
+                                                "left": "73%",
+                                                "top": "90%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_locked",
+                                            "prefix": "",
+                                            "style": {
+                                                "color": "#FFFFFF",
+                                                "left": "11%",
+                                                "top": "38%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_doors_closed",
+                                            "prefix": "",
+                                            "style": {
+                                                "color": "#FFFFFF",
+                                                "left": "11%",
+                                                "top": "49%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_windows_closed_2",
+                                            "prefix": "",
+                                            "style": {
+                                                "color": "#FFFFFF",
+                                                "left": "11%",
+                                                "top": "60%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "binary_sensor.ff590mr_decklid",
+                                            "prefix": "",
+                                            "style": {
+                                                "color": "#FFFFFF",
+                                                "left": "11%",
+                                                "top": "71%"
+                                            },
+                                            "type": "state-icon"
+                                        },
+                                        {
+                                            "entity": "device_tracker.ff590mr_device_tracker",
+                                            "prefix": "",
+                                            "style": {
+                                                "color": "lightgrey",
+                                                "left": "12%",
+                                                "top": "83%"
+                                            },
+                                            "type": "state-label"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "map",
+                                    "entities": [
+                                        {
+                                            "entity": "device_tracker.ff590mr_device_tracker"
+                                        }
+                                    ],
+                                    "hours_to_show": 12,
+                                    "dark_mode": true,
+                                    "default_zoom": 17
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "icon": "mdi:car",
                     "id": "car",
                     "title": "Auto",
@@ -755,7 +1045,7 @@
                                     "entity": "binary_sensor.ff590mr_door_rear_right"
                                 },
                                 {
-                                    "entity": "binary_sensor.ff590mr_fuel_lid"
+                                    "entity": "binary_sensor.ff590mr_decklid"
                                 }
                             ],
                             "show_header_toggle": false,

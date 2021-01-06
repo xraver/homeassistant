@@ -42,6 +42,11 @@
                 "url": "/hacsfiles/lovelace-swipe-navigation/swipe-navigation.js",
                 "type": "module",
                 "id": "737d0af49e4a49c881d60ef2c724203a"
+            },
+            {
+                "url": "/hacsfiles/lovelace-card-mod/card-mod.js",
+                "type": "module",
+                "id": "1235e3ac5c7348f19284d47961cc2109"
             }
         ]
     }

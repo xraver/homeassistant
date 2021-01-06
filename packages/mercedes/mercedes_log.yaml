@@ -12,14 +12,13 @@ history:
     - binary_sensor.ff590mr_door_rear_right
     #- binary_sensor.ff590mr_doors_closed
     - binary_sensor.ff590mr_engine_light_warning
-    - binary_sensor.ff590mr_fuel_lid
     #- binary_sensor.ff590mr_locked
     - binary_sensor.ff590mr_low_brake_fluid_warning
     - binary_sensor.ff590mr_low_coolant_level_warning
     - binary_sensor.ff590mr_low_wash_water_warning
     - binary_sensor.ff590mr_tire_warning
-    - binary_sensor.ff590mr_trunk
-    - binary_sensor.ff590mr_fuel_lid
+    - binary_sensor.ff590mr_decklid
+    - binary_sensor.ff590mr_fuellid
     - binary_sensor.ff590mr_window_front_left
     - binary_sensor.ff590mr_window_front_right
     - binary_sensor.ff590mr_window_rear_left
@@ -38,7 +37,6 @@ history:
     - sensor.ff590mr_tire_pressure_front_right
     - sensor.ff590mr_tire_pressure_rear_left
     - sensor.ff590mr_tire_pressure_rear_right
-    - sensor.ff590mr_trunk
 
 ######################################################################
 # Mercedes Package - Logbook
@@ -54,14 +52,13 @@ logbook:
     - binary_sensor.ff590mr_door_rear_right
     #- binary_sensor.ff590mr_doors_closed
     - binary_sensor.ff590mr_engine_light_warning
-    - binary_sensor.ff590mr_fuel_lid
     #- binary_sensor.ff590mr_locked
     - binary_sensor.ff590mr_low_brake_fluid_warning
     - binary_sensor.ff590mr_low_coolant_level_warning
     - binary_sensor.ff590mr_low_wash_water_warning
     - binary_sensor.ff590mr_tire_warning
-    - binary_sensor.ff590mr_trunk
-    - binary_sensor.ff590mr_fuel_lid
+    - binary_sensor.ff590mr_decklid
+    - binary_sensor.ff590mr_fuellid
     - binary_sensor.ff590mr_window_front_left
     - binary_sensor.ff590mr_window_front_right
     - binary_sensor.ff590mr_window_rear_left
@@ -80,7 +77,6 @@ logbook:
     - sensor.ff590mr_tire_pressure_front_right
     - sensor.ff590mr_tire_pressure_rear_left
     - sensor.ff590mr_tire_pressure_rear_right
-    - sensor.ff590mr_trunk
 
 ######################################################################
 # Mercedes Package - Recorder
@@ -96,14 +92,13 @@ recorder:
     - binary_sensor.ff590mr_door_rear_right
     #- binary_sensor.ff590mr_doors_closed
     - binary_sensor.ff590mr_engine_light_warning
-    - binary_sensor.ff590mr_fuel_lid
     #- binary_sensor.ff590mr_locked
     - binary_sensor.ff590mr_low_brake_fluid_warning
     - binary_sensor.ff590mr_low_coolant_level_warning
     - binary_sensor.ff590mr_low_wash_water_warning
     - binary_sensor.ff590mr_tire_warning
-    - binary_sensor.ff590mr_trunk
-    - binary_sensor.ff590mr_fuel_lid
+    - binary_sensor.ff590mr_decklid
+    - binary_sensor.ff590mr_fuellid
     - binary_sensor.ff590mr_window_front_left
     - binary_sensor.ff590mr_window_front_right
     - binary_sensor.ff590mr_window_rear_left
@@ -122,4 +117,3 @@ recorder:
     - sensor.ff590mr_tire_pressure_front_right
     - sensor.ff590mr_tire_pressure_rear_left
     - sensor.ff590mr_tire_pressure_rear_right
-    - sensor.ff590mr_trunk
