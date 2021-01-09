@@ -22,25 +22,25 @@ homeassistant:
     binary_sensor.ff590mr_low_brake_fluid_warning:
       friendly_name: Liquido Freni
       device_class: problem
-      icon: mdi:car-brake-alert
+      #icon: mdi:car-brake-alert
 
     # Liquido Raffreddamento
     binary_sensor.ff590mr_low_coolant_level_warning:
       friendly_name: Liquido Raffreddamento
       device_class: problem
-      icon: mdi:coolant-temperature
+      #icon: mdi:coolant-temperature
       
     # Liquido Lavacristalli
     binary_sensor.ff590mr_low_wash_water_warning:
       friendly_name: Liquido Lavacristalli
       device_class: problem
-      icon: mdi:wiper-wash
+      #icon: mdi:wiper-wash
 
     # Pneumatici - tirewarninglamp
     binary_sensor.ff590mr_tire_warning:
       friendly_name: Pneumatici
       device_class: problem
-      icon: mdi:car-tire-alert
+      #icon: mdi:car-tire-alert
       # tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft, 
       # tireMarkerFrontRight, tireMarkerFrontLeft, tireMarkerRearLeft, tireMarkerRearRight, tirewarningsrdk, tirewarningsprw,  
 

@@ -1,10 +1,15 @@
 ######################################################################
-# Mercedes Package - Binary Sensor
+# Mercedes Package - Doors Sensors
 ######################################################################
 
 binary_sensor:
   ######################################################################
   # Binary Sensor: Doors Lock
+  #
+  # ff590mr_lock:
+  # 0 -> unlocked
+  # 1 -> internal locked
+  # 2 -> external locked
   ######################################################################
   - platform: template
     sensors:
@@ -26,21 +31,26 @@ binary_sensor:
 
   ######################################################################
   # Binary Sensor: Doors Closed
+  #
+  # doorStatusOverall:
+  #   1 -> closed
+  #   0 -> opened
   ######################################################################
   - platform: template
     sensors:
       ff590mr_doors_closed:
         friendly_name: Porte
         value_template: >-
-          {{ (is_state_attr('binary_sensor.ff590mr_windows_closed', 'doorstatusfrontleft', 'false') and
-              is_state_attr('binary_sensor.ff590mr_windows_closed', 'doorstatusfrontright', 'false') and
-              is_state_attr('binary_sensor.ff590mr_windows_closed', 'doorstatusrearleft', 'false') and
-              is_state_attr('binary_sensor.ff590mr_windows_closed', 'doorstatusrearright', 'false')) }}
+          {{ is_state_attr('sensor.ff590mr_lock', 'doorStatusOverall', '0') }}
         icon_template: >-
-          {% if is_state('sensor.ff590mr_lock', '2',) %}
+          {% if is_state('sensor.ff590mr_lock', '2') %}
             mdi:car-door-lock
           {% else %}
-            mdi:car-door
+            {% if is_state_attr('sensor.ff590mr_lock', 'doorStatusOverall', '1') %}
+              mdi:car-door
+            {% else %}
+              mdi:car-door
+            {% endif %}
           {% endif %}
         device_class: opening
 
@@ -52,7 +62,7 @@ binary_sensor:
       ff590mr_door_front_left:
         friendly_name: Anteriore Sinistra
         value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontleft', '2') }}
+          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontleft', true) }}
         icon_template: >-
           {% if is_state('sensor.ff590mr_lock', '2',) %}
             mdi:car-door-lock
@@ -73,7 +83,7 @@ binary_sensor:
       ff590mr_door_front_right:
         friendly_name: Anteriore Destra
         value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontright', '2') }}
+          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontright', true) }}
         icon_template: >-
           {% if is_state('sensor.ff590mr_lock', '2',) %}
             mdi:car-door-lock
@@ -94,7 +104,7 @@ binary_sensor:
       ff590mr_door_rear_left:
         friendly_name: Posteriore Sinistra
         value_template: >-     
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearleft', '2') }}
+          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearleft', true) }}
         icon_template: >-
           {% if is_state('sensor.ff590mr_lock', '2',) %}
             mdi:car-door-lock
@@ -115,7 +125,7 @@ binary_sensor:
       ff590mr_door_rear_right:
         friendly_name: Posteriore Destra
         value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearright', '2') }}
+          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearright', true) }}
         icon_template: >-
           {% if is_state('sensor.ff590mr_lock', '2',) %}
             mdi:car-door-lock
@@ -157,112 +167,11 @@ binary_sensor:
   #    ff590mr_fuellid:
   #      friendly_name: Serbatoio
   #      value_template: >-
-  #        {{ is_state_attr('sensor.ff590mr_lock', 'decklidstatus', true) }}
+  #        {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusgas', true) }}
   #      icon_template: >-
-  #        {% if is_state_attr('sensor.ff590mr_lock', 'decklidstatus', true) %}
+  #        {% if is_state_attr('sensor.ff590mr_lock', 'doorstatusgas', true) %}
   #          mdi:gas-station
   #        {% else %}
   #          mdi:gas-station
   #        {% endif %}
   #      device_class: opening
-
-  ######################################################################
-  # Binary Sensor: Windows Closed
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_windows_closed_2:
-        friendly_name: Finestrini
-        value_template: >-
-          {{ is_state('binary_sensor.ff590mr_windows_closed', 'true') }}
-        icon_template: >-
-          {% if not is_state('binary_sensor.ff590mr_windows_closed', '2') %}
-            mdi:window-closed
-          {% else %}
-            mdi:window-open
-          {% endif %}
-        device_class: opening
-
-  ######################################################################
-  # Binary Sensor: Window Front Left
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_front_left:
-        friendly_name: Anteriore Sinistro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', '2') %}
-            mdi:window-closed
-          {% else %}
-            mdi:window-open
-          {% endif %}
-        device_class: opening
-
-  ######################################################################
-  # Binary Sensor: Window Front Right
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_front_right:
-        friendly_name: Anteriore Destro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', '2') %}
-            mdi:window-closed
-          {% else %}
-            mdi:window-open
-          {% endif %}   
-        device_class: opening
-
-  ######################################################################
-  # Binary Sensor: Window Rear Left
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_rear_left:
-        friendly_name: Posteriore Sinistro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', '2') %}
-            mdi:window-closed
-          {% else %}
-            mdi:window-open
-          {% endif %}   
-        device_class: opening
-
-  ######################################################################
-  # Binary Sensor: Window Rear Right
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_rear_right:
-        friendly_name: Posteriore Destro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', '2') %}
-            mdi:window-closed
-          {% else %}
-            mdi:window-open
-          {% endif %}   
-        device_class: opening

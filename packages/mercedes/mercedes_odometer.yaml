@@ -1,56 +1,8 @@
 ######################################################################
-# Mercedes Package - Sensor
+# Mercedes Package - Odometer Sensor
 ######################################################################
 
 sensor:
-  ######################################################################
-  # Sensor: Tire Pressure Front Left
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_tire_pressure_front_left:
-        friendly_name: Anteriore Sinistra
-        unit_of_measurement: 'kPa'
-        value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontLeft') }}"
-        icon_template: mdi:car-tire-alert
-        device_class: pressure
-      
-  ######################################################################
-  # Sensor: Tire Pressure Front Right
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_tire_pressure_front_right:
-        friendly_name: Anteriore Destra
-        unit_of_measurement: 'kPa'
-        value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontRight') }}"
-        icon_template: mdi:car-tire-alert
-        device_class: pressure
-      
-  ######################################################################
-  # Sensor: Tire Pressure Rear Left
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_tire_pressure_rear_left:
-        friendly_name: Posteriore Sinistra
-        unit_of_measurement: 'kPa'
-        value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearLeft') }}"
-        icon_template: mdi:car-tire-alert
-        device_class: pressure
-
-  ######################################################################
-  # Sensor: Tire Pressure Rear Right
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_tire_pressure_rear_right:
-        friendly_name: Posteriore Destra
-        unit_of_measurement: 'kPa'
-        value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureRearRight') }}"
-        icon_template: mdi:car-tire-alert
-        device_class: pressure
-
   ######################################################################
   # Sensor: Distance from Start
   ######################################################################
