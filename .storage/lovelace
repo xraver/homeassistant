@@ -675,9 +675,15 @@
                     "cards": [
                         {
                             "type": "custom:layout-card",
-                            "layout": "vertical",
-                            "column_width": "50%",
+                            "layout": "auto",
+                            "max_width": "800px",
+                            "sidebar_column": true,
+                            "max_columns": 1,
                             "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "<center><h2>Mercedes-Benz A200d</h2></center>"
+                                },
                                 {
                                     "type": "picture-elements",
                                     "image": "/local/images/car/dashboard.png",
@@ -948,7 +954,7 @@
                                             "entity": "device_tracker.ff590mr_device_tracker"
                                         }
                                     ],
-                                    "hours_to_show": 12,
+                                    "hours_to_show": 1,
                                     "dark_mode": true,
                                     "default_zoom": 17
                                 }
