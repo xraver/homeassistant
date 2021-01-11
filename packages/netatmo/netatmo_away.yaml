@@ -1,5 +1,5 @@
 ######################################################################
-# Netatmo Package - Script
+# Netatmo Package - Away Mode Scripts
 ######################################################################
 
 script:
@@ -34,7 +34,7 @@ script:
           hvac_mode: auto
 
 ######################################################################
-# Netatmo Package - Automations
+# Netatmo Package - Away Mode Automations
 ######################################################################
 
 automation:
