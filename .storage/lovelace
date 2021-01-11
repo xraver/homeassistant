@@ -990,7 +990,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.ff590mr_locked"
+                                    "entity": "lock.ff590mr_lock"
                                 },
                                 {
                                     "entity": "binary_sensor.ff590mr_doors_closed"

@@ -58,8 +58,8 @@ homeassistant:
 
     # Lock
     lock.ff590mr_lock:
-      friendly_name: Blocco Sblocco 
-      icon: mdi:lock-open
+      friendly_name: Blocco Auto 
+      icon: mdi:lock
       
     # Sensore Carburante
     sensor.ff590mr_fuel_level:
