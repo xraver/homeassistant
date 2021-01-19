@@ -83,9 +83,9 @@ volume_manager:
           {{ media_player }}
         volume_level: >-
           {# Default Values #}
-          {% set defaultVolume = 0.30 %}
+          {% set defaultVolume = 0.35 %}
           {% set maxDayVolume = 0.60 %}
-          {% set maxNightVolume = 0.20 %}
+          {% set maxNightVolume = 0.25 %}
           
           {# Check Null Input #}
           {% if volume_level | string | length == 0 %}
