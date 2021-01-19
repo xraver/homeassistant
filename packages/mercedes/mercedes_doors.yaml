@@ -8,21 +8,21 @@ binary_sensor:
   #
   # ff590mr_lock:
   # 0 -> unlocked
-  # 1 -> internal locked
-  # 2 -> external locked
+  # 1 -> internal locked (e.g. driving)
+  # 2 -> external locked (e.g. locked by key)
   ######################################################################
   - platform: template
     sensors:
       ff590mr_locked:
         friendly_name: Blocco Vettura
         value_template: >-
-          {% if not is_state('sensor.ff590mr_lock', '2') %}
+          {% if is_state('sensor.ff590mr_lock', '0') %}
             true
           {% else %}
             false
           {% endif %}
         icon_template: >-
-          {% if is_state('sensor.ff590mr_lock', '2') %}
+          {% if not is_state('sensor.ff590mr_lock', '0') %}
             mdi:lock
           {% else %}
             mdi:lock-open
