@@ -954,8 +954,8 @@
                                             "entity": "device_tracker.ff590mr_device_tracker"
                                         }
                                     ],
-                                    "hours_to_show": 1,
-                                    "dark_mode": true,
+                                    "hours_to_show": 24,
+                                    "dark_mode": false,
                                     "default_zoom": 17
                                 }
                             ]
