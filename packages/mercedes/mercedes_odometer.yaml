@@ -28,13 +28,13 @@ sensor:
   ######################################################################
   # Sensor: Liquid Consumption from Start
   ######################################################################
-  #- platform: template
-  #  sensors:
-  #    ff590mr_liquid_consumption_start:
-  #      friendly_name: Consumo dalla partenza
-  #      unit_of_measurement: 'l/100Km'
-  #      value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionstart') }}"
-  #      icon_template: mdi:gas-station
+  - platform: template
+    sensors:
+      ff590mr_liquid_consumption_start:
+        friendly_name: Consumo dalla partenza
+        unit_of_measurement: 'l/100Km'
+        value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionstart') }}"
+        icon_template: mdi:gas-station
 
   ######################################################################
   # Sensor: Liquid Consumption from Reset

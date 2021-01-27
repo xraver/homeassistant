@@ -1084,6 +1084,9 @@
                                     "entity": "sensor.ff590mr_fuel_level"
                                 },
                                 {
+                                    "entity": "sensor.ff590mr_liquid_consumption_start"
+                                },
+                                {
                                     "entity": "sensor.ff590mr_liquid_consumption_reset"
                                 },
                                 {
