@@ -13,8 +13,8 @@
     {% set enable_status=0 %}
   {% endif %}
   {% if enable_consumption is not defined %}
-    {% set enable_consumption=0 %}  
-  {% endif %}  
+    {% set enable_consumption=0 %}
+  {% endif %}
   {% if enable_location is not defined %}
     {% set enable_location=0 %}
   {% endif %}
@@ -23,15 +23,15 @@
   {% endif %}
   {% if location_people_num is not defined %}
     {% set location_people_num=2 %}
-  {% endif %}          
+  {% endif %}
   {% if enable_car is not defined %}
     {% set enable_car=0 %}
   {% endif %}
-  
+
   {# *********************************************** #}
   {# ******************** Macro ******************** #}
   {# *********************************************** #}
-  
+
   {# Greeting Message #}
   {%- macro greeting() -%}
     {% if now().strftime('%H')|int >= 7 and now().strftime('%H')|int < 12 %}
@@ -44,7 +44,7 @@
       Buonanotte.
     {% endif %}
   {%- endmacro -%}
-  
+
   {# Time & Date #}
   {%- macro time_and_date() -%}
     {% set hour = now().strftime('%H') %}
@@ -65,7 +65,7 @@
     {% set year = now().strftime('%Y') %}
     Sono le {{ hour }} e {{ min }} del {{ day }} {{ mounth }} {{ year }}
   {%- endmacro -%}
-  
+
   {# Door Status #}
   {%- macro status_door() -%}
     {% for entity_id in states.group.doors.attributes.entity_id  %}
@@ -77,7 +77,7 @@
       {% endif %}
     {%- endfor %}
   {%- endmacro -%}
-  
+
   {# Lights Status #}
   {%- macro status_lights() -%}
     {% for entity_id in states.group.lights.attributes.entity_id  %}
@@ -89,7 +89,7 @@
       {% endif %}
     {%- endfor %}
   {%- endmacro -%}
-  
+
   {# Covers Status #}
   {%- macro status_covers() -%}
     {% for entity_id in states.group.covers.attributes.entity_id %}
@@ -102,7 +102,7 @@
       {% endif %}
     {%- endfor %}
   {%- endmacro -%}
-  
+
   {# Temperature Status #}
   {%- macro status_temperature() -%}
     {% for entity_id in states.group.temperature.attributes.entity_id %}
@@ -111,12 +111,12 @@
       La {{ name }} è {{ temp }} gradi.
     {%- endfor %}
   {%- endmacro -%}
-  
+
   {# Consumption Status #}
   {%- macro status_consumption() -%}
   "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"
   {%- endmacro -%}
-  
+
   {# Location Status #}
   {%- macro status_location(start, num) -%}
     {% for entity_id in states.group.people.attributes.entity_id %}
@@ -126,16 +126,16 @@
         {% set position = state_attr(source, 'address')|replace('Province of', 'Provincia di') %}
       {% elif is_state(entity_id, 'home') %}
         {% set position = "casa" %}
-      {% else %}      
+      {% else %}
         {% set position = states(entity_id) %}
       {% endif %}
-      
+
       {% if (loop.index >= start|int) and (loop.index < num|int+start|int) %}
         La posizione di {{ name }} è {{ position }}.
-      {% endif %}              
+      {% endif %}
     {%- endfor %}
   {%- endmacro -%}
-  
+
   {# Car Status #}
   {%- macro status_car() -%}
     {% if is_state('device_tracker.ff590mr_device_tracker', 'home') %}
@@ -162,7 +162,7 @@
       Sono inoltre presenti allarmi.
     {% endif %}
   {%- endmacro -%}
-  
+
   {# End Message #}
   {%- macro end_message() -%}
     {% if enable_status | int == 1 %}
@@ -175,47 +175,47 @@
       ] | random }}
     {% endif %}
   {%- endmacro -%}
-  
+
   {# *********************************************** #}
   {# ******************* Message ******************* #}
   {# *********************************************** #}
-  
+
   {# Greeting Message #}
   {% if enable_greeting | int == 1 %}
     {{ greeting() }}
   {% endif %}
-  
+
   {# Home Status #}
   {% if enable_status | int == 1 %}
-    
+
     {{ time_and_date() }}
-    
+
     {{ status_door() }}
-    
+
     {{ status_lights() }}
-    
+
     {{ status_covers() }}
-    
+
     {{ status_temperature() }}
-    
+
   {% endif %}
 
   {% if (enable_status | int == 1) or (enable_consumption | int == 1) %}
     {{ status_consumption() }}
-  {% endif %}    
-  
+  {% endif %}
+
   {# Location Status #}
   {% if (enable_status | int == 1) or (enable_location | int == 1) %}
     {{ status_location(location_people_start, location_people_num) }}
   {% endif %}
-  
-  {# Car Status #}          
+
+  {# Car Status #}
   {% if (enable_status | int == 1) or (enable_car | int == 1) %}
     {{ status_car() }}
   {% endif %}
-  
+
   {# generic message #}
   {{ message }}
-  
+
   {# end message #}
   {{ end_message() }}
