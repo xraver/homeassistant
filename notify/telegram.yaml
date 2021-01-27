@@ -1,0 +1,7 @@
+######################################################################
+# Telegram Notifications
+######################################################################
+
+- platform: telegram
+  name: telegram
+  chat_id: !secret telegram_bot_chat_id_group

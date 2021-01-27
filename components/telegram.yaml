@@ -1,0 +1,9 @@
+######################################################################
+# Component: Telegram
+######################################################################
+
+- platform: polling
+  api_key: !secret telegram_bot_access_token
+  allowed_chat_ids:
+    - !secret telegram_bot_chat_id_group
+    - !secret telegram_bot_chat_id_giorgio

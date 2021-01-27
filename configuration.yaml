@@ -184,6 +184,9 @@ netatmo: !include components/netatmo.yaml
 # Speed Test
 speedtestdotnet: !include components/speedtest.yaml
 
+# Telegram
+telegram_bot: !include components/telegram.yaml
+
 ###########################################################
 # Custom Components
 ###########################################################

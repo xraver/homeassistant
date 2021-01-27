@@ -4,10 +4,12 @@
 # - title
 # - message
 # - notification_id
+# - disable_telegram
 # - enable_persistent
 #
 # Operations:
 # - notify.mail
+# - notify.telegram
 # - notify.push
 # - persistent_notification.create (if enable_persistent)
 ######################################################################
@@ -32,6 +34,26 @@ notify_text:
         title: "{{ title }}"
         message: "{{ message }}"
 
+    - choose:
+      - conditions:
+          - condition: template
+            value_template: >
+              {% if disable_telegram is defined %}
+                {% if disable_telegram | int == 1 %}
+                  false
+                {% else %}
+                  true
+                {% endif %}
+              {% else %}
+                true
+              {% endif %}
+
+        sequence:
+          - service: notify.telegram
+            data_template:
+              title: "{{ title }}"
+              message: "{{ message }}"
+    
     - service: notify.push
       data_template:
         title: "{{ title }}"

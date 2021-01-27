@@ -50,7 +50,18 @@
     {% set hour = now().strftime('%H') %}
     {% set min = now().strftime('%M') %}
     {% set day = now().strftime('%d') %}
-    {% set mounth = now().strftime('%B') %}
+    {% set mounth = now().strftime('%B')|replace('January', 'Gennaio')
+                                        |replace('February', 'Febbraio')
+                                        |replace('March', 'Marzo')
+                                        |replace('April', 'Aprile')
+                                        |replace('May', 'Maggio')
+                                        |replace('June', 'Giugno')
+                                        |replace('July', 'Luglio')
+                                        |replace('August', 'Agosto')
+                                        |replace('September', 'Settembre')
+                                        |replace('October', 'Ottobre')
+                                        |replace('November', 'Novembre')
+                                        |replace('December', 'Dicembre') %}
     {% set year = now().strftime('%Y') %}
     Sono le {{ hour }} e {{ min }} del {{ day }} {{ mounth }} {{ year }}
   {%- endmacro -%}
@@ -113,7 +124,9 @@
       {% if is_state(entity_id, 'not_home') %}
         {% set source = state_attr(entity_id, 'source') %}
         {% set position = state_attr(source, 'address')|replace('Province of', 'Provincia di') %}
-      {% else %}
+      {% elif is_state(entity_id, 'home') %}
+        {% set position = "casa" %}
+      {% else %}      
         {% set position = states(entity_id) %}
       {% endif %}
       
@@ -125,7 +138,7 @@
   
   {# Car Status #}
   {%- macro status_car() -%}
-    {% if is_state('device_tracker.wdd1760081v167576', state_attr('zone.home', 'friendly_name')) %}
+    {% if is_state('device_tracker.ff590mr_device_tracker', 'home') %}
       {% set car_position = "in garage" %}
     {% else %}
       {% set car_position = "fuori" %}
