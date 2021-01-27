@@ -5,7 +5,6 @@
 history:
   exclude:
     entities:
-    # Mercedes Me
     - binary_sensor.ff590mr_door_front_left
     - binary_sensor.ff590mr_door_front_right
     - binary_sensor.ff590mr_door_rear_left
@@ -25,9 +24,11 @@ history:
     - binary_sensor.ff590mr_window_rear_right
     - binary_sensor.ff590mr_windows_closed
     - lock.ff590mr_lock
+    - sensor.ff590mr_car
     - sensor.ff590mr_distance_since_reset
     - sensor.ff590mr_distance_since_start
     #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_ignition_state
     - sensor.ff590mr_liquid_consumption_reset
     - sensor.ff590mr_liquid_consumption_start
     - sensor.ff590mr_lock
@@ -45,7 +46,6 @@ history:
 logbook:
   exclude:
     entities:
-    # Mercedes Me
     - binary_sensor.ff590mr_door_front_left
     - binary_sensor.ff590mr_door_front_right
     - binary_sensor.ff590mr_door_rear_left
@@ -65,9 +65,11 @@ logbook:
     - binary_sensor.ff590mr_window_rear_right
     - binary_sensor.ff590mr_windows_closed
     - lock.ff590mr_lock
+    - sensor.ff590mr_car
     - sensor.ff590mr_distance_since_reset
     - sensor.ff590mr_distance_since_start
     #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_ignition_state
     - sensor.ff590mr_liquid_consumption_reset
     - sensor.ff590mr_liquid_consumption_start
     - sensor.ff590mr_lock
@@ -85,7 +87,6 @@ logbook:
 recorder:
   exclude:
     entities:
-    # Mercedes Me
     - binary_sensor.ff590mr_door_front_left
     - binary_sensor.ff590mr_door_front_right
     - binary_sensor.ff590mr_door_rear_left
@@ -105,9 +106,11 @@ recorder:
     - binary_sensor.ff590mr_window_rear_right
     - binary_sensor.ff590mr_windows_closed
     - lock.ff590mr_lock
+    - sensor.ff590mr_car
     - sensor.ff590mr_distance_since_reset
     - sensor.ff590mr_distance_since_start
     #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_ignition_state
     - sensor.ff590mr_liquid_consumption_reset
     - sensor.ff590mr_liquid_consumption_start
     - sensor.ff590mr_lock

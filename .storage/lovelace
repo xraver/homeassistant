@@ -990,13 +990,19 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "lock.ff590mr_lock"
+                                    "entity": "switch.ff590mr_lock"
                                 },
                                 {
                                     "entity": "binary_sensor.ff590mr_doors_closed"
                                 },
                                 {
                                     "entity": "binary_sensor.ff590mr_windows_closed_2"
+                                },
+                                {
+                                    "entity": "sensor.ff590mr_ignition_state"
+                                },
+                                {
+                                    "entity": "sensor.ff590mr_car"
                                 }
                             ],
                             "show_header_toggle": false,
