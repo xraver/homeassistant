@@ -7,3 +7,4 @@
   allowed_chat_ids:
     - !secret telegram_bot_chat_id_group
     - !secret telegram_bot_chat_id_giorgio
+    - !secret telegram_bot_chat_id_laura

@@ -5,3 +5,11 @@
 - platform: telegram
   name: telegram
   chat_id: !secret telegram_bot_chat_id_group
+
+- platform: telegram
+  name: telegram_giorgio
+  chat_id: !secret telegram_bot_chat_id_giorgio
+
+- platform: telegram
+  name: telegram_laura
+  chat_id: !secret telegram_bot_chat_id_laura
