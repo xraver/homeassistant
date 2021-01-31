@@ -565,6 +565,45 @@
                             ]
                         },
                         {
+                            "type": "custom:bar-card",
+                            "entities": [
+                                {
+                                    "entity": "sensor.valve_cucina_battery",
+                                    "name": "Cucina",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.valve_sala_battery",
+                                    "name": "Sala",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.valve_studio_battery",
+                                    "name": "Studio",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.valve_bagno_battery",
+                                    "name": "Bagno",
+                                    "width": "85%"
+                                },
+                                {
+                                    "entity": "sensor.valve_camera_da_letto_battery",
+                                    "name": "Camera",
+                                    "width": "85%"
+                                }
+                            ],
+                            "title": "Batteria Valvole Netatmo",
+                            "show_header_toggle": false,
+                            "state_color": false,
+                            "positions": {
+                                "icon": "off",
+                                "indicator": "off",
+                                "name": "outside",
+                                "value": "outside"
+                            }
+                        },
+                        {
                             "type": "history-graph",
                             "entities": [
                                 {
@@ -896,7 +935,7 @@
                                             "type": "state-icon"
                                         },
                                         {
-                                            "entity": "binary_sensor.ff590mr_locked",
+                                            "entity": "lock.ff590mr_lock",
                                             "prefix": "",
                                             "style": {
                                                 "color": "#FFFFFF",
