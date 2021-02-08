@@ -25,7 +25,7 @@
         message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
         notification_id: "update"
         enable_persistent: 1
-    
+
     - service: input_boolean.turn_on
       entity_id: input_boolean.update_homeassistant
 
@@ -39,10 +39,10 @@
     - platform: state
       entity_id: group.shelly
       to: 'on'
-      
+
     - platform: homeassistant
       event: start
-      
+
   condition:
     condition: state
     entity_id: group.shelly
@@ -71,12 +71,29 @@
       entity_id: sensor.hacs
       above: 0
 
+    - platform: homeassistant
+      event: start
+
+  condition:
+    condition: numeric_state
+    entity_id: sensor.hacs
+    above: 0
+
   action:
     - delay: '00:00:15'
     - service: script.notify_text
       data_template:
         title: "HACS - Aggiornamento"
-        message: "Sono disponibili aggiornamenti per i moduli HACS"
+        message: >
+          {% set update_number = states('sensor.hacs') %}
+          {% if is_state('sensor.hacs', '1') %}
+            E' disponibile un aggiornamento per i moduli HACS:
+          {% else %}
+            Sono disponibili {{ update_number }} aggiornamenti per i moduli HACS:
+          {% endif %}
+          {% for update in states.sensor.hacs.attributes['repositories'] %}
+            - {{ update['display_name'] }}: {{ update['available_version'] }}
+          {%- endfor %}
         notification_id: "update"
         enable_persistent: 1
 
