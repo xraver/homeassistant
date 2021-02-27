@@ -187,6 +187,9 @@ speedtestdotnet: !include components/speedtest.yaml
 # Telegram
 telegram_bot: !include components/telegram.yaml
 
+# LG WebOS TV
+webostv: !include components/webostv.yaml
+
 ###########################################################
 # Custom Components
 ###########################################################

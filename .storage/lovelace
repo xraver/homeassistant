@@ -167,6 +167,9 @@
                                 },
                                 {
                                     "entity": "climate.netatmo_camera_da_letto"
+                                },
+                                {
+                                    "entity": "media_player.tv_camera"
                                 }
                             ],
                             "entity": "light.luce_camera",

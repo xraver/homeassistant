@@ -22,6 +22,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * QNAP NAS (TS-228A)
 * Mercedes Me (Mercedes-Benz A200d)
 * HomeKit
+* LG WebOS TV (LG 28TL510S-PZ)
 
 ## Installation
 * Clone repository
