@@ -1198,6 +1198,10 @@
                                     "type": "media-control"
                                 },
                                 {
+                                    "type": "media-control",
+                                    "entity": "media_player.tv_camera"
+                                },
+                                {
                                     "entity": "media_player.samsung_bd_f6500",
                                     "type": "media-control"
                                 },
