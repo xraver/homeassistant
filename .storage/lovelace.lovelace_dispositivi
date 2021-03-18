@@ -13,7 +13,6 @@
                     "cards": [
                         {
                             "type": "custom:layout-card",
-                            "layout": "vertical",
                             "cards": [
                                 {
                                     "type": "vertical-stack",
@@ -25,7 +24,6 @@
                                         }
                                     ]
                                 },
-                                "break",
                                 {
                                     "type": "vertical-stack",
                                     "title": "Operazioni",
@@ -41,7 +39,8 @@
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "layout": "vertical"
                         }
                     ]
                 },
@@ -54,7 +53,6 @@
                     "cards": [
                         {
                             "type": "custom:layout-card",
-                            "layout": "vertical",
                             "cards": [
                                 {
                                     "type": "vertical-stack",
@@ -67,7 +65,6 @@
                                         }
                                     ]
                                 },
-                                "break",
                                 {
                                     "type": "vertical-stack",
                                     "title": "Dati",
@@ -123,7 +120,8 @@
                                         }
                                     ]
                                 }
-                            ]
+                            ],
+                            "layout": "vertical"
                         }
                     ]
                 },
