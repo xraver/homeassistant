@@ -6,7 +6,7 @@
   scan_interval: 43200
   resource: http://shelly1.giorgioravera.it/status
   method: GET
-  name: shelly1_status
+  name: shelly1
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -34,7 +34,7 @@
   scan_interval: 43200
   resource: http://shelly2.giorgioravera.it/status
   method: GET
-  name: shelly2_status
+  name: shelly2
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -62,7 +62,7 @@
   scan_interval: 43200
   resource: http://shelly3.giorgioravera.it/status
   method: GET
-  name: shelly3_status
+  name: shelly3
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -90,7 +90,7 @@
   scan_interval: 43200
   resource: http://shelly4.giorgioravera.it/status
   method: GET
-  name: shelly4_status
+  name: shelly4
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -118,7 +118,7 @@
   scan_interval: 43200
   resource: http://shelly5.giorgioravera.it/status
   method: GET
-  name: shelly5_status
+  name: shelly5
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -146,7 +146,7 @@
   scan_interval: 43200
   resource: http://shelly6.giorgioravera.it/status
   method: GET
-  name: shelly6_status
+  name: shelly6
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -174,7 +174,7 @@
   scan_interval: 43200
   resource: http://shelly7.giorgioravera.it/status
   method: GET
-  name: shelly7_status
+  name: shelly7
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -202,7 +202,7 @@
   scan_interval: 43200
   resource: http://shelly8.giorgioravera.it/status
   method: GET
-  name: shelly8_status
+  name: shelly8
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -230,7 +230,7 @@
   scan_interval: 43200
   resource: http://shelly9.giorgioravera.it/status
   method: GET
-  name: shelly9_status
+  name: shelly9
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -258,7 +258,7 @@
   scan_interval: 43200
   resource: http://shelly10.giorgioravera.it/status
   method: GET
-  name: shelly10_status
+  name: shelly10
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -286,7 +286,7 @@
   scan_interval: 43200
   resource: http://shelly11.giorgioravera.it/status
   method: GET
-  name: shelly11_status
+  name: shelly11
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -314,7 +314,7 @@
 #  scan_interval: 43200
 #  resource: http://shellybulb.giorgioravera.it/status
 #  method: GET
-#  name: shellybulb_status
+#  name: shellybulb
 #  #value_template: '{{ value_json.has_update }}'
 #  value_template: >-
 #    {% if value_json.has_update == True %}
@@ -342,7 +342,7 @@
   scan_interval: 43200
   resource: http://shellyem.giorgioravera.it/status
   method: GET
-  name: shellyem_status
+  name: shellyem
   #value_template: '{{ value_json.has_update }}'
   value_template: >-
     {% if value_json.has_update == True %}
@@ -370,7 +370,7 @@
 #  scan_interval: 43200
 #  resource: http://shellyplugs.giorgioravera.it/status
 #  method: GET
-#  name: shellyplugs_status
+#  name: shellyplugs
 #  #value_template: '{{ value_json.has_update }}'
 #  value_template: >-
 #    {% if value_json.has_update == True %}

@@ -30,20 +30,20 @@ exclude:
     - sensor.cert_expiry_server_giorgioravera_it
     - sensor.cert_expiry_timestamp_server_giorgioravera_it
     # Shelly
-    - sensor.shelly1_status
-    - sensor.shelly2_status
-    - sensor.shelly3_status
-    - sensor.shelly4_status
-    - sensor.shelly5_status
-    - sensor.shelly6_status
-    - sensor.shelly7_status
-    - sensor.shelly8_status
-    - sensor.shelly9_status
-    - sensor.shelly10_status
-    - sensor.shelly11_status
-    - sensor.shellybulb_status
-    - sensor.shellyem_status
-    - sensor.shellyplugs_status
+    - sensor.shelly1
+    - sensor.shelly2
+    - sensor.shelly3
+    - sensor.shelly4
+    - sensor.shelly5
+    - sensor.shelly6
+    - sensor.shelly7
+    - sensor.shelly8
+    - sensor.shelly9
+    - sensor.shelly10
+    - sensor.shelly11
+    - sensor.shellybulb
+    - sensor.shellyem
+    - sensor.shellyplugs
     # Energy Sensors
     - sensor.potenza_reattiva
     - sensor.tensione

@@ -53,7 +53,13 @@
     - service: script.notify_text
       data_template:
         title: "Shelly - Aggiornamento"
-        message: "Sono disponibili aggiornamenti per i dispositivi Shelly"
+        message: >
+          "Sono disponibili aggiornamenti per i dispositivi Shelly:"
+          {% for entity_id in states.group.shelly.attributes.entity_id %}
+            {% if is_state(entity_id, 'on') %}
+              -> {{ state_attr(entity_id, 'friendly_name') }}: {{ state_attr(entity_id, 'update').new_version }}
+            {% endif %}
+          {%- endfor %}
         notification_id: "update"
         enable_persistent: 1
 
@@ -110,7 +116,10 @@
 
   trigger:
     platform: state
-    entity_id: input_boolean.update
+    entity_id:
+      - input_boolean.update_homeassistant
+      - input_boolean.update_shelly
+      - input_boolean.update_hacs
     to: 'off'
 
   action:
