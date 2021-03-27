@@ -16,7 +16,6 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * Shelly (Shelly1, Shelly2, Shelly2.5, ShellyEM, Shelly Dimmer)
 * Xiaomi (MiJia door & window contact sensor, MiJia temperature & humidity sensor)
 * Netatmo Thermostatic valves
-* ~~MAX! eQ-3 (Thermostatic valve)~~
 * Sony Android TV (KD-55XF8596)
 * Canon Printer (TR8550)
 * QNAP NAS (TS-228A)
@@ -51,20 +50,17 @@ All files are edited with [Visual Studio Code](https://code.visualstudio.com/).
 All files are tested using the latest stable version of Home Assistant using [Travis](https://travis-ci.com/github/xraver/homeassistant).
 
 ## To Do List
-* ~~Netatmo automations~~
 * Script review ([Native types support for templates](https://www.home-assistant.io/blog/2020/10/28/release-117/#native-types-support-for-templates-beta) after release 117)
 * NFC
 * Lovelace:
    - Point and click on rooms
-   - House lant
-   - Mercedes Me
+   - House plant
 * Trenitalia Integration
 * [Network components](https://community.home-assistant.io/t/need-help-with-sensor-icon-color-based-on-state/49292)
 * PS4
 * Automazion Mode
 * Theft Protection
 * [Presence Simulator](https://indomus.it/progetti/simulare-automaticamente-la-presenza-in-casa-tramite-la-domotica-home-assistant/)
-* Netatmo (thermostatic valve + doorbell)
 * ESP8266 (ESP01 + NodeMCU)
 * Scene
 * Xiaomi Switch + Shelly Plug S
