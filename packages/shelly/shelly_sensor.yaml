@@ -1,0 +1,382 @@
+######################################################################
+# Shelly Package - Sensor
+######################################################################
+
+sensor:
+  ######################################################################
+  # Sensor: Shelly 1
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly1.giorgioravera.it/status
+    method: GET
+    name: shelly1
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 2
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly2.giorgioravera.it/status
+    method: GET
+    name: shelly2
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 3
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly3.giorgioravera.it/status
+    method: GET
+    name: shelly3
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 4
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly4.giorgioravera.it/status
+    method: GET
+    name: shelly4
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 5
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly5.giorgioravera.it/status
+    method: GET
+    name: shelly5
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 6
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly6.giorgioravera.it/status
+    method: GET
+    name: shelly6
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 7
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly7.giorgioravera.it/status
+    method: GET
+    name: shelly7
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 8
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly8.giorgioravera.it/status
+    method: GET
+    name: shelly8
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 9
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly9.giorgioravera.it/status
+    method: GET
+    name: shelly9
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 10
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly10.giorgioravera.it/status
+    method: GET
+    name: shelly10
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly 11
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shelly11.giorgioravera.it/status
+    method: GET
+    name: shelly11
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly Bulb
+  ######################################################################
+  #- platform: rest
+  #  scan_interval: 43200
+  #  resource: http://shellybulb.giorgioravera.it/status
+  #  method: GET
+  #  name: shellybulb
+  #  #value_template: '{{ value_json.has_update }}'
+  #  value_template: >-
+  #    {% if value_json.has_update == True %}
+  #      on
+  #    {% else %}
+  #      off
+  #    {% endif %}
+  #  authentication: basic
+  #  username: !secret shelly_user
+  #  password: !secret shelly_password
+  #  json_attributes:
+  #  #  - wifi_sta
+  #  #  - mqtt
+  #  #  - time
+  #  #  - has_update
+  #    - mac
+  #    - update
+  #    - uptime
+
+  ######################################################################
+  # Sensor: Shelly EM
+  ######################################################################
+  - platform: rest
+    scan_interval: 43200
+    resource: http://shellyem.giorgioravera.it/status
+    method: GET
+    name: shellyem
+    #value_template: '{{ value_json.has_update }}'
+    value_template: >-
+      {% if value_json.has_update == True %}
+        on
+      {% else %}
+        off
+      {% endif %}
+    authentication: basic
+    username: !secret shelly_user
+    password: !secret shelly_password
+    json_attributes:
+    #  - wifi_sta
+    #  - mqtt
+    #  - time
+    #  - has_update
+      - mac
+      - update
+      - uptime
+
+  ######################################################################
+  # Sensor: Shelly Plug S
+  ######################################################################
+  #- platform: rest
+  #  scan_interval: 43200
+  #  resource: http://shellyplugs.giorgioravera.it/status
+  #  method: GET
+  #  name: shellyplugs
+  #  #value_template: '{{ value_json.has_update }}'
+  #  value_template: >-
+  #    {% if value_json.has_update == True %}
+  #      on
+  #    {% else %}
+  #      off
+  #    {% endif %}
+  #  authentication: basic
+  #  username: !secret shelly_user
+  #  password: !secret shelly_password
+  #  json_attributes:
+  #  #  - wifi_sta
+  #  #  - mqtt
+  #  #  - time
+  #  #  - has_update
+  #    - mac
+  #    - update
+  #    - uptime

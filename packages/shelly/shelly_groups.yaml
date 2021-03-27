@@ -1,0 +1,23 @@
+######################################################################
+# Shelly Package - Group
+######################################################################
+
+group:
+  shelly:
+    name: Shelly Devices
+    icon: mdi:alpha-s-box
+    entities:
+      - sensor.shelly1
+      - sensor.shelly2
+      - sensor.shelly3
+      - sensor.shelly4
+      - sensor.shelly5
+      - sensor.shelly6
+      - sensor.shelly7
+      - sensor.shelly8
+      - sensor.shelly9
+      - sensor.shelly10
+      - sensor.shelly11
+      #- sensor.shellybulb
+      - sensor.shellyem
+      #- sensor.shellyplugs

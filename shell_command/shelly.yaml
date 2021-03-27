@@ -1,1 +1,0 @@
-shelly_reboot: 'bash /config/shell_scripts/shelly_reboot.sh'
