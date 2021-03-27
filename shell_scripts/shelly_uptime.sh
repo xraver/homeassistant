@@ -30,14 +30,8 @@ for i in "${SHELLY_ID[@]}"
 do
 	ALIVE=$(ping -c 1 $i |grep ttl)
 	if [ ! -z "$ALIVE" ]; then
-		HAS_UPDATE=$(curl -s --user $USER:$PASSWORD http://$i/status | jq -r .update.has_update)
-		NEW=$(curl -s --user $USER:$PASSWORD http://$i/status | jq -r .update.new_version)
-		OLD=$(curl -s --user $USER:$PASSWORD http://$i/status | jq -r .update.old_version)
-		if [ $HAS_UPDATE == "true" ]; then
-			echo $i: version: $OLD - new version: $NEW
-		else
-			echo $i: version: $OLD - new version: N/A
-		fi
+		UPTIME=$(curl -s --user $USER:$PASSWORD http://$i/status | jq -r .uptime)
+		echo $i: $UPTIME
 	fi
 done
 

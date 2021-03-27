@@ -1,6 +1,10 @@
 #!/bin/bash
 
-HASS_HOME="/config"
+if [ -f /.dockerenv ]; then
+	HASS_HOME="/config"
+else
+	HASS_HOME="../"
+fi
 USER=$(awk '/shelly_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
 PASSWORD=$(awk '/shelly_password/ { print  $2 }' $HASS_HOME/secrets.yaml)
 SHELLY_ID=(
@@ -26,8 +30,8 @@ for i in "${SHELLY_ID[@]}"
 do
 	ALIVE=$(ping -c 1 $i |grep ttl)
 	if [ ! -z "$ALIVE" ]; then
-		STATUS=$(curl -s --user $USER:$PASSWORD http://$i/reboot | sed -e "s/{"ok"}://g")
-		echo $STATUS
+		STATUS=$(curl -s --user $USER:$PASSWORD http://$i/reboot | jq -r .ok)
+		echo $i: $STATUS
 	fi
 done
 

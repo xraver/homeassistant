@@ -1,6 +1,10 @@
 #!/bin/bash
 
-HASS_HOME="/config"
+if [ -f /.dockerenv ]; then
+	HASS_HOME="/config"
+else
+	HASS_HOME="../"
+fi
 HOST=$(awk '/mqtt_host/ { print  $2 }' $HASS_HOME/secrets.yaml)
 USER=$(awk '/mqtt_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
 PASSWORD=$(awk '/mqtt_password/ { print  $2 }' $HASS_HOME/secrets.yaml)
