@@ -1254,7 +1254,12 @@
                                                 }
                                             },
                                             "type": "entity-button"
-                                        },
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
                                         {
                                             "entity": "script.laura_voice",
                                             "icon": "mdi:numeric-4",
@@ -1264,6 +1269,32 @@
                                                 "service": "script.turn_on",
                                                 "service_data": {
                                                     "entity_id": "script.laura_voice_4"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "script.laura_voice",
+                                            "icon": "mdi:numeric-5",
+                                            "name": "Mamma Mia",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.laura_voice_5"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "script.laura_voice",
+                                            "icon": "mdi:numeric-6",
+                                            "name": "No",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.laura_voice_6"
                                                 }
                                             },
                                             "type": "entity-button"

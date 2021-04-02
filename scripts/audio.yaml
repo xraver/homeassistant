@@ -1,11 +1,13 @@
 ######################################################################
 # Script: Laura
-# Inputs: 
+# Inputs:
 # - type:
 #         1 -> bell'affare
 #         2 -> belan
 #         3 -> una schifezza
-#         3 -> ma che schifo è?
+#         4 -> ma che schifo è?
+#         5 -> mamma mia
+#         6 -> no
 #
 # Operations:
 # - script.volume_manager
@@ -46,7 +48,7 @@ laura_voice:
         media_content_type: 'audio/mp4'
         media_content_id: >-
           {%- macro set_type() -%}
-            {{ range(1,5,1) | random }}
+            {{ range(1,7,1) | random }}
           {%- endmacro -%}
           {% if type is not defined %}
             {% set type = set_type() %}
@@ -81,9 +83,23 @@ laura_voice_4:
     data:
       type: '4'
 
+laura_voice_5:
+  alias: Voce Laura 5
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '5'
+
+laura_voice_6:
+  alias: Voce Laura 6
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '6'
+
 ######################################################################
 # Script: Babu Frik
-# Inputs: 
+# Inputs:
 # - type:
 #         1 -> I'm babu frik
 #         2 -> heheeee
