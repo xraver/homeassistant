@@ -203,14 +203,28 @@
                                     "entity": "script.zigbee2mqtt_restart"
                                 },
                                 {
-                                    "type": "divider"
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
                                 },
                                 "switch.zigbee2mqtt_abilita_join",
                                 {
                                     "entity": "timer.zigbee_permit_join"
                                 },
                                 {
-                                    "type": "divider"
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
                                 },
                                 {
                                     "entity": "input_text.zigbee2mqtt_old_name"
@@ -222,7 +236,14 @@
                                     "entity": "script.zigbee2mqtt_rename"
                                 },
                                 {
-                                    "type": "divider"
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
                                 },
                                 {
                                     "entity": "input_text.zigbee2mqtt_remove"
@@ -231,7 +252,14 @@
                                     "entity": "script.zigbee2mqtt_remove"
                                 },
                                 {
-                                    "type": "divider"
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
                                 },
                                 "input_select.zigbee2mqtt_log_level"
                             ],
