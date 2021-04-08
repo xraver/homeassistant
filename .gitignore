@@ -14,6 +14,7 @@ credentials/
 html5_push_registrations.conf
 known_devices.yaml
 secrets.yaml
+webostv.conf
 
 # Disabled Files
 #*.disabled
