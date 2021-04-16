@@ -8,6 +8,7 @@
 #         4 -> ma che schifo è?
 #         5 -> mamma mia
 #         6 -> no
+#         7 -> io mi chiamo Stitch
 #
 # Operations:
 # - script.volume_manager
@@ -48,7 +49,7 @@ laura_voice:
         media_content_type: 'audio/mp4'
         media_content_id: >-
           {%- macro set_type() -%}
-            {{ range(1,7,1) | random }}
+            {{ range(1,8,1) | random }}
           {%- endmacro -%}
           {% if type is not defined %}
             {% set type = set_type() %}
@@ -96,6 +97,13 @@ laura_voice_6:
   - service: script.laura_voice
     data:
       type: '6'
+
+laura_voice_7:
+  alias: Voce Laura 7
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '7'
 
 ######################################################################
 # Script: Babu Frik

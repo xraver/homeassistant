@@ -1219,7 +1219,7 @@
                                         {
                                             "entity": "script.laura_voice",
                                             "icon": "mdi:numeric-1",
-                                            "name": "Affare",
+                                            "name": "Bell'Affare",
                                             "tap_action": {
                                                 "action": "call-service",
                                                 "service": "script.turn_on",
@@ -1297,6 +1297,40 @@
                                                     "entity_id": "script.laura_voice_6"
                                                 }
                                             },
+                                            "type": "entity-button"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "script.laura_voice",
+                                            "icon": "mdi:numeric-7",
+                                            "name": "Stitch",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.turn_on",
+                                                "service_data": {
+                                                    "entity_id": "script.laura_voice_7"
+                                                }
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "script.laura_voice",
+                                            "icon": "mdi:numeric-8",
+                                            "name": null,
+                                            "show_name": false,
+                                            "show_icon": false,
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "script.laura_voice",
+                                            "icon": "mdi:numeric-9",
+                                            "name": null,
+                                            "show_name": false,
+                                            "show_icon": false,
                                             "type": "entity-button"
                                         }
                                     ],
