@@ -5,3 +5,7 @@
 #media_player.sony_bravia_tv:
 #  expose: true
 #  room: Sala
+
+media_player.tv_camera:
+  expose: true
+  room: Camera
