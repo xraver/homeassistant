@@ -38,6 +38,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
   * Google Cast
   * HACS
   * Internet Printing Protocol 
+  * Mercedes Me
   * MQTT
   * Sony Bravia
   * UPNP
