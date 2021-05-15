@@ -10,10 +10,10 @@ sensor:
     sensors:
       valve_cucina_temperature:
         friendly_name: "Temperatura Cucina"
-        value_template: "{{ state_attr('climate.netatmo_cucina', 'current_temperature') }}" 
+        value_template: "{{ state_attr('climate.netatmo_cucina', 'current_temperature') }}"
         unit_of_measurement: '°C'
         device_class: temperature
-     
+
   - platform: template
     sensors:
       valve_sala_temperature:
@@ -27,7 +27,7 @@ sensor:
       valve_studio_temperature:
         friendly_name: "Temperatura Studio"
         value_template: "{{ state_attr('climate.netatmo_studio', 'current_temperature') }}"
-        unit_of_measurement: '°C'    
+        unit_of_measurement: '°C'
         device_class: temperature
 
   - platform: template
@@ -53,15 +53,39 @@ sensor:
     sensors:
       valve_cucina_battery:
         friendly_name: "Batteria Valvola Cucina"
-        value_template: "{{ state_attr('climate.netatmo_cucina', 'battery_level') }}" 
+        value_template: >
+          {% set battery_level = state_attr('climate.netatmo_cucina', 'battery_level') %}
+          {% if battery_level == "full" %}
+            100
+          {% elif battery_level == "high" %}
+            80
+          {% elif battery_level == "medium" %}
+            50
+          {% elif battery_level == "low" %}
+            20
+          {% else %}
+            0
+          {% endif %}
         unit_of_measurement: '%'
         device_class: battery
-     
+
   - platform: template
     sensors:
       valve_sala_battery:
         friendly_name: "Batteria Valvola Sala"
-        value_template: "{{ state_attr('climate.netatmo_sala', 'battery_level') }}"
+        value_template: >
+          {% set battery_level = state_attr('climate.netatmo_sala', 'battery_level') %}
+          {% if battery_level == "full" %}
+            100
+          {% elif battery_level == "high" %}
+            80
+          {% elif battery_level == "medium" %}
+            50
+          {% elif battery_level == "low" %}
+            20
+          {% else %}
+            0
+          {% endif %}
         unit_of_measurement: '%'
         device_class: battery
 
@@ -69,7 +93,19 @@ sensor:
     sensors:
       valve_studio_battery:
         friendly_name: "Batteria Valvola Studio"
-        value_template: "{{ state_attr('climate.netatmo_studio', 'battery_level') }}"
+        value_template: >
+          {% set battery_level = state_attr('climate.netatmo_studio', 'battery_level') %}
+          {% if battery_level == "full" %}
+            100
+          {% elif battery_level == "high" %}
+            80
+          {% elif battery_level == "medium" %}
+            50
+          {% elif battery_level == "low" %}
+            20
+          {% else %}
+            0
+          {% endif %}
         unit_of_measurement: '%'
         device_class: battery
 
@@ -77,15 +113,39 @@ sensor:
     sensors:
       valve_bagno_battery:
         friendly_name: "Batteria Valvola Bagno"
-        value_template: "{{ state_attr('climate.netatmo_bagno', 'battery_level') }}"
+        value_template: >
+          {% set battery_level = state_attr('climate.netatmo_bagno', 'battery_level') %}
+          {% if battery_level == "full" %}
+            100
+          {% elif battery_level == "high" %}
+            80
+          {% elif battery_level == "medium" %}
+            50
+          {% elif battery_level == "low" %}
+            20
+          {% else %}
+            0
+          {% endif %}
         unit_of_measurement: '%'
         device_class: battery
-    
+
   - platform: template
     sensors:
       valve_camera_da_letto_battery:
         friendly_name: "Batteria Valvola Camera"
-        value_template: "{{ state_attr('climate.netatmo_camera_da_letto', 'battery_level') }}"
+        value_template: >
+          {% set battery_level = state_attr('climate.netatmo_camera_da_letto', 'battery_level') %}
+          {% if battery_level == "full" %}
+            100
+          {% elif battery_level == "high" %}
+            80
+          {% elif battery_level == "medium" %}
+            50
+          {% elif battery_level == "low" %}
+            20
+          {% else %}
+            0
+          {% endif %}
         unit_of_measurement: '%'
         device_class: battery
 
@@ -96,7 +156,7 @@ sensor:
     sensors:
       valve_cucina_state:
         friendly_name: "Stato Valvola Cucina"
-        value_template: "{{ state_attr('climate.netatmo_cucina', 'hvac_action') }}" 
+        value_template: "{{ state_attr('climate.netatmo_cucina', 'hvac_action') }}"
         icon_template: >-
           {% if is_state_attr('climate.netatmo_cucina', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
