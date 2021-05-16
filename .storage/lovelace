@@ -38,6 +38,9 @@
                             "entity": "binary_sensor.alarms"
                         },
                         {
+                            "entity": "binary_sensor.central_heating"
+                        },
+                        {
                             "entity": "sensor.potenza_istantanea"
                         },
                         {
