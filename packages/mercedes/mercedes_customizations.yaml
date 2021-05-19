@@ -10,7 +10,7 @@ homeassistant:
       device_class: problem
       icon: mdi:hazard-lights
       # warningbrakefluid, warningwashwater, warningcoolantlevellow, warninglowbattery
-    
+
     # Freno a Mano - parkbrakestatus
     #binary_sensor.ff590mr_park_brake_status:
     #  friendly_name: Freno a mano
@@ -29,7 +29,7 @@ homeassistant:
       friendly_name: Liquido Raffreddamento
       device_class: problem
       #icon: mdi:coolant-temperature
-      
+
     # Liquido Lavacristalli
     binary_sensor.ff590mr_low_wash_water_warning:
       friendly_name: Liquido Lavacristalli
@@ -41,7 +41,7 @@ homeassistant:
       friendly_name: Pneumatici
       device_class: problem
       #icon: mdi:car-tire-alert
-      # tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft, 
+      # tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft,
       # tireMarkerFrontRight, tireMarkerFrontLeft,tireMarkerRearLeft, tireMarkerRearRight, tirewarningsrdk, tirewarningsprw
 
     # Finestrini
@@ -58,15 +58,18 @@ homeassistant:
 
     # Lock
     lock.ff590mr_lock:
-      friendly_name: Blocco Auto 
+      friendly_name: Blocco Auto
       icon: mdi:lock
-      
+    lock.ff590mr_lock_no_pin:
+      friendly_name: Blocco Auto
+      icon: mdi:lock
+
     # Sensore Carburante
     sensor.ff590mr_fuel_level:
       friendly_name: Livello Carburante
       icon: mdi:gas-station
       # tankLevelAdBlue
-    
+
     # Blocco Veicolo - lock
     sensor.ff590mr_lock:
       friendly_name: Veicolo
@@ -75,15 +78,15 @@ homeassistant:
       # doorlockstatusfrontleft,doorlockstatusfrontright, doorlockstatusrearleft, doorlockstatusrearright, doorlockstatusdecklid, doorlockstatusgas,
       # doorstatusrearleft, doorstatusfrontright, doorstatusrearright, doorstatusfrontleft, decklidstatus,
       # rooftopstatus, sunroofstatus
-      
+
     # Odometria
     sensor.ff590mr_odometer:
       friendly_name: Km Percorsi
       icon: mdi:road-variant
-      # distanceReset, distanceStart, averageSpeedReset, averageSpeedStart, distanceZEReset, 
-      # drivenTimeZEReset, drivenTimeReset, drivenTimeStart, ecoscoretotal, ecoscorefreewhl, ecoscorebonusrange, ecoscoreconst, ecoscoreaccel, 
-      # gasconsumptionstart, gasconsumptionreset, gasTankRange, gasTankLevel, 
-      # liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, rangeliquid, serviceintervaldays, tanklevelpercent, tankReserveLamp, 
+      # distanceReset, distanceStart, averageSpeedReset, averageSpeedStart, distanceZEReset,
+      # drivenTimeZEReset, drivenTimeReset, drivenTimeStart, ecoscoretotal, ecoscorefreewhl, ecoscorebonusrange, ecoscoreconst, ecoscoreaccel,
+      # gasconsumptionstart, gasconsumptionreset, gasTankRange, gasTankLevel,
+      # liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, rangeliquid, serviceintervaldays, tanklevelpercent, tankReserveLamp,
       # batteryState, tankLevelAdBlue
 
     # Sensore Avviamento
@@ -95,6 +98,6 @@ homeassistant:
     sensor.ff590mr_car:
       friendly_name: Sensore Auto
       icon: mdi:car-connected
-      # full_update_messages_received, partital_update_messages_received, last_message_received, 
-      # last_command_type, last_command_state, 
+      # full_update_messages_received, partital_update_messages_received, last_message_received,
+      # last_command_type, last_command_state,
       # last_command_error_code, last_command_error_message
