@@ -91,12 +91,12 @@ homeassistant:
 
     # Sensore Avviamento
     sensor.ff590mr_ignition_state:
-      friendly_name: Sensore Avviamento
-      icon: mdi:power
+      friendly_name: Stato Accensione
+      icon: mdi:key-wireless
 
     # Sensore Dati Connessione
     sensor.ff590mr_car:
-      friendly_name: Sensore Auto
+      friendly_name: Messaggi Auto
       icon: mdi:car-connected
       # full_update_messages_received, partital_update_messages_received, last_message_received,
       # last_command_type, last_command_state,

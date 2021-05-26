@@ -9,7 +9,7 @@ google_assistant:
 #      expose: true
 #      room: Generale
 
-    lock.ff590mr_lock:
+    lock.ff590mr_lock_no_pin:
       name: Auto
       expose: true
       room: Generale
