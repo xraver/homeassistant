@@ -181,9 +181,6 @@ homekit: !include components/homekit.yaml
 # Netatmo
 netatmo: !include components/netatmo.yaml
 
-# Speed Test
-speedtestdotnet: !include components/speedtest.yaml
-
 # Telegram
 telegram_bot: !include components/telegram.yaml
 
