@@ -118,7 +118,7 @@ input_datetime: !include_dir_merge_named input_datetime/
 input_text: !include_dir_merge_named input_text/
 
 # Lights
-light: !include_dir_merge_list light/ 
+light: !include_dir_merge_list light/
 
 # Sensors
 sensor: !include_dir_merge_list sensor/
@@ -136,6 +136,9 @@ utility_meter: !include_dir_merge_named utility_meter/
 
 # Discover some devices automatically
 discovery:
+
+# Provides network configuration for integrations such as Zeroconf
+network:
 
 # Simple Service Discovery Protocol (SSDP)
 ssdp:

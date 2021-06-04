@@ -1,4 +1,4 @@
-# Home Assistant Configuration 
+# Home Assistant Configuration
 [![Build Status][build-status-img]][build-status-url]
 [![Last Commit][last-commit-img]][last-commit-url]
 [![License Status][license-img]][license-url]
@@ -37,10 +37,11 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
   * Google Calendar
   * Google Cast
   * HACS
-  * Internet Printing Protocol 
+  * Internet Printing Protocol
   * Mercedes Me
   * MQTT
   * Sony Bravia
+  * SpeedTest
   * UPNP
 * Restart Home Assistant
 
