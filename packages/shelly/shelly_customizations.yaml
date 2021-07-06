@@ -6,6 +6,235 @@ homeassistant:
   customize:
     script.shelly_upgrade:
       icon: mdi:cellphone-arrow-down
-
     script.shelly_reboot:
       icon: mdi:restart
+
+    # Shelly 1 - Tapparella Cucina (shellyswitch_55980f)
+    sensor.tapparella_cucina_energy:
+      friendly_name: Tapparella Cucina - Energia
+    sensor.tapparella_cucina_power:
+      friendly_name: Tapparella Cucina - Potenza
+    binary_sensor.tapparella_cucina_channel_1_input:
+      friendly_name: Tapparella Cucina - Pulsante 1
+    binary_sensor.tapparella_cucina_channel_2_input:
+      friendly_name: Tapparella Cucina - Pulsante 2
+    binary_sensor.tapparella_cucina_cloud:
+      friendly_name: Tapparella Cucina - Connessione Cloud
+    binary_sensor.tapparella_cucina_firmware_update:
+      friendly_name: Tapparella Cucina - Aggiornamento Firmware
+    sensor.tapparella_cucina_rssi:
+      friendly_name: Tapparella Cucina - Potenza Segnale
+    sensor.tapparella_cucina_uptime:
+      friendly_name: Tapparella Cucina - Uptime
+
+    # Shelly 2 - Tapparella Sala (shellyswitch25_6919bd)
+    sensor.tapparella_sala_energy:
+      friendly_name: Tapparella Sala - Energia
+    sensor.tapparella_sala_power:
+      friendly_name: Tapparella Sala - Potenza
+    binary_sensor.tapparella_sala_channel_1_input:
+      friendly_name: Tapparella Sala - Pulsante 1
+    binary_sensor.tapparella_sala_channel_2_input:
+      friendly_name: Tapparella Sala - Pulsante 2
+    binary_sensor.tapparella_sala_cloud:
+      friendly_name: Tapparella Sala - Connessione Cloud
+    sensor.tapparella_sala_device_temperature:
+      friendly_name: Tapparella Sala - Temperatura Device
+    binary_sensor.tapparella_sala_overheating:
+      friendly_name: Tapparella Sala - Surriscaldamento Device
+    binary_sensor.tapparella_sala_firmware_update:
+      friendly_name: Tapparella Sala - Aggiornamento Firmware
+    sensor.tapparella_sala_rssi:
+      friendly_name: Tapparella Sala - Potenza Segnale
+    sensor.tapparella_sala_uptime:
+      friendly_name: Tapparella Sala - Uptime
+
+    # Shelly 3 - Tapparella Studio (shellyswitch_13572b)
+    sensor.tapparella_studio_energy:
+      friendly_name: Tapparella Studio - Energia
+    sensor.tapparella_studio_power:
+      friendly_name: Tapparella Studio - Potenza
+    binary_sensor.tapparella_studio_channel_1_input:
+      friendly_name: Tapparella Studio - Pulsante 1
+    binary_sensor.tapparella_studio_channel_2_input:
+      friendly_name: Tapparella Studio - Pulsante 2
+    binary_sensor.tapparella_studio_cloud:
+      friendly_name: Tapparella Studio - Connessione Cloud
+    binary_sensor.tapparella_studio_firmware_update:
+      friendly_name: Tapparella Studio - Aggiornamento Firmware
+    sensor.tapparella_studio_rssi:
+      friendly_name: Tapparella Studio - Potenza Segnale
+    sensor.tapparella_studio_uptime:
+      friendly_name: Tapparella Studio - Uptime
+
+    # Shelly 4 - Tapparella Camera (shellyswitch_559c49)
+    sensor.tapparella_camera_energy:
+      friendly_name: Tapparella Camera - Energia
+    sensor.tapparella_camera_power:
+      friendly_name: Tapparella Camera - Potenza
+    binary_sensor.tapparella_camera_channel_1_input:
+      friendly_name: Tapparella Camera - Pulsante 1
+    binary_sensor.tapparella_camera_channel_2_input:
+      friendly_name: Tapparella Camera - Pulsante 2
+    binary_sensor.tapparella_camera_cloud:
+      friendly_name: Tapparella Camera - Connessione Cloud
+    binary_sensor.tapparella_camera_firmware_update:
+      friendly_name: Tapparella Camera - Aggiornamento Firmware
+    sensor.tapparella_camera_rssi:
+      friendly_name: Tapparella Camera - Potenza Segnale
+    sensor.tapparella_camera_uptime:
+      friendly_name: Tapparella Camera - Uptime
+
+    # Shelly 5 - Luce Corridoio (shelly1_24d1ee)
+    binary_sensor.luce_corridoio_cloud:
+      friendly_name: Luce Corridoio - Connessione Cloud
+    binary_sensor.luce_corridoio_firmware_update:
+      friendly_name: Luce Corridoio - Aggiornamento Firmware
+    sensor.luce_corridoio_rssi:
+      friendly_name: Luce Corridoio - Potenza Segnale
+    sensor.luce_corridoio_uptime:
+      friendly_name: Luce Corridoio - Uptime
+
+    # Shelly 6 - Luce Cucina (shelly1_93B27D)
+    binary_sensor.luce_cucina_cloud:
+      friendly_name: Luce Cucina - Connessione Cloud
+    binary_sensor.luce_cucina_firmware_update:
+      friendly_name: Luce Cucina - Aggiornamento Firmware
+    sensor.luce_cucina_rssi:
+      friendly_name: Luce Cucina - Potenza Segnale
+    sensor.luce_cucina_uptime:
+      friendly_name: Luce Cucina - Uptime
+
+    # Shelly 7 - Luce Sala (shellydimmer_d3ea58)
+    binary_sensor.luce_sala_channel_1_input:
+      friendly_name: Luce Sala - Pulsante 1
+    binary_sensor.luce_sala_channel_2_input:
+      friendly_name: Luce Sala - Pulsante 2
+    sensor.luce_sala_energy:
+      friendly_name: Luci Sala - Energia
+    sensor.luce_sala_power:
+      friendly_name: Luci Sala - Potenza
+    binary_sensor.luce_sala_overpowering:
+      friendly_name: Luci Sala - Sovraccarico Energetico
+    binary_sensor.luce_sala_cloud:
+      friendly_name: Luce Sala - Connessione Cloud
+    sensor.luce_sala_device_temperature:
+      friendly_name: Luci Sala - Temperatura Device
+    binary_sensor.luce_sala_overheating:
+      friendly_name: Luci Sala - Surriscaldamento Device
+    binary_sensor.luce_sala_firmware_update:
+      friendly_name: Luce Sala - Aggiornamento Firmware
+    sensor.luce_sala_rssi:
+      friendly_name: Luce Sala - Potenza Segnale
+    sensor.luce_sala_uptime:
+      friendly_name: Luce Sala - Uptime
+
+    # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
+    sensor.luci_bagno_channel_1_energy:
+      friendly_name: Luci Bagno - Energia Canale 1
+    binary_sensor.luci_bagno_channel_1_overpowering:
+      friendly_name: Luci Bagno - Sovraccarico Energetico Canale 1
+    sensor.luci_bagno_channel_1_power:
+      friendly_name: Luci Bagno - Potenza Canale 1
+    sensor.luci_bagno_channel_2_energy:
+      friendly_name: Luci Bagno - Energia Canale 2
+    binary_sensor.luci_bagno_channel_2_overpowering:
+      friendly_name: Luci Bagno - Sovraccarico Energetico Canale 2
+    sensor.luci_bagno_channel_2_power:
+      friendly_name: Luci Bagno - Potenza Canale 2
+    binary_sensor.luci_bagno_cloud:
+      friendly_name: Luci Bagno - Connessione Cloud
+    sensor.luci_bagno_device_temperature:
+      friendly_name: Luci Bagno - Temperatura Device
+    binary_sensor.luci_bagno_overheating:
+      friendly_name: Luci Bagno - Surriscaldamento Device
+    binary_sensor.luci_bagno_firmware_update:
+      friendly_name: Luci Bagno - Aggiornamento Firmware
+    sensor.luci_bagno_rssi:
+      friendly_name: Luci Bagno - Potenza Segnale
+    sensor.luci_bagno_uptime:
+      friendly_name: Luci Bagno - Uptime
+
+    # Shelly 9 - Luce Studio (shelly1_59e18c)
+    binary_sensor.luce_studio_cloud:
+      friendly_name: Luce Studio - Connessione Cloud
+    binary_sensor.luce_studio_firmware_update:
+      friendly_name: Luce Studio - Aggiornamento Firmware
+    sensor.luce_studio_rssi:
+      friendly_name: Luce Studio - Potenza Segnale
+    sensor.luce_studio_uptime:
+      friendly_name: Luce Studio - Uptime
+
+    # Shelly 10 - Luce Camera (shellydimmer_d46cf2)
+    binary_sensor.luce_camera_channel_1_input:
+      friendly_name: Luce Camera - Pulsante 1
+    binary_sensor.luce_camera_channel_2_input:
+      friendly_name: Luce Camera - Pulsante 2
+    sensor.luce_camera_energy:
+      friendly_name: Luci Camera - Energia
+    sensor.luce_camera_power:
+      friendly_name: Luci Camera - Potenza
+    binary_sensor.luce_camera_overpowering:
+      friendly_name: Luci Camera - Sovraccarico Energetico
+    binary_sensor.luce_camera_cloud:
+      friendly_name: Luce Camera - Connessione Cloud
+    sensor.luce_camera_device_temperature:
+      friendly_name: Luci Camera - Temperatura Device
+    binary_sensor.luce_camera_overheating:
+      friendly_name: Luci Camera - Surriscaldamento Device
+    binary_sensor.luce_camera_firmware_update:
+      friendly_name: Luce Camera - Aggiornamento Firmware
+    sensor.luce_camera_rssi:
+      friendly_name: Luce Camera - Potenza Segnale
+    sensor.luce_camera_uptime:
+      friendly_name: Luce Camera - Uptime
+
+    # Shelly 11 - Luce Balcone (shelly1_c423c8)
+    binary_sensor.luce_balcone_cloud:
+      friendly_name: Luce Balcone - Connessione Cloud
+    binary_sensor.luce_balcone_firmware_update:
+      friendly_name: Luce Balcone - Aggiornamento Firmware
+    sensor.luce_balcone_rssi:
+      friendly_name: Luce Balcone - Potenza Segnale
+    sensor.luce_balcone_uptime:
+      friendly_name: Luce Balcone - Uptime
+
+    # Shelly EM (shellyem_b9e1a0)
+    switch.shelly_em:
+      friendly_name: Shelly EM - Pulsante
+    sensor.shelly_em_channel_1_power:
+      friendly_name: Potenza Istantanea
+    sensor.shelly_em_channel_1_energy:
+      friendly_name: Energia
+    sensor.shelly_em_channel_1_energy_returned:
+      friendly_name: Energia Restituita
+    sensor.shelly_em_channel_1_voltage:
+      friendly_name: Tensione
+    sensor.shelly_em_channel_2_power:
+      friendly_name: Potenza Istantanea Canale 2
+    sensor.shelly_em_channel_2_energy:
+      friendly_name: Energia Canale 2
+    sensor.shelly_em_channel_2_energy_returned:
+      friendly_name: Energia Restituita Canale 2
+    sensor.shelly_em_channel_2_voltage:
+      friendly_name: Tensione Canale 2
+    binary_sensor.shelly_em_overpowering:
+      friendly_name: Shelly EM - Sovraccarico Energetico
+    binary_sensor.shelly_em_cloud:
+      friendly_name: Shelly EM - Connessione Cloud
+    binary_sensor.shelly_em_firmware_update:
+      friendly_name: Shelly EM - Aggiornamento Firmware
+    sensor.shelly_em_rssi:
+      friendly_name: Shelly EM - Potenza Segnale
+    sensor.shelly_em_uptime:
+      friendly_name: Shelly EM - Uptime
+
+    # Shelly Bulb (shellybulb_bc8610)
+    binary_sensor.luce_divano_cloud:
+      friendly_name: Luce Divano - Connessione Cloud
+    binary_sensor.luce_divano_firmware_update:
+      friendly_name: Luce Divano - Aggiornamento Firmware
+    sensor.luce_divano_rssi:
+      friendly_name: Luce Divano - Potenza Segnale
+    sensor.luce_divano_uptime:
+      friendly_name: Luce Divano - Uptime

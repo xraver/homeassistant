@@ -41,7 +41,7 @@
                             "entity": "binary_sensor.central_heating"
                         },
                         {
-                            "entity": "sensor.potenza_istantanea"
+                            "entity": "sensor.shelly_em_channel_1_power"
                         },
                         {
                             "entity": "sensor.front_balcony_temperature"
@@ -267,30 +267,100 @@
                             "type": "vertical-stack"
                         },
                         {
-                            "detail": 2,
-                            "entity": "sensor.potenza_istantanea",
-                            "graph": "line",
-                            "type": "sensor",
-                            "unit": "W"
-                        },
-                        {
-                            "cards": [
+                            "type": "custom:mini-graph-card",
+                            "entities": [
+                                "sensor.potenza_istantanea"
+                            ],
+                            "hours_to_show": 24,
+                            "points_per_hour": 120,
+                            "line_width": 3,
+                            "color_thresholds": [
                                 {
-                                    "detail": 1,
-                                    "entity": "sensor.front_balcony_temperature",
-                                    "graph": "line",
-                                    "name": "Temperatura Balcone",
-                                    "type": "sensor"
+                                    "value": 0,
+                                    "color": "#00ff00"
                                 },
                                 {
-                                    "detail": 1,
-                                    "entity": "sensor.rear_balcony_temperature",
-                                    "graph": "line",
-                                    "name": "Temperatura Veranda",
-                                    "type": "sensor"
+                                    "value": 1500,
+                                    "color": "#c0392b"
+                                },
+                                {
+                                    "value": 2500,
+                                    "color": "#c0392b"
                                 }
                             ],
-                            "type": "vertical-stack"
+                            "decimals": 0,
+                            "hour24": true
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.front_balcony_temperature",
+                                            "name": "Balcone"
+                                        }
+                                    ],
+                                    "name": "Balcone",
+                                    "hours_to_show": 24,
+                                    "points_per_hour": 1,
+                                    "show": {
+                                        "name": true,
+                                        "state": true
+                                    },
+                                    "line_width": 5,
+                                    "color_thresholds": [
+                                        {
+                                            "value": 16,
+                                            "color": "#4a90e2"
+                                        },
+                                        {
+                                            "value": 19,
+                                            "color": "#ffbd00"
+                                        },
+                                        {
+                                            "value": 23,
+                                            "color": "#ee7c3a"
+                                        }
+                                    ],
+                                    "hour24": true,
+                                    "decimals": 0
+                                },
+                                {
+                                    "type": "custom:mini-graph-card",
+                                    "entities": [
+                                        {
+                                            "entity": "sensor.rear_balcony_temperature",
+                                            "name": "Veranda"
+                                        }
+                                    ],
+                                    "name": "Veranda",
+                                    "hours_to_show": 24,
+                                    "points_per_hour": 1,
+                                    "show": {
+                                        "name": true,
+                                        "state": true
+                                    },
+                                    "line_width": 5,
+                                    "color_thresholds": [
+                                        {
+                                            "value": 16,
+                                            "color": "#4a90e2"
+                                        },
+                                        {
+                                            "value": 19,
+                                            "color": "#ffbd00"
+                                        },
+                                        {
+                                            "value": 23,
+                                            "color": "#ee7c3a"
+                                        }
+                                    ],
+                                    "hour24": true,
+                                    "decimals": 0
+                                }
+                            ]
                         }
                     ]
                 },
@@ -1219,22 +1289,31 @@
                     ]
                 },
                 {
+                    "icon": "mdi:flash",
+                    "id": "power",
+                    "title": "Monitoraggio Energetico",
                     "badges": [
-                        "sensor.potenza_istantanea",
-                        "sensor.potenza_reattiva",
-                        "sensor.tensione"
+                        {
+                            "entity": "sensor.shelly_em_channel_1_power"
+                        },
+                        {
+                            "entity": "sensor.shelly_em_channel_1_energy"
+                        },
+                        {
+                            "entity": "sensor.shelly_em_channel_1_voltage"
+                        }
                     ],
                     "cards": [
                         {
                             "detail": 2,
-                            "entity": "sensor.potenza_istantanea",
+                            "entity": "sensor.shelly_em_channel_1_power",
                             "graph": "line",
                             "name": "Consumo Energetico",
                             "type": "sensor",
                             "unit": "W"
                         },
                         {
-                            "entity": "sensor.potenza_istantanea",
+                            "entity": "sensor.shelly_em_channel_1_power",
                             "max": 4000,
                             "min": 0,
                             "name": "Potenza Istantanea",
@@ -1258,10 +1337,7 @@
                             "title": "Consumi",
                             "type": "entities"
                         }
-                    ],
-                    "icon": "mdi:flash",
-                    "id": "power",
-                    "title": "Monitoraggio Energetico"
+                    ]
                 },
                 {
                     "badges": [

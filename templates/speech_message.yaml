@@ -114,7 +114,7 @@
 
   {# Consumption Status #}
   {%- macro status_consumption() -%}
-  "Il consumo istantaneo è pari a {{ states.sensor.potenza_istantanea.state }} watt"
+  "Il consumo istantaneo è pari a {{ states.sensor.shelly_em_channel_1_power.state }} watt"
   {%- endmacro -%}
 
   {# Location Status #}

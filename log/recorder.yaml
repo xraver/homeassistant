@@ -30,9 +30,6 @@ exclude:
     - sensor.cert_expiry_server_giorgioravera_it
     - sensor.cert_expiry_timestamp_server_giorgioravera_it
     # Energy Sensors
-    - sensor.potenza_reattiva
-    - sensor.tensione
-    - sensor.consumo_energetico
     - sensor.consumo_energetico_giornaliero
     - sensor.consumo_energetico_mensile
     # Zigbee2mqtt
