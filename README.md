@@ -40,6 +40,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
   * Internet Printing Protocol
   * Mercedes Me
   * MQTT
+  * Shelly Devices (with the exception of Shelly Bulb)
   * Sony Bravia
   * SpeedTest
   * UPNP
@@ -60,7 +61,6 @@ All files are tested using the latest stable version of Home Assistant using [Tr
 * Trenitalia Integration
 * [Network components](https://community.home-assistant.io/t/need-help-with-sensor-icon-color-based-on-state/49292)
 * PS4
-* Automazion Mode
 * Theft Protection
 * [Presence Simulator](https://indomus.it/progetti/simulare-automaticamente-la-presenza-in-casa-tramite-la-domotica-home-assistant/)
 * ESP8266 (ESP01 + NodeMCU)
