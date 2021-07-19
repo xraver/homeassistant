@@ -137,9 +137,6 @@ utility_meter: !include_dir_merge_named utility_meter/
 # Discover some devices automatically
 discovery:
 
-# Provides network configuration for integrations such as Zeroconf
-network:
-
 # Simple Service Discovery Protocol (SSDP)
 ssdp:
 
