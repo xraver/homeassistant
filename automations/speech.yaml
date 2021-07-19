@@ -22,9 +22,9 @@
   action:
     - wait_for_trigger:
         - platform: state
-          entity_id: binary_sensor.main_door_contact
+          entity_id: binary_sensor.porta_casa_contact
           to: "on"
-      timeout: 
+      timeout:
         minutes: 30
       continue_on_timeout: false
 
@@ -44,7 +44,7 @@
 
 - alias: "Saluto orario"
   initial_state: false
-  
+
   trigger:
     - platform: time
       at: '12:00:00'
@@ -54,6 +54,6 @@
   action:
     - service: script.speech_engine
       data_template:
-        message: >- 
+        message: >-
           {% set hour = now().strftime('%H') %}
           "Sono le {{ hour }} e tutto va bene."

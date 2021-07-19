@@ -3,12 +3,14 @@
 ######################################################################
 
 # Main Door Sensor
-binary_sensor.main_door_contact:
+binary_sensor.porta_casa_contact:
   friendly_name: 'Porta Casa'
-sensor.main_door_battery:
+sensor.porta_casa_battery:
   friendly_name: 'Porta Casa: Batteria'
-sensor.main_door_linkquality:
+sensor.porta_casa_linkquality:
   friendly_name: 'Porta Casa: Link'
+sensor.porta_casa_voltage:
+  friendly_name: 'Porta Casa: Tensione'
 
 # Spare Door Sensor
 binary_sensor.spare_door_contact:
@@ -17,31 +19,43 @@ sensor.spare_door_battery:
   friendly_name: 'Spare Door: Batteria'
 sensor.spare_door_linkquality:
   friendly_name: 'Spare Door: Link'
+sensor.spare_door_voltage:
+  friendly_name: 'Spare Door: Tensione'
+sensor.spare_door_temperature:
+  friendly_name: 'Spare Door: Temperatura'
 
 # Front Balcony Temperature Sensor
-sensor.front_balcony_temperature:
+sensor.temperatura_balcone_temperature:
   friendly_name: 'Temperatura Balcone'
-sensor.front_balcony_humidity:
+sensor.temperatura_balcone_humidity:
   friendly_name: 'Umidità Balcone'
-sensor.front_balcony_battery:
+sensor.temperatura_balcone_battery:
   friendly_name: 'Temperatura Balcone: Batteria'
-sensor.front_balcony_linkquality:
+sensor.temperatura_balcone_linkquality:
   friendly_name: 'Temperatura Balcone: Link'
+sensor.temperatura_balcone_voltage:
+  friendly_name: 'Temperatura Balcone: Tensione'
 
 # Rear Balcony Temperature Sensor
-sensor.rear_balcony_temperature:
+sensor.temperatura_veranda_temperature:
   friendly_name: 'Temperatura Veranda'
-sensor.rear_balcony_humidity:
+sensor.temperatura_veranda_humidity:
   friendly_name: 'Umidità Veranda'
-sensor.rear_balcony_battery:
+sensor.temperatura_veranda_battery:
   friendly_name: 'Temperatura Veranda: Batteria'
-sensor.rear_balcony_linkquality:
+sensor.temperatura_veranda_linkquality:
   friendly_name: 'Temperatura Veranda: Link'
+sensor.temperatura_veranda_voltage:
+  friendly_name: 'Spare Door: Tensione'
 
 # Wireless Switch
 sensor.wireless_switch_click:
   friendly_name: 'Wireless Switch'
+sensor.wireless_switch_action:
+  friendly_name: 'Wireless Switch: Azione'
 sensor.wireless_switch_battery:
   friendly_name: 'Wireless Switch: Batteria'
 sensor.wireless_switch_linkquality:
   friendly_name: 'Wireless Switch: Link'
+sensor.wireless_switch_voltage:
+  friendly_name: 'Wireless Switch: Tensione'

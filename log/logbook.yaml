@@ -31,18 +31,23 @@ exclude:
     - sensor.consumo_energetico_giornaliero
     - sensor.consumo_energetico_mensile
     # Zigbee2mqtt
-    - sensor.main_door_battery
-    - sensor.main_door_linkquality
+    - sensor.porta_casa_battery
+    - sensor.porta_casa_linkquality
+    - sensor.porta_casa_voltage
     - binary_sensor.spare_door_contact
     - sensor.spare_door_battery
     - sensor.spare_door_linkquality
+    - sensor.spare_door_voltage
     - sensor.wireless_switch_battery
     - sensor.wireless_switch_click
     - sensor.wireless_switch_linkquality
-    - sensor.front_balcony_battery
-    - sensor.front_balcony_linkquality
-    - sensor.rear_balcony_battery
-    - sensor.rear_balcony_linkquality
+    - sensor.wireless_switch_voltage
+    - sensor.temperatura_balcone_battery
+    - sensor.temperatura_balcone_linkquality
+    - sensor.temperatura_balcone_voltage
+    - sensor.temperatura_veranda_battery
+    - sensor.temperatura_veranda_linkquality
+    - sensor.temperatura_veranda_voltage
     # pfSense
     #- sensor.freebsd_router_kib_s_received
     #- sensor.freebsd_router_kib_s_sent

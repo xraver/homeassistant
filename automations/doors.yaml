@@ -13,7 +13,7 @@
 
   trigger:
     - platform: state
-      entity_id: binary_sensor.main_door_contact
+      entity_id: binary_sensor.porta_casa_contact
       to: 'on'
 
   condition: "{{ (state_attr('sun.sun', 'elevation') | int) < 1 }}"

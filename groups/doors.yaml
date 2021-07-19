@@ -6,4 +6,4 @@ doors:
   name: Porte
   icon: mdi:door
   entities:
-    - binary_sensor.main_door_contact
+    - binary_sensor.porta_casa_contact
