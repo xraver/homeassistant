@@ -13,6 +13,6 @@
     service: script.notify_all
     data_template:
       title: "Home Assistant - Allarme Consumo Energetico"
-      message: "Consumo energetico elevato ({{ states.ssensor.shelly_em_channel_1_power.state }})."
+      message: "Consumo energetico elevato ({{ states.sensor.shelly_em_channel_1_power.state }})."
       enable_persistent: 0
       volume_level: 0.4
