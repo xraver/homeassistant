@@ -1360,6 +1360,433 @@
                     "title": "Allarmi"
                 },
                 {
+                    "title": "Temperature",
+                    "path": "temperature",
+                    "icon": "mdi:home-thermometer",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:button-card",
+                                    "name": "Temperatura Interna",
+                                    "label": "Shelly",
+                                    "layout": "name_state",
+                                    "show_state": false,
+                                    "show_name": true,
+                                    "show_label": false,
+                                    "show_icon": false,
+                                    "show_entity_picture": false,
+                                    "styles": {
+                                        "card": [
+                                            {
+                                                "background-color": "transparent"
+                                            },
+                                            {
+                                                "box-shadow": "0px 0px 0px 0px."
+                                            }
+                                        ],
+                                        "entity_picture": [
+                                            {
+                                                "width": "15%"
+                                            }
+                                        ]
+                                    },
+                                    "view_layout": {
+                                        "grid-area": "header"
+                                    }
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.valve_cucina_temperature",
+                                                    "name": "Cucina"
+                                                }
+                                            ],
+                                            "name": "Cucina",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 16,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 19,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 23,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        },
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.valve_sala_temperature",
+                                                    "name": "Sala"
+                                                }
+                                            ],
+                                            "name": "Sala",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 16,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 19,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 23,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.valve_bagno_temperature",
+                                                    "name": "Bagno"
+                                                }
+                                            ],
+                                            "name": "Bagno",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 16,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 19,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 23,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        },
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.valve_studio_temperature",
+                                                    "name": "Studio"
+                                                }
+                                            ],
+                                            "name": "Studio",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 16,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 19,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 23,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.valve_camera_da_letto_temperature",
+                                                    "name": "Camera"
+                                                }
+                                            ],
+                                            "name": "Camera",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 3,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 16,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 19,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 23,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:button-card",
+                                    "name": "Temperatura Esterna",
+                                    "label": "Shelly",
+                                    "layout": "name_state",
+                                    "show_state": false,
+                                    "show_name": true,
+                                    "show_label": false,
+                                    "show_icon": false,
+                                    "show_entity_picture": false,
+                                    "styles": {
+                                        "card": [
+                                            {
+                                                "background-color": "transparent"
+                                            },
+                                            {
+                                                "box-shadow": "0px 0px 0px 0px."
+                                            }
+                                        ],
+                                        "entity_picture": [
+                                            {
+                                                "width": "15%"
+                                            }
+                                        ]
+                                    },
+                                    "view_layout": {
+                                        "grid-area": "header"
+                                    }
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.temperatura_balcone_temperature",
+                                                    "name": "Balcone"
+                                                }
+                                            ],
+                                            "name": "Balcone",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 16,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 19,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 23,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        },
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.temperatura_veranda_temperature",
+                                                    "name": "Veranda"
+                                                }
+                                            ],
+                                            "name": "Veranda",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 16,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 19,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 23,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "custom:button-card",
+                                    "name": "Umidit\u00e0 Esterna",
+                                    "label": "Shelly",
+                                    "layout": "name_state",
+                                    "show_state": false,
+                                    "show_name": true,
+                                    "show_label": false,
+                                    "show_icon": false,
+                                    "show_entity_picture": false,
+                                    "styles": {
+                                        "card": [
+                                            {
+                                                "background-color": "transparent"
+                                            },
+                                            {
+                                                "box-shadow": "0px 0px 0px 0px."
+                                            }
+                                        ],
+                                        "entity_picture": [
+                                            {
+                                                "width": "15%"
+                                            }
+                                        ]
+                                    },
+                                    "view_layout": {
+                                        "grid-area": "header"
+                                    }
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.temperatura_balcone_humidity",
+                                                    "name": "Balcone"
+                                                }
+                                            ],
+                                            "name": "Balcone",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 40,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 60,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 80,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        },
+                                        {
+                                            "type": "custom:mini-graph-card",
+                                            "entities": [
+                                                {
+                                                    "entity": "sensor.temperatura_veranda_humidity",
+                                                    "name": "Veranda"
+                                                }
+                                            ],
+                                            "name": "Veranda",
+                                            "hours_to_show": 24,
+                                            "points_per_hour": 1,
+                                            "show": {
+                                                "name": true,
+                                                "state": true
+                                            },
+                                            "line_width": 5,
+                                            "color_thresholds": [
+                                                {
+                                                    "value": 40,
+                                                    "color": "#4a90e2"
+                                                },
+                                                {
+                                                    "value": 60,
+                                                    "color": "#ffbd00"
+                                                },
+                                                {
+                                                    "value": 80,
+                                                    "color": "#ee7c3a"
+                                                }
+                                            ],
+                                            "hour24": true,
+                                            "decimals": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "icon": "mdi:weather-sunny",
                     "id": "meteo",
                     "title": "Meteo",
@@ -1376,264 +1803,6 @@
                         {
                             "entity": "weather.meteo_morgex",
                             "type": "weather-forecast"
-                        }
-                    ]
-                },
-                {
-                    "title": "test",
-                    "path": "test",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.valve_cucina_temperature",
-                                            "name": "Cucina"
-                                        }
-                                    ],
-                                    "name": "Cucina",
-                                    "hours_to_show": 24,
-                                    "points_per_hour": 1,
-                                    "show": {
-                                        "name": true,
-                                        "state": true
-                                    },
-                                    "line_width": 5,
-                                    "color_thresholds": [
-                                        {
-                                            "value": 16,
-                                            "color": "#4a90e2"
-                                        },
-                                        {
-                                            "value": 19,
-                                            "color": "#ffbd00"
-                                        },
-                                        {
-                                            "value": 23,
-                                            "color": "#ee7c3a"
-                                        }
-                                    ],
-                                    "hour24": true,
-                                    "decimals": 0
-                                },
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.valve_sala_temperature",
-                                            "name": "Sala"
-                                        }
-                                    ],
-                                    "name": "Sala",
-                                    "hours_to_show": 24,
-                                    "points_per_hour": 1,
-                                    "show": {
-                                        "name": true,
-                                        "state": true
-                                    },
-                                    "line_width": 5,
-                                    "color_thresholds": [
-                                        {
-                                            "value": 16,
-                                            "color": "#4a90e2"
-                                        },
-                                        {
-                                            "value": 19,
-                                            "color": "#ffbd00"
-                                        },
-                                        {
-                                            "value": 23,
-                                            "color": "#ee7c3a"
-                                        }
-                                    ],
-                                    "hour24": true,
-                                    "decimals": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.valve_bagno_temperature",
-                                            "name": "Bagno"
-                                        }
-                                    ],
-                                    "name": "Bagno",
-                                    "hours_to_show": 24,
-                                    "points_per_hour": 1,
-                                    "show": {
-                                        "name": true,
-                                        "state": true
-                                    },
-                                    "line_width": 5,
-                                    "color_thresholds": [
-                                        {
-                                            "value": 16,
-                                            "color": "#4a90e2"
-                                        },
-                                        {
-                                            "value": 19,
-                                            "color": "#ffbd00"
-                                        },
-                                        {
-                                            "value": 23,
-                                            "color": "#ee7c3a"
-                                        }
-                                    ],
-                                    "hour24": true,
-                                    "decimals": 0
-                                },
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.valve_studio_temperature",
-                                            "name": "Studio"
-                                        }
-                                    ],
-                                    "name": "Studio",
-                                    "hours_to_show": 24,
-                                    "points_per_hour": 1,
-                                    "show": {
-                                        "name": true,
-                                        "state": true
-                                    },
-                                    "line_width": 5,
-                                    "color_thresholds": [
-                                        {
-                                            "value": 16,
-                                            "color": "#4a90e2"
-                                        },
-                                        {
-                                            "value": 19,
-                                            "color": "#ffbd00"
-                                        },
-                                        {
-                                            "value": 23,
-                                            "color": "#ee7c3a"
-                                        }
-                                    ],
-                                    "hour24": true,
-                                    "decimals": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.valve_camera_da_letto_temperature",
-                                            "name": "Camera"
-                                        }
-                                    ],
-                                    "name": "Camera",
-                                    "hours_to_show": 24,
-                                    "points_per_hour": 1,
-                                    "show": {
-                                        "name": true,
-                                        "state": true
-                                    },
-                                    "line_width": 3,
-                                    "color_thresholds": [
-                                        {
-                                            "value": 16,
-                                            "color": "#4a90e2"
-                                        },
-                                        {
-                                            "value": 19,
-                                            "color": "#ffbd00"
-                                        },
-                                        {
-                                            "value": 23,
-                                            "color": "#ee7c3a"
-                                        }
-                                    ],
-                                    "hour24": true,
-                                    "decimals": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.temperatura_balcone_temperature",
-                                            "name": "Balcone"
-                                        }
-                                    ],
-                                    "name": "Balcone",
-                                    "hours_to_show": 24,
-                                    "points_per_hour": 1,
-                                    "show": {
-                                        "name": true,
-                                        "state": true
-                                    },
-                                    "line_width": 5,
-                                    "color_thresholds": [
-                                        {
-                                            "value": 16,
-                                            "color": "#4a90e2"
-                                        },
-                                        {
-                                            "value": 19,
-                                            "color": "#ffbd00"
-                                        },
-                                        {
-                                            "value": 23,
-                                            "color": "#ee7c3a"
-                                        }
-                                    ],
-                                    "hour24": true,
-                                    "decimals": 0
-                                },
-                                {
-                                    "type": "custom:mini-graph-card",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.temperatura_veranda_temperature",
-                                            "name": "Veranda"
-                                        }
-                                    ],
-                                    "name": "Veranda",
-                                    "hours_to_show": 24,
-                                    "points_per_hour": 1,
-                                    "show": {
-                                        "name": true,
-                                        "state": true
-                                    },
-                                    "line_width": 5,
-                                    "color_thresholds": [
-                                        {
-                                            "value": 16,
-                                            "color": "#4a90e2"
-                                        },
-                                        {
-                                            "value": 19,
-                                            "color": "#ffbd00"
-                                        },
-                                        {
-                                            "value": 23,
-                                            "color": "#ee7c3a"
-                                        }
-                                    ],
-                                    "hour24": true,
-                                    "decimals": 0
-                                }
-                            ]
                         }
                     ]
                 }
