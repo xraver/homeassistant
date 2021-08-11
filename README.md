@@ -66,6 +66,7 @@ All files are tested using the latest stable version of Home Assistant using [Tr
 * ESP8266 (ESP01 + NodeMCU)
 * Scene
 * Xiaomi Switch + Shelly Plug S
+* [Media Source](https://www.home-assistant.io/integrations/media_source) from NAS
 
 ## License
 [MIT](http://opensource.org/licenses/MIT) © Giorgio Ravera
