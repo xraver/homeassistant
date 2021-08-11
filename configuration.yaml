@@ -134,6 +134,9 @@ utility_meter: !include_dir_merge_named utility_meter/
 # Discovery Protocols
 ######################################################################
 
+# Discover DHCP requests for supported devices and services.
+dhcp:
+
 # Discover some devices automatically
 discovery:
 
