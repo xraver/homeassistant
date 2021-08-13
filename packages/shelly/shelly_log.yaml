@@ -80,12 +80,12 @@ history:
       - sensor.luce_sala_rssi
       - sensor.luce_sala_uptime
       # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
-      - sensor.luci_bagno_channel_1_energy
-      - binary_sensor.luci_bagno_channel_1_overpowering
-      - sensor.luci_bagno_channel_1_power
-      - sensor.luci_bagno_channel_2_energy
-      - binary_sensor.luci_bagno_channel_2_overpowering
-      - sensor.luci_bagno_channel_2_power
+      - sensor.luce_bagno_energy
+      - binary_sensor.luce_bagno_overpowering
+      - sensor.luce_bagno_power
+      - sensor.luce_specchio_energy
+      - binary_sensor.luce_specchio_overpowering
+      - sensor.luce_specchio_power
       - binary_sensor.luci_bagno_cloud
       - sensor.luci_bagno_device_temperature
       - binary_sensor.luci_bagno_overheating
@@ -117,7 +117,7 @@ history:
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
-      - sensor.shelly_em_channel_1_energy
+      #- sensor.shelly_em_channel_1_energy
       - sensor.shelly_em_channel_1_energy_returned
       - sensor.shelly_em_channel_1_voltage
       - sensor.shelly_em_channel_2_power
@@ -217,12 +217,12 @@ logbook:
       - sensor.luce_sala_rssi
       - sensor.luce_sala_uptime
       # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
-      - sensor.luci_bagno_channel_1_energy
-      - binary_sensor.luci_bagno_channel_1_overpowering
-      - sensor.luci_bagno_channel_1_power
-      - sensor.luci_bagno_channel_2_energy
-      - binary_sensor.luci_bagno_channel_2_overpowering
-      - sensor.luci_bagno_channel_2_power
+      - sensor.luce_bagno_energy
+      - binary_sensor.luce_bagno_overpowering
+      - sensor.luce_bagno_power
+      - sensor.luce_specchio_energy
+      - binary_sensor.luce_specchio_overpowering
+      - sensor.luce_specchio_power
       - binary_sensor.luci_bagno_cloud
       - sensor.luci_bagno_device_temperature
       - binary_sensor.luci_bagno_overheating
@@ -254,7 +254,7 @@ logbook:
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
-      - sensor.shelly_em_channel_1_energy
+      #- sensor.shelly_em_channel_1_energy
       - sensor.shelly_em_channel_1_energy_returned
       - sensor.shelly_em_channel_1_voltage
       - sensor.shelly_em_channel_2_power
@@ -354,12 +354,12 @@ recorder:
       - sensor.luce_sala_rssi
       - sensor.luce_sala_uptime
       # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
-      - sensor.luci_bagno_channel_1_energy
-      - binary_sensor.luci_bagno_channel_1_overpowering
-      - sensor.luci_bagno_channel_1_power
-      - sensor.luci_bagno_channel_2_energy
-      - binary_sensor.luci_bagno_channel_2_overpowering
-      - sensor.luci_bagno_channel_2_power
+      - sensor.luce_bagno_energy
+      - binary_sensor.luce_bagno_overpowering
+      - sensor.luce_bagno_power
+      - sensor.luce_specchio_energy
+      - binary_sensor.luce_specchio_overpowering
+      - sensor.luce_specchio_power
       - binary_sensor.luci_bagno_cloud
       - sensor.luci_bagno_device_temperature
       - binary_sensor.luci_bagno_overheating
@@ -391,7 +391,7 @@ recorder:
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
-      - sensor.shelly_em_channel_1_energy
+      #- sensor.shelly_em_channel_1_energy
       - sensor.shelly_em_channel_1_energy_returned
       - sensor.shelly_em_channel_1_voltage
       - sensor.shelly_em_channel_2_power
