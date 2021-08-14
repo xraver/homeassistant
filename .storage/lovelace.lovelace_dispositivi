@@ -141,15 +141,15 @@
                                     "sort_by_level": "desc",
                                     "entities": [
                                         {
-                                            "entity": "sensor.main_door_battery",
+                                            "entity": "sensor.porta_casa_battery",
                                             "name": "Porta Casa"
                                         },
                                         {
-                                            "entity": "sensor.front_balcony_battery",
+                                            "entity": "sensor.temperatura_balcone_battery",
                                             "name": "Temperatura Balcone"
                                         },
                                         {
-                                            "entity": "sensor.rear_balcony_battery",
+                                            "entity": "sensor.temperatura_veranda_battery",
                                             "name": "Temperatura Veranda"
                                         },
                                         {
@@ -259,6 +259,115 @@
                                     "name": "Camera"
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Shelly",
+                    "type": "sidebar",
+                    "layout": {
+                        "grid-template-columns": "auto auto auto",
+                        "grid-template-rows": "auto",
+                        "grid-template-areas": "\"header header header\"\n\"main1 main2 main3\"\n\"footer footer footer\"\n",
+                        "mediaquery": {
+                            "(max-width: 600px)": {
+                                "grid-template-columns": "100%",
+                                "grid-template-areas": "\"header\"\n\"main1\"\n\"main2\"\n\"main3\"\n\"footer\"\n"
+                            },
+                            "(max-width: 800px)": {
+                                "grid-template-columns": "50% 50%",
+                                "grid-template-areas": "\"header header\"\n\"main1 main1\"\n\"main2 main3\"\n\"footer footer\"\n"
+                            }
+                        }
+                    },
+                    "icon": "mdi:alpha-s-box",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:button-card",
+                            "name": "Shelly",
+                            "label": "Shelly",
+                            "layout": "name_state",
+                            "show_state": false,
+                            "show_name": false,
+                            "show_label": false,
+                            "show_icon": false,
+                            "show_entity_picture": true,
+                            "entity_picture": "/local/images/devices/shelly_logo_black.png",
+                            "styles": {
+                                "card": [
+                                    {
+                                        "background-color": "transparent"
+                                    },
+                                    {
+                                        "box-shadow": "0px 0px 0px 0px."
+                                    }
+                                ],
+                                "entity_picture": [
+                                    {
+                                        "width": "15%"
+                                    }
+                                ]
+                            },
+                            "view_layout": {
+                                "grid-area": "header"
+                            }
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "script.shelly_upgrade",
+                                "script.shelly_reboot"
+                            ],
+                            "title": "Operazioni sui dispositivi",
+                            "view_layout": {
+                                "grid-area": "main1"
+                            }
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.shelly1"
+                                },
+                                {
+                                    "entity": "sensor.shelly2"
+                                },
+                                {
+                                    "entity": "sensor.shelly3"
+                                },
+                                {
+                                    "entity": "sensor.shelly4"
+                                },
+                                {
+                                    "entity": "sensor.shelly5"
+                                },
+                                {
+                                    "entity": "sensor.shelly6"
+                                },
+                                {
+                                    "entity": "sensor.shelly7"
+                                },
+                                {
+                                    "entity": "sensor.shelly8"
+                                },
+                                {
+                                    "entity": "sensor.shelly9"
+                                },
+                                {
+                                    "entity": "sensor.shelly10"
+                                },
+                                {
+                                    "entity": "sensor.shelly11"
+                                },
+                                {
+                                    "entity": "sensor.shellyem"
+                                }
+                            ],
+                            "title": "Aggiornamenti Disponibili",
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
                         }
                     ]
                 }

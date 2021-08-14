@@ -68,15 +68,6 @@
                                     "show_header_toggle": false,
                                     "title": "Controlli",
                                     "type": "entities"
-                                },
-                                {
-                                    "entities": [
-                                        "script.shelly_upgrade",
-                                        "script.shelly_reboot"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "title": "Operazione sui Dispositivi",
-                                    "type": "entities"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -107,6 +98,9 @@
                     "title": "Configurazione"
                 },
                 {
+                    "icon": "mdi:lan",
+                    "title": "Dispositivi di Rete",
+                    "type": "sidebar",
                     "badges": [],
                     "cards": [
                         {
@@ -115,13 +109,16 @@
                                 "sensor.ip_2"
                             ],
                             "title": "External IP",
-                            "type": "glance"
+                            "type": "entities",
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
                         },
                         {
                             "type": "vertical-stack",
                             "cards": [
                                 {
-                                    "type": "glance",
+                                    "type": "entities",
                                     "entities": [
                                         {
                                             "entity": "sensor.speedtest_ping"
@@ -146,7 +143,10 @@
                                         "service": "speedtestdotnet.speedtest"
                                     }
                                 }
-                            ]
+                            ],
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
                         },
                         {
                             "type": "history-graph",
@@ -158,13 +158,11 @@
                                     "entity": "sensor.freebsd_router_kib_s_sent"
                                 }
                             ],
-                            "title": "pfSense",
+                            "title": "pfSense - Traffico di Rete",
                             "refresh_interval": 0,
-                            "hours_to_show": 2
+                            "hours_to_show": 6
                         }
-                    ],
-                    "icon": "mdi:lan",
-                    "title": "Dispositivi di Rete"
+                    ]
                 },
                 {
                     "badges": [],
@@ -273,15 +271,15 @@
                             "sort_by_level": "desc",
                             "entities": [
                                 {
-                                    "entity": "sensor.main_door_battery",
+                                    "entity": "sensor.porta_casa_battery",
                                     "name": "Porta Casa"
                                 },
                                 {
-                                    "entity": "sensor.front_balcony_battery",
+                                    "entity": "sensor.temperatura_balcone_battery",
                                     "name": "Temperatura Balcone"
                                 },
                                 {
-                                    "entity": "sensor.rear_balcony_battery",
+                                    "entity": "sensor.temperatura_veranda_battery",
                                     "name": "Temperatura Veranda"
                                 },
                                 {

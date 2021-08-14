@@ -1292,6 +1292,7 @@
                     "icon": "mdi:flash",
                     "id": "power",
                     "title": "Monitoraggio Energetico",
+                    "type": "sidebar",
                     "badges": [
                         {
                             "entity": "sensor.shelly_em_channel_1_power"
@@ -1305,14 +1306,6 @@
                     ],
                     "cards": [
                         {
-                            "detail": 2,
-                            "entity": "sensor.shelly_em_channel_1_power",
-                            "graph": "line",
-                            "name": "Consumo Energetico",
-                            "type": "sensor",
-                            "unit": "W"
-                        },
-                        {
                             "entity": "sensor.shelly_em_channel_1_power",
                             "max": 4000,
                             "min": 0,
@@ -1323,7 +1316,45 @@
                                 "yellow": 2000
                             },
                             "type": "gauge",
-                            "unit": "W"
+                            "unit": "W",
+                            "needle": true,
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
+                        },
+                        {
+                            "type": "gauge",
+                            "entity": "sensor.consumo_energetico_giornaliero",
+                            "min": 0,
+                            "name": "Consumo Giornaliero",
+                            "unit": "kWh",
+                            "severity": {
+                                "green": 0,
+                                "yellow": 3,
+                                "red": 5
+                            },
+                            "needle": true,
+                            "max": 6,
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
+                        },
+                        {
+                            "type": "gauge",
+                            "entity": "sensor.consumo_energetico_mensile",
+                            "min": 0,
+                            "max": 150,
+                            "name": "Consumo Mensile",
+                            "unit": "kWh",
+                            "needle": true,
+                            "severity": {
+                                "green": 0,
+                                "yellow": 100,
+                                "red": 120
+                            },
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
                         },
                         {
                             "entities": [
@@ -1335,7 +1366,21 @@
                                 }
                             ],
                             "title": "Consumi",
-                            "type": "entities"
+                            "type": "entities",
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "sensor.shelly_em_channel_1_power"
+                                }
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Consumo Eenergetico"
                         }
                     ]
                 },
@@ -1365,6 +1410,49 @@
                     "icon": "mdi:home-thermometer",
                     "badges": [],
                     "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "custom:button-card",
+                                    "name": "Meteo",
+                                    "label": "Shelly",
+                                    "layout": "name_state",
+                                    "show_state": false,
+                                    "show_name": true,
+                                    "show_label": false,
+                                    "show_icon": false,
+                                    "show_entity_picture": false,
+                                    "styles": {
+                                        "card": [
+                                            {
+                                                "background-color": "transparent"
+                                            },
+                                            {
+                                                "box-shadow": "0px 0px 0px 0px."
+                                            }
+                                        ],
+                                        "entity_picture": [
+                                            {
+                                                "width": "15%"
+                                            }
+                                        ]
+                                    },
+                                    "view_layout": {
+                                        "grid-area": "header"
+                                    }
+                                },
+                                {
+                                    "type": "weather-forecast",
+                                    "entity": "weather.meteo_savona",
+                                    "show_forecast": true
+                                },
+                                {
+                                    "type": "weather-forecast",
+                                    "entity": "weather.meteo_morgex"
+                                }
+                            ]
+                        },
                         {
                             "type": "vertical-stack",
                             "cards": [
