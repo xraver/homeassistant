@@ -199,6 +199,16 @@ homeassistant:
     sensor.luce_balcone_uptime:
       friendly_name: Luce Balcone - Uptime
 
+    # Shelly Bulb (shellybulb_bc8610)
+    binary_sensor.luce_divano_cloud:
+      friendly_name: Luce Divano - Connessione Cloud
+    binary_sensor.luce_divano_firmware_update:
+      friendly_name: Luce Divano - Aggiornamento Firmware
+    sensor.luce_divano_rssi:
+      friendly_name: Luce Divano - Potenza Segnale
+    sensor.luce_divano_uptime:
+      friendly_name: Luce Divano - Uptime
+
     # Shelly EM (shellyem_b9e1a0)
     switch.shelly_em:
       friendly_name: Shelly EM - Pulsante
@@ -228,13 +238,3 @@ homeassistant:
       friendly_name: Shelly EM - Potenza Segnale
     sensor.shelly_em_uptime:
       friendly_name: Shelly EM - Uptime
-
-    # Shelly Bulb (shellybulb_bc8610)
-    binary_sensor.luce_divano_cloud:
-      friendly_name: Luce Divano - Connessione Cloud
-    binary_sensor.luce_divano_firmware_update:
-      friendly_name: Luce Divano - Aggiornamento Firmware
-    sensor.luce_divano_rssi:
-      friendly_name: Luce Divano - Potenza Segnale
-    sensor.luce_divano_uptime:
-      friendly_name: Luce Divano - Uptime
