@@ -114,6 +114,11 @@ history:
       - binary_sensor.luce_balcone_firmware_update
       - sensor.luce_balcone_rssi
       - sensor.luce_balcone_uptime
+      # Shelly Bulb (shellybulb_bc8610)
+      - binary_sensor.luce_divano_cloud
+      - binary_sensor.luce_divano_firmware_update
+      - sensor.luce_divano_rssi
+      - sensor.luce_divano_uptime
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
@@ -129,11 +134,6 @@ history:
       - binary_sensor.shelly_em_firmware_update
       - sensor.shelly_em_rssi
       - sensor.shelly_em_uptime
-      # Shelly Bulb (shellybulb_bc8610)
-      - binary_sensor.luce_divano_cloud
-      - binary_sensor.luce_divano_firmware_update
-      - sensor.luce_divano_rssi
-      - sensor.luce_divano_uptime
 
 ######################################################################
 # Shelly Package - Logbook
@@ -251,6 +251,11 @@ logbook:
       - binary_sensor.luce_balcone_firmware_update
       - sensor.luce_balcone_rssi
       - sensor.luce_balcone_uptime
+      # Shelly Bulb (shellybulb_bc8610)
+      - binary_sensor.luce_divano_cloud
+      - binary_sensor.luce_divano_firmware_update
+      - sensor.luce_divano_rssi
+      - sensor.luce_divano_uptime
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
@@ -266,11 +271,6 @@ logbook:
       - binary_sensor.shelly_em_firmware_update
       - sensor.shelly_em_rssi
       - sensor.shelly_em_uptime
-      # Shelly Bulb (shellybulb_bc8610)
-      - binary_sensor.luce_divano_cloud
-      - binary_sensor.luce_divano_firmware_update
-      - sensor.luce_divano_rssi
-      - sensor.luce_divano_uptime
 
 ######################################################################
 # Shelly Package - Recorder
@@ -388,6 +388,11 @@ recorder:
       - binary_sensor.luce_balcone_firmware_update
       - sensor.luce_balcone_rssi
       - sensor.luce_balcone_uptime
+      # Shelly Bulb (shellybulb_bc8610)
+      - binary_sensor.luce_divano_cloud
+      - binary_sensor.luce_divano_firmware_update
+      - sensor.luce_divano_rssi
+      - sensor.luce_divano_uptime
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
@@ -403,8 +408,3 @@ recorder:
       - binary_sensor.shelly_em_firmware_update
       - sensor.shelly_em_rssi
       - sensor.shelly_em_uptime
-      # Shelly Bulb (shellybulb_bc8610)
-      - binary_sensor.luce_divano_cloud
-      - binary_sensor.luce_divano_firmware_update
-      - sensor.luce_divano_rssi
-      - sensor.luce_divano_uptime
