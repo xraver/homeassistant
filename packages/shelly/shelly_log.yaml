@@ -122,7 +122,8 @@ history:
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
-      #- sensor.shelly_em_channel_1_energy
+      - sensor.shelly_em_channel_1_energy
+      - sensor.shelly_em_channel_1_energy_cost
       - sensor.shelly_em_channel_1_energy_returned
       - sensor.shelly_em_channel_1_voltage
       - sensor.shelly_em_channel_2_power
@@ -259,7 +260,8 @@ logbook:
       # Shelly EM (shellyem_b9e1a0)
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
-      #- sensor.shelly_em_channel_1_energy
+      - sensor.shelly_em_channel_1_energy
+      - sensor.shelly_em_channel_1_energy_cost
       - sensor.shelly_em_channel_1_energy_returned
       - sensor.shelly_em_channel_1_voltage
       - sensor.shelly_em_channel_2_power
@@ -397,6 +399,7 @@ recorder:
       - switch.shelly_em
       #- sensor.shelly_em_channel_1_power
       #- sensor.shelly_em_channel_1_energy
+      #- sensor.shelly_em_channel_1_energy_cost
       - sensor.shelly_em_channel_1_energy_returned
       - sensor.shelly_em_channel_1_voltage
       - sensor.shelly_em_channel_2_power
