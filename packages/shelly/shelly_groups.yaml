@@ -7,17 +7,16 @@ group:
     name: Shelly Devices
     icon: mdi:alpha-s-box
     entities:
-      - sensor.shelly1
-      - sensor.shelly2
-      - sensor.shelly3
-      - sensor.shelly4
-      - sensor.shelly5
-      - sensor.shelly6
-      - sensor.shelly7
-      - sensor.shelly8
-      - sensor.shelly9
-      - sensor.shelly10
-      - sensor.shelly11
-      #- sensor.shellybulb
-      - sensor.shellyem
-      #- sensor.shellyplugs
+      - binary_sensor.tapparella_cucina_firmware_update
+      - binary_sensor.tapparella_sala_firmware_update
+      - binary_sensor.tapparella_studio_firmware_update
+      - binary_sensor.tapparella_camera_firmware_update
+      - binary_sensor.luce_corridoio_firmware_update
+      - binary_sensor.luce_cucina_firmware_update
+      - binary_sensor.luce_sala_firmware_update
+      - binary_sensor.luci_bagno_firmware_update
+      - binary_sensor.luce_studio_firmware_update
+      - binary_sensor.luce_camera_firmware_update
+      - binary_sensor.luce_balcone_firmware_update
+      #- binary_sensor.luce_divano_firmware_update
+      - binary_sensor.shelly_em_firmware_update

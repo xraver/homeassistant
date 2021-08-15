@@ -264,7 +264,6 @@
                 },
                 {
                     "title": "Shelly",
-                    "type": "sidebar",
                     "layout": {
                         "grid-template-columns": "auto auto auto",
                         "grid-template-rows": "auto",
@@ -328,46 +327,82 @@
                             "type": "entities",
                             "entities": [
                                 {
-                                    "entity": "sensor.shelly1"
+                                    "entity": "binary_sensor.tapparella_sala_overheating"
                                 },
                                 {
-                                    "entity": "sensor.shelly2"
+                                    "entity": "binary_sensor.luce_sala_overheating"
                                 },
                                 {
-                                    "entity": "sensor.shelly3"
+                                    "entity": "binary_sensor.luci_bagno_overheating"
                                 },
                                 {
-                                    "entity": "sensor.shelly4"
-                                },
-                                {
-                                    "entity": "sensor.shelly5"
-                                },
-                                {
-                                    "entity": "sensor.shelly6"
-                                },
-                                {
-                                    "entity": "sensor.shelly7"
-                                },
-                                {
-                                    "entity": "sensor.shelly8"
-                                },
-                                {
-                                    "entity": "sensor.shelly9"
-                                },
-                                {
-                                    "entity": "sensor.shelly10"
-                                },
-                                {
-                                    "entity": "sensor.shelly11"
-                                },
-                                {
-                                    "entity": "sensor.shellyem"
+                                    "entity": "binary_sensor.luce_camera_overheating"
                                 }
                             ],
-                            "title": "Aggiornamenti Disponibili",
-                            "view_layout": {
-                                "position": "sidebar"
-                            }
+                            "title": "Surriscaldamento"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.tapparella_cucina_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.tapparella_sala_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.tapparella_studio_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.tapparella_camera_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_corridoio_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_cucina_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_sala_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.luci_bagno_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_studio_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_camera_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_balcone_firmware_update"
+                                },
+                                {
+                                    "entity": "binary_sensor.shelly_em_firmware_update"
+                                }
+                            ],
+                            "title": "Disponibilit\u00e0 Aggiornamenti"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.luce_sala_overpowering"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_bagno_overpowering"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_specchio_overpowering"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_camera_overpowering"
+                                },
+                                {
+                                    "entity": "binary_sensor.shelly_em_overpowering"
+                                }
+                            ],
+                            "title": "Sovraccarico"
                         }
                     ]
                 }
