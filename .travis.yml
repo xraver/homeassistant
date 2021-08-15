@@ -1,6 +1,6 @@
 language: python
 
-python: "3.7"
+python: "3.8"
 
 before_install:
 
@@ -10,6 +10,6 @@ install:
   - pip3 install python-dateutil
   - cp .secrets_travis.yaml secrets.yaml
   - cp credentials/.google_travis.json credentials/google.json
-  
+
 script:
   - hass -c . --script check_config --info all
