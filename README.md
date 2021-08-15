@@ -34,6 +34,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * Create Users/People
 * Configure the following integrations using UI:
   * Certificate Expiry
+  * CO2 Signal
   * Google Calendar
   * Google Cast
   * HACS

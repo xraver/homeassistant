@@ -66,6 +66,9 @@ exclude:
     - sensor.canon_tr8500_series_cyan
     - sensor.canon_tr8500_series_magenta
     - sensor.canon_tr8500_series_yellow
+    # CO2
+    - sensor.co2_intensity
+    #- sensor.grid_fossil_fuel_percentage
   domains:
     - automation
     - calendar
