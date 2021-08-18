@@ -14,3 +14,5 @@ homeassistant:
       friendly_name: Valvola Studio
     climate.netatmo_camera_da_letto:
       friendly_name: Valvola Camera
+    select.netatmo_casa_ravera_testa:
+      friendly_name: Programmazione Netatmo

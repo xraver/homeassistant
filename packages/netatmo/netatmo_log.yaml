@@ -15,6 +15,7 @@ history:
     - sensor.valve_studio_state
     - sensor.valve_bagno_state
     - sensor.valve_camera_da_letto_state
+    - select.netatmo_casa_ravera_testa
 
 ######################################################################
 # Netatmo Package - Logbook
@@ -33,6 +34,7 @@ logbook:
     - sensor.valve_studio_state
     - sensor.valve_bagno_state
     - sensor.valve_camera_da_letto_state
+    - select.netatmo_casa_ravera_testa
 
 ######################################################################
 # Netatmo Package - Recorder
@@ -51,3 +53,4 @@ recorder:
     - sensor.valve_studio_state
     - sensor.valve_bagno_state
     - sensor.valve_camera_da_letto_state
+    - select.netatmo_casa_ravera_testa
