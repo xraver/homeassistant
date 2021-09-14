@@ -7,7 +7,7 @@ automation:
   # Alarm Door
   #
   # Actions:
-  # - script.notify_all
+  # - script.start_alarm
   ######################################################################
   - alias: "Allarme Porta Casa"
 
@@ -15,7 +15,7 @@ automation:
       - platform: state
         entity_id: group.doors
         to: 'on'
-      
+
     condition:
       - condition: state
         entity_id: binary_sensor.guard_mode
@@ -26,4 +26,24 @@ automation:
         data_template:
           entity_id: input_boolean.door_alarm
           message: "È stata rilevata una presenza non autorizzata."
+          level: 1
+
+  ######################################################################
+  # Alarm Car
+  #
+  # Actions:
+  # - script.start_alarm
+  ######################################################################
+  - alias: "Allarmi Auto"
+
+    trigger:
+      - platform: state
+        entity_id: group.car_alarm
+        to: 'on'
+
+    action:
+      - service: script.start_alarm
+        data_template:
+          entity_id: input_boolean.car_alarm
+          message: "Si è attivato un allarme sull'auto."
           level: 1

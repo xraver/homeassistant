@@ -13,6 +13,11 @@ input_boolean:
     name: Allarme Porta
     icon: mdi:door-open
 
+  # Alarms: Car
+  car_alarm:
+    name: Allarmi Auto
+    icon: mdi:car-emergency
+
 ######################################################################
 # Alarm Package - Types - Group
 ######################################################################
@@ -24,3 +29,4 @@ group:
     entities:
       - input_boolean.generic_alarm
       - input_boolean.door_alarm
+      - input_boolean.car_alarm
