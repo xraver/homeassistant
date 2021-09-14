@@ -4,8 +4,8 @@
 # - title
 # - message
 # - notification_id
-# - disable_telegram
 # - enable_persistent
+# - disable_telegram
 #
 # Operations:
 # - notify.mail
@@ -16,13 +16,70 @@
 
 notify_text:
   alias: Notifiche testuali
+  description: Invia notifiche testuali
   variables:
+    defaultTitle: 'Home Assistant'
+    defaultId: 'generic'
     title: >-
       {# Check Null Input #}
       {% if title | length == 0 %}
-        {% set title = 'Home Assistant' %}
+        {% set title = defaultTitle %}
       {% endif %}
       {{ title }}
+    notification_id: >-
+      {# Check Null Input #}
+      {% if notification_id | length == 0 %}
+        {% set notification_id = defaultId %}
+      {% endif %}
+      {{ notification_id }}
+    enable_persistent: >-
+      {# Check Null Input #}
+      {% if enable_persistent | length == 0 %}
+        {% set enable_persistent = 0 %}
+      {% endif %}
+      {{ enable_persistent }}
+    disable_telegram: >-
+      {# Check Null Input #}
+      {% if disable_telegram | length == 0 %}
+        {% set disable_telegram = 0 %}
+      {% endif %}
+      {{ disable_telegram }}
+
+  fields:
+    title:
+      description: "Titolo della notifica"
+      example: "Home Assistant"
+      selector:
+        text:
+    message:
+      description: "Messaggio da notificare"
+      required: true
+      example: "Testo Messaggio"
+      selector:
+        text:
+    notification_id:
+      description: "Id di notifica"
+      example: "generic"
+      selector:
+        text:
+    enable_persistent:
+      description: "Abilitare o meno la persistenza"
+      example: "0"
+      default: "0"
+      selector:
+        select:
+          options:
+            - "0"
+            - "1"
+    disable_telegram:
+      description: "Disabilitare la notifica su telegram"
+      example: "0"
+      default: "0"
+      selector:
+        select:
+          options:
+            - "0"
+            - "1"
 
   sequence:
     - condition: state
@@ -38,12 +95,8 @@ notify_text:
       - conditions:
           - condition: template
             value_template: >
-              {% if disable_telegram is defined %}
-                {% if disable_telegram | int == 1 %}
-                  false
-                {% else %}
-                  true
-                {% endif %}
+              {% if disable_telegram | int == 1 %}
+                false
               {% else %}
                 true
               {% endif %}
@@ -53,7 +106,7 @@ notify_text:
             data_template:
               title: "{{ title }}"
               message: "{{ message }}"
-    
+
     - service: notify.push
       data_template:
         title: "{{ title }}"
@@ -61,12 +114,8 @@ notify_text:
 
     - condition: template
       value_template: >
-        {% if enable_persistent is defined %}
-          {% if enable_persistent | int == 1 %}
-            true
-          {% else %}
-            false
-          {% endif %}
+        {% if enable_persistent | int == 1 %}
+          true
         {% else %}
           false
         {% endif %}
@@ -75,12 +124,7 @@ notify_text:
       data_template:
        title: "{{ title }}"
        message: "{{ message }}"
-       notification_id: >-
-         {# Check Null Input #}
-         {% if notification_id | length == 0 %}
-           {% set notification_id = 'generic' %}
-         {% endif %}
-         {{ notification_id }}
+       notification_id: "{{ notification_id }}"
 
 ######################################################################
 # Script: Volume Manager
@@ -94,26 +138,48 @@ notify_text:
 
 volume_manager:
   alias: Gestione Volume
+  description: Script di gestione del livello del volume. Si regola in automatico in base a giorno e notte con una soglia massima pre-impostata.
+  variables:
+    defaulMediaPlayer: 'media_player.google_home'
+    defaultVolume: 0.35
+    maxDayVolume: 0.60
+    maxNightVolume: 0.25
+    media_player: >-
+      {# Check Null Input #}
+      {% if media_player | length == 0 %}
+        {% set media_player = defaulMediaPlayer %}
+      {% endif %}
+      {{ media_player }}
+    volume_level: >-
+      {# Check Null Input #}
+      {% if volume_level | length == 0 %}
+        {% set volume_level = defaultVolume %}
+      {% endif %}
+      {{ volume_level }}
+
+  fields:
+    media_player:
+      description: "Destinazione della notifica"
+      example: "media_player.google_home"
+      selector:
+        entity:
+          domain: media_player
+
+    volume_level:
+      description: "Livello del volume"
+      example: "0.35"
+      default: 0.35
+      selector:
+        number:
+          min: 0.0
+          max: 1.0
+          step: 0.05
+
   sequence:
     - service: media_player.volume_set
       data_template:
-        entity_id: >-
-          {# Check Null Input #}
-          {% if media_player | length == 0 %}
-            {% set media_player = 'media_player.google_home' %}
-          {% endif %}
-          {{ media_player }}
+        entity_id: "{{ media_player }}"
         volume_level: >-
-          {# Default Values #}
-          {% set defaultVolume = 0.35 %}
-          {% set maxDayVolume = 0.60 %}
-          {% set maxNightVolume = 0.25 %}
-          
-          {# Check Null Input #}
-          {% if volume_level | string | length == 0 %}
-            {% set volume_level = defaultVolume %}
-          {% endif %}
-          
           {# Day/Night mode #}
           {% if is_state('input_boolean.home_mode_night', 'off') %}
             {% if ((volume_level)|float) > ((maxDayVolume)|float) %}
@@ -132,10 +198,10 @@ volume_manager:
 ######################################################################
 # Script: Voice Notification
 # Input:
+# - message
 # - media_player
 # - volume_level
 # - language
-# - message
 #
 # Operations:
 # - script.notify_volume_manager
@@ -144,17 +210,69 @@ volume_manager:
 
 notify_voice:
   alias: Notifiche vocali
+  description: Invia notifiche vocali
+  variables:
+    defaulMediaPlayer: 'media_player.google_home'
+    defaultVolume: 0.35
+    media_player: >-
+      {# Check Null Input #}
+      {% if media_player | length == 0 %}
+        {% set media_player = defaulMediaPlayer %}
+      {% endif %}
+      {{ media_player }}
+    volume_level: >-
+      {# Check Null Input #}
+      {% if volume_level | length == 0 %}
+        {% set volume_level = defaultVolume %}
+      {% endif %}
+      {{ volume_level }}
+    language: >-
+      {# Check Null Input #}
+      {% if language | length == 0 %}
+        {% set language = 'it' %}
+      {% endif %}
+      {{ language }}
+
+  fields:
+    message:
+      description: "Messaggio da notificare"
+      required: true
+      example: "Testo Messaggio"
+      selector:
+        text:
+    media_player:
+      description: "Destinazione della notifica"
+      example: "media_player.google_home"
+      selector:
+        entity:
+          domain: media_player
+    volume_level:
+      description: "Livello del volume"
+      example: "0.35"
+      default: 0.35
+      selector:
+        number:
+          min: 0.0
+          max: 1.0
+          step: 0.05
+    language:
+      description: "Lingua"
+      example: "it"
+      default: "it"
+      selector:
+        select:
+          options:
+              - "it"
+              - "en"
+              - "es"
+
   sequence:
     - condition: state
       entity_id: input_boolean.speech_notifications
       state: 'on'
-      
-    - wait_template: >-
-        {% if media_player | length == 0 %}
-          {% set media_player = 'media_player.google_home' %}
-        {% endif %}
-        {{ not is_state(media_player, 'playing') }}
-  
+
+    - wait_template: "{{ not is_state(media_player, 'playing') }}"
+
     - service: script.volume_manager
       data_template:
         media_player: "{{ media_player }}"
@@ -162,32 +280,27 @@ notify_voice:
 
     - service: tts.google_say
       data_template:
-        entity_id: >-
-          {# Check Null Input #}
-          {% if media_player | length == 0 %}
-            {% set media_player = 'media_player.google_home' %}
-          {% endif %}
-          {{ media_player }}
-        language: >-
-          {# Check Null Input #}
-          {% if language | length == 0 %}
-            {% set language = 'it' %}
-          {% endif %}
-          {{ language }}
+        entity_id: "{{ media_player }}"
+        language: "{{ language }}"
         message: "{{ message }}"
-        
+
+    - wait_template: "{{ is_state(media_player, 'playing') }}"
+
+    - wait_template: "{{ not is_state(media_player, 'playing') }}"
+
     - service: script.volume_manager
 
 ######################################################################
 # Script: Global Notification (Text+Voice)
 # Inputs:
 # - title
+# - message
 # - media_player
 # - volume_level
 # _ language
-# - message
 # - notification_id
 # - enable_persistent
+# - disable_telegram
 #
 # Operations:
 # - notify_text
@@ -196,6 +309,116 @@ notify_voice:
 
 notify_all:
   alias: Notifiche globali (Testo+Voce)
+  description: Invia notifiche (Testo e Voce)
+  variables:
+    defaultTitle: 'Home Assistant'
+    defaulMediaPlayer: 'media_player.google_home'
+    defaultVolume: 0.35
+    defaultId: 'generic'
+    title: >-
+      {# Check Null Input #}
+      {% if title | length == 0 %}
+        {% set title = defaultTitle %}
+      {% endif %}
+      {{ title }}
+    media_player: >-
+      {# Check Null Input #}
+      {% if media_player | length == 0 %}
+        {% set media_player = defaulMediaPlayer %}
+      {% endif %}
+      {{ media_player }}
+    volume_level: >-
+      {# Check Null Input #}
+      {% if volume_level | length == 0 %}
+        {% set volume_level = defaultVolume %}
+      {% endif %}
+      {{ volume_level }}
+    language: >-
+      {# Check Null Input #}
+      {% if language | length == 0 %}
+        {% set language = 'it' %}
+      {% endif %}
+      {{ language }}
+    notification_id: >-
+      {# Check Null Input #}
+      {% if notification_id | length == 0 %}
+        {% set notification_id = defaultId %}
+      {% endif %}
+      {{ notification_id }}
+    enable_persistent: >-
+      {# Check Null Input #}
+      {% if enable_persistent | length == 0 %}
+        {% set enable_persistent = 0 %}
+      {% endif %}
+      {{ enable_persistent }}
+    disable_telegram: >-
+      {# Check Null Input #}
+      {% if disable_telegram | length == 0 %}
+        {% set disable_telegram = 0 %}
+      {% endif %}
+      {{ disable_telegram }}
+
+  fields:
+    title:
+      description: "Titolo della notifica"
+      example: "Home Assistant"
+      selector:
+        text:
+    message:
+      description: "Messaggio da notificare"
+      required: true
+      example: "Testo Messaggio"
+      selector:
+        text:
+    media_player:
+      description: "Destinazione della notifica"
+      example: "media_player.google_home"
+      selector:
+        entity:
+          domain: media_player
+    volume_level:
+      description: "Livello del volume"
+      example: "0.35"
+      default: 0.35
+      selector:
+        number:
+          min: 0.0
+          max: 1.0
+          step: 0.05
+    language:
+      description: "Lingua"
+      example: "it"
+      default: "it"
+      selector:
+        select:
+          options:
+              - "it"
+              - "en"
+              - "es"
+    notification_id:
+      description: "Id di notifica"
+      example: "generic"
+      selector:
+        text:
+    enable_persistent:
+      description: "Abilitare o meno la persistenza"
+      example: "0"
+      default: "0"
+      selector:
+        select:
+          options:
+            - "0"
+            - "1"
+    disable_telegram:
+      description: "Disabilitare la notifica su telegram"
+      example: "0"
+      default: "0"
+      selector:
+        select:
+          options:
+            - "0"
+            - "1"
+
   sequence:
     - service: script.notify_text
       data_template:
