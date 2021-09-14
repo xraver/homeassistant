@@ -19,14 +19,9 @@
                 "url": "/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js"
             },
             {
-                "id": "30e56555d1eb432abe3fcc5b9cb16be1",
-                "type": "module",
-                "url": "/hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js"
-            },
-            {
                 "id": "6c8988516c824aa99cbd556a0b4ff39c",
                 "type": "module",
-                "url": "/hacsfiles/lovelace-layout-card/layout-card.js?hacstag=156434866230"
+                "url": "/hacsfiles/lovelace-layout-card/layout-card.js?hacstag=156434866231"
             },
             {
                 "id": "b28e5c5a648145f0828a10f89b1b7770",
@@ -52,6 +47,11 @@
                 "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js",
                 "type": "module",
                 "id": "e4685ccd929f4e71a561d0d397f8ae80"
+            },
+            {
+                "url": "/hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?hacstag=201292040070",
+                "type": "module",
+                "id": "746f4aa8840a4986b284e7ac56c83789"
             }
         ]
     }

@@ -9,6 +9,7 @@
                     "icon": "mdi:home",
                     "id": "main",
                     "title": "Principale",
+                    "path": "main",
                     "badges": [
                         {
                             "entity": "person.giorgio"
@@ -365,16 +366,38 @@
                     ]
                 },
                 {
+                    "icon": "mdi:lightbulb",
+                    "id": "lights",
+                    "title": "Luci",
+                    "path": "lights",
                     "badges": [
-                        "light.luce_cucina",
-                        "light.luce_corridoio",
-                        "light.luce_sala",
-                        "light.luce_divano",
-                        "light.luce_bagno",
-                        "light.luce_specchio",
-                        "light.luce_studio",
-                        "light.luce_camera",
-                        "light.luce_balcone"
+                        {
+                            "entity": "light.luce_cucina"
+                        },
+                        {
+                            "entity": "light.luce_corridoio"
+                        },
+                        {
+                            "entity": "light.luce_sala"
+                        },
+                        {
+                            "entity": "light.luce_divano"
+                        },
+                        {
+                            "entity": "light.luce_bagno"
+                        },
+                        {
+                            "entity": "light.luce_specchio"
+                        },
+                        {
+                            "entity": "light.luce_studio"
+                        },
+                        {
+                            "entity": "light.luce_camera"
+                        },
+                        {
+                            "entity": "light.luce_balcone"
+                        }
                     ],
                     "cards": [
                         {
@@ -451,17 +474,26 @@
                             "name": "Luce Balcone",
                             "type": "light"
                         }
-                    ],
-                    "icon": "mdi:lightbulb",
-                    "id": "light",
-                    "title": "Luci"
+                    ]
                 },
                 {
+                    "icon": "mdi:window-shutter",
+                    "id": "covers",
+                    "title": "Tapparelle",
+                    "path": "covers",
                     "badges": [
-                        "sensor.tapparella_cucina",
-                        "sensor.tapparella_sala",
-                        "sensor.tapparella_studio",
-                        "sensor.tapparella_camera"
+                        {
+                            "entity": "sensor.tapparella_cucina"
+                        },
+                        {
+                            "entity": "sensor.tapparella_sala"
+                        },
+                        {
+                            "entity": "sensor.tapparella_studio"
+                        },
+                        {
+                            "entity": "sensor.tapparella_camera"
+                        }
                     ],
                     "cards": [
                         {
@@ -508,15 +540,13 @@
                             ],
                             "type": "custom:shutter-card"
                         }
-                    ],
-                    "icon": "mdi:window-shutter",
-                    "id": "covers",
-                    "title": "Tapparelle"
+                    ]
                 },
                 {
                     "icon": "mdi:thermometer",
                     "id": "climate",
                     "title": "Termostato",
+                    "path": "climate",
                     "badges": [
                         {
                             "entity": "sensor.valve_cucina_temperature"
@@ -737,11 +767,23 @@
                     ]
                 },
                 {
+                    "icon": "mdi:account-multiple",
+                    "id": "people",
+                    "title": "People",
+                    "path": "people",
                     "badges": [
-                        "person.giorgio",
-                        "person.laura",
-                        "person.anna",
-                        "person.assunta"
+                        {
+                            "entity": "person.giorgio"
+                        },
+                        {
+                            "entity": "person.laura"
+                        },
+                        {
+                            "entity": "person.anna"
+                        },
+                        {
+                            "entity": "person.assunta"
+                        }
                     ],
                     "cards": [
                         {
@@ -776,10 +818,7 @@
                             "hours_to_show": 24,
                             "type": "map"
                         }
-                    ],
-                    "icon": "mdi:account-multiple",
-                    "id": "people",
-                    "title": "People"
+                    ]
                 },
                 {
                     "title": "Auto",
@@ -796,6 +835,8 @@
                         }
                     },
                     "icon": "mdi:car",
+                    "id": "car",
+                    "path": "car",
                     "badges": [],
                     "cards": [
                         {
@@ -1290,9 +1331,10 @@
                 },
                 {
                     "icon": "mdi:flash",
-                    "id": "power",
+                    "id": "energy",
                     "title": "Monitoraggio Energetico",
                     "type": "sidebar",
+                    "path": "energy",
                     "badges": [
                         {
                             "entity": "sensor.shelly_em_channel_1_power"
@@ -1330,7 +1372,7 @@
                             "unit": "kWh",
                             "severity": {
                                 "green": 0,
-                                "yellow": 3,
+                                "yellow": 4,
                                 "red": 5
                             },
                             "needle": true,
@@ -1385,29 +1427,42 @@
                     ]
                 },
                 {
+                    "icon": "mdi:alarm-light-outline",
+                    "id": "alarms",
+                    "title": "Allarmi",
+                    "path": "alarms",
                     "badges": [
-                        "binary_sensor.alarms"
+                        {
+                            "entity": "binary_sensor.alarms"
+                        }
                     ],
                     "cards": [
                         {
                             "entities": [
-                                "group.alarms",
-                                "input_boolean.generic_alarm",
-                                "input_boolean.door_alarm"
+                                {
+                                    "entity": "group.alarms"
+                                },
+                                {
+                                    "entity": "input_boolean.generic_alarm"
+                                },
+                                {
+                                    "entity": "input_boolean.door_alarm"
+                                },
+                                {
+                                    "entity": "input_boolean.car_alarm"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Allarmi Casa",
                             "type": "entities"
                         }
-                    ],
-                    "icon": "mdi:alarm-light-outline",
-                    "id": "allarmi",
-                    "title": "Allarmi"
+                    ]
                 },
                 {
+                    "icon": "mdi:home-thermometer",
+                    "id": "temperature",
                     "title": "Temperature",
                     "path": "temperature",
-                    "icon": "mdi:home-thermometer",
                     "badges": [],
                     "cards": [
                         {
@@ -1876,8 +1931,9 @@
                 },
                 {
                     "icon": "mdi:weather-sunny",
-                    "id": "meteo",
+                    "id": "weather",
                     "title": "Meteo",
+                    "path": "weather",
                     "badges": [
                         {
                             "entity": "sun.sun"

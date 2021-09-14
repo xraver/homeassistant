@@ -6,6 +6,9 @@
             "title": "Sistema Home Assistant",
             "views": [
                 {
+                    "icon": "mdi:cog",
+                    "title": "Configurazione",
+                    "path": "config",
                     "badges": [
                         {
                             "entity": "binary_sensor.home_mode"
@@ -93,14 +96,13 @@
                             ],
                             "type": "vertical-stack"
                         }
-                    ],
-                    "icon": "mdi:cog",
-                    "title": "Configurazione"
+                    ]
                 },
                 {
                     "icon": "mdi:lan",
                     "title": "Dispositivi di Rete",
                     "type": "sidebar",
+                    "path": "network",
                     "badges": [],
                     "cards": [
                         {
@@ -165,6 +167,9 @@
                     ]
                 },
                 {
+                    "icon": "mdi:zigbee",
+                    "title": "Zigbee",
+                    "path": "zigbee",
                     "badges": [],
                     "cards": [
                         {
@@ -293,20 +298,25 @@
                             ]
                         },
                         {
-                            "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n",
-                            "entity": "sensor.zigbee2mqtt_networkmap",
-                            "font_size": 12,
-                            "force": 3000,
-                            "height": 400,
-                            "link_width": 2,
-                            "mqtt_base_topic": "zigbee2mqtt",
-                            "node_size": 16,
-                            "title": "Zigbee2mqtt Network Map",
-                            "type": "custom:zigbee2mqtt-networkmap"
+                            "type": "vertical-stack",
+                            "title": "Mappa Dispositivi",
+                            "layout": "vertical",
+                            "cards": [
+                                {
+                                    "title": "Zigbee2mqtt Network Map",
+                                    "type": "custom:zigbee2mqtt-networkmap",
+                                    "entity": "sensor.zigbee2mqtt_networkmap",
+                                    "mqtt_base_topic": "zigbee2mqtt",
+                                    "force": 3000,
+                                    "node_size": 16,
+                                    "font_size": 12,
+                                    "link_width": 2,
+                                    "height": 400,
+                                    "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n"
+                                }
+                            ]
                         }
-                    ],
-                    "icon": "mdi:zigbee",
-                    "title": "Zigbee"
+                    ]
                 }
             ]
         }
