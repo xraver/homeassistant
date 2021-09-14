@@ -6,6 +6,7 @@
 # - message
 # - enable_greeting
 # - enable_status
+# - enable_consumption
 # - enable_location
 # - location_people_start
 # - location_people_num
@@ -17,7 +18,84 @@
 
 speech_engine:
   alias: Speech Engine
-  sequence: 
+  description: Il servizio costituisce il motore vocale del sistema. Tramite opportuni parametri è possibile riprodurre testi e diverse informazioni sullo stato della casa, dell'auto e altro ancora.
+  variables:
+    defaulMediaPlayer: 'media_player.google_home'
+    defaultVolume: 0.35
+    media_player: >-
+      {# Check Null Input #}
+      {% if media_player | length == 0 %}
+        {% set media_player = defaulMediaPlayer %}
+      {% endif %}
+      {{ media_player }}
+    volume_level: >-
+      {# Check Null Input #}
+      {% if volume_level | length == 0 %}
+        {% set volume_level = defaultVolume %}
+      {% endif %}
+      {{ volume_level }}
+    message: >-
+      {# Check Null Input #}
+      {% if message | length == 0 %}
+        {% set message = "" %}
+      {% endif %}
+      {{ message }}
+
+  fields:
+    media_player:
+      description: "Destinazione della notifica"
+      example: "media_player.google_home"
+      selector:
+        entity:
+          domain: media_player
+    volume_level:
+      description: "Livello del volume"
+      example: "0.35"
+      default: 0.35
+      selector:
+        number:
+          min: 0.0
+          max: 1.0
+          step: 0.05
+    message:
+      description: "Messaggio"
+      example: "Testo Messaggio"
+      selector:
+        text:
+    enable_greeting:
+      description: "Riprodurre il saluto"
+      example: "false"
+      default: false
+      selector:
+        boolean:
+    enable_status:
+      description: "Riprodurre lo stato della casa"
+      example: "false"
+      default: false
+      selector:
+        boolean:
+    enable_consumption:
+      description: "Riprodurre il consumo energetico"
+      example: "false"
+      default: false
+      selector:
+        boolean:
+    enable_location:
+      description: "Riprodurre la posizione delle persone"
+      example: "false"
+      default: false
+      selector:
+        boolean:
+    #location_people_start:
+    #location_people_num:
+    enable_car:
+      description: "Riprodurre lo stato dell'auto"
+      example: "false"
+      default: false
+      selector:
+        boolean:
+
+  sequence:
     - service: script.notify_voice
       data_template:
         media_player: "{{ media_player }}"
@@ -33,11 +111,12 @@ speech_engine:
 
 speech_status:
   alias: Stato Casa
-  sequence: 
+  description: Riproduce le informazioni principali sullo stato della casa
+  sequence:
     - service: script.speech_engine
       data:
-        enable_greeting: 1
-        enable_status: 1
+        enable_greeting: true
+        enable_status: true
 
 ######################################################################
 # Speech Consumption
@@ -48,7 +127,8 @@ speech_status:
 
 speech_consumption:
   alias: Consumo Energetico
+  description: Riproduce il consumo energetico istantaneo
   sequence:
     - service: script.speech_engine
       data:
-        enable_consumption: 1
+        enable_consumption: true

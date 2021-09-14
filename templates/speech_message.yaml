@@ -7,16 +7,16 @@
   {# ***************** Check Input ***************** #}
   {# *********************************************** #}
   {% if enable_greeting is not defined %}
-    {% set enable_greeting=0 %}
+    {% set enable_greeting=false %}
   {% endif %}
   {% if enable_status is not defined %}
-    {% set enable_status=0 %}
+    {% set enable_status=false %}
   {% endif %}
   {% if enable_consumption is not defined %}
-    {% set enable_consumption=0 %}
+    {% set enable_consumption=false %}
   {% endif %}
   {% if enable_location is not defined %}
-    {% set enable_location=0 %}
+    {% set enable_location=false %}
   {% endif %}
   {% if location_people_start is not defined %}
     {% set location_people_start=1 %}
@@ -25,7 +25,7 @@
     {% set location_people_num=2 %}
   {% endif %}
   {% if enable_car is not defined %}
-    {% set enable_car=0 %}
+    {% set enable_car=false %}
   {% endif %}
 
   {# *********************************************** #}
@@ -165,7 +165,7 @@
 
   {# End Message #}
   {%- macro end_message() -%}
-    {% if enable_status | int == 1 %}
+    {% if enable_status == true %}
       {{ [
       "Spero che il report ti abbia soddisfatto!",
       "Il report è concluso.",
@@ -181,12 +181,12 @@
   {# *********************************************** #}
 
   {# Greeting Message #}
-  {% if enable_greeting | int == 1 %}
+  {% if enable_greeting == true %}
     {{ greeting() }}
   {% endif %}
 
   {# Home Status #}
-  {% if enable_status | int == 1 %}
+  {% if enable_status == true %}
 
     {{ time_and_date() }}
 
@@ -200,17 +200,17 @@
 
   {% endif %}
 
-  {% if (enable_status | int == 1) or (enable_consumption | int == 1) %}
+  {% if (enable_status == true) or (enable_consumption == true) %}
     {{ status_consumption() }}
   {% endif %}
 
   {# Location Status #}
-  {% if (enable_status | int == 1) or (enable_location | int == 1) %}
+  {% if (enable_status == true) or (enable_location == true) %}
     {{ status_location(location_people_start, location_people_num) }}
   {% endif %}
 
   {# Car Status #}
-  {% if (enable_status | int == 1) or (enable_car | int == 1) %}
+  {% if (enable_status == true) or (enable_car == true) %}
     {{ status_car() }}
   {% endif %}
 
