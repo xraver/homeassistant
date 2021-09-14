@@ -14,5 +14,5 @@
     data_template:
       title: "Home Assistant - Allarme Consumo Energetico"
       message: "Consumo energetico elevato ({{ states.sensor.shelly_em_channel_1_power.state }})."
-      enable_persistent: 0
+      enable_persistent: false
       volume_level: 0.4

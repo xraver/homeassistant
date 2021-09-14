@@ -35,13 +35,13 @@ notify_text:
     enable_persistent: >-
       {# Check Null Input #}
       {% if enable_persistent | length == 0 %}
-        {% set enable_persistent = 0 %}
+        {% set enable_persistent = false %}
       {% endif %}
       {{ enable_persistent }}
     disable_telegram: >-
       {# Check Null Input #}
       {% if disable_telegram | length == 0 %}
-        {% set disable_telegram = 0 %}
+        {% set disable_telegram = false %}
       {% endif %}
       {{ disable_telegram }}
 
@@ -64,22 +64,16 @@ notify_text:
         text:
     enable_persistent:
       description: "Abilitare o meno la persistenza"
-      example: "0"
-      default: "0"
+      example: "false"
+      default: false
       selector:
-        select:
-          options:
-            - "0"
-            - "1"
+        boolean:
     disable_telegram:
       description: "Disabilitare la notifica su telegram"
-      example: "0"
-      default: "0"
+      example: "false"
+      default: false
       selector:
-        select:
-          options:
-            - "0"
-            - "1"
+        boolean:
 
   sequence:
     - condition: state
@@ -94,12 +88,7 @@ notify_text:
     - choose:
       - conditions:
           - condition: template
-            value_template: >
-              {% if disable_telegram | int == 1 %}
-                false
-              {% else %}
-                true
-              {% endif %}
+            value_template: "{{ disable_telegram }}"
 
         sequence:
           - service: notify.telegram
@@ -113,12 +102,7 @@ notify_text:
         message: "{{ message }}"
 
     - condition: template
-      value_template: >
-        {% if enable_persistent | int == 1 %}
-          true
-        {% else %}
-          false
-        {% endif %}
+      value_template: "{{ enable_persistent }}"
 
     - service: persistent_notification.create
       data_template:
@@ -348,13 +332,13 @@ notify_all:
     enable_persistent: >-
       {# Check Null Input #}
       {% if enable_persistent | length == 0 %}
-        {% set enable_persistent = 0 %}
+        {% set enable_persistent = false %}
       {% endif %}
       {{ enable_persistent }}
     disable_telegram: >-
       {# Check Null Input #}
       {% if disable_telegram | length == 0 %}
-        {% set disable_telegram = 0 %}
+        {% set disable_telegram = false %}
       {% endif %}
       {{ disable_telegram }}
 
@@ -402,22 +386,16 @@ notify_all:
         text:
     enable_persistent:
       description: "Abilitare o meno la persistenza"
-      example: "0"
-      default: "0"
+      example: "false"
+      default: false
       selector:
-        select:
-          options:
-            - "0"
-            - "1"
+        boolean:
     disable_telegram:
       description: "Disabilitare la notifica su telegram"
-      example: "0"
-      default: "0"
+      example: "false"
+      default: false
       selector:
-        select:
-          options:
-            - "0"
-            - "1"
+        boolean:
 
   sequence:
     - service: script.notify_text

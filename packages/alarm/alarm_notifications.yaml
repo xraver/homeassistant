@@ -2,7 +2,7 @@
 # Alarm Package - Notifications Scripts
 ######################################################################
 
-script: 
+script:
   ######################################################################
   # Alarm: Start Alarm Sound
   #
@@ -59,7 +59,7 @@ script:
     alias: "Allarmi: Attiva Allarme"
     sequence:
       - service: input_boolean.turn_on
-        data_template: 
+        data_template:
           entity_id: >
             {# Check Null Input #}
             {% if entity_id | length == 0 %}
@@ -92,7 +92,7 @@ script:
               {% set message = state_attr(entity_id, 'friendly_name') %}
             {% endif %}
             {{ message }}
-          enable_persistent: 1
+          enable_persistent: true
           notification_id: "alarm"
 
       # LEVEL 2

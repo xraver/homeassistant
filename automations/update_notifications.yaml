@@ -24,7 +24,7 @@
         title: "Home Assistant - Aggiornamento"
         message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
         notification_id: "update"
-        enable_persistent: 1
+        enable_persistent: true
 
     - service: input_boolean.turn_on
       entity_id: input_boolean.update_homeassistant
@@ -61,7 +61,7 @@
             {% endif %}
           {%- endfor %}
         notification_id: "update"
-        enable_persistent: 1
+        enable_persistent: true
 
     - service: input_boolean.turn_on
       entity_id: input_boolean.update_shelly
@@ -101,7 +101,7 @@
             - {{ update['display_name'] }}: {{ update['available_version'] }}
           {%- endfor %}
         notification_id: "update"
-        enable_persistent: 1
+        enable_persistent: true
 
     - service: input_boolean.turn_on
       entity_id: input_boolean.update_hacs
