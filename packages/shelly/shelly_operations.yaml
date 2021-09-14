@@ -12,86 +12,10 @@ script:
       # Shelly 2 Tapparella Cucina
       - service: mqtt.publish
         data:
-          topic: 'shellies/shellyswitch-55980F/command'
+          topic: 'shellies/command'
           payload: 'update_fw'
-
-      # Shelly 2 Tapparella Sala
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellyswitch25-6919BD/command'
-          payload: 'update_fw'
-
-      # Shelly 2 Tapparella Studio
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellyswitch-13572B/command'
-          payload: 'update_fw'
-
-      # Shelly 2 Tapparella Camera
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellyswitch-559C49/command'
-          payload: 'update_fw'
-
-      # Shelly 1 Luce Corridoio
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shelly1-24D1EE/command'
-          payload: 'update_fw'
-
-      # Shelly 1 Luce Cucina
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shelly1-93B27D/command'
-          payload: 'update_fw'
-
-      # Shelly Dimmer Luce Sala
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellydimmer-D3EA58/command'
-          payload: 'update_fw'
-
-      # Shelly 2.5 Luci Bagno
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellyswitch25-7457D8/command'
-          payload: 'update_fw'
-
-      # Shelly 1 Luce Studio
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shelly1-59E18C/command'
-          payload: 'update_fw'
-
-      # Shelly Dimmer Luce Camera
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellydimmer-D46CF2/command'
-          payload: 'update_fw'
-
-      # Shelly 1 Luce Balcone
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shelly1-C423C8/command'
-          payload: 'update_fw'
-
-      # Shelly Bulb Luce Divano
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellybulb-BC8610/command'
-          payload: 'update_fw'
-
-      # Shelly EM
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellyem-B9E1A0/command'
-          payload: 'update_fw'
-
-      # Shelly Plug S
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/shellyplug-s-7A31CB/command'
-          payload: 'update_fw'
+          qos: 0
+          retain: false
 
   ######################################################################
   # Shelly: Reboot
