@@ -16,7 +16,7 @@
 
 notify_text:
   alias: Notifiche testuali
-  description: Invia notifiche testuali
+  description: Invia notifiche testuali via mail oppure via telegram con la possibilità di notificarle direttamente sulla UI.
   variables:
     defaultTitle: 'Home Assistant'
     defaultId: 'generic'
@@ -194,7 +194,7 @@ volume_manager:
 
 notify_voice:
   alias: Notifiche vocali
-  description: Invia notifiche vocali
+  description: Invia notifiche vocali su un determinato dispositivo compatibile. Si può selezionare il volume di riproduzione e la lingua.
   variables:
     defaulMediaPlayer: 'media_player.google_home'
     defaultVolume: 0.35
@@ -293,7 +293,7 @@ notify_voice:
 
 notify_all:
   alias: Notifiche globali (Testo+Voce)
-  description: Invia notifiche (Testo e Voce)
+  description:   Invia notifiche sia vocali sia testiali. Le notifiche vocali sono inoltrate verso un determinato dispositivo compatibile. Si può selezionare il volume di riproduzione e la lingua. Quelle testuali possono essere inviate via mail oppure via telegram con la possibilità di notificarle direttamente sulla UI.
   variables:
     defaultTitle: 'Home Assistant'
     defaulMediaPlayer: 'media_player.google_home'
