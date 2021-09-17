@@ -24,7 +24,7 @@ SHELLY_ID=(
 	shellyplugs.giorgioravera.it
 )
 
-echo "Check Shelly Firmware"
+echo "Check Shelly Uptime"
 
 for i in "${SHELLY_ID[@]}"
 do
