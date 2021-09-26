@@ -17,35 +17,37 @@
 
 laura_voice:
   alias: Voce Laura
+  variables:
+    defaulMediaPlayer: 'media_player.google_home'
+    defaultVolume: 0.35
+    media_player: >-
+      {# Check Null Input #}
+      {% if media_player | length == 0 %}
+        {% set media_player = defaulMediaPlayer %}
+      {% endif %}
+      {{ media_player }}
+    volume_level: >-
+      {# Check Null Input #}
+      {% if volume_level | length == 0 %}
+        {% set volume_level = defaultVolume %}
+      {% endif %}
+      {{ volume_level }}
+
   sequence:
     - condition: state
       entity_id: input_boolean.speech_notifications
       state: 'on'
 
-    - wait_template: >-
-        {% if media_player | length == 0 %}
-          {% set media_player = 'media_player.google_home' %}
-        {% endif %}
-        {{ not is_state(media_player, 'playing') }}
+    - wait_template: "{{ not is_state(media_player, 'playing') }}"
 
     - service: script.volume_manager
       data_template:
-        media_player: >-
-          {# Check Null Input #}
-          {% if media_player | length == 0 %}
-            {% set media_player = 'media_player.google_home' %}
-          {% endif %}
-          {{ media_player }}
+        media_player: "{{media_player}}"
         volume_level: "{{ volume_level }}"
 
     - service: media_player.play_media
       data_template:
-        entity_id: >-
-          {# Check Null Input #}
-          {% if media_player | length == 0 %}
-            {% set media_player = 'media_player.google_home' %}
-          {% endif %}
-          {{ media_player }}
+        entity_id: "{{ media_player }}"
         media_content_type: 'audio/mp4'
         media_content_id: >-
           {%- macro set_type() -%}
@@ -119,35 +121,37 @@ laura_voice_7:
 
 babu_voice:
   alias: Voce Babu
+  variables:
+    defaulMediaPlayer: 'media_player.google_home'
+    defaultVolume: 0.35
+    media_player: >-
+      {# Check Null Input #}
+      {% if media_player | length == 0 %}
+        {% set media_player = defaulMediaPlayer %}
+      {% endif %}
+      {{ media_player }}
+    volume_level: >-
+      {# Check Null Input #}
+      {% if volume_level | length == 0 %}
+        {% set volume_level = defaultVolume %}
+      {% endif %}
+      {{ volume_level }}
+
   sequence:
     - condition: state
       entity_id: input_boolean.speech_notifications
       state: 'on'
 
-    - wait_template: >-
-        {% if media_player | length == 0 %}
-          {% set media_player = 'media_player.google_home' %}
-        {% endif %}
-        {{ not is_state(media_player, 'playing') }}
+    - wait_template: "{{ not is_state(media_player, 'playing') }}"
 
     - service: script.volume_manager
       data_template:
-        media_player: >-
-          {# Check Null Input #}
-          {% if media_player | length == 0 %}
-            {% set media_player = 'media_player.google_home' %}
-          {% endif %}
-          {{ media_player }}
+        media_player: "{{media_player}}"
         volume_level: "{{ volume_level }}"
 
     - service: media_player.play_media
       data_template:
-        entity_id: >-
-          {# Check Null Input #}
-          {% if media_player | length == 0 %}
-            {% set media_player = 'media_player.google_home' %}
-          {% endif %}
-          {{ media_player }}
+        entity_id: "{{ media_player }}"
         media_content_type: 'audio/mp4'
         media_content_id: >-
           {% if type is not defined %}
