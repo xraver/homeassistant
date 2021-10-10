@@ -87,6 +87,9 @@
                                         },
                                         {
                                             "entity": "group.update"
+                                        },
+                                        {
+                                            "entity": "sensor.hacs"
                                         }
                                     ],
                                     "show_header_toggle": false,

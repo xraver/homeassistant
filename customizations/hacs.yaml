@@ -1,6 +1,6 @@
 ######################################################################
-# Customization: System
+# Customization: Hacs
 ######################################################################
 
-sensor.cert_expiry_timestamp_server_giorgioravera_it:
-  friendly_name: Scadenza Certificato SSL
+sensor.hacs:
+  friendly_name: Aggiornamenti HACS
