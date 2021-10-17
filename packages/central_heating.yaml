@@ -58,7 +58,7 @@ automation:
                 message: "Il riscaldamento centralizzato è stato acceso"
 
         # Switch off
-        - conditions: "{{ now().month == 5 and now().day == 15 and is_state('input_boolean.central_heating', 'on')}}"
+        - conditions: "{{ now().month == 4 and now().day == 15 and is_state('input_boolean.central_heating', 'on')}}"
           sequence:
             - service: input_boolean.turn_off
               data_template:
