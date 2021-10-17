@@ -52,6 +52,11 @@
                 "url": "/hacsfiles/zigbee2mqtt-networkmap/zigbee2mqtt-networkmap.js?hacstag=201292040070",
                 "type": "module",
                 "id": "746f4aa8840a4986b284e7ac56c83789"
+            },
+            {
+                "url": "/hacsfiles/scheduler-card/scheduler-card.js?hacstag=286270157220",
+                "type": "module",
+                "id": "77dd572c367b411e94bd21cae1b36064"
             }
         ]
     }

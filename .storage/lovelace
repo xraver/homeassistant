@@ -1949,6 +1949,47 @@
                             "type": "weather-forecast"
                         }
                     ]
+                },
+                {
+                    "title": "Operazioni Pianificate",
+                    "path": "schedule",
+                    "icon": "mdi:clock-outline",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:scheduler-card",
+                            "title": "Pianificazione Luci",
+                            "include": [
+                                "light"
+                            ],
+                            "discover_existing": true,
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
+                        },
+                        {
+                            "type": "custom:scheduler-card",
+                            "title": "Pianificazione Tapparelle",
+                            "include": [
+                                "cover"
+                            ],
+                            "discover_existing": true,
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
+                        },
+                        {
+                            "type": "custom:scheduler-card",
+                            "title": "Pianificazione Valvole",
+                            "include": [
+                                "climate"
+                            ],
+                            "discover_existing": true,
+                            "view_layout": {
+                                "position": "sidebar"
+                            }
+                        }
+                    ]
                 }
             ]
         }
