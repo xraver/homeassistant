@@ -259,6 +259,19 @@
                                     "name": "Camera"
                                 }
                             ]
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "input_boolean.central_heating"
+                                },
+                                {
+                                    "entity": "select.netatmo_casa_ravera_testa"
+                                }
+                            ],
+                            "state_color": false,
+                            "title": "Impostazioni"
                         }
                     ]
                 },
