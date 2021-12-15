@@ -1,0 +1,9 @@
+######################################################################
+# Zone Work
+######################################################################
+
+name: Incentivi Italia
+latitude: !secret incentivi_italia_latitude
+longitude: !secret incentivi_italia_longitude
+radius: 50
+icon: mdi:domain
