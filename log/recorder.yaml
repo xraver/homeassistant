@@ -51,6 +51,9 @@ exclude:
     - sensor.temperatura_veranda_linkquality
     - sensor.temperatura_veranda_voltage
     # pfSense
+    - sensor.freebsd_router_external_ip
+    - binary_sensor.freebsd_router_wan_status
+    - sensor.freebsd_router_wan_status
     #- sensor.freebsd_router_kib_s_received
     #- sensor.freebsd_router_kib_s_sent
     - sensor.freebsd_router_b_received
