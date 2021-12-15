@@ -16,7 +16,7 @@
             {
                 "id": "a93c60f94a0e40b8b82913331a445e48",
                 "type": "module",
-                "url": "/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js"
+                "url": "/hacsfiles/lovelace-slider-entity-row/slider-entity-row.js?hacstag=1448997001721"
             },
             {
                 "id": "6c8988516c824aa99cbd556a0b4ff39c",
@@ -26,7 +26,7 @@
             {
                 "id": "b28e5c5a648145f0828a10f89b1b7770",
                 "type": "module",
-                "url": "/hacsfiles/hass-shutter-card/hass-shutter-card.js"
+                "url": "/hacsfiles/hass-shutter-card/hass-shutter-card.js?hacstag=269011342130"
             },
             {
                 "url": "/hacsfiles/battery-state-card/battery-state-card.js",
@@ -39,7 +39,7 @@
                 "id": "737d0af49e4a49c881d60ef2c724203a"
             },
             {
-                "url": "/hacsfiles/lovelace-card-mod/card-mod.js",
+                "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524311",
                 "type": "module",
                 "id": "1235e3ac5c7348f19284d47961cc2109"
             },
@@ -54,7 +54,7 @@
                 "id": "746f4aa8840a4986b284e7ac56c83789"
             },
             {
-                "url": "/hacsfiles/scheduler-card/scheduler-card.js?hacstag=286270157220",
+                "url": "/hacsfiles/scheduler-card/scheduler-card.js?hacstag=286270157230",
                 "type": "module",
                 "id": "77dd572c367b411e94bd21cae1b36064"
             }
