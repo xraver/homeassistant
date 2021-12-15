@@ -226,13 +226,13 @@
                                             "entity": "script.speech_status"
                                         },
                                         {
-                                            "entity": "script.speech_consumption"
-                                        },
-                                        {
                                             "entity": "script.homeassistant_restart"
                                         },
                                         {
                                             "entity": "automation.risveglio_giorgio"
+                                        },
+                                        {
+                                            "entity": "select.netatmo_casa_ravera_testa"
                                         }
                                     ],
                                     "show_header_toggle": false,
