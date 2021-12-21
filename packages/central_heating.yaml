@@ -17,7 +17,7 @@ binary_sensor:
           {% endif %}
 
 ######################################################################
-# Central Heating Package - Binary Sensor
+# Central Heating Package - Input Boolean Sensor
 ######################################################################
 
 input_boolean:
@@ -26,7 +26,7 @@ input_boolean:
     icon: mdi:home-thermometer
 
 ######################################################################
-# Central Heating
+# Central Heating - Automations
 ######################################################################
 
 automation:
@@ -69,7 +69,7 @@ automation:
                 message: "Il riscaldamento centralizzato è stato spento"
 
 ######################################################################
-# Netatmo Package - History
+# Central Heating Package - History
 ######################################################################
 
 history:
@@ -78,7 +78,7 @@ history:
       - binary_sensor.central_heating
 
 ######################################################################
-# Netatmo Package - Logbook
+# Central Heating Package - Logbook
 ######################################################################
 
 logbook:
@@ -87,7 +87,7 @@ logbook:
       - binary_sensor.central_heating
 
 ######################################################################
-# Netatmo Package - Recorder
+# Central Heating Package - Recorder
 ######################################################################
 
 recorder:
