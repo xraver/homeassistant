@@ -29,4 +29,10 @@
 
 - platform: version
   name: "Home Assistant: Current Version"
-  source: docker
+  source: local
+
+#- platform: version
+#  name: "Home Assistant: Latest Version"
+#  source: container
+#  scan_interval: 21600
+
