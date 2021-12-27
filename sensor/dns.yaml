@@ -7,9 +7,9 @@
   name: ip_1
   resolver: 8.8.8.8
   scan_interval: 3600
-  
-- platform: dnsip
-  hostname: xraver2.duckdns.org
-  name: ip_2
-  resolver: 8.8.8.8
-  scan_interval: 3600
+
+#- platform: dnsip
+#  hostname: xraver2.duckdns.org
+#  name: ip_2
+#  resolver: 8.8.8.8
+#  scan_interval: 3600
