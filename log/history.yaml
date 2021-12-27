@@ -72,6 +72,7 @@ exclude:
     - sensor.grid_fossil_fuel_percentage
   domains:
     - automation
+    - button
     - calendar
     - group
     - input_boolean
