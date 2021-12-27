@@ -20,7 +20,7 @@ sensor.freebsd_router_kib_s_sent:
 sensor.freebsd_router_b_received:
   friendly_name: "pfSense: Byte ricevuti"
 sensor.freebsd_router_b_sent:
-  friendly_name: "pfSense: Byte inviati"  
+  friendly_name: "pfSense: Byte inviati"
 sensor.freebsd_router_packets_received:
   friendly_name: "pfSense: Pacchetti ricevuti"
 sensor.freebsd_router_packets_sent:
@@ -37,6 +37,6 @@ sensor.freebsd_router_packets_s_sent:
 sensor.ip_1:
  friendly_name: xraver.dnsduck.org
  icon: mdi:ip-network
-sensor.ip_2:
- friendly_name: xraver2.dnsduck.org
- icon: mdi:ip-network
+#sensor.ip_2:
+# friendly_name: xraver2.dnsduck.org
+# icon: mdi:ip-network
