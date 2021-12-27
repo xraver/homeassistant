@@ -7,7 +7,7 @@ script:
   # Shelly: Upgrade
   ######################################################################
   shelly_upgrade:
-    alias: "Shelly: Aggiornamento Firmware"
+    alias: "Shelly: Aggiornamento Firmware Collettivo"
     sequence:
       # Shelly 2 Tapparella Cucina
       - service: mqtt.publish
@@ -21,7 +21,7 @@ script:
   # Shelly: Reboot
   ######################################################################
   shelly_reboot:
-    alias: "Shelly: Riavvia Dispositivi"
+    alias: "Shelly: Riavvio Dispositivi Collettivo"
     sequence:
       - service: shell_command.shelly_reboot
 

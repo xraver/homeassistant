@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace.lovelace_dispositivi",
     "data": {
         "config": {
@@ -306,11 +307,11 @@
                             "show_label": false,
                             "show_icon": false,
                             "show_entity_picture": true,
-                            "entity_picture": "/local/images/devices/shelly_logo_black.png",
+                            "entity_picture": "/local/images/devices/shelly/shelly.jpg",
                             "styles": {
                                 "card": [
                                     {
-                                        "background-color": "transparent"
+                                        "background-color": "white"
                                     },
                                     {
                                         "box-shadow": "0px 0px 0px 0px."
@@ -318,42 +319,13 @@
                                 ],
                                 "entity_picture": [
                                     {
-                                        "width": "15%"
+                                        "width": "100%"
                                     }
                                 ]
                             },
                             "view_layout": {
                                 "grid-area": "header"
                             }
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                "script.shelly_upgrade",
-                                "script.shelly_reboot"
-                            ],
-                            "title": "Operazioni sui dispositivi",
-                            "view_layout": {
-                                "grid-area": "main1"
-                            }
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.tapparella_sala_overheating"
-                                },
-                                {
-                                    "entity": "binary_sensor.luce_sala_overheating"
-                                },
-                                {
-                                    "entity": "binary_sensor.luci_bagno_overheating"
-                                },
-                                {
-                                    "entity": "binary_sensor.luce_camera_overheating"
-                                }
-                            ],
-                            "title": "Surriscaldamento"
                         },
                         {
                             "type": "entities",
@@ -401,6 +373,96 @@
                             "type": "entities",
                             "entities": [
                                 {
+                                    "entity": "script.shelly_upgrade"
+                                },
+                                {
+                                    "entity": "button.tapparella_cucina_ota_update"
+                                },
+                                {
+                                    "entity": "button.tapparella_sala_ota_update"
+                                },
+                                {
+                                    "entity": "button.tapparella_studio_ota_update"
+                                },
+                                {
+                                    "entity": "button.tapparella_camera_ota_update"
+                                },
+                                {
+                                    "entity": "button.luce_corridoio_ota_update"
+                                },
+                                {
+                                    "entity": "button.luce_cucina_ota_update"
+                                },
+                                {
+                                    "entity": "button.luce_sala_ota_update"
+                                },
+                                {
+                                    "entity": "button.luci_bagno_ota_update"
+                                },
+                                {
+                                    "entity": "button.luce_studio_ota_update"
+                                },
+                                {
+                                    "entity": "button.luce_camera_ota_update"
+                                },
+                                {
+                                    "entity": "button.luce_balcone_ota_update"
+                                },
+                                {
+                                    "entity": "button.shelly_em_ota_update"
+                                }
+                            ],
+                            "title": "Aggiorna Dispositivi"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "script.shelly_reboot"
+                                },
+                                {
+                                    "entity": "button.tapparella_cucina_reboot"
+                                },
+                                {
+                                    "entity": "button.tapparella_sala_reboot"
+                                },
+                                {
+                                    "entity": "button.tapparella_studio_reboot"
+                                },
+                                {
+                                    "entity": "button.tapparella_camera_reboot"
+                                },
+                                {
+                                    "entity": "button.luce_corridoio_reboot"
+                                },
+                                {
+                                    "entity": "button.luce_cucina_reboot"
+                                },
+                                {
+                                    "entity": "button.luce_sala_reboot"
+                                },
+                                {
+                                    "entity": "button.luci_bagno_reboot"
+                                },
+                                {
+                                    "entity": "button.luce_studio_reboot"
+                                },
+                                {
+                                    "entity": "button.luce_camera_reboot"
+                                },
+                                {
+                                    "entity": "button.luce_balcone_reboot"
+                                },
+                                {
+                                    "entity": "button.shelly_em_reboot"
+                                }
+                            ],
+                            "title": "Riavvio Dispositivi"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
                                     "entity": "binary_sensor.luce_sala_overpowering"
                                 },
                                 {
@@ -417,6 +479,24 @@
                                 }
                             ],
                             "title": "Sovraccarico"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.tapparella_sala_overheating"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_sala_overheating"
+                                },
+                                {
+                                    "entity": "binary_sensor.luci_bagno_overheating"
+                                },
+                                {
+                                    "entity": "binary_sensor.luce_camera_overheating"
+                                }
+                            ],
+                            "title": "Surriscaldamento"
                         }
                     ]
                 }
