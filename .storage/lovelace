@@ -63,7 +63,7 @@
                                     "entity": "cover.tapparella_cucina"
                                 },
                                 {
-                                    "entity": "climate.netatmo_cucina"
+                                    "entity": "climate.cucina"
                                 },
                                 {
                                     "entity": "media_player.google_home"
@@ -90,7 +90,7 @@
                                     "entity": "cover.tapparella_sala"
                                 },
                                 {
-                                    "entity": "climate.netatmo_sala"
+                                    "entity": "climate.sala"
                                 },
                                 {
                                     "entity": "media_player.sony_bravia_tv"
@@ -129,7 +129,7 @@
                                     "entity": "light.luce_specchio"
                                 },
                                 {
-                                    "entity": "climate.netatmo_bagno"
+                                    "entity": "climate.bagno"
                                 }
                             ],
                             "entity": "light.luci_bagno",
@@ -150,7 +150,7 @@
                                     "entity": "cover.tapparella_studio"
                                 },
                                 {
-                                    "entity": "climate.netatmo_studio"
+                                    "entity": "climate.studio"
                                 }
                             ],
                             "entity": "light.luce_studio",
@@ -171,7 +171,7 @@
                                     "entity": "cover.tapparella_camera"
                                 },
                                 {
-                                    "entity": "climate.netatmo_camera_da_letto"
+                                    "entity": "climate.camera"
                                 },
                                 {
                                     "entity": "media_player.tv_camera"
@@ -550,19 +550,19 @@
                     "path": "climate",
                     "badges": [
                         {
-                            "entity": "sensor.valve_cucina_temperature"
+                            "entity": "sensor.valvola_cucina_temperature"
                         },
                         {
-                            "entity": "sensor.valve_sala_temperature"
+                            "entity": "sensor.valvola_sala_temperature"
                         },
                         {
-                            "entity": "sensor.valve_bagno_temperature"
+                            "entity": "sensor.valvola_bagno_temperature"
                         },
                         {
-                            "entity": "sensor.valve_studio_temperature"
+                            "entity": "sensor.valvola_studio_temperature"
                         },
                         {
-                            "entity": "sensor.valve_camera_da_letto_temperature"
+                            "entity": "sensor.valvola_camera_temperature"
                         },
                         {
                             "entity": "sensor.temperatura_balcone_temperature"
@@ -582,23 +582,23 @@
                     ],
                     "cards": [
                         {
-                            "entity": "climate.netatmo_cucina",
+                            "entity": "climate.cucina",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.netatmo_sala",
+                            "entity": "climate.sala",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.netatmo_bagno",
+                            "entity": "climate.bagno",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.netatmo_studio",
+                            "entity": "climate.studio",
                             "type": "thermostat"
                         },
                         {
-                            "entity": "climate.netatmo_camera_da_letto",
+                            "entity": "climate.camera",
                             "type": "thermostat"
                         },
                         {
@@ -617,7 +617,7 @@
                                     "entity": "input_boolean.boost_valvola_bagno"
                                 },
                                 {
-                                    "entity": "input_boolean.boost_valvola_camera_da_letto"
+                                    "entity": "input_boolean.boost_valvola_camera"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -639,7 +639,7 @@
                                     "entity": "input_boolean.valvola_bagno"
                                 },
                                 {
-                                    "entity": "input_boolean.valvola_camera_da_letto"
+                                    "entity": "input_boolean.valvola_camera"
                                 }
                             ],
                             "title": "Accensione / Spegnimento",
@@ -650,23 +650,23 @@
                             "title": "Stato Valvole Netatmo",
                             "entities": [
                                 {
-                                    "entity": "sensor.valve_cucina_state",
+                                    "entity": "sensor.valvola_cucina_state",
                                     "name": "Cucina"
                                 },
                                 {
-                                    "entity": "sensor.valve_sala_state",
+                                    "entity": "sensor.valvola_sala_state",
                                     "name": "Sala"
                                 },
                                 {
-                                    "entity": "sensor.valve_studio_state",
+                                    "entity": "sensor.valvola_studio_state",
                                     "name": "Studio"
                                 },
                                 {
-                                    "entity": "sensor.valve_bagno_state",
+                                    "entity": "sensor.valvola_bagno_state",
                                     "name": "Bagno"
                                 },
                                 {
-                                    "entity": "sensor.valve_camera_da_letto_state",
+                                    "entity": "sensor.valvola_camera_state",
                                     "name": "Camera"
                                 }
                             ]
@@ -675,27 +675,27 @@
                             "type": "custom:bar-card",
                             "entities": [
                                 {
-                                    "entity": "sensor.valve_cucina_battery",
+                                    "entity": "sensor.valvola_cucina_battery_percent",
                                     "name": "Cucina",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_sala_battery",
+                                    "entity": "sensor.valvola_sala_battery_percent",
                                     "name": "Sala",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_studio_battery",
+                                    "entity": "sensor.valvola_studio_battery_percent",
                                     "name": "Studio",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_bagno_battery",
+                                    "entity": "sensor.valvola_bagno_battery_percent",
                                     "name": "Bagno",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_camera_da_letto_battery",
+                                    "entity": "sensor.valvola_camera_battery_percent",
                                     "name": "Camera",
                                     "width": "85%"
                                 }
@@ -714,7 +714,7 @@
                             "type": "history-graph",
                             "entities": [
                                 {
-                                    "entity": "climate.netatmo_cucina"
+                                    "entity": "climate.cucina"
                                 }
                             ],
                             "hours_to_show": 24,
@@ -725,7 +725,7 @@
                             "type": "history-graph",
                             "entities": [
                                 {
-                                    "entity": "climate.netatmo_sala"
+                                    "entity": "climate.sala"
                                 }
                             ],
                             "hours_to_show": 24,
@@ -736,7 +736,7 @@
                             "type": "history-graph",
                             "entities": [
                                 {
-                                    "entity": "climate.netatmo_studio"
+                                    "entity": "climate.studio"
                                 }
                             ],
                             "hours_to_show": 24,
@@ -747,7 +747,7 @@
                             "type": "history-graph",
                             "entities": [
                                 {
-                                    "entity": "climate.netatmo_bagno"
+                                    "entity": "climate.bagno"
                                 }
                             ],
                             "hours_to_show": 24,
@@ -758,7 +758,7 @@
                             "type": "history-graph",
                             "entities": [
                                 {
-                                    "entity": "climate.netatmo_camera_da_letto"
+                                    "entity": "climate.camera"
                                 }
                             ],
                             "hours_to_show": 24,
@@ -1548,7 +1548,7 @@
                                             "type": "custom:mini-graph-card",
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.valve_cucina_temperature",
+                                                    "entity": "sensor.valvola_cucina_temperature",
                                                     "name": "Cucina"
                                                 }
                                             ],
@@ -1581,7 +1581,7 @@
                                             "type": "custom:mini-graph-card",
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.valve_sala_temperature",
+                                                    "entity": "sensor.valvola_sala_temperature",
                                                     "name": "Sala"
                                                 }
                                             ],
@@ -1619,7 +1619,7 @@
                                             "type": "custom:mini-graph-card",
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.valve_bagno_temperature",
+                                                    "entity": "sensor.valvola_bagno_temperature",
                                                     "name": "Bagno"
                                                 }
                                             ],
@@ -1652,7 +1652,7 @@
                                             "type": "custom:mini-graph-card",
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.valve_studio_temperature",
+                                                    "entity": "sensor.valvola_studio_temperature",
                                                     "name": "Studio"
                                                 }
                                             ],
@@ -1690,7 +1690,7 @@
                                             "type": "custom:mini-graph-card",
                                             "entities": [
                                                 {
-                                                    "entity": "sensor.valve_camera_da_letto_temperature",
+                                                    "entity": "sensor.valvola_camera_temperature",
                                                     "name": "Camera"
                                                 }
                                             ],

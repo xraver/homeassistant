@@ -19,7 +19,7 @@ input_boolean:
     name: Valvola Bagno
     initial: on
     icon: mdi:thermometer
-  valvola_camera_da_letto:
+  valvola_camera:
     name: Valvola Camera
     initial: on
     icon: mdi:thermometer
@@ -40,7 +40,7 @@ automation:
                  input_boolean.valvola_sala,
                  input_boolean.valvola_studio,
                  input_boolean.valvola_bagno,
-                 input_boolean.valvola_camera_da_letto
+                 input_boolean.valvola_camera
       to: 'on'
 
     action:
@@ -48,15 +48,15 @@ automation:
         data_template:
           entity_id: >
             {% if trigger.entity_id == 'input_boolean.valvola_cucina' %}
-              climate.netatmo_cucina
+              climate.cucina
             {% elif trigger.entity_id == 'input_boolean.valvola_sala' %}
-              climate.netatmo_sala
+              climate.sala
             {% elif trigger.entity_id == 'input_boolean.valvola_studio' %}
-              climate.netatmo_studio
+              climate.studio
             {% elif trigger.entity_id == 'input_boolean.valvola_bagno' %}
-              climate.netatmo_bagno
-            {% elif trigger.entity_id == 'input_boolean.valvola_camera_da_letto' %}
-              climate.netatmo_camera_da_letto
+              climate.bagno
+            {% elif trigger.entity_id == 'input_boolean.valvola_camera' %}
+              climate.camera
             {% endif %}
 
   ######################################################################
@@ -70,7 +70,7 @@ automation:
                   input_boolean.valvola_sala,
                   input_boolean.valvola_studio,
                   input_boolean.valvola_bagno,
-                  input_boolean.valvola_camera_da_letto
+                  input_boolean.valvola_camera
       to: 'off'
 
     action:
@@ -78,13 +78,13 @@ automation:
         data_template:
           entity_id: >
             {% if trigger.entity_id == 'input_boolean.valvola_cucina' %}
-              climate.netatmo_cucina
+              climate.cucina
             {% elif trigger.entity_id == 'input_boolean.valvola_sala' %}
-              climate.netatmo_sala
+              climate.sala
             {% elif trigger.entity_id == 'input_boolean.valvola_studio' %}
-              climate.netatmo_studio
+              climate.studio
             {% elif trigger.entity_id == 'input_boolean.valvola_bagno' %}
-              climate.netatmo_bagno
-            {% elif trigger.entity_id == 'input_boolean.valvola_camera_da_letto' %}
-              climate.netatmo_camera_da_letto
+              climate.bagno
+            {% elif trigger.entity_id == 'input_boolean.valvola_camera' %}
+              climate.camera
             {% endif %}

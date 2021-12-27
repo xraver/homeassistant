@@ -7,8 +7,8 @@ group:
     name: Termostato
     icon: mdi:thermometer
     entities:
-      - climate.netatmo_cucina
-      - climate.netatmo_sala
-      - climate.netatmo_studio
-      - climate.netatmo_bagno
-      - climate.netatmo_camera_da_letto
+      - climate.cucina
+      - climate.sala
+      - climate.studio
+      - climate.bagno
+      - climate.camera

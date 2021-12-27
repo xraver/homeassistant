@@ -19,7 +19,7 @@ input_boolean:
     name: Boost Valvola Bagno
     initial: off
     icon: mdi:thermometer-plus
-  boost_valvola_camera_da_letto:
+  boost_valvola_camera:
     name: Boost Valvola Camera
     initial: off
     icon: mdi:thermometer-plus
@@ -32,7 +32,7 @@ script:
   ######################################################################
   # Activating Valve Boost
   ######################################################################
-  climate_valve_boost:
+  climate_valvola_boost:
     alias: "Termosifoni: Boost"
     sequence:
       - service: climate.set_preset_mode
@@ -62,21 +62,21 @@ automation:
                  input_boolean.boost_valvola_sala,
                  input_boolean.boost_valvola_studio,
                  input_boolean.boost_valvola_bagno,
-                 input_boolean.boost_valvola_camera_da_letto
-      to: 'on'      
+                 input_boolean.boost_valvola_camera
+      to: 'on'
 
     variables:
       entity_id: >-
         {% if trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
-          climate.netatmo_cucina
+          climate.cucina
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
-          climate.netatmo_sala
+          climate.sala
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
-          climate.netatmo_studio
+          climate.studio
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno' %}
-          climate.netatmo_bagno
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera_da_letto' %}
-          climate.netatmo_camera_da_letto
+          climate.bagno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera' %}
+          climate.camera
         {% endif %}
 
     action:
@@ -105,21 +105,21 @@ automation:
                  input_boolean.boost_valvola_sala,
                  input_boolean.boost_valvola_studio,
                  input_boolean.boost_valvola_bagno,
-                 input_boolean.boost_valvola_camera_da_letto
-      to: 'off'      
+                 input_boolean.boost_valvola_camera
+      to: 'off'
 
     variables:
       entity_id: >-
         {% if trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
-          climate.netatmo_cucina
+          climate.cucina
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
-          climate.netatmo_sala
+          climate.sala
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
-          climate.netatmo_studio
+          climate.studio
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno' %}
-          climate.netatmo_bagno
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera_da_letto' %}
-          climate.netatmo_camera_da_letto
+          climate.bagno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera' %}
+          climate.camera
         {% endif %}
 
     action:

@@ -5,16 +5,16 @@
 history:
   exclude:
     entities:
-    - sensor.valve_cucina_battery
-    - sensor.valve_sala_battery
-    - sensor.valve_studio_battery
-    - sensor.valve_bagno_battery
-    - sensor.valve_camera_da_letto_battery
-    - sensor.valve_cucina_state
-    - sensor.valve_sala_state
-    - sensor.valve_studio_state
-    - sensor.valve_bagno_state
-    - sensor.valve_camera_da_letto_state
+    - sensor.valvola_cucina_battery_percent
+    - sensor.valvola_sala_battery_percent
+    - sensor.valvola_studio_battery_percent
+    - sensor.valvola_bagno_battery_percent
+    - sensor.valvola_camera_battery_percent
+    - sensor.valvola_cucina_state
+    - sensor.valvola_sala_state
+    - sensor.valvola_studio_state
+    - sensor.valvola_bagno_state
+    - sensor.valvola_camera_state
     - select.netatmo_casa_ravera_testa
 
 ######################################################################
@@ -24,16 +24,16 @@ history:
 logbook:
   exclude:
     entities:
-    - sensor.valve_cucina_battery
-    - sensor.valve_sala_battery
-    - sensor.valve_studio_battery
-    - sensor.valve_bagno_battery
-    - sensor.valve_camera_da_letto_battery
-    - sensor.valve_cucina_state
-    - sensor.valve_sala_state
-    - sensor.valve_studio_state
-    - sensor.valve_bagno_state
-    - sensor.valve_camera_da_letto_state
+    - sensor.valvola_cucina_battery_percent
+    - sensor.valvola_sala_battery_percent
+    - sensor.valvola_studio_battery_percent
+    - sensor.valvola_bagno_battery_percent
+    - sensor.valvola_camera_battery_percent
+    - sensor.valvola_cucina_state
+    - sensor.valvola_sala_state
+    - sensor.valvola_studio_state
+    - sensor.valvola_bagno_state
+    - sensor.valvola_camera_state
     - select.netatmo_casa_ravera_testa
 
 ######################################################################
@@ -43,14 +43,14 @@ logbook:
 recorder:
   exclude:
     entities:
-    - sensor.valve_cucina_battery
-    - sensor.valve_sala_battery
-    - sensor.valve_studio_battery
-    - sensor.valve_bagno_battery
-    - sensor.valve_camera_da_letto_battery
-    - sensor.valve_cucina_state
-    - sensor.valve_sala_state
-    - sensor.valve_studio_state
-    - sensor.valve_bagno_state
-    - sensor.valve_camera_da_letto_state
+    - sensor.valvola_cucina_battery_percent
+    - sensor.valvola_sala_battery_percent
+    - sensor.valvola_studio_battery_percent
+    - sensor.valvola_bagno_battery_percent
+    - sensor.valvola_camera_battery_percent
+    - sensor.valvola_cucina_state
+    - sensor.valvola_sala_state
+    - sensor.valvola_studio_state
+    - sensor.valvola_bagno_state
+    - sensor.valvola_camera_state
     - select.netatmo_casa_ravera_testa

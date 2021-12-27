@@ -4,15 +4,25 @@
 
 homeassistant:
   customize:
-    climate.netatmo_cucina:
+    climate.cucina:
       friendly_name: Valvola Cucina
-    climate.netatmo_sala:
+    climate.sala:
       friendly_name: Valvola Sala
-    climate.netatmo_bagno:
+    climate.bagno:
       friendly_name: Valvola Bagno
-    climate.netatmo_studio:
+    climate.studio:
       friendly_name: Valvola Studio
-    climate.netatmo_camera_da_letto:
+    climate.camera:
       friendly_name: Valvola Camera
     select.netatmo_casa_ravera_testa:
       friendly_name: Programmazione Valvole
+    sensor.valvola_cucina_battery_percent:
+      friendly_name: Batteria Valvola Cucina
+    sensor.valvola_sala_battery_percent:
+      friendly_name: Batteria Valvola Sala
+    sensor.valvola_bagno_battery_percent:
+      friendly_name: Batteria Valvola Bagno
+    sensor.valvola_studio_battery_percent:
+      friendly_name: Batteria Valvola Studio
+    sensor.valvola_camera_battery_percent:
+      friendly_name: Batteria Valvola Camera

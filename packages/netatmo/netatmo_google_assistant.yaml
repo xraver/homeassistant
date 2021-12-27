@@ -4,18 +4,18 @@
 
 google_assistant:
   entity_config:
-    climate.netatmo_cucina:
+    climate.cucina:
       expose: true
       room: Cucina
-    climate.netatmo_sala:
+    climate.sala:
       expose: true
       room: Sala
-    climate.netatmo_studio:
+    climate.studio:
       expose: true
       room: Studio
-    climate.netatmo_bagno:
+    climate.bagno:
       expose: true
       room: Bagno
-    climate.netatmo_camera_da_letto:
+    climate.camera:
       expose: true
       room: Camera

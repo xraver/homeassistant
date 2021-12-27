@@ -302,27 +302,27 @@
                             "type": "custom:bar-card",
                             "entities": [
                                 {
-                                    "entity": "sensor.valve_cucina_battery",
+                                    "entity": "sensor.valvola_cucina_battery_percent",
                                     "name": "Cucina",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_sala_battery",
+                                    "entity": "sensor.valvola_sala_battery_percent",
                                     "name": "Sala",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_studio_battery",
+                                    "entity": "sensor.valvola_studio_battery_percent",
                                     "name": "Studio",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_bagno_battery",
+                                    "entity": "sensor.valvola_bagno_battery_percent",
                                     "name": "Bagno",
                                     "width": "85%"
                                 },
                                 {
-                                    "entity": "sensor.valve_camera_da_letto_battery",
+                                    "entity": "sensor.valvola_camera_battery_percent",
                                     "name": "Camera",
                                     "width": "85%"
                                 }
@@ -342,23 +342,23 @@
                             "title": "Stato Valvole Netatmo",
                             "entities": [
                                 {
-                                    "entity": "sensor.valve_cucina_state",
+                                    "entity": "sensor.valvola_cucina_state",
                                     "name": "Cucina"
                                 },
                                 {
-                                    "entity": "sensor.valve_sala_state",
+                                    "entity": "sensor.valvola_sala_state",
                                     "name": "Sala"
                                 },
                                 {
-                                    "entity": "sensor.valve_studio_state",
+                                    "entity": "sensor.valvola_studio_state",
                                     "name": "Studio"
                                 },
                                 {
-                                    "entity": "sensor.valve_bagno_state",
+                                    "entity": "sensor.valvola_bagno_state",
                                     "name": "Bagno"
                                 },
                                 {
-                                    "entity": "sensor.valve_camera_da_letto_state",
+                                    "entity": "sensor.valvola_camera_state",
                                     "name": "Camera"
                                 }
                             ]

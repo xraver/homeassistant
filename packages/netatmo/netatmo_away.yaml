@@ -10,12 +10,12 @@ script:
     sequence:
       - service: climate.set_preset_mode
         data:
-          entity_id: 
-            - climate.netatmo_cucina
-            - climate.netatmo_sala
-            - climate.netatmo_studio
-            - climate.netatmo_bagno
-            - climate.netatmo_camera_da_letto
+          entity_id:
+            - climate.cucina
+            - climate.sala
+            - climate.studio
+            - climate.bagno
+            - climate.camera
           preset_mode: away
 
   ######################################################################
@@ -25,12 +25,12 @@ script:
     sequence:
       - service: climate.set_hvac_mode
         data:
-          entity_id: 
-            - climate.netatmo_cucina
-            - climate.netatmo_sala
-            - climate.netatmo_studio
-            - climate.netatmo_bagno
-            - climate.netatmo_camera_da_letto
+          entity_id:
+            - climate.cucina
+            - climate.sala
+            - climate.studio
+            - climate.bagno
+            - climate.camera
           hvac_mode: auto
 
 ######################################################################
