@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace.lovelace_settings",
     "data": {
         "config": {
@@ -221,9 +222,14 @@
                                         "background": "#62717b"
                                     }
                                 },
-                                "switch.zigbee2mqtt_abilita_join",
+                                {
+                                    "entity": "switch.zigbee2mqtt_abilita_join"
+                                },
                                 {
                                     "entity": "timer.zigbee_permit_join"
+                                },
+                                {
+                                    "entity": "input_number.zigbee2mqtt_join_minutes"
                                 },
                                 {
                                     "type": "divider",
@@ -258,6 +264,9 @@
                                     "entity": "input_text.zigbee2mqtt_remove"
                                 },
                                 {
+                                    "entity": "input_boolean.zigbee2mqtt_force_remove"
+                                },
+                                {
                                     "entity": "script.zigbee2mqtt_remove"
                                 },
                                 {
@@ -270,7 +279,9 @@
                                         "background": "#62717b"
                                     }
                                 },
-                                "input_select.zigbee2mqtt_log_level"
+                                {
+                                    "entity": "input_select.zigbee2mqtt_log_level"
+                                }
                             ],
                             "show_header_toggle": false,
                             "title": "Operazioni Sistema Zigbee2mqtt",
