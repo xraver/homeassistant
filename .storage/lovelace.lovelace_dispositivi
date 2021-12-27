@@ -127,41 +127,143 @@
                     ]
                 },
                 {
+                    "icon": "mdi:zigbee",
                     "title": "Zigbee",
                     "path": "zigbee",
-                    "icon": "mdi:zigbee",
                     "badges": [],
                     "cards": [
                         {
-                            "type": "vertical-stack",
-                            "title": "Batteria Dispositivi ZigBee",
-                            "layout": "vertical",
-                            "cards": [
+                            "entities": [
                                 {
-                                    "type": "custom:battery-state-card",
-                                    "sort_by_level": "desc",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.porta_casa_battery",
-                                            "name": "Porta Casa"
-                                        },
-                                        {
-                                            "entity": "sensor.temperatura_balcone_battery",
-                                            "name": "Temperatura Balcone"
-                                        },
-                                        {
-                                            "entity": "sensor.temperatura_veranda_battery",
-                                            "name": "Temperatura Veranda"
-                                        },
-                                        {
-                                            "entity": "sensor.spare_door_battery",
-                                            "name": "Spare Door"
-                                        },
-                                        {
-                                            "entity": "sensor.wireless_switch_battery",
-                                            "name": "Wireless Switch"
-                                        }
-                                    ]
+                                    "entity": "sensor.zigbee2mqtt_stato_bridge"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_stato_permit_join"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_stato_log_level"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_versione_bridge"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_versione_coordinator"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_canale"
+                                },
+                                {
+                                    "entity": "sensor.zigbee2mqtt_panid"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Stato Sistema Zigbee2mqtt",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "script.zigbee2mqtt_restart"
+                                },
+                                {
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
+                                },
+                                {
+                                    "entity": "switch.zigbee2mqtt_abilita_join"
+                                },
+                                {
+                                    "entity": "timer.zigbee_permit_join"
+                                },
+                                {
+                                    "entity": "input_number.zigbee2mqtt_join_minutes"
+                                },
+                                {
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
+                                },
+                                {
+                                    "entity": "input_text.zigbee2mqtt_old_name"
+                                },
+                                {
+                                    "entity": "input_text.zigbee2mqtt_new_name"
+                                },
+                                {
+                                    "entity": "script.zigbee2mqtt_rename"
+                                },
+                                {
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
+                                },
+                                {
+                                    "entity": "input_text.zigbee2mqtt_remove"
+                                },
+                                {
+                                    "entity": "input_boolean.zigbee2mqtt_force_remove"
+                                },
+                                {
+                                    "entity": "script.zigbee2mqtt_remove"
+                                },
+                                {
+                                    "type": "divider",
+                                    "style": {
+                                        "height": "1px",
+                                        "width": "98%",
+                                        "margin-left": "auto",
+                                        "margin-right": "auto",
+                                        "background": "#62717b"
+                                    }
+                                },
+                                {
+                                    "entity": "input_select.zigbee2mqtt_log_level"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Operazioni Sistema Zigbee2mqtt",
+                            "type": "entities"
+                        },
+                        {
+                            "type": "custom:battery-state-card",
+                            "title": "Batteria Dispositivi ZigBee",
+                            "sort_by_level": "desc",
+                            "entities": [
+                                {
+                                    "entity": "sensor.porta_casa_battery",
+                                    "name": "Porta Casa"
+                                },
+                                {
+                                    "entity": "sensor.temperatura_balcone_battery",
+                                    "name": "Temperatura Balcone"
+                                },
+                                {
+                                    "entity": "sensor.temperatura_veranda_battery",
+                                    "name": "Temperatura Veranda"
+                                },
+                                {
+                                    "entity": "sensor.spare_door_battery",
+                                    "name": "Spare Door"
+                                },
+                                {
+                                    "entity": "sensor.wireless_switch_battery",
+                                    "name": "Wireless Switch"
                                 }
                             ]
                         },
