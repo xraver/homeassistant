@@ -68,8 +68,8 @@ exclude:
     - sensor.canon_tr8500_series_magenta
     - sensor.canon_tr8500_series_yellow
     # CO2
-    - sensor.co2_intensity
-    - sensor.grid_fossil_fuel_percentage
+    - sensor.it_no_co2_intensity
+    - sensor.it_no_grid_fossil_fuel_percentage
   domains:
     - automation
     - button
@@ -77,6 +77,7 @@ exclude:
     - group
     - input_boolean
     - input_datetime
+    - input_number
     - input_select
     - input_text
     - script
