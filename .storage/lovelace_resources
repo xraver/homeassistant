@@ -30,7 +30,7 @@
                 "url": "/hacsfiles/hass-shutter-card/hass-shutter-card.js?hacstag=269011342130"
             },
             {
-                "url": "/hacsfiles/battery-state-card/battery-state-card.js?hacstag=256292682202",
+                "url": "/hacsfiles/battery-state-card/battery-state-card.js?hacstag=256292682210",
                 "type": "module",
                 "id": "74408ca439a142a1838d883c03a0142c"
             },
@@ -58,6 +58,21 @@
                 "url": "/hacsfiles/scheduler-card/scheduler-card.js?hacstag=286270157230",
                 "type": "module",
                 "id": "77dd572c367b411e94bd21cae1b36064"
+            },
+            {
+                "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js?hacstag=167744584191",
+                "type": "module",
+                "id": "1b3f1dffcb1b46078bc5043c4b3ea87b"
+            },
+            {
+                "url": "/hacsfiles/lovelace-hui-element/hui-element.js?hacstag=24994205477482",
+                "type": "module",
+                "id": "e2668198d26046029f0b724ae89eaa06"
+            },
+            {
+                "url": "/hacsfiles/lovelace-paper-buttons-row/paper-buttons-row.js?hacstag=244872232100",
+                "type": "module",
+                "id": "0a20ea53d2e24828aaddaa5c60d7cf0d"
             }
         ]
     }
