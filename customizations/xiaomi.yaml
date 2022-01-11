@@ -49,10 +49,6 @@ sensor.temperatura_veranda_voltage:
   friendly_name: 'Spare Door: Tensione'
 
 # Wireless Switch
-sensor.wireless_switch_click:
-  friendly_name: 'Wireless Switch'
-sensor.wireless_switch_action:
-  friendly_name: 'Wireless Switch: Azione'
 sensor.wireless_switch_battery:
   friendly_name: 'Wireless Switch: Batteria'
 sensor.wireless_switch_linkquality:
