@@ -5,7 +5,7 @@
 homeassistant:
   customize:
     script.shelly_upgrade:
-      icon: mdi:cellphone-arrow-down
+      icon: mdi:package-up
     script.shelly_reboot:
       icon: mdi:restart
 
