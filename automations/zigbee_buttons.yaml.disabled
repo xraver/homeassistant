@@ -1,7 +1,7 @@
 ######################################################################
 # Zigbee Buttons: Wireless Switch - Single Click
 ######################################################################
-- alias: wireless_switch_single
+- alias: wireless_button_single
   trigger:
   - domain: mqtt
     platform: device
@@ -16,7 +16,7 @@
 ######################################################################
 # Zigbee Buttons: Wireless Switch - Double Click
 ######################################################################
-- alias: wireless_switch_double
+- alias: wireless_button_double
   trigger:
   - domain: mqtt
     platform: device
@@ -31,7 +31,7 @@
 ######################################################################
 # Zigbee Buttons: Wireless Switch - Triple Click
 ######################################################################
-- alias: wireless_switch_triple
+- alias: wireless_button_triple
   trigger:
   - domain: mqtt
     platform: device
@@ -46,7 +46,7 @@
 ######################################################################
 # Zigbee Buttons: Wireless Switch - Long Click
 ######################################################################
-- alias: wireless_switch_long
+- alias: wireless_button_long
   trigger:
   - domain: mqtt
     platform: device
