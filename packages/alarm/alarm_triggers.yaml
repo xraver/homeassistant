@@ -9,7 +9,7 @@ automation:
   # Actions:
   # - script.start_alarm
   ######################################################################
-  - alias: "Allarme Porta Casa"
+  - alias: "Allarmi: Porta Casa"
 
     trigger:
       - platform: state
@@ -34,7 +34,7 @@ automation:
   # Actions:
   # - script.start_alarm
   ######################################################################
-  - alias: "Allarmi Auto"
+  - alias: "Allarmi: Auto"
 
     trigger:
       - platform: state

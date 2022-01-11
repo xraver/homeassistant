@@ -41,7 +41,7 @@ automation:
         entity_id: group.residents
         from: 'home'
       - platform: homeassistant
-        event: start  
+        event: start
 
     condition: "{{ not is_state('group.residents', 'home') }}"
 
@@ -60,7 +60,7 @@ automation:
         entity_id: group.residents
         to: 'home'
       - platform: homeassistant
-        event: start 
+        event: start
 
     condition: "{{ is_state('group.residents', 'home') }}"
 

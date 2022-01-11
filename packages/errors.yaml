@@ -31,10 +31,10 @@ input_boolean:
 
 automation:
   ######################################################################
-  # Climate: Schedule according to Condominium
-  # - script.turn_on
+  # Error generation
+  # - input_boolean.turn_on
   ######################################################################
-  - alias: "Errori Home Assistant: Insorgenza Errore"
+  - alias: "Home Assistant -  Errori: Insorgenza Errore"
 
     trigger:
     - event_data:
@@ -56,10 +56,10 @@ automation:
           entity_id: input_boolean.home_assistant_error
 
   ######################################################################
-  # Climate: Schedule according to Condominium
-  # - script.turn_on
+  # Error removal
+  # - input_boolean.turn_off
   ######################################################################
-  - alias: "Errori Home Assistant: Scomparsa Errore"
+  - alias: "Home Assistant -  Errori: Scomparsa Errore"
 
     trigger:
     - event_data:

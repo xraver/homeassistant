@@ -29,12 +29,12 @@ automation:
   # - persistent_notification.dismiss
   # - script.stop_alarm
   ######################################################################
-  - alias: "Alarms: Riconoscimento Allarmi"
+  - alias: "Allarmi: Riconoscimento Allarmi"
 
     trigger:
       platform: state
       entity_id: group.alarms
       to: 'off'
-      
+
     action:
       - service: script.stop_alarm

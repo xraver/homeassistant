@@ -2,12 +2,12 @@
 # Startup Automation: Restart on Error
 ######################################################################
 
-- alias: "Startup: Restart on Error"
+- alias: "Home Assistant - Startup: Restart on Error"
 
   trigger:
     - platform: homeassistant
       event: start
-  
+
   action:
     - delay: 00:00:60
     - condition: state
@@ -19,7 +19,7 @@
 # Startup Automation: Google Sync
 ######################################################################
 
-- alias: "Startup: Google Sync"
+- alias: "Home Assistant - Startup: Google Sync"
 
   trigger:
     - platform: homeassistant

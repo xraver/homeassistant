@@ -2,7 +2,7 @@
 # Themes: Management of Day/Night Mode
 ######################################################################
 
-- alias: "Temi: Modalità giorno/Notte"
+- alias: "Home Assistant - Temi: Modalità Giorno/Notte"
 
   trigger:
     - platform: homeassistant

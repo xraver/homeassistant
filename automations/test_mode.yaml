@@ -2,7 +2,7 @@
 # Test Mode: Enable Action
 ######################################################################
 
-- alias: "Modalità Test: Azione on"
+- alias: "Home Assistant - Modalità Test: Azione on"
 
   trigger:
     - platform: state
@@ -12,16 +12,16 @@
   action:
 
     - service: automation.turn_off
-      entity_id: automation.startup_restart_on_error
+      entity_id: automation.home_assistant_startup_restart_on_error
 
     - service: automation.turn_off
-      entity_id: automation.startup_google_sync
+      entity_id: automation.home_assistant_startup_google_sync
 
 ######################################################################
 # Test Mode: Disable Action
 ######################################################################
 
-- alias: "Modalità Test: Azione off"
+- alias: "Home Assistant - Modalità Test: Azione off"
 
   trigger:
     - platform: state
@@ -30,7 +30,7 @@
 
   action:
     - service: automation.turn_on
-      entity_id: automation.startup_restart_on_error
+      entity_id: automation.home_assistant_startup_restart_on_error
 
     - service: automation.turn_on
-      entity_id: automation.startup_google_sync
+      entity_id: automation.home_assistant_startup_google_sync
