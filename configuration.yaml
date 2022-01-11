@@ -64,8 +64,8 @@ image:
 # Inputs
 input_boolean: !include_dir_merge_named input_boolean/
 input_datetime: !include_dir_merge_named input_datetime/
-#input_number: !include_dir_merge_list input_number/
-#input_select: !include_dir_merge_list input_select/
+#input_number: !include_dir_merge_named input_number/
+input_select: !include_dir_merge_named input_select/
 input_text: !include_dir_merge_named input_text/
 
 # Enables a map showing the location of tracked devices
