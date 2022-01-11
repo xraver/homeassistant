@@ -1,0 +1,17 @@
+######################################################################
+# Input Select: Automation Selector for lovelace panel
+######################################################################
+
+automation_selector:
+  name: Selettore Automazioni
+  options:
+    - Allarmi
+    - Luci
+    - Guardia
+    - Home Assistant
+    - Termosifoni
+    - Shelly
+    - Vacanza
+    - Zigbee2MQTT
+  initial: Luci
+  icon: mdi:cogs
