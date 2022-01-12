@@ -23,6 +23,27 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * HomeKit
 * LG WebOS TV (LG 28TL510S-PZ)
 
+## Custom Component Used
+### Integrations
+* [HACS](https://github.com/hacs/integration)
+* [MercedeME 2020](https://github.com/ReneNulschDE/mbapi2020)
+* [Scheduler Component]()
+### Frontend
+* [auto-entities](https://github.com/thomasloven/lovelace-auto-entities)
+* [Bar Card](https://github.com/custom-cards/bar-card)
+* [Battery State Card](https://github.com/maxwroc/battery-state-card)
+* [button-card](https://github.com/custom-cards/button-card)
+* [card-mod](https://github.com/thomasloven/lovelace-card-mod)
+* [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
+* [hui-element](https://github.com/thomasloven/lovelace-hui-element)
+* [layout-card](https://github.com/thomasloven/lovelace-layout-card)
+* [Lovelace Swipe Navigation](https://github.com/maykar/lovelace-swipe-navigation)
+* [mini-graph-card](https://github.com/kalkih/mini-graph-card)
+* [Reeder Dark Theme](https://github.com/hekm77/reeder_dark_theme)
+* [Scheduler Card](https://github.com/nielsfaber/scheduler-card)
+* [Shutter Card](https://github.com/Deejayfool/hass-shutter-card)
+* [Zigbee2mqtt Networkmap Card](https://github.com/azuwis/zigbee2mqtt-networkmap)
+
 ## Installation
 * Clone repository
 * Add the following files:
