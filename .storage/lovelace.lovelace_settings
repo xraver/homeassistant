@@ -358,6 +358,15 @@
                                             "template": "generic_themed_input_select",
                                             "entity": "input_select.automation_selector",
                                             "variables": {
+                                                "value_select": "Tutte"
+                                            },
+                                            "icon": "mdi:cog"
+                                        },
+                                        {
+                                            "type": "custom:button-card",
+                                            "template": "generic_themed_input_select",
+                                            "entity": "input_select.automation_selector",
+                                            "variables": {
                                                 "value_select": "Allarmi"
                                             },
                                             "icon": "mdi:alarm"
@@ -437,7 +446,7 @@
                                         "state_color": true
                                     },
                                     "filter": {
-                                        "template": "[ {% for auto in states.automation %}\n    {% if states['input_select.automation_selector'].state.upper().replace(\" \",\"_\") in auto.entity_id.upper() %}\n      {'entity': '{{ auto.entity_id }}', 'secondary_info': 'last-triggered'},\n    {% endif %}\n  {% endfor %} ]\n"
+                                        "template": "[ {% for auto in states.automation %}\n    {% if states['input_select.automation_selector'].state.upper().replace(\" \",\"_\") in auto.entity_id.upper() or \n          states['input_select.automation_selector'].state == \"Tutte\" %}\n      {'entity': '{{ auto.entity_id }}', 'secondary_info': 'last-triggered'},\n    {% endif %}\n  {% endfor %} ]\n"
                                     },
                                     "sort": {
                                         "method": "name",

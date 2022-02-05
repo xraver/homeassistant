@@ -5,6 +5,7 @@
 automation_selector:
   name: Selettore Automazioni
   options:
+    - Tutte
     - Allarmi
     - Luci
     - Guardia
@@ -13,5 +14,5 @@ automation_selector:
     - Shelly
     - Vacanza
     - Zigbee2MQTT
-  initial: Luci
+  initial: Tutte
   icon: mdi:cogs
