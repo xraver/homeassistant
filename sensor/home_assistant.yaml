@@ -22,17 +22,3 @@
         {% elif is_state('input_boolean.home_mode_away', 'on') %}
           mdi:airplane-takeoff
         {% endif %}
-
-######################################################################
-# Sensor: Home Assistant version
-######################################################################
-
-- platform: version
-  name: "Home Assistant: Current Version"
-  source: local
-
-#- platform: version
-#  name: "Home Assistant: Latest Version"
-#  source: container
-#  scan_interval: 21600
-

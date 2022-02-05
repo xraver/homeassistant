@@ -35,6 +35,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * [button-card](https://github.com/custom-cards/button-card)
 * [card-mod](https://github.com/thomasloven/lovelace-card-mod)
 * [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
+* [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
 * [hui-element](https://github.com/thomasloven/lovelace-hui-element)
 * [layout-card](https://github.com/thomasloven/lovelace-layout-card)
 * [Lovelace Swipe Navigation](https://github.com/maykar/lovelace-swipe-navigation)
@@ -66,6 +67,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
   * Sony Bravia
   * SpeedTest
   * UPNP
+  * Version (local)
 * Restart Home Assistant
 
 ## Editor
