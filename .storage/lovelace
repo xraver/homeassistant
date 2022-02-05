@@ -406,12 +406,22 @@
                                 "light.luci_casa",
                                 "light.luce_cucina",
                                 "light.luce_corridoio",
-                                "light.luci_sala",
-                                "light.luce_sala",
-                                "light.luce_divano",
-                                "light.luci_bagno",
-                                "light.luce_bagno",
-                                "light.luce_specchio",
+                                {
+                                    "type": "custom:fold-entity-row",
+                                    "head": "light.luci_sala",
+                                    "entities": [
+                                        "light.luce_sala",
+                                        "light.luce_divano"
+                                    ]
+                                },
+                                {
+                                    "type": "custom:fold-entity-row",
+                                    "head": "light.luci_bagno",
+                                    "entities": [
+                                        "light.luce_bagno",
+                                        "light.luce_specchio"
+                                    ]
+                                },
                                 "light.luce_studio",
                                 "light.luce_camera",
                                 "light.luce_balcone"
@@ -855,10 +865,10 @@
                             "styles": {
                                 "card": [
                                     {
-                                        "background-color": "transparent"
+                                        "background-color": "white"
                                     },
                                     {
-                                        "box-shadow": "0px 0px 0px 0px"
+                                        "box-shadow": "0.5px 0.5px 0px 0px rgba(128,128,128,0.3)"
                                     }
                                 ],
                                 "label": [
