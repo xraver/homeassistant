@@ -84,7 +84,7 @@
                                 {
                                     "entities": [
                                         {
-                                            "entity": "sensor.home_assistant_current_version"
+                                            "entity": "sensor.current_version"
                                         },
                                         {
                                             "entity": "sensor.cert_expiry_timestamp_server_giorgioravera_it"

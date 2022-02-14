@@ -26,7 +26,7 @@ exclude:
     - binary_sensor.home_mode
     - binary_sensor.speech_notifications
     - binary_sensor.text_notifications
-    - sensor.home_assistant_current_version
+    - sensor.current_version
     - sensor.cert_expiry_server_giorgioravera_it
     - sensor.cert_expiry_timestamp_server_giorgioravera_it
     # Energy Sensors

@@ -19,3 +19,6 @@ script.homeassistant_upgrade:
 
 script.homeassistant_google_home_sync:
   icon: mdi:google-home
+
+sensor.current_version:
+  friendly_name: "Versione Home Assistant"
