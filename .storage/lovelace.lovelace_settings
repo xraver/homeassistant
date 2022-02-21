@@ -277,7 +277,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "sensor.ip_1"
+                                    "entity": "sensor.xraver_duckdns_org"
                                 }
                             ],
                             "title": "External IP",

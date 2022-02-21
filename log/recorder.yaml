@@ -62,6 +62,8 @@ exclude:
     - sensor.freebsd_router_packets_sent
     - sensor.freebsd_router_packets_s_received
     - sensor.freebsd_router_packets_s_sent
+    # DNS IP
+    - sensor.xraver_duckdns_org
     # Canon
     - sensor.canon_tr8500_series
     - sensor.canon_tr8500_series_black_bk

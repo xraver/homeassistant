@@ -55,6 +55,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * Start Home Assistant
 * Create Users/People
 * Configure the following integrations using UI:
+  * DNS IP
   * Certificate Expiry
   * CO2 Signal
   * Google Calendar
