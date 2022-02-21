@@ -16,7 +16,17 @@
       entity_id: binary_sensor.porta_casa_contact
       to: 'on'
 
-  condition: "{{ (state_attr('sun.sun', 'elevation') | int) < 1 }}"
+  condition:
+    condition: and
+    conditions:
+      - condition: numeric_state
+        entity_id: sun.sun
+        value_template: "{{ state.attributes.elevation }}"
+        below: 1
+      - condition: time
+        after: "15:00:00"
+        before: "05:00:00"
+
 
   action:
     - delay: 00:00:01
