@@ -62,6 +62,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
   * Google Cast
   * HACS
   * Internet Printing Protocol
+  * LG webOS Smart TV
   * Mercedes Me
   * MQTT
   * Shelly Devices (with the exception of Shelly Bulb)

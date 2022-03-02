@@ -1,5 +1,6 @@
 {
     "version": 1,
+    "minor_version": 1,
     "key": "lovelace.lovelace_multimedia",
     "data": {
         "config": {
@@ -1366,6 +1367,10 @@
                                         }
                                     ],
                                     "type": "horizontal-stack"
+                                },
+                                {
+                                    "type": "media-control",
+                                    "entity": "media_player.lg_anna"
                                 },
                                 {
                                     "type": "entities",

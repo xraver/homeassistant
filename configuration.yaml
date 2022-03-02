@@ -215,13 +215,3 @@ netatmo: !include components/netatmo.yaml
 
 # Telegram
 telegram_bot: !include components/telegram.yaml
-
-# LG WebOS TV
-webostv: !include components/webostv.yaml
-
-###########################################################
-# Custom Components
-###########################################################
-
-# Mercedes Me
-#mercedesmeapi: !include components/mercedesme.yaml
