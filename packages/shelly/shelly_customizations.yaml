@@ -302,6 +302,10 @@ homeassistant:
       friendly_name: Energia Restituita Canale 2
     sensor.shelly_em_channel_2_voltage:
       friendly_name: Tensione Canale 2
+    sensor.shelly_em_channel_1_power_factor:
+      friendly_name: Fattore di Potenza Canale 1
+    sensor.shelly_em_channel_2_power_factor:
+      friendly_name: Fattore di Potenza Canale 2
     binary_sensor.shelly_em_overpowering:
       friendly_name: Shelly EM - Sovraccarico Energetico
     binary_sensor.shelly_em_cloud:

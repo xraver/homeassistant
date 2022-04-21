@@ -130,6 +130,8 @@ history:
       - sensor.shelly_em_channel_2_energy
       - sensor.shelly_em_channel_2_energy_returned
       - sensor.shelly_em_channel_2_voltage
+      - sensor.shelly_em_channel_1_power_factor
+      - sensor.shelly_em_channel_2_power_factor
       - binary_sensor.shelly_em_overpowering
       - binary_sensor.shelly_em_cloud
       - binary_sensor.shelly_em_firmware_update
@@ -268,6 +270,8 @@ logbook:
       - sensor.shelly_em_channel_2_energy
       - sensor.shelly_em_channel_2_energy_returned
       - sensor.shelly_em_channel_2_voltage
+      - sensor.shelly_em_channel_1_power_factor
+      - sensor.shelly_em_channel_2_power_factor
       - binary_sensor.shelly_em_overpowering
       - binary_sensor.shelly_em_cloud
       - binary_sensor.shelly_em_firmware_update
@@ -406,6 +410,8 @@ recorder:
       - sensor.shelly_em_channel_2_energy
       - sensor.shelly_em_channel_2_energy_returned
       - sensor.shelly_em_channel_2_voltage
+      - sensor.shelly_em_channel_1_power_factor
+      - sensor.shelly_em_channel_2_power_factor
       - binary_sensor.shelly_em_overpowering
       - binary_sensor.shelly_em_cloud
       - binary_sensor.shelly_em_firmware_update
