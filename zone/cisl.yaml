@@ -1,0 +1,9 @@
+######################################################################
+# Zone: CAF CISL
+######################################################################
+
+name: CISL
+latitude: !secret cisl_latitude
+longitude: !secret cisl_longitude
+radius: 40
+icon: mdi:domain
