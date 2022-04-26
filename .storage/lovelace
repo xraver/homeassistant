@@ -1410,6 +1410,53 @@
                             }
                         },
                         {
+                            "type": "custom:plotly-graph",
+                            "entities": [
+                                "sensor.shelly_em_channel_1_power"
+                            ],
+                            "hours_to_show": 24,
+                            "refresh_interval": 0,
+                            "title": "Consumo Eenergetico",
+                            "layout": {
+                                "height": 500,
+                                "xaxis": {
+                                    "rangeselector": {
+                                        "buttons": [
+                                            {
+                                                "count": 1,
+                                                "step": "hour"
+                                            },
+                                            {
+                                                "count": 6,
+                                                "step": "hour"
+                                            },
+                                            {
+                                                "count": 12,
+                                                "step": "hour"
+                                            },
+                                            {
+                                                "count": 1,
+                                                "step": "day"
+                                            },
+                                            {
+                                                "count": 2,
+                                                "step": "day"
+                                            },
+                                            {
+                                                "count": 7,
+                                                "step": "day"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "config": {
+                                "scrollZoom": true,
+                                "displayModeBar": false,
+                                "displaylogo": false
+                            }
+                        },
+                        {
                             "entities": [
                                 {
                                     "entity": "sensor.consumo_energetico_giornaliero"
@@ -1421,19 +1468,8 @@
                             "title": "Consumi",
                             "type": "entities",
                             "view_layout": {
-                                "position": "sidebar"
+                                "position": "main"
                             }
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "sensor.shelly_em_channel_1_power"
-                                }
-                            ],
-                            "hours_to_show": 24,
-                            "refresh_interval": 0,
-                            "title": "Consumo Eenergetico"
                         }
                     ]
                 },
