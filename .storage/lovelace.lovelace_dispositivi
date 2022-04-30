@@ -6,77 +6,823 @@
         "config": {
             "views": [
                 {
-                    "title": "NAS",
-                    "path": "nas",
-                    "icon": "mdi:nas",
-                    "panel": true,
+                    "title": "Dispositivi di Rete",
+                    "path": "network-devices",
+                    "icon": "mdi:network-outline",
+                    "type": "custom:horizontal-layout",
+                    "layout": {
+                        "width": 300,
+                        "max_cols": 3
+                    },
                     "badges": [],
                     "cards": [
                         {
-                            "type": "custom:layout-card",
-                            "cards": [
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
                                 {
-                                    "type": "vertical-stack",
-                                    "title": "NAS QNAP TS-228A",
-                                    "cards": [
-                                        {
-                                            "type": "picture",
-                                            "image": "/local/images/devices/qnap_ts228a.png"
-                                        }
-                                    ]
+                                    "type": "section",
+                                    "label": "Intel NUC10i5FNH"
                                 },
                                 {
-                                    "type": "vertical-stack",
-                                    "title": "Operazioni",
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
                                     "cards": [
                                         {
-                                            "type": "entities",
-                                            "show_header_toggle": false,
-                                            "entities": [
-                                                "switch.nas",
-                                                "script.plex_start",
-                                                "script.plex_stop"
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/intel_nuc.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "https://pve.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "binary_sensor.pve_server_running",
+                                                            "name": "VM Debian",
+                                                            "show_name": true,
+                                                            "show_icon": true,
+                                                            "show_state": false,
+                                                            "color-type": "card",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "state": [
+                                                                {
+                                                                    "value": "on",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "lightgreen"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "value": "off",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "grey"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "binary_sensor.pve_docker_running",
+                                                            "name": "VM Docker",
+                                                            "show_name": true,
+                                                            "show_icon": true,
+                                                            "show_state": false,
+                                                            "color-type": "card",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "state": [
+                                                                {
+                                                                    "value": "on",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "lightgreen"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "value": "off",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "grey"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "binary_sensor.pve_firewall_running",
+                                                            "name": "VM Firewall",
+                                                            "show_name": true,
+                                                            "show_icon": true,
+                                                            "show_state": false,
+                                                            "color-type": "card",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "state": [
+                                                                {
+                                                                    "value": "on",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "lightgreen"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "value": "off",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "grey"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "binary_sensor.pve_asterisk_running",
+                                                            "name": "VM Asterisk",
+                                                            "show_name": true,
+                                                            "show_icon": true,
+                                                            "show_state": false,
+                                                            "color-type": "card",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "state": [
+                                                                {
+                                                                    "value": "on",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "lightgreen"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "value": "off",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "grey"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
                                             ]
                                         }
                                     ]
                                 }
-                            ],
-                            "layout": "vertical"
-                        }
-                    ]
-                },
-                {
-                    "title": "Stampante",
-                    "path": "printer",
-                    "icon": "mdi:printer",
-                    "panel": true,
-                    "badges": [],
-                    "cards": [
+                            ]
+                        },
                         {
-                            "type": "custom:layout-card",
-                            "cards": [
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
                                 {
-                                    "type": "vertical-stack",
-                                    "title": "Canon PIXMA TR8550",
-                                    "cards": [
-                                        {
-                                            "type": "picture",
-                                            "title": "Canon PIXMA TR8550",
-                                            "image": "/local/images/devices/canon_tr8550.png"
-                                        }
-                                    ]
+                                    "type": "section",
+                                    "label": "NAS QNAP TS-228A"
                                 },
                                 {
-                                    "type": "vertical-stack",
-                                    "title": "Dati",
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
                                     "cards": [
                                         {
-                                            "type": "entity",
-                                            "entity": "sensor.canon_tr8500_series",
-                                            "name": "Stato"
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/qnap_ts228a.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "https://nas.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "switch.nas",
+                                                            "name": "Stato",
+                                                            "show_name": false,
+                                                            "show_icon": true,
+                                                            "show_state": true,
+                                                            "color-type": "card",
+                                                            "icon": "mdi:power",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "state": [
+                                                                {
+                                                                    "value": "on",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "lightgreen"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "value": "off",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "grey"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "tap_action": {
+                                                                "action": "toggle",
+                                                                "confirmation": {
+                                                                    "text": "Sei sicuro di voler procedere?"
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "name": "Gestione",
+                                                            "show_name": true,
+                                                            "show_icon": true,
+                                                            "show_state": true,
+                                                            "icon": "mdi:cogs",
+                                                            "tap_action": {
+                                                                "action": "url",
+                                                                "url_path": "https://nas.giorgioravera.it"
+                                                            },
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "script.plex_start",
+                                                            "name": "Avvia Plex",
+                                                            "show_icon": true,
+                                                            "show_state": false,
+                                                            "icon": "mdi:plex",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "tap_action": {
+                                                                "action": "call-service",
+                                                                "confirmation": {
+                                                                    "text": "Sei sicuro di voler avviare Plex?"
+                                                                },
+                                                                "service": "script.plex_start"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "script.plex_stop",
+                                                            "name": "Ferma Plex",
+                                                            "show_icon": true,
+                                                            "show_state": false,
+                                                            "icon": "mdi:plex",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "tap_action": {
+                                                                "action": "call-service",
+                                                                "confirmation": {
+                                                                    "text": "Sei sicuro di voler fermare Plex?"
+                                                                },
+                                                                "service": "script.plex_stop"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Canon PIXMA TR8550"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0.0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/canon_tr8550.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://stampante.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "name": "Gestione",
+                                                            "show_name": true,
+                                                            "show_icon": true,
+                                                            "show_state": true,
+                                                            "icon": "mdi:cogs",
+                                                            "tap_action": {
+                                                                "action": "url",
+                                                                "url_path": "http://stampante.giorgioravera.it"
+                                                            },
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "sensor.canon_tr8500_series",
+                                                            "name": "Stato",
+                                                            "show_name": false,
+                                                            "show_icon": true,
+                                                            "show_state": true,
+                                                            "icon": "[[[\n  if (entity.state==\"idle\")\n    return \"mdi:printer\"\n  else\n    return \"mdi:printer-settings\"\n]]]\n",
+                                                            "styles": {
+                                                                "grid": [
+                                                                    {
+                                                                        "grid-template-columns": "50px auto"
+                                                                    }
+                                                                ],
+                                                                "icon": [
+                                                                    {
+                                                                        "padding": "0px 0px"
+                                                                    },
+                                                                    {
+                                                                        "height": "25px"
+                                                                    },
+                                                                    {
+                                                                        "width": "25px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ],
+                                                                "card": [
+                                                                    {
+                                                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                                                    },
+                                                                    {
+                                                                        "--ha-card-box-shadow": "none"
+                                                                    }
+                                                                ],
+                                                                "name": [
+                                                                    {
+                                                                        "padding": "0px 10px"
+                                                                    },
+                                                                    {
+                                                                        "justify-self": "start"
+                                                                    },
+                                                                    {
+                                                                        "font-family": "Roboto, sans-serif"
+                                                                    },
+                                                                    {
+                                                                        "font-size": "15px"
+                                                                    },
+                                                                    {
+                                                                        "color": "var(--primary-text-color)"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "state": [
+                                                                {
+                                                                    "value": "printing",
+                                                                    "styles": {
+                                                                        "icon": [
+                                                                            {
+                                                                                "color": "yellow"
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         },
                                         {
                                             "type": "custom:bar-card",
+                                            "show_header_toggle": false,
+                                            "state_color": false,
+                                            "positions": {
+                                                "indicator": "off",
+                                                "name": "outside",
+                                                "value": "outside",
+                                                "icon": "inside"
+                                            },
+                                            "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\nbar-card-value {\n  \n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nbar-card-name {\n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nha-icon {\n  color: darkgrey;\n}",
                                             "entities": [
                                                 {
                                                     "entity": "sensor.canon_tr8500_series_black_bk",
@@ -108,181 +854,834 @@
                                                     "color": "yellow",
                                                     "width": "85%"
                                                 }
-                                            ],
-                                            "title": "Livello Inchiostro",
-                                            "show_header_toggle": false,
-                                            "state_color": false,
-                                            "positions": {
-                                                "icon": "off",
-                                                "indicator": "off",
-                                                "name": "outside",
-                                                "value": "outside"
-                                            }
+                                            ]
                                         }
                                     ]
                                 }
-                            ],
-                            "layout": "vertical"
+                            ]
                         }
                     ]
                 },
                 {
-                    "icon": "mdi:zigbee",
-                    "title": "Zigbee",
-                    "path": "zigbee",
+                    "title": "Shelly",
+                    "path": "shelly",
+                    "icon": "mdi:alpha-s-box",
+                    "type": "custom:horizontal-layout",
+                    "layout": {},
                     "badges": [],
                     "cards": [
                         {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
                             "entities": [
                                 {
-                                    "entity": "sensor.zigbee2mqtt_stato_bridge"
+                                    "type": "section",
+                                    "label": "Shelly 1 - Tapparella Cucina"
                                 },
                                 {
-                                    "entity": "sensor.zigbee2mqtt_stato_permit_join"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_stato_log_level"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_versione_bridge"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_versione_coordinator"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_canale"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_panid"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Stato Sistema Zigbee2mqtt",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "script.zigbee2mqtt_restart"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "switch.zigbee2mqtt_abilita_join"
-                                },
-                                {
-                                    "entity": "timer.zigbee_permit_join"
-                                },
-                                {
-                                    "entity": "input_number.zigbee2mqtt_join_minutes"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "input_text.zigbee2mqtt_old_name"
-                                },
-                                {
-                                    "entity": "input_text.zigbee2mqtt_new_name"
-                                },
-                                {
-                                    "entity": "script.zigbee2mqtt_rename"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "input_text.zigbee2mqtt_remove"
-                                },
-                                {
-                                    "entity": "input_boolean.zigbee2mqtt_force_remove"
-                                },
-                                {
-                                    "entity": "script.zigbee2mqtt_remove"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "input_select.zigbee2mqtt_log_level"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Operazioni Sistema Zigbee2mqtt",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "custom:battery-state-card",
-                            "title": "Batteria Dispositivi ZigBee",
-                            "sort_by_level": "desc",
-                            "entities": [
-                                {
-                                    "entity": "sensor.porta_casa_battery",
-                                    "name": "Porta Casa"
-                                },
-                                {
-                                    "entity": "sensor.temperatura_balcone_battery",
-                                    "name": "Temperatura Balcone"
-                                },
-                                {
-                                    "entity": "sensor.temperatura_veranda_battery",
-                                    "name": "Temperatura Veranda"
-                                },
-                                {
-                                    "entity": "sensor.spare_door_battery",
-                                    "name": "Spare Door"
-                                },
-                                {
-                                    "entity": "sensor.wireless_switch_battery",
-                                    "name": "Wireless Switch"
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly25.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly1.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "cover.tapparella_cucina",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.tapparella_cucina_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_cucina_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_cucina_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "type": "vertical-stack",
-                            "title": "Mappa Dispositivi",
-                            "layout": "vertical",
-                            "cards": [
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
                                 {
-                                    "title": "Zigbee2mqtt Network Map",
-                                    "type": "custom:zigbee2mqtt-networkmap",
-                                    "entity": "sensor.zigbee2mqtt_networkmap",
-                                    "mqtt_base_topic": "zigbee2mqtt",
-                                    "force": 3000,
-                                    "node_size": 16,
-                                    "font_size": 12,
-                                    "link_width": 2,
-                                    "height": 400,
-                                    "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n}\n"
+                                    "type": "section",
+                                    "label": "Shelly 2 - Tapparella Sala"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly25.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly2.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "layout": "icon_name_state",
+                                                            "entity": "cover.tapparella_sala",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.tapparella_sala_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_sala_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_sala_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 3 - Tapparella Studio"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly25.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly3.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "cover.tapparella_studio",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.tapparella_studio_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_studio_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_studio_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 4 - Tapparella Camera"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly25.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly4.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "cover.tapparella_camera",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.tapparella_camera_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_camera_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.tapparella_camera_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 5 - Luce Corridoio"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly1.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly5.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_corridoio",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.luce_corridoio_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_corridoio_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_corridoio_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 6 - Luce Cucina"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly1.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly6.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_cucina",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.luce_cucina_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_cucina_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_cucina_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 7 - Luce Sala"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly_dimmer.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly7.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_sala",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.luce_sala_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_sala_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_sala_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 8 - Luci Bagno"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly25.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly7.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_bagno",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_specchio",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.luci_bagno_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luci_bagno_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luci_bagno_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 9 - Luce Studio"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly1.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly9.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_studio",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.luce_studio_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_studio_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_studio_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 10 - Luce Camera"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly_dimmer.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly10.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_camera",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.luce_camera_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_camera_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_camera_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly 11 - Luce Balcone"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly1.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shelly11.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "light.luce_balcone",
+                                                            "name": "Stato"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.luce_balcone_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_balcone_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.luce_balcone_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "visible": false,
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Shelly EM"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/shelly/shelly_em.png",
+                                                    "tap_action": {
+                                                        "action": "url",
+                                                        "url_path": "http://shellyem.giorgioravera.it"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.shelly_em_channel_1_power",
+                                                            "name": "Potenza",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.shelly_em_channel_1_voltage",
+                                                            "name": "Tensione",
+                                                            "icon": "mdi:alpha-v-box",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.shelly_em_channel_1_power_factor",
+                                                            "name": "FP",
+                                                            "icon": "mdi:angle-acute",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_firmware",
+                                                            "entity": "binary_sensor.shelly_em_firmware_update",
+                                                            "name": "Firmare"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.shelly_em_ota_update",
+                                                            "name": "Aggiorna Firmware",
+                                                            "icon": "mdi:package-up"
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_button",
+                                                            "entity": "button.shelly_em_reboot",
+                                                            "name": "Riavvia Dispositivo",
+                                                            "icon": "mdi:restart"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -292,77 +1691,9 @@
                     "title": "Netatmo",
                     "path": "netatmo",
                     "icon": "mdi:alpha-n-box",
+                    "type": "custom:horizontal-layout",
                     "badges": [],
                     "cards": [
-                        {
-                            "type": "picture",
-                            "image": "/local/images/devices/netatmo_valve.png"
-                        },
-                        {
-                            "type": "custom:bar-card",
-                            "entities": [
-                                {
-                                    "entity": "sensor.valvola_cucina_battery_percent",
-                                    "name": "Cucina",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.valvola_sala_battery_percent",
-                                    "name": "Sala",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.valvola_studio_battery_percent",
-                                    "name": "Studio",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.valvola_bagno_battery_percent",
-                                    "name": "Bagno",
-                                    "width": "85%"
-                                },
-                                {
-                                    "entity": "sensor.valvola_camera_battery_percent",
-                                    "name": "Camera",
-                                    "width": "85%"
-                                }
-                            ],
-                            "title": "Batteria Valvole Netatmo",
-                            "show_header_toggle": false,
-                            "state_color": false,
-                            "positions": {
-                                "icon": "off",
-                                "indicator": "off",
-                                "name": "outside",
-                                "value": "outside"
-                            }
-                        },
-                        {
-                            "type": "entities",
-                            "title": "Stato Valvole Netatmo",
-                            "entities": [
-                                {
-                                    "entity": "sensor.valvola_cucina_state",
-                                    "name": "Cucina"
-                                },
-                                {
-                                    "entity": "sensor.valvola_sala_state",
-                                    "name": "Sala"
-                                },
-                                {
-                                    "entity": "sensor.valvola_studio_state",
-                                    "name": "Studio"
-                                },
-                                {
-                                    "entity": "sensor.valvola_bagno_state",
-                                    "name": "Bagno"
-                                },
-                                {
-                                    "entity": "sensor.valvola_camera_state",
-                                    "name": "Camera"
-                                }
-                            ]
-                        },
                         {
                             "type": "entities",
                             "entities": [
@@ -375,11 +1706,662 @@
                             ],
                             "state_color": false,
                             "title": "Impostazioni"
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Valvola 1 - Cucina"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/netatmo_valve.png"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "climate.cucina",
+                                                            "name": "Modalit\u00e0",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.valvola_cucina_state",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.valvola_cucina_battery_percent",
+                                                            "name": "Batteria",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Valvola 2 - Sala"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/netatmo_valve.png"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "climate.sala",
+                                                            "name": "Modalit\u00e0",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.valvola_sala_state",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.valvola_sala_battery_percent",
+                                                            "name": "Batteria",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Valvola 3 - Bagno"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/netatmo_valve.png"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "climate.bagno",
+                                                            "name": "Modalit\u00e0",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.valvola_bagno_state",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.valvola_bagno_battery_percent",
+                                                            "name": "Batteria",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Valvola 4 - Studio"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/netatmo_valve.png"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "climate.studio",
+                                                            "name": "Modalit\u00e0",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.valvola_studio_state",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.valvola_studio_battery_percent",
+                                                            "name": "Batteria",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Valvola 5 - Camera"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "/local/images/devices/netatmo_valve.png"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "climate.camera",
+                                                            "name": "Modalit\u00e0",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.valvola_camera_state",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.valvola_camera_battery_percent",
+                                                            "name": "Batteria",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    "title": "Shelly",
+                    "title": "test",
+                    "path": "test",
+                    "icon": "mdi:zigbee",
+                    "type": "custom:horizontal-layout",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Porta Casa - Xiaomi MCCGQ01LM"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "https://www.zigbee2mqtt.io/images/devices/MCCGQ01LM.jpg"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "binary_sensor.porta_casa_contact",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.porta_casa_battery",
+                                                            "name": "Batteria"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Temperatura Balcone - Xiaomi WSDCGQ01LM"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.temperatura_balcone_temperature",
+                                                            "name": "Temperatura",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.temperatura_balcone_humidity",
+                                                            "name": "Umidit\u00e0",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.temperatura_balcone_battery",
+                                                            "name": "Batteria"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "Temperatura Veranda - Xiaomi WSDCGQ01LM"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "https://www.zigbee2mqtt.io/images/devices/WSDCGQ01LM.jpg"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.temperatura_veranda_temperature",
+                                                            "name": "Temperatura",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "sensor.temperatura_veranda_humidity",
+                                                            "name": "Umidit\u00e0",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.temperatura_veranda_battery",
+                                                            "name": "Batteria"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "spare_door - Xiaomi MCCGQ11LM"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.jpg"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_state",
+                                                            "entity": "binary_sensor.spare_door_contact",
+                                                            "name": "Stato",
+                                                            "styles": {
+                                                                "icon": [
+                                                                    {
+                                                                        "color": "var(--state-icon-color)"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.spare_door_battery",
+                                                            "name": "Batteria"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "entities",
+                            "show_header_toggle": "off",
+                            "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                            "entities": [
+                                {
+                                    "type": "section",
+                                    "label": "wireless_button - Xiaomi WXKG01LM"
+                                },
+                                {
+                                    "type": "custom:hui-element",
+                                    "card_type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "picture",
+                                                    "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                                                    "image": "https://www.zigbee2mqtt.io/images/devices/WXKG01LM.jpg"
+                                                },
+                                                {
+                                                    "type": "vertical-stack",
+                                                    "cards": [
+                                                        {
+                                                            "type": "custom:button-card",
+                                                            "template": "template_device_generic_battery_state",
+                                                            "entity": "sensor.wireless_button_battery",
+                                                            "name": "Batteria"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "vertical-stack",
+                            "title": "Mappa Dispositivi",
+                            "layout": "vertical",
+                            "cards": [
+                                {
+                                    "type": "custom:zigbee2mqtt-networkmap",
+                                    "title": "Zigbee2MQTT Network Map",
+                                    "entity": "sensor.zigbee2mqtt_networkmap",
+                                    "mqtt_base_topic": "zigbee2mqtt",
+                                    "force": 3000,
+                                    "node_size": 16,
+                                    "font_size": 12,
+                                    "link_width": 2,
+                                    "height": 400,
+                                    "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n    }\n"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Shelly2",
                     "layout": {
                         "grid-template-columns": "auto auto auto",
                         "grid-template-rows": "auto",
@@ -396,7 +2378,7 @@
                         }
                     },
                     "icon": "mdi:alpha-s-box",
-                    "path": "shelly",
+                    "path": "shelly2",
                     "badges": [],
                     "cards": [
                         {
@@ -603,7 +2585,278 @@
                     ]
                 }
             ],
-            "title": "Dispositivi"
+            "button_card_templates": {
+                "template_device_generic_state": {
+                    "layout": "icon_name_state",
+                    "color-type": "card",
+                    "show_name": true,
+                    "show_icon": true,
+                    "show_state": true,
+                    "styles": {
+                        "grid": [
+                            {
+                                "grid-template-columns": "50px auto"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "padding": "0px 0px"
+                            },
+                            {
+                                "height": "25px"
+                            },
+                            {
+                                "width": "25px"
+                            }
+                        ],
+                        "card": [
+                            {
+                                "--ha-card-background": "rgba(0, 0, 0, 0)"
+                            },
+                            {
+                                "--ha-card-box-shadow": "none"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "padding": "0px 10px"
+                            },
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-family": "Roboto, sans-serif"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "color": "var(--primary-text-color)"
+                            }
+                        ]
+                    }
+                },
+                "template_device_generic_button": {
+                    "layout": "icon_name_state",
+                    "color-type": "card",
+                    "show_name": true,
+                    "show_icon": true,
+                    "show_state": false,
+                    "tap_action": {
+                        "action": "call-service",
+                        "service": "button.press",
+                        "service_data": {
+                            "entity_id": "[[[ return entity.entity_id ]]]"
+                        }
+                    },
+                    "styles": {
+                        "grid": [
+                            {
+                                "grid-template-columns": "50px auto"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "padding": "0px 0px"
+                            },
+                            {
+                                "height": "25px"
+                            },
+                            {
+                                "width": "25px"
+                            },
+                            {
+                                "color": "var(--state-icon-color)"
+                            }
+                        ],
+                        "card": [
+                            {
+                                "--ha-card-background": "rgba(0, 0, 0, 0)"
+                            },
+                            {
+                                "--ha-card-box-shadow": "none"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "padding": "0px 10px"
+                            },
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-family": "Roboto, sans-serif"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "color": "var(--primary-text-color)"
+                            }
+                        ]
+                    }
+                },
+                "template_device_firmware": {
+                    "layout": "icon_name_state",
+                    "color-type": "card",
+                    "show_name": true,
+                    "show_icon": true,
+                    "show_state": true,
+                    "state": [
+                        {
+                            "value": "off",
+                            "styles": {
+                                "icon": [
+                                    {
+                                        "color": "lightgreen"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "value": "on",
+                            "styles": {
+                                "icon": [
+                                    {
+                                        "color": "red"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "styles": {
+                        "grid": [
+                            {
+                                "grid-template-columns": "50px auto"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "padding": "0px 0px"
+                            },
+                            {
+                                "height": "25px"
+                            },
+                            {
+                                "width": "25px"
+                            },
+                            {
+                                "color": "var(--state-icon-color)"
+                            }
+                        ],
+                        "card": [
+                            {
+                                "--ha-card-background": "rgba(0, 0, 0, 0)"
+                            },
+                            {
+                                "--ha-card-box-shadow": "none"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "padding": "0px 10px"
+                            },
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-family": "Roboto, sans-serif"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "color": "var(--primary-text-color)"
+                            }
+                        ]
+                    }
+                },
+                "template_device_generic_battery_state": {
+                    "layout": "icon_name_state",
+                    "color-type": "card",
+                    "show_name": true,
+                    "show_icon": true,
+                    "show_state": true,
+                    "styles": {
+                        "grid": [
+                            {
+                                "grid-template-columns": "50px auto"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "padding": "0px 0px"
+                            },
+                            {
+                                "height": "25px"
+                            },
+                            {
+                                "width": "25px"
+                            }
+                        ],
+                        "card": [
+                            {
+                                "--ha-card-background": "rgba(0, 0, 0, 0)"
+                            },
+                            {
+                                "--ha-card-box-shadow": "none"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "padding": "0px 10px"
+                            },
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-family": "Roboto, sans-serif"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "color": "var(--primary-text-color)"
+                            }
+                        ]
+                    },
+                    "state": [
+                        {
+                            "value": 20,
+                            "operator": "<=",
+                            "styles": {
+                                "icon": [
+                                    {
+                                        "color": "var(--label-badge-red)"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "value": 50,
+                            "operator": "<=",
+                            "styles": {
+                                "icon": [
+                                    {
+                                        "color": "var(--label-badge-yellow)"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "value": 100,
+                            "operator": "<=",
+                            "styles": {
+                                "icon": [
+                                    {
+                                        "color": "var(--label-badge-green)"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
         }
     }
 }

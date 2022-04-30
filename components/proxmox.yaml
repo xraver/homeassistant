@@ -1,0 +1,16 @@
+######################################################################
+# Component: Proxmox
+######################################################################
+
+- host: !secret proxmox_host
+  username: !secret proxmox_user
+  password: !secret proxmox_password
+  verify_ssl: true
+  realm: pve
+  nodes:
+    - node: !secret proxmox_node
+      vms:
+          - 100
+          - 101
+          - 102
+          - 103

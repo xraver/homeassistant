@@ -9,25 +9,28 @@ This repository contains the [Home Assistant](https://www.home-assistant.io/) co
 ## Running System
 Home Assistant is running in a container created from the official [Docker Image](https://hub.docker.com/r/homeassistant/home-assistant).
 Docker is running in a Virtual Machine based on [Linux Debian](https://www.debian.org/).
-My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.org/).
+My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https://www.proxmox.com/en/).
 
 ## Component Used
-* Google (Chromecast, Google Home Mini)
-* Shelly (Shelly1, Shelly2, Shelly2.5, ShellyEM, Shelly Dimmer)
-* Xiaomi (MiJia door & window contact sensor, MiJia temperature & humidity sensor)
-* Netatmo Thermostatic valves
-* Sony Android TV (KD-55XF8596)
 * Canon Printer (TR8550)
-* QNAP NAS (TS-228A)
-* Mercedes Me (Mercedes-Benz A200d)
+* CO2 Signal
+* Google (Chromecast, Google Home Mini)
 * HomeKit
+* Mercedes Me (Mercedes-Benz A200d)
+* Netatmo Thermostatic valves
 * LG WebOS TV (LG 28TL510S-PZ)
+* Proxmox
+* QNAP NAS (TS-228A)
+* Shelly (Shelly1, Shelly2, Shelly2.5, ShellyEM, Shelly Dimmer)
+* Sony Android TV (KD-55XF8596)
+* Xiaomi (MiJia door & window contact sensor, MiJia temperature & humidity sensor)
 
 ## Custom Component Used
 ### Integrations
+* [browser_mod](https://github.com/thomasloven/hass-browser_mod)
 * [HACS](https://github.com/hacs/integration)
 * [MercedeME 2020](https://github.com/ReneNulschDE/mbapi2020)
-* [Scheduler Component]()
+* [Scheduler Component](https://github.com/nielsfaber/scheduler-component)
 ### Frontend
 * [auto-entities](https://github.com/thomasloven/lovelace-auto-entities)
 * [Bar Card](https://github.com/custom-cards/bar-card)
@@ -40,6 +43,7 @@ My server is an Intel NUC (NUC5i5RYH) with [XCP-ng Hypervisor](https://xcp-ng.or
 * [layout-card](https://github.com/thomasloven/lovelace-layout-card)
 * [Lovelace Swipe Navigation](https://github.com/maykar/lovelace-swipe-navigation)
 * [mini-graph-card](https://github.com/kalkih/mini-graph-card)
+* [Plotly Graph Card](https://github.com/dbuezas/lovelace-plotly-graph-card)
 * [Reeder Dark Theme](https://github.com/hekm77/reeder_dark_theme)
 * [Scheduler Card](https://github.com/nielsfaber/scheduler-card)
 * [Shutter Card](https://github.com/Deejayfool/hass-shutter-card)

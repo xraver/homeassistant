@@ -207,6 +207,9 @@ google_assistant: !include components/google_assistant.yaml
 # Google Calendar
 google: !include components/google_calendar.yaml
 
+# Proxmox
+proxmoxve: !include components/proxmox.yaml
+
 # Homekit
 homekit: !include components/homekit.yaml
 
