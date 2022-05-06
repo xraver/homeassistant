@@ -5,7 +5,7 @@
 # - message
 # - notification_id
 # - enable_persistent
-# - disable_telegram
+# - enable_telegram
 #
 # Operations:
 # - notify.mail
@@ -38,12 +38,12 @@ notify_text:
         {% set enable_persistent = false %}
       {% endif %}
       {{ enable_persistent }}
-    disable_telegram: >-
+    enable_telegram: >-
       {# Check Null Input #}
-      {% if disable_telegram | length == 0 %}
-        {% set disable_telegram = false %}
+      {% if enable_telegram | length == 0 %}
+        {% set enable_telegram = false %}
       {% endif %}
-      {{ disable_telegram }}
+      {{ enable_telegram }}
 
   fields:
     title:
@@ -68,8 +68,8 @@ notify_text:
       default: false
       selector:
         boolean:
-    disable_telegram:
-      description: "Disabilitare la notifica su telegram"
+    enable_telegram:
+      description: "Abilitare o meno la notifica su telegram"
       example: "false"
       default: false
       selector:
@@ -87,14 +87,14 @@ notify_text:
 
     - choose:
       - conditions:
-          - condition: template
-            value_template: "{{ disable_telegram }}"
-
+        - condition: template
+          value_template: "{{ enable_telegram }}"
         sequence:
           - service: notify.telegram
             data_template:
               title: "{{ title }}"
-              message: "{{ message }}"
+              message: "{{ message | regex_replace(find='_', replace='-', ignorecase=False) }}"
+      default: []
 
     - service: notify.push
       data_template:
@@ -284,7 +284,7 @@ notify_voice:
 # _ language
 # - notification_id
 # - enable_persistent
-# - disable_telegram
+# - enable_telegram
 #
 # Operations:
 # - notify_text
@@ -335,12 +335,12 @@ notify_all:
         {% set enable_persistent = false %}
       {% endif %}
       {{ enable_persistent }}
-    disable_telegram: >-
+    enable_telegram: >-
       {# Check Null Input #}
-      {% if disable_telegram | length == 0 %}
-        {% set disable_telegram = false %}
+      {% if enable_telegram | length == 0 %}
+        {% set enable_telegram = false %}
       {% endif %}
-      {{ disable_telegram }}
+      {{ enable_telegram }}
 
   fields:
     title:
@@ -390,8 +390,8 @@ notify_all:
       default: false
       selector:
         boolean:
-    disable_telegram:
-      description: "Disabilitare la notifica su telegram"
+    enable_telegram:
+      description: "Abilitare o meno la notifica su telegram"
       example: "false"
       default: false
       selector:
