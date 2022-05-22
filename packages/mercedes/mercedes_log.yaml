@@ -33,6 +33,7 @@ history:
     - sensor.ff590mr_liquid_consumption_start
     - sensor.ff590mr_lock
     #- sensor.ff590mr_odometer
+    - sensor.ff590mr_rcp_features
     - sensor.ff590mr_service_interval_days
     - sensor.ff590mr_tire_pressure_front_left
     - sensor.ff590mr_tire_pressure_front_right
@@ -74,6 +75,7 @@ logbook:
     - sensor.ff590mr_liquid_consumption_start
     - sensor.ff590mr_lock
     #- sensor.ff590mr_odometer
+    - sensor.ff590mr_rcp_features
     - sensor.ff590mr_service_interval_days
     - sensor.ff590mr_tire_pressure_front_left
     - sensor.ff590mr_tire_pressure_front_right
@@ -115,6 +117,7 @@ recorder:
     - sensor.ff590mr_liquid_consumption_start
     - sensor.ff590mr_lock
     #- sensor.ff590mr_odometer
+    - sensor.ff590mr_rcp_features
     - sensor.ff590mr_service_interval_days
     - sensor.ff590mr_tire_pressure_front_left
     - sensor.ff590mr_tire_pressure_front_right
