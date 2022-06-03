@@ -14,11 +14,15 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Rome
+  # Pick your currency code from the column Code of Wikipedia’s list of ISO 4217 active codes
+  currency: EUR
   # URL
-  internal_url: !secret base_url
   external_url: !secret base_url
+  internal_url: !secret base_url
   # Customization folder
   customize: !include_dir_merge_named customizations/
+  media_dirs:
+    media: "media"
   # Packages:
   packages: !include_dir_named packages/
 
@@ -72,7 +76,7 @@ input_text: !include_dir_merge_named input_text/
 map:
 
 # Media Source
-#media_source:
+media_source:
 
 # Mobile App Support
 mobile_app:
@@ -103,15 +107,6 @@ tag:
 
 # Timer
 timer:
-
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
 
 # Webhooks
 webhook:
@@ -204,17 +199,15 @@ weather: !include components/weather.yaml
 # Google Assistant
 google_assistant: !include components/google_assistant.yaml
 
-# Google Calendar
-google: !include components/google_calendar.yaml
-
-# Proxmox
-proxmoxve: !include components/proxmox.yaml
-
 # Homekit
 homekit: !include components/homekit.yaml
 
-# Netatmo
-netatmo: !include components/netatmo.yaml
+# MQTT
+mqtt:
+  light: !include_dir_merge_list mqtt/light/
+
+# Proxmox
+proxmoxve: !include components/proxmox.yaml
 
 # Telegram
 telegram_bot: !include components/telegram.yaml

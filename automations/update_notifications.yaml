@@ -1,35 +1,4 @@
 ######################################################################
-# Update Notification: Home Assistant
-######################################################################
-
-- alias: "Update Notification: Home Assistant"
-
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.updater
-      to: 'on'
-
-    - platform: homeassistant
-      event: start
-
-  condition:
-    condition: state
-    entity_id: binary_sensor.updater
-    state: 'on'
-
-  action:
-    - delay: '00:00:5'
-    - service: script.notify_text
-      data_template:
-        title: "Home Assistant - Aggiornamento"
-        message: "E' disponibile un aggiornamento per Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }}. {{now().strftime('%Y-%m-%d %I:%M %p')}}"
-        notification_id: "update"
-        enable_persistent: true
-
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.update_homeassistant
-
-######################################################################
 # Update Notification: Shelly
 ######################################################################
 
