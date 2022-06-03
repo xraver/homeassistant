@@ -9,9 +9,9 @@
 #
 # Operations:
 # - notify.mail
-# - notify.telegram
 # - notify.push
 # - persistent_notification.create (if enable_persistent)
+# - notify.telegram (if enable_telegram)
 ######################################################################
 
 notify_text:
@@ -293,7 +293,7 @@ notify_voice:
 
 notify_all:
   alias: Notifiche globali (Testo+Voce)
-  description:   Invia notifiche sia vocali sia testiali. Le notifiche vocali sono inoltrate verso un determinato dispositivo compatibile. Si può selezionare il volume di riproduzione e la lingua. Quelle testuali possono essere inviate via mail oppure via telegram con la possibilità di notificarle direttamente sulla UI.
+  description: Invia notifiche sia vocali sia testiali. Le notifiche vocali sono inoltrate verso un determinato dispositivo compatibile. Si può selezionare il volume di riproduzione e la lingua. Quelle testuali possono essere inviate via mail oppure via telegram con la possibilità di notificarle direttamente sulla UI.
   variables:
     defaultTitle: 'Home Assistant'
     defaulMediaPlayer: 'media_player.google_home'
@@ -404,6 +404,7 @@ notify_all:
         message: "{{ message }}"
         notification_id: "{{ notification_id }}"
         enable_persistent: "{{ enable_persistent }}"
+        enable_telegram: "{{ enable_telegram }}"
 
     - service: script.notify_voice
       data_template:
