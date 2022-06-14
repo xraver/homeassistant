@@ -70,7 +70,7 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
   * Mercedes Me
   * MQTT
   * Netatmo
-  * Shelly Devices (with the exception of Shelly Bulb)
+  * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
   * Sony Bravia
   * SpeedTest
   * UPNP
