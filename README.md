@@ -43,6 +43,7 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 * [layout-card](https://github.com/thomasloven/lovelace-layout-card)
 * [Lovelace Swipe Navigation](https://github.com/maykar/lovelace-swipe-navigation)
 * [mini-graph-card](https://github.com/kalkih/mini-graph-card)
+* [pirate-weather-ha](https://github.com/alexander0042/pirate-weather-ha)
 * [Plotly Graph Card](https://github.com/dbuezas/lovelace-plotly-graph-card)
 * [Reeder Dark Theme](https://github.com/hekm77/reeder_dark_theme)
 * [Scheduler Card](https://github.com/nielsfaber/scheduler-card)
