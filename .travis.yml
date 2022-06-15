@@ -6,7 +6,7 @@ before_install:
   - cp .secrets_travis.yaml secrets.yaml
   - cp credentials/.google_travis.json credentials/google.json
   # Replace pirateweather wather integration with darksky
-  - sed -i  "s/pirateweather/darksky/" weather.yaml
+  - sed -i  "s/pirateweather/darksky/" components/weather.yaml
 
 install:
   - pip3 install homeassistant
