@@ -118,97 +118,88 @@ timer:
 # Zigbee2mqtt Package - Sensor
 ######################################################################
 
-sensor:
-  ######################################################################
-  # Sensor for monitoring the bridge state
-  ######################################################################
-  - platform: mqtt
-    name: "Zigbee2MQTT: Stato Bridge"
-    state_topic: "zigbee2mqtt/bridge/state"
-    icon: mdi:router-wireless
+mqtt:
+  sensor:
+    ######################################################################
+    # MQTT Sensor for monitoring the bridge state
+    ######################################################################
+    - name: "Zigbee2MQTT: Stato Bridge"
+      state_topic: "zigbee2mqtt/bridge/state"
+      icon: mdi:router-wireless
 
-  ######################################################################
-  # Sensor for Showing the Zigbee2MQTT Version
-  ######################################################################
-  - platform: mqtt
-    name: "Zigbee2MQTT: Versione Bridge"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.version }}"
-    icon: mdi:zigbee
+    ######################################################################
+    # MQTT Sensor for Showing the Zigbee2MQTT Version
+    ######################################################################
+    - name: "Zigbee2MQTT: Versione Bridge"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: "{{ value_json.version }}"
+      icon: mdi:zigbee
 
-  ######################################################################
-  # Sensor for Showing the Coordinator Type
-  ######################################################################
-  #- platform: mqtt
-  #  name: "Zigbee2MQTT: Tipo Coordinator"
-  #  state_topic: "zigbee2mqtt/bridge/info"
-  #  value_template: "{{ value_json.coordinator.type }}"
-  #  icon: mdi:chip
+    ######################################################################
+    # MQTT Sensor for Showing the Coordinator Type
+    ######################################################################
+    #- name: "Zigbee2MQTT: Tipo Coordinator"
+    #  state_topic: "zigbee2mqtt/bridge/info"
+    #  value_template: "{{ value_json.coordinator.type }}"
+    #  icon: mdi:chip
 
-  ######################################################################
-  # Sensor for Showing the Coordinator Version
-  ######################################################################
-  - platform: mqtt
-    name: "Zigbee2MQTT: Versione Coordinator"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.coordinator.meta.revision }}"
-    icon: mdi:chip
+    ######################################################################
+    # MQTT Sensor for Showing the Coordinator Version
+    ######################################################################
+    - name: "Zigbee2MQTT: Versione Coordinator"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: "{{ value_json.coordinator.meta.revision }}"
+      icon: mdi:chip
 
-  ######################################################################
-  # Sensor for monitoring the permit_join state
-  ######################################################################
-  - platform: mqtt
-    name: "Zigbee2MQTT: Stato permit join"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.permit_join }}"
-    icon: mdi:link-lock
+    ######################################################################
+    # MQTT Sensor for monitoring the permit_join state
+    ######################################################################
+    - name: "Zigbee2MQTT: Stato permit join"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: "{{ value_json.permit_join }}"
+      icon: mdi:link-lock
 
-  ######################################################################
-  # Sensor for monitoring the log_level state
-  ######################################################################
-  - platform: mqtt
-    name: "Zigbee2MQTT: Stato log level"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.log_level }}"
-    icon: mdi:file-document-outline
+    ######################################################################
+    # MQTT Sensor for monitoring the log_level state
+    ######################################################################
+    - name: "Zigbee2MQTT: Stato log level"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: "{{ value_json.log_level }}"
+      icon: mdi:file-document-outline
 
-  ######################################################################
-  # Sensor for Showing the Channel
-  ######################################################################
-  - platform: mqtt
-    name: "Zigbee2MQTT: Canale"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.network.channel }}"
-    icon: mdi:access-point-network
+    ######################################################################
+    # MQTT Sensor for Showing the Channel
+    ######################################################################
+    - name: "Zigbee2MQTT: Canale"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: "{{ value_json.network.channel }}"
+      icon: mdi:access-point-network
 
-  ######################################################################
-  # Sensor for Showing the PanID
-  ######################################################################
-  - platform: mqtt
-    name: "Zigbee2MQTT: PanID"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: "{{ value_json.network.pan_id }}"
-    icon: mdi:lan
+    ######################################################################
+    # MQTT Sensor for Showing the PanID
+    ######################################################################
+    - name: "Zigbee2MQTT: PanID"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: "{{ value_json.network.pan_id }}"
+      icon: mdi:lan
 
-  ######################################################################
-  # Sensor for Showing the Extended PanID
-  ######################################################################
-  #- platform: mqtt
-  #  name: "Zigbee2mqtt: Extended PanID"
-  #  state_topic: "zigbee2mqtt/bridge/info"
-  #  value_template: "{{ value_json.network.extended_pan_id }}"
-  #  icon: mdi:lan
+    ######################################################################
+    # MQTT Sensor for Showing the Extended PanID
+    ######################################################################
+    #- name: "Zigbee2mqtt: Extended PanID"
+    #  state_topic: "zigbee2mqtt/bridge/info"
+    #  value_template: "{{ value_json.network.extended_pan_id }}"
+    #  icon: mdi:lan
 
-  ######################################################################
-  # Zigbee2mqtt Networkmap
-  ######################################################################
-  - platform: mqtt
-    name: Zigbee2MQTT Networkmap
-    state_topic: zigbee2mqtt/bridge/response/networkmap
-    value_template: >-
-      {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
-    json_attributes_topic: zigbee2mqtt/bridge/response/networkmap
-    json_attributes_template: "{{ value_json.data.value | tojson }}"
+    ######################################################################
+    # Zigbee2mqtt Networkmap
+    ######################################################################
+    - name: Zigbee2MQTT Networkmap
+      state_topic: zigbee2mqtt/bridge/response/networkmap
+      value_template: >-
+        {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
+      json_attributes_topic: zigbee2mqtt/bridge/response/networkmap
+      json_attributes_template: "{{ value_json.data.value | tojson }}"
 
 ######################################################################
 # Zigbee2mqtt Package - Switch
