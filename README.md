@@ -109,8 +109,8 @@ All files are tested using the latest stable version of Home Assistant using [Tr
 
 ---
 
-[build-status-img]: https://api.travis-ci.org/xraver/homeassistant.svg?branch=master
-[build-status-url]: https://travis-ci.org/github/xraver/homeassistant
+[build-status-img]: https://api.travis-ci.com/xraver/homeassistant.svg?branch=master
+[build-status-url]: https://travis-ci.com/github/xraver/homeassistant
 [license-img]: https://img.shields.io/github/license/xraver/homeassistant
 [license-url]: LICENSE
 [releases-img]: https://img.shields.io/github/v/release/xraver/homeassistant
