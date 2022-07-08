@@ -12,6 +12,7 @@ Docker is running in a Virtual Machine based on [Linux Debian](https://www.debia
 My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https://www.proxmox.com/en/).
 
 ## Component Used
+* Amazon Alexa
 * Canon Printer (TR8550)
 * CO2 Signal
 * Google (Chromecast, Google Home Mini)

@@ -178,7 +178,7 @@ sensor: !include_dir_merge_list sensor/
 shell_command: !include_dir_merge_named shell_command/
 
 # Switches
-#switch: !include_dir_merge_list switch/
+switch: !include_dir_merge_list switch/
 
 # Utility Meter
 utility_meter: !include_dir_merge_named utility_meter/
@@ -195,6 +195,9 @@ weather: !include components/weather.yaml
 ######################################################################
 # Integrations
 ######################################################################
+
+# Amazon Alexa
+alexa: !include components/amazon_alexa.yaml
 
 # Google Assistant
 google_assistant: !include components/google_assistant.yaml

@@ -1,0 +1,6 @@
+######################################################################
+# Amazon Alexa: Home Assistant
+######################################################################
+
+- input_boolean.home_mode_away
+- script.homeassistant_restart

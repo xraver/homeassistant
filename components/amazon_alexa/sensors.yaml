@@ -1,0 +1,6 @@
+######################################################################
+# Amazon Alexa: Sensors
+######################################################################
+
+#- sensor.temperatura_balcone_temperature
+#- sensor.temperatura_veranda_temperature
