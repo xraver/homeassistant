@@ -81,7 +81,6 @@
     - Respiro
     - On/Off Graduale
     - Rosso/Verde
-  retain: false
   qos: 0
   optimistic: false
 
