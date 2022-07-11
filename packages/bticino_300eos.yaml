@@ -1,0 +1,105 @@
+######################################################################
+# BTcino Classe 300eos with Netatmo - Input boolean
+######################################################################
+
+input_boolean:
+  portone:
+    name: "Portone"
+    initial: false
+    icon: mdi:door
+
+######################################################################
+# BTcino Classe 300eos with Netatmo - Switch
+######################################################################
+
+switch:
+  - platform: template
+    switches:
+      portone:
+        value_template: "{{ is_state('input_boolean.portone', 'on') }}"
+        icon_template: mdi:door
+        turn_on:
+          - service: input_boolean.turn_on
+            target:
+              entity_id: input_boolean.portone
+          - delay: 1
+          - service: input_boolean.turn_off
+            target:
+              entity_id: input_boolean.portone
+        turn_off:
+          service: input_boolean.turn_off
+          target:
+            entity_id: input_boolean.portone
+
+######################################################################
+# BTcino Classe 300eos with Netatmo - Lock
+######################################################################
+
+#lock:
+#  - platform: template
+#    name: Portone
+#    value_template: "{{ is_state('input_boolean.portone', 'off') }}"
+#    lock:
+#      service: input_boolean.turn_off
+#      target:
+#        entity_id: input_boolean.portone
+#    unlock:
+#      - service: input_boolean.turn_on
+#        target:
+#          entity_id: input_boolean.portone
+#      - delay: 1
+#      - service: input_boolean.turn_off
+#        target:
+#          entity_id: input_boolean.portone
+
+######################################################################
+# BTcino Classe 300eos with Netatmo - Google Assistant
+######################################################################
+
+google_assistant:
+  entity_config:
+    switch.portone:
+      name: Portone
+      expose: true
+      room: Condominio
+
+######################################################################
+# BTcino Classe 300eos with Netatmo - Amazon Alexa
+######################################################################
+
+alexa:
+  smart_home:
+    filter:
+      include_entities:
+        - switch.portone
+    entity_config:
+      switch.portone:
+        name: "Routine Portone"
+        description: "Routine per l'apertura del portone condominiale"
+
+######################################################################
+# BTcino Classe 300eos with Netatmo - History
+######################################################################
+
+#history:
+#  exclude:
+#    entities:
+#      - lock.portone
+
+######################################################################
+# BTcino Classe 300eos with Netatmo - Logbook
+######################################################################
+
+#logbook:
+#  exclude:
+#    entities:
+#      - lock.portone
+
+######################################################################
+# BTcino Classe 300eos with Netatmo - Recorder
+######################################################################
+
+#recorder:
+#  exclude:
+#    entities:
+#      - lock.portone
