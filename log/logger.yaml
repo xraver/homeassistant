@@ -8,9 +8,9 @@ logs:
   custom_components.mbapi2020: warn
   googleapiclient.discovery: warn
   homeassistant.components.automation: info
-  homeassistant.components.device_tracker: warn
-  homeassistant.components.nmap_tracker.device_tracker: warn
+  homeassistant.components.device_tracker: info
   homeassistant.components.discovery: warn
+  homeassistant.components.nmap_tracker.device_tracker: warn
   homeassistant.components.input_text: info
   homeassistant.components.sensor: warn
   homeassistant.components.websocket_api: info
