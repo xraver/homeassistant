@@ -56,7 +56,6 @@
   red_template: '{{ value_json.red }}'
   green_template: '{{ value_json.green }}'
   blue_template: '{{ value_json.blue }}'
-  white_value_template: '{{ value_json.white }}'
   effect_template: >
     {%- if value_json.effect == 1 -%}
       Pioggia di Meteore
