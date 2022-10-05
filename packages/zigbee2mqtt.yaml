@@ -201,20 +201,18 @@ mqtt:
       json_attributes_topic: zigbee2mqtt/bridge/response/networkmap
       json_attributes_template: "{{ value_json.data.value | tojson }}"
 
-######################################################################
-# Zigbee2mqtt Package - Switch
-######################################################################
-
-switch:
-  # Switch for enabling joining
-  - platform: mqtt
-    name: "Zigbee2MQTT: Abilita join"
-    state_topic: "zigbee2mqtt/bridge/info"
-    value_template: '{{ value_json.permit_join | lower }}'
-    command_topic: "zigbee2mqtt/bridge/request/permit_join"
-    payload_on: "true"
-    payload_off: "false"
-    icon: mdi:link-lock
+  ######################################################################
+  # Zigbee2mqtt Package - Switch
+  ######################################################################
+  switch:
+    # Switch for enabling joining
+    - name: "Zigbee2MQTT: Abilita join"
+      state_topic: "zigbee2mqtt/bridge/info"
+      value_template: '{{ value_json.permit_join | lower }}'
+      command_topic: "zigbee2mqtt/bridge/request/permit_join"
+      payload_on: "true"
+      payload_off: "false"
+      icon: mdi:link-lock
 
 ######################################################################
 # Zigbee2mqtt Package - Shell Command
