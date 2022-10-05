@@ -9,4 +9,4 @@ automation.home_assistant_startup_restart_on_error:
   icon: mdi:restart-alert
 
 automation.home_assistant_startup_google_sync:
-  icon: mdi:google-home
+  icon: mdi:google-assistant

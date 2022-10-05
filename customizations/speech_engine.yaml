@@ -3,7 +3,7 @@
 ######################################################################
 
 script.speech_engine:
-  icon: mdi:text-to-speech
+  icon: mdi:microphone-message
 
 script.speech_status:
   icon: mdi:account-voice
