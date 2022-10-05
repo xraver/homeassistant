@@ -1,0 +1,9 @@
+######################################################################
+# Zone Work
+######################################################################
+
+name: Hitachi
+latitude: !secret hitachius_latitude
+longitude: !secret hitachius_longitude
+radius: 65
+icon: mdi:domain

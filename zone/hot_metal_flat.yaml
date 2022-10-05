@@ -1,0 +1,9 @@
+######################################################################
+# Zone: Casa Hot Metal Flat
+######################################################################
+
+name: Hot Metal Flat
+latitude: !secret hotmetalflat_latitude
+longitude: !secret hotmetalflat_longitude
+radius: 65
+icon: mdi:home
