@@ -44,7 +44,8 @@ http:
 ######################################################################
 
 # Automations
-automation: !include_dir_merge_list automations/
+automation: !include automations.yaml
+automation manual: !include_dir_merge_list automations/
 
 # Home Assistant Cloud
 # cloud:
@@ -91,7 +92,8 @@ person:
 #scene: !include_dir_merge_list scenes.yaml
 
 # Scripts
-script: !include_dir_merge_named scripts/
+script: !include scripts.yaml
+script manual: !include_dir_merge_named scripts/
 
 # Stream
 #stream:
