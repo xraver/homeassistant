@@ -7,3 +7,9 @@ sensor.consumo_energetico_giornaliero:
 
 sensor.consumo_energetico_mensile:
   friendly_name: Consumo Energetico Mensile
+
+sensor.co2_signal_co2_intensity:
+  friendly_name: "CO2: Intensità di carbonio"
+
+sensor.co2_signal_grid_fossil_fuel_percentage:
+  friendly_name: "CO2: Percentuale carburante fossile"

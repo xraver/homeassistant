@@ -72,8 +72,8 @@ exclude:
     - sensor.canon_tr8500_series_magenta
     - sensor.canon_tr8500_series_yellow
     # CO2
-    - sensor.it_no_co2_intensity
-    #- sensor.it_no_grid_fossil_fuel_percentage
+    - sensor.co2_signal_co2_intensity
+    #- sensor.co2_signal_grid_fossil_fuel_percentage
   domains:
     - automation
     - button
