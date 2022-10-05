@@ -2,7 +2,7 @@
 # Zone Work
 ######################################################################
 
-name: Hitachi
+name: Hitachi US
 latitude: !secret hitachius_latitude
 longitude: !secret hitachius_longitude
 radius: 65
