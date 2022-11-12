@@ -54,7 +54,7 @@ automation manual: !include_dir_merge_list automations/
 config:
 
 # counter
-#counter:
+counter: !include_dir_merge_named counters/
 
 # Energy
 energy:
@@ -68,8 +68,9 @@ image:
 
 # Inputs
 input_boolean: !include_dir_merge_named input_boolean/
+input_button: !include_dir_merge_named input_button/
 input_datetime: !include_dir_merge_named input_datetime/
-#input_number: !include_dir_merge_named input_number/
+input_number: !include_dir_merge_named input_number/
 input_select: !include_dir_merge_named input_select/
 input_text: !include_dir_merge_named input_text/
 
@@ -90,6 +91,9 @@ person:
 
 # Scene
 #scene: !include_dir_merge_list scenes.yaml
+
+# Schedule
+schedule:
 
 # Scripts
 script: !include scripts.yaml
