@@ -1021,7 +1021,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.tapparella_cucina_firmware_update",
+                              "entity": "update.tapparella_cucina_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1091,7 +1091,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.tapparella_sala_firmware_update",
+                              "entity": "update.tapparella_sala_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1160,7 +1160,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.tapparella_studio_firmware_update",
+                              "entity": "update.tapparella_studio_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1229,7 +1229,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.tapparella_camera_firmware_update",
+                              "entity": "update.tapparella_camera_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1291,7 +1291,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.luce_corridoio_firmware_update",
+                              "entity": "update.luce_corridoio_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1353,7 +1353,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.luce_cucina_firmware_update",
+                              "entity": "update.luce_cucina_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1415,7 +1415,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.luce_sala_firmware_update",
+                              "entity": "update.luce_sala_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1483,7 +1483,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.luci_bagno_firmware_update",
+                              "entity": "update.luci_bagno_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1545,7 +1545,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.luce_studio_firmware_update",
+                              "entity": "update.luce_studio_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1607,7 +1607,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.luce_camera_firmware_update",
+                              "entity": "update.luce_camera_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1669,7 +1669,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.luce_balcone_firmware_update",
+                              "entity": "update.luce_balcone_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1767,7 +1767,7 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "binary_sensor.shelly_em_firmware_update",
+                              "entity": "update.shelly_em_firmware_update",
                               "name": "Firmare"
                             },
                             {
@@ -1782,6 +1782,51 @@
                               "template": "template_device_generic_button",
                               "entity": "button.shelly_em_reboot",
                               "name": "Riavvia Dispositivo",
+                              "icon": "mdi:restart"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "visible": false,
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Operazioni Globali"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/shelly/shelly.jpg"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "entity": "script.shelly_upgrade",
+                              "name": "Aggiorna Tutto",
+                              "icon": "mdi:package-up"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "script.shelly_reboot",
+                              "name": "Riavvia tutto",
                               "icon": "mdi:restart"
                             }
                           ]
@@ -2409,44 +2454,6 @@
               ]
             },
             {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "wireless_button - Xiaomi WXKG01LM"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "https://www.zigbee2mqtt.io/images/devices/WXKG01LM.jpg"
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_battery_state",
-                              "entity": "sensor.wireless_button_battery",
-                              "name": "Batteria"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "type": "vertical-stack",
               "title": "Mappa Dispositivi",
               "layout": "vertical",
@@ -2464,230 +2471,6 @@
                   "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n    }\n"
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Shelly2",
-          "layout": {
-            "grid-template-columns": "auto auto auto",
-            "grid-template-rows": "auto",
-            "grid-template-areas": "\"header header header\"\n\"main1 main2 main3\"\n\"footer footer footer\"\n",
-            "mediaquery": {
-              "(max-width: 600px)": {
-                "grid-template-columns": "100%",
-                "grid-template-areas": "\"header\"\n\"main1\"\n\"main2\"\n\"main3\"\n\"footer\"\n"
-              },
-              "(max-width: 800px)": {
-                "grid-template-columns": "50% 50%",
-                "grid-template-areas": "\"header header\"\n\"main1 main1\"\n\"main2 main3\"\n\"footer footer\"\n"
-              }
-            }
-          },
-          "icon": "mdi:alpha-s-box",
-          "path": "shelly2",
-          "badges": [],
-          "cards": [
-            {
-              "type": "custom:button-card",
-              "name": "Shelly",
-              "label": "Shelly",
-              "layout": "name_state",
-              "show_state": false,
-              "show_name": false,
-              "show_label": false,
-              "show_icon": false,
-              "show_entity_picture": true,
-              "entity_picture": "/local/images/devices/shelly/shelly.jpg",
-              "styles": {
-                "card": [
-                  {
-                    "background-color": "white"
-                  },
-                  {
-                    "box-shadow": "0px 0px 0px 0px."
-                  }
-                ],
-                "entity_picture": [
-                  {
-                    "width": "100%"
-                  }
-                ]
-              },
-              "view_layout": {
-                "grid-area": "header"
-              }
-            },
-            {
-              "type": "entities",
-              "entities": [
-                {
-                  "entity": "binary_sensor.tapparella_cucina_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.tapparella_sala_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.tapparella_studio_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.tapparella_camera_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.luce_corridoio_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.luce_cucina_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.luce_sala_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.luci_bagno_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.luce_studio_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.luce_camera_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.luce_balcone_firmware_update"
-                },
-                {
-                  "entity": "binary_sensor.shelly_em_firmware_update"
-                }
-              ],
-              "title": "Disponibilità Aggiornamenti"
-            },
-            {
-              "type": "entities",
-              "entities": [
-                {
-                  "entity": "script.shelly_upgrade"
-                },
-                {
-                  "entity": "button.tapparella_cucina_ota_update"
-                },
-                {
-                  "entity": "button.tapparella_sala_ota_update"
-                },
-                {
-                  "entity": "button.tapparella_studio_ota_update"
-                },
-                {
-                  "entity": "button.tapparella_camera_ota_update"
-                },
-                {
-                  "entity": "button.luce_corridoio_ota_update"
-                },
-                {
-                  "entity": "button.luce_cucina_ota_update"
-                },
-                {
-                  "entity": "button.luce_sala_ota_update"
-                },
-                {
-                  "entity": "button.luci_bagno_ota_update"
-                },
-                {
-                  "entity": "button.luce_studio_ota_update"
-                },
-                {
-                  "entity": "button.luce_camera_ota_update"
-                },
-                {
-                  "entity": "button.luce_balcone_ota_update"
-                },
-                {
-                  "entity": "button.shelly_em_ota_update"
-                }
-              ],
-              "title": "Aggiorna Dispositivi"
-            },
-            {
-              "type": "entities",
-              "entities": [
-                {
-                  "entity": "script.shelly_reboot"
-                },
-                {
-                  "entity": "button.tapparella_cucina_reboot"
-                },
-                {
-                  "entity": "button.tapparella_sala_reboot"
-                },
-                {
-                  "entity": "button.tapparella_studio_reboot"
-                },
-                {
-                  "entity": "button.tapparella_camera_reboot"
-                },
-                {
-                  "entity": "button.luce_corridoio_reboot"
-                },
-                {
-                  "entity": "button.luce_cucina_reboot"
-                },
-                {
-                  "entity": "button.luce_sala_reboot"
-                },
-                {
-                  "entity": "button.luci_bagno_reboot"
-                },
-                {
-                  "entity": "button.luce_studio_reboot"
-                },
-                {
-                  "entity": "button.luce_camera_reboot"
-                },
-                {
-                  "entity": "button.luce_balcone_reboot"
-                },
-                {
-                  "entity": "button.shelly_em_reboot"
-                }
-              ],
-              "title": "Riavvio Dispositivi"
-            },
-            {
-              "type": "entities",
-              "entities": [
-                {
-                  "entity": "binary_sensor.luce_sala_overpowering"
-                },
-                {
-                  "entity": "binary_sensor.luce_bagno_overpowering"
-                },
-                {
-                  "entity": "binary_sensor.luce_specchio_overpowering"
-                },
-                {
-                  "entity": "binary_sensor.luce_camera_overpowering"
-                },
-                {
-                  "entity": "binary_sensor.shelly_em_overpowering"
-                }
-              ],
-              "title": "Sovraccarico"
-            },
-            {
-              "type": "entities",
-              "entities": [
-                {
-                  "entity": "binary_sensor.tapparella_sala_overheating"
-                },
-                {
-                  "entity": "binary_sensor.luce_sala_overheating"
-                },
-                {
-                  "entity": "binary_sensor.luci_bagno_overheating"
-                },
-                {
-                  "entity": "binary_sensor.luce_camera_overheating"
-                }
-              ],
-              "title": "Surriscaldamento"
             }
           ]
         }

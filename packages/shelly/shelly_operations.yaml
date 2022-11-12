@@ -9,13 +9,16 @@ script:
   shelly_upgrade:
     alias: "Shelly: Aggiornamento Firmware Collettivo"
     sequence:
-      # Shelly 2 Tapparella Cucina
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/command'
-          payload: 'update_fw'
-          qos: 0
-          retain: false
+    #  - service: mqtt.publish
+    #    data:
+    #      topic: 'shellies/command'
+    #      payload: 'update_fw'
+    #      qos: 0
+    #      retain: false
+      - service: update.install
+        target:
+          entity_id:
+            - group.shelly
 
   ######################################################################
   # Shelly: Reboot

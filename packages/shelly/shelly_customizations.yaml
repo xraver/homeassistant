@@ -20,16 +20,14 @@ homeassistant:
       friendly_name: Tapparella Cucina - Pulsante 2
     binary_sensor.tapparella_cucina_cloud:
       friendly_name: Tapparella Cucina - Connessione Cloud
-    binary_sensor.tapparella_cucina_firmware_update:
+    update.tapparella_cucina_firmware_update:
       friendly_name: Tapparella Cucina - Aggiornamento Firmware
+    update.tapparella_cucina_beta_firmware_update:
+      friendly_name: Tapparella Cucina - Aggiornamento Firmware Beta
     sensor.tapparella_cucina_rssi:
       friendly_name: Tapparella Cucina - Potenza Segnale
     sensor.tapparella_cucina_uptime:
       friendly_name: Tapparella Cucina - Uptime
-    button.tapparella_cucina_ota_update:
-      friendly_name: Tapparella Cucina - Aggiorna con Firwmare Ufficiale
-    button.tapparella_cucina_ota_update_beta:
-      friendly_name: Tapparella Cucina - Aggiorna con Firmware Beta
     button.tapparella_cucina_reboot:
       friendly_name: Tapparella Cucina - Riavvia Dispositivo
 
@@ -48,16 +46,14 @@ homeassistant:
       friendly_name: Tapparella Sala - Temperatura Device
     binary_sensor.tapparella_sala_overheating:
       friendly_name: Tapparella Sala - Surriscaldamento Device
-    binary_sensor.tapparella_sala_firmware_update:
+    update.tapparella_sala_firmware_update:
       friendly_name: Tapparella Sala - Aggiornamento Firmware
+    update.tapparella_sala_beta_firmware_update:
+      friendly_name: Tapparella Sala - Aggiornamento Firmware Beta
     sensor.tapparella_sala_rssi:
       friendly_name: Tapparella Sala - Potenza Segnale
     sensor.tapparella_sala_uptime:
       friendly_name: Tapparella Sala - Uptime
-    button.tapparella_sala_ota_update:
-      friendly_name: Tapparella Sala - Aggiorna con Firwmare Ufficiale
-    button.tapparella_sala_ota_update_beta:
-      friendly_name: Tapparella Sala - Aggiorna con Firmware Beta
     button.tapparella_sala_reboot:
       friendly_name: Tapparella Sala - Riavvia Dispositivo
 
@@ -72,16 +68,14 @@ homeassistant:
       friendly_name: Tapparella Studio - Pulsante 2
     binary_sensor.tapparella_studio_cloud:
       friendly_name: Tapparella Studio - Connessione Cloud
-    binary_sensor.tapparella_studio_firmware_update:
+    update.tapparella_studio_firmware_update:
       friendly_name: Tapparella Studio - Aggiornamento Firmware
+    update.tapparella_studio_beta_firmware_update:
+      friendly_name: Tapparella Studio - Aggiornamento Firmware Beta
     sensor.tapparella_studio_rssi:
       friendly_name: Tapparella Studio - Potenza Segnale
     sensor.tapparella_studio_uptime:
       friendly_name: Tapparella Studio - Uptime
-    button.tapparella_studio_ota_update:
-      friendly_name: Tapparella Studio - Aggiorna con Firwmare Ufficiale
-    button.tapparella_studio_ota_update_beta:
-      friendly_name: Tapparella Studio - Aggiorna con Firmware Beta
     button.tapparella_studio_reboot:
       friendly_name: Tapparella Studio - Riavvia Dispositivo
 
@@ -96,48 +90,42 @@ homeassistant:
       friendly_name: Tapparella Camera - Pulsante 2
     binary_sensor.tapparella_camera_cloud:
       friendly_name: Tapparella Camera - Connessione Cloud
-    binary_sensor.tapparella_camera_firmware_update:
+    update.tapparella_camera_firmware_update:
       friendly_name: Tapparella Camera - Aggiornamento Firmware
+    update.tapparella_camera_beta_firmware_update:
+      friendly_name: Tapparella Camera - Aggiornamento Firmware Beta
     sensor.tapparella_camera_rssi:
       friendly_name: Tapparella Camera - Potenza Segnale
     sensor.tapparella_camera_uptime:
       friendly_name: Tapparella Camera - Uptime
-    button.tapparella_camera_ota_update:
-      friendly_name: Tapparella Camera - Aggiorna con Firwmare Ufficiale
-    button.tapparella_camera_ota_update_beta:
-      friendly_name: Tapparella Camera - Aggiorna con Firmware Beta
     button.tapparella_camera_reboot:
       friendly_name: Tapparella Camera - Riavvia Dispositivo
 
     # Shelly 5 - Luce Corridoio (shelly1_24d1ee)
     binary_sensor.luce_corridoio_cloud:
       friendly_name: Luce Corridoio - Connessione Cloud
-    binary_sensor.luce_corridoio_firmware_update:
+    update.luce_corridoio_firmware_update:
       friendly_name: Luce Corridoio - Aggiornamento Firmware
+    update.luce_corridoio_beta_firmware_update:
+      friendly_name: Luce Corridoio - Aggiornamento Firmware Beta
     sensor.luce_corridoio_rssi:
       friendly_name: Luce Corridoio - Potenza Segnale
     sensor.luce_corridoio_uptime:
       friendly_name: Luce Corridoio - Uptime
-    button.luce_corridoio_ota_update:
-      friendly_name: Luce Corridoio - Aggiorna con Firwmare Ufficiale
-    button.luce_corridoio_ota_update_beta:
-      friendly_name: Luce Corridoio - Aggiorna con Firmware Beta
     button.luce_corridoio_reboot:
       friendly_name: Luce Corridoio - Riavvia Dispositivo
 
     # Shelly 6 - Luce Cucina (shelly1_93B27D)
     binary_sensor.luce_cucina_cloud:
       friendly_name: Luce Cucina - Connessione Cloud
-    binary_sensor.luce_cucina_firmware_update:
+    update.luce_cucina_firmware_update:
       friendly_name: Luce Cucina - Aggiornamento Firmware
+    update.luce_cucina_beta_firmware_update:
+      friendly_name: Luce Cucina - Aggiornamento Firmware Beta
     sensor.luce_cucina_rssi:
       friendly_name: Luce Cucina - Potenza Segnale
     sensor.luce_cucina_uptime:
       friendly_name: Luce Cucina - Uptime
-    button.luce_cucina_ota_update:
-      friendly_name: Luce Cucina - Aggiorna con Firwmare Ufficiale
-    button.luce_cucina_ota_update_beta:
-      friendly_name: Luce Cucina - Aggiorna con Firmware Beta
     button.luce_cucina_reboot:
       friendly_name: Luce Cucina - Riavvia Dispositivo
 
@@ -158,16 +146,14 @@ homeassistant:
       friendly_name: Luce Sala - Temperatura Device
     binary_sensor.luce_sala_overheating:
       friendly_name: Luce Sala - Surriscaldamento Device
-    binary_sensor.luce_sala_firmware_update:
+    update.luce_sala_firmware_update:
       friendly_name: Luce Sala - Aggiornamento Firmware
+    update.luce_sala_beta_firmware_update:
+      friendly_name: Luce Sala - Aggiornamento Firmware Beta
     sensor.luce_sala_rssi:
       friendly_name: Luce Sala - Potenza Segnale
     sensor.luce_sala_uptime:
       friendly_name: Luce Sala - Uptime
-    button.luce_sala_ota_update:
-      friendly_name: Luce Sala - Aggiorna con Firwmare Ufficiale
-    button.luce_sala_ota_update_beta:
-      friendly_name: Luce Sala - Aggiorna con Firmware Beta
     button.luce_sala_reboot:
       friendly_name: Luce Sala - Riavvia Dispositivo
 
@@ -190,32 +176,28 @@ homeassistant:
       friendly_name: Luci Bagno - Temperatura Device
     binary_sensor.luci_bagno_overheating:
       friendly_name: Luci Bagno - Surriscaldamento Device
-    binary_sensor.luci_bagno_firmware_update:
+    update.luci_bagno_firmware_update:
       friendly_name: Luci Bagno - Aggiornamento Firmware
+    update.luci_bagno_beta_firmware_update:
+      friendly_name: Luci Bagno - Aggiornamento Firmware Beta
     sensor.luci_bagno_rssi:
       friendly_name: Luci Bagno - Potenza Segnale
     sensor.luci_bagno_uptime:
       friendly_name: Luci Bagno - Uptime
-    button.luci_bagno_ota_update:
-      friendly_name: Luci Bagno - Aggiorna con Firwmare Ufficiale
-    button.luci_bagno_ota_update_beta:
-      friendly_name: Luci Bagno - Aggiorna con Firmware Beta
     button.luci_bagno_reboot:
       friendly_name: Luci Bagno - Riavvia Dispositivo
 
     # Shelly 9 - Luce Studio (shelly1_59e18c)
     binary_sensor.luce_studio_cloud:
       friendly_name: Luce Studio - Connessione Cloud
-    binary_sensor.luce_studio_firmware_update:
+    update.luce_studio_firmware_update:
       friendly_name: Luce Studio - Aggiornamento Firmware
+    update.luce_studio_beta_firmware_update:
+      friendly_name: Luce Studio - Aggiornamento Firmware Beta
     sensor.luce_studio_rssi:
       friendly_name: Luce Studio - Potenza Segnale
     sensor.luce_studio_uptime:
       friendly_name: Luce Studio - Uptime
-    button.luce_studio_ota_update:
-      friendly_name: Luce Studio - Aggiorna con Firwmare Ufficiale
-    button.luce_studio_ota_update_beta:
-      friendly_name: Luce Studio - Aggiorna con Firmware Beta
     button.luce_studio_reboot:
       friendly_name: Luce Studio - Riavvia Dispositivo
 
@@ -236,48 +218,42 @@ homeassistant:
       friendly_name: Luce Camera - Temperatura Device
     binary_sensor.luce_camera_overheating:
       friendly_name: Luce Camera - Surriscaldamento Device
-    binary_sensor.luce_camera_firmware_update:
+    update.luce_camera_firmware_update:
       friendly_name: Luce Camera - Aggiornamento Firmware
+    update.luce_camera_beta_firmware_update:
+      friendly_name: Luce Camera - Aggiornamento Firmware Beta
     sensor.luce_camera_rssi:
       friendly_name: Luce Camera - Potenza Segnale
     sensor.luce_camera_uptime:
       friendly_name: Luce Camera - Uptime
-    button.luce_camera_ota_update:
-      friendly_name: Luce Camera - Aggiorna con Firwmare Ufficiale
-    button.luce_camera_ota_update_beta:
-      friendly_name: Luce Camera - Aggiorna con Firmware Beta
     button.luce_camera_reboot:
       friendly_name: Luce Camera - Riavvia Dispositivo
 
     # Shelly 11 - Luce Balcone (shelly1_c423c8)
     binary_sensor.luce_balcone_cloud:
       friendly_name: Luce Balcone - Connessione Cloud
-    binary_sensor.luce_balcone_firmware_update:
+    update.luce_balcone_firmware_update:
       friendly_name: Luce Balcone - Aggiornamento Firmware
+    update.luce_balcone_beta_firmware_update:
+      friendly_name: Luce Balcone - Aggiornamento Firmware Beta
     sensor.luce_balcone_rssi:
       friendly_name: Luce Balcone - Potenza Segnale
     sensor.luce_balcone_uptime:
       friendly_name: Luce Balcone - Uptime
-    button.luce_balcone_ota_update:
-      friendly_name: Luce Balcone - Aggiorna con Firwmare Ufficiale
-    button.luce_balcone_ota_update_beta:
-      friendly_name: Luce Balcone - Aggiorna con Firmware Beta
     button.luce_balcone_reboot:
       friendly_name: Luce Balcone - Riavvia Dispositivo
 
     # Shelly Bulb (shellybulb_bc8610)
     binary_sensor.luce_divano_cloud:
       friendly_name: Luce Divano - Connessione Cloud
-    binary_sensor.luce_divano_firmware_update:
+    update.luce_divano_firmware_update:
       friendly_name: Luce Divano - Aggiornamento Firmware
+    update.luce_divano_beta_firmware_update:
+      friendly_name: Luce Divano - Aggiornamento Firmware Beta
     sensor.luce_divano_rssi:
       friendly_name: Luce Divano - Potenza Segnale
     sensor.luce_divano_uptime:
       friendly_name: Luce Divano - Uptime
-    button.luce_divano_ota_update:
-      friendly_name: Luce Divano - Aggiorna con Firwmare Ufficiale
-    button.luce_divano_ota_update_beta:
-      friendly_name: Luce Divano - Aggiorna con Firmware Beta
     button.luce_divano_reboot:
       friendly_name: Luce Divano - Riavvia Dispositivo
 
@@ -310,15 +286,13 @@ homeassistant:
       friendly_name: Shelly EM - Sovraccarico Energetico
     binary_sensor.shelly_em_cloud:
       friendly_name: Shelly EM - Connessione Cloud
-    binary_sensor.shelly_em_firmware_update:
+    update.shelly_em_firmware_update:
       friendly_name: Shelly EM - Aggiornamento Firmware
+    update.shelly_em_beta_firmware_update:
+      friendly_name: Shelly EM - Aggiornamento Firmware Beta
     sensor.shelly_em_rssi:
       friendly_name: Shelly EM - Potenza Segnale
     sensor.shelly_em_uptime:
       friendly_name: Shelly EM - Uptime
-    button.shelly_em_ota_update:
-      friendly_name: Shelly EM - Aggiorna con Firwmare Ufficiale
-    button.shelly_em_ota_update_beta:
-      friendly_name: Shelly EM - Aggiorna con Firmware Beta
     button.shelly_em_reboot:
       friendly_name: Shelly EM - Riavvia Dispositivo
