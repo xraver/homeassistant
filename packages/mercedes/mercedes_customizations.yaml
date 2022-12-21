@@ -4,6 +4,27 @@
 
 homeassistant:
   customize:
+    ######################################################################
+    # Binary Sensors
+    ######################################################################
+    # Liquido Lavacristalli - warningwashwater
+    binary_sensor.ff590mr_low_wash_water_warning:
+      friendly_name: Liquido Lavacristalli
+      device_class: problem
+      #icon: mdi:wiper-wash
+
+    # Liquido Raffreddamento - warningcoolantlevellow
+    binary_sensor.ff590mr_low_coolant_level_warning:
+      friendly_name: Liquido Raffreddamento
+      device_class: problem
+      #icon: mdi:coolant-temperature
+
+    # Liquido Freni - warningbrakefluid
+    binary_sensor.ff590mr_low_brake_fluid_warning:
+      friendly_name: Liquido Freni
+      device_class: problem
+      #icon: mdi:car-brake-alert
+
     # Stato Generale - warningenginelight
     binary_sensor.ff590mr_engine_light_warning:
       friendly_name: Stato Generale
@@ -12,51 +33,37 @@ homeassistant:
       # warningbrakefluid, warningwashwater, warningcoolantlevellow, warninglowbattery
 
     # Freno a Mano - parkbrakestatus
-    #binary_sensor.ff590mr_park_brake_status:
+    #binary_sensor.engine_light_warning:
     #  friendly_name: Freno a mano
     #  device_class: plug
     #  icon: mdi:car-brake-parking
     #  # preWarningBrakeLiningWear
-
-    # Freni
-    binary_sensor.ff590mr_low_brake_fluid_warning:
-      friendly_name: Liquido Freni
-      device_class: problem
-      #icon: mdi:car-brake-alert
-
-    # Liquido Raffreddamento
-    binary_sensor.ff590mr_low_coolant_level_warning:
-      friendly_name: Liquido Raffreddamento
-      device_class: problem
-      #icon: mdi:coolant-temperature
-
-    # Liquido Lavacristalli
-    binary_sensor.ff590mr_low_wash_water_warning:
-      friendly_name: Liquido Lavacristalli
-      device_class: problem
-      #icon: mdi:wiper-wash
 
     # Pneumatici - tirewarninglamp
     binary_sensor.ff590mr_tire_warning:
       friendly_name: Pneumatici
       device_class: problem
       #icon: mdi:car-tire-alert
-      # tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft,
-      # tireMarkerFrontRight, tireMarkerFrontLeft,tireMarkerRearLeft, tireMarkerRearRight, tirewarningsrdk, tirewarningsprw
+      #tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft, tireMarkerFrontRight, tireMarkerFrontLeft,tireMarkerRearLeft, tireMarkerRearRight, tirewarningsrdk, tirewarningsprw, tireTemperatureRearLeft, tireTemperatureFrontRight,
+      #tireTemperatureRearRight, tireTemperatureFrontLeft
 
-    # Finestrini
+    # Finestrini - windowsClosed
     binary_sensor.ff590mr_windows_closed:
       friendly_name: Finestrini
       device_class: opening
       icon: mdi:window-closed
       # windowstatusrearleft, windowstatusrearright, windowstatusfrontright, windowstatusfrontleft
 
+    ######################################################################
     # Device Tracker
+    ######################################################################
     device_tracker.ff590mr_device_tracker:
       friendly_name: Mercedes A200d
       entity_picture: /local/images/device-trackers/mercedes.jpg
 
-    # Lock
+    ######################################################################
+    # Locks
+    ######################################################################
     lock.ff590mr_lock:
       friendly_name: Blocco Auto
       icon: mdi:lock
@@ -64,12 +71,9 @@ homeassistant:
       friendly_name: Blocco Auto
       icon: mdi:lock
 
-    # Sensore Carburante
-    sensor.ff590mr_fuel_level:
-      friendly_name: Livello Carburante
-      icon: mdi:gas-station
-      # tankLevelAdBlue
-
+    ######################################################################
+    # Sensors
+    ######################################################################
     # Blocco Veicolo - lock
     sensor.ff590mr_lock:
       friendly_name: Veicolo
@@ -79,7 +83,18 @@ homeassistant:
       # doorstatusrearleft, doorstatusfrontright, doorstatusrearright, doorstatusfrontleft, decklidstatus,
       # rooftopstatus, sunroofstatus
 
-    # Odometria
+    # Sensore Carburante - Fuel Level
+    sensor.ff590mr_fuel_level:
+      friendly_name: Livello Carburante
+      icon: mdi:gas-station
+      # tankLevelAdBlue
+
+    # Violazione Geolocalizzazione - Geofencing Violation
+    sensor.ff590mr_geofencing_violation:
+      friendly_name: Violazione Geolocalizzazione
+      icon: mdi:map-marker-radius
+
+    # Odometria - odometer
     sensor.ff590mr_odometer:
       friendly_name: Km Percorsi
       icon: mdi:road-variant
@@ -88,12 +103,19 @@ homeassistant:
       # gasconsumptionstart, gasconsumptionreset, gasTankRange, gasTankLevel,
       # liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, rangeliquid, serviceintervaldays, tanklevelpercent, tankReserveLamp,
       # batteryState, tankLevelAdBlue
+    sensor.ff590mr_liquid_consumption_start:
+      friendly_name: Consumo dalla partenza
+    sensor.ff590mr_liquid_consumption_reset:
+      friendly_name: Consumo dal reset
 
     # Sensore Avviamento
     sensor.ff590mr_ignition_state:
       friendly_name: Stato Accensione
       icon: mdi:key-wireless
 
+    ######################################################################
+    # Diagnostic Sensors
+    ######################################################################
     # Sensore Dati Connessione
     sensor.ff590mr_car:
       friendly_name: Messaggi Auto
