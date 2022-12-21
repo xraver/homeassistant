@@ -433,57 +433,77 @@
             {
               "entity": "light.luci_casa",
               "name": "Luci Casa",
-              "type": "light"
+              "type": "tile"
             },
             {
               "entity": "light.luce_cucina",
               "name": "Luce Cucina",
-              "type": "light"
+              "type": "tile"
             },
             {
               "entity": "light.luce_corridoio",
               "name": "Luce Corridoio",
-              "type": "light"
+              "type": "tile"
             },
             {
               "entity": "light.luci_sala",
               "name": "Luci Sala",
-              "type": "light"
+              "type": "tile"
+            },
+            {
+              "entity": "light.luce_sala",
+              "name": "Luce Sala",
+              "type": "tile",
+              "features": [
+                {
+                  "type": "light-brightness"
+                }
+              ]
             },
             {
               "entity": "light.luce_divano",
               "name": "Luce Divano",
-              "type": "light"
+              "type": "tile",
+              "features": [
+                {
+                  "type": "light-brightness"
+                }
+              ]
             },
             {
               "entity": "light.luci_bagno",
               "name": "Luci Bagno",
-              "type": "light"
+              "type": "tile"
             },
             {
               "entity": "light.luce_bagno",
               "name": "Luce Bagno",
-              "type": "light"
+              "type": "tile"
             },
             {
               "entity": "light.luce_specchio",
               "name": "Luce Specchio",
-              "type": "light"
+              "type": "tile"
             },
             {
               "entity": "light.luce_studio",
               "name": "Luce Studio",
-              "type": "light"
+              "type": "tile"
             },
             {
               "entity": "light.luce_camera",
               "name": "Luce Camera",
-              "type": "light"
+              "type": "tile",
+              "features": [
+                {
+                  "type": "light-brightness"
+                }
+              ]
             },
             {
               "entity": "light.luce_balcone",
               "name": "Luce Balcone",
-              "type": "light"
+              "type": "tile"
             }
           ]
         },
@@ -1233,6 +1253,9 @@
                 },
                 {
                   "entity": "sensor.ff590mr_service_interval_days"
+                },
+                {
+                  "entity": "sensor.ff590mr_geofencing_violation"
                 }
               ],
               "view_layout": {
