@@ -1,528 +1,545 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace.lovelace_settings",
-    "data": {
-        "config": {
-            "title": "Sistema Home Assistant",
-            "views": [
-                {
-                    "icon": "mdi:cog",
-                    "title": "Configurazione",
-                    "path": "config",
-                    "badges": [
-                        {
-                            "entity": "binary_sensor.home_mode"
-                        },
-                        {
-                            "entity": "binary_sensor.guard_mode"
-                        },
-                        {
-                            "entity": "binary_sensor.speech_notifications"
-                        },
-                        {
-                            "entity": "binary_sensor.text_notifications"
-                        },
-                        {
-                            "entity": "binary_sensor.home_assistant_error"
-                        }
-                    ],
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "automation.home_assistant_startup_restart_on_error"
-                                        },
-                                        {
-                                            "entity": "automation.modalita_vacanza_gestione_tapparelle"
-                                        },
-                                        {
-                                            "entity": "automation.home_assistant_startup_google_sync"
-                                        },
-                                        {
-                                            "entity": "automation.risveglio_giorgio"
-                                        }
-                                    ],
-                                    "show_header_toggle": false,
-                                    "title": "Automazioni",
-                                    "type": "entities"
-                                },
-                                {
-                                    "entities": [
-                                        "input_boolean.speech_notifications",
-                                        "input_boolean.text_notifications"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "title": "Configurazione Notifiche",
-                                    "type": "entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entities": [
-                                        "script.homeassistant_restart",
-                                        "script.homeassistant_reload_scripts",
-                                        "script.homeassistant_reload_automations",
-                                        "script.homeassistant_clearlog",
-                                        "script.homeassistant_google_home_sync",
-                                        "input_boolean.test_mode"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "title": "Controlli",
-                                    "type": "entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.current_version"
-                                        },
-                                        {
-                                            "entity": "sensor.cert_expiry_timestamp_server_giorgioravera_it"
-                                        },
-                                        {
-                                            "entity": "group.update"
-                                        },
-                                        {
-                                            "entity": "sensor.hacs"
-                                        }
-                                    ],
-                                    "show_header_toggle": false,
-                                    "title": "Informazioni Varie",
-                                    "type": "entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ]
-                },
-                {
-                    "icon": "mdi:zigbee",
-                    "title": "Zigbee",
-                    "path": "zigbee",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.zigbee2mqtt_stato_bridge"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_stato_permit_join"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_stato_log_level"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_versione_bridge"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_versione_coordinator"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_canale"
-                                },
-                                {
-                                    "entity": "sensor.zigbee2mqtt_panid"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Stato Sistema Zigbee2mqtt",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "script.zigbee2mqtt_restart"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "switch.zigbee2mqtt_abilita_join"
-                                },
-                                {
-                                    "entity": "timer.zigbee_permit_join"
-                                },
-                                {
-                                    "entity": "input_number.zigbee2mqtt_join_minutes"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "input_text.zigbee2mqtt_old_name"
-                                },
-                                {
-                                    "entity": "input_text.zigbee2mqtt_new_name"
-                                },
-                                {
-                                    "entity": "script.zigbee2mqtt_rename"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "input_text.zigbee2mqtt_remove"
-                                },
-                                {
-                                    "entity": "input_boolean.zigbee2mqtt_force_remove"
-                                },
-                                {
-                                    "entity": "script.zigbee2mqtt_remove"
-                                },
-                                {
-                                    "type": "divider",
-                                    "style": {
-                                        "height": "1px",
-                                        "width": "98%",
-                                        "margin-left": "auto",
-                                        "margin-right": "auto",
-                                        "background": "#62717b"
-                                    }
-                                },
-                                {
-                                    "entity": "input_select.zigbee2mqtt_log_level"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "Operazioni Sistema Zigbee2mqtt",
-                            "type": "entities"
-                        },
-                        {
-                            "type": "custom:battery-state-card",
-                            "title": "Batteria Dispositivi ZigBee",
-                            "sort_by_level": "desc",
-                            "entities": [
-                                {
-                                    "entity": "sensor.porta_casa_battery",
-                                    "name": "Porta Casa"
-                                },
-                                {
-                                    "entity": "sensor.temperatura_balcone_battery",
-                                    "name": "Temperatura Balcone"
-                                },
-                                {
-                                    "entity": "sensor.temperatura_veranda_battery",
-                                    "name": "Temperatura Veranda"
-                                },
-                                {
-                                    "entity": "sensor.spare_door_battery",
-                                    "name": "Spare Door"
-                                },
-                                {
-                                    "entity": "sensor.wireless_button_battery",
-                                    "name": "Wireless Button"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "title": "Mappa Dispositivi",
-                            "layout": "vertical",
-                            "cards": [
-                                {
-                                    "type": "custom:zigbee2mqtt-networkmap",
-                                    "title": "Zigbee2MQTT Network Map",
-                                    "entity": "sensor.zigbee2mqtt_networkmap",
-                                    "mqtt_base_topic": "zigbee2mqtt",
-                                    "force": 3000,
-                                    "node_size": 16,
-                                    "font_size": 12,
-                                    "link_width": 2,
-                                    "height": 400,
-                                    "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n    }\n"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "icon": "mdi:lan",
-                    "title": "Dispositivi di Rete",
-                    "type": "sidebar",
-                    "path": "network",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.xraver_duckdns_org"
-                                }
-                            ],
-                            "title": "External IP",
-                            "type": "entities",
-                            "view_layout": {
-                                "position": "sidebar"
-                            }
-                        },
-                        {
-                            "type": "vertical-stack",
-                            "cards": [
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "sensor.speedtest_ping"
-                                        },
-                                        {
-                                            "entity": "sensor.speedtest_download"
-                                        },
-                                        {
-                                            "entity": "sensor.speedtest_upload"
-                                        }
-                                    ],
-                                    "title": "Speed Test"
-                                },
-                                {
-                                    "type": "button",
-                                    "entity": "sensor.speedtest_download",
-                                    "show_icon": true,
-                                    "name": "Aggiorna Valori",
-                                    "icon_height": "25px",
-                                    "tap_action": {
-                                        "action": "call-service",
-                                        "service": "speedtestdotnet.speedtest"
-                                    }
-                                }
-                            ],
-                            "view_layout": {
-                                "position": "sidebar"
-                            }
-                        },
-                        {
-                            "type": "history-graph",
-                            "entities": [
-                                {
-                                    "entity": "sensor.freebsd_router_kib_s_received"
-                                },
-                                {
-                                    "entity": "sensor.freebsd_router_kib_s_sent"
-                                }
-                            ],
-                            "title": "pfSense - Traffico di Rete",
-                            "refresh_interval": 0,
-                            "hours_to_show": 6
-                        }
-                    ]
-                },
-                {
-                    "title": "Automazioni",
-                    "path": "automations",
-                    "icon": "mdi:cogs",
-                    "type": "panel",
-                    "badges": [],
-                    "cards": [
-                        {
-                            "type": "custom:layout-card",
-                            "layout_type": "custom:grid-layout",
-                            "layout": {
-                                "grid-template-columns": "100px auto"
-                            },
-                            "cards": [
-                                {
-                                    "type": "vertical-stack",
-                                    "cards": [
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Tutte"
-                                            },
-                                            "icon": "mdi:cog"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Allarmi"
-                                            },
-                                            "icon": "mdi:alarm"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Guardia"
-                                            },
-                                            "icon": "mdi:shield-home"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Home Assistant"
-                                            },
-                                            "icon": "mdi:home-assistant"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Luci"
-                                            },
-                                            "icon": "mdi:lightbulb"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Termosifoni"
-                                            },
-                                            "icon": "mdi:radiator"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Shelly"
-                                            },
-                                            "icon": "mdi:alpha-s-box"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Vacanza"
-                                            },
-                                            "icon": "mdi:airplane"
-                                        },
-                                        {
-                                            "type": "custom:button-card",
-                                            "template": "generic_themed_input_select",
-                                            "entity": "input_select.automation_selector",
-                                            "variables": {
-                                                "value_select": "Zigbee2MQTT"
-                                            },
-                                            "icon": "mdi:zigbee"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "custom:auto-entities",
-                                    "show_icon": false,
-                                    "show_header_toggle": true,
-                                    "card": {
-                                        "type": "entities",
-                                        "title": "Automazioni",
-                                        "state_color": true
-                                    },
-                                    "filter": {
-                                        "template": "[ {% for auto in states.automation %}\n    {% if states['input_select.automation_selector'].state.upper().replace(\" \",\"_\") in auto.entity_id.upper() or \n          states['input_select.automation_selector'].state == \"Tutte\" %}\n      {'entity': '{{ auto.entity_id }}', 'secondary_info': 'last-triggered'},\n    {% endif %}\n  {% endfor %} ]\n"
-                                    },
-                                    "sort": {
-                                        "method": "name",
-                                        "reverse": false
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "button_card_templates": {
-                "generic_themed_input_select": {
-                    "color_type": "icon",
-                    "variables": {
-                        "value_select": ""
-                    },
-                    "show_name": true,
-                    "name": "[[[ return variables.value_select ]]]\n",
-                    "styles": {
-                        "card": [
-                            {
-                                "font-size": "11pt"
-                            },
-                            {
-                                "color": "var(--primary-text-color)"
-                            },
-                            {
-                                "background": "linear-gradient(var(--secondary-background-color), var(--primary-background-color))"
-                            },
-                            {
-                                "border": "rgba(115, 115, 115, 0.75) 0.5px solid"
-                            },
-                            {
-                                "border-radius": "0.8vw"
-                            },
-                            {
-                                "box-shadow": "none"
-                            },
-                            {
-                                "transition": "0.5s"
-                            },
-                            {
-                                "height": "95px"
-                            },
-                            {
-                                "border-color": "[[[\n  if (variables.value_select && entity.state==variables.value_select)\n    return 'DeepSkyBlue'\n]]]                    \n"
-                            }
-                        ],
-                        "name": [
-                            {
-                                "font-size": "11px"
-                            }
-                        ],
-                        "icon": [
-                            {
-                                "width": "30px"
-                            },
-                            {
-                                "color": "[[[\n  if (variables.value_select && entity.state==variables.value_select)\n    return 'var(--switch-checked-button-color)'\n  else\n    return 'lightgray'\n]]]            \n"
-                            }
-                        ]
-                    },
-                    "hold_action": {
-                        "action": "more-info"
-                    },
-                    "tap_action": {
-                        "action": "call-service",
-                        "service": "input_select.select_option",
-                        "service_data": {
-                            "entity_id": "[[[ return entity.entity_id ]]]",
-                            "option": "[[[ return variables.value_select ]]]"
-                        }
-                    }
-                }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.lovelace_settings",
+  "data": {
+    "config": {
+      "title": "Sistema Home Assistant",
+      "views": [
+        {
+          "icon": "mdi:cog",
+          "title": "Configurazione",
+          "path": "config",
+          "badges": [
+            {
+              "entity": "binary_sensor.home_mode"
+            },
+            {
+              "entity": "binary_sensor.guard_mode"
+            },
+            {
+              "entity": "binary_sensor.speech_notifications"
+            },
+            {
+              "entity": "binary_sensor.text_notifications"
+            },
+            {
+              "entity": "binary_sensor.home_assistant_error"
             }
+          ],
+          "cards": [
+            {
+              "cards": [
+                {
+                  "entities": [
+                    {
+                      "entity": "automation.home_assistant_startup_restart_on_error"
+                    },
+                    {
+                      "entity": "automation.modalita_vacanza_gestione_tapparelle"
+                    },
+                    {
+                      "entity": "automation.home_assistant_startup_google_sync"
+                    },
+                    {
+                      "entity": "automation.risveglio_giorgio"
+                    }
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Automazioni",
+                  "type": "entities"
+                },
+                {
+                  "entities": [
+                    "input_boolean.speech_notifications",
+                    "input_boolean.text_notifications"
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Configurazione Notifiche",
+                  "type": "entities"
+                }
+              ],
+              "type": "vertical-stack"
+            },
+            {
+              "cards": [
+                {
+                  "entities": [
+                    "script.homeassistant_restart",
+                    "script.homeassistant_reload_scripts",
+                    "script.homeassistant_reload_automations",
+                    "script.homeassistant_clearlog",
+                    "script.homeassistant_google_home_sync",
+                    "input_boolean.test_mode"
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Controlli",
+                  "type": "entities"
+                }
+              ],
+              "type": "vertical-stack"
+            },
+            {
+              "cards": [
+                {
+                  "entities": [
+                    {
+                      "entity": "sensor.current_version"
+                    },
+                    {
+                      "entity": "sensor.cert_expiry_timestamp_server_giorgioravera_it"
+                    },
+                    {
+                      "entity": "group.update"
+                    },
+                    {
+                      "entity": "sensor.hacs"
+                    }
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Informazioni Varie",
+                  "type": "entities"
+                }
+              ],
+              "type": "vertical-stack"
+            }
+          ]
+        },
+        {
+          "icon": "mdi:zigbee",
+          "title": "Zigbee",
+          "path": "zigbee",
+          "badges": [],
+          "cards": [
+            {
+              "entities": [
+                {
+                  "entity": "sensor.zigbee2mqtt_stato_bridge"
+                },
+                {
+                  "entity": "sensor.zigbee2mqtt_stato_permit_join"
+                },
+                {
+                  "entity": "sensor.zigbee2mqtt_stato_log_level"
+                },
+                {
+                  "entity": "sensor.zigbee2mqtt_versione_bridge"
+                },
+                {
+                  "entity": "sensor.zigbee2mqtt_versione_coordinator"
+                },
+                {
+                  "entity": "sensor.zigbee2mqtt_canale"
+                },
+                {
+                  "entity": "sensor.zigbee2mqtt_panid"
+                }
+              ],
+              "show_header_toggle": false,
+              "title": "Stato Sistema Zigbee2mqtt",
+              "type": "entities"
+            },
+            {
+              "entities": [
+                {
+                  "entity": "script.zigbee2mqtt_restart"
+                },
+                {
+                  "type": "divider",
+                  "style": {
+                    "height": "1px",
+                    "width": "98%",
+                    "margin-left": "auto",
+                    "margin-right": "auto",
+                    "background": "#62717b"
+                  }
+                },
+                {
+                  "entity": "switch.zigbee2mqtt_abilita_join"
+                },
+                {
+                  "entity": "timer.zigbee_permit_join"
+                },
+                {
+                  "entity": "input_number.zigbee2mqtt_join_minutes"
+                },
+                {
+                  "type": "divider",
+                  "style": {
+                    "height": "1px",
+                    "width": "98%",
+                    "margin-left": "auto",
+                    "margin-right": "auto",
+                    "background": "#62717b"
+                  }
+                },
+                {
+                  "entity": "input_text.zigbee2mqtt_old_name"
+                },
+                {
+                  "entity": "input_text.zigbee2mqtt_new_name"
+                },
+                {
+                  "entity": "script.zigbee2mqtt_rename"
+                },
+                {
+                  "type": "divider",
+                  "style": {
+                    "height": "1px",
+                    "width": "98%",
+                    "margin-left": "auto",
+                    "margin-right": "auto",
+                    "background": "#62717b"
+                  }
+                },
+                {
+                  "entity": "input_text.zigbee2mqtt_remove"
+                },
+                {
+                  "entity": "input_boolean.zigbee2mqtt_force_remove"
+                },
+                {
+                  "entity": "script.zigbee2mqtt_remove"
+                },
+                {
+                  "type": "divider",
+                  "style": {
+                    "height": "1px",
+                    "width": "98%",
+                    "margin-left": "auto",
+                    "margin-right": "auto",
+                    "background": "#62717b"
+                  }
+                },
+                {
+                  "entity": "input_select.zigbee2mqtt_log_level"
+                }
+              ],
+              "show_header_toggle": false,
+              "title": "Operazioni Sistema Zigbee2mqtt",
+              "type": "entities"
+            },
+            {
+              "type": "custom:battery-state-card",
+              "title": "Batteria Dispositivi ZigBee",
+              "sort_by_level": "desc",
+              "entities": [
+                {
+                  "entity": "sensor.porta_casa_battery",
+                  "name": "Porta Casa"
+                },
+                {
+                  "entity": "sensor.temperatura_balcone_battery",
+                  "name": "Temperatura Balcone"
+                },
+                {
+                  "entity": "sensor.temperatura_veranda_battery",
+                  "name": "Temperatura Veranda"
+                },
+                {
+                  "entity": "sensor.spare_door_battery",
+                  "name": "Spare Door"
+                },
+                {
+                  "entity": "sensor.wireless_button_battery",
+                  "name": "Wireless Button"
+                }
+              ]
+            },
+            {
+              "type": "vertical-stack",
+              "title": "Mappa Dispositivi",
+              "layout": "vertical",
+              "cards": [
+                {
+                  "type": "custom:zigbee2mqtt-networkmap",
+                  "title": "Zigbee2MQTT Network Map",
+                  "entity": "sensor.zigbee2mqtt_networkmap",
+                  "mqtt_base_topic": "zigbee2mqtt",
+                  "force": 3000,
+                  "node_size": 16,
+                  "font_size": 12,
+                  "link_width": 2,
+                  "height": 400,
+                  "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n    }\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "icon": "mdi:lan",
+          "title": "Dispositivi di Rete",
+          "type": "sidebar",
+          "path": "network",
+          "badges": [],
+          "cards": [
+            {
+              "entities": [
+                {
+                  "entity": "sensor.xraver_duckdns_org"
+                }
+              ],
+              "title": "External IP",
+              "type": "entities",
+              "view_layout": {
+                "position": "sidebar"
+              }
+            },
+            {
+              "type": "vertical-stack",
+              "cards": [
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "sensor.speedtest_ping"
+                    },
+                    {
+                      "entity": "sensor.speedtest_download"
+                    },
+                    {
+                      "entity": "sensor.speedtest_upload"
+                    }
+                  ],
+                  "title": "Speed Test"
+                },
+                {
+                  "type": "button",
+                  "entity": "sensor.speedtest_download",
+                  "show_icon": true,
+                  "name": "Aggiorna Valori",
+                  "icon_height": "25px",
+                  "tap_action": {
+                    "action": "call-service",
+                    "service": "speedtestdotnet.speedtest"
+                  }
+                }
+              ],
+              "view_layout": {
+                "position": "sidebar"
+              }
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "sensor.freebsd_router_kib_s_received"
+                },
+                {
+                  "entity": "sensor.freebsd_router_kib_s_sent"
+                }
+              ],
+              "title": "pfSense - Traffico di Rete",
+              "refresh_interval": 0,
+              "hours_to_show": 6
+            }
+          ]
+        },
+        {
+          "title": "Automazioni",
+          "path": "automations",
+          "icon": "mdi:cogs",
+          "type": "panel",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "layout_type": "custom:grid-layout",
+              "layout": {
+                "grid-template-columns": "100px auto"
+              },
+              "cards": [
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Tutte"
+                      },
+                      "icon": "mdi:cog"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Allarmi"
+                      },
+                      "icon": "mdi:alarm"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Guardia"
+                      },
+                      "icon": "mdi:shield-home"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Home Assistant"
+                      },
+                      "icon": "mdi:home-assistant"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Luci"
+                      },
+                      "icon": "mdi:lightbulb"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Termosifoni"
+                      },
+                      "icon": "mdi:radiator"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Shelly"
+                      },
+                      "icon": "mdi:alpha-s-box"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Vacanza"
+                      },
+                      "icon": "mdi:airplane"
+                    },
+                    {
+                      "type": "custom:button-card",
+                      "template": "generic_themed_input_select",
+                      "entity": "input_select.automation_selector",
+                      "variables": {
+                        "value_select": "Zigbee2MQTT"
+                      },
+                      "icon": "mdi:zigbee"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:auto-entities",
+                  "show_icon": false,
+                  "show_header_toggle": true,
+                  "card": {
+                    "type": "entities",
+                    "title": "Automazioni",
+                    "state_color": true
+                  },
+                  "filter": {
+                    "template": "[ {% for auto in states.automation %}\n    {% if states['input_select.automation_selector'].state.upper().replace(\" \",\"_\") in auto.entity_id.upper() or \n          states['input_select.automation_selector'].state == \"Tutte\" %}\n      {'entity': '{{ auto.entity_id }}', 'secondary_info': 'last-triggered'},\n    {% endif %}\n  {% endfor %} ]\n"
+                  },
+                  "sort": {
+                    "method": "name",
+                    "reverse": false
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "title": "History",
+          "path": "history",
+          "icon": "mdi:history",
+          "type": "panel",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:history-explorer-card",
+              "cardName": "History",
+              "defaultTimeRange": "1h",
+              "combineSameUnits": true,
+              "recordedEntitiesOnly": true
+            }
+          ]
         }
+      ],
+      "button_card_templates": {
+        "generic_themed_input_select": {
+          "color_type": "icon",
+          "variables": {
+            "value_select": ""
+          },
+          "show_name": true,
+          "name": "[[[ return variables.value_select ]]]\n",
+          "styles": {
+            "card": [
+              {
+                "font-size": "11pt"
+              },
+              {
+                "color": "var(--primary-text-color)"
+              },
+              {
+                "background": "linear-gradient(var(--secondary-background-color), var(--primary-background-color))"
+              },
+              {
+                "border": "rgba(115, 115, 115, 0.75) 0.5px solid"
+              },
+              {
+                "border-radius": "0.8vw"
+              },
+              {
+                "box-shadow": "none"
+              },
+              {
+                "transition": "0.5s"
+              },
+              {
+                "height": "95px"
+              },
+              {
+                "border-color": "[[[\n  if (variables.value_select && entity.state==variables.value_select)\n    return 'DeepSkyBlue'\n]]]                    \n"
+              }
+            ],
+            "name": [
+              {
+                "font-size": "11px"
+              }
+            ],
+            "icon": [
+              {
+                "width": "30px"
+              },
+              {
+                "color": "[[[\n  if (variables.value_select && entity.state==variables.value_select)\n    return 'var(--switch-checked-button-color)'\n  else\n    return 'lightgray'\n]]]            \n"
+              }
+            ]
+          },
+          "hold_action": {
+            "action": "more-info"
+          },
+          "tap_action": {
+            "action": "call-service",
+            "service": "input_select.select_option",
+            "service_data": {
+              "entity_id": "[[[ return entity.entity_id ]]]",
+              "option": "[[[ return variables.value_select ]]]"
+            }
+          }
+        }
+      }
     }
+  }
 }

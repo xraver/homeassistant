@@ -1,3 +1,7 @@
+######################################################################
+# Component: Amazon Alexa
+######################################################################
+
 smart_home:
   locale: it-IT
   endpoint: https://api.eu.amazonalexa.com/v3/events

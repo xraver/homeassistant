@@ -1529,11 +1529,43 @@
           ]
         },
         {
+          "theme": "Backend-selected",
           "icon": "mdi:home-thermometer",
           "id": "temperature",
           "title": "Temperature",
           "path": "temperature",
-          "badges": [],
+          "badges": [
+            {
+              "entity": "sun.sun"
+            },
+            {
+              "entity": "sensor.valvola_cucina_temperature"
+            },
+            {
+              "entity": "sensor.valvola_sala_temperature"
+            },
+            {
+              "entity": "sensor.valvola_bagno_temperature"
+            },
+            {
+              "entity": "sensor.valvola_studio_temperature"
+            },
+            {
+              "entity": "sensor.valvola_camera_temperature"
+            },
+            {
+              "entity": "sensor.temperatura_balcone_temperature"
+            },
+            {
+              "entity": "sensor.temperatura_veranda_temperature"
+            },
+            {
+              "entity": "sensor.temperatura_balcone_humidity"
+            },
+            {
+              "entity": "sensor.temperatura_veranda_humidity"
+            }
+          ],
           "cards": [
             {
               "type": "vertical-stack",
@@ -1996,27 +2028,6 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "icon": "mdi:weather-sunny",
-          "id": "weather",
-          "title": "Meteo",
-          "path": "weather",
-          "badges": [
-            {
-              "entity": "sun.sun"
-            }
-          ],
-          "cards": [
-            {
-              "entity": "weather.meteo_savona",
-              "type": "weather-forecast"
-            },
-            {
-              "entity": "weather.meteo_morgex",
-              "type": "weather-forecast"
             }
           ]
         },
