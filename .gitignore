@@ -17,7 +17,7 @@ secrets.yaml
 webostv.conf
 
 # Disabled Files
-#*.disabled
+*.disabled
 
 # Local Backups
 backups/

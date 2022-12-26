@@ -71,7 +71,7 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
   * LG webOS Smart TV
   * Mercedes Me
   * MQTT
-  * Netatmo
+  * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa)
   * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
   * Sony Bravia
   * SpeedTest
