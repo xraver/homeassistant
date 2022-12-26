@@ -4,26 +4,26 @@
 
 sensor:
   ######################################################################
-  # Sensor: Distance from Start
-  ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_distance_since_start:
-        friendly_name: Distanza dalla partenza
-        unit_of_measurement: 'Km'
-        value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceStart') }}"
-        icon_template: mdi:road-variant
-
-  ######################################################################
   # Sensor: Distance from Reset
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_distance_since_reset:
-        friendly_name: Distanza dal reset
-        unit_of_measurement: 'Km'
-        value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceReset') }}"
-        icon_template: mdi:road-variant
+  #- platform: template
+  #  sensors:
+  #    ff590mr_distance_since_reset:
+  #      friendly_name: Distanza dal reset
+  #      unit_of_measurement: 'Km'
+  #      value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceReset') }}"
+  #      icon_template: mdi:map-marker-distance
+
+  ######################################################################
+  # Sensor: Distance from Start
+  ######################################################################
+  #- platform: template
+  #  sensors:
+  #    ff590mr_distance_since_start:
+  #      friendly_name: Distanza dalla partenza
+  #      unit_of_measurement: 'Km'
+  #      value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceStart') }}"
+  #      icon_template: mdi:map-marker-distance
 
   ######################################################################
   # Sensor: Liquid Consumption from Start

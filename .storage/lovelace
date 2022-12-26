@@ -1237,10 +1237,10 @@
                   "entity": "sensor.ff590mr_odometer"
                 },
                 {
-                  "entity": "sensor.ff590mr_distance_since_start"
+                  "entity": "sensor.ff590mr_distance_start"
                 },
                 {
-                  "entity": "sensor.ff590mr_distance_since_reset"
+                  "entity": "sensor.ff590mr_distance_reset"
                 },
                 {
                   "entity": "sensor.ff590mr_fuel_level"

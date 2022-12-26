@@ -103,6 +103,10 @@ homeassistant:
       # gasconsumptionstart, gasconsumptionreset, gasTankRange, gasTankLevel,
       # liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, rangeliquid, serviceintervaldays, tanklevelpercent, tankReserveLamp,
       # batteryState, tankLevelAdBlue
+    sensor.ff590mr_distance_reset:
+      friendly_name: Distanza dal reset
+    sensor.ff590mr_distance_start:
+      friendly_name: Distanza dalla partenza
     sensor.ff590mr_liquid_consumption_start:
       friendly_name: Consumo dalla partenza
     sensor.ff590mr_liquid_consumption_reset:
