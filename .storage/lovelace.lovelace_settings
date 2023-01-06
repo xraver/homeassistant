@@ -277,6 +277,9 @@
             {
               "entities": [
                 {
+                  "entity": "sensor.externalip_giorgioravera_it"
+                },
+                {
                   "entity": "sensor.xraver_duckdns_org"
                 }
               ],
@@ -305,14 +308,23 @@
                   "title": "Speed Test"
                 },
                 {
+                  "show_name": true,
+                  "show_icon": true,
                   "type": "button",
                   "entity": "sensor.speedtest_download",
-                  "show_icon": true,
                   "name": "Aggiorna Valori",
                   "icon_height": "25px",
                   "tap_action": {
                     "action": "call-service",
-                    "service": "speedtestdotnet.speedtest"
+                    "service": "homeassistant.update_entity",
+                    "data": {},
+                    "target": {
+                      "entity_id": [
+                        "sensor.speedtest_ping",
+                        "sensor.speedtest_download",
+                        "sensor.speedtest_upload"
+                      ]
+                    }
                   }
                 }
               ],
