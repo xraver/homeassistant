@@ -45,16 +45,20 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 * [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
 * [history-explorer-card](https://github.com/alexarch21/history-explorer-card)
+* [Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)
 * [hui-element](https://github.com/thomasloven/lovelace-hui-element)
 * [layout-card](https://github.com/thomasloven/lovelace-layout-card)
 * [Lovelace Swipe Navigation](https://github.com/maykar/lovelace-swipe-navigation)
 * [mini-graph-card](https://github.com/kalkih/mini-graph-card)
+* [Mushroom](https://github.com/piitaya/lovelace-mushroom)
+* [Mushroom Themes](https://github.com/piitaya/lovelace-mushroom-themes)
 * [Paper Buttons Row](https://github.com/jcwillox/lovelace-paper-buttons-row) (not currently used)
 * [pirate-weather-ha](https://github.com/alexander0042/pirate-weather-ha)
 * [Plotly Graph Card](https://github.com/dbuezas/lovelace-plotly-graph-card)
 * [Reeder Dark Theme](https://github.com/hekm77/reeder_dark_theme)
 * [Scheduler Card](https://github.com/nielsfaber/scheduler-card) (not currently used)
 * [Shutter Card](https://github.com/Deejayfool/hass-shutter-card)
+* [Tabbed Card](https://github.com/kinghat/tabbed-card)
 * [Zigbee2mqtt Networkmap Card](https://github.com/azuwis/zigbee2mqtt-networkmap)
 
 ## Installation
@@ -77,7 +81,7 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
   * LG webOS Smart TV
   * Mercedes Me
   * MQTT
-  * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa)
+  * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa and assign names to all devices)
   * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
   * Sony Bravia
   * SpeedTest

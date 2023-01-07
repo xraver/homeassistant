@@ -69,7 +69,7 @@ frontend:
   themes: !include_dir_merge_named themes
 
 # Images
-image:
+image_upload:
 
 # Inputs
 input_boolean: !include_dir_merge_named input_boolean/
@@ -201,7 +201,7 @@ tts: !include components/tts.yaml
 wake_on_lan:
 
 # Weather
-weather: !include components/weather.yaml
+#weather: !include components/weather.yaml
 
 ######################################################################
 # Integrations
@@ -225,3 +225,6 @@ proxmoxve: !include components/proxmox.yaml
 
 # Telegram
 telegram_bot: !include components/telegram.yaml
+
+# Monitor Docker
+monitor_docker: !include components/monitor_docker.yaml

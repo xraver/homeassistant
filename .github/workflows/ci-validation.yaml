@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install lxml arp colorlog python-dateutil
+        pip install colorlog python-dateutil
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Install Home Assistant
       run: |
