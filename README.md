@@ -1,5 +1,5 @@
 # Home Assistant Configuration
-[![Build Status][build-status-img]][build-status-url]
+[![Check Status][check-status-img]][check-status-url]
 [![Last Commit][last-commit-img]][last-commit-url]
 [![License Status][license-img]][license-url]
 [![BuyMeCoffee][buymecoffee-img]][buymecoffee-url]
@@ -119,8 +119,8 @@ All files are tested using the latest stable version of Home Assistant using [Tr
 
 ---
 
-[build-status-img]: https://api.travis-ci.com/xraver/homeassistant.svg?branch=master
-[build-status-url]: https://travis-ci.com/github/xraver/homeassistant
+[check-status-img]: https://github.com/xraver/homeassistant/actions/workflows/ci-validation.yaml/badge.svg
+[check-status-url]: https://github.com/xraver/homeassistant/actions/workflows/ci-validation.yaml
 [license-img]: https://img.shields.io/github/license/xraver/homeassistant
 [license-url]: LICENSE
 [releases-img]: https://img.shields.io/github/v/release/xraver/homeassistant

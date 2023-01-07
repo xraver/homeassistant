@@ -73,7 +73,7 @@ exclude:
     # CO2
     - sensor.co2_signal_co2_intensity
     - sensor.co2_signal_grid_fossil_fuel_percentage
-domains:
+  domains:
     - automation
     - button
     - calendar
