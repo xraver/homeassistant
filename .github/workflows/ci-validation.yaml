@@ -32,9 +32,6 @@ jobs:
       run: |
         cp .secrets_dummy.yaml secrets.yaml
         cp credentials/.google_dummy.json credentials/google.json
-    - name: Replace pirateweather wather integration with darksky
-      run: |
-        sed -i  "s/pirateweather/darksky/" components/weather.yaml
     - name: Home Assistant Configuration Check
       run: |
         hass -c . --script check_config --info all
