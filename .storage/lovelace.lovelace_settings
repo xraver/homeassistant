@@ -239,10 +239,6 @@
                 {
                   "entity": "sensor.spare_door_battery",
                   "name": "Spare Door"
-                },
-                {
-                  "entity": "sensor.wireless_button_battery",
-                  "name": "Wireless Button"
                 }
               ]
             },

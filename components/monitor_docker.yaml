@@ -1,0 +1,31 @@
+######################################################################
+# Component: Monitor Docker
+######################################################################
+
+- name: Docker
+  scan_interval: 300
+  monitored_conditions:
+    - version
+    - containers_total
+    - containers_running
+    #- containers_paused
+    #- containers_stopped
+    #- containers_cpu_percentage
+    #- containers_1cpu_percentage
+    #- containers_memory
+    #- containers_memory_percentage
+    #- images
+    #- state
+    - status
+    #- health
+    #- uptime
+    #- image
+    #- cpu_percentage
+    #- 1cpu_percentage
+    #- memory
+    #- memory_percentage
+    #- network_speed_up
+    #- network_speed_down
+    #- network_total_up
+    #- network_total_down
+    #- allinone
