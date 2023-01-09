@@ -32,6 +32,12 @@ jobs:
       run: |
         cp .secrets_dummy.yaml secrets.yaml
         cp credentials/.google_dummy.json credentials/google.json
+    - name: Installing Custom Components
+      run: |
+        mkdir custom_components/
+        # Monitor Docker
+        git clone https://github.com/ualex73/monitor_docker
+        mv monitor_docker/custom_components/monitor_docker/ custom_components/
     - name: Home Assistant Configuration Check
       run: |
         hass -c . --script check_config --info all

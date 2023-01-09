@@ -225,3 +225,4 @@ telegram_bot: !include components/telegram.yaml
 
 # Monitor Docker
 monitor_docker: !include components/monitor_docker.yaml
+
