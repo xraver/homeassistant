@@ -200,9 +200,6 @@ tts: !include components/tts.yaml
 # Wake on Lan
 wake_on_lan:
 
-# Weather
-#weather: !include components/weather.yaml
-
 ######################################################################
 # Integrations
 ######################################################################

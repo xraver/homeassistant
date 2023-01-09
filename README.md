@@ -82,6 +82,7 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
   * Mercedes Me
   * MQTT
   * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa and assign names to all devices)
+  * Pirate Weather
   * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
   * Sony Bravia
   * SpeedTest
