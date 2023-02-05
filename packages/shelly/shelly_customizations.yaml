@@ -159,17 +159,17 @@ homeassistant:
 
     # Shelly 8 - Luci Bagno (shellyswitch25_C45BBE6C38D0)
     sensor.luce_bagno_energy:
-      friendly_name: Luci Bagno - Energia Luce Bagno
-    binary_sensor.luce_bagno_overpowering:
-      friendly_name: Luce Bagno - Sovraccarico Energetico
+      friendly_name: Luce Bagno - Energia
     sensor.luce_bagno_power:
       friendly_name: Luce Bagno - Potenza
+    binary_sensor.luce_bagno_overpowering:
+      friendly_name: Luce Bagno - Sovraccarico Energetico
     sensor.luce_specchio_energy:
-      friendly_name: Luce Bagno - Energia
-    binary_sensor.luce_specchio_overpowering:
-      friendly_name: Luce Specchio - Sovraccarico Energetico
+      friendly_name: Luce Specchio - Energia
     sensor.luce_specchio_power:
       friendly_name: Luce Specchio - Potenza
+    binary_sensor.luce_specchio_overpowering:
+      friendly_name: Luce Specchio - Sovraccarico Energetico
     binary_sensor.luci_bagno_cloud:
       friendly_name: Luci Bagno - Connessione Cloud
     sensor.luci_bagno_device_temperature:
