@@ -359,6 +359,234 @@
               "entities": [
                 {
                   "type": "section",
+                  "label": "FRITZ!Box 7590"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/fritzbox_7590.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "https://fritz.giorgioravera.it"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "name": "Riavvia Dispositivo",
+                              "tap_action": {
+                                "action": "call-service",
+                                "service": "shell_command.fritz_reboot"
+                              },
+                              "show_icon": true,
+                              "show_state": false,
+                              "icon": "mdi:restart",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  },
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "name": "Ricollega a WAN",
+                              "tap_action": {
+                                "action": "call-service",
+                                "service": "shell_command.fritz_reconnect"
+                              },
+                              "show_icon": true,
+                              "show_state": false,
+                              "icon": "mdi:connection",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  },
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.fritz_led",
+                              "name": "LED",
+                              "show_icon": true,
+                              "show_state": false,
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  },
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
                   "label": "NAS QNAP TS-228A"
                 },
                 {
@@ -660,6 +888,113 @@
               "entities": [
                 {
                   "type": "section",
+                  "label": "BTicino Classe 300EOS with Netatmo"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/classe300eos.png"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.portone",
+                              "name": "Apertura Portone",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
                   "label": "Canon PIXMA TR8550"
                 },
                 {
@@ -853,113 +1188,6 @@
                           "name": "Y",
                           "color": "yellow",
                           "width": "85%"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "BTicino Classe 300EOS with Netatmo"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/classe300eos.png"
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.portone",
-                              "name": "Apertura Portone",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          ]
                         }
                       ]
                     }
@@ -1818,16 +2046,24 @@
                           "type": "vertical-stack",
                           "cards": [
                             {
-                              "type": "custom:button-card",
+                              "type": "tile",
                               "entity": "script.shelly_upgrade",
                               "name": "Aggiorna Tutto",
-                              "icon": "mdi:package-up"
+                              "icon": "mdi:package-up",
+                              "tap_action": {
+                                "action": "call-service",
+                                "service": "script.shelly_upgrade"
+                              }
                             },
                             {
-                              "type": "custom:button-card",
+                              "type": "tile",
                               "entity": "script.shelly_reboot",
                               "name": "Riavvia tutto",
-                              "icon": "mdi:restart"
+                              "icon": "mdi:restart",
+                              "tap_action": {
+                                "action": "call-service",
+                                "service": "script.shelly_reboot"
+                              }
                             }
                           ]
                         }
@@ -2443,6 +2679,197 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_battery_state",
                               "entity": "sensor.spare_door_battery",
+                              "name": "Batteria"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "wireless_button - Xiaomi WXKG01LM"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "https://www.zigbee2mqtt.io/images/devices/WXKG01LM.jpg"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_battery_state",
+                              "entity": "sensor.wireless_button_battery",
+                              "name": "Batteria"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Sensore Acqua 1 - Xiaomi SJCGQ11LM"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "binary_sensor.sensore_acqua_1_water_leak",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_battery_state",
+                              "entity": "sensor.sensore_acqua_1_battery",
+                              "name": "Batteria"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Sensore Acqua 2 - Xiaomi SJCGQ11LM"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "binary_sensor.sensore_acqua_2_water_leak",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_battery_state",
+                              "entity": "sensor.sensore_acqua_2_battery",
+                              "name": "Batteria"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Sensore Acqua 3 - Xiaomi SJCGQ11LM"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "https://www.zigbee2mqtt.io/images/devices/SJCGQ11LM.jpg"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "binary_sensor.sensore_acqua_3_water_leak",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_battery_state",
+                              "entity": "sensor.sensore_acqua_3_battery",
                               "name": "Batteria"
                             }
                           ]
