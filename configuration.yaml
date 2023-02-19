@@ -52,13 +52,13 @@ automation manual: !include_dir_merge_list automations/
 # Backup
 backup:
 
-# Home Assistant Cloud
-# cloud:
-
 # Enables configuration UI
 config:
 
-# counter
+# Conversation
+conversation:
+
+# Counter
 counter: !include_dir_merge_named counters/
 
 # Energy
@@ -68,8 +68,17 @@ energy:
 frontend:
   themes: !include_dir_merge_named themes
 
-# Images
+# Home Assistant Alerts
+homeassistant_alerts:
+
+# Home Assistant Cloud
+# cloud:
+
+# Image upload
 image_upload:
+
+# Hardware
+# hardware:
 
 # Inputs
 input_boolean: !include_dir_merge_named input_boolean/
@@ -94,11 +103,11 @@ my:
 # Person
 person:
 
-# Scene
-#scene: !include_dir_merge_list scenes.yaml
-
 # Schedule
 schedule:
+
+# Scene
+#scene: !include_dir_merge_list scenes.yaml
 
 # Scripts
 script: !include scripts.yaml
@@ -145,14 +154,20 @@ recorder: !include log/recorder.yaml
 # Discovery Protocols
 ######################################################################
 
+# Bluetooth
+# bluetooth:
+
 # Discover DHCP requests for supported devices and services.
 dhcp:
 
-# Discover some devices automatically
-discovery:
+# Discover some devices automatically (deprecated)
+# discovery:
 
 # Simple Service Discovery Protocol (SSDP)
 ssdp:
+
+# USB Discovery
+# usb:
 
 # Zero-configuration networking (zeroconf)
 zeroconf:
