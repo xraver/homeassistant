@@ -12,11 +12,11 @@ tv_sala_toggle:
   alias: "TV Sala: Accendi/Spegni"
   sequence:
     - service: media_player.toggle
-      entity_id: media_player.sony_bravia_tv
+      entity_id: media_player.sony_kd_55xf8596
 #    - service: script.turn_on
 #      data_template:
 #        entity_id: >-
-#          {% if is_state('media_player.sony_bravia_tv', 'on') %}
+#          {% if is_state('media_player.sony_kd_55xf8596', 'on') %}
 #            script.tv_sala_off
 #          {% else %}
 #            script.tv_sala_on
