@@ -2,7 +2,7 @@
 # Google Assistant: Media Player
 ######################################################################
 
-#media_player.sony_bravia_tv:
+#media_player.sony_kd_55xf8596:
 #  expose: true
 #  room: Sala
 
