@@ -9,6 +9,7 @@
 #         5 -> mamma mia
 #         6 -> no
 #         7 -> io mi chiamo Stitch
+#         8 -> annuncio presenza
 #
 # Operations:
 # - script.volume_manager
@@ -106,6 +107,13 @@ laura_voice_7:
   - service: script.laura_voice
     data:
       type: '7'
+
+laura_voice_8:
+  alias: Voce Laura 8
+  sequence:
+  - service: script.laura_voice
+    data:
+      type: '8'
 
 ######################################################################
 # Script: Babu Frik

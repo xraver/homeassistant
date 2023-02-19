@@ -1,1395 +1,1404 @@
 {
-    "version": 1,
-    "minor_version": 1,
-    "key": "lovelace.lovelace_multimedia",
-    "data": {
-        "config": {
-            "title": "Multimedia",
-            "views": [
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.lovelace_multimedia",
+  "data": {
+    "config": {
+      "title": "Multimedia",
+      "views": [
+        {
+          "badges": [],
+          "cards": [
+            {
+              "cards": [
                 {
-                    "badges": [],
-                    "cards": [
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "Sony KD-55XF8596",
+                      "style": [
                         {
-                            "cards": [
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "Sony KD-55XF8596",
-                                            "style": [
-                                                {
-                                                    "background-color": "rgb(46, 46, 46)"
-                                                },
-                                                {
-                                                    "color": "white"
-                                                }
-                                            ],
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "icon": "mdi:television",
-                                            "size": "20%",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_input"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "icon": "mdi:microphone",
-                                            "size": "20%",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_assists"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "entity": "media_player.sony_bravia_tv",
-                                            "icon": "mdi:power",
-                                            "show_name": false,
-                                            "show_state": false,
-                                            "size": "20%",
-                                            "state": [
-                                                {
-                                                    "color": "red",
-                                                    "value": "off"
-                                                },
-                                                {
-                                                    "color": "green",
-                                                    "value": "on"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.tv_sala_toggle"
-                                                }
-                                            },
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "elements": [
-                                                {
-                                                    "image": "/local/images/remote/labels/digital_analog.png",
-                                                    "style": {
-                                                        "left": "16%",
-                                                        "top": "30%",
-                                                        "width": "16%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "15%",
-                                                        "top": "65%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_digital"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/tv_radio.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "30%",
-                                                        "width": "16%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "65%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_tv_radio"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/exit.png",
-                                                    "style": {
-                                                        "left": "62%",
-                                                        "top": "30%",
-                                                        "width": "16%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "62%",
-                                                        "top": "65%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_exit"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/ext_box_menu.png",
-                                                    "style": {
-                                                        "left": "85%",
-                                                        "top": "30%",
-                                                        "width": "16%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "85%",
-                                                        "top": "65%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_exit"
-                                                    },
-                                                    "type": "image"
-                                                }
-                                            ],
-                                            "image": "/local/images/remote/backgrounds/bg_app_top.png",
-                                            "type": "picture-elements"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "1 ./",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num1"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "2 abc",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "7px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num2"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "3 def",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num3"
-                                            },
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "4 ghi",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num4"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "5 jkl",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num5"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "6 mno",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num6"
-                                            },
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "7 pqrs",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num7"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "8 tuv",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num8"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "9 wyz",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num9"
-                                            },
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "?",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_display"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "0",
-                                            "show_icon": false,
-                                            "style": [
-                                                {
-                                                    "font-size": "12px"
-                                                }
-                                            ],
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_num0"
-                                            },
-                                            "type": "custom:button-card"
-                                        },
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "icon": "mdi:card-text-outline",
-                                            "size": "12%",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "shell_command.bravia_teletext"
-                                            },
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "elements": [
-                                                {
-                                                    "image": "/local/images/remote/google_play.png",
-                                                    "style": {
-                                                        "left": "25%",
-                                                        "top": "50%",
-                                                        "width": "35%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_googleplay"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/netflix.png",
-                                                    "style": {
-                                                        "left": "75%",
-                                                        "top": "50%",
-                                                        "width": "35%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_netflix"
-                                                    },
-                                                    "type": "image"
-                                                }
-                                            ],
-                                            "image": "/local/images/remote/backgrounds/bg_app.png",
-                                            "type": "picture-elements"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "elements": [
-                                                {
-                                                    "image": "/local/images/remote/red_button.png",
-                                                    "style": {
-                                                        "left": "15%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_red"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/green_button.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_green"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/yellow_button.png",
-                                                    "style": {
-                                                        "left": "62%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_yellow"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/blue_button.png",
-                                                    "style": {
-                                                        "left": "85%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_blue"
-                                                    },
-                                                    "type": "image"
-                                                }
-                                            ],
-                                            "image": "/local/images/remote/backgrounds/bg_app.png",
-                                            "type": "picture-elements"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "elements": [
-                                                {
-                                                    "image": "/local/images/remote/confirm.png",
-                                                    "style": {
-                                                        "left": "50%",
-                                                        "top": "50%",
-                                                        "width": "10%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_confirm"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/arrow_left.png",
-                                                    "style": {
-                                                        "left": "27%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_left"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/arrow_right.png",
-                                                    "style": {
-                                                        "left": "73%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_right"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/arrow_up.png",
-                                                    "style": {
-                                                        "left": "50%",
-                                                        "top": "23%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_up"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/arrow_down.png",
-                                                    "style": {
-                                                        "left": "50%",
-                                                        "top": "77%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_down"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/action_menu.png",
-                                                    "style": {
-                                                        "left": "50%",
-                                                        "top": "6%",
-                                                        "width": "45%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_actionmenu"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/guide.png",
-                                                    "style": {
-                                                        "left": "13%",
-                                                        "top": "23%",
-                                                        "width": "20%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_gguide"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/apps.png",
-                                                    "style": {
-                                                        "left": "87%",
-                                                        "top": "23%",
-                                                        "width": "20%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_applicationlauncher"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/back.png",
-                                                    "style": {
-                                                        "left": "13%",
-                                                        "top": "77%",
-                                                        "width": "20%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_return"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/home.png",
-                                                    "style": {
-                                                        "left": "87%",
-                                                        "top": "77%",
-                                                        "width": "20%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_home"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/tv.png",
-                                                    "style": {
-                                                        "left": "50%",
-                                                        "top": "94%",
-                                                        "width": "20%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_tv"
-                                                    },
-                                                    "type": "image"
-                                                }
-                                            ],
-                                            "image": "/local/images/remote/backgrounds/dpad.png",
-                                            "type": "picture-elements"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "elements": [
-                                                {
-                                                    "icon": "mdi:repeat",
-                                                    "style": {
-                                                        "--iron-icon-height": "16%",
-                                                        "--iron-icon-width": "16%",
-                                                        "color": "white",
-                                                        "left": "50%",
-                                                        "top": "34%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "50%",
-                                                        "top": "46%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_jump"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:volume-mute",
-                                                    "style": {
-                                                        "--iron-icon-height": "16%",
-                                                        "--iron-icon-width": "16%",
-                                                        "color": "white",
-                                                        "left": "50%",
-                                                        "top": "64%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "50%",
-                                                        "top": "76%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_mute"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/volume.png",
-                                                    "style": {
-                                                        "left": "20%",
-                                                        "top": "15%",
-                                                        "width": "20%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/chngbtn.png",
-                                                    "style": {
-                                                        "left": "20%",
-                                                        "top": "60%",
-                                                        "width": "15%"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/plus.png",
-                                                    "style": {
-                                                        "left": "20%",
-                                                        "top": "40%",
-                                                        "width": "10%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_volumeup"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/minus.png",
-                                                    "style": {
-                                                        "left": "20%",
-                                                        "top": "80%",
-                                                        "width": "10%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_volumedown"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/prog.png",
-                                                    "style": {
-                                                        "left": "80%",
-                                                        "top": "15%",
-                                                        "width": "20%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/chngbtn.png",
-                                                    "style": {
-                                                        "left": "80%",
-                                                        "top": "60%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/plus.png",
-                                                    "style": {
-                                                        "left": "80%",
-                                                        "top": "40%",
-                                                        "width": "10%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_channelup"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/minus.png",
-                                                    "style": {
-                                                        "left": "80%",
-                                                        "top": "80%",
-                                                        "width": "10%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_channeldown"
-                                                    },
-                                                    "type": "image"
-                                                }
-                                            ],
-                                            "image": "/local/images/remote/backgrounds/bg_volume.png",
-                                            "type": "picture-elements"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "elements": [
-                                                {
-                                                    "image": "/local/images/remote/labels/audio.png",
-                                                    "style": {
-                                                        "left": "15%",
-                                                        "top": "10%",
-                                                        "width": "16%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "15%",
-                                                        "top": "25%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_audio"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "25%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:rewind",
-                                                    "style": {
-                                                        "--iron-icon-height": "16%",
-                                                        "--iron-icon-width": "16%",
-                                                        "color": "white",
-                                                        "left": "38%",
-                                                        "top": "25%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_rewind"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "62%",
-                                                        "top": "25%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:play",
-                                                    "style": {
-                                                        "--iron-icon-height": "24%",
-                                                        "--iron-icon-width": "24%",
-                                                        "color": "white",
-                                                        "left": "62%",
-                                                        "top": "25%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_play"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "85%",
-                                                        "top": "25%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:fast-forward",
-                                                    "style": {
-                                                        "--iron-icon-height": "60%",
-                                                        "--iron-icon-width": "60%",
-                                                        "color": "white",
-                                                        "left": "85%",
-                                                        "top": "25%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_forward"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "15%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:subtitles-outline",
-                                                    "style": {
-                                                        "--iron-icon-height": "9%",
-                                                        "--iron-icon-width": "9%",
-                                                        "color": "white",
-                                                        "left": "42%",
-                                                        "top": "50%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_subtitle"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:skip-backward",
-                                                    "style": {
-                                                        "--iron-icon-height": "15%",
-                                                        "--iron-icon-width": "15%",
-                                                        "color": "white",
-                                                        "left": "38%",
-                                                        "top": "50%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_prev"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "62%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:pause",
-                                                    "style": {
-                                                        "--iron-icon-height": "24%",
-                                                        "--iron-icon-width": "24%",
-                                                        "color": "white",
-                                                        "left": "62%",
-                                                        "top": "50%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_pause"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "85%",
-                                                        "top": "50%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:skip-forward",
-                                                    "style": {
-                                                        "--iron-icon-height": "55%",
-                                                        "--iron-icon-width": "55%",
-                                                        "color": "white",
-                                                        "left": "85%",
-                                                        "top": "50%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_next"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/help.png",
-                                                    "style": {
-                                                        "left": "15%",
-                                                        "top": "60%",
-                                                        "width": "16%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "15%",
-                                                        "top": "75%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_help"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/rec.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "60%",
-                                                        "width": "16%"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "75%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_rec"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/rec_button.png",
-                                                    "style": {
-                                                        "left": "38%",
-                                                        "top": "75%",
-                                                        "width": "5%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_rec"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "62%",
-                                                        "top": "75%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "none"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "icon": "mdi:stop",
-                                                    "style": {
-                                                        "--iron-icon-height": "24%",
-                                                        "--iron-icon-width": "24%",
-                                                        "color": "white",
-                                                        "left": "62%",
-                                                        "top": "75%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_stop"
-                                                    },
-                                                    "type": "icon"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/labels/title_list.png",
-                                                    "style": {
-                                                        "left": "85%",
-                                                        "top": "60%",
-                                                        "width": "16%"
-                                                    },
-                                                    "type": "image"
-                                                },
-                                                {
-                                                    "image": "/local/images/remote/black_button.png",
-                                                    "style": {
-                                                        "left": "85%",
-                                                        "top": "75%",
-                                                        "width": "15%"
-                                                    },
-                                                    "tap_action": {
-                                                        "action": "call-service",
-                                                        "service": "shell_command.bravia_forward"
-                                                    },
-                                                    "type": "image"
-                                                }
-                                            ],
-                                            "image": "/local/images/remote/backgrounds/bg_volume.png",
-                                            "type": "picture-elements"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "S O N Y",
-                                            "style": [
-                                                {
-                                                    "background-color": "rgb(46, 46, 46)"
-                                                },
-                                                {
-                                                    "color": "white"
-                                                }
-                                            ],
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "color": "rgb(46, 46, 46)",
-                                            "color_type": "label-card",
-                                            "name": "TV",
-                                            "style": [
-                                                {
-                                                    "background-color": "rgb(46, 46, 46)"
-                                                },
-                                                {
-                                                    "color": "white"
-                                                }
-                                            ],
-                                            "type": "custom:button-card"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "title": "TV Sala",
-                            "type": "vertical-stack"
+                          "background-color": "rgb(46, 46, 46)"
                         },
                         {
-                            "cards": [
-                                {
-                                    "entity": "media_player.sony_bravia_tv",
-                                    "type": "media-control"
-                                },
-                                {
-                                    "type": "media-control",
-                                    "entity": "media_player.tv_camera"
-                                },
-                                {
-                                    "entity": "media_player.samsung_bd_f6500",
-                                    "type": "media-control"
-                                },
-                                {
-                                    "entities": [
-                                        "media_player.google_home",
-                                        "input_text.google_home_speak"
-                                    ],
-                                    "show_header_toggle": false,
-                                    "title": "Google Nest Mini Cucina",
-                                    "type": "entities"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-1",
-                                            "name": "Bell'Affare",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.laura_voice_1"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-2",
-                                            "name": "Belan",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.laura_voice_2"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-3",
-                                            "name": "Schifezza",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.laura_voice_3"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-4",
-                                            "name": "Che Schifo \u00e8?",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.laura_voice_4"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-5",
-                                            "name": "Mamma Mia",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.laura_voice_5"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-6",
-                                            "name": "No",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.laura_voice_6"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-7",
-                                            "name": "Stitch",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.laura_voice_7"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-8",
-                                            "name": null,
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "script.laura_voice",
-                                            "icon": "mdi:numeric-9",
-                                            "name": null,
-                                            "show_name": false,
-                                            "show_icon": false,
-                                            "type": "entity-button"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "script.babu_voice",
-                                            "icon": "mdi:numeric-1",
-                                            "name": "I'm Babu",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.babu_voice_1"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "script.babu_voice",
-                                            "icon": "mdi:numeric-2",
-                                            "name": "Heheeeee",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.turn_on",
-                                                "service_data": {
-                                                    "entity_id": "script.babu_voice_2"
-                                                }
-                                            },
-                                            "type": "entity-button"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                },
-                                {
-                                    "type": "media-control",
-                                    "entity": "media_player.lg_anna"
-                                },
-                                {
-                                    "type": "entities",
-                                    "entities": [
-                                        {
-                                            "entity": "media_player.google_anna"
-                                        }
-                                    ],
-                                    "title": "Google Home Mini Anna",
-                                    "show_header_toggle": false
-                                }
-                            ],
-                            "title": "Media Players",
-                            "type": "vertical-stack"
+                          "color": "white"
                         }
-                    ],
-                    "icon": "mdi:television"
+                      ],
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "icon": "mdi:television",
+                      "size": "20%",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_input"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "icon": "mdi:microphone",
+                      "size": "20%",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_assists"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "entity": "media_player.sony_kd_55xf8596",
+                      "icon": "mdi:power",
+                      "show_name": false,
+                      "show_state": false,
+                      "size": "20%",
+                      "state": [
+                        {
+                          "color": "red",
+                          "value": "off"
+                        },
+                        {
+                          "color": "green",
+                          "value": "on"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.tv_sala_toggle"
+                        }
+                      },
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "elements": [
+                        {
+                          "image": "/local/images/remote/labels/digital_analog.png",
+                          "style": {
+                            "left": "16%",
+                            "top": "30%",
+                            "width": "16%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "15%",
+                            "top": "65%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_digital"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/tv_radio.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "30%",
+                            "width": "16%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "65%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_tv_radio"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/exit.png",
+                          "style": {
+                            "left": "62%",
+                            "top": "30%",
+                            "width": "16%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "62%",
+                            "top": "65%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_exit"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/ext_box_menu.png",
+                          "style": {
+                            "left": "85%",
+                            "top": "30%",
+                            "width": "16%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "85%",
+                            "top": "65%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_exit"
+                          },
+                          "type": "image"
+                        }
+                      ],
+                      "image": "/local/images/remote/backgrounds/bg_app_top.png",
+                      "type": "picture-elements"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "1 ./",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num1"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "2 abc",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "7px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num2"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "3 def",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num3"
+                      },
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "4 ghi",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num4"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "5 jkl",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num5"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "6 mno",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num6"
+                      },
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "7 pqrs",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num7"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "8 tuv",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num8"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "9 wyz",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num9"
+                      },
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "?",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_display"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "0",
+                      "show_icon": false,
+                      "style": [
+                        {
+                          "font-size": "12px"
+                        }
+                      ],
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_num0"
+                      },
+                      "type": "custom:button-card"
+                    },
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "icon": "mdi:card-text-outline",
+                      "size": "12%",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "shell_command.bravia_teletext"
+                      },
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "elements": [
+                        {
+                          "image": "/local/images/remote/google_play.png",
+                          "style": {
+                            "left": "25%",
+                            "top": "50%",
+                            "width": "35%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_googleplay"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/netflix.png",
+                          "style": {
+                            "left": "75%",
+                            "top": "50%",
+                            "width": "35%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_netflix"
+                          },
+                          "type": "image"
+                        }
+                      ],
+                      "image": "/local/images/remote/backgrounds/bg_app.png",
+                      "type": "picture-elements"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "elements": [
+                        {
+                          "image": "/local/images/remote/red_button.png",
+                          "style": {
+                            "left": "15%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_red"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/green_button.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_green"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/yellow_button.png",
+                          "style": {
+                            "left": "62%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_yellow"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/blue_button.png",
+                          "style": {
+                            "left": "85%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_blue"
+                          },
+                          "type": "image"
+                        }
+                      ],
+                      "image": "/local/images/remote/backgrounds/bg_app.png",
+                      "type": "picture-elements"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "elements": [
+                        {
+                          "image": "/local/images/remote/confirm.png",
+                          "style": {
+                            "left": "50%",
+                            "top": "50%",
+                            "width": "10%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_confirm"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/arrow_left.png",
+                          "style": {
+                            "left": "27%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_left"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/arrow_right.png",
+                          "style": {
+                            "left": "73%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_right"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/arrow_up.png",
+                          "style": {
+                            "left": "50%",
+                            "top": "23%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_up"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/arrow_down.png",
+                          "style": {
+                            "left": "50%",
+                            "top": "77%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_down"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/action_menu.png",
+                          "style": {
+                            "left": "50%",
+                            "top": "6%",
+                            "width": "45%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_actionmenu"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/guide.png",
+                          "style": {
+                            "left": "13%",
+                            "top": "23%",
+                            "width": "20%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_gguide"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/apps.png",
+                          "style": {
+                            "left": "87%",
+                            "top": "23%",
+                            "width": "20%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_applicationlauncher"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/back.png",
+                          "style": {
+                            "left": "13%",
+                            "top": "77%",
+                            "width": "20%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_return"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/home.png",
+                          "style": {
+                            "left": "87%",
+                            "top": "77%",
+                            "width": "20%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_home"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/tv.png",
+                          "style": {
+                            "left": "50%",
+                            "top": "94%",
+                            "width": "20%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_tv"
+                          },
+                          "type": "image"
+                        }
+                      ],
+                      "image": "/local/images/remote/backgrounds/dpad.png",
+                      "type": "picture-elements"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "elements": [
+                        {
+                          "icon": "mdi:repeat",
+                          "style": {
+                            "--iron-icon-height": "16%",
+                            "--iron-icon-width": "16%",
+                            "color": "white",
+                            "left": "50%",
+                            "top": "34%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "50%",
+                            "top": "46%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_jump"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:volume-mute",
+                          "style": {
+                            "--iron-icon-height": "16%",
+                            "--iron-icon-width": "16%",
+                            "color": "white",
+                            "left": "50%",
+                            "top": "64%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "50%",
+                            "top": "76%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_mute"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/volume.png",
+                          "style": {
+                            "left": "20%",
+                            "top": "15%",
+                            "width": "20%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/chngbtn.png",
+                          "style": {
+                            "left": "20%",
+                            "top": "60%",
+                            "width": "15%"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/plus.png",
+                          "style": {
+                            "left": "20%",
+                            "top": "40%",
+                            "width": "10%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_volumeup"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/minus.png",
+                          "style": {
+                            "left": "20%",
+                            "top": "80%",
+                            "width": "10%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_volumedown"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/prog.png",
+                          "style": {
+                            "left": "80%",
+                            "top": "15%",
+                            "width": "20%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/chngbtn.png",
+                          "style": {
+                            "left": "80%",
+                            "top": "60%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/plus.png",
+                          "style": {
+                            "left": "80%",
+                            "top": "40%",
+                            "width": "10%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_channelup"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/minus.png",
+                          "style": {
+                            "left": "80%",
+                            "top": "80%",
+                            "width": "10%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_channeldown"
+                          },
+                          "type": "image"
+                        }
+                      ],
+                      "image": "/local/images/remote/backgrounds/bg_volume.png",
+                      "type": "picture-elements"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "elements": [
+                        {
+                          "image": "/local/images/remote/labels/audio.png",
+                          "style": {
+                            "left": "15%",
+                            "top": "10%",
+                            "width": "16%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "15%",
+                            "top": "25%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_audio"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "25%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:rewind",
+                          "style": {
+                            "--iron-icon-height": "16%",
+                            "--iron-icon-width": "16%",
+                            "color": "white",
+                            "left": "38%",
+                            "top": "25%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_rewind"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "62%",
+                            "top": "25%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:play",
+                          "style": {
+                            "--iron-icon-height": "24%",
+                            "--iron-icon-width": "24%",
+                            "color": "white",
+                            "left": "62%",
+                            "top": "25%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_play"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "85%",
+                            "top": "25%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:fast-forward",
+                          "style": {
+                            "--iron-icon-height": "60%",
+                            "--iron-icon-width": "60%",
+                            "color": "white",
+                            "left": "85%",
+                            "top": "25%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_forward"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "15%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:subtitles-outline",
+                          "style": {
+                            "--iron-icon-height": "9%",
+                            "--iron-icon-width": "9%",
+                            "color": "white",
+                            "left": "42%",
+                            "top": "50%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_subtitle"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:skip-backward",
+                          "style": {
+                            "--iron-icon-height": "15%",
+                            "--iron-icon-width": "15%",
+                            "color": "white",
+                            "left": "38%",
+                            "top": "50%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_prev"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "62%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:pause",
+                          "style": {
+                            "--iron-icon-height": "24%",
+                            "--iron-icon-width": "24%",
+                            "color": "white",
+                            "left": "62%",
+                            "top": "50%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_pause"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "85%",
+                            "top": "50%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:skip-forward",
+                          "style": {
+                            "--iron-icon-height": "55%",
+                            "--iron-icon-width": "55%",
+                            "color": "white",
+                            "left": "85%",
+                            "top": "50%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_next"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/help.png",
+                          "style": {
+                            "left": "15%",
+                            "top": "60%",
+                            "width": "16%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "15%",
+                            "top": "75%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_help"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/rec.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "60%",
+                            "width": "16%"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "75%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_rec"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/rec_button.png",
+                          "style": {
+                            "left": "38%",
+                            "top": "75%",
+                            "width": "5%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_rec"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "62%",
+                            "top": "75%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "none"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "icon": "mdi:stop",
+                          "style": {
+                            "--iron-icon-height": "24%",
+                            "--iron-icon-width": "24%",
+                            "color": "white",
+                            "left": "62%",
+                            "top": "75%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_stop"
+                          },
+                          "type": "icon"
+                        },
+                        {
+                          "image": "/local/images/remote/labels/title_list.png",
+                          "style": {
+                            "left": "85%",
+                            "top": "60%",
+                            "width": "16%"
+                          },
+                          "type": "image"
+                        },
+                        {
+                          "image": "/local/images/remote/black_button.png",
+                          "style": {
+                            "left": "85%",
+                            "top": "75%",
+                            "width": "15%"
+                          },
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "shell_command.bravia_forward"
+                          },
+                          "type": "image"
+                        }
+                      ],
+                      "image": "/local/images/remote/backgrounds/bg_volume.png",
+                      "type": "picture-elements"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "S O N Y",
+                      "style": [
+                        {
+                          "background-color": "rgb(46, 46, 46)"
+                        },
+                        {
+                          "color": "white"
+                        }
+                      ],
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "color": "rgb(46, 46, 46)",
+                      "color_type": "label-card",
+                      "name": "TV",
+                      "style": [
+                        {
+                          "background-color": "rgb(46, 46, 46)"
+                        },
+                        {
+                          "color": "white"
+                        }
+                      ],
+                      "type": "custom:button-card"
+                    }
+                  ],
+                  "type": "horizontal-stack"
                 }
-            ]
+              ],
+              "title": "TV Sala",
+              "type": "vertical-stack"
+            },
+            {
+              "cards": [
+                {
+                  "entity": "media_player.sony_kd_55xf8596",
+                  "type": "media-control"
+                },
+                {
+                  "type": "media-control",
+                  "entity": "media_player.tv_camera"
+                },
+                {
+                  "entity": "media_player.samsung_bd_f6500",
+                  "type": "media-control"
+                },
+                {
+                  "entities": [
+                    "media_player.google_home",
+                    "input_text.google_home_speak"
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Google Nest Mini Cucina",
+                  "type": "entities"
+                },
+                {
+                  "cards": [
+                    {
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-1",
+                      "name": "Bell'Affare",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_1"
+                        }
+                      },
+                      "type": "entity-button"
+                    },
+                    {
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-2",
+                      "name": "Belan",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_2"
+                        }
+                      },
+                      "type": "entity-button"
+                    },
+                    {
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-3",
+                      "name": "Schifezza",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_3"
+                        }
+                      },
+                      "type": "entity-button"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-4",
+                      "name": "Che Schifo è?",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_4"
+                        }
+                      },
+                      "type": "entity-button"
+                    },
+                    {
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-5",
+                      "name": "Mamma Mia",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_5"
+                        }
+                      },
+                      "type": "entity-button"
+                    },
+                    {
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-6",
+                      "name": "No",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_6"
+                        }
+                      },
+                      "type": "entity-button"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "show_name": true,
+                      "show_icon": true,
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-7",
+                      "name": "Stitch",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_7"
+                        }
+                      },
+                      "type": "entity-button"
+                    },
+                    {
+                      "show_name": true,
+                      "show_icon": true,
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-8",
+                      "name": "Annncio Presenza",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_8"
+                        }
+                      },
+                      "type": "entity-button"
+                    },
+                    {
+                      "entity": "script.laura_voice",
+                      "icon": "mdi:numeric-9",
+                      "name": null,
+                      "show_name": false,
+                      "show_icon": false,
+                      "type": "entity-button"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "cards": [
+                    {
+                      "entity": "script.babu_voice",
+                      "icon": "mdi:numeric-1",
+                      "name": "I'm Babu",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.babu_voice_1"
+                        }
+                      },
+                      "type": "entity-button"
+                    },
+                    {
+                      "entity": "script.babu_voice",
+                      "icon": "mdi:numeric-2",
+                      "name": "Heheeeee",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.babu_voice_2"
+                        }
+                      },
+                      "type": "entity-button"
+                    }
+                  ],
+                  "type": "horizontal-stack"
+                },
+                {
+                  "type": "media-control",
+                  "entity": "media_player.lg_anna"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "media_player.google_anna"
+                    }
+                  ],
+                  "title": "Google Home Mini Anna",
+                  "show_header_toggle": false
+                }
+              ],
+              "title": "Media Players",
+              "type": "vertical-stack"
+            }
+          ],
+          "icon": "mdi:television"
         }
+      ]
     }
+  }
 }

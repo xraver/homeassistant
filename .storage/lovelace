@@ -100,7 +100,7 @@
                       "entity": "climate.sala"
                     },
                     {
-                      "entity": "media_player.sony_bravia_tv"
+                      "entity": "media_player.sony_kd_55xf8596"
                     }
                   ],
                   "entity": "group.lights_livingroom",
