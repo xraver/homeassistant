@@ -1,0 +1,45 @@
+######################################################################
+# Fritz Package - Switch
+######################################################################
+
+switch:
+  - platform: template
+    switches:
+      fritz_led:
+        turn_on:
+          service: shell_command.fritz_led_on
+        turn_off:
+          service: shell_command.fritz_led_off
+#        icon_template: >-
+#          {% if is_state('cover.garage_door', 'open') %}
+#            mdi:mdi:led-on
+#          {% else %}
+#           mdi:led-off
+#          {% endif %}
+
+  - platform: template
+    switches:
+      ap1_led:
+        turn_on:
+          service: shell_command.ap1_led_on
+        turn_off:
+          service: shell_command.ap1_led_off
+#        icon_template: >-
+#          {% if is_state('cover.garage_door', 'open') %}
+#            mdi:mdi:led-on
+#          {% else %}
+#           mdi:led-off
+#          {% endif %}
+
+######################################################################
+# Fritz Package - Fritz Command
+######################################################################
+shell_command:
+  fritz_reboot: 'bash /config/shell_scripts/fritzBox.sh fritz REBOOT Box'
+  fritz_reconnect: 'bash /config/shell_scripts/fritzBox.sh fritz WAN RECONNECT'
+  fritz_led_on: 'bash /config/shell_scripts/fritzBox.sh fritz LED 1'
+  fritz_led_off: 'bash /config/shell_scripts/fritzBox.sh fritz LED 0'
+  ap1_reboot: 'bash /config/shell_scripts/fritzBox.sh ap1 REBOOT Box'
+  ap1_reconnect: 'bash /config/shell_scripts/fritzBox.sh ap1 WAN RECONNECT'
+  ap1_led_on: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 1'
+  ap1_led_off: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 0'
