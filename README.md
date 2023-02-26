@@ -11,7 +11,7 @@ Home Assistant is running in a container created from the official [Docker Image
 Docker is running in a Virtual Machine based on [Linux Debian](https://www.debian.org/).
 My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https://www.proxmox.com/en/).
 
-## Component Used
+## Official Component Used
 * Amazon Alexa
 * Canon Printer (TR8550)
 * CO2 Signal
@@ -26,10 +26,11 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 * Sony Android TV (KD-55XF8596)
 * Xiaomi (MiJia door & window contact sensor, MiJia temperature & humidity sensor)
 
-## Custom Component Used
+## Custom Component Used (included in HACS)
+The following integration are part of HACS system. Install HACS first:
+* [HACS](https://github.com/hacs/integration)
 ### Integrations
 * [browser_mod](https://github.com/thomasloven/hass-browser_mod)
-* [HACS](https://github.com/hacs/integration)
 * [Monitor Docker](https://github.com/ualex73/monitor_docker)
 * [MercedeME 2020](https://github.com/ReneNulschDE/mbapi2020)
 * [pfSense integration for Home Assistant](https://github.com/travisghansen/hass-pfsense) (not currently used)
@@ -60,6 +61,10 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 * [Shutter Card](https://github.com/Deejayfool/hass-shutter-card)
 * [Tabbed Card](https://github.com/kinghat/tabbed-card)
 * [Zigbee2mqtt Networkmap Card](https://github.com/azuwis/zigbee2mqtt-networkmap)
+## Custom Component Used (not included in HACS)
+The following integrations are not part of HACS. It's required to clone the related repository in the folder git_repos.
+* [bravia-auth-and-remote](https://github.com/breunigs/bravia-auth-and-remote)
+* [FritzBoxShell](https://github.com/jhubig/FritzBoxShell)
 
 ## Installation
 * Clone repository
@@ -68,12 +73,14 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
   * .google_maps_location_sharing.cookies.EMAIL_gmail_com
   * known_devices.yaml
   * secrets.yaml
+* Download HACS
+* Clone custom components not included in HACS into git_repos folder
 * Start Home Assistant
 * Create Users/People
 * Configure the following integrations using UI:
-  * DNS IP
   * Certificate Expiry
   * CO2 Signal
+  * DNS IP
   * Google Calendar
   * Google Cast
   * HACS
@@ -94,9 +101,11 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 All files are edited with [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Testing
-All files are tested using the latest stable version of Home Assistant using [Travis](https://travis-ci.com/github/xraver/homeassistant).
+All files are tested using a dedicated [github action](https://github.com/xraver/homeassistant/actions/workflows/ci-validation.yaml).
 
 ## To Do List
+* Improve notification system to include companion app including (alerts)[https://www.home-assistant.io/integrations/alert/]
+* Improve Fritz management interface
 * Script review ([Native types support for templates](https://www.home-assistant.io/blog/2020/10/28/release-117/#native-types-support-for-templates-beta) after release 117)
 * NFC
 * Lovelace:
@@ -104,7 +113,6 @@ All files are tested using the latest stable version of Home Assistant using [Tr
    - House plant
 * Trenitalia Integration
 * [Network components](https://community.home-assistant.io/t/need-help-with-sensor-icon-color-based-on-state/49292)
-* PS4
 * Theft Protection
 * [Presence Simulator](https://indomus.it/progetti/simulare-automaticamente-la-presenza-in-casa-tramite-la-domotica-home-assistant/)
 * ESP8266 (ESP01 + NodeMCU)

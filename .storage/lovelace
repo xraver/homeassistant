@@ -469,6 +469,7 @@
           ]
         },
         {
+          "theme": "Backend-selected",
           "icon": "mdi:lightbulb",
           "id": "lights",
           "title": "Luci",
@@ -505,9 +506,15 @@
           "cards": [
             {
               "entities": [
-                "light.luci_casa",
-                "light.luce_cucina",
-                "light.luce_corridoio",
+                {
+                  "entity": "light.luci_casa"
+                },
+                {
+                  "entity": "light.luce_cucina"
+                },
+                {
+                  "entity": "light.luce_corridoio"
+                },
                 {
                   "type": "custom:fold-entity-row",
                   "head": "light.luci_sala",
@@ -524,9 +531,15 @@
                     "light.luce_specchio"
                   ]
                 },
-                "light.luce_studio",
-                "light.luce_camera",
-                "light.luce_balcone"
+                {
+                  "entity": "light.luce_studio"
+                },
+                {
+                  "entity": "light.luce_camera"
+                },
+                {
+                  "entity": "light.luce_balcone"
+                }
               ],
               "show_header_toggle": false,
               "title": "Comandi luci",
