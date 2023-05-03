@@ -4,19 +4,19 @@
 
 homeassistant:
   customize:
-    binary_sensor.pve_server_running:
+    binary_sensor.pve_server:
         friendly_name: VM Server
         icon: mdi:debian
 
-    binary_sensor.pve_docker_running:
+    binary_sensor.pve_docker:
         friendly_name: VM Docker
         icon: mdi:docker
 
-    binary_sensor.pve_firewall_running:
+    binary_sensor.pve_firewall:
         friendly_name: VM Firewall
         icon: mdi:freebsd
 
-    binary_sensor.pve_asterisk_running:
+    binary_sensor.pve_asterisk:
         friendly_name: VM Asterisk
         icon: mdi:asterisk-circle-outline
 
@@ -27,10 +27,10 @@ homeassistant:
 history:
   exclude:
     entities:
-      - binary_sensor.pve_server_running
-      - binary_sensor.pve_docker_running
-      - binary_sensor.pve_firewall_running
-      - binary_sensor.pve_asterisk_running
+      - binary_sensor.pve_server
+      - binary_sensor.pve_docker
+      - binary_sensor.pve_firewall
+      - binary_sensor.pve_asterisk
 
 ######################################################################
 # Proxmox Package - Logbook
@@ -39,10 +39,10 @@ history:
 logbook:
   exclude:
     entities:
-      - binary_sensor.pve_server_running
-      - binary_sensor.pve_docker_running
-      - binary_sensor.pve_firewall_running
-      - binary_sensor.pve_asterisk_running
+      - binary_sensor.pve_server
+      - binary_sensor.pve_docker
+      - binary_sensor.pve_firewall
+      - binary_sensor.pve_asterisk
 
 ######################################################################
 # Proxmox Package - Recorder
@@ -51,7 +51,7 @@ logbook:
 recorder:
   exclude:
     entities:
-      - binary_sensor.pve_server_running
-      - binary_sensor.pve_docker_running
-      - binary_sensor.pve_firewall_running
-      - binary_sensor.pve_asterisk_running
+      - binary_sensor.pve_server
+      - binary_sensor.pve_docker
+      - binary_sensor.pve_firewall
+      - binary_sensor.pve_asterisk

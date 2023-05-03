@@ -47,7 +47,7 @@
                             {
                               "type": "custom:button-card",
                               "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_server_running",
+                              "entity": "binary_sensor.pve_server",
                               "name": "VM Debian",
                               "show_name": true,
                               "show_icon": true,
@@ -122,7 +122,7 @@
                             {
                               "type": "custom:button-card",
                               "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_docker_running",
+                              "entity": "binary_sensor.pve_docker",
                               "name": "VM Docker",
                               "show_name": true,
                               "show_icon": true,
@@ -197,7 +197,7 @@
                             {
                               "type": "custom:button-card",
                               "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_firewall_running",
+                              "entity": "binary_sensor.pve_firewall",
                               "name": "VM Firewall",
                               "show_name": true,
                               "show_icon": true,
@@ -272,7 +272,7 @@
                             {
                               "type": "custom:button-card",
                               "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_asterisk_running",
+                              "entity": "binary_sensor.pve_asterisk",
                               "name": "VM Asterisk",
                               "show_name": true,
                               "show_icon": true,
@@ -1860,7 +1860,7 @@
                           "image": "/local/images/devices/shelly/shelly25.png",
                           "tap_action": {
                             "action": "url",
-                            "url_path": "http://shelly7.giorgioravera.it"
+                            "url_path": "http://shelly8.giorgioravera.it"
                           }
                         },
                         {
