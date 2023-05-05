@@ -8,6 +8,8 @@ homeassistant:
       icon: mdi:package-up
     script.shelly_reboot:
       icon: mdi:restart
+    script.shelly_force_state_update:
+      icon: mdi:update
 
     # Shelly 1 - Tapparella Cucina (shellyswitch_55980f)
     sensor.tapparella_cucina_energy:

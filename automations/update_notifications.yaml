@@ -1,41 +1,4 @@
 ######################################################################
-# Update Notification: Shelly
-######################################################################
-
-- alias: "Update Notification: Shelly"
-
-  trigger:
-    - platform: state
-      entity_id: group.shelly
-      to: 'on'
-
-    - platform: homeassistant
-      event: start
-
-  condition:
-    condition: state
-    entity_id: group.shelly
-    state: 'on'
-
-  action:
-    - delay: '00:00:10'
-    - service: script.notify_text
-      data_template:
-        title: "Shelly - Aggiornamento"
-        message: >
-          Sono disponibili aggiornamenti per i dispositivi Shelly:
-          {%- for entity_id in states.group.shelly.attributes.entity_id -%}
-            {% if is_state(entity_id, 'on') %}
-              -> {{ state_attr(entity_id, 'friendly_name')|replace(" - Aggiornamento Firmware", "") }}: {{ state_attr(entity_id, 'latest_version') }}
-            {%- endif -%}
-          {%- endfor -%}
-        notification_id: "update"
-        enable_persistent: true
-
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.update_shelly
-
-######################################################################
 # Update Notification: HACS
 ######################################################################
 

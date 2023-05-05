@@ -9,16 +9,16 @@ script:
   shelly_upgrade:
     alias: "Shelly: Aggiornamento Firmware Collettivo"
     sequence:
-    #  - service: mqtt.publish
-    #    data:
-    #      topic: 'shellies/command'
-    #      payload: 'update_fw'
-    #      qos: 0
-    #      retain: false
-      - service: update.install
-        target:
-          entity_id:
-            - group.shelly
+      - service: mqtt.publish
+        data:
+          topic: 'shellies/command'
+          payload: 'update_fw'
+          qos: 0
+          retain: false
+    #  - service: update.install
+    #    target:
+    #      entity_id:
+    #        - group.shelly
 
   ######################################################################
   # Shelly: Reboot
@@ -27,6 +27,64 @@ script:
     alias: "Shelly: Riavvio Dispositivi Collettivo"
     sequence:
       - service: shell_command.shelly_reboot
+
+  ######################################################################
+  # Shelly: Force State Update
+  ######################################################################
+  shelly_force_state_update:
+    alias: "Shelly: Aggiornamento stato dispositivi"
+    sequence:
+      - service: mqtt.publish
+        data:
+          payload: update
+          topic: shellies/command
+
+automation:
+  ######################################################################
+  # Shelly: Update Notification
+  ######################################################################
+  - alias: "Shelly: Update Notification"
+
+    trigger:
+      - platform: state
+        entity_id: group.shelly
+        to: 'on'
+      - platform: homeassistant
+        event: start
+
+    condition:
+      condition: state
+      entity_id: group.shelly
+      state: 'on'
+
+    action:
+      - delay: '00:00:10'
+      - service: script.notify_text
+        data_template:
+          title: "Shelly - Aggiornamento"
+          message: >
+            Sono disponibili aggiornamenti per i dispositivi Shelly:
+            {%- for entity_id in states.group.shelly.attributes.entity_id -%}
+              {% if is_state(entity_id, 'on') %}
+                -> {{ state_attr(entity_id, 'friendly_name')|replace(" - Aggiornamento Firmware", "") }}: {{ state_attr(entity_id, 'latest_version') }}
+              {%- endif -%}
+            {%- endfor -%}
+          notification_id: "update"
+          enable_persistent: true
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.update_shelly
+
+  ######################################################################
+  # Shelly: Force State Update at Startup
+  ######################################################################
+  - alias: "Shelly - Startup: Aggiornamento stati"
+
+    trigger:
+      - event: start
+        platform: homeassistant
+
+    action:
+      service: script.shelly_force_state_update
 
 ######################################################################
 # Shelly Package - Operations Shell Command

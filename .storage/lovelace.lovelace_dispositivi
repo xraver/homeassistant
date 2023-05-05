@@ -2219,7 +2219,6 @@
                               "type": "tile",
                               "entity": "script.shelly_upgrade",
                               "name": "Aggiorna Tutto",
-                              "icon": "mdi:package-up",
                               "tap_action": {
                                 "action": "call-service",
                                 "service": "script.shelly_upgrade"
@@ -2229,10 +2228,18 @@
                               "type": "tile",
                               "entity": "script.shelly_reboot",
                               "name": "Riavvia tutto",
-                              "icon": "mdi:restart",
                               "tap_action": {
                                 "action": "call-service",
                                 "service": "script.shelly_reboot"
+                              }
+                            },
+                            {
+                              "type": "tile",
+                              "entity": "script.shelly_force_state_update",
+                              "name": "Aggiorna Stato Dispositivi",
+                              "tap_action": {
+                                "action": "call-service",
+                                "service": "script.shelly_force_state_update"
                               }
                             }
                           ]
