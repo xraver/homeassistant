@@ -8,7 +8,7 @@
 # Note: delay is necessary to avoid multiple opening in 5 minutes
 ######################################################################
 
-- alias: "Porta Casa: Accendi Luce Corridoio"
+- alias: "Porta Casa: Accendi Luci - Corridoio"
   mode: single
 
   trigger:
