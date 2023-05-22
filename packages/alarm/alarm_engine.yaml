@@ -26,7 +26,6 @@ automation:
   # Alarm Automation: Aknowledge Alarms
   #
   # Actions:
-  # - persistent_notification.dismiss
   # - script.stop_alarm
   ######################################################################
   - alias: "Allarmi: Riconoscimento Allarmi"
