@@ -21,18 +21,6 @@ homeassistant:
         icon: mdi:asterisk-circle-outline
 
 ######################################################################
-# Proxmox Package - History
-######################################################################
-
-history:
-  exclude:
-    entities:
-      - binary_sensor.pve_server
-      - binary_sensor.pve_docker
-      - binary_sensor.pve_firewall
-      - binary_sensor.pve_asterisk
-
-######################################################################
 # Proxmox Package - Logbook
 ######################################################################
 

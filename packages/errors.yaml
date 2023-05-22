@@ -81,15 +81,6 @@ automation:
           entity_id: input_boolean.home_assistant_error
 
 ######################################################################
-# Errors Package - History
-######################################################################
-
-history:
-  exclude:
-    entities:
-      - binary_sensor.home_assistant_error
-
-######################################################################
 # Errors Package - Logbook
 ######################################################################
 

@@ -78,15 +78,6 @@ alexa:
         description: "Routine per l'apertura del portone condominiale"
 
 ######################################################################
-# BTcino Classe 300eos with Netatmo - History
-######################################################################
-
-#history:
-#  exclude:
-#    entities:
-#      - lock.portone
-
-######################################################################
 # BTcino Classe 300eos with Netatmo - Logbook
 ######################################################################
 

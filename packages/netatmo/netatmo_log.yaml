@@ -1,23 +1,4 @@
 ######################################################################
-# Netatmo Package - History
-######################################################################
-
-history:
-  exclude:
-    entities:
-    - sensor.valvola_cucina_battery_percent
-    - sensor.valvola_sala_battery_percent
-    - sensor.valvola_studio_battery_percent
-    - sensor.valvola_bagno_battery_percent
-    - sensor.valvola_camera_battery_percent
-    - sensor.valvola_cucina_state
-    - sensor.valvola_sala_state
-    - sensor.valvola_studio_state
-    - sensor.valvola_bagno_state
-    - sensor.valvola_camera_state
-    - select.netatmo_casa_ravera_testa
-
-######################################################################
 # Netatmo Package - Logbook
 ######################################################################
 

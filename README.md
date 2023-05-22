@@ -45,7 +45,6 @@ The following integration are part of HACS system. Install HACS first:
 * [card-mod](https://github.com/thomasloven/lovelace-card-mod)
 * [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
-* [history-explorer-card](https://github.com/alexarch21/history-explorer-card)
 * [Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)
 * [hui-element](https://github.com/thomasloven/lovelace-hui-element)
 * [layout-card](https://github.com/thomasloven/lovelace-layout-card)

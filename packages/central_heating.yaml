@@ -69,15 +69,6 @@ automation:
                 message: "Il riscaldamento centralizzato è stato spento"
 
 ######################################################################
-# Central Heating Package - History
-######################################################################
-
-history:
-  exclude:
-    entities:
-      - binary_sensor.central_heating
-
-######################################################################
 # Central Heating Package - Logbook
 ######################################################################
 

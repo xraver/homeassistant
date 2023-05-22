@@ -480,23 +480,6 @@
               ]
             }
           ]
-        },
-        {
-          "theme": "Backend-selected",
-          "title": "History",
-          "path": "history",
-          "icon": "mdi:history",
-          "type": "panel",
-          "badges": [],
-          "cards": [
-            {
-              "type": "custom:history-explorer-card",
-              "cardName": "History",
-              "defaultTimeRange": "1h",
-              "combineSameUnits": true,
-              "recordedEntitiesOnly": true
-            }
-          ]
         }
       ],
       "button_card_templates": {
