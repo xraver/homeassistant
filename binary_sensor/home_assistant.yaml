@@ -7,7 +7,7 @@
     home_mode:
       friendly_name: Modalità Casa
       value_template: >-
-        {{ is_state('sensor.home_mode', 'giorno') 
+        {{ is_state('sensor.home_mode', 'giorno')
            or is_state('sensor.home_mode', 'notte')
            or is_state('sensor.home_mode', 'vacanza') }}
       icon_template: >-
