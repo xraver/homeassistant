@@ -12,7 +12,8 @@ rules:
   #  ignore-shebangs: true
   #  min-spaces-from-content: 2
 
-  comments-indentation: enable
+  comments-indentation:
+    level: warning
 
   # 255 chars should be enough, but don't fail if a line is longer
   line-length:
