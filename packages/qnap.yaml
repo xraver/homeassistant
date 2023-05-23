@@ -7,7 +7,7 @@ switch:
     mac: !secret nas_mac
     name: NAS
     host: !secret nas_host
-    turn_off: 
+    turn_off:
       service: shell_command.nas_turn_off
       data:
         nas_host: !secret nas_host
