@@ -20,26 +20,26 @@ automation:
 
     action:
       - choose:
-        # Switch On
-        - conditions:
-          - condition: state
-            entity_id: input_boolean.home_mode_away
-            state: "on"
-          sequence:
-            - service: script.turn_on
-              data:
-                entity_id: script.climate_away_mode_on
-        # Switch Off
-        - conditions:
-          - condition: and
-            conditions:
+          # Switch On
+          - conditions:
               - condition: state
                 entity_id: input_boolean.home_mode_away
-                state: "off"
-              - condition: state
-                entity_id: input_boolean.central_heating
-                state: 'on'
-          sequence:
-            - service: script.turn_on
-              data:
-                entity_id: script.climate_away_mode_off
+                state: "on"
+            sequence:
+              - service: script.turn_on
+                data:
+                  entity_id: script.climate_away_mode_on
+          # Switch Off
+          - conditions:
+              - condition: and
+                conditions:
+                    - condition: state
+                      entity_id: input_boolean.home_mode_away
+                      state: "off"
+                    - condition: state
+                      entity_id: input_boolean.central_heating
+                      state: 'on'
+            sequence:
+              - service: script.turn_on
+                data:
+                  entity_id: script.climate_away_mode_off
