@@ -86,14 +86,14 @@ notify_text:
         message: "{{ message }}"
 
     - choose:
-      - conditions:
-        - condition: template
-          value_template: "{{ enable_telegram }}"
-        sequence:
-          - service: notify.telegram
-            data_template:
-              title: "{{ title }}"
-              message: "{{ message | regex_replace(find='_', replace='-', ignorecase=False) }}"
+        - conditions:
+          - condition: template
+            value_template: "{{ enable_telegram }}"
+          sequence:
+            - service: notify.telegram
+              data_template:
+                title: "{{ title }}"
+                message: "{{ message | regex_replace(find='_', replace='-', ignorecase=False) }}"
       default: []
 
     - service: notify.push
@@ -106,9 +106,9 @@ notify_text:
 
     - service: persistent_notification.create
       data_template:
-       title: "{{ title }}"
-       message: "{{ message }}"
-       notification_id: "{{ notification_id }}"
+        title: "{{ title }}"
+        message: "{{ message }}"
+        notification_id: "{{ notification_id }}"
 
 ######################################################################
 # Script: Volume Manager
@@ -246,9 +246,9 @@ notify_voice:
       selector:
         select:
           options:
-              - "it"
-              - "en"
-              - "es"
+            - "it"
+            - "en"
+            - "es"
 
   sequence:
     - condition: state
@@ -293,7 +293,10 @@ notify_voice:
 
 notify_all:
   alias: Notifiche globali (Testo+Voce)
-  description: Invia notifiche sia vocali sia testiali. Le notifiche vocali sono inoltrate verso un determinato dispositivo compatibile. Si può selezionare il volume di riproduzione e la lingua. Quelle testuali possono essere inviate via mail oppure via telegram con la possibilità di notificarle direttamente sulla UI.
+  description: Invia notifiche sia vocali sia testiali.
+               Le notifiche vocali sono inoltrate verso un determinato dispositivo compatibile.
+               Si può selezionare il volume di riproduzione e la lingua.
+               Quelle testuali possono essere inviate via mail oppure via telegram con la possibilità di notificarle direttamente sulla UI.
   variables:
     defaultTitle: 'Home Assistant'
     defaulMediaPlayer: 'media_player.google_home'
@@ -376,9 +379,9 @@ notify_all:
       selector:
         select:
           options:
-              - "it"
-              - "en"
-              - "es"
+            - "it"
+            - "en"
+            - "es"
     notification_id:
       description: "Id di notifica"
       example: "generic"
