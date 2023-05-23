@@ -8,17 +8,24 @@ script:
   ######################################################################
   shelly_upgrade:
     alias: "Shelly: Aggiornamento Firmware Collettivo"
+    variables:
+      pending_update_list: >
+        {{ states.update
+          | selectattr('state','eq','on')
+          | selectattr('entity_id', 'in', states.group.shelly.attributes.entity_id)
+          | map(attribute='entity_id')
+          | list
+        }}
     sequence:
-      - service: mqtt.publish
-        data:
-          topic: 'shellies/command'
-          payload: 'update_fw'
-          qos: 0
-          retain: false
-    #  - service: update.install
-    #    target:
-    #      entity_id:
-    #        - group.shelly
+    #  - service: mqtt.publish
+    #    data:
+    #      topic: 'shellies/command'
+    #      payload: 'update_fw'
+    #      qos: 0
+    #      retain: false
+      - service: update.install
+        target:
+          entity_id: '{{ pending_update_list }}'
 
   ######################################################################
   # Shelly: Reboot
@@ -44,7 +51,14 @@ automation:
   # Shelly: Update Notification
   ######################################################################
   - alias: "Shelly: Update Notification"
-
+    variables:
+      pending_update_list: >
+        {{ states.update
+          | selectattr('state','eq','on')
+          | selectattr('entity_id', 'in', states.group.shelly.attributes.entity_id)
+          | map(attribute='entity_id')
+          | list
+        }}
     trigger:
       - platform: state
         entity_id: group.shelly
@@ -63,11 +77,9 @@ automation:
         data_template:
           title: "Shelly - Aggiornamento"
           message: >
-            Sono disponibili aggiornamenti per i dispositivi Shelly:
-            {%- for entity_id in states.group.shelly.attributes.entity_id -%}
-              {% if is_state(entity_id, 'on') %}
+            Sono disponibili {{pending_update_list | count }} aggiornamenti per i dispositivi Shelly:
+            {% for entity_id in pending_update_list %}
                 -> {{ state_attr(entity_id, 'friendly_name')|replace(" - Aggiornamento Firmware", "") }}: {{ state_attr(entity_id, 'latest_version') }}
-              {%- endif -%}
             {%- endfor -%}
           notification_id: "update"
           enable_persistent: true
