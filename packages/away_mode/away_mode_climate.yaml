@@ -33,12 +33,12 @@ automation:
           - conditions:
               - condition: and
                 conditions:
-                    - condition: state
-                      entity_id: input_boolean.home_mode_away
-                      state: "off"
-                    - condition: state
-                      entity_id: input_boolean.central_heating
-                      state: 'on'
+                  - condition: state
+                    entity_id: input_boolean.home_mode_away
+                    state: "off"
+                  - condition: state
+                    entity_id: input_boolean.central_heating
+                    state: 'on'
             sequence:
               - service: script.turn_on
                 data:

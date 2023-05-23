@@ -26,35 +26,35 @@
         detected_device: "{{ trigger.event.data.device_id }}"
 
     - choose:
-      - conditions:
-          - "{{ detected_tag in allowed_tags }}"
-          - "{{ detected_device in allowed_devices }}"
-        sequence:
-        - service: script.notify_text
-          data_template:
-            title: "Home Assistant - Lettura NFC"
-            message: "Letto tag NFC {{ allowed_tags[detected_tag].name }} dal dispositivo {{ allowed_devices[detected_device].name }}."
-            enable_telegram: false
+        - conditions:
+            - "{{ detected_tag in allowed_tags }}"
+            - "{{ detected_device in allowed_devices }}"
+          sequence:
+            - service: script.notify_text
+              data_template:
+                title: "Home Assistant - Lettura NFC"
+                message: "Letto tag NFC {{ allowed_tags[detected_tag].name }} dal dispositivo {{ allowed_devices[detected_device].name }}."
+                enable_telegram: false
 
-      - conditions:
-          - "{{ detected_tag in allowed_tags }}"
-          - "{{ detected_device not in allowed_devices }}"
-        sequence:
-        - service: script.notify_text
-          data_template:
-            title: "Home Assistant - Lettura NFC"
-            message: "Letto tag NFC {{ allowed_tags[detected_tag].name }} da dispositivo non valido ({{ detected_device }})."
-            enable_telegram: false
+        - conditions:
+            - "{{ detected_tag in allowed_tags }}"
+            - "{{ detected_device not in allowed_devices }}"
+          sequence:
+            - service: script.notify_text
+              data_template:
+                title: "Home Assistant - Lettura NFC"
+                message: "Letto tag NFC {{ allowed_tags[detected_tag].name }} da dispositivo non valido ({{ detected_device }})."
+                enable_telegram: false
 
-      - conditions:
-          - "{{ detected_tag not in allowed_tags }}"
-          - "{{ detected_device in allowed_devices }}"
-        sequence:
-        - service: script.notify_text
-          data_template:
-            title: "Home Assistant - Lettura NFC"
-            message: "Letto tag NFC non riconosciuto ({{ detected_tag }}) dal dispositivo {{ allowed_devices[detected_device].name }}."
-            enable_telegram: false
+        - conditions:
+            - "{{ detected_tag not in allowed_tags }}"
+            - "{{ detected_device in allowed_devices }}"
+          sequence:
+            - service: script.notify_text
+              data_template:
+                title: "Home Assistant - Lettura NFC"
+                message: "Letto tag NFC non riconosciuto ({{ detected_tag }}) dal dispositivo {{ allowed_devices[detected_device].name }}."
+                enable_telegram: false
 
       default:
         - service: script.notify_text

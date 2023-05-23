@@ -12,9 +12,6 @@
       to: 'on'
 
   condition: []
-#    condition: state
-#    entity_id: input_boolean.home_mode_away
-#    state: 'off'
 
   action:
     - service: cover.set_cover_position
