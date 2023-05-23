@@ -29,14 +29,3 @@ sensor.freebsd_router_packets_s_received:
   friendly_name: "pfSense: Pacchetti/s ricevuti"
 sensor.freebsd_router_packets_s_sent:
   friendly_name: "pfSense: Pacchetti/s inviati"
-
-######################################################################
-# Customization: DNS
-######################################################################
-
-sensor.ip_1:
- friendly_name: xraver.dnsduck.org
- icon: mdi:ip-network
-#sensor.ip_2:
-# friendly_name: xraver2.dnsduck.org
-# icon: mdi:ip-network
