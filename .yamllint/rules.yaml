@@ -1,0 +1,32 @@
+# https://yamllint.readthedocs.io/en/stable/configuration.html#default-configuration
+
+extends: relaxed
+
+rules:
+  anchors:
+    forbid-undeclared-aliases: true
+    forbid-duplicated-anchors: true
+
+  #comments:
+  #  require-starting-space: true
+  #  ignore-shebangs: true
+  #  min-spaces-from-content: 2
+
+  comments-indentation: enable
+
+  # 255 chars should be enough, but don't fail if a line is longer
+  line-length:
+    max: 255
+    level: warning
+
+  new-line-at-end-of-file: enable
+
+  new-lines:
+    type: unix
+
+  #quoted-strings:
+  #  quote-type: any
+  #  required: true
+  #  extra-required: []
+  #  extra-allowed: []
+  #  allow-quoted-quotes: false

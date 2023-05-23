@@ -1,4 +1,4 @@
-name: Home Assistant Configuration Check
+name: Configuration Validation Check
 
 on:
   push:
@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build:
-
+    name: Validate Configuration
     runs-on: ubuntu-latest
 
     steps:
