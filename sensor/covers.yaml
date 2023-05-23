@@ -6,9 +6,9 @@
   sensors:
     tapparella_cucina:
       friendly_name: "Cucina"
-      value_template: "{{ state_attr('cover.tapparella_cucina', 'current_position') }}" 
+      value_template: "{{ state_attr('cover.tapparella_cucina', 'current_position') }}"
       unit_of_measurement: '%'
-     
+
 - platform: template
   sensors:
     tapparella_sala:

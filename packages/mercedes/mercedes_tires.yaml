@@ -14,7 +14,7 @@ sensor:
         value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontLeft') }}"
         icon_template: mdi:car-tire-alert
         device_class: pressure
-      
+
   ######################################################################
   # Sensor: Tire Pressure Front Right
   ######################################################################
@@ -26,7 +26,7 @@ sensor:
         value_template: "{{ state_attr('binary_sensor.ff590mr_tire_warning', 'tirepressureFrontRight') }}"
         icon_template: mdi:car-tire-alert
         device_class: pressure
-      
+
   ######################################################################
   # Sensor: Tire Pressure Rear Left
   ######################################################################

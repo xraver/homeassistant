@@ -10,12 +10,6 @@ switch:
           service: shell_command.fritz_led_on
         turn_off:
           service: shell_command.fritz_led_off
-        #icon_template: >-
-        #  {% if is_state('cover.garage_door', 'open') %}
-        #    mdi:mdi:led-on
-        #  {% else %}
-        #   mdi:led-off
-        #  {% endif %}
 
   - platform: template
     switches:
@@ -24,12 +18,6 @@ switch:
           service: shell_command.ap1_led_on
         turn_off:
           service: shell_command.ap1_led_off
-        #icon_template: >-
-        #  {% if is_state('cover.garage_door', 'open') %}
-        #    mdi:mdi:led-on
-        #  {% else %}
-        #   mdi:led-off
-        #  {% endif %}
 
 ######################################################################
 # Fritz Package - Fritz Command
