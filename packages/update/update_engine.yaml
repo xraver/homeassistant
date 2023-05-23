@@ -1,0 +1,72 @@
+######################################################################
+# Update Package - Template - Sensor
+######################################################################
+
+#template:
+#  - sensor:
+#    # Pending Update
+#    - name: pending_update
+#      state: >
+#        {{ states.update | default([]) | selectattr('state','eq','on') | list | count | int(0) }}
+
+automation:
+
+  ######################################################################
+  # Update Notification: HACS
+  ######################################################################
+  - alias: "Update: HACS Notification"
+
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.hacs
+        above: 0
+
+      - platform: homeassistant
+        event: start
+
+    condition:
+      condition: numeric_state
+      entity_id: sensor.hacs
+      above: 0
+
+    action:
+      - delay: '00:00:15'
+      - service: script.notify_text
+        data_template:
+          title: "HACS - Aggiornamento"
+          message: >
+            {% set update_number = states('sensor.hacs') %}
+            {% if is_state('sensor.hacs', '1') %}
+              E' disponibile un aggiornamento per i moduli HACS:
+            {% else %}
+              Sono disponibili {{ update_number }} aggiornamenti per i moduli HACS:
+            {% endif %}
+            {% for update in states.sensor.hacs.attributes['repositories'] %}
+              - {{ update['display_name'] }}: {{ update['available_version'] }}
+            {%- endfor %}
+          notification_id: "update"
+          enable_persistent: true
+
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.update_hacs
+
+  ######################################################################
+  # Update: Aknowledge update
+  #
+  # Actions:
+  # - persistent_notification.dismiss
+  ######################################################################
+  - alias: "Update: Riconoscimento Aggiornamenti"
+
+    trigger:
+      platform: state
+      entity_id:
+        #- input_boolean.update_homeassistant
+        - input_boolean.update_hacs
+        - input_boolean.update_shelly
+      to: 'off'
+
+    action:
+      - service: persistent_notification.dismiss
+        data_template:
+          notification_id: "update"

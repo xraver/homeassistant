@@ -1,0 +1,39 @@
+######################################################################
+# Update Package - Types - Input Booleans
+######################################################################
+
+input_boolean:
+  # Home Assistant
+  #update_homeassistant:
+  #  name: Aggiornamento Home Assistant
+  #  initial: off
+  #  icon: mdi:cellphone-arrow-down
+
+  # HACS
+  update_hacs:
+    name: Aggiornamenti HACS
+    initial: off
+    icon: mdi:cellphone-arrow-down
+
+  # Shelly
+  update_shelly:
+    name: Aggiornamento Shelly
+    initial: off
+    icon: mdi:cellphone-arrow-down
+
+######################################################################
+# Update Package - Types - Group
+######################################################################
+
+group:
+
+  ######################################################################
+  # Group Update Availability
+  ######################################################################
+  update:
+    name: Aggiornamenti Disponibili
+    icon: mdi:cellphone-arrow-down
+    entities:
+      #- input_boolean.update_homeassistant
+      - input_boolean.update_hacs
+      - input_boolean.update_shelly
