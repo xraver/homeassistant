@@ -103,7 +103,7 @@ binary_sensor:
     sensors:
       ff590mr_door_rear_left:
         friendly_name: Posteriore Sinistra
-        value_template: >-     
+        value_template: >-
           {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearleft', true) }}
         icon_template: >-
           {% if is_state('sensor.ff590mr_lock', '2',) %}

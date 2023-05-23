@@ -59,7 +59,7 @@ binary_sensor:
             mdi:window-closed
           {% else %}
             mdi:window-open
-          {% endif %}   
+          {% endif %}
         device_class: opening
 
   ######################################################################
@@ -80,7 +80,7 @@ binary_sensor:
             mdi:window-closed
           {% else %}
             mdi:window-open
-          {% endif %}   
+          {% endif %}
         device_class: opening
 
   ######################################################################
@@ -101,5 +101,5 @@ binary_sensor:
             mdi:window-closed
           {% else %}
             mdi:window-open
-          {% endif %}   
+          {% endif %}
         device_class: opening

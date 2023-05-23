@@ -4,10 +4,10 @@
 
 google_assistant:
   entity_config:
-#    switch.ff590mr_lock:
-#      name: Blocco Auto
-#      expose: true
-#      room: Generale
+    #switch.ff590mr_lock:
+    #  name: Blocco Auto
+    #  expose: true
+    #  room: Generale
 
     lock.ff590mr_lock_no_pin:
       name: Auto

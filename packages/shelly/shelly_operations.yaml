@@ -17,12 +17,12 @@ script:
           | list
         }}
     sequence:
-    #  - service: mqtt.publish
-    #    data:
-    #      topic: 'shellies/command'
-    #      payload: 'update_fw'
-    #      qos: 0
-    #      retain: false
+      #- service: mqtt.publish
+      #  data:
+      #    topic: 'shellies/command'
+      #    payload: 'update_fw'
+      #    qos: 0
+      #    retain: false
       - service: update.install
         target:
           entity_id: '{{ pending_update_list }}'
