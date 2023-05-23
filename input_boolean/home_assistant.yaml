@@ -10,7 +10,7 @@ home_mode_night:
   name: Notte
   icon: mdi:weather-night
   initial: off
-  
+
 home_mode_away:
   name: Vacanza
   icon: mdi:airplane-takeoff

@@ -6,7 +6,7 @@
   display_options:
     - 'time'
     - 'date'
-#    - 'date_time'
+    #- 'date_time'
     - 'time_date'
-#    - 'time_utc'
-#    - 'beat'
+    #- 'time_utc'
+    #- 'beat'

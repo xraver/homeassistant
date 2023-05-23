@@ -30,16 +30,16 @@ homeassistant:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-   # ssl_certificate: /config/certs/fullchain.pem
-   # ssl_key: /config/certs/privkey.pem
-   use_x_forwarded_for: true
-   trusted_proxies:
-     - 127.0.0.1       # traefik and home assistant in host mode
-#     - 172.18.0.1      # traefik in host mode and homeassistant in network mode
-#     - 172.18.0.200    # traefik and home in network mode
-     - 192.168.0.1
-   ip_ban_enabled: True
-   login_attempts_threshold: 3
+  # ssl_certificate: /config/certs/fullchain.pem
+  # ssl_key: /config/certs/privkey.pem
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 127.0.0.1       # traefik and home assistant in host mode
+    #- 172.18.0.1      # traefik in host mode and homeassistant in network mode
+    #- 172.18.0.200    # traefik and home in network mode
+    - 192.168.0.1
+  ip_ban_enabled: True
+  login_attempts_threshold: 3
 
 ######################################################################
 # Main Elements
@@ -240,4 +240,3 @@ telegram_bot: !include components/telegram.yaml
 
 # Monitor Docker
 monitor_docker: !include components/monitor_docker.yaml
-
