@@ -42,7 +42,7 @@
 
   action:
     - service: input_boolean.turn_on
-      data_template: 
+      data_template:
         entity_id: >
           {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
             input_boolean.home_mode_day
@@ -53,7 +53,7 @@
 ######################################################################
 # Home Assistant: Management of Day/Night Mode
 ######################################################################
-       
+
 - alias: "Home Assistant: Modalità Giorno/Notte"
 
   trigger:
@@ -71,14 +71,14 @@
 
   action:
     - service: input_boolean.turn_on
-      data_template: 
+      data_template:
         entity_id: >-
           {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
             input_boolean.home_mode_day
           {% else %}
             input_boolean.home_mode_night
           {% endif %}
-    
+
     - service: script.volume_manager
 
 ######################################################################
@@ -112,7 +112,7 @@
 
 - alias: "Home Assistant: Pulitura settimanale log"
 
-  trigger: 
+  trigger:
     - platform: time
       at: '00:00:00'
 

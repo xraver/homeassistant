@@ -37,16 +37,16 @@ automation:
   - alias: "Home Assistant -  Errori: Insorgenza Errore"
 
     trigger:
-    - event_data:
-        domain: persistent_notification
-        service: create
-      event_type: call_service
-      platform: event
-    - event_data:
-        domain: persistent_notification
-        service: dimiss
-      event_type: call_service
-      platform: event
+      - event_data:
+          domain: persistent_notification
+          service: create
+        event_type: call_service
+        platform: event
+      - event_data:
+          domain: persistent_notification
+          service: dimiss
+        event_type: call_service
+        platform: event
 
     condition: []
 
@@ -62,16 +62,16 @@ automation:
   - alias: "Home Assistant -  Errori: Scomparsa Errore"
 
     trigger:
-    - event_data:
-        domain: persistent_notification
-        service: create
-      event_type: call_service
-      platform: event
-    - event_data:
-        domain: persistent_notification
-        service: dimiss
-      event_type: call_service
-      platform: event
+      - event_data:
+          domain: persistent_notification
+          service: create
+        event_type: call_service
+        platform: event
+      - event_data:
+          domain: persistent_notification
+          service: dimiss
+        event_type: call_service
+        platform: event
 
     condition: []
 
