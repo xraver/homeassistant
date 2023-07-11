@@ -1,35 +1,36 @@
 {
-    "version": 1,
-    "key": "lovelace_dashboards",
-    "data": {
-        "items": [
-            {
-                "icon": "mdi:television",
-                "id": "lovelace_multimedia",
-                "mode": "storage",
-                "require_admin": false,
-                "show_in_sidebar": true,
-                "title": "Multimedia",
-                "url_path": "lovelace-media"
-            },
-            {
-                "icon": "mdi:cog",
-                "id": "lovelace_settings",
-                "mode": "storage",
-                "require_admin": true,
-                "show_in_sidebar": true,
-                "title": "Sistema",
-                "url_path": "lovelace-test"
-            },
-            {
-                "require_admin": false,
-                "show_in_sidebar": true,
-                "icon": "mdi:devices",
-                "title": "Dispositivi",
-                "url_path": "lovelace-dispositivi",
-                "mode": "storage",
-                "id": "lovelace_dispositivi"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_dashboards",
+  "data": {
+    "items": [
+      {
+        "icon": "mdi:television",
+        "id": "lovelace_multimedia",
+        "mode": "storage",
+        "require_admin": false,
+        "show_in_sidebar": true,
+        "title": "Multimedia",
+        "url_path": "lovelace-media"
+      },
+      {
+        "icon": "mdi:cog",
+        "id": "lovelace_settings",
+        "mode": "storage",
+        "require_admin": true,
+        "show_in_sidebar": true,
+        "title": "Sistema",
+        "url_path": "lovelace-settings"
+      },
+      {
+        "require_admin": false,
+        "show_in_sidebar": true,
+        "icon": "mdi:devices",
+        "title": "Dispositivi",
+        "url_path": "lovelace-devices",
+        "mode": "storage",
+        "id": "lovelace_devices"
+      }
+    ]
+  }
 }

@@ -36,7 +36,6 @@
             {
               "title": "Stanze",
               "type": "custom:layout-card",
-              "template": "template_grid_layout",
               "cards": [
                 {
                   "type": "picture-glance",
@@ -221,7 +220,8 @@
                     "grid-template-areas": "\"first second\"\n\"third fourth\"\n\"fifth sixth\"\n\"seventh eighth\"\n\"nineth tenth\"\n\"eleventh twelfth\"\n"
                   }
                 }
-              }
+              },
+              "layout_type": "custom:grid-layout"
             },
             {
               "type": "custom:layout-card",
@@ -1608,6 +1608,13 @@
               "view_layout": {
                 "position": "main"
               }
+            },
+            {
+              "type": "energy-distribution",
+              "link_dashboard": true,
+              "view_layout": {
+                "position": "sidebar"
+              }
             }
           ]
         },
@@ -2071,47 +2078,6 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "Operazioni Pianificate",
-          "path": "schedule",
-          "icon": "mdi:clock-outline",
-          "badges": [],
-          "cards": [
-            {
-              "type": "custom:scheduler-card",
-              "title": "Pianificazione Luci",
-              "include": [
-                "light"
-              ],
-              "discover_existing": true,
-              "view_layout": {
-                "position": "sidebar"
-              }
-            },
-            {
-              "type": "custom:scheduler-card",
-              "title": "Pianificazione Tapparelle",
-              "include": [
-                "cover"
-              ],
-              "discover_existing": true,
-              "view_layout": {
-                "position": "sidebar"
-              }
-            },
-            {
-              "type": "custom:scheduler-card",
-              "title": "Pianificazione Valvole",
-              "include": [
-                "climate"
-              ],
-              "discover_existing": true,
-              "view_layout": {
-                "position": "sidebar"
-              }
             }
           ]
         }
