@@ -5,5 +5,5 @@
 name: CISL
 latitude: !secret cisl_latitude
 longitude: !secret cisl_longitude
-radius: 40
+radius: 20
 icon: mdi:domain

@@ -49,6 +49,9 @@ http:
 automation: !include automations.yaml
 automation manual: !include_dir_merge_list automations/
 
+# Assist pipeline
+# assist_pipeline:
+
 # Backup
 backup:
 
