@@ -1208,8 +1208,12 @@
                 },
                 {
                   "entities": [
-                    "media_player.google_home",
-                    "input_text.google_home_speak"
+                    {
+                      "entity": "media_player.google_home"
+                    },
+                    {
+                      "entity": "input_text.google_home_speak"
+                    }
                   ],
                   "show_header_toggle": false,
                   "title": "Google Nest Mini Cucina",
@@ -1218,6 +1222,8 @@
                 {
                   "cards": [
                     {
+                      "show_name": true,
+                      "show_icon": true,
                       "entity": "script.laura_voice",
                       "icon": "mdi:numeric-1",
                       "name": "Bell'Affare",
@@ -1262,6 +1268,8 @@
                 {
                   "cards": [
                     {
+                      "show_name": true,
+                      "show_icon": true,
                       "entity": "script.laura_voice",
                       "icon": "mdi:numeric-4",
                       "name": "Che Schifo è?",
@@ -1386,6 +1394,9 @@
                   "entities": [
                     {
                       "entity": "media_player.google_anna"
+                    },
+                    {
+                      "entity": "input_text.google_anna_speak"
                     }
                   ],
                   "title": "Google Home Mini Anna",

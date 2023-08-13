@@ -8,11 +8,18 @@
   trigger:
     - platform: state
       entity_id: input_text.google_home_speak
+    - platform: state
+      entity_id: input_text.google_anna_speak
 
   condition: []
 
   action:
     - service: script.speech_engine
       data_template:
-        media_player: "media_player.google_home"
+        media_player: >
+          {% if trigger.entity_id == 'input_text.google_anna_speak' %}
+            media_player.google_anna
+          {% else %}
+            media_player.google_home
+          {% endif %}
         message: "{{ trigger.to_state.state }}"

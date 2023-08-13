@@ -4,3 +4,10 @@
 google_home_speak:
   name: Pronuncia
   mode: text
+
+######################################################################
+# Input Text: Google Home Anna Speak
+######################################################################
+google_anna_speak:
+  name: Pronuncia
+  mode: text
