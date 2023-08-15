@@ -783,9 +783,9 @@
                               "layout": "icon_name_state",
                               "entity": "switch.nas",
                               "name": "Stato",
-                              "show_name": false,
+                              "show_name": true,
                               "show_icon": true,
-                              "show_state": true,
+                              "show_state": false,
                               "color-type": "card",
                               "icon": "mdi:power",
                               "styles": {
@@ -834,6 +834,7 @@
                               "state": [
                                 {
                                   "value": "on",
+                                  "name": "Acceso",
                                   "styles": {
                                     "icon": [
                                       {
@@ -844,6 +845,7 @@
                                 },
                                 {
                                   "value": "off",
+                                  "name": "Spento",
                                   "styles": {
                                     "icon": [
                                       {
@@ -2231,15 +2233,6 @@
                               "tap_action": {
                                 "action": "call-service",
                                 "service": "script.shelly_reboot"
-                              }
-                            },
-                            {
-                              "type": "tile",
-                              "entity": "script.shelly_force_state_update",
-                              "name": "Aggiorna Stato Dispositivi",
-                              "tap_action": {
-                                "action": "call-service",
-                                "service": "script.shelly_force_state_update"
                               }
                             }
                           ]

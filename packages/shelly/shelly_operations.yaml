@@ -38,19 +38,20 @@ script:
   ######################################################################
   # Shelly: Force State Update
   ######################################################################
-  shelly_force_state_update:
-    alias: "Shelly: Aggiornamento stato dispositivi"
-    sequence:
-      - service: mqtt.publish
-        data:
-          payload: update
-          topic: shellies/command
+  #shelly_force_state_update:
+  #  alias: "Shelly: Aggiornamento stato dispositivi"
+  #  sequence:
+  #    - service: mqtt.publish
+  #      data:
+  #        payload: update
+  #        topic: shellies/command
 
 automation:
   ######################################################################
   # Shelly: Update Notification
   ######################################################################
-  - alias: "Shelly: Update Notification"
+  - id: "shelly_update_notification"
+    alias: "Shelly: Update Notification"
     variables:
       pending_update_list: >
         {{ states.update
@@ -89,14 +90,15 @@ automation:
   ######################################################################
   # Shelly: Force State Update at Startup
   ######################################################################
-  - alias: "Shelly - Startup: Aggiornamento stati"
-
-    trigger:
-      - event: start
-        platform: homeassistant
-
-    action:
-      service: script.shelly_force_state_update
+  #- id: "shelly_startup_aggiornamento_stati"
+  #  alias: "Shelly - Startup: Aggiornamento stati"
+  #
+  #  trigger:
+  #    - event: start
+  #      platform: homeassistant
+  #
+  #  action:
+  #    service: script.shelly_force_state_update
 
 ######################################################################
 # Shelly Package - Operations Shell Command
