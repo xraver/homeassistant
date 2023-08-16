@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: ⤵️ Check out configuration from GitHub
     - uses: actions/checkout@v3
 
     - name: Set up Python 3.11
@@ -36,19 +37,19 @@ jobs:
       run: |
         python3 -m pip install homeassistant
 
-    - name: Use dummy files for credentials
-      run: |
-        cp .secrets_dummy.yaml secrets.yaml
-        cp credentials/.google_dummy.json credentials/google.json
-
-    - name: Installing Custom Components
+    - name: Install Custom Components
       run: |
         mkdir custom_components/
         # Monitor Docker
         git clone https://github.com/ualex73/monitor_docker
         mv monitor_docker/custom_components/monitor_docker/ custom_components/
 
-    - name: Home Assistant Configuration Check
+    - name: Use dummy files for credentials
+      run: |
+        cp .secrets_dummy.yaml secrets.yaml
+        cp credentials/.google_dummy.json credentials/google.json
+
+    - name: 🚀 Run Home Assistant Configuration Check    
       run: |
         sed -i "/\b\(mobile_app\)\b/d" configuration.yaml
         hass --script check_config --config . --info
