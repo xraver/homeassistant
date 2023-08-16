@@ -49,7 +49,7 @@ jobs:
         cp .secrets_dummy.yaml secrets.yaml
         cp credentials/.google_dummy.json credentials/google.json
 
-    - name: 🚀 Run Home Assistant Configuration Check    
+    - name: 🚀 Run Home Assistant Configuration Check
       run: |
         sed -i "/\b\(mobile_app\)\b/d" configuration.yaml
         hass --script check_config --config . --info
