@@ -19,37 +19,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ⤵️ Check out configuration from GitHub
-      uses: actions/checkout@v3
+      - name: ⤵️ Check out configuration from GitHub
+        uses: actions/checkout@v3
 
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.11"
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        python3 -m pip install --upgrade pip
-        python3 -m pip install wheel colorlog python-dateutil
-        if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install wheel colorlog python-dateutil
+          if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
 
-    - name: Install Home Assistant
-      run: |
-        python3 -m pip install homeassistant
+      - name: Install Home Assistant
+        run: |
+          python3 -m pip install homeassistant
 
-    - name: Install Custom Components
-      run: |
-        mkdir custom_components/
-        # Monitor Docker
-        git clone https://github.com/ualex73/monitor_docker
-        mv monitor_docker/custom_components/monitor_docker/ custom_components/
+      - name: Install Custom Components
+        run: |
+          mkdir custom_components/
+          # Monitor Docker
+          git clone https://github.com/ualex73/monitor_docker
+          mv monitor_docker/custom_components/monitor_docker/ custom_components/
 
-    - name: Use dummy files for credentials
-      run: |
-        cp .secrets_dummy.yaml secrets.yaml
-        cp credentials/.google_dummy.json credentials/google.json
+      - name: Use dummy files for credentials
+        run: |
+          cp .secrets_dummy.yaml secrets.yaml
+          cp credentials/.google_dummy.json credentials/google.json
 
-    - name: 🚀 Run Home Assistant Configuration Check
-      run: |
-        sed -i "/\b\(mobile_app\)\b/d" configuration.yaml
-        hass --script check_config --config . --info
+      - name: 🚀 Run Home Assistant Configuration Check
+        run: |
+          # Show Version
+          docker run -it --rm \
+            -v .:/config \
+            "ghcr.io/home-assistant/home-assistant:stable" \
+            python -m homeassistant --version
+
+          # Run check_config
+          docker run -it --rm \
+            -v .:/config \
+            "ghcr.io/home-assistant/home-assistant:stable" \
+            python -m homeassistant \
+              --config "/config" \
+              --script check_config
