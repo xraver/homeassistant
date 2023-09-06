@@ -163,9 +163,6 @@ recorder: !include log/recorder.yaml
 # Discover DHCP requests for supported devices and services.
 dhcp:
 
-# Discover some devices automatically (deprecated)
-# discovery:
-
 # Simple Service Discovery Protocol (SSDP)
 ssdp:
 
