@@ -311,10 +311,10 @@
                       "entity": "sensor.speedtest_ping"
                     },
                     {
-                      "entity": "sensor.speedtest_download"
+                      "entity": "sensor.speedtest_scarica"
                     },
                     {
-                      "entity": "sensor.speedtest_upload"
+                      "entity": "sensor.speedtest_carica"
                     }
                   ],
                   "title": "Speed Test"
@@ -323,7 +323,7 @@
                   "show_name": true,
                   "show_icon": true,
                   "type": "button",
-                  "entity": "sensor.speedtest_download",
+                  "entity": "sensor.speedtest_scarica",
                   "name": "Aggiorna Valori",
                   "icon_height": "25px",
                   "tap_action": {

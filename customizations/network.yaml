@@ -4,9 +4,9 @@
 
 sensor.speedtest_ping:
   friendly_name: Ping
-sensor.speedtest_download:
+sensor.speedtest_carica:
   friendly_name: Download
-sensor.speedtest_upload:
+sensor.speedtest_scarica:
   friendly_name: Upload
 
 ######################################################################
