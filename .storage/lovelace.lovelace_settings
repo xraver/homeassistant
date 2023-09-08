@@ -348,10 +348,10 @@
               "type": "history-graph",
               "entities": [
                 {
-                  "entity": "sensor.freebsd_router_kib_s_received"
+                  "entity": "sensor.freebsd_router_velocita_di_scaricamento"
                 },
                 {
-                  "entity": "sensor.freebsd_router_kib_s_sent"
+                  "entity": "sensor.freebsd_router_velocita_di_caricamento"
                 }
               ],
               "title": "pfSense - Traffico di Rete",

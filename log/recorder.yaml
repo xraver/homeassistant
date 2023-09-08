@@ -51,17 +51,18 @@ exclude:
     - sensor.temperatura_veranda_linkquality
     - sensor.temperatura_veranda_voltage
     # pfSense
-    - sensor.freebsd_router_external_ip
-    - binary_sensor.freebsd_router_wan_status
-    - sensor.freebsd_router_wan_status
-    #- sensor.freebsd_router_kib_s_received
-    #- sensor.freebsd_router_kib_s_sent
-    - sensor.freebsd_router_b_received
-    - sensor.freebsd_router_b_sent
-    - sensor.freebsd_router_packets_received
-    - sensor.freebsd_router_packets_sent
-    - sensor.freebsd_router_packets_s_received
-    - sensor.freebsd_router_packets_s_sent
+    - binary_sensor.freebsd_router_stato_della_wan
+    - sensor.freebsd_router_dati_inviati
+    - sensor.freebsd_router_dati_ricevuti
+    - sensor.freebsd_router_ip_esterno
+    - sensor.freebsd_router_pacchetti_inviati
+    - sensor.freebsd_router_pacchetti_ricevuti
+    - sensor.freebsd_router_stato_della_wan
+    - sensor.freebsd_router_tempo_di_attivita
+    #- sensor.freebsd_router_velocita_di_caricamento
+    - sensor.freebsd_router_velocita_di_caricamento_dei_pacchetti
+    #- sensor.freebsd_router_velocita_di_scaricamento
+    - sensor.freebsd_router_velocita_di_scaricamento_dei_pacchetti
     # DNS IP
     - sensor.xraver_duckdns_org
     - sensor.xraver_duckdns_org_ipv6
