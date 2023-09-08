@@ -32,7 +32,7 @@
 
     - service: script.speech_engine
       data_template:
-        message: !include ../templates/welcome_message.yaml
+        message: !include ../template_messages/welcome.yaml
         enable_greeting: 0
 
 ######################################################################

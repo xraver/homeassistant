@@ -49,17 +49,11 @@ http:
 automation: !include automations.yaml
 automation manual: !include_dir_merge_list automations/
 
-# Assist pipeline
-# assist_pipeline:
-
 # Backup
 backup:
 
 # Enables configuration UI
 config:
-
-# Conversation
-conversation:
 
 # Counter
 counter: !include_dir_merge_named counters/
@@ -71,6 +65,9 @@ energy:
 frontend:
   themes: !include_dir_merge_named themes
 
+# Hardware
+# hardware:
+
 # Home Assistant Alerts
 homeassistant_alerts:
 
@@ -79,9 +76,6 @@ homeassistant_alerts:
 
 # Image upload
 image_upload:
-
-# Hardware
-# hardware:
 
 # Inputs
 input_boolean: !include_dir_merge_named input_boolean/
@@ -110,14 +104,14 @@ person:
 schedule:
 
 # Scene
-#scene: !include_dir_merge_list scenes.yaml
+# scene: !include_dir_merge_list scenes.yaml
 
 # Scripts
 script: !include scripts.yaml
 script manual: !include_dir_merge_named scripts/
 
 # Stream
-#stream:
+# stream:
 
 # Track the sun
 sun:
@@ -163,6 +157,9 @@ recorder: !include log/recorder.yaml
 # Discover DHCP requests for supported devices and services.
 dhcp:
 
+# Auto detection is based on the system routing next hop for the mDNS broadcast address
+network:
+
 # Simple Service Discovery Protocol (SSDP)
 ssdp:
 
@@ -173,6 +170,16 @@ ssdp:
 zeroconf:
 
 ######################################################################
+# Voice Interface
+######################################################################
+
+# Assist pipeline
+# assist_pipeline:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+# conversation:
+
+######################################################################
 # Additional Components
 ######################################################################
 
@@ -181,9 +188,6 @@ binary_sensor: !include_dir_merge_list binary_sensor/
 
 # Covers
 cover: !include_dir_merge_list cover/
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-#conversation:
 
 # Device Tracker
 device_tracker: !include_dir_merge_list device_tracker/
@@ -211,6 +215,9 @@ utility_meter: !include_dir_merge_named utility_meter/
 
 # Text to speech
 tts: !include components/tts.yaml
+
+# Templates
+template: !include_dir_merge_list template/
 
 # Wake on Lan
 wake_on_lan:

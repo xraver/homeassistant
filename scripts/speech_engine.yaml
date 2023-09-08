@@ -100,7 +100,7 @@ speech_engine:
       data_template:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
-        message: !include ../templates/speech_message.yaml
+        message: !include ../template_messages/speech.yaml
 
 ######################################################################
 # Script: Speech Status
