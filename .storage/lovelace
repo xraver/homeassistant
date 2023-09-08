@@ -500,7 +500,13 @@
               "entity": "light.luce_camera"
             },
             {
+              "entity": "light.luce_dispensa"
+            },
+            {
               "entity": "light.luce_balcone"
+            },
+            {
+              "entity": "light.luce_veranda"
             }
           ],
           "cards": [
@@ -538,7 +544,13 @@
                   "entity": "light.luce_camera"
                 },
                 {
+                  "entity": "light.luce_dispensa"
+                },
+                {
                   "entity": "light.luce_balcone"
+                },
+                {
+                  "entity": "light.luce_veranda"
                 }
               ],
               "show_header_toggle": false,
@@ -616,8 +628,18 @@
               ]
             },
             {
+              "entity": "light.luce_dispensa",
+              "name": "Luce Dispensa",
+              "type": "tile"
+            },
+            {
               "entity": "light.luce_balcone",
               "name": "Luce Balcone",
+              "type": "tile"
+            },
+            {
+              "entity": "light.luce_veranda",
+              "name": "Luce Veranda",
               "type": "tile"
             }
           ]
@@ -1705,6 +1727,9 @@
                 {
                   "type": "weather-forecast",
                   "entity": "weather.meteo_morgex"
+                },
+                {
+                  "type": "custom:horizon-card"
                 }
               ]
             },

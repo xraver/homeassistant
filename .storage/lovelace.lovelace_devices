@@ -3091,21 +3091,116 @@
               ]
             },
             {
-              "type": "vertical-stack",
-              "title": "Mappa Dispositivi",
-              "layout": "vertical",
-              "cards": [
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
                 {
-                  "type": "custom:zigbee2mqtt-networkmap",
-                  "title": "Zigbee2MQTT Network Map",
-                  "entity": "sensor.zigbee2mqtt_networkmap",
-                  "mqtt_base_topic": "zigbee2mqtt",
-                  "force": 3000,
-                  "node_size": 16,
-                  "font_size": 12,
-                  "link_width": 2,
-                  "height": 400,
-                  "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n    }\n"
+                  "type": "section",
+                  "label": "Luce Veranda - Sonoff ZBMINIL2"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.jpg"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.luce_veranda",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "select.luce_veranda_power_on_behavior",
+                              "name": "Stato al Riavvio"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.luce_veranda",
+                              "name": "Firmware"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Luce Dispensa - Sonoff ZBMINIL2"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "https://www.zigbee2mqtt.io/images/devices/ZBMINIL2.jpg"
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.luce_dispensa",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "select.luce_dispensa_power_on_behavior",
+                              "name": "Stato al Riavvio"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.luce_dispensa",
+                              "name": "Firmware"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
