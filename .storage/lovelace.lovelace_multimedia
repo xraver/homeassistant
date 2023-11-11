@@ -1387,7 +1387,11 @@
                 },
                 {
                   "type": "media-control",
-                  "entity": "media_player.lg_anna"
+                  "entity": "media_player.anna_tv_sala"
+                },
+                {
+                  "type": "media-control",
+                  "entity": "media_player.anna_tv_camera"
                 },
                 {
                   "type": "entities",
