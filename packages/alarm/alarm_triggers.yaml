@@ -29,6 +29,27 @@ automation:
           level: 1
 
   ######################################################################
+  # Alarm Water
+  #
+  # Actions:
+  # - script.start_alarm
+  ######################################################################
+  - alias: "Allarmi: Perdita Acqua"
+
+    trigger:
+      - platform: state
+        entity_id: group.water
+        to: 'on'
+
+    action:
+      - service: script.start_alarm
+        data_template:
+          entity_id: input_boolean.water_alarm
+          message: >
+            Sono state rilevate perdite di acqua da: {{ expand(trigger.to_state.attributes.entity_id)|selectattr('state','eq', 'on')|map(attribute='name')|list|join(', - ') }}
+          level: 1
+
+  ######################################################################
   # Alarm Car
   #
   # Actions:

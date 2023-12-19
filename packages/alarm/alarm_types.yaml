@@ -13,6 +13,11 @@ input_boolean:
     name: Allarme Porta
     icon: mdi:door-open
 
+  # Alarms: Water
+  water_alarm:
+    name: Allarmi Acqua
+    icon: mdi:water-alert-outline
+
   # Alarms: Car
   car_alarm:
     name: Allarmi Auto
@@ -29,4 +34,5 @@ group:
     entities:
       - input_boolean.generic_alarm
       - input_boolean.door_alarm
+      - input_boolean.water_alarm
       - input_boolean.car_alarm
