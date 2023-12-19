@@ -50,8 +50,7 @@ automation:
   ######################################################################
   # Shelly: Update Notification
   ######################################################################
-  - id: "shelly_update_notification"
-    alias: "Shelly: Update Notification"
+  - alias: "Shelly: Update Notification"
     variables:
       pending_update_list: >
         {{ states.update
@@ -90,8 +89,7 @@ automation:
   ######################################################################
   # Shelly: Force State Update at Startup
   ######################################################################
-  #- id: "shelly_startup_aggiornamento_stati"
-  #  alias: "Shelly - Startup: Aggiornamento stati"
+  #- alias: "Shelly - Startup: Aggiornamento stati"
   #
   #  trigger:
   #    - event: start

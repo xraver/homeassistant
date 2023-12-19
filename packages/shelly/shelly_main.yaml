@@ -1,0 +1,34 @@
+######################################################################
+# Shelly Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Shelly Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.shelly:
+      customize: &customize
+        package: 'shelly'
+        version: 1.0.0
+
+    ######################################################################
+    # Shelly Package - Customizations - Entities
+    ######################################################################
+
+    group.shelly:
+      <<: *customize
+    script.shelly_upgrade:
+      <<: *customize
+      icon: mdi:package-up
+    script.shelly_reboot:
+      <<: *customize
+      icon: mdi:restart
+    automation.shelly_update_notification:
+      <<: *customize
+#    automation.shelly_startup_aggiornamento_stati:
+#      <<: *customize
+    shell_command.shelly_reboot:
+      icon: mdi:restart

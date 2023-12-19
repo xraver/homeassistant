@@ -1,0 +1,33 @@
+######################################################################
+# Update Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Update Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.update:
+      customize: &customize
+        package: 'update'
+        version: 1.0.0
+
+    ######################################################################
+    # Update Package - Customizations - Entities
+    ######################################################################
+
+    input_boolean.update_hacs:
+      <<: *customize
+      icon: mdi:alpha-h-box
+    input_boolean.update_shelly:
+      <<: *customize
+      icon: mdi:alpha-s-box
+    group.update:
+      <<: *customize
+      icon: mdi:update
+    automation.update_hacs_notification:
+      <<: *customize
+    automation.update_update_acknowledgment:
+      <<: *customize

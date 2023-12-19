@@ -14,7 +14,8 @@ automation:
   ######################################################################
   # Update Notification: HACS
   ######################################################################
-  - alias: "Update: HACS Notification"
+  - id: "update_hacs_notification"
+    alias: "Update: HACS Notification"
 
     trigger:
       - platform: numeric_state
@@ -56,12 +57,12 @@ automation:
   # Actions:
   # - persistent_notification.dismiss
   ######################################################################
-  - alias: "Update: Riconoscimento Aggiornamenti"
+  - id: "update_acknowledgment"
+    alias: "Update: Riconoscimento Aggiornamenti"
 
     trigger:
       platform: state
       entity_id:
-        #- input_boolean.update_homeassistant
         - input_boolean.update_hacs
         - input_boolean.update_shelly
       to: 'off'
