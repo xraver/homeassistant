@@ -1,0 +1,11 @@
+######################################################################
+# Group Water
+######################################################################
+
+water:
+  name: Sensori Perdite Acqua
+  icon: mdi:water
+  entities:
+    - binary_sensor.sensore_acqua_1_water_leak
+    - binary_sensor.sensore_acqua_2_water_leak
+    - binary_sensor.sensore_acqua_3_water_leak
