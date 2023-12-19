@@ -32,13 +32,3 @@ automation:
             {% else %}
               0
             {% endif %}
-
-######################################################################
-# Away Mode Package - Customizations
-######################################################################
-
-homeassistant:
-  customize:
-    # Covers Away Automation
-    automation.modalita_vacanza_gestione_tapparelle:
-      icon: mdi:window-shutter

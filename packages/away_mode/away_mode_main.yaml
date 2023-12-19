@@ -1,0 +1,32 @@
+######################################################################
+# Away Mode - Main
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Away Mode - Main - General Package Settings
+    ######################################################################
+
+    package.netatmo:
+      customize: &customize
+        package: 'away_mode'
+        version: 1.0.0
+
+    ######################################################################
+    # Away Mode - Main - Entities
+    ######################################################################
+
+    group.car_alarm:
+      <<: *customize
+    automation.modalita_vacanza_azione_on:
+      <<: *customize
+    automation.modalita_vacanza_azione_off:
+      <<: *customize
+    automation.modalita_vacanza_gestione_termosifoni:
+      <<: *customize
+      icon: mdi:radiator
+    automation.modalita_vacanza_gestione_tapparelle:
+      <<: *customize
+      icon: mdi:window-shutter
