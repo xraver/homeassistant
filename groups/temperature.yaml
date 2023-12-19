@@ -3,7 +3,7 @@
 ######################################################################
 
 temperature:
-  name: Temperature
+  name: Sensori Temperatura
   icon: mdi:home-thermometer
   entities:
     - sensor.temperatura_balcone_temperature
