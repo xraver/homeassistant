@@ -68,9 +68,6 @@ homeassistant:
     lock.ff590mr_lock:
       friendly_name: Blocco Auto
       icon: mdi:lock
-    lock.ff590mr_lock_no_pin:
-      friendly_name: Blocco Auto
-      icon: mdi:lock
 
     ######################################################################
     # Sensors

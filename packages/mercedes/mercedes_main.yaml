@@ -1,0 +1,52 @@
+######################################################################
+# Mercedes Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Mercedes Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.netatmo:
+      customize: &customize
+        package: 'mercedes'
+        version: 1.0.0
+
+    ######################################################################
+    # Mercedes Package - Customizations - Entities
+    ######################################################################
+
+    group.car_alarm:
+      <<: *customize
+    binary_sensor.ff590mr_locked:
+      <<: *customize
+    binary_sensor.ff590mr_doors_closed:
+      <<: *customize
+    binary_sensor.ff590mr_door_front_left:
+      <<: *customize
+    binary_sensor.ff590mr_door_front_right:
+      <<: *customize
+    binary_sensor.ff590mr_door_rear_left:
+      <<: *customize
+    binary_sensor.ff590mr_door_rear_right:
+      <<: *customize
+    binary_sensor.ff590mr_decklid:
+      <<: *customize
+    lock.ff590mr_lock_no_pin:
+      <<: *customize
+      friendly_name: Blocco Auto
+      icon: mdi:lock
+    sensor.ff590mr_service_interval_days:
+      <<: *customize
+    binary_sensor.ff590mr_windows_closed_2:
+      <<: *customize
+    binary_sensor.ff590mr_window_front_left:
+      <<: *customize
+    binary_sensor.ff590mr_window_front_right:
+      <<: *customize
+    binary_sensor.ff590mr_window_rear_left:
+      <<: *customize
+    binary_sensor.ff590mr_window_rear_right:
+      <<: *customize
