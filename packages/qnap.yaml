@@ -1,4 +1,49 @@
 ######################################################################
+# QNAP Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # QNAP Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.qnap:
+      customize: &customize
+        package: 'qnap'
+        version: 1.0.0
+
+    ######################################################################
+    # QNAP Package - Customizations - Entities
+    ######################################################################
+
+    switch.nas:
+      <<: *customize
+      icon: mdi:nas
+    shell_command.nas_turn_off:
+      <<: *customize
+      icon: mdi:power-settings
+    shell_command.plex_start:
+      <<: *customize
+      icon: mdi:plex
+    shell_command.plex_restart:
+      <<: *customize
+      icon: mdi:plex
+    shell_command.plex_stop:
+      <<: *customize
+      icon: mdi:plex
+    script.plex_start:
+      <<: *customize
+      icon: mdi:plex
+    script.plex_restart:
+      <<: *customize
+      icon: mdi:plex
+    script.plex_stop:
+      <<: *customize
+      icon: mdi:plex
+
+######################################################################
 # QNAP Package - Switch
 ######################################################################
 
@@ -70,18 +115,3 @@ google_assistant:
       name: Ferma Plex
       expose: true
       room: Routine
-
-######################################################################
-# QNAP Package - Customizations
-######################################################################
-
-homeassistant:
-  customize:
-    switch.nas:
-      icon: mdi:nas
-    script.plex_start:
-      icon: mdi:plex
-    script.plex_restart:
-      icon: mdi:plex
-    script.plex_stop:
-      icon: mdi:plex

@@ -1,23 +1,72 @@
 ######################################################################
+# Errors Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Errors Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.fritz:
+      customize: &customize
+        package: 'fritz'
+        version: 1.0.0
+
+    ######################################################################
+    # Errors Package - Customizations - Entities
+    ######################################################################
+
+#    switch.fritz_led:
+#      <<: *customize
+#    switch.ap1_led:
+#      <<: *customize
+    shell_command.fritz_reboot:
+      <<: *customize
+      icon: mdi:restart
+    shell_command.fritz_reconnect:
+      <<: *customize
+      icon: mdi:connection
+#    shell_command.fritz_led_on:
+#      <<: *customize
+#      icon: mdi:led-on
+#    shell_command.fritz_led_off:
+#      <<: *customize
+#      icon: mdi:led-off
+    shell_command.ap1_reboot:
+      <<: *customize
+      icon: mdi:restart
+    shell_command.ap1_reconnect:
+      <<: *customize
+      icon: mdi:connection
+#    shell_command.ap1_led_on:
+#      <<: *customize
+#      icon: mdi:led-on
+#    shell_command.ap1_led_off:
+#      <<: *customize
+#      icon: mdi:led-off
+
+######################################################################
 # Fritz Package - Switch
 ######################################################################
 
-switch:
-  - platform: template
-    switches:
-      fritz_led:
-        turn_on:
-          service: shell_command.fritz_led_on
-        turn_off:
-          service: shell_command.fritz_led_off
+#switch:
+#  - platform: template
+#    switches:
+#      fritz_led:
+#        turn_on:
+#          service: shell_command.fritz_led_on
+#        turn_off:
+#          service: shell_command.fritz_led_off
 
-  - platform: template
-    switches:
-      ap1_led:
-        turn_on:
-          service: shell_command.ap1_led_on
-        turn_off:
-          service: shell_command.ap1_led_off
+#  - platform: template
+#    switches:
+#      ap1_led:
+#        turn_on:
+#          service: shell_command.ap1_led_on
+#        turn_off:
+#          service: shell_command.ap1_led_off
 
 ######################################################################
 # Fritz Package - Fritz Command
@@ -25,9 +74,9 @@ switch:
 shell_command:
   fritz_reboot: 'bash /config/shell_scripts/fritzBox.sh fritz REBOOT Box'
   fritz_reconnect: 'bash /config/shell_scripts/fritzBox.sh fritz WAN RECONNECT'
-  fritz_led_on: 'bash /config/shell_scripts/fritzBox.sh fritz LED 1'
-  fritz_led_off: 'bash /config/shell_scripts/fritzBox.sh fritz LED 0'
+#  fritz_led_on: 'bash /config/shell_scripts/fritzBox.sh fritz LED 1'
+#  fritz_led_off: 'bash /config/shell_scripts/fritzBox.sh fritz LED 0'
   ap1_reboot: 'bash /config/shell_scripts/fritzBox.sh ap1 REBOOT Box'
   ap1_reconnect: 'bash /config/shell_scripts/fritzBox.sh ap1 WAN RECONNECT'
-  ap1_led_on: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 1'
-  ap1_led_off: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 0'
+#  ap1_led_on: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 1'
+#  ap1_led_off: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 0'

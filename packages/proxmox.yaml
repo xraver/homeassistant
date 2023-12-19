@@ -1,22 +1,37 @@
 ######################################################################
-# Proxmox Package: Customizations
+# Proxmox Package - Customizations
 ######################################################################
 
 homeassistant:
   customize:
+
+    ######################################################################
+    # Proxmox Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.proxmox:
+      customize: &customize
+        package: 'proxmox'
+        version: 1.0.0
+
+    ######################################################################
+    # Proxmox Package - Customizations - Entities
+    ######################################################################
+
     binary_sensor.pve_server:
+      <<: *customize
       friendly_name: VM Server
       icon: mdi:debian
-
     binary_sensor.pve_docker:
+      <<: *customize
       friendly_name: VM Docker
       icon: mdi:docker
-
     binary_sensor.pve_firewall:
+      <<: *customize
       friendly_name: VM Firewall
       icon: mdi:freebsd
-
     binary_sensor.pve_asterisk:
+      <<: *customize
       friendly_name: VM Asterisk
       icon: mdi:asterisk-circle-outline
 

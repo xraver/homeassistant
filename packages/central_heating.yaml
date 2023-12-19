@@ -1,4 +1,31 @@
 ######################################################################
+# Central Heating Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Central Heating Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.central_heating:
+      customize: &customize
+        package: 'central_heating'
+        version: 1.0.0
+
+    ######################################################################
+    # Central Heating Package - Customizations - Entities
+    ######################################################################
+
+    binary_sensor.central_heating:
+      <<: *customize
+    input_boolean.central_heating:
+      <<: *customize
+    automation.riscaldamento_centralizzato:
+      <<: *customize
+
+######################################################################
 # Central Heating Package - Binary Sensor
 ######################################################################
 

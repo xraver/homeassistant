@@ -1,5 +1,34 @@
 ######################################################################
-# Alarm Package - Guard Mode - Binary Sensor
+# Guard Mode Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Guard Mode Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.guard_mode:
+      customize: &customize
+        package: 'guard_mode'
+        version: 1.0.0
+
+    ######################################################################
+    # Guard Mode Package - Customizations - Entities
+    ######################################################################
+
+    binary_sensor.guard_mode:
+      <<: *customize
+    input_boolean.guard_mode:
+      <<: *customize
+    automation.modalita_guardia_attivazione:
+      <<: *customize
+    automation.modalita_guardia_disattivazione:
+      <<: *customize
+
+######################################################################
+# Guard Mode Package - Binary Sensor
 ######################################################################
 
 binary_sensor:
@@ -17,7 +46,7 @@ binary_sensor:
           {% endif %}
 
 ######################################################################
-# Alarm Package - Guard Mode - Input Booleans
+# Guard Mode Package - Input Booleans
 ######################################################################
 
 input_boolean:
@@ -27,7 +56,7 @@ input_boolean:
     icon: mdi:shield-home
 
 ######################################################################
-# Alarm Package - Guard Mode - Automations
+# Guard Mode Package - Automations
 ######################################################################
 
 automation:

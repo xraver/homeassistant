@@ -1,4 +1,33 @@
 ######################################################################
+# Errors Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Errors Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.errors:
+      customize: &customize
+        package: 'errors'
+        version: 1.0.0
+
+    ######################################################################
+    # Errors Package - Customizations - Entities
+    ######################################################################
+
+    binary_sensor.home_assistant_error:
+      <<: *customize
+    input_boolean.home_assistant_error:
+      <<: *customize
+    automation.home_assistant_errori_insorgenza_errore:
+      <<: *customize
+    automation.home_assistant_errori_scomparsa_errore:
+      <<: *customize
+
+######################################################################
 # Errors Package - Binary Sensor
 ######################################################################
 
