@@ -1,12 +1,12 @@
 ######################################################################
-# Update Package - Customizations
+# Update Package - Main
 ######################################################################
 
 homeassistant:
   customize:
 
     ######################################################################
-    # Update Package - Customizations - General Package Settings
+    # Update Package - Main - General Package Settings
     ######################################################################
 
     package.update:
@@ -15,7 +15,7 @@ homeassistant:
         version: 1.0.0
 
     ######################################################################
-    # Update Package - Customizations - Entities
+    # Update Package - Main - Entities
     ######################################################################
 
     input_boolean.update_hacs:

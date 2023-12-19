@@ -1,12 +1,12 @@
 ######################################################################
-# Shelly Package - Customizations
+# Shelly Package - Main
 ######################################################################
 
 homeassistant:
   customize:
 
     ######################################################################
-    # Shelly Package - Customizations - General Package Settings
+    # Shelly Package - Main - General Package Settings
     ######################################################################
 
     package.shelly:
@@ -15,7 +15,7 @@ homeassistant:
         version: 1.0.0
 
     ######################################################################
-    # Shelly Package - Customizations - Entities
+    # Shelly Package - Main - Entities
     ######################################################################
 
     group.shelly:

@@ -1,12 +1,12 @@
 ######################################################################
-# Netamo Package - Customizations
+# Netamo Package - Main
 ######################################################################
 
 homeassistant:
   customize:
 
     ######################################################################
-    # Netamo Package - Customizations - General Package Settings
+    # Netamo Package - Main - General Package Settings
     ######################################################################
 
     package.netatmo:
@@ -15,7 +15,7 @@ homeassistant:
         version: 1.0.0
 
     ######################################################################
-    # Netatmo Package - Customizations - Entities
+    # Netatmo Package - Main - Entities
     ######################################################################
 
     group.climate:

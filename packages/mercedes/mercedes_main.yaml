@@ -1,12 +1,12 @@
 ######################################################################
-# Mercedes Package - Customizations
+# Mercedes Package - Main
 ######################################################################
 
 homeassistant:
   customize:
 
     ######################################################################
-    # Mercedes Package - Customizations - General Package Settings
+    # Mercedes Package - Main - General Package Settings
     ######################################################################
 
     package.netatmo:
@@ -15,7 +15,7 @@ homeassistant:
         version: 1.0.0
 
     ######################################################################
-    # Mercedes Package - Customizations - Entities
+    # Mercedes Package - Main - Entities
     ######################################################################
 
     group.car_alarm:
