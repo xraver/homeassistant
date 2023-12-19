@@ -1072,7 +1072,7 @@
                         {
                           "type": "picture",
                           "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/classe300eos.png"
+                          "image": "/local/images/devices/BTicino/classe300eos.png"
                         },
                         {
                           "type": "vertical-stack",
@@ -1360,6 +1360,366 @@
                           "name": "Y",
                           "color": "yellow",
                           "width": "85%"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Elettrodomestici",
+          "path": "Appliance",
+          "icon": "mdi:countertop",
+          "type": "custom:horizontal-layout",
+          "badges": [],
+          "cards": [
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Forno Electrolux EOB9S21WX"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/kitchen_appliance/EOB9S21WX.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "https://www.electrolux.it/kitchen/cooking/ovens/oven/eob9s21wx/"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "binary_sensor.electrolux_forno_apl_status",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "binary_sensor.electrolux_forno_ov1_doorstate",
+                              "name": "Porta",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:button-card",
+                          "entity": "button.electrolux_forno_ov1_executecommand_1",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "red"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "button.electrolux_forno_ov1_executecommand_0",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "green"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "button.electrolux_forno_ov1_executecommand_2",
+                          "show_name": false,
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "button.electrolux_forno_ov1_executecommand_3",
+                          "show_name": false,
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "button.electrolux_forno_ov1_executecommand_5",
+                          "show_name": false,
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Lavastoviglie Electrolux EES68510L"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/kitchen_appliance/EES68510L.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "https://www.electrolux.it/kitchen/dishwashing/dishwashers/dishwasher-60-cm/ees68510l/"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "sensor.shelly_em_channel_1_power",
+                              "name": "Potenza",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "red"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "green"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Lavatrice LG F2WV9S8P2E"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/kitchen_appliance/F2WV9S8P2E.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "https://www.lg.com/it/lavatrici/lg-f2wv9s8p2e"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "sensor.shelly_em_channel_1_power",
+                              "name": "Potenza",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "red"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "green"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
                         }
                       ]
                     }
@@ -3195,6 +3555,162 @@
                               "template": "template_device_firmware",
                               "entity": "update.luce_dispensa",
                               "name": "Firmware"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "BTicino",
+          "path": "bticino",
+          "icon": "mdi:alpha-b-box",
+          "type": "custom:horizontal-layout",
+          "badges": [],
+          "cards": [
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "NT4411C - Dimmer 0x0004740001583a4a"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_NT4411C.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "http://shelly1.giorgioravera.it"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x0004740001583a4a",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x0004740001583a4a",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_button",
+                              "entity": "switch.0x0004740001583a4a_device_mode",
+                              "icon": "mdi:lightbulb-on-50",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_button",
+                              "entity": "switch.0x0004740001583a4a_led_in_dark",
+                              "icon": "mdi:led-outline"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_button",
+                              "entity": "switch.0x0004740001583a4a_led_if_on",
+                              "icon": "mdi:led-outline"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "NT4027C - Tapparella 0x0004740001583a4a"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_NT4027C.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "http://shelly1.giorgioravera.it"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "cover.0x000474000159053e",
+                              "name": "Stato",
+                              "styles": {
+                                "icon": [
+                                  {
+                                    "color": "var(--state-icon-color)"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x000474000159053e",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_button",
+                              "entity": "switch.0x000474000159053e_led_in_dark",
+                              "icon": "mdi:lightbulb"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_button",
+                              "entity": "switch.0x000474000159053e_led_if_on",
+                              "icon": "mdi:lightbulb"
                             }
                           ]
                         }
