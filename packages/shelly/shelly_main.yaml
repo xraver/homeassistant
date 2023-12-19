@@ -28,7 +28,7 @@ homeassistant:
       icon: mdi:restart
     automation.shelly_update_notification:
       <<: *customize
-#    automation.shelly_startup_aggiornamento_stati:
-#      <<: *customize
+    #automation.shelly_startup_aggiornamento_stati:
+    #  <<: *customize
     shell_command.shelly_reboot:
       icon: mdi:restart

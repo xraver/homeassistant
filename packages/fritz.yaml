@@ -18,34 +18,34 @@ homeassistant:
     # Errors Package - Customizations - Entities
     ######################################################################
 
-#    switch.fritz_led:
-#      <<: *customize
-#    switch.ap1_led:
-#      <<: *customize
+    #switch.fritz_led:
+    #  <<: *customize
+    #switch.ap1_led:
+    #  <<: *customize
     shell_command.fritz_reboot:
       <<: *customize
       icon: mdi:restart
     shell_command.fritz_reconnect:
       <<: *customize
       icon: mdi:connection
-#    shell_command.fritz_led_on:
-#      <<: *customize
-#      icon: mdi:led-on
-#    shell_command.fritz_led_off:
-#      <<: *customize
-#      icon: mdi:led-off
+    #shell_command.fritz_led_on:
+    #  <<: *customize
+    #  icon: mdi:led-on
+    #shell_command.fritz_led_off:
+    #  <<: *customize
+    #  icon: mdi:led-off
     shell_command.ap1_reboot:
       <<: *customize
       icon: mdi:restart
     shell_command.ap1_reconnect:
       <<: *customize
       icon: mdi:connection
-#    shell_command.ap1_led_on:
-#      <<: *customize
-#      icon: mdi:led-on
-#    shell_command.ap1_led_off:
-#      <<: *customize
-#      icon: mdi:led-off
+    #shell_command.ap1_led_on:
+    #  <<: *customize
+    #  icon: mdi:led-on
+    #shell_command.ap1_led_off:
+    #  <<: *customize
+    #  icon: mdi:led-off
 
 ######################################################################
 # Fritz Package - Switch
@@ -74,9 +74,9 @@ homeassistant:
 shell_command:
   fritz_reboot: 'bash /config/shell_scripts/fritzBox.sh fritz REBOOT Box'
   fritz_reconnect: 'bash /config/shell_scripts/fritzBox.sh fritz WAN RECONNECT'
-#  fritz_led_on: 'bash /config/shell_scripts/fritzBox.sh fritz LED 1'
-#  fritz_led_off: 'bash /config/shell_scripts/fritzBox.sh fritz LED 0'
+  #fritz_led_on: 'bash /config/shell_scripts/fritzBox.sh fritz LED 1'
+  #fritz_led_off: 'bash /config/shell_scripts/fritzBox.sh fritz LED 0'
   ap1_reboot: 'bash /config/shell_scripts/fritzBox.sh ap1 REBOOT Box'
   ap1_reconnect: 'bash /config/shell_scripts/fritzBox.sh ap1 WAN RECONNECT'
-#  ap1_led_on: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 1'
-#  ap1_led_off: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 0'
+  #ap1_led_on: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 1'
+  #ap1_led_off: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 0'
