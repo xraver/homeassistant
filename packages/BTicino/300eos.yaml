@@ -1,4 +1,29 @@
 ######################################################################
+# BTcino Classe 300eos with Netatmo Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # BTcino Classe 300eos with Netatmo Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.bticino_300eos:
+      customize: &customize
+        package: 'bticino_300eos'
+        version: 1.0.0
+
+    ######################################################################
+    # BTcino Classe 300eos with Netatmo Package - Customizations - Entities
+    ######################################################################
+
+    input_boolean.portone:
+      <<: *customize
+    switch.portone:
+      <<: *customize
+
+######################################################################
 # BTcino Classe 300eos with Netatmo - Input boolean
 ######################################################################
 
@@ -9,7 +34,7 @@ input_boolean:
     icon: mdi:door
 
 ######################################################################
-# BTcino Classe 300eos with Netatmo - Switch
+# BTcino Classe 300eos with Netatmo Package - Switch
 ######################################################################
 
 switch:
@@ -32,7 +57,7 @@ switch:
             entity_id: input_boolean.portone
 
 ######################################################################
-# BTcino Classe 300eos with Netatmo - Lock
+# BTcino Classe 300eos with Netatmo Package - Lock
 ######################################################################
 
 #lock:
@@ -53,7 +78,7 @@ switch:
 #          entity_id: input_boolean.portone
 
 ######################################################################
-# BTcino Classe 300eos with Netatmo - Google Assistant
+# BTcino Classe 300eos with Netatmo Package - Google Assistant
 ######################################################################
 
 google_assistant:
@@ -64,7 +89,7 @@ google_assistant:
       room: Condominio
 
 ######################################################################
-# BTcino Classe 300eos with Netatmo - Amazon Alexa
+# BTcino Classe 300eos with Netatmo Package - Amazon Alexa
 ######################################################################
 
 alexa:
@@ -78,7 +103,7 @@ alexa:
         description: "Routine per l'apertura del portone condominiale"
 
 ######################################################################
-# BTcino Classe 300eos with Netatmo - Logbook
+# BTcino Classe 300eos with Netatmo Package - Logbook
 ######################################################################
 
 #logbook:
@@ -87,7 +112,7 @@ alexa:
 #      - lock.portone
 
 ######################################################################
-# BTcino Classe 300eos with Netatmo - Recorder
+# BTcino Classe 300eos with Netatmo Package - Recorder
 ######################################################################
 
 #recorder:

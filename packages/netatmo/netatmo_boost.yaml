@@ -25,26 +25,6 @@ input_boolean:
     icon: mdi:thermometer-plus
 
 ######################################################################
-# Netatmo Package - Boost Engine Script
-######################################################################
-
-script:
-  ######################################################################
-  # Activating Valve Boost
-  ######################################################################
-  climate_valvola_boost:
-    alias: "Termosifoni: Boost"
-    sequence:
-      - service: climate.set_preset_mode
-        data_template:
-          entity_id: "{{ entity_id }}"
-          preset_mode: boost
-      - delay: 300
-      - service: climate.turn_on
-        data_template:
-          entity_id: "{{ entity_id }}"
-
-######################################################################
 # Netatmo Package - Boost Engine Automations
 ######################################################################
 
@@ -52,8 +32,7 @@ automation:
   ######################################################################
   # Automation: Start Boost
   ######################################################################
-  - id: netatmo_enable_boost
-    alias: "Termosifoni: Attivazione Boost"
+  - alias: "Termosifoni: Attivazione Boost"
     mode: parallel
 
     trigger:
@@ -80,10 +59,14 @@ automation:
         {% endif %}
 
     action:
-      - service: climate.set_preset_mode
+      #- service: climate.set_preset_mode
+      #  data_template:
+      #    entity_id: "{{ entity_id }}"
+      #    preset_mode: boost
+      - service: climate.set_temperature
         data_template:
           entity_id: "{{ entity_id }}"
-          preset_mode: boost
+          temperature: 30
       - delay: 300
       - service: climate.turn_on
         data_template:
@@ -95,8 +78,7 @@ automation:
   ######################################################################
   # Automation: Stop Boost
   ######################################################################
-  - id: netatmo_disable_boost
-    alias: "Termosifoni: Disattivazione Boost"
+  - alias: "Termosifoni: Disattivazione Boost"
     mode: parallel
 
     trigger:

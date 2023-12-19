@@ -1,0 +1,76 @@
+######################################################################
+# Netamo Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Netamo Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.netatmo:
+      customize: &customize
+        package: 'netatmo'
+        version: 1.0.0
+
+    ######################################################################
+    # Netatmo Package - Customizations - Entities
+    ######################################################################
+
+    group.climate:
+      <<: *customize
+    sensor.valvola_cucina_temperature:
+      <<: *customize
+    sensor.valvola_sala_temperature:
+      <<: *customize
+    sensor.valvola_studio_temperature:
+      <<: *customize
+    sensor.valvola_bagno_temperature:
+      <<: *customize
+    sensor.valvola_camera_temperature:
+      <<: *customize
+    sensor.valvola_cucina_state:
+      <<: *customize
+    sensor.valvola_sala_state:
+      <<: *customize
+    sensor.valvola_studio_state:
+      <<: *customize
+    sensor.valvola_bagno_state:
+      <<: *customize
+    sensor.valvola_camera_state:
+      <<: *customize
+    input_boolean.valvola_cucina:
+      <<: *customize
+    input_boolean.valvola_sala:
+      <<: *customize
+    input_boolean.valvola_studio:
+      <<: *customize
+    input_boolean.valvola_bagno:
+      <<: *customize
+    input_boolean.valvola_camera:
+      <<: *customize
+    automation.termosifoni_accensione:
+      <<: *customize
+    automation.termosifoni_spegnimento:
+      <<: *customize
+    input_boolean.boost_valvola_cucina:
+      <<: *customize
+    input_boolean.boost_valvola_sala:
+      <<: *customize
+    input_boolean.boost_valvola_studio:
+      <<: *customize
+    input_boolean.boost_valvola_bagno:
+      <<: *customize
+    input_boolean.boost_valvola_camera:
+      <<: *customize
+    automation.termosifoni_attivazione_boost:
+      <<: *customize
+    automation.termosifoni_disattivazione_boost:
+      <<: *customize
+    script.climate_away_mode_on:
+      <<: *customize
+    script.climate_away_mode_off:
+      <<: *customize
+    automation.termosifoni_sincronizzazione_con_riscaldamentocentralizzato:
+      <<: *customize
