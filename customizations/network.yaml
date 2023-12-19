@@ -14,26 +14,26 @@ sensor.speedtest_scarica:
 ######################################################################
 
 binary_sensor.freebsd_router_stato_della_wan:
-  friendly_name: "pfSense: stato della WAN"
+  friendly_name: "Stato della WAN"
 sensor.freebsd_router_dati_inviati:
-  friendly_name: "pfSense: dati inviati"
+  friendly_name: "Dati inviati"
 sensor.freebsd_router_dati_ricevuti:
-  friendly_name: "pfSense: dati ricevuti"
+  friendly_name: "Dati ricevuti"
 sensor.freebsd_router_ip_esterno:
-  friendly_name: "pfSense: IP Esterno"
+  friendly_name: "IP Esterno"
 sensor.freebsd_router_pacchetti_inviati:
-  friendly_name: "pfSense: pacchetti inviati"
+  friendly_name: "Pacchetti inviati"
 sensor.freebsd_router_pacchetti_ricevuti:
-  friendly_name: "pfSense: pacchetti ricevuti"
+  friendly_name: "Pacchetti ricevuti"
 sensor.freebsd_router_stato_della_wan:
-  friendly_name: "pfSense: stato della WAN"
+  friendly_name: "Stato della WAN"
 sensor.freebsd_router_tempo_di_attivita:
-  friendly_name: "pfSense: tempo di attività"
+  friendly_name: "Tempo di attività"
 sensor.freebsd_router_velocita_di_caricamento:
-  friendly_name: "pfSense: Kbps/s in upload"
+  friendly_name: "Kbps/s in upload"
 sensor.freebsd_router_velocita_di_caricamento_dei_pacchetti:
-  friendly_name: "pfSense: Pacchetti/s upload"
+  friendly_name: "Pacchetti/s upload"
 sensor.freebsd_router_velocita_di_scaricamento:
-  friendly_name: "pfSense: Kbps/s in download"
+  friendly_name: "Kbps/s in download"
 sensor.freebsd_router_velocita_di_scaricamento_dei_pacchetti:
-  friendly_name: "pfSense: Pacchetti/s download"
+  friendly_name: "Pacchetti/s download"

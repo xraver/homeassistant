@@ -5,12 +5,12 @@
 sensor.canon_tr8500_series:
   friendly_name: Canon TR8550
 sensor.canon_tr8500_series_black_bk:
-  friendly_name: Canon TR8550 Nero
+  friendly_name: Livello Nero
 sensor.canon_tr8500_series_black_pgbk:
-  friendly_name: Canon TR8550 Pigmento
+  friendly_name: Livello Pigmento
 sensor.canon_tr8500_series_cyan:
-  friendly_name: Canon TR8550 Ciano
+  friendly_name: Livello Ciano
 sensor.canon_tr8500_series_magenta:
-  friendly_name: Canon TR8550 Magenta
+  friendly_name: Livello Magenta
 sensor.canon_tr8500_series_yellow:
-  friendly_name: Canon TR8550 Giallo
+  friendly_name: Livello Giallo
