@@ -1,4 +1,77 @@
 ######################################################################
+# Zigbee2mqtt Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Zigbee2mqtt Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.zigbee2mqtt:
+      customize: &customize
+        package: 'zigbee2mqtt'
+        version: 1.0.0
+
+    ######################################################################
+    # Zigbee2mqtt Package - Customizations - Entities
+    ######################################################################
+
+    input_select.zigbee2mqtt_log_level:
+      <<: *customize
+    input_number.zigbee2mqtt_join_minutes:
+      <<: *customize
+    input_text.zigbee2mqtt_old_name:
+      <<: *customize
+    input_text.zigbee2mqtt_new_name:
+      <<: *customize
+    input_text.zigbee2mqtt_remove:
+      <<: *customize
+    input_boolean.zigbee2mqtt_force_remove:
+      <<: *customize
+    script.zigbee2mqtt_restart:
+      <<: *customize
+    script.zigbee2mqtt_rename:
+      <<: *customize
+    script.zigbee2mqtt_remove:
+      <<: *customize
+    timer.zigbee_permit_join:
+      <<: *customize
+    sensor.zigbee2mqtt_stato_bridge:
+      <<: *customize
+    sensor.zigbee2mqtt_versione_bridge:
+      <<: *customize
+    sensor.zigbee2mqtt_versione_coordinator:
+      <<: *customize
+    sensor.zigbee2mqtt_stato_permit_join:
+      <<: *customize
+    sensor.zigbee2mqtt_stato_log_level:
+      <<: *customize
+    sensor.zigbee2mqtt_canale:
+      <<: *customize
+    sensor.zigbee2mqtt_panid:
+      <<: *customize
+    sensor.zigbee2mqtt_networkmap:
+      <<: *customize
+    switch.zigbee2mqtt_abilita_join:
+      <<: *customize
+    shell_command.zigbee2mqtt_restart:
+      <<: *customize
+    automation.zigbee2mqtt_cambia_log_level:
+      <<: *customize
+    automation.zigbee2mqtt_abilita_join:
+      <<: *customize
+    automation.zigbee2mqtt_disabilita_join:
+      <<: *customize
+    automation.zigbee2mqtt_device_aggiunto_alla_rete_zigbee2mqtt:
+      <<: *customize
+    automation.zigbee2mqtt_startup_automation:
+      <<: *customize
+    automation.zigbee2mqtt_restart_automation:
+      <<: *customize
+
+######################################################################
 # Zigbee2mqtt Package - Input select
 ######################################################################
 
@@ -125,6 +198,7 @@ mqtt:
     ######################################################################
     - name: "Zigbee2MQTT: Stato Bridge"
       state_topic: "zigbee2mqtt/bridge/state"
+      value_template: "{{ value_json.state }}"
       icon: mdi:router-wireless
 
     ######################################################################
@@ -229,8 +303,7 @@ automation:
   ######################################################################
   # Automation to change log level
   ######################################################################
-  - id: zigbee2mqtt_change_log_level
-    alias: "Zigbee2MQTT: Cambia Log Level"
+  - alias: "Zigbee2MQTT: Cambia Log Level"
     trigger:
       platform: state
       entity_id: input_select.zigbee2mqtt_log_level
@@ -243,9 +316,7 @@ automation:
   ######################################################################
   # Automation to start timer when enable join is turned on
   ######################################################################
-  - id: zigbee2mqtt_join_enabled
-    alias: "Zigbee2MQTT: Abilita Join"
-    trigger:
+  - trigger:
       platform: state
       entity_id: switch.zigbee2mqtt_abilita_join
       to: "on"
@@ -258,8 +329,7 @@ automation:
   ######################################################################
   # Automation to stop timer when switch turned off and turn off switch when timer finished
   ######################################################################
-  - id: zigbee2mqtt_join_disabled
-    alias: "Zigbee2MQTT: Disabilita Join"
+  - alias: "Zigbee2MQTT: Disabilita Join"
     trigger:
       - platform: event
         event_type: timer.finished
@@ -278,8 +348,7 @@ automation:
   ######################################################################
   # Automation to notify when a device joined zigbee2mqtt network
   ######################################################################
-  - id: "zigbee2mqtt_notification_on_successfull_interview"
-    alias: "Zigbee2MQTT: Device aggiunto alla rete Zigbee2mqtt"
+  - alias: "Zigbee2MQTT: Device aggiunto alla rete Zigbee2mqtt"
     trigger:
       platform: mqtt
       topic: 'zigbee2mqtt/bridge/event'
@@ -298,8 +367,7 @@ automation:
   ######################################################################
   # Automation to restart zigbee2mqtt to refresh sensor state
   ######################################################################
-  - id: zigbee2mqtt_startup_automation
-    alias: "Zigbee2MQTT: Startup Automation"
+  - alias: "Zigbee2MQTT: Startup Automation"
     trigger:
       - platform: homeassistant
         event: start
@@ -309,8 +377,7 @@ automation:
   ######################################################################
   # Automation to restart zigbee2mqtt in case of bridge offline for 1m
   ######################################################################
-  - id: zigbee2mqtt_restart_automation
-    alias: "Zigbee2MQTT: Restart Automation"
+  - alias: "Zigbee2MQTT: Restart Automation"
     trigger:
       - platform: state
         entity_id: sensor.zigbee2mqtt_stato_bridge
