@@ -6,23 +6,23 @@
 binary_sensor.porta_casa_contact:
   friendly_name: 'Porta Casa'
 sensor.porta_casa_battery:
-  friendly_name: 'Porta Casa: Batteria'
+  friendly_name: 'Batteria'
 sensor.porta_casa_linkquality:
-  friendly_name: 'Porta Casa: Link'
+  friendly_name: 'Link'
 sensor.porta_casa_voltage:
-  friendly_name: 'Porta Casa: Tensione'
+  friendly_name: 'Tensione'
 
 # Spare Door Sensor
 binary_sensor.spare_door_contact:
   friendly_name: 'Spare Door'
 sensor.spare_door_battery:
-  friendly_name: 'Spare Door: Batteria'
+  friendly_name: 'Batteria'
 sensor.spare_door_device_temperature:
-  friendly_name: 'Spare Door: Temperatura'
+  friendly_name: 'Temperatura'
 sensor.spare_door_linkquality:
-  friendly_name: 'Spare Door: Link'
+  friendly_name: 'Link'
 sensor.spare_door_voltage:
-  friendly_name: 'Spare Door: Tensione'
+  friendly_name: 'Tensione'
 
 # Front Balcony Temperature Sensor
 sensor.temperatura_balcone_temperature:
@@ -30,11 +30,11 @@ sensor.temperatura_balcone_temperature:
 sensor.temperatura_balcone_humidity:
   friendly_name: 'Umidità Balcone'
 sensor.temperatura_balcone_battery:
-  friendly_name: 'Temperatura Balcone: Batteria'
+  friendly_name: 'Batteria'
 sensor.temperatura_balcone_linkquality:
-  friendly_name: 'Temperatura Balcone: Link'
+  friendly_name: 'Link'
 sensor.temperatura_balcone_voltage:
-  friendly_name: 'Temperatura Balcone: Tensione'
+  friendly_name: 'Tensione'
 
 # Rear Balcony Temperature Sensor
 sensor.temperatura_veranda_temperature:
@@ -42,64 +42,64 @@ sensor.temperatura_veranda_temperature:
 sensor.temperatura_veranda_humidity:
   friendly_name: 'Umidità Veranda'
 sensor.temperatura_veranda_battery:
-  friendly_name: 'Temperatura Veranda: Batteria'
+  friendly_name: 'Batteria'
 sensor.temperatura_veranda_linkquality:
-  friendly_name: 'Temperatura Veranda: Link'
+  friendly_name: 'Link'
 sensor.temperatura_veranda_voltage:
-  friendly_name: 'Spare Door: Tensione'
+  friendly_name: 'Tensione'
 
 # Wireless Switch
 sensor.wireless_button_battery:
-  friendly_name: 'Wireless Switch: Batteria'
+  friendly_name: 'Batteria'
 sensor.wireless_button_linkquality:
-  friendly_name: 'Wireless Switch: Link'
+  friendly_name: 'Link'
 sensor.wireless_button_voltage:
-  friendly_name: 'Wireless Switch: Tensione'
+  friendly_name: 'Tensione'
 
 # Sensore Acqua 1
 binary_sensor.sensore_acqua_1_water_leak:
   friendly_name: "Sensore Acqua 1"
 sensor.sensore_acqua_1_power_outage_count:
-  friendly_name: "Sensore Acqua 1: Guasto Alimentazione"
+  friendly_name: "Guasto Alimentazione"
 sensor.sensore_acqua_1_battery:
-  friendly_name: "Sensore Acqua 1: Batteria"
+  friendly_name: "Batteria"
 binary_sensor.sensore_acqua_1_battery_low:
-  friendly_name: "Sensore Acqua 1: Batteria scarica"
+  friendly_name: "Batteria scarica"
 sensor.sensore_acqua_1_device_temperature:
-  friendly_name: "Sensore Acqua 1: Temperatura"
+  friendly_name: "Temperatura"
 sensor.sensore_acqua_1_linkquality:
-  friendly_name: "Sensore Acqua 1: Link"
+  friendly_name: "Link"
 sensor.sensore_acqua_1_voltage:
-  friendly_name: "Sensore Acqua 1: Tensione"
+  friendly_name: "Tensione"
 
 # Sensore Acqua 2
 binary_sensor.sensore_acqua_2_water_leak:
   friendly_name: "Sensore Acqua 2"
 sensor.sensore_acqua_2_power_outage_count:
-  friendly_name: "Sensore Acqua 2: Guasto Alimentazione"
+  friendly_name: "Guasto Alimentazione"
 sensor.sensore_acqua_2_battery:
-  friendly_name: "Sensore Acqua 2: Batteria"
+  friendly_name: "Batteria"
 binary_sensor.sensore_acqua_2_battery_low:
-  friendly_name: "Sensore Acqua 2: Batteria scarica"
+  friendly_name: "Batteria scarica"
 sensor.sensore_acqua_2_device_temperature:
-  friendly_name: "Sensore Acqua 2: Temperatura"
+  friendly_name: "Temperatura"
 sensor.sensore_acqua_2_linkquality:
-  friendly_name: "Sensore Acqua 2: Link"
+  friendly_name: "Link"
 sensor.sensore_acqua_2_voltage:
-  friendly_name: "Sensore Acqua 2: Tensione"
+  friendly_name: "Tensione"
 
 # Sensore Acqua 3
 binary_sensor.sensore_acqua_3_water_leak:
   friendly_name: "Sensore Acqua 3"
 sensor.sensore_acqua_3_power_outage_count:
-  friendly_name: "Sensore Acqua 3: Guasto Alimentazione"
+  friendly_name: "Guasto Alimentazione"
 sensor.sensore_acqua_3_battery:
-  friendly_name: "Sensore Acqua 3: Batteria"
+  friendly_name: "Batteria"
 binary_sensor.sensore_acqua_3_battery_low:
-  friendly_name: "Sensore Acqua 3: Batteria scarica"
+  friendly_name: "Batteria scarica"
 sensor.sensore_acqua_3_device_temperature:
-  friendly_name: "Sensore Acqua 3: Temperatura"
+  friendly_name: "Temperatura"
 sensor.sensore_acqua_3_linkquality:
-  friendly_name: "Sensore Acqua 3: Link"
+  friendly_name: "Link"
 sensor.sensore_acqua_3_voltage:
-  friendly_name: "Sensore Acqua 3: Tensione"
+  friendly_name: "Tensione"
