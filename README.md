@@ -44,6 +44,7 @@ The following integration are part of HACS system. Install HACS first:
 * [button-card](https://github.com/custom-cards/button-card)
 * [card-mod](https://github.com/thomasloven/lovelace-card-mod)
 * [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
+* [homeassistant_electrolux_status](https://github.com/mauro-midolo/homeassistant_electrolux_status)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
 * [Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)
 * [hui-element](https://github.com/thomasloven/lovelace-hui-element)
@@ -80,6 +81,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * Certificate Expiry
   * CO2 Signal
   * DNS IP
+  * Electrolux (disabling WiFi sensors)
   * Google Calendar
   * Google Cast
   * HACS

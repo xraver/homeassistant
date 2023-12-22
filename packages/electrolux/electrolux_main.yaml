@@ -1,0 +1,15 @@
+######################################################################
+# Electrolux Package - Main
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Electrolux Package - Main - General Package Settings
+    ######################################################################
+
+    package.netatmo:
+      customize: &customize
+        package: 'electrolux'
+        version: 1.0.0

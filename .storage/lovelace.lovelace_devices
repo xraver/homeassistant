@@ -3594,8 +3594,7 @@
                           "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
                           "image": "/local/images/devices/BTicino/BTI_NT4411C.png",
                           "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly1.giorgioravera.it"
+                            "action": "none"
                           }
                         },
                         {
@@ -3674,8 +3673,7 @@
                           "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
                           "image": "/local/images/devices/BTicino/BTI_NT4027C.png",
                           "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly1.giorgioravera.it"
+                            "action": "none"
                           }
                         },
                         {
