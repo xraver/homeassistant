@@ -3702,13 +3702,13 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
                               "entity": "switch.0x000474000159053e_led_in_dark",
-                              "icon": "mdi:lightbulb"
+                              "icon": "mdi:led-outline"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
                               "entity": "switch.0x000474000159053e_led_if_on",
-                              "icon": "mdi:lightbulb"
+                              "icon": "mdi:led-outline"
                             }
                           ]
                         }
