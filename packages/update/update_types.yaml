@@ -13,13 +13,13 @@ input_boolean:
   update_hacs:
     name: Aggiornamenti HACS
     initial: off
-    icon: mdi:cellphone-arrow-down
+    icon: mdi:package-up
 
   # Shelly
   update_shelly:
     name: Aggiornamento Shelly
     initial: off
-    icon: mdi:cellphone-arrow-down
+    icon: mdi:package-up
 
 ######################################################################
 # Update Package - Types - Group
@@ -32,7 +32,7 @@ group:
   ######################################################################
   update:
     name: Aggiornamenti Disponibili
-    icon: mdi:cellphone-arrow-down
+    icon: mdi:package-up
     entities:
       #- input_boolean.update_homeassistant
       - input_boolean.update_hacs
