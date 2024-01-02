@@ -30,8 +30,6 @@ git_repos/
 
 # Google Integrations
 .google_maps_location_sharing.cookies.*
-.google.token
-google_calendars.yaml
 
 # VS Code
 .vscode
