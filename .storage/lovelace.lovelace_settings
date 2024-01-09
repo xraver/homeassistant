@@ -114,35 +114,32 @@
             {
               "entities": [
                 {
-                  "entity": "sensor.zigbee2mqtt_stato_bridge"
+                  "entity": "binary_sensor.zigbee2mqtt_bridge_connection_state"
                 },
                 {
-                  "entity": "sensor.zigbee2mqtt_stato_permit_join"
+                  "entity": "sensor.zigbee2mqtt_bridge_version"
                 },
                 {
-                  "entity": "sensor.zigbee2mqtt_stato_log_level"
+                  "entity": "sensor.zigbee2mqtt_bridge_coordinator_type"
                 },
                 {
-                  "entity": "sensor.zigbee2mqtt_versione_bridge"
+                  "entity": "sensor.zigbee2mqtt_bridge_coordinator_version"
                 },
                 {
-                  "entity": "sensor.zigbee2mqtt_versione_coordinator"
+                  "entity": "sensor.zigbee2mqtt_bridge_channel"
                 },
                 {
-                  "entity": "sensor.zigbee2mqtt_canale"
-                },
-                {
-                  "entity": "sensor.zigbee2mqtt_panid"
+                  "entity": "sensor.zigbee2mqtt_bridge_panid"
                 }
               ],
               "show_header_toggle": false,
-              "title": "Stato Sistema Zigbee2mqtt",
+              "title": "Stato Sistema Zigbee2MQTT",
               "type": "entities"
             },
             {
               "entities": [
                 {
-                  "entity": "script.zigbee2mqtt_restart"
+                  "entity": "button.zigbee2mqtt_bridge_restart"
                 },
                 {
                   "type": "divider",
@@ -155,10 +152,13 @@
                   }
                 },
                 {
-                  "entity": "switch.zigbee2mqtt_abilita_join"
+                  "entity": "switch.zigbee2mqtt_bridge_permit_join"
                 },
                 {
                   "entity": "timer.zigbee_permit_join"
+                },
+                {
+                  "entity": "sensor.zigbee2mqtt_bridge_permit_join_timeout"
                 },
                 {
                   "entity": "input_number.zigbee2mqtt_join_minutes"
@@ -212,7 +212,7 @@
                   }
                 },
                 {
-                  "entity": "input_select.zigbee2mqtt_log_level"
+                  "entity": "select.zigbee2mqtt_bridge_log_level"
                 }
               ],
               "show_header_toggle": false,
@@ -266,7 +266,7 @@
                 {
                   "type": "custom:zigbee2mqtt-networkmap",
                   "title": "Zigbee2MQTT Network Map",
-                  "entity": "sensor.zigbee2mqtt_networkmap",
+                  "entity": "sensor.zigbee2mqtt_bridge_network_map",
                   "mqtt_base_topic": "zigbee2mqtt",
                   "force": 3000,
                   "node_size": 16,

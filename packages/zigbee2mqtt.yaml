@@ -12,53 +12,68 @@ homeassistant:
     package.zigbee2mqtt:
       customize: &customize
         package: 'zigbee2mqtt'
-        version: 1.0.0
+        version: 1.1.0
 
     ######################################################################
     # Zigbee2mqtt Package - Customizations - Entities
     ######################################################################
 
-    input_select.zigbee2mqtt_log_level:
-      <<: *customize
+    binary_sensor.zigbee2mqtt_bridge_connection_state:
+      friendly_name: "Stato bridge"
+    binary_sensor.zigbee2mqtt_bridge_restart_required:
+      friendly_name: "Richiesto riavvio"
+    button.zigbee2mqtt_bridge_restart:
+      friendly_name: "Riavvia bridge"
     input_number.zigbee2mqtt_join_minutes:
+      friendly_name: "Tempo di join"
       <<: *customize
     input_text.zigbee2mqtt_old_name:
+      friendly_name: "Dispositivo da rinominare"
       <<: *customize
     input_text.zigbee2mqtt_new_name:
+      friendly_name: "Nome nuovo del dispositivo"
       <<: *customize
     input_text.zigbee2mqtt_remove:
+      friendly_name: "Dispositivo da rimuovere"
       <<: *customize
     input_boolean.zigbee2mqtt_force_remove:
+      friendly_name: "Rimozione forzata"
       <<: *customize
-    script.zigbee2mqtt_restart:
-      <<: *customize
+    select.zigbee2mqtt_bridge_log_level:
+      friendly_name: "Log level"
     script.zigbee2mqtt_rename:
+      friendly_name: "Rinomina dispositivo"
       <<: *customize
     script.zigbee2mqtt_remove:
+      friendly_name: "Rimuovi dispositivo"
       <<: *customize
-    timer.zigbee_permit_join:
+    sensor.zigbee2mqtt_bridge_channel:
+      friendly_name: "Canale"
       <<: *customize
-    sensor.zigbee2mqtt_stato_bridge:
+    sensor.zigbee2mqtt_bridge_coordinator_type:
+      friendly_name: "Tipo Coordinator"
       <<: *customize
-    sensor.zigbee2mqtt_versione_bridge:
+    sensor.zigbee2mqtt_bridge_coordinator_version:
+      friendly_name: "Versione Coordinator"
+    sensor.zigbee2mqtt_bridge_network_map:
+      friendly_name: "Mappa della rete Zigbee"
+    sensor.zigbee2mqtt_bridge_panid:
+      friendly_name: "PanID"
       <<: *customize
-    sensor.zigbee2mqtt_versione_coordinator:
-      <<: *customize
-    sensor.zigbee2mqtt_stato_permit_join:
-      <<: *customize
-    sensor.zigbee2mqtt_stato_log_level:
-      <<: *customize
-    sensor.zigbee2mqtt_canale:
-      <<: *customize
-    sensor.zigbee2mqtt_panid:
-      <<: *customize
-    sensor.zigbee2mqtt_networkmap:
-      <<: *customize
-    switch.zigbee2mqtt_abilita_join:
-      <<: *customize
+    #sensor.zigbee2mqtt_bridge_permit_join:
+    #  friendly_name: "Stato permesso join"
+    #  <<: *customize
+    sensor.zigbee2mqtt_bridge_permit_join_timeout:
+      friendly_name: "Tempo rimasto per il join (bridge)"
+    sensor.zigbee2mqtt_bridge_version:
+      friendly_name: "Versione bridge"
     shell_command.zigbee2mqtt_restart:
+      friendly_name: "Riavvia bridge"
       <<: *customize
-    automation.zigbee2mqtt_cambia_log_level:
+    switch.zigbee2mqtt_bridge_permit_join:
+      friendly_name: "Permetti join"
+    timer.zigbee_permit_join:
+      friendly_name: "Tempo rimasto per il join (hass)"
       <<: *customize
     automation.zigbee2mqtt_abilita_join:
       <<: *customize
@@ -66,26 +81,8 @@ homeassistant:
       <<: *customize
     automation.zigbee2mqtt_device_aggiunto_alla_rete_zigbee2mqtt:
       <<: *customize
-    automation.zigbee2mqtt_startup_automation:
-      <<: *customize
     automation.zigbee2mqtt_restart_automation:
       <<: *customize
-
-######################################################################
-# Zigbee2mqtt Package - Input select
-######################################################################
-
-input_select:
-  # Zigbee2mqtt log level
-  zigbee2mqtt_log_level:
-    name: "Zigbee2MQTT: Log Level"
-    options:
-      - debug
-      - info
-      - warn
-      - error
-    initial: info
-    icon: mdi:format-list-bulleted
 
 ######################################################################
 # Zigbee2mqtt Package - Input Number
@@ -133,18 +130,6 @@ input_boolean:
 ######################################################################
 
 script:
-  ######################################################################
-  # Restart Bridge
-  ######################################################################
-  zigbee2mqtt_restart:
-    alias: "Zigbee2MQTT: Riavvia Bridge"
-    sequence:
-      - service: shell_command.zigbee2mqtt_restart
-        data:
-          docker_host: !secret docker_host
-          docker_username: !secret docker_username
-    icon: mdi:restart
-
   ######################################################################
   # Rename Device
   ######################################################################
@@ -194,57 +179,25 @@ timer:
 mqtt:
   sensor:
     ######################################################################
-    # MQTT Sensor for monitoring the bridge state
-    ######################################################################
-    - name: "Zigbee2MQTT: Stato Bridge"
-      state_topic: "zigbee2mqtt/bridge/state"
-      value_template: "{{ value_json.state }}"
-      icon: mdi:router-wireless
-
-    ######################################################################
-    # MQTT Sensor for Showing the Zigbee2MQTT Version
-    ######################################################################
-    - name: "Zigbee2MQTT: Versione Bridge"
-      state_topic: "zigbee2mqtt/bridge/info"
-      value_template: "{{ value_json.version }}"
-      icon: mdi:zigbee
-
-    ######################################################################
     # MQTT Sensor for Showing the Coordinator Type
     ######################################################################
-    #- name: "Zigbee2MQTT: Tipo Coordinator"
-    #  state_topic: "zigbee2mqtt/bridge/info"
-    #  value_template: "{{ value_json.coordinator.type }}"
-    #  icon: mdi:chip
-
-    ######################################################################
-    # MQTT Sensor for Showing the Coordinator Version
-    ######################################################################
-    - name: "Zigbee2MQTT: Versione Coordinator"
+    - name: "Zigbee2MQTT Bridge Coordinator Type"
       state_topic: "zigbee2mqtt/bridge/info"
-      value_template: "{{ value_json.coordinator.meta.revision }}"
+      value_template: "{{ value_json.coordinator.type }}"
       icon: mdi:chip
 
     ######################################################################
     # MQTT Sensor for monitoring the permit_join state
     ######################################################################
-    - name: "Zigbee2MQTT: Stato permit join"
-      state_topic: "zigbee2mqtt/bridge/info"
-      value_template: "{{ value_json.permit_join }}"
-      icon: mdi:link-lock
-
-    ######################################################################
-    # MQTT Sensor for monitoring the log_level state
-    ######################################################################
-    - name: "Zigbee2MQTT: Stato log level"
-      state_topic: "zigbee2mqtt/bridge/info"
-      value_template: "{{ value_json.log_level }}"
-      icon: mdi:file-document-outline
+    #- name: "Zigbee2MQTT Bridge Permit Join"
+    #  state_topic: "zigbee2mqtt/bridge/info"
+    #  value_template: "{{ value_json.permit_join }}"
+    #  icon: mdi:link-lock
 
     ######################################################################
     # MQTT Sensor for Showing the Channel
     ######################################################################
-    - name: "Zigbee2MQTT: Canale"
+    - name: "Zigbee2MQTT Bridge Channel"
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: "{{ value_json.network.channel }}"
       icon: mdi:access-point-network
@@ -252,41 +205,10 @@ mqtt:
     ######################################################################
     # MQTT Sensor for Showing the PanID
     ######################################################################
-    - name: "Zigbee2MQTT: PanID"
+    - name: "Zigbee2MQTT Bridge PanID"
       state_topic: "zigbee2mqtt/bridge/info"
       value_template: "{{ value_json.network.pan_id }}"
       icon: mdi:lan
-
-    ######################################################################
-    # MQTT Sensor for Showing the Extended PanID
-    ######################################################################
-    #- name: "Zigbee2mqtt: Extended PanID"
-    #  state_topic: "zigbee2mqtt/bridge/info"
-    #  value_template: "{{ value_json.network.extended_pan_id }}"
-    #  icon: mdi:lan
-
-    ######################################################################
-    # Zigbee2mqtt Networkmap
-    ######################################################################
-    - name: Zigbee2MQTT Networkmap
-      state_topic: zigbee2mqtt/bridge/response/networkmap
-      value_template: >-
-        {{ now().strftime('%Y-%m-%d %H:%M:%S') }}
-      json_attributes_topic: zigbee2mqtt/bridge/response/networkmap
-      json_attributes_template: "{{ value_json.data.value | tojson }}"
-
-  ######################################################################
-  # Zigbee2mqtt Package - Switch
-  ######################################################################
-  switch:
-    # Switch for enabling joining
-    - name: "Zigbee2MQTT: Abilita join"
-      state_topic: "zigbee2mqtt/bridge/info"
-      value_template: '{{ value_json.permit_join | lower }}'
-      command_topic: "zigbee2mqtt/bridge/request/permit_join"
-      payload_on: "true"
-      payload_off: "false"
-      icon: mdi:link-lock
 
 ######################################################################
 # Zigbee2mqtt Package - Shell Command
@@ -301,24 +223,12 @@ shell_command:
 
 automation:
   ######################################################################
-  # Automation to change log level
-  ######################################################################
-  - alias: "Zigbee2MQTT: Cambia Log Level"
-    trigger:
-      platform: state
-      entity_id: input_select.zigbee2mqtt_log_level
-    action:
-      - service: mqtt.publish
-        data:
-          payload_template: "{{ states('input_select.zigbee2mqtt_log_level') }}"
-          topic: zigbee2mqtt/bridge/request/config/log_level
-
-  ######################################################################
   # Automation to start timer when enable join is turned on
   ######################################################################
-  - trigger:
+  - alias: "Zigbee2MQTT: Abilita Join"
+    trigger:
       platform: state
-      entity_id: switch.zigbee2mqtt_abilita_join
+      entity_id: switch.zigbee2mqtt_bridge_permit_join
       to: "on"
     action:
       service: timer.start
@@ -336,14 +246,14 @@ automation:
         event_data:
           entity_id: timer.zigbee_permit_join
       - platform: state
-        entity_id: switch.zigbee2mqtt_abilita_join
+        entity_id: switch.zigbee2mqtt_bridge_permit_join
         to: "off"
     action:
       - service: timer.cancel
         data:
           entity_id: timer.zigbee_permit_join
       - service: switch.turn_off
-        entity_id: switch.zigbee2mqtt_abilita_join
+        entity_id: switch.zigbee2mqtt_bridge_permit_join
 
   ######################################################################
   # Automation to notify when a device joined zigbee2mqtt network
@@ -365,30 +275,21 @@ automation:
                     Description: {{trigger.payload_json.data.definition.description}}"
 
   ######################################################################
-  # Automation to restart zigbee2mqtt to refresh sensor state
-  ######################################################################
-  - alias: "Zigbee2MQTT: Startup Automation"
-    trigger:
-      - platform: homeassistant
-        event: start
-    action:
-      - service: script.zigbee2mqtt_restart
-
-  ######################################################################
-  # Automation to restart zigbee2mqtt in case of bridge offline for 1m
+  # Automation to restart zigbee2mqtt (startup or bridge offline for 1m)
   ######################################################################
   - alias: "Zigbee2MQTT: Restart Automation"
     trigger:
+      - platform: homeassistant
+        event: start
       - platform: state
-        entity_id: sensor.zigbee2mqtt_stato_bridge
-        to: "offline"
+        entity_id: binary_sensor.zigbee2mqtt_bridge_connection_state
+        to: "off"
         for: "00:01:00"
     action:
-      - service: script.zigbee2mqtt_restart
-      - service: script.notify_text
+      - service: shell_command.zigbee2mqtt_restart
         data:
-          title: "Restart Zigbee2mqtt"
-          message: "Zigbee2mqtt bridge offline: force restart"
+          docker_host: !secret docker_host
+          docker_username: !secret docker_username
 
 ######################################################################
 # Zigbee2mqtt Package - Logbook
@@ -397,16 +298,15 @@ automation:
 logbook:
   exclude:
     entities:
-      - sensor.zigbee2mqtt_stato_bridge
-      - sensor.zigbee2mqtt_stato_permit_join
-      - sensor.zigbee2mqtt_stato_log_level
-      - sensor.zigbee2mqtt_versione_bridge
-      - sensor.zigbee2mqtt_versione_coordinator
-      - sensor.zigbee2mqtt_tipo_coordinator
-      - sensor.zigbee2mqtt_canale
-      - sensor.zigbee2mqtt_panid
-      - sensor.zigbee2mqtt_extended_panid
-      - sensor.zigbee2mqtt_networkmap
+      - binary_sensor.zigbee2mqtt_bridge_connection_state
+      #- sensor.zigbee2mqtt_bridge_permit_join
+      - select.zigbee2mqtt_bridge_log_level
+      - sensor.zigbee2mqtt_bridge_version
+      - sensor.zigbee2mqtt_bridge_coordinator_version
+      - sensor.zigbee2mqtt_bridge_coordinator_type
+      - sensor.zigbee2mqtt_bridge_channel
+      - sensor.zigbee2mqtt_bridge_panid
+      - sensor.zigbee2mqtt_bridge_network_map
       - timer.zigbee_permit_join
 
 ######################################################################
@@ -416,14 +316,13 @@ logbook:
 recorder:
   exclude:
     entities:
-      - sensor.zigbee2mqtt_stato_bridge
-      - sensor.zigbee2mqtt_stato_permit_join
-      - sensor.zigbee2mqtt_stato_log_level
-      - sensor.zigbee2mqtt_versione_bridge
-      - sensor.zigbee2mqtt_versione_coordinator
-      - sensor.zigbee2mqtt_tipo_coordinator
-      - sensor.zigbee2mqtt_canale
-      - sensor.zigbee2mqtt_panid
-      - sensor.zigbee2mqtt_extended_panid
-      - sensor.zigbee2mqtt_networkmap
+      - binary_sensor.zigbee2mqtt_bridge_connection_state
+      #- sensor.zigbee2mqtt_bridge_permit_join
+      - select.zigbee2mqtt_bridge_log_level
+      - sensor.zigbee2mqtt_bridge_version
+      - sensor.zigbee2mqtt_bridge_coordinator_version
+      - sensor.zigbee2mqtt_bridge_coordinator_type
+      - sensor.zigbee2mqtt_bridge_channel
+      - sensor.zigbee2mqtt_bridge_panid
+      - sensor.zigbee2mqtt_bridge_network_map
       - timer.zigbee_permit_join
