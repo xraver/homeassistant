@@ -27,7 +27,7 @@ logbook:
     - sensor.ff590mr_car
     - sensor.ff590mr_distance_reset
     - sensor.ff590mr_distance_start
-    #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_fuel_level
     - sensor.ff590mr_geofencing_violation
     - sensor.ff590mr_ignition_state
     - sensor.ff590mr_liquid_consumption_reset
@@ -70,7 +70,7 @@ recorder:
     - sensor.ff590mr_car
     - sensor.ff590mr_distance_reset
     - sensor.ff590mr_distance_start
-    #- sensor.ff590mr_fuel_level
+    - sensor.ff590mr_fuel_level
     - sensor.ff590mr_geofencing_violation
     - sensor.ff590mr_ignition_state
     - sensor.ff590mr_liquid_consumption_reset
