@@ -6,15 +6,42 @@ name: Casa Ravera-Testa
 #port: 51827
 #mode: bridge
 filter:
-  include_domains:
-    - climate
-    - cover
-    - light
-    - sensor
-    - switch
-  exclude_entities:
-    - cover.tapparelle_casa
-    - light.luci_casa
-    - light.luci_bagno
-    - light.luci_sala
-    - switch.zigbee2mqtt_abilita_join
+  include_entities:
+    # Covers
+    - cover.tapparella_cucina
+    - cover.tapparella_sala
+    - cover.tapparella_studio
+    - cover.tapparella_camera
+    # Lights
+    - light.luce_corridoio
+    - light.luce_cucina
+    - light.luce_sala
+    - light.luce_divano
+    - light.luce_bagno
+    - light.luce_specchio
+    - light.luce_studio
+    - light.luce_camera
+    - light.luce_dispensa
+    - light.luce_balcone
+    - light.luce_veranda
+    # Sensors
+    - sensor.temperatura_balcone_temperature
+    - sensor.temperatura_veranda_temperature
+    # TV
+    - media_player.sony_kd_55xf8596
+    - media_player.tv_camera
+    # Home Assistant Controls
+    - input_boolean.home_mode_away
+    - script.homeassistant_restart
+  #include_domains:
+  #  - climate
+  #  - cover
+  #  - light
+  #  - sensor
+  #  - switch
+  #exclude_entities:
+  #  - cover.tapparelle_casa
+  #  - light.luci_casa
+  #  - light.luci_bagno
+  #  - light.luci_sala
+  #  - switch.zigbee2mqtt_bridge_permit_join
