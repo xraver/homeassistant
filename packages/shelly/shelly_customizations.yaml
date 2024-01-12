@@ -27,7 +27,7 @@ homeassistant:
     button.tapparella_cucina_reboot:
       friendly_name: Riavvia Dispositivo
 
-    # Shelly 2 - Tapparella Sala (shellyswitch25_6919bd)
+    # Shelly 2 - Tapparella Sala (shellyswitch25_7457d8)
     sensor.tapparella_sala_energy:
       friendly_name: Energia
     sensor.tapparella_sala_power:
