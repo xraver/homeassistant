@@ -40,16 +40,27 @@ exclude:
     - sensor.spare_door_battery
     - sensor.spare_door_linkquality
     - sensor.spare_door_voltage
-    - sensor.wireless_switch_battery
-    - sensor.wireless_switch_click
-    - sensor.wireless_switch_linkquality
-    - sensor.wireless_switch_voltage
+    - sensor.wireless_button_battery
+    - sensor.wireless_button_click
+    - sensor.wireless_button_linkquality
+    - sensor.wireless_button_voltage
     - sensor.temperatura_balcone_battery
     - sensor.temperatura_balcone_linkquality
     - sensor.temperatura_balcone_voltage
     - sensor.temperatura_veranda_battery
     - sensor.temperatura_veranda_linkquality
     - sensor.temperatura_veranda_voltage
+    - binary_sensor.sensore_acqua_1_battery_low
+    - sensor.sensore_acqua_1_battery
+    - sensor.sensore_acqua_1_device_temperature
+    - binary_sensor.sensore_acqua_2_battery_low
+    - sensor.sensore_acqua_2_battery
+    - sensor.sensore_acqua_2_device_temperature
+    - binary_sensor.sensore_acqua_3_battery_low
+    - sensor.sensore_acqua_3_battery
+    - sensoor.sensore_acqua_3_device_temperature
+    - select.luce_dispensa_power_on_behavior
+    - select.luce_veranda_power_on_behavior
     # pfSense
     - binary_sensor.freebsd_router_stato_della_wan
     - sensor.freebsd_router_dati_inviati
@@ -75,14 +86,15 @@ exclude:
     - sensor.canon_tr8500_series_magenta
     - sensor.canon_tr8500_series_yellow
     # CO2
-    - sensor.co2_signal_co2_intensity
-    #- sensor.co2_signal_grid_fossil_fuel_percentage
+    - sensor.electricity_maps_intensita_della_co2
+    #- sensor.electricity_maps_percentuale_della_rete_di_combustibili_fossili
   entity_globs:
     - sensor.docker_*
   domains:
     - automation
     - button
     - calendar
+    - event
     - group
     - input_boolean
     - input_datetime
@@ -91,3 +103,4 @@ exclude:
     - input_text
     - script
     - switch
+    - update
