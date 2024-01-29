@@ -12,7 +12,7 @@ homeassistant:
     package.netatmo:
       customize: &customize
         package: 'mercedes'
-        version: 1.0.0
+        version: 1.1.0
 
     ######################################################################
     # Mercedes Package - Main - Entities

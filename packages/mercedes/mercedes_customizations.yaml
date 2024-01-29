@@ -118,7 +118,7 @@ homeassistant:
     sensor.ff590mr_range_electric:
       friendly_name: Gamma elettrica
     sensor.ff590mr_charging_power:
-     friendly_name: Potenza di caricamento
+      friendly_name: Potenza di caricamento
     sensor.ff590mr_electric_consumption_start:
       friendly_name: Consumi elettrici da start
     sensor.ff590mr_electric_consumption_reset:
