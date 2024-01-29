@@ -4,41 +4,46 @@
 
 homeassistant:
   customize:
-    binary_sensor.electrolux_forno_apl_status:
-      friendly_name: "Stato Forno"
-    binary_sensor.electrolux_forno_ov1_doorstate:
+    #binary_sensor.electrolux_forno_apl_status:
+    #  friendly_name: "Stato Forno"
+    binary_sensor.electrolux_forno_doorstate:
       friendly_name: "Porta Forno"
-    button.electrolux_forno_ov1_executecommand_0:
+    button.electrolux_forno_executecommand_off:
       friendly_name: "Spegni Forno"
-    button.electrolux_forno_ov1_executecommand_1:
+    button.electrolux_forno_executecommand_on:
       friendly_name: "Accendi Forno"
-    button.electrolux_forno_ov1_executecommand_2:
-      friendly_name: "Avvia Cottura"
-    button.electrolux_forno_ov1_executecommand_3:
-      friendly_name: "Ferma Cottura"
-    button.electrolux_forno_ov1_executecommand_5:
+    button.electrolux_forno_executecommand_resume:
       friendly_name: "Riprendi Cottura"
-    sensor.electrolux_forno_niu_linkqualityindicator:
-      friendly_name: "Potenza Segnale WiFi"
-    sensor.electrolux_forno_niu_ssid:
-      friendly_name: "SSI WiFi"
-    sensor.electrolux_forno_ov1_appliancestate:
+    button.electrolux_forno_executecommand_start:
+      friendly_name: "Avvia Cottura"
+    button.electrolux_forno_executecommand_stopreset:
+      friendly_name: "Ferma Cottura"
+    #sensor.electrolux_forno_niu_linkqualityindicator:
+    #  friendly_name: "Potenza Segnale WiFi"
+    #sensor.electrolux_forno_niu_ssid:
+    #  friendly_name: "SSI WiFi"
+    sensor.electrolux_forno_appliancestate:
       friendly_name: "Stato Forno"
-    sensor.electrolux_forno_ov1_displayfoodprobetemperature:
-      friendly_name: "Temperatura Cibo"
-    sensor.electrolux_forno_ov1_displaytemperature:
-      friendly_name: "Temperatura Forno"
-    sensor.electrolux_forno_ov1_remotecontrol:
+      icon: mdi:stove
+    #sensor.electrolux_forno_displayfoodprobetemperature:
+    #  friendly_name: "Temperatura Cibo"
+    #sensor.electrolux_forno_displaytemperature:
+    #  friendly_name: "Temperatura Forno"
+    sensor.electrolux_forno_remotecontrol:
       friendly_name: "Controllo Remoto"
-    sensor.electrolux_forno_ov1_runningtime:
+      icon: mdi:remote
+    sensor.electrolux_forno_runningtime:
       friendly_name: "Tempo Totale di Funzionamento"
-    sensor.electrolux_forno_ov1_starttime:
-      friendly_name: "Avvio Cottura"
-    sensor.electrolux_forno_ov1_targetmicrowavepower:
+      icon: mdi:clock-time-twelve-outline
+    sensor.electrolux_forno_starttime:
+      friendly_name: "Imposta Avvio Cottura"
+      icon: mdi:timer-edit
+    sensor.electrolux_forno_targetmicrowavepower:
       friendly_name: "Temperatura Desiderata"
-    sensor.electrolux_forno_ov1_targettemperature:
+    sensor.electrolux_forno_targettemperature:
       friendly_name: "Temperatura Desiderata"
-    sensor.electrolux_forno_ov1_timetoend:
-      friendly_name: "Tempo Cottura Rimanenete"
-    sensor.electrolux_forno_ov1_ovenprocessidentifier:
-      friendly_name: "Tipologia di Cottura"
+    sensor.electrolux_forno_timetoend:
+      friendly_name: "Tempo di Cottura Rimanenete"
+      icon: mdi:timer-outline
+    #sensor.electrolux_forno_ovenprocessidentifier:
+    #  friendly_name: "Tipologia di Cottura"

@@ -5,25 +5,25 @@
 logbook:
   exclude:
     entities:
-      - binary_sensor.electrolux_forno_apl_status
-      - binary_sensor.electrolux_forno_ov1_doorstate
-      - button.electrolux_forno_ov1_executecommand_0
-      - button.electrolux_forno_ov1_executecommand_1
-      - button.electrolux_forno_ov1_executecommand_2
-      - button.electrolux_forno_ov1_executecommand_3
-      - button.electrolux_forno_ov1_executecommand_5
+      - #binary_sensor.electrolux_forno_apl_status
+      - binary_sensor.electrolux_forno_doorstate
+      - button.electrolux_forno_executecommand_off
+      - button.electrolux_forno_executecommand_on
+      - button.electrolux_forno_executecommand_resume
+      - button.electrolux_forno_executecommand_start
+      - button.electrolux_forno_executecommand_stopreset
       - sensor.electrolux_forno_niu_linkqualityindicator
       - sensor.electrolux_forno_niu_ssid
-      - sensor.electrolux_forno_ov1_appliancestate
-      - sensor.electrolux_forno_ov1_displayfoodprobetemperature
-      - sensor.electrolux_forno_ov1_displaytemperature
-      - sensor.electrolux_forno_ov1_remotecontrol
-      - sensor.electrolux_forno_ov1_runningtime
-      - sensor.electrolux_forno_ov1_starttime
-      - sensor.electrolux_forno_ov1_targetmicrowavepower
-      - sensor.electrolux_forno_ov1_targettemperature
-      - sensor.electrolux_forno_ov1_timetoend
-      - sensor.electrolux_forno_ov1_ovenprocessidentifier
+      - sensor.electrolux_forno_appliancestate
+      - sensor.electrolux_forno_displayfoodprobetemperature
+      - sensor.electrolux_forno_displaytemperature
+      - sensor.electrolux_forno_remotecontrol
+      - sensor.electrolux_forno_runningtime
+      - sensor.electrolux_forno_starttime
+      - sensor.electrolux_forno_targetmicrowavepower
+      - sensor.electrolux_forno_targettemperature
+      - sensor.electrolux_forno_timetoend
+      - sensor.electrolux_forno_ovenprocessidentifier
 
 ######################################################################
 # Electrolux Package - Recorder
@@ -33,21 +33,21 @@ recorder:
   exclude:
     entities:
       - binary_sensor.electrolux_forno_apl_status
-      - binary_sensor.electrolux_forno_ov1_doorstate
-      - button.electrolux_forno_ov1_executecommand_0
-      - button.electrolux_forno_ov1_executecommand_1
-      - button.electrolux_forno_ov1_executecommand_2
-      - button.electrolux_forno_ov1_executecommand_3
-      - button.electrolux_forno_ov1_executecommand_5
+      - binary_sensor.electrolux_forno_doorstate
+      - button.electrolux_forno_executecommand_off
+      - button.electrolux_forno_executecommand_on
+      - button.electrolux_forno_executecommand_resume
+      - button.electrolux_forno_executecommand_start
+      - button.electrolux_forno_executecommand_stopreset
       - sensor.electrolux_forno_niu_linkqualityindicator
       - sensor.electrolux_forno_niu_ssid
-      - sensor.electrolux_forno_ov1_appliancestate
-      - sensor.electrolux_forno_ov1_displayfoodprobetemperature
-      - sensor.electrolux_forno_ov1_displaytemperature
-      - sensor.electrolux_forno_ov1_remotecontrol
-      - sensor.electrolux_forno_ov1_runningtime
-      - sensor.electrolux_forno_ov1_starttime
-      - sensor.electrolux_forno_ov1_targetmicrowavepower
-      - sensor.electrolux_forno_ov1_targettemperature
-      - sensor.electrolux_forno_ov1_timetoend
-      - sensor.electrolux_forno_ov1_ovenprocessidentifier
+      - sensor.electrolux_forno_appliancestate
+      - sensor.electrolux_forno_displayfoodprobetemperature
+      - sensor.electrolux_forno_displaytemperature
+      - sensor.electrolux_forno_remotecontrol
+      - sensor.electrolux_forno_runningtime
+      - sensor.electrolux_forno_starttime
+      - sensor.electrolux_forno_targetmicrowavepower
+      - sensor.electrolux_forno_targettemperature
+      - sensor.electrolux_forno_timetoend
+      - sensor.electrolux_forno_ovenprocessidentifier
