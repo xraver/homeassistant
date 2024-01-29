@@ -116,7 +116,7 @@ recorder:
       - sensor.ff590mr_max_state_of_charge
       #- sensor.ff590mr_odometer
       - sensor.ff590mr_range_electric
-      - sensor.ff590mr_range_liquid 
+      - sensor.ff590mr_range_liquid
       - sensor.ff590mr_rcp_features
       - sensor.ff590mr_service_interval_days
       - sensor.ff590mr_starter_battery_state
