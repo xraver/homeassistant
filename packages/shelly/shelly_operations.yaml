@@ -35,17 +35,6 @@ script:
     sequence:
       - service: shell_command.shelly_reboot
 
-  ######################################################################
-  # Shelly: Force State Update
-  ######################################################################
-  #shelly_force_state_update:
-  #  alias: "Shelly: Aggiornamento stato dispositivi"
-  #  sequence:
-  #    - service: mqtt.publish
-  #      data:
-  #        payload: update
-  #        topic: shellies/command
-
 automation:
   ######################################################################
   # Shelly: Update Notification
@@ -85,18 +74,6 @@ automation:
           enable_persistent: true
       - service: input_boolean.turn_on
         entity_id: input_boolean.update_shelly
-
-  ######################################################################
-  # Shelly: Force State Update at Startup
-  ######################################################################
-  #- alias: "Shelly - Startup: Aggiornamento stati"
-  #
-  #  trigger:
-  #    - event: start
-  #      platform: homeassistant
-  #
-  #  action:
-  #    service: script.shelly_force_state_update
 
 ######################################################################
 # Shelly Package - Operations Shell Command
