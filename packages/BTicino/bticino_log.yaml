@@ -1,0 +1,53 @@
+######################################################################
+# BTicino Package - Logbook
+######################################################################
+
+logbook:
+  exclude:
+    entities:
+      # BTI-NT4411C - Dimmer 0x0004740001583a4a
+      - select.0x0004740001583a4a_identify
+      - number.0x0004740001583a4a_ballast_maximum_level
+      - number.0x0004740001583a4a_ballast_minimum_level
+      - switch.0x0004740001583a4a_device_mode
+      - switch.0x0004740001583a4a_led_if_on
+      - switch.0x0004740001583a4a_led_in_dark
+
+      # BTI-NT4027C - Tapparella 0x000474000159053e
+      - select.0x000474000159053e_identify
+      - select.0x000474000159053e_calibration_mode
+      - switch.0x000474000159053e_led_if_on
+      - switch.0x000474000159053e_led_in_dark
+
+      # BTI-3584C - Wired Relay 0x000474000025912a
+      - select.0x000474000025912a_power_on_behavior
+
+      # BTI-3584C - Wired Relay 0x00047400002599cf
+      - select.0x00047400002599cf_power_on_behavior
+
+######################################################################
+# BTicino Package - Recorder
+######################################################################
+
+recorder:
+  exclude:
+    entities:
+      # BTI-NT4411C - Dimmer 0x0004740001583a4a
+      - select.0x0004740001583a4a_identify
+      - number.0x0004740001583a4a_ballast_maximum_level
+      - number.0x0004740001583a4a_ballast_minimum_level
+      - switch.0x0004740001583a4a_device_mode
+      - switch.0x0004740001583a4a_led_if_on
+      - switch.0x0004740001583a4a_led_in_dark
+
+      # BTI-NT4027C - Tapparella 0x000474000159053e
+      - select.0x000474000159053e_identify
+      - select.0x000474000159053e_calibration_mode
+      - switch.0x000474000159053e_led_if_on
+      - switch.0x000474000159053e_led_in_dark
+
+      # BTI-3584C - Wired Relay 0x000474000025912a
+      - select.0x000474000025912a_power_on_behavior
+
+      # BTI-3584C - Wired Relay 0x00047400002599cf
+      - select.0x00047400002599cf_power_on_behavior
