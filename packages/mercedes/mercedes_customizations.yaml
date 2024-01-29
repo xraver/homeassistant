@@ -30,7 +30,7 @@ homeassistant:
       friendly_name: Stato Generale
       device_class: problem
       icon: mdi:hazard-lights
-      # warningbrakefluid, warningwashwater, warningcoolantlevellow, warninglowbattery
+      # warningbrakefluid, warningcoolantlevellow, warningwashwater
 
     # Freno a Mano - parkbrakestatus
     #binary_sensor.engine_light_warning:
@@ -44,16 +44,16 @@ homeassistant:
       friendly_name: Pneumatici
       device_class: problem
       #icon: mdi:car-tire-alert
-      #tirepressureRearLeft, tirepressureRearRight, tirepressureFrontRight, tirepressureFrontLeft, tireMarkerFrontRight, tireMarkerFrontLeft,tireMarkerRearLeft, tireMarkerRearRight,
-      #tirewarningsrdk, tirewarningsprw, tireTemperatureRearLeft, tireTemperatureFrontRight,
-      #tireTemperatureRearRight, tireTemperatureFrontLeft
+      #tireMarkerFrontLeft, tireMarkerFrontRight, tireMarkerRearLeft, tireMarkerRearRight
+      #tirepressureFrontLeft, tirepressureFrontRight, tirepressureRearLeft, tirepressureRearRight,
+      # tirewarningsrdk
 
     # Finestrini - windowsClosed
     binary_sensor.ff590mr_windows_closed:
       friendly_name: Finestrini
       device_class: opening
       icon: mdi:window-closed
-      # windowstatusrearleft, windowstatusrearright, windowstatusfrontright, windowstatusfrontleft
+      # windowstatusfrontleft, windowstatusfrontright, windowstatusrearleft, windowstatusrearright
 
     ######################################################################
     # Device Tracker
@@ -66,7 +66,7 @@ homeassistant:
     # Locks
     ######################################################################
     lock.ff590mr_lock:
-      friendly_name: Blocco Auto
+      friendly_name: Blocco auto
       icon: mdi:lock
 
     ######################################################################
@@ -76,31 +76,31 @@ homeassistant:
     sensor.ff590mr_lock:
       friendly_name: Veicolo
       icon: mdi:lock-open
-      # doorLockStatusOverall, doorlockstatusvehicle, doorStatusOverall,
-      # doorlockstatusfrontleft,doorlockstatusfrontright, doorlockstatusrearleft, doorlockstatusrearright, doorlockstatusdecklid, doorlockstatusgas,
-      # doorstatusrearleft, doorstatusfrontright, doorstatusrearright, doorstatusfrontleft, decklidstatus,
+      # decklidstatus, doorLockStatusOverall, doorStatusOverall,
+      # doorlockstatusdecklid,doorlockstatusfrontleft, doorlockstatusfrontright, doorlockstatusgas, doorlockstatusrearleft, doorlockstatusrearright,
+      # doorlockstatusvehicle, doorstatusfrontleft, doorstatusfrontright, doorstatusrearleft, doorstatusrearright,
       # rooftopstatus, sunroofstatus
 
-    # Sensore Carburante - Fuel Level
+    # Sensore carburante - Fuel level
     sensor.ff590mr_fuel_level:
-      friendly_name: Livello Carburante
+      friendly_name: Livello carburante
       icon: mdi:gas-station
       # tankLevelAdBlue
 
-    # Violazione Geolocalizzazione - Geofencing Violation
+    # Violazione geolocalizzazione - Geofencing violation
     sensor.ff590mr_geofencing_violation:
-      friendly_name: Violazione Geolocalizzazione
+      friendly_name: Violazione geolocalizzazione
       icon: mdi:map-marker-radius
+      # Last_event_zone
 
     # Odometria - odometer
     sensor.ff590mr_odometer:
-      friendly_name: Km Percorsi
+      friendly_name: Km percorsi
       icon: mdi:road-variant
-      # distanceReset, distanceStart, averageSpeedReset, averageSpeedStart, distanceZEReset,
-      # drivenTimeZEReset, drivenTimeReset, drivenTimeStart, ecoscoretotal, ecoscorefreewhl, ecoscorebonusrange, ecoscoreconst, ecoscoreaccel,
-      # gasconsumptionstart, gasconsumptionreset, gasTankRange, gasTankLevel,
-      # liquidconsumptionstart, liquidconsumptionreset, liquidRangeSkipIndication, rangeliquid, serviceintervaldays, tanklevelpercent, tankReserveLamp,
-      # batteryState, tankLevelAdBlue
+
+    # Gamma fossile - Range liquid
+    sensor.ff590mr_range_liquid:
+      friendly_name: Gamma fossile
     sensor.ff590mr_distance_reset:
       friendly_name: Distanza dal reset
     sensor.ff590mr_distance_start:
@@ -109,25 +109,72 @@ homeassistant:
       friendly_name: Consumo dalla partenza
     sensor.ff590mr_liquid_consumption_reset:
       friendly_name: Consumo dal reset
+    sensor.ff590mr_average_speed_start:
+      friendly_name: Velocità media da start
+    sensor.ff590mr_average_speed_reset:
+      friendly_name: Velocità media da reset
 
-    # Sensore Avviamento
+    # Gamma elettrica - Range electric
+    sensor.ff590mr_range_electric:
+      friendly_name: Gamma elettrica
+    sensor.ff590mr_charging_power:
+     friendly_name: Potenza di caricamento
+    sensor.ff590mr_electric_consumption_start:
+      friendly_name: Consumi elettrici da start
+    sensor.ff590mr_electric_consumption_reset:
+      friendly_name: Consumi elettrici da reset
+    sensor.ff590mr_max_state_of_charge:
+      friendly_name: Massimo stato di carica
+    sensor.ff590mr_state_of_charge:
+      friendly_name: Stato carica
+
+    # Batteria di avviamento - Starter battery state
+    sensor.ff590mr_starter_battery_state:
+      friendly_name: Batteria di avviamento
+
+    # Sensore avviamento
     sensor.ff590mr_ignition_state:
-      friendly_name: Stato Accensione
+      friendly_name: Stato accensione
       icon: mdi:key-wireless
+
+    # Riscaldamento ausiliario
+    sensor.ff590mr_auxheat_status:
+      friendly_name: Riscaldamento ausiliario
+
+    # Partenza prevista - Departure time
+    sensor.ff590mr_departure_time:
+      friendly_name: Partenza prevista
+
+    # Sensori Pneumaticici
+    sensor.ff590mr_tire_pressure_front_left:
+      friendly_name: Anteriore sinstro
+      icon_template: mdi:car-tire-alert
+    sensor.ff590mr_tire_pressure_front_right:
+      friendly_name: Anteriore destro
+      icon_template: mdi:car-tire-alert
+    sensor.ff590mr_tire_pressure_rear_left:
+      friendly_name: Posteriore sinistro
+      icon_template: mdi:car-tire-alert
+    sensor.ff590mr_tire_pressure_rear_right:
+      friendly_name: Posteriore destro
+      icon_template: mdi:car-tire-alert
+
+    sensor.ff590mr_car_alarm:
+      friendly_name: Allarme auto
 
     ######################################################################
     # Diagnostic Sensors
     ######################################################################
-    # Sensore Dati Connessione
+    # Sensore Dati connessione
     sensor.ff590mr_car:
-      friendly_name: Messaggi Auto
+      friendly_name: Messaggi auto
       icon: mdi:car-connected
       # full_update_messages_received, partital_update_messages_received, last_message_received,
       # last_command_type, last_command_state,
       # last_command_error_code, last_command_error_message
 
-    # Sensore Configurazione Estesa
+    # Sensore Configurazione estesa
     sensor.ff590mr_rcp_features:
-      friendly_name: Configurazione Estesa
+      friendly_name: Configurazione estesa
       icon: mdi:car-cog
       # rcp_supported_settings (List of all remote configuration options, I'll implement them step by step as services or buttons)
