@@ -5,25 +5,35 @@
 logbook:
   exclude:
     entities:
-      - #binary_sensor.electrolux_forno_apl_status
-      - binary_sensor.electrolux_forno_doorstate
       - button.electrolux_forno_executecommand_off
       - button.electrolux_forno_executecommand_on
       - button.electrolux_forno_executecommand_resume
       - button.electrolux_forno_executecommand_start
       - button.electrolux_forno_executecommand_stopreset
-      - sensor.electrolux_forno_niu_linkqualityindicator
-      - sensor.electrolux_forno_niu_ssid
+      - number.electrolux_forno_starttime
+      - number.electrolux_forno_targetduration
+      - number.electrolux_forno_targetfoodprobetemperaturec
+      - number.electrolux_forno_targetfoodprobetemperaturef
+      - number.electrolux_forno_targetmicrowavepower
+      - number.electrolux_forno_targettemperaturec
+      - number.electrolux_forno_targettemperaturef
+      - select.electrolux_forno_program
+      - select.electrolux_forno_temperaturerepresentation
+      - sensor.electrolux_forno_appliancemode
       - sensor.electrolux_forno_appliancestate
-      - sensor.electrolux_forno_displayfoodprobetemperature
-      - sensor.electrolux_forno_displaytemperature
+      - sensor.electrolux_forno_connectivitystate
+      - sensor.electrolux_forno_displayfoodprobetemperaturec
+      - sensor.electrolux_forno_displaytemperaturec
+      - sensor.electrolux_forno_displaytemperaturef
+      - sensor.electrolux_forno_doorstate
+      - sensor.electrolux_forno_foodprobeinsertionstate
+      - sensor.electrolux_forno_networkinterface_linkqualityindicator
       - sensor.electrolux_forno_remotecontrol
       - sensor.electrolux_forno_runningtime
-      - sensor.electrolux_forno_starttime
-      - sensor.electrolux_forno_targetmicrowavepower
-      - sensor.electrolux_forno_targettemperature
       - sensor.electrolux_forno_timetoend
-      - sensor.electrolux_forno_ovenprocessidentifier
+      - sensor.electrolux_forno_watertankempty
+      - sensor.electrolux_forno_watertrayinsertionstate
+      - switch.electrolux_forno_cavitylight
 
 ######################################################################
 # Electrolux Package - Recorder
@@ -32,22 +42,32 @@ logbook:
 recorder:
   exclude:
     entities:
-      - binary_sensor.electrolux_forno_apl_status
-      - binary_sensor.electrolux_forno_doorstate
       - button.electrolux_forno_executecommand_off
       - button.electrolux_forno_executecommand_on
       - button.electrolux_forno_executecommand_resume
       - button.electrolux_forno_executecommand_start
       - button.electrolux_forno_executecommand_stopreset
-      - sensor.electrolux_forno_niu_linkqualityindicator
-      - sensor.electrolux_forno_niu_ssid
+      - number.electrolux_forno_starttime
+      - number.electrolux_forno_targetduration
+      - number.electrolux_forno_targetfoodprobetemperaturec
+      - number.electrolux_forno_targetfoodprobetemperaturef
+      - number.electrolux_forno_targetmicrowavepower
+      - number.electrolux_forno_targettemperaturec
+      - number.electrolux_forno_targettemperaturef
+      - select.electrolux_forno_program
+      - select.electrolux_forno_temperaturerepresentation
+      - sensor.electrolux_forno_appliancemode
       - sensor.electrolux_forno_appliancestate
-      - sensor.electrolux_forno_displayfoodprobetemperature
-      - sensor.electrolux_forno_displaytemperature
+      - sensor.electrolux_forno_connectivitystate
+      - sensor.electrolux_forno_displayfoodprobetemperaturec
+      - sensor.electrolux_forno_displaytemperaturec
+      - sensor.electrolux_forno_displaytemperaturef
+      - sensor.electrolux_forno_doorstate
+      - sensor.electrolux_forno_foodprobeinsertionstate
+      - sensor.electrolux_forno_networkinterface_linkqualityindicator
       - sensor.electrolux_forno_remotecontrol
       - sensor.electrolux_forno_runningtime
-      - sensor.electrolux_forno_starttime
-      - sensor.electrolux_forno_targetmicrowavepower
-      - sensor.electrolux_forno_targettemperature
       - sensor.electrolux_forno_timetoend
-      - sensor.electrolux_forno_ovenprocessidentifier
+      - sensor.electrolux_forno_watertankempty
+      - sensor.electrolux_forno_watertrayinsertionstate
+      - switch.electrolux_forno_cavitylight

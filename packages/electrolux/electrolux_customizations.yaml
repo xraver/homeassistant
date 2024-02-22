@@ -4,46 +4,65 @@
 
 homeassistant:
   customize:
-    #binary_sensor.electrolux_forno_apl_status:
-    #  friendly_name: "Stato Forno"
-    binary_sensor.electrolux_forno_doorstate:
-      friendly_name: "Porta Forno"
     button.electrolux_forno_executecommand_off:
-      friendly_name: "Spegni Forno"
+      friendly_name: "Spegni forno"
     button.electrolux_forno_executecommand_on:
-      friendly_name: "Accendi Forno"
+      friendly_name: "Accendi forno"
     button.electrolux_forno_executecommand_resume:
-      friendly_name: "Riprendi Cottura"
+      friendly_name: "Riprendi cottura"
     button.electrolux_forno_executecommand_start:
-      friendly_name: "Avvia Cottura"
+      friendly_name: "Avvia cottura"
     button.electrolux_forno_executecommand_stopreset:
-      friendly_name: "Ferma Cottura"
-    #sensor.electrolux_forno_niu_linkqualityindicator:
-    #  friendly_name: "Potenza Segnale WiFi"
-    #sensor.electrolux_forno_niu_ssid:
-    #  friendly_name: "SSI WiFi"
+      friendly_name: "Ferma cottura"
+    number.electrolux_forno_starttime:
+      friendly_name: "Imposta Avvio Cottura"
+    number.electrolux_forno_targetduration:
+      friendly_name: "Tempo di cottura desiderato"
+    number.electrolux_forno_targetfoodprobetemperaturec:
+      friendly_name: "Temperatura di cottura sonda desiderata (Celsius)"
+    number.electrolux_forno_targetfoodprobetemperaturef:
+      friendly_name: "Temperatura di cottura sonda desiderata (Fahrenheit)"
+    number.electrolux_forno_targetmicrowavepower:
+      friendly_name: "Potenza di cottura desiderata"
+    number.electrolux_forno_targettemperaturec:
+      friendly_name: "Temperatura di cottura desiderata (Celsius)"
+    number.electrolux_forno_targettemperaturef:
+      friendly_name: "Temperatura di cottura desiderata (Fahrenheit)"
+    select.electrolux_forno_program:
+      friendly_name: "Programma forno"
+    select.electrolux_forno_temperaturerepresentation:
+      friendly_name: "Unità di misura temperatura"
+    sensor.electrolux_forno_appliancemode:
+      friendly_name: "Programma forno"
+      icon: mdi:state-machine
     sensor.electrolux_forno_appliancestate:
-      friendly_name: "Stato Forno"
-      icon: mdi:stove
-    #sensor.electrolux_forno_displayfoodprobetemperature:
-    #  friendly_name: "Temperatura Cibo"
-    #sensor.electrolux_forno_displaytemperature:
-    #  friendly_name: "Temperatura Forno"
+      friendly_name: "Stato programma"
+    sensor.electrolux_forno_connectivitystate:
+      friendly_name: "Connessione WiFi"
+    sensor.electrolux_forno_displayfoodprobetemperaturec:
+      friendly_name: "Temperatura sonda"
+    sensor.electrolux_forno_displaytemperaturec:
+      friendly_name: "Temperatura forno (Celsius)"
+    sensor.electrolux_forno_displaytemperaturef:
+      friendly_name: "Temperatura forno (Fahrenheit)"
+    sensor.electrolux_forno_doorstate:
+      friendly_name: "Porta forno"
+    sensor.electrolux_forno_foodprobeinsertionstate:
+      friendly_name: "Stato sonda"
+    sensor.electrolux_forno_networkinterface_linkqualityindicator:
+      friendly_name: "Qualità segnale WiFi"
     sensor.electrolux_forno_remotecontrol:
-      friendly_name: "Controllo Remoto"
-      icon: mdi:remote
+      friendly_name: "Controllo remoto"
     sensor.electrolux_forno_runningtime:
       friendly_name: "Tempo Totale di Funzionamento"
       icon: mdi:clock-time-twelve-outline
-    sensor.electrolux_forno_starttime:
-      friendly_name: "Imposta Avvio Cottura"
-      icon: mdi:timer-edit
-    sensor.electrolux_forno_targetmicrowavepower:
-      friendly_name: "Temperatura Desiderata"
-    sensor.electrolux_forno_targettemperature:
-      friendly_name: "Temperatura Desiderata"
     sensor.electrolux_forno_timetoend:
       friendly_name: "Tempo di Cottura Rimanenete"
       icon: mdi:timer-outline
-    #sensor.electrolux_forno_ovenprocessidentifier:
-    #  friendly_name: "Tipologia di Cottura"
+    sensor.electrolux_forno_watertankempty:
+      friendly_name: "Serbatoio acqua forno"
+      icon: mdi:cup-water
+    sensor.electrolux_forno_watertrayinsertionstate:
+      friendly_name: "Stato vassoio acqua forno"
+    switch.electrolux_forno_cavitylight:
+      friendly_name: "Luce forno"
