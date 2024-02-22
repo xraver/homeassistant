@@ -757,6 +757,630 @@
               "entities": [
                 {
                   "type": "section",
+                  "label": "Docker Containers"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_portainer",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_traefik",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_amule",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_transmission",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_homeassistant",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_mosquitto",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_zigbee2mqtt",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "layout": "icon_name_state",
+                              "entity": "switch.docker_filebrowser",
+                              "show_name": true,
+                              "show_icon": true,
+                              "show_state": false,
+                              "color-type": "card",
+                              "styles": {
+                                "grid": [
+                                  {
+                                    "grid-template-columns": "50px auto"
+                                  }
+                                ],
+                                "icon": [
+                                  {
+                                    "padding": "0px 0px"
+                                  },
+                                  {
+                                    "height": "25px"
+                                  },
+                                  {
+                                    "width": "25px"
+                                  }
+                                ],
+                                "card": [
+                                  {
+                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                  },
+                                  {
+                                    "--ha-card-box-shadow": "none"
+                                  }
+                                ],
+                                "name": [
+                                  {
+                                    "padding": "0px 10px"
+                                  },
+                                  {
+                                    "justify-self": "start"
+                                  },
+                                  {
+                                    "font-family": "Roboto, sans-serif"
+                                  },
+                                  {
+                                    "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
+                                  }
+                                ]
+                              },
+                              "state": [
+                                {
+                                  "value": "on",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "lightgreen"
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "value": "off",
+                                  "styles": {
+                                    "icon": [
+                                      {
+                                        "color": "grey"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
                   "label": "NAS QNAP TS-228A"
                 },
                 {
@@ -1407,27 +2031,145 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "binary_sensor.electrolux_forno_apl_status",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
+                              "name": "Programma",
+                              "icon": "mdi:state-machine",
+                              "tap_action": {
+                                "action": "fire-dom-event",
+                                "browser_mod": {
+                                  "service": "browser_mod.popup",
+                                  "data": {
+                                    "title": "Programma",
+                                    "style": "--popup-background-color: var(--secondary-background-color);\n--dialog-backdrop-filter: blur(2em) brightness(0.75);\n",
+                                    "content": {
+                                      "type": "entities",
+                                      "entities": [
+                                        {
+                                          "entity": "sensor.electrolux_forno_appliancestate"
+                                        },
+                                        {
+                                          "entity": "select.electrolux_forno_program"
+                                        }
+                                      ]
+                                    }
                                   }
-                                ]
+                                }
                               }
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "binary_sensor.electrolux_forno_ov1_doorstate",
-                              "name": "Porta",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
+                              "name": "Temperature di cottura",
+                              "icon": "mdi:thermometer",
+                              "tap_action": {
+                                "action": "fire-dom-event",
+                                "browser_mod": {
+                                  "service": "browser_mod.popup",
+                                  "data": {
+                                    "title": "Temperature di cottura",
+                                    "style": "--popup-background-color: var(--secondary-background-color);\n--dialog-backdrop-filter: blur(2em) brightness(0.75);\n",
+                                    "content": {
+                                      "type": "entities",
+                                      "entities": [
+                                        {
+                                          "entity": "sensor.electrolux_forno_displaytemperaturec"
+                                        },
+                                        {
+                                          "entity": "number.electrolux_forno_targettemperaturec"
+                                        },
+                                        {
+                                          "style": {
+                                            "background": "#62717b",
+                                            "height": "1px",
+                                            "margin-left": "auto",
+                                            "margin-right": "auto"
+                                          },
+                                          "type": "divider"
+                                        },
+                                        {
+                                          "entity": "sensor.electrolux_forno_displayfoodprobetemperaturec"
+                                        },
+                                        {
+                                          "entity": "number.electrolux_forno_targetfoodprobetemperaturec"
+                                        }
+                                      ]
+                                    }
                                   }
-                                ]
+                                }
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "name": "Tempi di cottura",
+                              "icon": "mdi:clock-edit-outline",
+                              "tap_action": {
+                                "action": "fire-dom-event",
+                                "browser_mod": {
+                                  "service": "browser_mod.popup",
+                                  "data": {
+                                    "title": "Tempi di cottura",
+                                    "style": "--popup-background-color: var(--secondary-background-color);\n--dialog-backdrop-filter: blur(2em) brightness(0.75);\n",
+                                    "content": {
+                                      "type": "entities",
+                                      "entities": [
+                                        {
+                                          "entity": "sensor.electrolux_forno_runningtime"
+                                        },
+                                        {
+                                          "entity": "sensor.electrolux_forno_timetoend"
+                                        },
+                                        {
+                                          "style": {
+                                            "background": "#62717b",
+                                            "height": "1px",
+                                            "margin-left": "auto",
+                                            "margin-right": "auto"
+                                          },
+                                          "type": "divider"
+                                        },
+                                        {
+                                          "entity": "number.electrolux_forno_starttime"
+                                        },
+                                        {
+                                          "entity": "number.electrolux_forno_targetduration"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "name": "Stato forno",
+                              "icon": "mdi:stove",
+                              "tap_action": {
+                                "action": "fire-dom-event",
+                                "browser_mod": {
+                                  "service": "browser_mod.popup",
+                                  "data": {
+                                    "title": "Stato forno",
+                                    "style": "--popup-background-color: var(--secondary-background-color);\n--dialog-backdrop-filter: blur(2em) brightness(0.75);\n",
+                                    "content": {
+                                      "type": "entities",
+                                      "entities": [
+                                        {
+                                          "entity": "sensor.electrolux_forno_doorstate"
+                                        },
+                                        {
+                                          "entity": "sensor.electrolux_forno_foodprobeinsertionstate"
+                                        },
+                                        {
+                                          "entity": "sensor.electrolux_forno_connectivitystate"
+                                        },
+                                        {
+                                          "entity": "sensor.electrolux_forno_remotecontrol"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
                               }
                             }
                           ]
@@ -1439,7 +2181,7 @@
                       "cards": [
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_ov1_executecommand_1",
+                          "entity": "button.electrolux_forno_executecommand_off",
                           "show_name": false,
                           "icon": "mdi:power",
                           "styles": {
@@ -1452,7 +2194,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_ov1_executecommand_0",
+                          "entity": "button.electrolux_forno_executecommand_on",
                           "show_name": false,
                           "icon": "mdi:power",
                           "styles": {
@@ -1465,7 +2207,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_ov1_executecommand_2",
+                          "entity": "button.electrolux_forno_executecommand_start",
                           "show_name": false,
                           "styles": {
                             "icon": [
@@ -1477,7 +2219,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_ov1_executecommand_3",
+                          "entity": "button.electrolux_forno_executecommand_resume",
                           "show_name": false,
                           "styles": {
                             "icon": [
@@ -1489,7 +2231,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_ov1_executecommand_5",
+                          "entity": "button.electrolux_forno_executecommand_stopreset",
                           "show_name": false,
                           "styles": {
                             "icon": [
@@ -1537,14 +2279,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.shelly_em_channel_1_power",
-                              "name": "Potenza",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Potenza"
                             }
                           ]
                         }
@@ -1648,14 +2383,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.shelly_em_channel_1_power",
-                              "name": "Potenza",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Potenza"
                             }
                           ]
                         }
@@ -1769,14 +2497,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "cover.tapparella_cucina",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -1839,14 +2560,7 @@
                               "template": "template_device_generic_state",
                               "layout": "icon_name_state",
                               "entity": "cover.tapparella_sala",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -1908,14 +2622,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "cover.tapparella_studio",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -1977,14 +2684,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "cover.tapparella_camera",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -2487,42 +3187,21 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.shelly_em_channel_1_power",
-                              "name": "Potenza",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Potenza"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.shelly_em_channel_1_voltage",
                               "name": "Tensione",
-                              "icon": "mdi:alpha-v-box",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "icon": "mdi:alpha-v-box"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.shelly_em_channel_1_power_factor",
                               "name": "FP",
-                              "icon": "mdi:angle-acute",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "icon": "mdi:angle-acute"
                             },
                             {
                               "type": "custom:button-card",
@@ -2644,40 +3323,25 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "climate.cucina",
-                                  "name": "Modalità",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Modalità"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "sensor.valvola_cucina_state",
-                                  "name": "Stato",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Stato"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
                                   "entity": "sensor.valvola_cucina_battery_percent",
-                                  "name": "Batteria",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_cucina",
+                                  "name": "Timer"
                                 }
                               ]
                             }
@@ -2718,40 +3382,25 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "climate.sala",
-                                  "name": "Modalità",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Modalità"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "sensor.valvola_sala_state",
-                                  "name": "Stato",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Stato"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
                                   "entity": "sensor.valvola_sala_battery_percent",
-                                  "name": "Batteria",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_sala",
+                                  "name": "Timer"
                                 }
                               ]
                             }
@@ -2792,40 +3441,25 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "climate.bagno",
-                                  "name": "Modalità",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Modalità"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "sensor.valvola_bagno_state",
-                                  "name": "Stato",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Stato"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
                                   "entity": "sensor.valvola_bagno_battery_percent",
-                                  "name": "Batteria",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_bagno",
+                                  "name": "Timer"
                                 }
                               ]
                             }
@@ -2866,40 +3500,25 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "climate.studio",
-                                  "name": "Modalità",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Modalità"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "sensor.valvola_studio_state",
-                                  "name": "Stato",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Stato"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
                                   "entity": "sensor.valvola_studio_battery_percent",
-                                  "name": "Batteria",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_studio",
+                                  "name": "Timer"
                                 }
                               ]
                             }
@@ -2940,40 +3559,25 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "climate.camera",
-                                  "name": "Modalità",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Modalità"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "sensor.valvola_camera_state",
-                                  "name": "Stato",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Stato"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
                                   "entity": "sensor.valvola_camera_battery_percent",
-                                  "name": "Batteria",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "var(--state-icon-color)"
-                                      }
-                                    ]
-                                  }
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_camera",
+                                  "name": "Timer"
                                 }
                               ]
                             }
@@ -3012,6 +3616,9 @@
                 },
                 {
                   "entity": "select.netatmo_casa_ravera_testa"
+                },
+                {
+                  "entity": "input_number.netatmo_manual_temperature"
                 }
               ],
               "state_color": false,
@@ -3057,14 +3664,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "binary_sensor.porta_casa_contact",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3108,27 +3708,13 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.temperatura_balcone_temperature",
-                              "name": "Temperatura",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Temperatura"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.temperatura_balcone_humidity",
-                              "name": "Umidità",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Umidità"
                             },
                             {
                               "type": "custom:button-card",
@@ -3172,27 +3758,13 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.temperatura_veranda_temperature",
-                              "name": "Temperatura",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Temperatura"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "sensor.temperatura_veranda_humidity",
-                              "name": "Umidità",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Umidità"
                             },
                             {
                               "type": "custom:button-card",
@@ -3236,14 +3808,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "binary_sensor.spare_door_contact",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3325,14 +3890,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "binary_sensor.sensore_acqua_1_water_leak",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3376,14 +3934,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "binary_sensor.sensore_acqua_2_water_leak",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3427,14 +3978,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "binary_sensor.sensore_acqua_3_water_leak",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3478,14 +4022,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "light.luce_veranda",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3535,14 +4072,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "light.luce_dispensa",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3604,14 +4134,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "light.0x0004740001583a4a",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3623,14 +4146,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
                               "entity": "switch.0x0004740001583a4a_device_mode",
-                              "icon": "mdi:lightbulb-on-50",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "icon": "mdi:lightbulb-on-50"
                             },
                             {
                               "type": "custom:button-card",
@@ -3683,14 +4199,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "cover.0x000474000159053e",
-                              "name": "Stato",
-                              "styles": {
-                                "icon": [
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ]
-                              }
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
@@ -3709,6 +4218,218 @@
                               "template": "template_device_generic_button",
                               "entity": "switch.0x000474000159053e_led_if_on",
                               "icon": "mdi:led-outline"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "3584 - Luce 0x000474000025912a"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x000474000025912a",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x000474000025912a",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "select.0x000474000025912a_power_on_behavior",
+                              "template": "template_device_generic_state",
+                              "name": "Power-On"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "3584 - Luce 0x00047400002599cf"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x00047400002599cf",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x00047400002599cf",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "select.0x00047400002599cf_power_on_behavior",
+                              "template": "template_device_generic_state",
+                              "name": "Power-On"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "3584 - Luce 0x0004740000249a4e"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x0004740000249a4e",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x0004740000249a4e",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "select.0x0004740000249a4e_power_on_behavior",
+                              "template": "template_device_generic_state",
+                              "name": "Power-On"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "3584 - Luce 0x000474000015be6b"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x000474000015be6b",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x000474000015be6b",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "select.0x000474000015be6b_power_on_behavior",
+                              "template": "template_device_generic_state",
+                              "name": "Power-On"
                             }
                           ]
                         }
@@ -3928,6 +4649,9 @@
               },
               {
                 "width": "25px"
+              },
+              {
+                "color": "var(--state-icon-color)"
               }
             ],
             "card": [

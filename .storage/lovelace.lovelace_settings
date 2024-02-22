@@ -237,24 +237,12 @@
                   "name": "Temperatura Veranda"
                 },
                 {
-                  "entity": "sensor.spare_door_battery",
-                  "name": "spare_door"
-                },
-                {
                   "entity": "sensor.wireless_button_battery",
                   "name": "wireless_button"
                 },
                 {
                   "entity": "sensor.sensore_acqua_1_battery",
                   "name": "Sensore Acqua 1"
-                },
-                {
-                  "entity": "sensor.sensore_acqua_2_battery",
-                  "name": "Sensore Acqua 2"
-                },
-                {
-                  "entity": "sensor.sensore_acqua_3_battery",
-                  "name": "Sensore Acqua 3"
                 }
               ]
             },
@@ -478,6 +466,19 @@
                   }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "title": "History",
+          "path": "s",
+          "icon": "mdi:history",
+          "type": "panel",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:history-explorer-card",
+              "recordedEntitiesOnly": true
             }
           ]
         }
