@@ -81,7 +81,7 @@
     - On/Off Graduale
     - Rosso/Verde
   qos: 0
-  optimistic: false
+  optimistic: true
 
 ######################################################################
 # Living Room Couch Light (White)
@@ -119,4 +119,4 @@
 #  color_temp_template: "{{ (1000000/(((float(value_json.temp)-3000)/3500*4500)+2000)) | int }}"
 #  retain: false
 #  qos: 0
-#  optimistic: false
+#  optimistic: true
