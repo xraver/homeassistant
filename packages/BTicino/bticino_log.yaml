@@ -25,6 +25,12 @@ logbook:
       # BTI-3584C - Wired Relay 0x00047400002599cf
       - select.0x00047400002599cf_power_on_behavior
 
+      # BTI-3584C - Wired Relay 0x0004740000249a4e
+      - select.0x0004740000249a4e_power_on_behavior
+
+      # BTI-3584C - Wired Relay 0x000474000015be6b
+      - select.0x000474000015be6b_power_on_behavior
+
 ######################################################################
 # BTicino Package - Recorder
 ######################################################################
@@ -51,3 +57,9 @@ recorder:
 
       # BTI-3584C - Wired Relay 0x00047400002599cf
       - select.0x00047400002599cf_power_on_behavior
+
+      # BTI-3584C - Wired Relay 0x0004740000249a4e
+      - select.0x0004740000249a4e_power_on_behavior
+
+      # BTI-3584C - Wired Relay 0x000474000015be6b
+      - select.0x000474000015be6b_power_on_behavior
