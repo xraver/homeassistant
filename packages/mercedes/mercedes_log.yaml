@@ -22,41 +22,22 @@ logbook:
       - binary_sensor.ff590mr_window_rear_right
       - binary_sensor.ff590mr_windows_closed
       #- binary_sensor.ff590mr_windows_closed_2
-      - binary_sensor.ff590mr_fuellid
       #- device_tracker.ff590mr_device_tracker
       - lock.ff590mr_lock
       #- lock.ff590mr_lock_no_pin
-      - sensor.ff590mr_auxheat_status
-      - sensor.ff590mr_average_speed_reset
-      - sensor.ff590mr_average_speed_start
       - sensor.ff590mr_car
-      - sensor.ff590mr_car_alarm
       - sensor.ff590mr_charging_power
-      - sensor.ff590mr_departure_time
       - sensor.ff590mr_distance_reset
       - sensor.ff590mr_distance_start
-      - sensor.ff590mr_distance_zero_emission_reset
-      - sensor.ff590mr_eco_score_acceleration
-      - sensor.ff590mr_eco_score_bonus_range
-      - sensor.ff590mr_eco_score_constant
-      - sensor.ff590mr_eco_score_free_wheel
-      - sensor.ff590mr_eco_score_total
-      - sensor.ff590mr_electric_consumption_reset
-      - sensor.ff590mr_electric_consumption_start
       - sensor.ff590mr_fuel_level
       - sensor.ff590mr_geofencing_violation
       - sensor.ff590mr_ignition_state
       - sensor.ff590mr_liquid_consumption_reset
       - sensor.ff590mr_liquid_consumption_start
       - sensor.ff590mr_lock
-      - sensor.ff590mr_max_state_of_charge
       #- sensor.ff590mr_odometer
-      - sensor.ff590mr_range_electric
-      - sensor.ff590mr_range_liquid
       - sensor.ff590mr_rcp_features
       - sensor.ff590mr_service_interval_days
-      - sensor.ff590mr_starter_battery_state
-      - sensor.ff590mr_state_of_charge
       - sensor.ff590mr_tire_pressure_front_left
       - sensor.ff590mr_tire_pressure_front_right
       - sensor.ff590mr_tire_pressure_rear_left
@@ -86,41 +67,22 @@ recorder:
       - binary_sensor.ff590mr_window_rear_right
       - binary_sensor.ff590mr_windows_closed
       #- binary_sensor.ff590mr_windows_closed_2
-      - binary_sensor.ff590mr_fuellid
       #- device_tracker.ff590mr_device_tracker
       - lock.ff590mr_lock
       #- lock.ff590mr_lock_no_pin
-      - sensor.ff590mr_auxheat_status
-      - sensor.ff590mr_average_speed_reset
-      - sensor.ff590mr_average_speed_start
       - sensor.ff590mr_car
-      - sensor.ff590mr_car_alarm
       - sensor.ff590mr_charging_power
-      - sensor.ff590mr_departure_time
       - sensor.ff590mr_distance_reset
       - sensor.ff590mr_distance_start
-      - sensor.ff590mr_distance_zero_emission_reset
-      - sensor.ff590mr_eco_score_acceleration
-      - sensor.ff590mr_eco_score_bonus_range
-      - sensor.ff590mr_eco_score_constant
-      - sensor.ff590mr_eco_score_free_wheel
-      - sensor.ff590mr_eco_score_total
-      - sensor.ff590mr_electric_consumption_reset
-      - sensor.ff590mr_electric_consumption_start
       - sensor.ff590mr_fuel_level
       - sensor.ff590mr_geofencing_violation
       - sensor.ff590mr_ignition_state
       - sensor.ff590mr_liquid_consumption_reset
       - sensor.ff590mr_liquid_consumption_start
       - sensor.ff590mr_lock
-      - sensor.ff590mr_max_state_of_charge
       #- sensor.ff590mr_odometer
-      - sensor.ff590mr_range_electric
-      - sensor.ff590mr_range_liquid
       - sensor.ff590mr_rcp_features
       - sensor.ff590mr_service_interval_days
-      - sensor.ff590mr_starter_battery_state
-      - sensor.ff590mr_state_of_charge
       - sensor.ff590mr_tire_pressure_front_left
       - sensor.ff590mr_tire_pressure_front_right
       - sensor.ff590mr_tire_pressure_rear_left
