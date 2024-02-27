@@ -6,46 +6,40 @@
   schema: template
   command_topic: "shellies/shellybulb-BC8610/color/0/set"
   state_topic: "shellies/shellybulb-BC8610/color/0/status"
+  availability_topic: "shellies/shellybulb-BC8610/online"
   command_on_template: >
     {
-      "turn": "on",
-      "mode": "color",
+      "turn": "on", "mode": "color"
       {%- if red is defined and green is defined and blue is defined -%}
-        "red": {{ red }},
-        "green": {{ green }},
-        "blue": {{ blue }},
+        , "red": {{ red }}, "green": {{ green }}, "blue": {{ blue }}
       {%- endif -%}
       {%- if white_value is defined -%}
-        "white": {{ white_value }},
+        , "white": {{ white_value }}
       {%- endif -%}
       {%- if brightness is defined -%}
-        "gain": {{ (brightness/255*100) | int }},
+        , "gain": {{ (brightness/255*100) | int }}
       {%- endif -%}
       {%- if effect is defined -%}
         {%- if effect == 'Pioggia di Meteore' -%}
-          "effect": 1
+          , "effect": 1
         {%- elif effect == 'Cambio Graduale' -%}
-          "effect": 2
+          , "effect": 2
         {%- elif effect == 'Flash' -%}
-          "effect": 3
+          , "effect": 3
         {%- elif effect == 'Respiro' -%}
-          "effect": 4
+          , "effect": 4
         {%- elif effect == 'On/Off Graduale' -%}
-          "effect": 5
+          , "effect": 5
         {%- elif effect == 'Rosso/Verde' -%}
-          "effect": 6
+          , "effect": 6
         {%- else -%}
-          "effect": 0
+          , "effect": 0
         {%- endif -%}
       {%- else -%}
-        "effect": 0
+        , "effect": 0
       {%- endif -%}
     }
-  command_off_template: >
-    {
-      "turn": "off",
-      "mode": "color"
-    }
+  command_off_template: '{ "turn": "off", "mode": "color" }'
   state_template: >
     {% if value_json.ison == true and value_json.mode == "color" %}
       on
@@ -80,43 +74,40 @@
     - Respiro
     - On/Off Graduale
     - Rosso/Verde
+  payload_available: "true"
+  payload_not_available: "false"
   qos: 0
-  optimistic: true
+  optimistic: false
 
 ######################################################################
 # Living Room Couch Light (White)
 ######################################################################
 
-#- name: Luce Divano Bianca
-#  schema: template
-#  command_topic: "shellies/shellybulb-BC8610/color/0/set"
-#  state_topic: "shellies/shellybulb-BC8610/color/0/status"
-#  command_on_template: >
-#    {
-#      "turn": "on",
-#      "mode": "white",
-#      {%- if color_temp is defined -%}
-#        "temp": {{ (1000000/(((float(color_temp)-153)/354*180)+153)-35) | int }},
-#      {%- endif -%}
-#      {%- if brightness is defined -%}
-#        "brightness": {{ (brightness/255*100) | int }},
-#      {%- endif -%}
-#      "effect": 0
-#    }
-#  command_off_template: >
-#    {
-#      "turn": "off",
-#      "mode": "white",
-#      "effect": 0
-#    }
-#  state_template: >
-#    {% if value_json.ison == true and value_json.mode == "white" %}
-#      on
-#    {% else %}
-#      off
-#    {% endif %}
-#  brightness_template: '{{ (value_json.brightness/100*255)|int }}'
-#  color_temp_template: "{{ (1000000/(((float(value_json.temp)-3000)/3500*4500)+2000)) | int }}"
-#  retain: false
-#  qos: 0
-#  optimistic: true
+# - name: Luce Divano Bianca
+#   schema: template
+#   command_topic: "shellies/shellybulb-BC8610/color/0/set"
+#   state_topic: "shellies/shellybulb-BC8610/color/0/status"
+#   availability_topic: "shellies/shellybulb-BC8610/online"
+#   command_on_template: >
+#     {
+#       "turn": "on", "mode": "white"
+#       {%- if color_temp is defined -%}
+#         , "temp": {{ (1000000/(((float(color_temp)-153)/354*180)+153)-35) | int }}
+#       {%- endif -%}
+#       {%- if brightness is defined -%}
+#         , "brightness": {{ (brightness/255*100) | int }},
+#       {%- endif -%}
+#     }
+#   command_off_template: '{ "turn": "off", "mode": "white" }'
+#   state_template: >
+#     {% if value_json.ison == true and value_json.mode == "white" %}
+#       on
+#     {% else %}
+#       off
+#     {% endif %}
+#   brightness_template: '{{ (value_json.brightness/100*255)|int }}'
+#   color_temp_template: '{{ (1000000/(((float(value_json.temp)-3000)/3500*4500)+2000)) | int }}'
+#   payload_available: "true"
+#   payload_not_available: "false"
+#   qos: 0
+#   optimistic: false
