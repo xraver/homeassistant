@@ -4438,6 +4438,59 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "3584 - Luce 0x0004740000249aad"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x0004740000249aad",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x0004740000249aad",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "select.0x0004740000249aad_power_on_behavior",
+                              "template": "template_device_generic_state",
+                              "name": "Power-On"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
