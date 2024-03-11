@@ -1,9 +1,9 @@
 ######################################################################
-# Zone: CAF CISL
+# Zone Work
 ######################################################################
 
-name: CISL
-latitude: !secret cisl_latitude
-longitude: !secret cisl_longitude
-radius: 20
+name: Hitachi FR
+latitude: !secret hitachifr_latitude
+longitude: !secret hitachifr_longitude
+radius: 65
 icon: mdi:domain
