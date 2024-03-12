@@ -5,9 +5,9 @@
 exclude:
   entities:
     # Device Trackers
-    - device_tracker.a3
-    - device_tracker.a5
-    - device_tracker.s9
+    - device_tracker.giorgio_s21
+    - device_tracker.giorgio_tab_s8
+    - device_tracker.lalaura_s_phone
     - device_tracker.google_maps_115265981849847357125
     - device_tracker.google_maps_103158638433668748797
     - device_tracker.google_maps_113099283296073047871
@@ -87,6 +87,11 @@ exclude:
     - sensor.electricity_maps_intensita_della_co2
     - sensor.electricity_maps_percentuale_della_rete_di_combustibili_fossili
   entity_globs:
+    # Sun & Weather
+    - sensor.sun_*
+    - sensor.savona_*
+    - sensor.morgex_*
+    # Dockers  
     - sensor.docker_*
   domains:
     - automation
