@@ -3,6 +3,27 @@
 ######################################################################
 
 exclude:
+  domains:
+    - automation
+    - button
+    - calendar
+    - event
+    - group
+    - input_boolean
+    - input_datetime
+    - input_number
+    - input_select
+    - input_text
+    - script
+    - switch
+    - update
+  entity_globs:
+    # Sun & Weather
+    - sensor.sun_*
+    - sensor.savona_*
+    - sensor.morgex_*
+    # Dockers
+    - sensor.docker_*
   entities:
     # Device Trackers
     - device_tracker.giorgio_s21
@@ -86,24 +107,3 @@ exclude:
     # CO2
     - sensor.electricity_maps_intensita_della_co2
     - sensor.electricity_maps_percentuale_della_rete_di_combustibili_fossili
-  entity_globs:
-    # Sun & Weather
-    - sensor.sun_*
-    - sensor.savona_*
-    - sensor.morgex_*
-    # Dockers  
-    - sensor.docker_*
-  domains:
-    - automation
-    - button
-    - calendar
-    - event
-    - group
-    - input_boolean
-    - input_datetime
-    - input_number
-    - input_select
-    - input_text
-    - script
-    - switch
-    - update
