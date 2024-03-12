@@ -1718,18 +1718,14 @@
               "type": "vertical-stack",
               "cards": [
                 {
-                  "type": "custom:mushroom-title-card",
-                  "title": "Meteo",
-                  "alignment": "center"
+                  "type": "custom:clock-weather-card",
+                  "entity": "weather.savona",
+                  "title": "Savona"
                 },
                 {
-                  "type": "weather-forecast",
-                  "entity": "weather.meteo_savona",
-                  "show_forecast": true
-                },
-                {
-                  "type": "weather-forecast",
-                  "entity": "weather.meteo_morgex"
+                  "type": "custom:clock-weather-card",
+                  "entity": "weather.morgex",
+                  "title": "Morgex"
                 },
                 {
                   "type": "custom:horizon-card"
@@ -2006,33 +2002,9 @@
                   ]
                 },
                 {
-                  "type": "custom:button-card",
-                  "name": "Umidità Esterna",
-                  "label": "Shelly",
-                  "layout": "name_state",
-                  "show_state": false,
-                  "show_name": true,
-                  "show_label": false,
-                  "show_icon": false,
-                  "show_entity_picture": false,
-                  "styles": {
-                    "card": [
-                      {
-                        "background-color": "transparent"
-                      },
-                      {
-                        "box-shadow": "0px 0px 0px 0px."
-                      }
-                    ],
-                    "entity_picture": [
-                      {
-                        "width": "15%"
-                      }
-                    ]
-                  },
-                  "view_layout": {
-                    "grid-area": "header"
-                  }
+                  "type": "custom:mushroom-title-card",
+                  "title": "Umidità Esterna",
+                  "alignment": "center"
                 },
                 {
                   "type": "horizontal-stack",

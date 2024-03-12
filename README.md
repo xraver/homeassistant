@@ -34,7 +34,6 @@ The following integration are part of HACS system. Install HACS first:
 * [Monitor Docker](https://github.com/ualex73/monitor_docker)
 * [MercedeME 2020](https://github.com/ReneNulschDE/mbapi2020)
 * [pfSense integration for Home Assistant](https://github.com/travisghansen/hass-pfsense) (not currently used)
-* [Pirate Weather](https://github.com/alexander0042/pirate-weather-ha)
 * [Scheduler Component](https://github.com/nielsfaber/scheduler-component) (not currently used)
 ### Frontend
 * [auto-entities](https://github.com/thomasloven/lovelace-auto-entities)
@@ -43,6 +42,7 @@ The following integration are part of HACS system. Install HACS first:
 * [Battery State Card](https://github.com/maxwroc/battery-state-card)
 * [button-card](https://github.com/custom-cards/button-card)
 * [card-mod](https://github.com/thomasloven/lovelace-card-mod)
+* [clock-weather-card](https://github.com/pkissling/clock-weather-card)
 * [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
 * [homeassistant_electrolux_status](https://github.com/mauro-midolo/homeassistant_electrolux_status)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
@@ -54,7 +54,6 @@ The following integration are part of HACS system. Install HACS first:
 * [Mushroom](https://github.com/piitaya/lovelace-mushroom)
 * [Mushroom Themes](https://github.com/piitaya/lovelace-mushroom-themes) (not currently used)
 * [Paper Buttons Row](https://github.com/jcwillox/lovelace-paper-buttons-row) (not currently used)
-* [pirate-weather-ha](https://github.com/alexander0042/pirate-weather-ha)
 * [Plotly Graph Card](https://github.com/dbuezas/lovelace-plotly-graph-card)
 * [Reeder Dark Theme](https://github.com/hekm77/reeder_dark_theme)
 * [Scheduler Card](https://github.com/nielsfaber/scheduler-card) (not currently used)
@@ -90,7 +89,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * Mercedes Me
   * MQTT
   * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa and assign names to all devices)
-  * Pirate Weather
+  * Openweather Map (Savona + Morgex)
   * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
   * Sony Bravia
   * SpeedTest
