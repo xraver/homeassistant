@@ -204,6 +204,13 @@
                   "view_layout": {
                     "grid-area": "seventh"
                   }
+                },
+                {
+                  "type": "custom:clock-weather-card",
+                  "entity": "weather.savona",
+                  "view_layout": {
+                    "grid-area": "eighth"
+                  }
                 }
               ],
               "layout": {
@@ -1718,14 +1725,28 @@
               "type": "vertical-stack",
               "cards": [
                 {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Meteo Savona",
+                  "alignment": "center"
+                },
+                {
                   "type": "custom:clock-weather-card",
-                  "entity": "weather.savona",
-                  "title": "Savona"
+                  "entity": "weather.savona"
+                },
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Meteo Morgex",
+                  "alignment": "center"
                 },
                 {
                   "type": "custom:clock-weather-card",
                   "entity": "weather.morgex",
                   "title": "Morgex"
+                },
+                {
+                  "type": "custom:mushroom-title-card",
+                  "title": "Sole",
+                  "alignment": "center"
                 },
                 {
                   "type": "custom:horizon-card"
