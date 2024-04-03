@@ -22,6 +22,8 @@ homeassistant:
       <<: *customize
     input_boolean.update_shelly:
       <<: *customize
+    input_boolean.update_bticino:
+      <<: *customize
     group.update:
       <<: *customize
     automation.update_hacs_notification:

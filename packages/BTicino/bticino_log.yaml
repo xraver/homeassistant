@@ -13,6 +13,14 @@ logbook:
       - switch.0x0004740001583a4a_led_if_on
       - switch.0x0004740001583a4a_led_in_dark
 
+      # BTI-4411C - Dimmer 0x0004740000254d99
+      - select.0x0004740000254d99_identify
+      - number.0x0004740000254d99_ballast_maximum_level
+      - number.0x0004740000254d99_ballast_minimum_level
+      - switch.0x0004740000254d99_device_mode
+      - switch.0x0004740000254d99_led_if_on
+      - switch.0x0004740000254d99_led_in_dark
+
       # BTI-NT4027C - Tapparella 0x000474000159053e
       - select.0x000474000159053e_identify
       - select.0x000474000159053e_calibration_mode
@@ -48,6 +56,14 @@ recorder:
       - switch.0x0004740001583a4a_device_mode
       - switch.0x0004740001583a4a_led_if_on
       - switch.0x0004740001583a4a_led_in_dark
+
+      # BTI-4411C - Dimmer 0x0004740000254d99
+      - select.0x0004740000254d99_identify
+      - number.0x0004740000254d99_ballast_maximum_level
+      - number.0x0004740000254d99_ballast_minimum_level
+      - switch.0x0004740000254d99_device_mode
+      - switch.0x0004740000254d99_led_if_on
+      - switch.0x0004740000254d99_led_in_dark
 
       # BTI-NT4027C - Tapparella 0x000474000159053e
       - select.0x000474000159053e_identify

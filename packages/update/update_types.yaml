@@ -17,7 +17,13 @@ input_boolean:
 
   # Shelly
   update_shelly:
-    name: Aggiornamento Shelly
+    name: Aggiornamenti Shelly
+    initial: off
+    icon: mdi:package-up
+
+  # BTicino
+  update_bticino:
+    name: Aggiornamenti BTicino
     initial: off
     icon: mdi:package-up
 
@@ -37,3 +43,4 @@ group:
       #- input_boolean.update_homeassistant
       - input_boolean.update_hacs
       - input_boolean.update_shelly
+      - input_boolean.update_bticino

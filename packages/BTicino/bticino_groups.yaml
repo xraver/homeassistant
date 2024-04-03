@@ -1,0 +1,17 @@
+######################################################################
+# BTicino Package - Group
+######################################################################
+
+group:
+  bticino:
+    name: BTicino Devices
+    icon: mdi:alpha-b-box
+    entities:
+      - update.0x0004740001583a4a
+      - update.0x0004740000254d99
+      - update.0x000474000159053e
+      - update.0x000474000025912a
+      - update.0x00047400002599cf
+      - update.0x0004740000249a4e
+      - update.0x000474000015be6b
+      - update.0x0004740000249aad

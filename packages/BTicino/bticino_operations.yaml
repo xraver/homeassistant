@@ -1,0 +1,44 @@
+
+######################################################################
+# BTicino Package - Operations Script
+######################################################################
+
+automation:
+  ######################################################################
+  # BTicino: Update Notification
+  ######################################################################
+  - alias: "BTicino: Update Notification"
+    variables:
+      pending_update_list: >
+        {{ states.update
+          | selectattr('state','eq','on')
+          | selectattr('entity_id', 'in', states.group.bticino.attributes.entity_id)
+          | map(attribute='entity_id')
+          | list
+        }}
+    trigger:
+      - platform: state
+        entity_id: group.bticino
+        to: 'on'
+      - platform: homeassistant
+        event: start
+
+    condition:
+      condition: state
+      entity_id: group.bticino
+      state: 'on'
+
+    action:
+      - delay: '00:00:10'
+      - service: script.notify_text
+        data_template:
+          title: "BTicino - Aggiornamento"
+          message: >
+            Sono disponibili {{pending_update_list | count }} aggiornamenti per i dispositivi BTicino:
+            {% for entity_id in pending_update_list %}
+                -> {{ state_attr(entity_id, 'friendly_name')|replace(" - Aggiornamento Firmware", "") }}: {{ state_attr(entity_id, 'latest_version') }}
+            {%- endfor -%}
+          notification_id: "update"
+          enable_persistent: true
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.update_bticino

@@ -65,6 +65,7 @@ automation:
       entity_id:
         - input_boolean.update_hacs
         - input_boolean.update_shelly
+        - input_boolean.update_bticino
       to: 'off'
 
     action:
