@@ -72,5 +72,5 @@ homeassistant:
       <<: *customize
     script.climate_away_mode_off:
       <<: *customize
-    automation.termosifoni_sincronizzazione_con_riscaldamentocentralizzato:
+    automation.termosifoni_sincronizzazione_con_riscaldamento_centralizzato:
       <<: *customize
