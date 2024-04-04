@@ -33,6 +33,7 @@ automation:
   # Switch On Valve
   ######################################################################
   - alias: "Termosifoni: Accensione"
+    id: "termosifoni_accensione"
 
     trigger:
       platform: state
@@ -63,14 +64,15 @@ automation:
   # Switch Off Valve
   ######################################################################
   - alias: "Termosifoni: Spegnimento"
+    id: "termosifoni_spegnimento"
 
     trigger:
       platform: state
       entity_id: input_boolean.valvola_cucina,
-                  input_boolean.valvola_sala,
-                  input_boolean.valvola_studio,
-                  input_boolean.valvola_bagno,
-                  input_boolean.valvola_camera
+                 input_boolean.valvola_sala,
+                 input_boolean.valvola_studio,
+                 input_boolean.valvola_bagno,
+                 input_boolean.valvola_camera
       to: 'off'
 
     action:

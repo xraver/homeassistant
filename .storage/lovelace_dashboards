@@ -32,13 +32,13 @@
         "id": "lovelace_devices"
       },
       {
-        "id": "map",
-        "icon": "mdi:map",
-        "title": "Map",
-        "url_path": "map",
-        "require_admin": false,
+        "id": "dashboard_mappa",
         "show_in_sidebar": true,
-        "mode": "storage"
+        "icon": "mdi:map",
+        "title": "Mappa",
+        "require_admin": false,
+        "mode": "storage",
+        "url_path": "dashboard-mappa"
       }
     ]
   }
