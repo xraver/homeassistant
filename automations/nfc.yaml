@@ -2,10 +2,11 @@
 # NFC: Notification
 ######################################################################
 
-- id: nfc_scan_notification
-  alias: "NFC Notifica Scansione"
+- alias: "NFC Notifica Scansione"
+  id: "nfc_notifica_scansione"
   mode: single
   max_exceeded: silent
+
   variables:
     allowed_devices:
       !secret giorgio_smartphone_nfc:

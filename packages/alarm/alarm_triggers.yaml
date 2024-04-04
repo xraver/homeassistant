@@ -10,6 +10,7 @@ automation:
   # - script.start_alarm
   ######################################################################
   - alias: "Allarmi: Porta Casa"
+    id: "allarmi_porta_casa"
 
     trigger:
       - platform: state
@@ -35,6 +36,7 @@ automation:
   # - script.start_alarm
   ######################################################################
   - alias: "Allarmi: Perdita Acqua"
+    id: "allarmi_perdita_acqua"
 
     trigger:
       - platform: state
@@ -56,6 +58,7 @@ automation:
   # - script.start_alarm
   ######################################################################
   - alias: "Allarmi: Auto"
+    id: "allarmi_auto"
 
     trigger:
       - platform: state

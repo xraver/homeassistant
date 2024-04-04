@@ -64,6 +64,7 @@ automation:
   # Guard Mode: Enable
   ######################################################################
   - alias: "Modalità Guardia: Attivazione"
+    id: "modalita_guardia_attivazione"
 
     trigger:
       - platform: state
@@ -83,6 +84,7 @@ automation:
   # Guard Mode: Disable
   ######################################################################
   - alias: "Modalità Guardia: Disattivazione"
+    id: "modalita_guardia_disattivazione"
 
     trigger:
       - platform: state

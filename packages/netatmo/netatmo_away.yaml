@@ -42,6 +42,7 @@ automation:
   # Sync with central heating
   ######################################################################
   - alias: "Termosifoni: Sincronizzazione con Riscaldamento Centralizzato"
+    id: "termosifoni_sincronizzazione_con_riscaldamento_centralizzato"
 
     trigger:
       - platform: state

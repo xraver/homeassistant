@@ -62,6 +62,7 @@ automation:
   # - script.turn_on
   ######################################################################
   - alias: "Riscaldamento Centralizzato"
+    id: "riscaldamneto_centralizzato"
 
     trigger:
       - platform: homeassistant

@@ -4,6 +4,7 @@
 ######################################################################
 
 - alias: "Modalità Notte"
+  id: "modalita_notte"
   initial_state: false
 
   trigger:

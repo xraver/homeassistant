@@ -29,6 +29,7 @@ automation:
   # - script.stop_alarm
   ######################################################################
   - alias: "Allarmi: Riconoscimento Allarmi"
+    id: "allarmi_riconoscimento_allarmi"
 
     trigger:
       platform: state

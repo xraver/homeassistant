@@ -3,6 +3,7 @@
 ######################################################################
 
 - alias: "Home Assistant - Startup: Restart on Error"
+  id: "home_assistant_startup_restart_on_error"
 
   trigger:
     - platform: homeassistant
@@ -20,6 +21,7 @@
 ######################################################################
 
 - alias: "Home Assistant - Startup: Google Sync"
+  id: "home_assistant_startup_google_sync"
 
   trigger:
     - platform: homeassistant

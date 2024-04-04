@@ -8,6 +8,8 @@ automation:
   # BTicino: Update Notification
   ######################################################################
   - alias: "BTicino: Update Notification"
+    id: "bticino_update_notification"
+
     variables:
       pending_update_list: >
         {{ states.update
@@ -16,6 +18,7 @@ automation:
           | map(attribute='entity_id')
           | list
         }}
+
     trigger:
       - platform: state
         entity_id: group.bticino

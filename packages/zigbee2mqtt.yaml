@@ -226,6 +226,7 @@ automation:
   # Automation to start timer when enable join is turned on
   ######################################################################
   - alias: "Zigbee2MQTT: Abilita Join"
+    id: "zigbee2mqtt_abilita_join"
     trigger:
       platform: state
       entity_id: switch.zigbee2mqtt_bridge_permit_join
@@ -240,6 +241,7 @@ automation:
   # Automation to stop timer when switch turned off and turn off switch when timer finished
   ######################################################################
   - alias: "Zigbee2MQTT: Disabilita Join"
+    id: "zigbee2mqtt_disabilita_join"
     trigger:
       - platform: event
         event_type: timer.finished
@@ -259,6 +261,7 @@ automation:
   # Automation to notify when a device joined zigbee2mqtt network
   ######################################################################
   - alias: "Zigbee2MQTT: Device aggiunto alla rete Zigbee2mqtt"
+    id: "zigbee2mqtt_device_aggiunto_alla_rete_zigbee2mqtt"
     trigger:
       platform: mqtt
       topic: 'zigbee2mqtt/bridge/event'
@@ -278,6 +281,7 @@ automation:
   # Automation to restart zigbee2mqtt (startup or bridge offline for 1m)
   ######################################################################
   - alias: "Zigbee2MQTT: Restart Automation"
+    id: "zigbee2mqtt_restart_automation"
     trigger:
       - platform: homeassistant
         event: start

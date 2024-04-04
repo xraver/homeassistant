@@ -3,6 +3,7 @@
 ######################################################################
 
 - alias: "Home Assistant - Modalità Test: Azione on"
+  id: "home_assistant_modalita_test_azione_on"
 
   trigger:
     - platform: state
@@ -22,6 +23,7 @@
 ######################################################################
 
 - alias: "Home Assistant - Modalità Test: Azione off"
+  id: "home_assistant_modalita_test_azione_off"
 
   trigger:
     - platform: state

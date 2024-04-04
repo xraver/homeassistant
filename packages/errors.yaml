@@ -63,7 +63,8 @@ automation:
   # Error generation
   # - input_boolean.turn_on
   ######################################################################
-  - alias: "Home Assistant -  Errori: Insorgenza Errore"
+  - alias: "Home Assistant - Errori: Insorgenza Errore"
+    id: "home_assistant_errori_insorgenza_errore"
 
     trigger:
       - event_data:
@@ -88,7 +89,8 @@ automation:
   # Error removal
   # - input_boolean.turn_off
   ######################################################################
-  - alias: "Home Assistant -  Errori: Scomparsa Errore"
+  - alias: "Home Assistant - Errori: Scomparsa Errore"
+    id: "home_assistant_errori_scomparsa_errore"
 
     trigger:
       - event_data:

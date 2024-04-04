@@ -3,11 +3,12 @@
 ######################################################################
 
 - alias: "Allarmi: Consumo Energetico Elevato"
+  id: "allarmi_consumo_energetico_elevato"
 
   trigger:
     - platform: numeric_state
       entity_id: sensor.shelly_em_channel_1_power
-      above: 2950
+      above: 3200
 
   action:
     service: script.notify_all

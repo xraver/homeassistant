@@ -7,6 +7,7 @@ automation:
   # Automation to manage cover in away mode
   ######################################################################
   - alias: "Modalità Vacanza: Gestione Tapparelle"
+    id: "modalita_vacanza_gestione_tapparelle"
     #initial_state: 'on'
 
     trigger:

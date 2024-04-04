@@ -4,6 +4,7 @@
 ######################################################################
 
 - alias: "Risveglio Giorgio"
+  id: "risveglio_giorgio"
   #initial_state: 'on'
 
   trigger:

@@ -33,6 +33,7 @@ automation:
   # Automation: Start Boost
   ######################################################################
   - alias: "Termosifoni: Attivazione Boost"
+    id: "termosifoni_attivazione_boost"
     mode: parallel
 
     trigger:
@@ -79,6 +80,7 @@ automation:
   # Automation: Stop Boost
   ######################################################################
   - alias: "Termosifoni: Disattivazione Boost"
+    id: "termosifoni_disattivazione_boost"
     mode: parallel
 
     trigger:

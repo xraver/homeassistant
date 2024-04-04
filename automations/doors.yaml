@@ -9,6 +9,7 @@
 ######################################################################
 
 - alias: "Porta Casa: Accendi Luci - Corridoio"
+  id: "porta_casa_accendi_luci_corridoio"
   mode: single
 
   trigger:

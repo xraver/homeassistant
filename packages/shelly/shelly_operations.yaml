@@ -40,6 +40,8 @@ automation:
   # Shelly: Update Notification
   ######################################################################
   - alias: "Shelly: Update Notification"
+    id: "shelly_update_notification"
+
     variables:
       pending_update_list: >
         {{ states.update
@@ -48,6 +50,7 @@ automation:
           | map(attribute='entity_id')
           | list
         }}
+
     trigger:
       - platform: state
         entity_id: group.shelly

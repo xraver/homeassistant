@@ -3,6 +3,7 @@
 ######################################################################
 
 - alias: "Home Assistant - Temi: Modalità Giorno/Notte"
+  id: "home_assistant_temi_modalita_giorno_notte"
 
   trigger:
     - platform: homeassistant

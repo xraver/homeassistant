@@ -6,6 +6,7 @@
 ######################################################################
 
 - alias: Saluto di benvenuto
+  id: "saluto_di_benvenuto"
   mode: parallel
 
   trigger:

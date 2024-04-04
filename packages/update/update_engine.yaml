@@ -14,9 +14,9 @@ automation:
   ######################################################################
   # Update Notification: HACS
   ######################################################################
-  - id: "update_hacs_notification"
-    alias: "Update: HACS Notification"
-
+  - alias: "Update: HACS Notification"
+    id: "update_hacs_notification"
+    
     trigger:
       - platform: numeric_state
         entity_id: sensor.hacs
@@ -57,8 +57,8 @@ automation:
   # Actions:
   # - persistent_notification.dismiss
   ######################################################################
-  - id: "update_acknowledgment"
-    alias: "Update: Riconoscimento Aggiornamenti"
+  - alias: "Update: Riconoscimento Aggiornamenti"
+    id: "update_riconoscimento_aggiornamenti"
 
     trigger:
       platform: state
