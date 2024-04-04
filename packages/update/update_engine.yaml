@@ -16,7 +16,7 @@ automation:
   ######################################################################
   - alias: "Update: HACS Notification"
     id: "update_hacs_notification"
-    
+
     trigger:
       - platform: numeric_state
         entity_id: sensor.hacs

@@ -48,8 +48,7 @@ exclude:
     - binary_sensor.speech_notifications
     - binary_sensor.text_notifications
     - sensor.current_version
-    - sensor.cert_expiry_server_giorgioravera_it
-    - sensor.cert_expiry_timestamp_server_giorgioravera_it
+    - sensor.server_giorgioravera_it_scadenza_del_certificato
     # Energy Sensors
     - sensor.consumo_energetico_giornaliero
     - sensor.consumo_energetico_mensile

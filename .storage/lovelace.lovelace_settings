@@ -87,7 +87,7 @@
                       "entity": "sensor.current_version"
                     },
                     {
-                      "entity": "sensor.cert_expiry_timestamp_server_giorgioravera_it"
+                      "entity": "sensor.server_giorgioravera_it_scadenza_del_certificato"
                     },
                     {
                       "entity": "group.update"

@@ -2,5 +2,5 @@
 # Customization: Certificates
 ######################################################################
 
-sensor.cert_expiry_timestamp_server_giorgioravera_it:
+sensor.server_giorgioravera_it_scadenza_del_certificato:
   friendly_name: Scadenza Certificato SSL
