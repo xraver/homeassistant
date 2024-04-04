@@ -942,60 +942,6 @@
           ]
         },
         {
-          "icon": "mdi:account-multiple",
-          "id": "people",
-          "title": "People",
-          "path": "people",
-          "badges": [
-            {
-              "entity": "person.giorgio"
-            },
-            {
-              "entity": "person.laura"
-            },
-            {
-              "entity": "person.anna"
-            },
-            {
-              "entity": "person.assunta"
-            }
-          ],
-          "cards": [
-            {
-              "default_zoom": 15,
-              "entities": [
-                "person.giorgio"
-              ],
-              "hours_to_show": 24,
-              "type": "map"
-            },
-            {
-              "default_zoom": 15,
-              "entities": [
-                "person.laura"
-              ],
-              "hours_to_show": 24,
-              "type": "map"
-            },
-            {
-              "default_zoom": 15,
-              "entities": [
-                "person.anna"
-              ],
-              "hours_to_show": 24,
-              "type": "map"
-            },
-            {
-              "default_zoom": 15,
-              "entities": [
-                "person.assunta"
-              ],
-              "hours_to_show": 24,
-              "type": "map"
-            }
-          ]
-        },
-        {
           "title": "Auto",
           "type": "custom:grid-layout",
           "layout": {
@@ -1504,6 +1450,60 @@
               "view_layout": {
                 "grid-area": "pad2"
               }
+            }
+          ]
+        },
+        {
+          "icon": "mdi:account-multiple",
+          "id": "people",
+          "title": "People",
+          "path": "people",
+          "badges": [
+            {
+              "entity": "person.giorgio"
+            },
+            {
+              "entity": "person.laura"
+            },
+            {
+              "entity": "person.anna"
+            },
+            {
+              "entity": "person.assunta"
+            }
+          ],
+          "cards": [
+            {
+              "default_zoom": 15,
+              "entities": [
+                "person.giorgio"
+              ],
+              "hours_to_show": 24,
+              "type": "map"
+            },
+            {
+              "default_zoom": 15,
+              "entities": [
+                "person.laura"
+              ],
+              "hours_to_show": 24,
+              "type": "map"
+            },
+            {
+              "default_zoom": 15,
+              "entities": [
+                "person.anna"
+              ],
+              "hours_to_show": 24,
+              "type": "map"
+            },
+            {
+              "default_zoom": 15,
+              "entities": [
+                "person.assunta"
+              ],
+              "hours_to_show": 24,
+              "type": "map"
             }
           ]
         },

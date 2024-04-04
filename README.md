@@ -37,7 +37,7 @@ The following integration are part of HACS system. Install HACS first:
 * [Scheduler Component](https://github.com/nielsfaber/scheduler-component) (not currently used)
 ### Frontend
 * [auto-entities](https://github.com/thomasloven/lovelace-auto-entities)
-* [badge-Card](https://github.com/thomasloven/lovelace-auto-entities)
+* [badge-Card](https://github.com/thomasloven/lovelace-badge-card)
 * [Bar Card](https://github.com/custom-cards/bar-card)
 * [Battery State Card](https://github.com/maxwroc/battery-state-card)
 * [button-card](https://github.com/custom-cards/button-card)
@@ -47,6 +47,7 @@ The following integration are part of HACS system. Install HACS first:
 * [homeassistant_electrolux_status](https://github.com/mauro-midolo/homeassistant_electrolux_status)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
 * [Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)
+* [history-explorer-card](https://github.com/alexarch21/history-explorer-card)
 * [hui-element](https://github.com/thomasloven/lovelace-hui-element)
 * [layout-card](https://github.com/thomasloven/lovelace-layout-card)
 * [Lovelace Swipe Navigation](https://github.com/maykar/lovelace-swipe-navigation)
@@ -95,6 +96,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * SpeedTest
   * UPNP
   * Version (local)
+* Create labels for different devices type (Acqua, BTicino, Elettrodomestici, Energia, Luci, Multimedia, Netatmo, Porte e Finestre, Tapparelle, Temperatura, Shelly, zigbee2mqtt)
 * Restart Home Assistant
 
 ## Editor
