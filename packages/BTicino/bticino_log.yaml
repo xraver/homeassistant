@@ -10,6 +10,7 @@ logbook:
       - number.0x0004740001583a4a_ballast_maximum_level
       - number.0x0004740001583a4a_ballast_minimum_level
       - switch.0x0004740001583a4a_device_mode
+      - select.0x0004740001583a4a_power_on_behavior
       - switch.0x0004740001583a4a_led_if_on
       - switch.0x0004740001583a4a_led_in_dark
 
@@ -18,6 +19,7 @@ logbook:
       - number.0x0004740000254d99_ballast_maximum_level
       - number.0x0004740000254d99_ballast_minimum_level
       - switch.0x0004740000254d99_device_mode
+      - select.0x0004740000254d99_power_on_behavior
       - switch.0x0004740000254d99_led_if_on
       - switch.0x0004740000254d99_led_in_dark
 
@@ -54,6 +56,7 @@ recorder:
       - number.0x0004740001583a4a_ballast_maximum_level
       - number.0x0004740001583a4a_ballast_minimum_level
       - switch.0x0004740001583a4a_device_mode
+      - select.0x0004740001583a4a_power_on_behavior
       - switch.0x0004740001583a4a_led_if_on
       - switch.0x0004740001583a4a_led_in_dark
 
@@ -62,6 +65,7 @@ recorder:
       - number.0x0004740000254d99_ballast_maximum_level
       - number.0x0004740000254d99_ballast_minimum_level
       - switch.0x0004740000254d99_device_mode
+      - select.0x0004740000254d99_power_on_behavior
       - switch.0x0004740000254d99_led_if_on
       - switch.0x0004740000254d99_led_in_dark
 
