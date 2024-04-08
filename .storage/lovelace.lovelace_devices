@@ -4178,7 +4178,75 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "NT4027C - Tapparella 0x0004740001583a4a"
+                  "label": "4411C - Dimmer 0x0004740000254d99"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_4411C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x0004740000254d99",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x0004740000254d99",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "switch.0x0004740000254d99_device_mode",
+                              "icon": "mdi:lightbulb-on-50",
+                              "show_state": false
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "switch.0x0004740000254d99_led_in_dark",
+                              "icon": "mdi:led-outline",
+                              "show_state": false
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "switch.0x0004740000254d99_led_if_on",
+                              "icon": "mdi:led-outline",
+                              "show_state": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "NT4027C - Tapparella 0x000474000159053e"
                 },
                 {
                   "type": "custom:hui-element",
@@ -4504,7 +4572,7 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "4411C - Dimmer 0x0004740000254d99"
+                  "label": "3584 - Luce 0x00047400002790a6"
                 },
                 {
                   "type": "custom:hui-element",
@@ -4516,7 +4584,7 @@
                         {
                           "type": "picture",
                           "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/BTicino/BTI_4411C.png",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
                           "tap_action": {
                             "action": "none"
                           }
@@ -4527,35 +4595,126 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x0004740000254d99",
+                              "entity": "light.0x00047400002790a6",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x0004740000254d99",
+                              "entity": "update.0x00047400002790a6",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
+                              "entity": "select.0x00047400002790a6_power_on_behavior",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000254d99_device_mode",
-                              "icon": "mdi:lightbulb-on-50",
-                              "show_state": false
-                            },
+                              "name": "Power-On"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "3584 - Luce 0x0004740000282606"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000254d99_led_in_dark",
-                              "icon": "mdi:led-outline",
-                              "show_state": false
+                              "entity": "light.0x0004740000282606",
+                              "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x0004740000282606",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "select.0x0004740000282606_power_on_behavior",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000254d99_led_if_on",
-                              "icon": "mdi:led-outline",
-                              "show_state": false
+                              "name": "Power-On"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "3584 - Luce 0x0004740000279162"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/BTicino/BTI_3584C.png",
+                          "tap_action": {
+                            "action": "none"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "light.0x0004740000279162",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.0x0004740000279162",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "entity": "select.0x0004740000279162_power_on_behavior",
+                              "template": "template_device_generic_state",
+                              "name": "Power-On"
                             }
                           ]
                         }
