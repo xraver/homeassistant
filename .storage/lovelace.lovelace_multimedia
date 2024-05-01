@@ -1344,11 +1344,18 @@
                       "type": "entity-button"
                     },
                     {
+                      "show_name": true,
+                      "show_icon": true,
                       "entity": "script.laura_voice",
                       "icon": "mdi:numeric-9",
-                      "name": null,
-                      "show_name": false,
-                      "show_icon": false,
+                      "name": "Fammi mangiare",
+                      "tap_action": {
+                        "action": "call-service",
+                        "service": "script.turn_on",
+                        "service_data": {
+                          "entity_id": "script.laura_voice_9"
+                        }
+                      },
                       "type": "entity-button"
                     }
                   ],

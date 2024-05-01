@@ -115,6 +115,13 @@ laura_voice_8:
       data:
         type: '8'
 
+laura_voice_9:
+  alias: Voce Laura 9
+  sequence:
+    - service: script.laura_voice
+      data:
+        type: '9'
+
 ######################################################################
 # Script: Babu Frik
 # Inputs:
