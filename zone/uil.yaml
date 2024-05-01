@@ -1,0 +1,9 @@
+######################################################################
+# Zone UIL
+######################################################################
+
+name: UIL
+latitude: !secret uil_latitude
+longitude: !secret uil_longitude
+radius: 65
+icon: mdi:domain
