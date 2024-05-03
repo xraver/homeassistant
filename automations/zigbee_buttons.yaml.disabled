@@ -1,14 +1,17 @@
 ######################################################################
 # Zigbee Buttons: Wireless Switch - Single Click
 ######################################################################
-- alias: wireless_button_single
+- alias: "wireless_button_single"
+  id: 'wireless_button_single'
+
   trigger:
-  - domain: mqtt
-    platform: device
-    device_id: 1862406b0bce11ebafd827a04c0fe3f3
-    discovery_id: 0x00158d0004081917 action_single
-    type: action
-    subtype: action_single
+    - domain: mqtt
+      platform: device
+      device_id: 438f9a7754246f4c5b02f7560706eb59
+      discovery_id: 0x00158d0004081917 single
+      type: action
+      subtype: single
+
   action:
     - service: light.toggle
       entity_id: light.luce_corridoio
@@ -16,14 +19,17 @@
 ######################################################################
 # Zigbee Buttons: Wireless Switch - Double Click
 ######################################################################
-- alias: wireless_button_double
+- alias: 'wireless_button_double'
+  id: 'wireless_button_double'
+
   trigger:
-  - domain: mqtt
-    platform: device
-    device_id: 1862406b0bce11ebafd827a04c0fe3f3
-    discovery_id: 0x00158d0004081917 action_double
-    type: action
-    subtype: action_double
+    - domain: mqtt
+      platform: device
+      device_id: 438f9a7754246f4c5b02f7560706eb59
+      discovery_id: 0x00158d0004081917 action_double
+      type: action
+      subtype: action_double
+
   action:
     - service: light.toggle
       entity_id: light.luce_sala
@@ -31,29 +37,35 @@
 ######################################################################
 # Zigbee Buttons: Wireless Switch - Triple Click
 ######################################################################
-- alias: wireless_button_triple
+- alias: 'wireless_button_triple'
+  id: 'wireless_button_triple'
+
   trigger:
-  - domain: mqtt
-    platform: device
-    device_id: 1862406b0bce11ebafd827a04c0fe3f3
-    discovery_id: 0x00158d0004081917 action_triple
-    type: action
-    subtype: action_triple
+    - domain: mqtt
+      platform: device
+      device_id: 438f9a7754246f4c5b02f7560706eb59
+      discovery_id: 0x00158d0004081917 action_triple
+      type: action
+      subtype: action_triple
+
   action:
     - service: light.toggle
       entity_id: light.luce_studio
 
 ######################################################################
-# Zigbee Buttons: Wireless Switch - Long Click
+# Zigbee Buttons: Wireless Switch - Hold Click
 ######################################################################
-- alias: wireless_button_long
+- alias: 'wireless_button_hold'
+  id: 'wireless_button_hold'
+
   trigger:
-  - domain: mqtt
-    platform: device
-    device_id: 1862406b0bce11ebafd827a04c0fe3f3
-    discovery_id: 0x00158d0004081917 click_long
-    type: action
-    subtype: click_long
+    - domain: mqtt
+      platform: device
+      device_id: 438f9a7754246f4c5b02f7560706eb59
+      discovery_id: 0x00158d0004081917 hold
+      type: action
+      subtype: hold
+
   action:
     - service: light.toggle
       entity_id: light.luci_casa
