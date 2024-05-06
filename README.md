@@ -98,6 +98,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * UPNP
   * Version (local)
 * Create labels for different devices type (Acqua, BTicino, Elettrodomestici, Energia, Luci, Multimedia, Netatmo, Porte e Finestre, Tapparelle, Temperatura, Shelly, zigbee2mqtt)
+* Enable Zigbee2MQTT Network Map under Zigbee2MQTT Bridge and set "Power-on behavior" attribute to all zigbee2mqtt devices to previous
 * Restart Home Assistant
 
 ## Editor
