@@ -48,7 +48,7 @@ The following integration are part of HACS system. Install HACS first:
 * [Lovelace Horizon Card](https://github.com/rejuvenate/lovelace-horizon-card)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
 * [Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)
-* [history-explorer-card](https://github.com/alexarch21/history-explorer-card)
+* [history-explorer-card](https://github.com/SpangleLabs/history-explorer-card)
 * [hui-element](https://github.com/thomasloven/lovelace-hui-element)
 * [layout-card](https://github.com/thomasloven/lovelace-layout-card)
 * [Lovelace Swipe Navigation](https://github.com/maykar/lovelace-swipe-navigation)
