@@ -7,9 +7,10 @@ group:
     name: BTicino Devices
     icon: mdi:alpha-b-box
     entities:
-      - update.0x0004740001583a4a
+      # Dimmers
       - update.0x0004740000254d99
-      - update.0x000474000159053e
+      - update.0x0004740001583a4a
+      # Lights
       - update.0x000474000025912a
       - update.0x00047400002599cf
       - update.0x0004740000249a4e
@@ -18,3 +19,14 @@ group:
       - update.0x00047400002790a6
       - update.0x0004740000282606
       - update.0x0004740000279162
+      - update.0x000474000015de7e
+      - update.0x000474000159053e
+      - update.0x000474000015ded8
+      # Covers
+      - update.0x000474000159053e
+      - update.0x00047400015a3e19
+      - update.0x00047400015ada4b
+      - update.0x00047400015adb10
+      - update.0x00047400015ada3d
+      - update.0x00047400015ada3f
+
