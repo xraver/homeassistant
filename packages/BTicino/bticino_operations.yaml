@@ -2,6 +2,25 @@
 # BTicino Package - Operations Script
 ######################################################################
 
+script:
+  ######################################################################
+  # BTicino: Upgrade
+  ######################################################################
+  bticino_upgrade:
+    alias: "BTicino: Aggiornamento Firmware Collettivo"
+    variables:
+      pending_update_list: >
+        {{ states.update
+          | selectattr('state','eq','on')
+          | selectattr('entity_id', 'in', states.group.bticino.attributes.entity_id)
+          | map(attribute='entity_id')
+          | list
+        }}
+    sequence:
+      - service: update.install
+        target:
+          entity_id: '{{ pending_update_list }}'
+
 automation:
   ######################################################################
   # BTicino: Update Notification

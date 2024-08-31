@@ -3,12 +3,6 @@
 ######################################################################
 
 input_boolean:
-  # Home Assistant
-  #update_homeassistant:
-  #  name: Aggiornamento Home Assistant
-  #  initial: off
-  #  icon: mdi:cellphone-arrow-down
-
   # HACS
   update_hacs:
     name: Aggiornamenti HACS

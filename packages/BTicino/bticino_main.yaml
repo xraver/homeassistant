@@ -1,34 +1,27 @@
 ######################################################################
-# Update Package - Main
+# BTcino Customizations
 ######################################################################
 
 homeassistant:
   customize:
 
     ######################################################################
-    # Update Package - Main - General Package Settings
+    # BTcino Customizations - General Package Settings
     ######################################################################
 
-    package.update:
+    package.bticino:
       customize: &customize
-        package: 'update'
-        version: 1.0.0
+        package: 'bticino'
+        version: 0.0.5
 
     ######################################################################
-    # Update Package - Main - Entities
+    # BTcino Customizations - Entities
     ######################################################################
 
-    group.update:
+    group.bticino:
       <<: *customize
-    input_boolean.update_hacs:
+    script.bticino_upgrade:
       <<: *customize
-    input_boolean.update_shelly:
-      <<: *customize
-    input_boolean.update_bticino:
-      <<: *customize
-    automation.update_hacs_notification:
-      <<: *customize
-    automation.update_update_acknowledgment:
-      <<: *customize
-    script.hacs_upgrade:
       icon: mdi:package-up
+    automation.bticino_update_notification:
+      <<: *customize
