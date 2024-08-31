@@ -38,9 +38,42 @@ group:
   ######################################################################
   update:
     name: Aggiornamenti Disponibili
-    icon: mdi:package-up
+    icon: mdi:package-check
     entities:
-      #- input_boolean.update_homeassistant
       - input_boolean.update_hacs
       - input_boolean.update_shelly
       - input_boolean.update_bticino
+
+  hacs:
+    name: HACS modules
+    icon: mdi:alpha-h-box
+    entities:
+      - update.auto_entities_update
+      - update.badge_card_update
+      - update.bar_card_update
+      - update.battery_state_card_entity_row_update
+      - update.browser_mod_update
+      - update.button_card_update
+      - update.card_mod_update
+      - update.clock_weather_card_update
+      - update.darkish_theme_update
+      - update.electrolux_care_integration_v2_not_official_update
+      - update.fold_entity_row_update
+      - update.hacs_update
+      - update.home_assistant_swipe_navigation_update
+      - update.horizon_card_update
+      - update.hui_element_update
+      - update.layout_card_update
+      - update.mercedesme_2020_update
+      - update.mini_graph_card_update
+      - update.monitor_docker_update
+      - update.mushroom_themes_update
+      - update.mushroom_update
+      - update.paper_buttons_row_update
+      - update.plotly_graph_card_update
+      - update.reeder_dark_theme_update
+      - update.shelly_em_firmware_update
+      - update.shutter_card_update
+      - update.tabbed_card_update
+      - update.vertical_stack_in_card_update
+      - update.zigbee2mqtt_networkmap_card_update

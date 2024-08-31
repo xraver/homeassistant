@@ -14,9 +14,6 @@ script.homeassistant_reload_automations:
 script.homeassistant_clearlog:
   icon: mdi:file-document
 
-script.homeassistant_upgrade:
-  icon: mdi:update
-
 script.homeassistant_google_home_sync:
   icon: mdi:google-assistant
 

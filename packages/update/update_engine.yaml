@@ -17,37 +17,39 @@ automation:
   - alias: "Update: HACS Notification"
     id: "update_hacs_notification"
 
-    trigger:
-      - platform: numeric_state
-        entity_id: sensor.hacs
-        above: 0
+    variables:
+      pending_update_list: >
+        {{ states.update
+          | selectattr('state','eq','on')
+          | selectattr('entity_id', 'in', states.group.hacs.attributes.entity_id)
+          | map(attribute='entity_id')
+          | list
+        }}
 
+    trigger:
+      - platform: state
+        entity_id: group.hacs
+        to: 'on'
       - platform: homeassistant
         event: start
 
     condition:
-      condition: numeric_state
-      entity_id: sensor.hacs
-      above: 0
+      condition: state
+      entity_id: group.hacs
+      state: 'on'
 
     action:
-      - delay: '00:00:15'
+      - delay: '00:00:10'
       - service: script.notify_text
         data_template:
           title: "HACS - Aggiornamento"
           message: >
-            {% set update_number = states('sensor.hacs') %}
-            {% if is_state('sensor.hacs', '1') %}
-              E' disponibile un aggiornamento per i moduli HACS:
-            {% else %}
-              Sono disponibili {{ update_number }} aggiornamenti per i moduli HACS:
-            {% endif %}
-            {% for update in states.sensor.hacs.attributes['repositories'] %}
-              - {{ update['display_name'] }}: {{ update['available_version'] }}
-            {%- endfor %}
+            Sono disponibili {{pending_update_list | count }} aggiornamenti per i moduli HACS:
+            {% for entity_id in pending_update_list %}
+                -> {{ state_attr(entity_id, 'friendly_name')|replace(" - Aggiornamento", "") }}: {{ state_attr(entity_id, 'latest_version') }}
+            {%- endfor -%}
           notification_id: "update"
           enable_persistent: true
-
       - service: input_boolean.turn_on
         entity_id: input_boolean.update_hacs
 
@@ -72,3 +74,25 @@ automation:
       - service: persistent_notification.dismiss
         data_template:
           notification_id: "update"
+
+######################################################################
+# Update: Update all
+# - update.install
+######################################################################
+
+#  - alias: "Update: Aggiorna Tutto"
+#    id: "update_aggiorna_tutto"
+#
+#    variables:
+#      pending_update_list: >
+#        {{ states.update
+#          | selectattr('state','eq','on')
+#          | selectattr('entity_id', 'in', states.group.hacs.attributes.entity_id)
+#          | map(attribute='entity_id')
+#          | list
+#        }}
+#
+#    trigger:
+#
+#    action:
+#      - service: update.install
