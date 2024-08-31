@@ -359,7 +359,7 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "FRITZ!Box 7590"
+                  "label": "FRITZ!Box 7530 AX"
                 },
                 {
                   "type": "custom:hui-element",
@@ -371,7 +371,7 @@
                         {
                           "type": "picture",
                           "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/fritzbox_7590.png",
+                          "image": "/local/images/devices/fritzbox_7530_ax.png",
                           "tap_action": {
                             "action": "url",
                             "url_path": "https://fritz.giorgioravera.it"
@@ -587,7 +587,7 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "FRITZ!Box 7530 AX"
+                  "label": "FRITZ!Box 7590"
                 },
                 {
                   "type": "custom:hui-element",
@@ -599,7 +599,7 @@
                         {
                           "type": "picture",
                           "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/fritzbox_7530_ax.png",
+                          "image": "/local/images/devices/fritzbox_7590.png",
                           "tap_action": {
                             "action": "url",
                             "url_path": "https://ap1.giorgioravera.it"
@@ -659,6 +659,9 @@
                                   },
                                   {
                                     "font-size": "15px"
+                                  },
+                                  {
+                                    "color": "var(--primary-text-color)"
                                   },
                                   {
                                     "color": "var(--primary-text-color)"
