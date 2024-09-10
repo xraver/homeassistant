@@ -35,6 +35,21 @@ homeassistant:
     number.0x0004740000254d99_ballast_minimum_level:
       friendly_name: "Illuminazione minima"
 
+    # BTI-4411C - Dimmer 0x0004740000292ec9
+    #light.0x0004740000292ec9:
+    #  supported_color_modes: null
+    #  supported_features: 0
+    switch.0x0004740000292ec9_device_mode:
+      friendly_name: "Funzione Dimmer"
+    switch.0x0004740000292ec9_led_if_on:
+      friendly_name: "LED se acceso"
+    switch.0x0004740000292ec9_led_in_dark:
+      friendly_name: "LED se spento"
+    number.0x0004740000292ec9_ballast_maximum_level:
+      friendly_name: "Illuminazione massima"
+    number.0x0004740000292ec9_ballast_minimum_level:
+      friendly_name: "Illuminazione minima"
+
     # BTI-NT4027C - Tapparella 0x000474000159053e
     cover.0x000474000159053e:
       supported_features: 15

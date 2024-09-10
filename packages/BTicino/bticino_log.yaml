@@ -23,6 +23,15 @@ logbook:
       - switch.0x0004740000254d99_led_if_on
       - switch.0x0004740000254d99_led_in_dark
 
+      # BTI-4411C - Dimmer 0x0004740000292ec9
+      - select.0x0004740000292ec9_identify
+      - number.0x0004740000292ec9_ballast_maximum_level
+      - number.0x0004740000292ec9_ballast_minimum_level
+      - switch.0x0004740000292ec9_device_mode
+      - select.0x0004740000292ec9_power_on_behavior
+      - switch.0x0004740000292ec9_led_if_on
+      - switch.0x0004740000292ec9_led_in_dark
+
       # BTI-3584C - Wired Relay 0x000474000025912a
       - select.0x000474000025912a_power_on_behavior
 
@@ -116,6 +125,15 @@ recorder:
       - select.0x0004740000254d99_power_on_behavior
       - switch.0x0004740000254d99_led_if_on
       - switch.0x0004740000254d99_led_in_dark
+
+      # BTI-4411C - Dimmer 0x0004740000292ec9
+      - select.0x0004740000292ec9_identify
+      - number.0x0004740000292ec9_ballast_maximum_level
+      - number.0x0004740000292ec9_ballast_minimum_level
+      - switch.0x0004740000292ec9_device_mode
+      - select.0x0004740000292ec9_power_on_behavior
+      - switch.0x0004740000292ec9_led_if_on
+      - switch.0x0004740000292ec9_led_in_dark
 
       # BTI-3584C - Wired Relay 0x000474000025912a
       - select.0x000474000025912a_power_on_behavior
