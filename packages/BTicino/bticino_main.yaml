@@ -20,7 +20,7 @@ homeassistant:
 
     group.bticino:
       <<: *customize
-    script.bticino_upgrade:
+    script.bticino_update:
       <<: *customize
       icon: mdi:package-up
     automation.bticino_update_notification:

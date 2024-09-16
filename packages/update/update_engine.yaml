@@ -75,34 +75,31 @@ automation:
         data_template:
           notification_id: "update"
 
-######################################################################
-# Update: Update HACS
-# - update.install
-######################################################################
-
-#  - alias: "Update: Aggiorna HACS"
-#    id: "update_aggiorna_hacs"
-#
-#    trigger:
-#      - platform: state
-#        entity_id: input_button.update_hacs
-#
-#    action:
-#      repeat:
-#        for_each: >
-#          {{ states.update
-#            | selectattr('state','eq','on')
-#            | selectattr('entity_id', 'in', states.group.hacs.attributes.entity_id)
-#            | map(attribute='entity_id')
-#            | list
-#          }}
-#        sequence:
-#          - service: update.install
-#            target:
-#              entity_id: "{{ repeat.item }}"
-
 script:
-  hacs_upgrade:
+  
+  ######################################################################
+  # Update: Update All
+  # - update.install
+  ######################################################################
+  update_all:
+    alias: "Update: Aggiornamento Collettivo"
+    variables:
+      pending_update_list: >
+        {{ states.update
+          | selectattr('state','eq','on')
+          | map(attribute='entity_id')
+          | list
+        }}
+    sequence:
+      - service: update.install
+        target:
+          entity_id: '{{ pending_update_list }}'
+
+  ######################################################################
+  # Update: Update HACS
+  # - update.install
+  ######################################################################
+  hacs_update:
     alias: "HACS: Aggiornamento Collettivo"
     variables:
       pending_update_list: >

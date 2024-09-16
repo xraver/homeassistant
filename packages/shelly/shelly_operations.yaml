@@ -4,9 +4,9 @@
 
 script:
   ######################################################################
-  # Shelly: Upgrade
+  # Shelly: Update
   ######################################################################
-  shelly_upgrade:
+  shelly_update:
     alias: "Shelly: Aggiornamento Firmware Collettivo"
     variables:
       pending_update_list: >

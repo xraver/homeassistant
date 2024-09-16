@@ -4,9 +4,9 @@
 
 script:
   ######################################################################
-  # BTicino: Upgrade
+  # BTicino: Update
   ######################################################################
-  bticino_upgrade:
+  bticino_update:
     alias: "BTicino: Aggiornamento Firmware Collettivo"
     variables:
       pending_update_list: >

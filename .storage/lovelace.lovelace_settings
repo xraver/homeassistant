@@ -12,19 +12,36 @@
           "path": "config",
           "badges": [
             {
-              "entity": "binary_sensor.home_mode"
+              "type": "entity",
+              "entity": "binary_sensor.home_mode",
+              "display_type": "minimal"
             },
             {
-              "entity": "binary_sensor.guard_mode"
+              "type": "entity",
+              "entity": "binary_sensor.guard_mode",
+              "display_type": "minimal"
             },
             {
-              "entity": "binary_sensor.speech_notifications"
+              "type": "entity",
+              "entity": "binary_sensor.speech_notifications",
+              "display_type": "minimal"
             },
             {
-              "entity": "binary_sensor.text_notifications"
+              "type": "entity",
+              "entity": "binary_sensor.text_notifications",
+              "display_type": "minimal"
             },
             {
-              "entity": "binary_sensor.home_assistant_error"
+              "type": "entity",
+              "entity": "binary_sensor.home_assistant_error",
+              "display_type": "minimal"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "group.update"
             }
           ],
           "cards": [
@@ -88,16 +105,37 @@
                     },
                     {
                       "entity": "sensor.server_giorgioravera_it_scadenza_del_certificato"
-                    },
-                    {
-                      "entity": "group.update"
-                    },
-                    {
-                      "entity": "sensor.hacs"
                     }
                   ],
                   "show_header_toggle": false,
                   "title": "Informazioni Varie",
+                  "type": "entities"
+                }
+              ],
+              "type": "vertical-stack"
+            },
+            {
+              "cards": [
+                {
+                  "entities": [
+                    {
+                      "entity": "group.update"
+                    },
+                    {
+                      "entity": "script.update_all"
+                    },
+                    {
+                      "entity": "script.hacs_update"
+                    },
+                    {
+                      "entity": "script.shelly_update"
+                    },
+                    {
+                      "entity": "script.bticino_update"
+                    }
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Aggiornamenti",
                   "type": "entities"
                 }
               ],
@@ -466,19 +504,6 @@
                   }
                 }
               ]
-            }
-          ]
-        },
-        {
-          "title": "History",
-          "path": "s",
-          "icon": "mdi:history",
-          "type": "panel",
-          "badges": [],
-          "cards": [
-            {
-              "type": "custom:history-explorer-card",
-              "recordedEntitiesOnly": true
             }
           ]
         }

@@ -20,7 +20,7 @@ homeassistant:
 
     group.shelly:
       <<: *customize
-    script.shelly_upgrade:
+    script.shelly_update:
       <<: *customize
       icon: mdi:package-up
     script.shelly_reboot:

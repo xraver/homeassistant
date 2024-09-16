@@ -30,5 +30,7 @@ homeassistant:
       <<: *customize
     automation.update_update_acknowledgment:
       <<: *customize
-    script.hacs_upgrade:
+    script.update_all:
+      icon: mdi:package-up
+    script.hacs_update:
       icon: mdi:package-up

@@ -18,19 +18,58 @@
             {
               "type": "custom:badge-card",
               "badges": [
-                "person.giorgio",
-                "person.laura",
-                "device_tracker.ff590mr_device_tracker",
-                "sensor.time",
-                "binary_sensor.porta_casa_contact",
-                "binary_sensor.home_mode",
-                "binary_sensor.guard_mode",
-                "binary_sensor.speech_notifications",
-                "binary_sensor.alarms",
-                "binary_sensor.central_heating",
-                "sensor.shelly_em_channel_1_power",
-                "sensor.temperatura_balcone_temperature",
-                "sensor.temperatura_veranda_temperature"
+                {
+                  "entity": "person.giorgio",
+                  "show_entity_picture": true
+                },
+                {
+                  "entity": "person.laura",
+                  "show_entity_picture": true
+                },
+                {
+                  "entity": "device_tracker.ff590mr_device_tracker",
+                  "show_entity_picture": true
+                },
+                {
+                  "entity": "sensor.time"
+                },
+                {
+                  "entity": "binary_sensor.porta_casa_contact",
+                  "display_type": "minimal"
+                },
+                {
+                  "entity": "binary_sensor.home_mode",
+                  "display_type": "minimal"
+                },
+                {
+                  "entity": "binary_sensor.guard_mode",
+                  "display_type": "minimal"
+                },
+                {
+                  "entity": "binary_sensor.speech_notifications",
+                  "display_type": "minimal"
+                },
+                {
+                  "entity": "binary_sensor.alarms",
+                  "display_type": "minimal"
+                },
+                {
+                  "entity": "binary_sensor.central_heating",
+                  "display_type": "minimal"
+                },
+                {
+                  "entity": "sensor.shelly_em_channel_1_power"
+                },
+                {
+                  "entity": "sensor.temperatura_balcone_temperature",
+                  "display_type": "complete",
+                  "name": "Balcone"
+                },
+                {
+                  "entity": "sensor.temperatura_veranda_temperature",
+                  "display_type": "complete",
+                  "name": "Veranda"
+                }
               ]
             },
             {
@@ -483,37 +522,59 @@
           "path": "lights",
           "badges": [
             {
-              "entity": "light.luce_cucina"
+              "type": "entity",
+              "entity": "light.luce_cucina",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_corridoio"
+              "type": "entity",
+              "entity": "light.luce_corridoio",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_sala"
+              "type": "entity",
+              "entity": "light.luce_sala",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_divano"
+              "type": "entity",
+              "entity": "light.luce_divano",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_bagno"
+              "type": "entity",
+              "entity": "light.luce_bagno",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_specchio"
+              "type": "entity",
+              "entity": "light.luce_specchio",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_studio"
+              "type": "entity",
+              "entity": "light.luce_studio",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_camera"
+              "type": "entity",
+              "entity": "light.luce_camera",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_dispensa"
+              "type": "entity",
+              "entity": "light.luce_dispensa",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_balcone"
+              "type": "entity",
+              "entity": "light.luce_balcone",
+              "display_type": "complete"
             },
             {
-              "entity": "light.luce_veranda"
+              "type": "entity",
+              "entity": "light.luce_veranda",
+              "display_type": "complete"
             }
           ],
           "cards": [
@@ -658,16 +719,24 @@
           "path": "covers",
           "badges": [
             {
-              "entity": "sensor.tapparella_cucina"
+              "type": "entity",
+              "entity": "cover.tapparella_cucina",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.tapparella_sala"
+              "type": "entity",
+              "entity": "cover.tapparella_sala",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.tapparella_studio"
+              "type": "entity",
+              "entity": "cover.tapparella_studio",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.tapparella_camera"
+              "type": "entity",
+              "entity": "cover.tapparella_camera",
+              "display_type": "complete"
             }
           ],
           "cards": [
@@ -1460,16 +1529,24 @@
           "path": "people",
           "badges": [
             {
-              "entity": "person.giorgio"
+              "type": "entity",
+              "entity": "person.giorgio",
+              "show_entity_picture": true
             },
             {
-              "entity": "person.laura"
+              "type": "entity",
+              "entity": "person.laura",
+              "show_entity_picture": true
             },
             {
-              "entity": "person.anna"
+              "type": "entity",
+              "entity": "person.anna",
+              "show_entity_picture": true
             },
             {
-              "entity": "person.assunta"
+              "type": "entity",
+              "entity": "person.assunta",
+              "show_entity_picture": true
             }
           ],
           "cards": [
@@ -1654,7 +1731,10 @@
           "path": "alarms",
           "badges": [
             {
-              "entity": "binary_sensor.alarms"
+              "type": "entity",
+              "entity": "binary_sensor.alarms",
+              "show_entity_picture": false,
+              "display_type": "minimal"
             }
           ],
           "cards": [
@@ -1693,31 +1773,49 @@
               "entity": "sun.sun"
             },
             {
-              "entity": "sensor.valvola_cucina_temperature"
+              "type": "entity",
+              "entity": "sensor.valvola_cucina_temperature",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.valvola_sala_temperature"
+              "type": "entity",
+              "entity": "sensor.valvola_sala_temperature",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.valvola_bagno_temperature"
+              "type": "entity",
+              "entity": "sensor.valvola_bagno_temperature",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.valvola_studio_temperature"
+              "type": "entity",
+              "entity": "sensor.valvola_studio_temperature",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.valvola_camera_temperature"
+              "type": "entity",
+              "entity": "sensor.valvola_camera_temperature",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.temperatura_balcone_temperature"
+              "type": "entity",
+              "entity": "sensor.temperatura_balcone_temperature",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.temperatura_veranda_temperature"
+              "type": "entity",
+              "entity": "sensor.temperatura_veranda_temperature",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.temperatura_balcone_humidity"
+              "type": "entity",
+              "entity": "sensor.temperatura_balcone_humidity",
+              "display_type": "complete"
             },
             {
-              "entity": "sensor.temperatura_veranda_humidity"
+              "type": "entity",
+              "entity": "sensor.temperatura_veranda_humidity",
+              "display_type": "complete"
             }
           ],
           "cards": [
