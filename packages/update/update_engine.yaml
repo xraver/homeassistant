@@ -76,7 +76,7 @@ automation:
           notification_id: "update"
 
 script:
-  
+
   ######################################################################
   # Update: Update All
   # - update.install
