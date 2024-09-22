@@ -7,26 +7,26 @@ group:
     name: BTicino Devices
     icon: mdi:alpha-b-box
     entities:
-      # Dimmers
-      - update.0x0004740000254d99
-      - update.0x0004740001583a4a
-      - update.0x0004740000292ec9
-      # Lights
-      - update.0x000474000025912a
-      - update.0x00047400002599cf
-      - update.0x0004740000249a4e
-      - update.0x000474000015be6b
-      - update.0x0004740000249aad
-      - update.0x00047400002790a6
-      - update.0x0004740000282606
-      - update.0x0004740000279162
-      - update.0x000474000015de7e
-      - update.0x000474000159053e
-      - update.0x000474000015ded8
       # Covers
-      - update.0x000474000159053e
-      - update.0x00047400015a3e19
-      - update.0x00047400015ada4b
-      - update.0x00047400015adb10
+      - update.tapparella_cucina_grande
+      - update.tapparella_cucina_piccola
       - update.0x00047400015ada3d
+      - update.0x00047400015a3e19
+      - update.0x000474000159053e
       - update.0x00047400015ada3f
+      # Lights
+      - update.luce_zona_giorno
+      - update.luce_armadio
+      - update.0x0004740000282606
+      - update.0x0004740000254d99
+      - update.luce_vetrine
+      - update.0x000474000015ded8
+      - update.luce_zona_notte
+      - update.0x0004740000249aad
+      - update.0x000474000015be6b
+      - update.luce_trono
+      - update.0x0004740000292ec9
+      - update.0x000474000015de50
+      # Non connessi
+      - update.0x0004740000249a4e
+      - update.0x0004740001583a4a
