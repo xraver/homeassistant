@@ -9,7 +9,7 @@
 #
 # Operations:
 # - notify.mail
-# - notify.push
+# - notify.html5
 # - persistent_notification.create (if enable_persistent)
 # - notify.telegram (if enable_telegram)
 ######################################################################
@@ -96,7 +96,7 @@ notify_text:
                 message: "{{ message | regex_replace(find='_', replace='-', ignorecase=False) }}"
       default: []
 
-    - service: notify.push
+    - service: notify.html5
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
