@@ -90,6 +90,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * LG webOS Smart TV
   * Mercedes Me
   * MQTT
+  * Notify push html5
   * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa and assign names to all devices)
   * Openweather Map (Savona + Morgex)
   * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
