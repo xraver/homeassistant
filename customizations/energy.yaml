@@ -8,6 +8,12 @@ sensor.consumo_energetico_giornaliero:
 sensor.consumo_energetico_mensile:
   friendly_name: Consumo Energetico Mensile
 
+sensor.consumo_energetico_giornaliero_old:
+  friendly_name: Consumo Energetico Giornaliero (Old)
+
+sensor.consumo_energetico_mensile_old:
+  friendly_name: Consumo Energetico Mensile (Old)
+
 sensor.electricity_maps_intensita_della_co2:
   friendly_name: "CO2: Intensità di carbonio"
 

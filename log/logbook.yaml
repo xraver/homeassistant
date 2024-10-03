@@ -50,6 +50,8 @@ exclude:
     # Energy Sensors
     - sensor.consumo_energetico_giornaliero
     - sensor.consumo_energetico_mensile
+    - sensor.consumo_energetico_giornaliero_old
+    - sensor.consumo_energetico_mensile_old
     # Zigbee2mqtt
     - sensor.porta_casa_battery
     - sensor.porta_casa_linkquality

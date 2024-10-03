@@ -2471,6 +2471,83 @@
             {
               "type": "entities",
               "show_header_toggle": "off",
+              "visible": false,
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Shelly EM"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/shelly/shelly_em.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "http://shellyem.giorgioravera.it"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "sensor.shelly_em_channel_1_power",
+                              "name": "Potenza"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "sensor.shelly_em_channel_1_voltage",
+                              "name": "Tensione",
+                              "icon": "mdi:alpha-v-box"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "sensor.shelly_em_channel_1_power_factor",
+                              "name": "FP",
+                              "icon": "mdi:angle-acute"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_firmware",
+                              "entity": "update.shelly_em_firmware_update",
+                              "name": "Firmare"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_button",
+                              "entity": "button.shelly_em_ota_update",
+                              "name": "Aggiorna Firmware",
+                              "icon": "mdi:package-up"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_button",
+                              "entity": "button.shelly_em_reboot",
+                              "name": "Riavvia Dispositivo",
+                              "icon": "mdi:restart"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
               "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
               "entities": [
                 {
@@ -3165,7 +3242,7 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "Shelly EM"
+                  "label": "Shelly EM (Old)"
                 },
                 {
                   "type": "custom:hui-element",
@@ -3180,7 +3257,7 @@
                           "image": "/local/images/devices/shelly/shelly_em.png",
                           "tap_action": {
                             "action": "url",
-                            "url_path": "http://shellyem.giorgioravera.it"
+                            "url_path": "http://shellyem-old.giorgioravera.it"
                           }
                         },
                         {
@@ -3189,40 +3266,40 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_channel_1_power",
+                              "entity": "sensor.shelly_em_old_channel_1_power",
                               "name": "Potenza"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_channel_1_voltage",
+                              "entity": "sensor.shelly_em_old_channel_1_voltage",
                               "name": "Tensione",
                               "icon": "mdi:alpha-v-box"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_channel_1_power_factor",
+                              "entity": "sensor.shelly_em_old_channel_1_power_factor",
                               "name": "FP",
                               "icon": "mdi:angle-acute"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.shelly_em_firmware_update",
+                              "entity": "update.shelly_em_old_firmware_update",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.shelly_em_ota_update",
+                              "entity": "button.shelly_em_old_ota_update",
                               "name": "Aggiorna Firmware",
                               "icon": "mdi:package-up"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.shelly_em_reboot",
+                              "entity": "button.shelly_em_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }

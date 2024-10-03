@@ -9,6 +9,9 @@
     - platform: numeric_state
       entity_id: sensor.shelly_em_channel_1_power
       above: 3200
+    - platform: numeric_state
+      entity_id: sensor.shelly_em_old_channel_1_power
+      above: 3200
 
   action:
     service: script.notify_all
