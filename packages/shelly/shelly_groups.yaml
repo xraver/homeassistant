@@ -8,16 +8,16 @@ group:
     icon: mdi:alpha-s-box
     entities:
       - update.shelly_em_firmware_update
-      - update.tapparella_cucina_firmware_update
-      - update.tapparella_sala_firmware_update
-      - update.tapparella_studio_firmware_update
-      - update.tapparella_camera_firmware_update
+      - update.tapparella_cucina_old_firmware_update
+      - update.tapparella_sala_old_firmware_update
+      - update.tapparella_studio_old_firmware_update
+      - update.tapparella_camera_old_firmware_update
       - update.luce_corridoio_firmware_update
-      - update.luce_cucina_firmware_update
-      - update.luce_sala_firmware_update
+      - update.luce_cucina_old_firmware_update
+      - update.luce_sala_old_firmware_update
       - update.luci_bagno_firmware_update
-      - update.luce_studio_firmware_update
-      - update.luce_camera_firmware_update
-      - update.luce_balcone_firmware_update
+      - update.luce_studio_old_firmware_update
+      - update.luce_camera_old_firmware_update
+      - update.luce_balcone_old_firmware_update
       #- update.luce_divano_firmware_update
       - update.shelly_em_old_firmware_update

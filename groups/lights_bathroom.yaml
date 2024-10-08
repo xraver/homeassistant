@@ -2,12 +2,12 @@
 # Group Lights Bathroom
 ######################################################################
 
-lights_bathroom:
+lights_bathroom_old:
   name: Luci Bagno
   icon: mdi:lightbulb
   entities:
-    - light.luce_bagno
-    - light.luce_specchio
+    - light.luce_bagno_old
+    - light.luce_specchio_old
 
 lights_bathroom_new:
   name: Luci Bagno

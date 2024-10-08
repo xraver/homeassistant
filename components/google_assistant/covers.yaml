@@ -2,7 +2,7 @@
 # Google Assistant: Covers
 ######################################################################
 
-cover.tapparella_cucina:
+cover.tapparella_cucina_old:
   expose: true
   room: Cucina
 #cover.tapparella_cucina_grande:
@@ -11,15 +11,15 @@ cover.tapparella_cucina:
 #cover.tapparella_cucina_piccola:
 #  expose: true
 #  room: Cucina
-cover.tapparella_sala:
+cover.tapparella_sala_old:
   expose: true
   room: Sala
-cover.tapparella_studio:
+cover.tapparella_studio_old:
   expose: true
   room: Studio
 #cover.tapparella_bagno:
 #  expose: true
 #  room: Bagno
-cover.tapparella_camera:
+cover.tapparella_camera_old:
   expose: true
   room: Camera

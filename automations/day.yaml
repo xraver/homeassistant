@@ -22,10 +22,10 @@
         weekday: [mon, tue, wed, thu, fri]
 
   action:
-    - service: cover.set_cover_position
+    - action: cover.set_cover_position
       data:
         entity_id:
-          - cover.tapparella_cucina
-          #- cover.tapparella_sala
-          - cover.tapparella_studio
+          - cover.tapparella_cucina_old
+          #- cover.tapparella_sala_old
+          - cover.tapparella_studio_old
         position: 85

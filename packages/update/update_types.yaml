@@ -66,7 +66,6 @@ group:
       - update.paper_buttons_row_update
       - update.plotly_graph_card_update
       - update.reeder_dark_theme_update
-      - update.shelly_em_firmware_update
       - update.shutter_card_update
       - update.tabbed_card_update
       - update.vertical_stack_in_card_update

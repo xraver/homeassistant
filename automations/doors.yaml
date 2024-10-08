@@ -28,9 +28,9 @@
         after: "15:00:00"
         before: "05:00:00"
 
-
   action:
     - delay: 00:00:01
     - service: light.turn_on
       entity_id: light.luce_corridoio
+      #entity:id: light.luce_zona_giorno
     - delay: '00:05:00'

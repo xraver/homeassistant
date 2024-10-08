@@ -4,28 +4,28 @@
 
 - platform: template
   sensors:
-    tapparella_cucina:
+    tapparella_cucina_old:
       friendly_name: "Cucina"
-      value_template: "{{ state_attr('cover.tapparella_cucina', 'current_position') }}"
+      value_template: "{{ state_attr('cover.tapparella_cucina_old', 'current_position') }}"
       unit_of_measurement: '%'
 
 - platform: template
   sensors:
-    tapparella_sala:
+    tapparella_sala_old:
       friendly_name: "Sala"
-      value_template: "{{ state_attr('cover.tapparella_sala', 'current_position') }}"
+      value_template: "{{ state_attr('cover.tapparella_sala_old', 'current_position') }}"
       unit_of_measurement: '%'
 
 - platform: template
   sensors:
-    tapparella_studio:
+    tapparella_studio_old:
       friendly_name: "Studio"
-      value_template: "{{ state_attr('cover.tapparella_studio', 'current_position') }}"
+      value_template: "{{ state_attr('cover.tapparella_studio_old', 'current_position') }}"
       unit_of_measurement: '%'
 
 - platform: template
   sensors:
-    tapparella_camera:
+    tapparella_camera_old:
       friendly_name: "Camera"
-      value_template: "{{ state_attr('cover.tapparella_camera', 'current_position') }}"
+      value_template: "{{ state_attr('cover.tapparella_camera_old', 'current_position') }}"
       unit_of_measurement: '%'
