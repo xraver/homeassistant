@@ -9,3 +9,10 @@ lights_livingroom:
     - light.luce_sala
     - light.luce_divano
 #    - light.luce_divano_bianca
+
+lights_livingroom_new:
+  name: Luci Sala
+  icon: mdi:lightbulb
+  entities:
+    - light.0x0004740000254d99
+    - light.luce_divano

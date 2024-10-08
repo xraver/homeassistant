@@ -30,10 +30,10 @@ logbook:
       - switch.0x00047400015a3e19_led_in_dark
 
       # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
-      - select.0x000474000159053e_identify
-      - select.0x000474000159053e_calibration_mode
-      - switch.0x000474000159053e_led_if_on
-      - switch.0x000474000159053e_led_in_dark
+      - select.tapparella_bagno_identify
+      - select.tapparella_bagno_calibration_mode
+      - switch.tapparella_bagno_led_if_on
+      - switch.tapparella_bagno_led_in_dark
 
       # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)
       - select.0x00047400015ada3f_identify
@@ -133,10 +133,10 @@ recorder:
       - switch.0x00047400015a3e19_led_in_dark
 
       # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
-      - select.0x000474000159053e_identify
-      - select.0x000474000159053e_calibration_mode
-      - switch.0x000474000159053e_led_if_on
-      - switch.0x000474000159053e_led_in_dark
+      - select.tapparella_bagno_identify
+      - select.tapparella_bagno_calibration_mode
+      - switch.tapparella_bagno_led_if_on
+      - switch.tapparella_bagno_led_in_dark
 
       # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)
       - select.0x00047400015ada3f_identify

@@ -1,0 +1,10 @@
+######################################################################
+# Group Lights Kitchen
+######################################################################
+
+lights_kitchen:
+  name: Luci Cucina
+  icon: mdi:lightbulb
+  entities:
+    - light.0x0004740000282606
+    - light.luce_vetrine

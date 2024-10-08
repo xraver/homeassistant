@@ -37,11 +37,11 @@ homeassistant:
       friendly_name: "LED se spento"
 
     # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
-    cover.0x000474000159053e:
+    cover.tapparella_bagno:
       supported_features: 15
-    switch.0x000474000159053e_led_if_on:
+    switch.tapparella_bagno_led_if_on:
       friendly_name: "LED se acceso"
-    switch.0x000474000159053e_led_in_dark:
+    switch.tapparella_bagno_led_in_dark:
       friendly_name: "LED se spento"
 
     # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)

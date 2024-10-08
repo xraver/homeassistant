@@ -8,3 +8,11 @@ lights_bathroom:
   entities:
     - light.luce_bagno
     - light.luce_specchio
+
+lights_bathroom_new:
+  name: Luci Bagno
+  icon: mdi:lightbulb
+  entities:
+    - light.0x0004740000249aad
+    - light.0x000474000015be6b
+    - light.luce_trono
