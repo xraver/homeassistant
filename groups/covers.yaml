@@ -3,7 +3,7 @@
 ######################################################################
 
 covers_old:
-  name: Tapparelle
+  name: Tapparelle (Old)
   #icon: mdi:window-closed
   icon: mdi:window-shutter
   entities:

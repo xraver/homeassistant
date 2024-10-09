@@ -3,7 +3,7 @@
 ######################################################################
 
 lights_old:
-  name: Luci Casa
+  name: Luci Casa (Old)
   icon: mdi:lightbulb
   entities:
     - light.luce_corridoio

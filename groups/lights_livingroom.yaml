@@ -3,7 +3,7 @@
 ######################################################################
 
 lights_livingroom_old:
-  name: Luci Sala
+  name: Luci Sala (Old)
   icon: mdi:lightbulb
   entities:
     - light.luce_sala_old

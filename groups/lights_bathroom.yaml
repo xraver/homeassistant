@@ -3,7 +3,7 @@
 ######################################################################
 
 lights_bathroom_old:
-  name: Luci Bagno
+  name: Luci Bagno (Old)
   icon: mdi:lightbulb
   entities:
     - light.luce_bagno_old
