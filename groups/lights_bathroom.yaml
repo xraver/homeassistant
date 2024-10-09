@@ -9,10 +9,10 @@ lights_bathroom_old:
     - light.luce_bagno_old
     - light.luce_specchio_old
 
-lights_bathroom_new:
+lights_bathroom:
   name: Luci Bagno
   icon: mdi:lightbulb
   entities:
-    - light.0x0004740000249aad
-    - light.0x000474000015be6b
+    - light.luce_bagno
+    - light.luce_specchio
     - light.luce_trono

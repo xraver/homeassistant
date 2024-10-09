@@ -18,16 +18,16 @@ logbook:
       - switch.tapparella_cucina_piccola_led_in_dark
 
       # BTI-NT4027C - Tapparella Sala (0x00047400015ada3d)
-      - select.0x00047400015ada3d_identify
-      - select.0x00047400015ada3d_calibration_mode
-      - switch.0x00047400015ada3d_led_if_on
-      - switch.0x00047400015ada3d_led_in_dark
+      - select.tapparella_sala_identify
+      - select.tapparella_sala_calibration_mode
+      - switch.tapparella_sala_led_if_on
+      - switch.tapparella_sala_led_in_dark
 
       # BTI-NT4027C - Tapparella Studio (0x00047400015a3e19)
-      - select.0x00047400015a3e19_identify
-      - select.0x00047400015a3e19_calibration_mode
-      - switch.0x00047400015a3e19_led_if_on
-      - switch.0x00047400015a3e19_led_in_dark
+      - select.tapparella_studio_identify
+      - select.tapparella_studio_calibration_mode
+      - switch.tapparella_studio_led_if_on
+      - switch.tapparella_studio_led_in_dark
 
       # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
       - select.tapparella_bagno_identify
@@ -36,10 +36,10 @@ logbook:
       - switch.tapparella_bagno_led_in_dark
 
       # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)
-      - select.0x00047400015ada3f_identify
-      - select.0x00047400015ada3f_calibration_mode
-      - switch.0x00047400015ada3f_led_if_on
-      - switch.0x00047400015ada3f_led_in_dark
+      - select.tapparella_camera_identify
+      - select.tapparella_camera_calibration_mode
+      - switch.tapparella_camera_led_if_on
+      - switch.tapparella_camera_led_in_dark
 
       # BTI-3584C - Luce Zona Giorno (0x000474000015de7e)
       - select.luce_zona_giorno_power_on_behavior
@@ -48,46 +48,46 @@ logbook:
       - select.luce_armadio_power_on_behavior
 
       # BTI-3584C - Luce Cucina (0x0004740000282606)
-      - select.0x0004740000282606_power_on_behavior
+      - select.luce_cucina_power_on_behavior
 
       # BTI-4411C - Luce Sala (0x0004740000254d99)
-      - select.0x0004740000254d99_identify
-      - number.0x0004740000254d99_ballast_maximum_level
-      - number.0x0004740000254d99_ballast_minimum_level
-      - switch.0x0004740000254d99_device_mode
-      - select.0x0004740000254d99_power_on_behavior
-      - switch.0x0004740000254d99_led_if_on
-      - switch.0x0004740000254d99_led_in_dark
+      - select.luce_sala_identify
+      - number.luce_sala_ballast_maximum_level
+      - number.luce_sala_ballast_minimum_level
+      - switch.luce_sala_device_mode
+      - select.luce_sala_power_on_behavior
+      - switch.luce_sala_led_if_on
+      - switch.luce_sala_led_in_dark
 
       # BTI-3584C - Luce Vetrine (0x000474000025912a)
       - select.luce_vetrine_power_on_behavior
 
       # BTI-3584C - Luce Studio (0x000474000015ded8)
-      - select.0x000474000015ded8_power_on_behavior
+      - select.luce_studio_power_on_behavior
 
       # BTI-3584C - Luce Zona Notte (0x00047400002599cf)
       - select.luce_zona_notte_power_on_behavior
 
       # BTI-3584C - Luce Bagno (0x0004740000249aad)
-      - select.0x0004740000249aad_power_on_behavior
+      - select.luce_bagno_power_on_behavior
 
       # BTI-3584C - Luce Specchio (0x000474000015be6b)
-      - select.0x000474000015be6b_power_on_behavior
+      - select.luce_specchio_power_on_behavior
 
       # BTI-3584C - Luce Trono (0x0004740000279162)
       - select.luce_trono_power_on_behavior
 
       # BTI-4411C - Luce Camera (0x0004740000292ec9)
-      - select.0x0004740000292ec9_identify
-      - number.0x0004740000292ec9_ballast_maximum_level
-      - number.0x0004740000292ec9_ballast_minimum_level
-      - switch.0x0004740000292ec9_device_mode
-      - select.0x0004740000292ec9_power_on_behavior
-      - switch.0x0004740000292ec9_led_if_on
-      - switch.0x0004740000292ec9_led_in_dark
+      - select.luce_camera_identify
+      - number.luce_camera_ballast_maximum_level
+      - number.luce_camera_ballast_minimum_level
+      - switch.luce_camera_device_mode
+      - select.luce_camera_power_on_behavior
+      - switch.luce_camera_led_if_on
+      - switch.luce_camera_led_in_dark
 
       # BTI-3584C - Luce Balcone (0x000474000015de50)
-      - select.0x000474000015de50_power_on_behavior
+      - select.luce_balcone_power_on_behavior
 
       # BTI-NT4411C - Dimmer 0x0004740001583a4a (N/A)
       - select.0x0004740001583a4a_identify
@@ -121,16 +121,16 @@ recorder:
       - switch.tapparella_cucina_piccola_led_in_dark
 
       # BTI-NT4027C - Tapparella Sala (0x00047400015ada3d)
-      - select.0x00047400015ada3d_identify
-      - select.0x00047400015ada3d_calibration_mode
-      - switch.0x00047400015ada3d_led_if_on
-      - switch.0x00047400015ada3d_led_in_dark
+      - select.tapparella_sala_identify
+      - select.tapparella_sala_calibration_mode
+      - switch.tapparella_sala_led_if_on
+      - switch.tapparella_sala_led_in_dark
 
       # BTI-NT4027C - Tapparella Studio (0x00047400015a3e19)
-      - select.0x00047400015a3e19_identify
-      - select.0x00047400015a3e19_calibration_mode
-      - switch.0x00047400015a3e19_led_if_on
-      - switch.0x00047400015a3e19_led_in_dark
+      - select.tapparella_studio_identify
+      - select.tapparella_studio_calibration_mode
+      - switch.tapparella_studio_led_if_on
+      - switch.tapparella_studio_led_in_dark
 
       # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
       - select.tapparella_bagno_identify
@@ -139,10 +139,10 @@ recorder:
       - switch.tapparella_bagno_led_in_dark
 
       # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)
-      - select.0x00047400015ada3f_identify
-      - select.0x00047400015ada3f_calibration_mode
-      - switch.0x00047400015ada3f_led_if_on
-      - switch.0x00047400015ada3f_led_in_dark
+      - select.tapparella_camera_identify
+      - select.tapparella_camera_calibration_mode
+      - switch.tapparella_camera_led_if_on
+      - switch.tapparella_camera_led_in_dark
 
       # BTI-3584C - Luce Zona Giorno (0x000474000015de7e)
       - select.luce_zona_giorno_power_on_behavior
@@ -151,46 +151,46 @@ recorder:
       - select.luce_armadio_power_on_behavior
 
       # BTI-3584C - Luce Cucina (0x0004740000282606)
-      - select.0x0004740000282606_power_on_behavior
+      - select.luce_cucina_power_on_behavior
 
       # BTI-4411C - Luce Sala (0x0004740000254d99)
-      - select.0x0004740000254d99_identify
-      - number.0x0004740000254d99_ballast_maximum_level
-      - number.0x0004740000254d99_ballast_minimum_level
-      - switch.0x0004740000254d99_device_mode
-      - select.0x0004740000254d99_power_on_behavior
-      - switch.0x0004740000254d99_led_if_on
-      - switch.0x0004740000254d99_led_in_dark
+      - select.luce_sala_identify
+      - number.luce_sala_ballast_maximum_level
+      - number.luce_sala_ballast_minimum_level
+      - switch.luce_sala_device_mode
+      - select.luce_sala_power_on_behavior
+      - switch.luce_sala_led_if_on
+      - switch.luce_sala_led_in_dark
 
       # BTI-3584C - Luce Vetrine (0x000474000025912a)
       - select.luce_vetrine_power_on_behavior
 
       # BTI-3584C - Luce Studio (0x000474000015ded8)
-      - select.0x000474000015ded8_power_on_behavior
+      - select.luce_studio_power_on_behavior
 
       # BTI-3584C - Luce Zona Notte (0x00047400002599cf)
       - select.luce_zona_notte_power_on_behavior
 
       # BTI-3584C - Luce Bagno (0x0004740000249aad)
-      - select.0x0004740000249aad_power_on_behavior
+      - select.luce_bagno_power_on_behavior
 
       # BTI-3584C - Luce Specchio (0x000474000015be6b)
-      - select.0x000474000015be6b_power_on_behavior
+      - select.luce_specchio_power_on_behavior
 
       # BTI-3584C - Luce Trono (0x0004740000279162)
       - select.luce_trono_power_on_behavior
 
       # BTI-4411C - Luce Camera (0x0004740000292ec9)
-      - select.0x0004740000292ec9_identify
-      - number.0x0004740000292ec9_ballast_maximum_level
-      - number.0x0004740000292ec9_ballast_minimum_level
-      - switch.0x0004740000292ec9_device_mode
-      - select.0x0004740000292ec9_power_on_behavior
-      - switch.0x0004740000292ec9_led_if_on
-      - switch.0x0004740000292ec9_led_in_dark
+      - select.luce_camera_identify
+      - number.luce_camera_ballast_maximum_level
+      - number.luce_camera_ballast_minimum_level
+      - switch.luce_camera_device_mode
+      - select.luce_camera_power_on_behavior
+      - switch.luce_camera_led_if_on
+      - switch.luce_camera_led_in_dark
 
       # BTI-3584C - Luce Balcone (0x000474000015de50)
-      - select.0x000474000015de50_power_on_behavior
+      - select.luce_balcone_power_on_behavior
 
       # BTI-NT4411C - Dimmer 0x0004740001583a4a (N/A)
       - select.0x0004740001583a4a_identify

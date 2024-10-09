@@ -9,9 +9,9 @@
         {
           "theme": "Backend-selected",
           "icon": "mdi:home",
-          "id": "main",
-          "title": "Principale",
-          "path": "main",
+          "id": "main_old",
+          "title": "Principale Old",
+          "path": "main_old",
           "type": "custom:grid-layout",
           "badges": [],
           "cards": [
@@ -517,9 +517,9 @@
         {
           "theme": "Backend-selected",
           "icon": "mdi:home",
-          "id": "main_new",
-          "title": "Principale New",
-          "path": "main_new",
+          "id": "main",
+          "title": "Principale",
+          "path": "main",
           "type": "custom:grid-layout",
           "badges": [],
           "cards": [
@@ -610,7 +610,7 @@
                   "aspect_ratio": "0%",
                   "entities": [
                     {
-                      "entity": "light.0x0004740000282606"
+                      "entity": "light.luce_cucina"
                     },
                     {
                       "entity": "light.luce_vetrine"
@@ -643,13 +643,13 @@
                   "aspect_ratio": "0%",
                   "entities": [
                     {
-                      "entity": "light.0x0004740000254d99"
+                      "entity": "light.luce_sala"
                     },
                     {
                       "entity": "light.luce_divano"
                     },
                     {
-                      "entity": "cover.0x00047400015ada3d"
+                      "entity": "cover.tapparella_sala"
                     },
                     {
                       "entity": "climate.sala"
@@ -658,7 +658,7 @@
                       "entity": "media_player.sony_kd_55xf8596"
                     }
                   ],
-                  "entity": "group.lights_livingroom_new",
+                  "entity": "group.lights_livingroom",
                   "state_image": {
                     "off": "/local/images/rooms/sala_off.jpg",
                     "on": "/local/images/rooms/sala_on.jpg"
@@ -673,16 +673,16 @@
                   "aspect_ratio": "0%",
                   "entities": [
                     {
-                      "entity": "light.0x000474000015ded8"
+                      "entity": "light.luce_studio"
                     },
                     {
-                      "entity": "cover.0x00047400015a3e19"
+                      "entity": "cover.tapparella_studio"
                     },
                     {
                       "entity": "climate.studio"
                     }
                   ],
-                  "entity": "light.0x000474000015ded8",
+                  "entity": "light.luce_studio",
                   "state_image": {
                     "off": "/local/images/rooms/studio_off.jpg",
                     "on": "/local/images/rooms/studio_on.jpg"
@@ -715,10 +715,10 @@
                   "aspect_ratio": "0%",
                   "entities": [
                     {
-                      "entity": "light.0x0004740000249aad"
+                      "entity": "light.luce_bagno"
                     },
                     {
-                      "entity": "light.0x000474000015be6b"
+                      "entity": "light.luce_specchio"
                     },
                     {
                       "entity": "light.luce_trono"
@@ -730,7 +730,7 @@
                       "entity": "climate.bagno"
                     }
                   ],
-                  "entity": "group.lights_bathroom_new",
+                  "entity": "group.lights_bathroom",
                   "state_image": {
                     "off": "/local/images/rooms/bagno_off.jpg",
                     "on": "/local/images/rooms/bagno_on.jpg"
@@ -745,10 +745,10 @@
                   "aspect_ratio": "0%",
                   "entities": [
                     {
-                      "entity": "light.0x0004740000292ec9"
+                      "entity": "light.luce_camera"
                     },
                     {
-                      "entity": "cover.0x00047400015ada3f"
+                      "entity": "cover.tapparella_camera"
                     },
                     {
                       "entity": "climate.camera"
@@ -757,7 +757,7 @@
                       "entity": "media_player.tv_camera"
                     }
                   ],
-                  "entity": "light.0x0004740000292ec9",
+                  "entity": "light.luce_camera",
                   "state_image": {
                     "off": "/local/images/rooms/camera_off.jpg",
                     "on": "/local/images/rooms/camera_on.jpg"
@@ -772,10 +772,10 @@
                   "aspect_ratio": "0%",
                   "entities": [
                     {
-                      "entity": "light.0x000474000015de50"
+                      "entity": "light.luce_balcone"
                     }
                   ],
-                  "entity": "light.0x000474000015de50",
+                  "entity": "light.luce_balcone",
                   "state_image": {
                     "off": "/local/images/rooms/balcone_off.jpg",
                     "on": "/local/images/rooms/balcone_on.jpg"
@@ -1064,15 +1064,12 @@
           "badges": [
             {
               "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_cucina_old",
-              "color": ""
+              "entity": "light.luce_zona_giorno",
+              "display_type": "complete"
             },
             {
               "type": "entity",
-              "entity": "light.luce_corridoio",
+              "entity": "light.luce_armadio",
               "display_type": "complete"
             },
             {
@@ -1080,7 +1077,20 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_sala_old",
+              "entity": "light.luce_cucina",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "entity": "light.luce_vetrine",
+              "display_type": "complete"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "light.luce_sala",
               "color": ""
             },
             {
@@ -1090,10 +1100,20 @@
             },
             {
               "type": "entity",
+              "entity": "light.luce_studio",
+              "display_type": "complete"
+            },
+            {
+              "type": "entity",
+              "entity": "light.luce_zona_notte",
+              "display_type": "complete"
+            },
+            {
+              "type": "entity",
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_bagno_old",
+              "entity": "light.luce_bagno",
               "color": ""
             },
             {
@@ -1101,7 +1121,7 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_specchio_old",
+              "entity": "light.luce_specchio",
               "color": ""
             },
             {
@@ -1109,7 +1129,7 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_studio_old",
+              "entity": "light.luce_trono",
               "color": ""
             },
             {
@@ -1117,7 +1137,7 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_camera_old",
+              "entity": "light.luce_camera",
               "color": ""
             },
             {
@@ -1130,7 +1150,7 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_balcone_old",
+              "entity": "light.luce_balcone",
               "color": ""
             },
             {
@@ -1143,54 +1163,7 @@
             {
               "entities": [
                 {
-                  "entity": "group.lights_old"
-                },
-                {
-                  "entity": "light.luce_cucina_old"
-                },
-                {
-                  "entity": "light.luce_corridoio"
-                },
-                {
-                  "type": "custom:fold-entity-row",
-                  "head": "group.lights_livingroom_old",
-                  "entities": [
-                    "light.luce_sala_old",
-                    "light.luce_divano"
-                  ]
-                },
-                {
-                  "type": "custom:fold-entity-row",
-                  "head": "group.lights_bathroom_old",
-                  "entities": [
-                    "light.luce_bagno_old",
-                    "light.luce_specchio_old"
-                  ]
-                },
-                {
-                  "entity": "light.luce_studio_old"
-                },
-                {
-                  "entity": "light.luce_camera_old"
-                },
-                {
-                  "entity": "light.luce_dispensa"
-                },
-                {
-                  "entity": "light.luce_balcone_old"
-                },
-                {
-                  "entity": "light.luce_veranda"
-                }
-              ],
-              "show_header_toggle": false,
-              "title": "Comandi luci",
-              "type": "entities"
-            },
-            {
-              "entities": [
-                {
-                  "entity": "group.lights_new"
+                  "entity": "group.lights"
                 },
                 {
                   "entity": "light.luce_zona_giorno"
@@ -1202,38 +1175,38 @@
                   "type": "custom:fold-entity-row",
                   "head": "group.lights_kitchen",
                   "entities": [
-                    "light.0x0004740000282606",
+                    "light.luce_cucina",
                     "light.luce_vetrine"
                   ]
                 },
                 {
                   "type": "custom:fold-entity-row",
-                  "head": "group.lights_livingroom_new",
+                  "head": "group.lights_livingroom",
                   "entities": [
-                    "light.0x0004740000254d99",
+                    "light.luce_sala",
                     "light.luce_divano"
                   ]
                 },
                 {
-                  "entity": "light.0x000474000015ded8"
+                  "entity": "light.luce_studio"
                 },
                 {
                   "entity": "light.luce_zona_notte"
                 },
                 {
                   "type": "custom:fold-entity-row",
-                  "head": "group.lights_bathroom_new",
+                  "head": "group.lights_bathroom",
                   "entities": [
-                    "light.0x0004740000249aad",
-                    "light.0x000474000015be6b",
+                    "light.luce_bagno",
+                    "light.luce_specchio",
                     "light.luce_trono"
                   ]
                 },
                 {
-                  "entity": "light.0x0004740000292ec9"
+                  "entity": "light.luce_camera"
                 },
                 {
-                  "entity": "light.0x000474000015de50"
+                  "entity": "light.luce_balcone"
                 }
               ],
               "show_header_toggle": false,
@@ -1241,22 +1214,32 @@
               "type": "entities"
             },
             {
-              "entity": "group.lights_old",
+              "entity": "group.lights",
               "name": "Luci Casa",
               "type": "tile"
             },
             {
-              "entity": "light.luce_cucina_old",
+              "entity": "light.luce_zona_giorno",
+              "name": "Luce Zona Giorno",
+              "type": "tile"
+            },
+            {
+              "entity": "light.luce_armadio",
+              "name": "Luce Armadio",
+              "type": "tile"
+            },
+            {
+              "entity": "light.luce_cucina",
               "name": "Luce Cucina",
               "type": "tile"
             },
             {
-              "entity": "light.luce_corridoio",
-              "name": "Luce Corridoio",
+              "entity": "light.luce_vetrine",
+              "name": "Luce Vetrine",
               "type": "tile"
             },
             {
-              "entity": "group.lights_livingroom_old",
+              "entity": "group.lights_livingroom",
               "name": "Luci Sala",
               "type": "tile"
             },
@@ -1266,7 +1249,7 @@
                   "type": "light-brightness"
                 }
               ],
-              "entity": "light.luce_sala_old",
+              "entity": "light.luce_sala",
               "name": "Luce Sala",
               "type": "tile"
             },
@@ -1281,23 +1264,33 @@
               ]
             },
             {
-              "entity": "group.lights_bathroom_old",
+              "entity": "light.luce_studio",
+              "name": "Luce Studio",
+              "type": "tile"
+            },
+            {
+              "entity": "light.luce_zona_notte",
+              "name": "Luce Zona Notte",
+              "type": "tile"
+            },
+            {
+              "entity": "group.lights_bathroom",
               "name": "Luci Bagno",
               "type": "tile"
             },
             {
-              "entity": "light.luce_bagno_old",
+              "entity": "light.luce_bagno",
               "name": "Luce Bagno",
               "type": "tile"
             },
             {
-              "entity": "light.luce_specchio_old",
+              "entity": "light.luce_specchio",
               "name": "Luce Specchio",
               "type": "tile"
             },
             {
-              "entity": "light.luce_studio_old",
-              "name": "Luce Studio",
+              "entity": "light.luce_trono",
+              "name": "Luce Cucina",
               "type": "tile"
             },
             {
@@ -1306,7 +1299,7 @@
                   "type": "light-brightness"
                 }
               ],
-              "entity": "light.luce_camera_old",
+              "entity": "light.luce_camera",
               "name": "Luce Camera",
               "type": "tile"
             },
@@ -1316,7 +1309,7 @@
               "type": "tile"
             },
             {
-              "entity": "light.luce_balcone_old",
+              "entity": "light.luce_balcone",
               "name": "Luce Balcone",
               "type": "tile"
             },
@@ -1335,38 +1328,6 @@
           "badges": [
             {
               "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_cucina_old",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_sala_old",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_studio_old",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_camera_old",
-              "color": ""
-            },
-            {
-              "type": "entity",
               "entity": "cover.tapparella_cucina_grande",
               "display_type": "complete"
             },
@@ -1377,12 +1338,12 @@
             },
             {
               "type": "entity",
-              "entity": "cover.0x00047400015ada3d",
+              "entity": "cover.tapparella_sala",
               "display_type": "complete"
             },
             {
               "type": "entity",
-              "entity": "cover.0x00047400015a3e19",
+              "entity": "cover.tapparella_studio",
               "display_type": "complete"
             },
             {
@@ -1392,55 +1353,11 @@
             },
             {
               "type": "entity",
-              "entity": "cover.0x00047400015ada3f",
+              "entity": "cover.tapparella_camera",
               "display_type": "complete"
             }
           ],
           "cards": [
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_cucina_old",
-                  "name": "Tapparella Cucina",
-                  "title_position": "top"
-                }
-              ],
-              "type": "custom:shutter-card"
-            },
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_sala_old",
-                  "name": "Tapparella Sala",
-                  "title_position": "top"
-                }
-              ],
-              "type": "custom:shutter-card"
-            },
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_studio_old",
-                  "name": "Tapparella Studio",
-                  "title_position": "top"
-                }
-              ],
-              "type": "custom:shutter-card"
-            },
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_camera_old",
-                  "name": "Tapparella Camera",
-                  "title_position": "top"
-                }
-              ],
-              "type": "custom:shutter-card"
-            },
             {
               "entities": [
                 {
@@ -1467,7 +1384,7 @@
               "entities": [
                 {
                   "buttons_position": "left",
-                  "entity": "cover.0x00047400015ada3d",
+                  "entity": "cover.tapparella_sala",
                   "name": "Tapparella Sala",
                   "title_position": "top"
                 }
@@ -1478,7 +1395,7 @@
               "entities": [
                 {
                   "buttons_position": "left",
-                  "entity": "cover.0x00047400015a3e19",
+                  "entity": "cover.tapparella_studio",
                   "name": "Tapparella Studio",
                   "title_position": "top"
                 }
@@ -1500,7 +1417,7 @@
               "entities": [
                 {
                   "buttons_position": "left",
-                  "entity": "cover.0x00047400015ada3f",
+                  "entity": "cover.tapparella_camera",
                   "name": "Tapparella Camera",
                   "title_position": "top"
                 }

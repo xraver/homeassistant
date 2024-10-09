@@ -21,19 +21,19 @@ homeassistant:
       friendly_name: "LED se spento"
 
     # BTI-NT4027C - Tapparella Sala (0x00047400015ada3d)
-    cover.0x00047400015ada3d:
+    cover.tapparella_sala:
       supported_features: 15
-    switch.0x00047400015ada3d_led_if_on:
+    switch.tapparella_sala_led_if_on:
       friendly_name: "LED se acceso"
-    switch.0x00047400015ada3d_led_in_dark:
+    switch.tapparella_sala_led_in_dark:
       friendly_name: "LED se spento"
 
     # BTI-NT4027C - Tapparella Studio (0x00047400015a3e19)
-    cover.0x00047400015a3e19:
+    cover.tapparella_studio:
       supported_features: 15
-    switch.0x00047400015a3e19_led_if_on:
+    switch.tapparella_studio_led_if_on:
       friendly_name: "LED se acceso"
-    switch.0x00047400015a3e19_led_in_dark:
+    switch.tapparella_studio_led_in_dark:
       friendly_name: "LED se spento"
 
     # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
@@ -45,41 +45,41 @@ homeassistant:
       friendly_name: "LED se spento"
 
     # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)
-    cover.0x00047400015ada3f:
+    cover.tapparella_camera:
       supported_features: 15
-    switch.0x00047400015ada3f_led_if_on:
+    switch.tapparella_camera_led_if_on:
       friendly_name: "LED se acceso"
-    switch.0x00047400015ada3f_led_in_dark:
+    switch.tapparella_camera_led_in_dark:
       friendly_name: "LED se spento"
 
     # BTI-4411C - Luce Sala (0x0004740000254d99)
-    #light.0x0004740000254d99:
+    #light.luce_sala:
     #  supported_color_modes: null
     #  supported_features: 0
-    switch.0x0004740000254d99_device_mode:
+    switch.luce_sala_device_mode:
       friendly_name: "Funzione Dimmer"
-    switch.0x0004740000254d99_led_if_on:
+    switch.luce_sala_led_if_on:
       friendly_name: "LED se acceso"
-    switch.0x0004740000254d99_led_in_dark:
+    switch.luce_sala_led_in_dark:
       friendly_name: "LED se spento"
-    number.0x0004740000254d99_ballast_maximum_level:
+    number.luce_sala_ballast_maximum_level:
       friendly_name: "Illuminazione massima"
-    number.0x0004740000254d99_ballast_minimum_level:
+    number.luce_sala_ballast_minimum_level:
       friendly_name: "Illuminazione minima"
 
     # BTI-4411C - Luce Camera (0x0004740000292ec9)
-    #light.0x0004740000292ec9:
+    #light.luce_camera:
     #  supported_color_modes: null
     #  supported_features: 0
-    switch.0x0004740000292ec9_device_mode:
+    switch.luce_camera_device_mode:
       friendly_name: "Funzione Dimmer"
-    switch.0x0004740000292ec9_led_if_on:
+    switch.luce_camera_led_if_on:
       friendly_name: "LED se acceso"
-    switch.0x0004740000292ec9_led_in_dark:
+    switch.luce_camera_led_in_dark:
       friendly_name: "LED se spento"
-    number.0x0004740000292ec9_ballast_maximum_level:
+    number.luce_camera_ballast_maximum_level:
       friendly_name: "Illuminazione massima"
-    number.0x0004740000292ec9_ballast_minimum_level:
+    number.luce_camera_ballast_minimum_level:
       friendly_name: "Illuminazione minima"
 
     # BTI-NT4411C - Dimmer 0x0004740001583a4a (N/A)

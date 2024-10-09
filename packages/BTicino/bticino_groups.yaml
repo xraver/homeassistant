@@ -10,23 +10,23 @@ group:
       # Covers
       - update.tapparella_cucina_grande
       - update.tapparella_cucina_piccola
-      - update.0x00047400015ada3d
-      - update.0x00047400015a3e19
-      - update.0x000474000159053e
-      - update.0x00047400015ada3f
+      - update.tapparella_sala
+      - update.tapparella_studio
+      - update.tapparella_bagno
+      - update.tapparella_camera
       # Lights
       - update.luce_zona_giorno
       - update.luce_armadio
-      - update.0x0004740000282606
-      - update.0x0004740000254d99
+      - update.luce_cucina
+      - update.luce_sala
       - update.luce_vetrine
-      - update.0x000474000015ded8
+      - update.luce_studio
       - update.luce_zona_notte
-      - update.0x0004740000249aad
-      - update.0x000474000015be6b
+      - update.luce_bagno
+      - update.luce_specchio
       - update.luce_trono
-      - update.0x0004740000292ec9
-      - update.0x000474000015de50
+      - update.luce_camera
+      - update.luce_balcone
       # Non connessi
       - update.0x0004740000249a4e
       - update.0x0004740001583a4a

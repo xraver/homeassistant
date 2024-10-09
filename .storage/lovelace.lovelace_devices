@@ -4335,26 +4335,26 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "cover.0x00047400015ada3d",
+                              "entity": "cover.tapparella_sala",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x00047400015ada3d",
+                              "entity": "update.tapparella_sala",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x00047400015ada3d_led_in_dark",
+                              "entity": "switch.tapparella_sala_led_in_dark",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x00047400015ada3d_led_if_on",
+                              "entity": "switch.tapparella_sala_led_if_on",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             }
@@ -4396,26 +4396,26 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "cover.0x00047400015a3e19",
+                              "entity": "cover.tapparella_studio",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x00047400015a3e19",
+                              "entity": "update.tapparella_studio",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x00047400015a3e19_led_in_dark",
+                              "entity": "switch.tapparella_studio_led_in_dark",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x00047400015a3e19_led_if_on",
+                              "entity": "switch.tapparella_studio_led_if_on",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             }
@@ -4518,26 +4518,26 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "cover.0x00047400015ada3f",
+                              "entity": "cover.tapparella_camera",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x00047400015ada3f",
+                              "entity": "update.tapparella_camera",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x00047400015ada3f_led_in_dark",
+                              "entity": "switch.tapparella_camera_led_in_dark",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x00047400015ada3f_led_if_on",
+                              "entity": "switch.tapparella_camera_led_if_on",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             }
@@ -4685,18 +4685,18 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x0004740000282606",
+                              "entity": "light.luce_cucina",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x0004740000282606",
+                              "entity": "update.luce_cucina",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
-                              "entity": "select.0x0004740000282606_power_on_behavior",
+                              "entity": "select.luce_cucina_power_on_behavior",
                               "template": "template_device_generic_state",
                               "name": "Power-On"
                             }
@@ -4791,33 +4791,33 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x0004740000254d99",
+                              "entity": "light.luce_sala",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x0004740000254d99",
+                              "entity": "update.luce_sala",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000254d99_device_mode",
+                              "entity": "switch.luce_sala_device_mode",
                               "icon": "mdi:lightbulb-on-50",
                               "show_state": false
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000254d99_led_in_dark",
+                              "entity": "switch.luce_sala_led_in_dark",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000254d99_led_if_on",
+                              "entity": "switch.luce_sala_led_if_on",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             }
@@ -4859,18 +4859,18 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x000474000015ded8",
+                              "entity": "light.luce_studio",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x000474000015ded8",
+                              "entity": "update.luce_studio",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
-                              "entity": "select.0x000474000015ded8_power_on_behavior",
+                              "entity": "select.luce_studio_power_on_behavior",
                               "template": "template_device_generic_state",
                               "name": "Power-On"
                             }
@@ -4965,18 +4965,18 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x0004740000249aad",
+                              "entity": "light.luce_bagno",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x0004740000249aad",
+                              "entity": "update.luce_bagno",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
-                              "entity": "select.0x0004740000249aad_power_on_behavior",
+                              "entity": "select.luce_bagno_power_on_behavior",
                               "template": "template_device_generic_state",
                               "name": "Power-On"
                             }
@@ -5018,18 +5018,18 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x000474000015be6b",
+                              "entity": "light.luce_specchio",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x000474000015be6b",
+                              "entity": "update.luce_specchio",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
-                              "entity": "select.0x000474000015be6b_power_on_behavior",
+                              "entity": "select.luce_specchio_power_on_behavior",
                               "template": "template_device_generic_state",
                               "name": "Power-On"
                             }
@@ -5124,33 +5124,33 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x0004740000292ec9",
+                              "entity": "light.luce_camera",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x0004740000292ec9",
+                              "entity": "update.luce_camera",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000292ec9_device_mode",
+                              "entity": "switch.luce_camera_device_mode",
                               "icon": "mdi:lightbulb-on-50",
                               "show_state": false
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000292ec9_led_in_dark",
+                              "entity": "switch.luce_camera_led_in_dark",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "switch.0x0004740000292ec9_led_if_on",
+                              "entity": "switch.luce_camera_led_if_on",
                               "icon": "mdi:led-outline",
                               "show_state": false
                             }
@@ -5192,18 +5192,18 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.0x000474000015de50",
+                              "entity": "light.luce_balcone",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.0x000474000015de50",
+                              "entity": "update.luce_balcone",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
-                              "entity": "select.0x000474000015de50_power_on_behavior",
+                              "entity": "select.luce_balcone_power_on_behavior",
                               "template": "template_device_generic_state",
                               "name": "Power-On"
                             }

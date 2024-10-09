@@ -18,20 +18,20 @@ lights_old:
     - light.luce_balcone_old
     - light.luce_veranda
 
-lights_new:
+lights:
   name: Luci Casa
   icon: mdi:lightbulb
   entities:
     - light.luce_zona_giorno
     - light.luce_armadio
-    - light.0x0004740000282606
+    - light.luce_cucina
     - light.luce_vetrine
-    - light.0x0004740000254d99
+    - light.luce_sala
     - light.luce_divano
-    - light.0x000474000015ded8
+    - light.luce_studio
     - light.luce_zona_notte
-    - light.0x0004740000249aad
-    - light.0x000474000015be6b
+    - light.luce_bagno
+    - light.luce_specchio
     - light.luce_trono
-    - light.0x0004740000292ec9
-    - light.0x000474000015de50
+    - light.luce_camera
+    - light.luce_balcone

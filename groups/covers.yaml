@@ -12,13 +12,13 @@ covers_old:
     - cover.tapparella_studio_old
     - cover.tapparella_camera_old
 
-covers_new:
+covers:
   name: Tapparelle
   icon: mdi:window-shutter
   entities:
     - cover.tapparella_cucina_grande
     - cover.tapparella_cucina_piccola
-    - cover.0x00047400015ada3d
-    - cover.0x00047400015a3e19
+    - cover.tapparella_sala
+    - cover.tapparella_studio
     - cover.tapparella_bagno
-    - cover.0x00047400015ada3f
+    - cover.tapparella_camera
