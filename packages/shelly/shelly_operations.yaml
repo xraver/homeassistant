@@ -17,13 +17,13 @@ script:
           | list
         }}
     sequence:
-      #- service: mqtt.publish
+      #- action: mqtt.publish
       #  data:
       #    topic: 'shellies/command'
       #    payload: 'update_fw'
       #    qos: 0
       #    retain: false
-      - service: update.install
+      - action: update.install
         target:
           entity_id: '{{ pending_update_list }}'
 
@@ -33,7 +33,7 @@ script:
   shelly_reboot:
     alias: "Shelly: Riavvio Dispositivi Collettivo"
     sequence:
-      - service: shell_command.shelly_reboot
+      - action: shell_command.shelly_reboot
 
 automation:
   ######################################################################
@@ -52,10 +52,10 @@ automation:
         }}
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: group.shelly
         to: 'on'
-      - platform: homeassistant
+      - trigger: homeassistant
         event: start
 
     condition:
@@ -65,7 +65,7 @@ automation:
 
     action:
       - delay: '00:00:10'
-      - service: script.notify_text
+      - action: script.notify_text
         data_template:
           title: "Shelly - Aggiornamento"
           message: >
@@ -75,7 +75,7 @@ automation:
             {%- endfor -%}
           notification_id: "update"
           enable_persistent: true
-      - service: input_boolean.turn_on
+      - action: input_boolean.turn_on
         entity_id: input_boolean.update_shelly
 
 ######################################################################

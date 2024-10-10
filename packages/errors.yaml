@@ -71,17 +71,17 @@ automation:
           domain: persistent_notification
           service: create
         event_type: call_service
-        platform: event
+        trigger: event
       - event_data:
           domain: persistent_notification
           service: dimiss
         event_type: call_service
-        platform: event
+        trigger: event
 
     condition: []
 
     action:
-      - service: input_boolean.turn_on
+      - action: input_boolean.turn_on
         data_template:
           entity_id: input_boolean.home_assistant_error
 
@@ -97,17 +97,17 @@ automation:
           domain: persistent_notification
           service: create
         event_type: call_service
-        platform: event
+        trigger: event
       - event_data:
           domain: persistent_notification
           service: dimiss
         event_type: call_service
-        platform: event
+        trigger: event
 
     condition: []
 
     action:
-      - service: input_boolean.turn_off
+      - action: input_boolean.turn_off
         data_template:
           entity_id: input_boolean.home_assistant_error
 

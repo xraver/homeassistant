@@ -7,15 +7,15 @@
   id: "google_home_pronuncia_testo"
 
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: input_text.google_home_speak
-    - platform: state
+    - trigger: state
       entity_id: input_text.google_anna_speak
 
   condition: []
 
   action:
-    - service: script.speech_engine
+    - action: script.speech_engine
       data_template:
         media_player: >
           {% if trigger.entity_id == 'input_text.google_anna_speak' %}

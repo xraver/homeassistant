@@ -6,14 +6,14 @@
   id: "home_assistant_cambio_modalita_on"
 
   trigger:
-    platform: state
+    trigger: state
     entity_id: input_boolean.home_mode_day,
                input_boolean.home_mode_night,
                input_boolean.home_mode_away
     to: 'on'
 
   action:
-    - service: input_boolean.turn_off
+    - action: input_boolean.turn_off
       data_template:
         entity_id: >
           {% set booleans = [ 'input_boolean.home_mode_day', 'input_boolean.home_mode_night', 'input_boolean.home_mode_away' ] | reject('equalto', trigger.entity_id) %}
@@ -22,7 +22,7 @@
 - alias: "Home Assistant: Cambio modalità Off"
 
   trigger:
-    platform: state
+    trigger: state
     entity_id: input_boolean.home_mode_day,
                input_boolean.home_mode_night,
                input_boolean.home_mode_away
@@ -42,7 +42,7 @@
         state: 'off'
 
   action:
-    - service: input_boolean.turn_on
+    - action: input_boolean.turn_on
       data_template:
         entity_id: >
           {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
@@ -59,11 +59,11 @@
   id: "home_assistant_modalita_giorno_notte"
 
   trigger:
-    - platform: time
+    - trigger: time
       at: '08:00:00'
-    - platform: time
+    - trigger: time
       at: '23:00:00'
-    - platform: homeassistant
+    - trigger: homeassistant
       event: start
 
   condition:
@@ -72,7 +72,7 @@
     state: 'off'
 
   action:
-    - service: input_boolean.turn_on
+    - action: input_boolean.turn_on
       data_template:
         entity_id: >-
           {% if now().strftime('%H')|int >= 8 and now().strftime('%H')|int < 23 %}
@@ -81,7 +81,7 @@
             input_boolean.home_mode_night
           {% endif %}
 
-    - service: script.volume_manager
+    - action: script.volume_manager
 
 ######################################################################
 # Home Assistant: Management of Speech Notifications
@@ -91,15 +91,15 @@
   id: "home_assistant_gestione_notifiche_vocali"
 
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.home_mode_night
       to: 'on'
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.home_mode_night
       to: 'off'
 
   action:
-    - service: >-
+    - action: >-
         {% if trigger.to_state.state == 'on' %}
           input_boolean.turn_off
         {% else %}
@@ -117,7 +117,7 @@
   id: "home_assistant_pulitura_settimanale_log"
 
   trigger:
-    - platform: time
+    - trigger: time
       at: '00:00:00'
 
   condition:
@@ -125,4 +125,4 @@
       weekday: [mon]
 
   action:
-    - service: script.homeassistant_clearlog
+    - action: script.homeassistant_clearlog

@@ -53,7 +53,7 @@ switch:
     name: NAS
     host: !secret nas_host
     turn_off:
-      service: shell_command.nas_turn_off
+      action: shell_command.nas_turn_off
       data:
         nas_host: !secret nas_host
         nas_username: !secret nas_username
@@ -76,7 +76,7 @@ script:
   plex_start:
     alias: "Avvia Plex"
     sequence:
-      - service: shell_command.plex_start
+      - action: shell_command.plex_start
         data:
           nas_host: !secret nas_host
           nas_username: !secret nas_username
@@ -84,7 +84,7 @@ script:
   plex_restart:
     alias: "Riavvia Plex"
     sequence:
-      - service: shell_command.plex_restart
+      - action: shell_command.plex_restart
         data:
           nas_host: !secret nas_host
           nas_username: !secret nas_username
@@ -92,7 +92,7 @@ script:
   plex_stop:
     alias: "Ferma Plex"
     sequence:
-      - service: shell_command.plex_stop
+      - action: shell_command.plex_stop
         data:
           nas_host: !secret nas_host
           nas_username: !secret nas_username

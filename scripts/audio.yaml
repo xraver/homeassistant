@@ -41,12 +41,12 @@ laura_voice:
 
     - wait_template: "{{ not is_state(media_player, 'playing') }}"
 
-    - service: script.volume_manager
+    - action: script.volume_manager
       data_template:
         media_player: "{{media_player}}"
         volume_level: "{{ volume_level }}"
 
-    - service: media_player.play_media
+    - action: media_player.play_media
       data_template:
         entity_id: "{{ media_player }}"
         media_content_type: 'audio/mp4'
@@ -62,63 +62,63 @@ laura_voice:
 laura_voice_1:
   alias: Voce Laura 1
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '1'
 
 laura_voice_2:
   alias: Voce Laura 2
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '2'
 
 laura_voice_3:
   alias: Voce Laura 3
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '3'
 
 laura_voice_4:
   alias: Voce Laura 4
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '4'
 
 laura_voice_5:
   alias: Voce Laura 5
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '5'
 
 laura_voice_6:
   alias: Voce Laura 6
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '6'
 
 laura_voice_7:
   alias: Voce Laura 7
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '7'
 
 laura_voice_8:
   alias: Voce Laura 8
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '8'
 
 laura_voice_9:
   alias: Voce Laura 9
   sequence:
-    - service: script.laura_voice
+    - action: script.laura_voice
       data:
         type: '9'
 
@@ -159,12 +159,12 @@ babu_voice:
 
     - wait_template: "{{ not is_state(media_player, 'playing') }}"
 
-    - service: script.volume_manager
+    - action: script.volume_manager
       data_template:
         media_player: "{{media_player}}"
         volume_level: "{{ volume_level }}"
 
-    - service: media_player.play_media
+    - action: media_player.play_media
       data_template:
         entity_id: "{{ media_player }}"
         media_content_type: 'audio/mp4'
@@ -177,13 +177,13 @@ babu_voice:
 babu_voice_1:
   alias: Voce Babu 1
   sequence:
-    - service: script.babu_voice
+    - action: script.babu_voice
       data:
         type: '1'
 
 babu_voice_2:
   alias: Voce Babu 2
   sequence:
-    - service: script.babu_voice
+    - action: script.babu_voice
       data:
         type: '2'

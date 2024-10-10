@@ -37,7 +37,7 @@ automation:
     mode: parallel
 
     trigger:
-      platform: state
+      trigger: state
       entity_id: input_boolean.boost_valvola_cucina,
                  input_boolean.boost_valvola_sala,
                  input_boolean.boost_valvola_studio,
@@ -60,19 +60,19 @@ automation:
         {% endif %}
 
     action:
-      #- service: climate.set_preset_mode
+      #- action: climate.set_preset_mode
       #  data_template:
       #    entity_id: "{{ entity_id }}"
       #    preset_mode: boost
-      - service: climate.set_temperature
+      - action: climate.set_temperature
         data_template:
           entity_id: "{{ entity_id }}"
           temperature: 30
       - delay: 300
-      - service: climate.turn_on
+      - action: climate.turn_on
         data_template:
           entity_id: "{{ entity_id }}"
-      - service: input_boolean.turn_off
+      - action: input_boolean.turn_off
         data_template:
           entity_id: "{{ trigger.entity_id }}"
 
@@ -84,7 +84,7 @@ automation:
     mode: parallel
 
     trigger:
-      platform: state
+      trigger: state
       entity_id: input_boolean.boost_valvola_cucina,
                  input_boolean.boost_valvola_sala,
                  input_boolean.boost_valvola_studio,
@@ -107,9 +107,9 @@ automation:
         {% endif %}
 
     action:
-      - service: climate.turn_on
+      - action: climate.turn_on
         data_template:
           entity_id: "{{ entity_id }}"
-      - service: input_boolean.turn_off
+      - action: input_boolean.turn_off
         data_template:
           entity_id: "{{ trigger.entity_id }}"

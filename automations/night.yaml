@@ -8,19 +8,19 @@
   initial_state: false
 
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.home_mode_night
       to: 'on'
 
   condition: []
 
   action:
-    - service: cover.set_cover_position
+    - action: cover.set_cover_position
       data:
         entity_id: cover.tapparella_globale
         position: 15
 
-    - service: cover.set_cover_position
+    - action: cover.set_cover_position
       data:
         entity_id: cover.tapparella_camera
         position: 0

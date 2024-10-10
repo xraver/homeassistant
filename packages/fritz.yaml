@@ -52,21 +52,21 @@ homeassistant:
 ######################################################################
 
 #switch:
-#  - platform: template
+#  - trigger: template
 #    switches:
 #      fritz_led:
 #        turn_on:
-#          service: shell_command.fritz_led_on
+#          action: shell_command.fritz_led_on
 #        turn_off:
-#          service: shell_command.fritz_led_off
+#          action: shell_command.fritz_led_off
 
-#  - platform: template
+#  - trigger: template
 #    switches:
 #      ap1_led:
 #        turn_on:
-#          service: shell_command.ap1_led_on
+#          action: shell_command.ap1_led_on
 #        turn_off:
-#          service: shell_command.ap1_led_off
+#          action: shell_command.ap1_led_off
 
 ######################################################################
 # Fritz Package - Fritz Command

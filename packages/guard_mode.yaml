@@ -67,16 +67,16 @@ automation:
     id: "modalita_guardia_attivazione"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: group.residents
         from: 'home'
-      - platform: homeassistant
+      - trigger: homeassistant
         event: start
 
     condition: "{{ not is_state('group.residents', 'home') }}"
 
     action:
-      - service: input_boolean.turn_on
+      - action: input_boolean.turn_on
         data_template:
           entity_id: input_boolean.guard_mode
 
@@ -87,15 +87,15 @@ automation:
     id: "modalita_guardia_disattivazione"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: group.residents
         to: 'home'
-      - platform: homeassistant
+      - trigger: homeassistant
         event: start
 
     condition: "{{ is_state('group.residents', 'home') }}"
 
     action:
-      - service: input_boolean.turn_off
+      - action: input_boolean.turn_off
         data_template:
           entity_id: input_boolean.guard_mode

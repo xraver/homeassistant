@@ -18,7 +18,7 @@
         name: "NFC_1"
 
   trigger:
-    platform: event
+    trigger: event
     event_type: tag_scanned
 
   action:
@@ -31,7 +31,7 @@
             - "{{ detected_tag in allowed_tags }}"
             - "{{ detected_device in allowed_devices }}"
           sequence:
-            - service: script.notify_text
+            - action: script.notify_text
               data_template:
                 title: "Home Assistant - Lettura NFC"
                 message: "Letto tag NFC {{ allowed_tags[detected_tag].name }} dal dispositivo {{ allowed_devices[detected_device].name }}."
@@ -41,7 +41,7 @@
             - "{{ detected_tag in allowed_tags }}"
             - "{{ detected_device not in allowed_devices }}"
           sequence:
-            - service: script.notify_text
+            - action: script.notify_text
               data_template:
                 title: "Home Assistant - Lettura NFC"
                 message: "Letto tag NFC {{ allowed_tags[detected_tag].name }} da dispositivo non valido ({{ detected_device }})."
@@ -51,14 +51,14 @@
             - "{{ detected_tag not in allowed_tags }}"
             - "{{ detected_device in allowed_devices }}"
           sequence:
-            - service: script.notify_text
+            - action: script.notify_text
               data_template:
                 title: "Home Assistant - Lettura NFC"
                 message: "Letto tag NFC non riconosciuto ({{ detected_tag }}) dal dispositivo {{ allowed_devices[detected_device].name }}."
                 enable_telegram: false
 
       default:
-        - service: script.notify_text
+        - action: script.notify_text
           data_template:
             title: "Home Assistant - Lettura NFC"
             message: "Letto tag NFC non valido ({{ detected_tag }}) da dispositivo non valido ({{ detected_device }})."

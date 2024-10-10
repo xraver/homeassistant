@@ -10,12 +10,12 @@ automation:
     id: "modalita_vacanza_azione_on"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: input_boolean.home_mode_away
         to: 'on'
 
     action:
-      - service: script.notify_voice
+      - action: script.notify_voice
         data_template:
           message: "Modalità vacanza abilitata"
 
@@ -27,15 +27,15 @@ automation:
 
     trigger:
       # Manual Disable
-      - platform: state
+      - trigger: state
         entity_id: input_boolean.home_mode_away
         to: 'off'
       # Back home
-      - platform: state
+      - trigger: state
         entity_id: group.residents
         to: 'home'
       # End of Away Period
-      - platform: time
+      - trigger: time
         at: input_datetime.away_mode_end
 
     condition:
@@ -53,9 +53,9 @@ automation:
           state: 'on'
 
     action:
-      - service: input_boolean.turn_off
+      - action: input_boolean.turn_off
         data:
           entity_id: input_boolean.home_mode_away
-      - service: script.notify_voice
+      - action: script.notify_voice
         data_template:
           message: "Modalità vacanza disabilitata"

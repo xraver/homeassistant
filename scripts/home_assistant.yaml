@@ -6,7 +6,7 @@
 homeassistant_restart:
   alias: "Riavvia Home Assistant"
   sequence:
-    - service: shell_command.docker_restart
+    - action: shell_command.docker_restart
 
 ######################################################################
 # Home Assistant: Ricarica Script
@@ -16,7 +16,7 @@ homeassistant_restart:
 homeassistant_reload_scripts:
   alias: "Ricarica Script"
   sequence:
-    - service: script.reload
+    - action: script.reload
 
 ######################################################################
 # Home Assistant: Ricarica Automazioni
@@ -26,7 +26,7 @@ homeassistant_reload_scripts:
 homeassistant_reload_automations:
   alias: "Ricarica Automazioni"
   sequence:
-    - service: automation.reload
+    - action: automation.reload
 
 ######################################################################
 # Home Assistant: Clear Log
@@ -38,9 +38,9 @@ homeassistant_reload_automations:
 homeassistant_clearlog:
   alias: "Pulisci Log"
   sequence:
-    - service: tts.clear_cache
-    - service: system_log.clear
-    - service: recorder.purge
+    - action: tts.clear_cache
+    - action: system_log.clear
+    - action: recorder.purge
       data:
         keep_days: 6
 
@@ -52,6 +52,6 @@ homeassistant_clearlog:
 homeassistant_google_home_sync:
   alias: "Sincronizza Google Home"
   sequence:
-    - service: google_assistant.request_sync
+    - action: google_assistant.request_sync
       data:
         agent_user_id: !secret google_agent

@@ -11,9 +11,9 @@
 tv_sala_toggle:
   alias: "TV Sala: Accendi/Spegni"
   sequence:
-    - service: media_player.toggle
+    - action: media_player.toggle
       entity_id: media_player.sony_kd_55xf8596
-#    - service: script.turn_on
+#    - action: script.turn_on
 #      data_template:
 #        entity_id: >-
 #          {% if is_state('media_player.sony_kd_55xf8596', 'on') %}
@@ -34,7 +34,7 @@ tv_sala_toggle:
 #tv_sala_on:
 #  alias: "TV Sala: Accendi"
 #  sequence:
-#    - service: shell_command.bravia_tvpower
+#    - action: shell_command.bravia_tvpower
 
 ######################################################################
 # Script: TV Sala Off
@@ -48,4 +48,4 @@ tv_sala_toggle:
 #tv_sala_off:
 #  alias: "TV Sala: Spegni"
 #  sequence:
-#    - service: shell_command.bravia_poweroff
+#    - action: shell_command.bravia_poweroff

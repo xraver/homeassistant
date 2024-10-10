@@ -10,7 +10,7 @@
   mode: parallel
 
   trigger:
-    - platform: zone
+    - trigger: zone
       entity_id:
         - person.giorgio
         - person.laura
@@ -22,7 +22,7 @@
 
   action:
     - wait_for_trigger:
-        - platform: state
+        - trigger: state
           entity_id: binary_sensor.porta_casa_contact
           to: "on"
       timeout:
@@ -31,7 +31,7 @@
 
     - delay: 00:00:05
 
-    - service: script.speech_engine
+    - action: script.speech_engine
       data_template:
         message: !include ../template_messages/welcome.yaml
         enable_greeting: 0
@@ -47,13 +47,13 @@
   initial_state: false
 
   trigger:
-    - platform: time
+    - trigger: time
       at: '12:00:00'
 
   condition: []
 
   action:
-    - service: script.speech_engine
+    - action: script.speech_engine
       data_template:
         message: >-
           {% set hour = now().strftime('%H') %}

@@ -6,16 +6,16 @@
   id: "home_assistant_modalita_test_azione_on"
 
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.test_mode
       to: 'on'
 
   action:
 
-    - service: automation.turn_off
+    - action: automation.turn_off
       entity_id: automation.home_assistant_startup_restart_on_error
 
-    - service: automation.turn_off
+    - action: automation.turn_off
       entity_id: automation.home_assistant_startup_google_sync
 
 ######################################################################
@@ -26,13 +26,13 @@
   id: "home_assistant_modalita_test_azione_off"
 
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.test_mode
       to: 'off'
 
   action:
-    - service: automation.turn_on
+    - action: automation.turn_on
       entity_id: automation.home_assistant_startup_restart_on_error
 
-    - service: automation.turn_on
+    - action: automation.turn_on
       entity_id: automation.home_assistant_startup_google_sync

@@ -17,7 +17,7 @@ script:
           | list
         }}
     sequence:
-      - service: update.install
+      - action: update.install
         target:
           entity_id: '{{ pending_update_list }}'
 
@@ -38,10 +38,10 @@ automation:
         }}
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: group.bticino
         to: 'on'
-      - platform: homeassistant
+      - trigger: homeassistant
         event: start
 
     condition:
@@ -51,7 +51,7 @@ automation:
 
     action:
       - delay: '00:00:10'
-      - service: script.notify_text
+      - action: script.notify_text
         data_template:
           title: "BTicino - Aggiornamento"
           message: >
@@ -61,5 +61,5 @@ automation:
             {%- endfor -%}
           notification_id: "update"
           enable_persistent: true
-      - service: input_boolean.turn_on
+      - action: input_boolean.turn_on
         entity_id: input_boolean.update_bticino

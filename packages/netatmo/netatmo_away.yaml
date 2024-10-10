@@ -8,7 +8,7 @@ script:
   ######################################################################
   climate_away_mode_on:
     sequence:
-      - service: climate.set_preset_mode
+      - action: climate.set_preset_mode
         data:
           entity_id:
             - climate.cucina
@@ -23,7 +23,7 @@ script:
   ######################################################################
   climate_away_mode_off:
     sequence:
-      - service: climate.set_hvac_mode
+      - action: climate.set_hvac_mode
         data:
           entity_id:
             - climate.cucina
@@ -45,10 +45,10 @@ automation:
     id: "termosifoni_sincronizzazione_con_riscaldamento_centralizzato"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: input_boolean.central_heating
         to: 'on'
-      - platform: state
+      - trigger: state
         entity_id: input_boolean.central_heating
         to: 'off'
 
@@ -62,7 +62,7 @@ automation:
                 entity_id: input_boolean.central_heating
                 state: "off"
             sequence:
-              - service: script.turn_on
+              - action: script.turn_on
                 data:
                   entity_id: script.climate_away_mode_on
           # Switch Off
@@ -76,6 +76,6 @@ automation:
                     entity_id: input_boolean.home_mode_away
                     state: 'off'
             sequence:
-              - service: script.turn_on
+              - action: script.turn_on
                 data:
                   entity_id: script.climate_away_mode_off

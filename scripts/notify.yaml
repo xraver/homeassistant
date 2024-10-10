@@ -80,7 +80,7 @@ notify_text:
       entity_id: input_boolean.text_notifications
       state: 'on'
 
-    - service: notify.mail
+    - action: notify.mail
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
@@ -90,13 +90,13 @@ notify_text:
             - condition: template
               value_template: "{{ enable_telegram }}"
           sequence:
-            - service: notify.telegram
+            - action: notify.telegram
               data_template:
                 title: "{{ title }}"
                 message: "{{ message | regex_replace(find='_', replace='-', ignorecase=False) }}"
       default: []
 
-    - service: notify.html5
+    - action: notify.html5
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
@@ -104,7 +104,7 @@ notify_text:
     - condition: template
       value_template: "{{ enable_persistent }}"
 
-    - service: persistent_notification.create
+    - action: persistent_notification.create
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
@@ -160,7 +160,7 @@ volume_manager:
           step: 0.05
 
   sequence:
-    - service: media_player.volume_set
+    - action: media_player.volume_set
       data_template:
         entity_id: "{{ media_player }}"
         volume_level: >-
@@ -257,12 +257,12 @@ notify_voice:
 
     - wait_template: "{{ not is_state(media_player, 'playing') }}"
 
-    - service: script.volume_manager
+    - action: script.volume_manager
       data_template:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
 
-    - service: tts.google_say
+    - action: tts.google_say
       data_template:
         entity_id: "{{ media_player }}"
         language: "{{ language }}"
@@ -272,7 +272,7 @@ notify_voice:
 
     - wait_template: "{{ not is_state(media_player, 'playing') }}"
 
-    - service: script.volume_manager
+    - action: script.volume_manager
 
 ######################################################################
 # Script: Global Notification (Text+Voice)
@@ -401,7 +401,7 @@ notify_all:
         boolean:
 
   sequence:
-    - service: script.notify_text
+    - action: script.notify_text
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
@@ -409,7 +409,7 @@ notify_all:
         enable_persistent: "{{ enable_persistent }}"
         enable_telegram: "{{ enable_telegram }}"
 
-    - service: script.notify_voice
+    - action: script.notify_voice
       data_template:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"

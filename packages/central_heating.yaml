@@ -65,9 +65,9 @@ automation:
     id: "riscaldamneto_centralizzato"
 
     trigger:
-      - platform: homeassistant
+      - trigger: homeassistant
         event: start
-      - platform: time
+      - trigger: time
         at: '00:00:00'
 
     condition: []
@@ -77,10 +77,10 @@ automation:
           # Switch on
           - conditions: "{{ now().month == 11 and now().day == 1 and is_state('input_boolean.central_heating', 'off') }}"
             sequence:
-              - service: input_boolean.turn_on
+              - action: input_boolean.turn_on
                 data_template:
                   entity_id: input_boolean.central_heating
-              - service: script.notify_text
+              - action: script.notify_text
                 data_template:
                   title: "Home Assistant - Riscaldamento Centralizzato"
                   message: "Il riscaldamento centralizzato è stato acceso"
@@ -88,10 +88,10 @@ automation:
           # Switch off
           - conditions: "{{ now().month == 4 and now().day == 15 and is_state('input_boolean.central_heating', 'on')}}"
             sequence:
-              - service: input_boolean.turn_off
+              - action: input_boolean.turn_off
                 data_template:
                   entity_id: input_boolean.central_heating
-              - service: script.notify_text
+              - action: script.notify_text
                 data_template:
                   title: "Home Assistant - Riscaldamento Centralizzato"
                   message: "Il riscaldamento centralizzato è stato spento"

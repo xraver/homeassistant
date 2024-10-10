@@ -13,12 +13,12 @@ script:
   start_alarm_sound:
     alias: "Allarmi: Avvia Suono"
     sequence:
-      - service: media_player.volume_set
+      - action: media_player.volume_set
         data_template:
           entity_id: 'media_player.google_home'
           volume_level: 0.4
 
-      - service: media_player.play_media
+      - action: media_player.play_media
         data_template:
           entity_id: 'media_player.google_home'
           media_content_type: 'audio/mp4'
@@ -34,11 +34,11 @@ script:
   stop_alarm_sound:
     alias: "Allarmi: Interrompi Suono"
     sequence:
-      - service: media_player.media_stop
+      - action: media_player.media_stop
         data_template:
           entity_id: 'media_player.google_home'
 
-      - service: script.volume_manager
+      - action: script.volume_manager
         data_template:
           media_player: 'media_player.google_home'
 
@@ -58,7 +58,7 @@ script:
   start_alarm:
     alias: "Allarmi: Attiva Allarme"
     sequence:
-      - service: input_boolean.turn_on
+      - action: input_boolean.turn_on
         data_template:
           entity_id: >
             {# Check Null Input #}
@@ -68,7 +68,7 @@ script:
             {{ entity_id }}
 
       # LEVEL 1
-      - service: script.notify_all
+      - action: script.notify_all
         data_template:
           volume_level: 0.4
           language: 'it'
@@ -108,7 +108,7 @@ script:
             false
           {% endif %}
 
-      - service: script.start_alarm_sound
+      - action: script.start_alarm_sound
 
   ######################################################################
   # Alarm: Stop Alarm
@@ -120,11 +120,11 @@ script:
   stop_alarm:
     alias: "Allarmi: Disattiva Allarme"
     sequence:
-      - service: homeassistant.turn_off
+      - action: homeassistant.turn_off
         entity_id: group.alarms
 
-      - service: script.stop_alarm_sound
+      - action: script.stop_alarm_sound
 
-      - service: persistent_notification.dismiss
+      - action: persistent_notification.dismiss
         data_template:
           notification_id: "alarm"

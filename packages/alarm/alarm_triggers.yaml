@@ -13,7 +13,7 @@ automation:
     id: "allarmi_porta_casa"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: group.doors
         to: 'on'
 
@@ -23,7 +23,7 @@ automation:
         state: 'on'
 
     action:
-      - service: script.start_alarm
+      - action: script.start_alarm
         data_template:
           entity_id: input_boolean.door_alarm
           message: "È stata rilevata una presenza non autorizzata."
@@ -39,12 +39,12 @@ automation:
     id: "allarmi_perdita_acqua"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: group.water
         to: 'on'
 
     action:
-      - service: script.start_alarm
+      - action: script.start_alarm
         data_template:
           entity_id: input_boolean.water_alarm
           message: >
@@ -61,12 +61,12 @@ automation:
     id: "allarmi_auto"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: group.car_alarm
         to: 'on'
 
     action:
-      - service: script.start_alarm
+      - action: script.start_alarm
         data_template:
           entity_id: input_boolean.car_alarm
           message: "Si è attivato un allarme sull'auto."

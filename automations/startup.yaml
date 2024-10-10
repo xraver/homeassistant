@@ -6,7 +6,7 @@
   id: "home_assistant_startup_restart_on_error"
 
   trigger:
-    - platform: homeassistant
+    - trigger: homeassistant
       event: start
 
   action:
@@ -14,7 +14,7 @@
     - condition: state
       entity_id: persistent_notification.invalid_config
       state: 'notifying'
-    - service: script.homeassistant_restart
+    - action: script.homeassistant_restart
 
 ######################################################################
 # Startup Automation: Google Sync
@@ -24,8 +24,8 @@
   id: "home_assistant_startup_google_sync"
 
   trigger:
-    - platform: homeassistant
+    - trigger: homeassistant
       event: start
 
   action:
-    - service: script.homeassistant_google_home_sync
+    - action: script.homeassistant_google_home_sync

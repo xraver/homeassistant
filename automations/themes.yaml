@@ -6,22 +6,22 @@
   id: "home_assistant_temi_modalita_giorno_notte"
 
   trigger:
-    - platform: homeassistant
+    - trigger: homeassistant
       event: start
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.home_mode_day
       to: 'on'
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.home_mode_night
       to: 'on'
-    - platform: state
+    - trigger: state
       entity_id: input_boolean.home_mode_away
       to: 'on'
 
   action:
     - delay:
         milliseconds: 50
-    - service: frontend.set_theme
+    - action: frontend.set_theme
       data_template:
         name: >-
           {% if is_state('sensor.home_mode', 'giorno') %}

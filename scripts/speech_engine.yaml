@@ -96,7 +96,7 @@ speech_engine:
         boolean:
 
   sequence:
-    - service: script.notify_voice
+    - action: script.notify_voice
       data_template:
         media_player: "{{ media_player }}"
         volume_level: "{{ volume_level }}"
@@ -113,7 +113,7 @@ speech_status:
   alias: Stato Casa
   description: Riproduce le informazioni principali sullo stato della casa
   sequence:
-    - service: script.speech_engine
+    - action: script.speech_engine
       data:
         enable_greeting: true
         enable_status: true
@@ -129,6 +129,6 @@ speech_consumption:
   alias: Consumo Energetico
   description: Riproduce il consumo energetico istantaneo
   sequence:
-    - service: script.speech_engine
+    - action: script.speech_engine
       data:
         enable_consumption: true

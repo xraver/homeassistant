@@ -10,10 +10,10 @@ automation:
     id: "modalita_vacanza_gestione_termosifoni"
 
     trigger:
-      - platform: state
+      - trigger: state
         entity_id: input_boolean.home_mode_away
         to: 'on'
-      - platform: state
+      - trigger: state
         entity_id: input_boolean.home_mode_away
         to: 'off'
 
@@ -27,7 +27,7 @@ automation:
                 entity_id: input_boolean.home_mode_away
                 state: "on"
             sequence:
-              - service: script.turn_on
+              - action: script.turn_on
                 data:
                   entity_id: script.climate_away_mode_on
           # Switch Off
@@ -41,6 +41,6 @@ automation:
                     entity_id: input_boolean.central_heating
                     state: 'on'
             sequence:
-              - service: script.turn_on
+              - action: script.turn_on
                 data:
                   entity_id: script.climate_away_mode_off

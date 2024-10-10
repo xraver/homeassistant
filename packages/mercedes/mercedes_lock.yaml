@@ -9,11 +9,11 @@
 #        friendly_name: Blocco Auto
 #        value_template: "{{ is_state('binary_sensor.ff590mr_locked', 'off') }}"
 #        turn_on:
-#          - service: mbapi2020.doors_lock
+#          - action: mbapi2020.doors_lock
 #            data:
 #              vin: !secret mb_vin
 #        turn_off:
-#          - service: mbapi2020.doors_unlock
+#          - action: mbapi2020.doors_unlock
 #            data:
 #              vin: !secret mb_vin
 #        icon_template: >-
@@ -29,10 +29,10 @@ lock:
     value_template: "{{ is_state('binary_sensor.ff590mr_locked', 'off') }}"
     optimistic: true
     lock:
-      - service: mbapi2020.doors_lock
+      - action: mbapi2020.doors_lock
         data:
           vin: !secret mb_vin
     unlock:
-      - service: mbapi2020.doors_unlock
+      - action: mbapi2020.doors_unlock
         data:
           vin: !secret mb_vin

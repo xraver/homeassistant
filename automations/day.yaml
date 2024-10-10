@@ -8,7 +8,7 @@
   #initial_state: 'on'
 
   trigger:
-    - platform: time
+    - trigger: time
       at: '07:00:00'
 
   condition:

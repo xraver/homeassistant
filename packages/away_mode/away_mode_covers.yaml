@@ -11,9 +11,9 @@ automation:
     #initial_state: 'on'
 
     trigger:
-      - platform: time
+      - trigger: time
         at: '09:00:00'
-      - platform: time
+      - trigger: time
         at: '18:00:00'
 
     condition:
@@ -22,7 +22,7 @@ automation:
         state: 'on'
 
     action:
-      - service: cover.set_cover_position
+      - action: cover.set_cover_position
         data_template:
           entity_id:
             - cover.tapparella_sala

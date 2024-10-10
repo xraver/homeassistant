@@ -13,7 +13,7 @@
   mode: single
 
   trigger:
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.porta_casa_contact
       to: 'on'
 
@@ -30,7 +30,7 @@
 
   action:
     - delay: 00:00:01
-    - service: light.turn_on
+    - action: light.turn_on
       entity_id: light.luce_corridoio
       #entity:id: light.luce_zona_giorno
     - delay: '00:05:00'

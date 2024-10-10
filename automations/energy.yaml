@@ -6,15 +6,15 @@
   id: "allarmi_consumo_energetico_elevato"
 
   trigger:
-    - platform: numeric_state
+    - trigger: numeric_state
       entity_id: sensor.shelly_em_channel_1_power
       above: 3200
-    - platform: numeric_state
+    - trigger: numeric_state
       entity_id: sensor.shelly_em_old_channel_1_power
       above: 3200
 
   action:
-    service: script.notify_all
+    action: script.notify_all
     data_template:
       title: "Home Assistant - Consumo Energetico Elevato"
       message: "Consumo energetico elevato ({{ states.sensor.shelly_em_channel_1_power.state }})."

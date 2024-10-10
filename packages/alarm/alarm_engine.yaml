@@ -32,9 +32,9 @@ automation:
     id: "allarmi_riconoscimento_allarmi"
 
     trigger:
-      platform: state
+      trigger: state
       entity_id: group.alarms
       to: 'off'
 
     action:
-      - service: script.stop_alarm
+      - action: script.stop_alarm

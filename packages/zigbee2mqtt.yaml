@@ -136,7 +136,7 @@ script:
   zigbee2mqtt_rename:
     alias: "Zigbee2MQTT: Rinomina Device"
     sequence:
-      service: mqtt.publish
+      action: mqtt.publish
       data_template:
         topic: zigbee2mqtt/bridge/request/device/rename
         payload_template: >-
@@ -152,7 +152,7 @@ script:
   zigbee2mqtt_remove:
     alias: "Zigbee2MQTT: Rimuovi Device"
     sequence:
-      service: mqtt.publish
+      action: mqtt.publish
       data_template:
         topic: zigbee2mqtt/bridge/request/device/remove
         payload_template: >-
@@ -228,11 +228,11 @@ automation:
   - alias: "Zigbee2MQTT: Abilita Join"
     id: "zigbee2mqtt_abilita_join"
     trigger:
-      platform: state
+      trigger: state
       entity_id: switch.zigbee2mqtt_bridge_permit_join
       to: "on"
     action:
-      service: timer.start
+      action: timer.start
       entity_id: timer.zigbee_permit_join
       data_template:
         duration: "{{ '00:0%i:00' % (states('input_number.zigbee2mqtt_join_minutes') | int ) }}"
@@ -243,18 +243,18 @@ automation:
   - alias: "Zigbee2MQTT: Disabilita Join"
     id: "zigbee2mqtt_disabilita_join"
     trigger:
-      - platform: event
+      - trigger: event
         event_type: timer.finished
         event_data:
           entity_id: timer.zigbee_permit_join
-      - platform: state
+      - trigger: state
         entity_id: switch.zigbee2mqtt_bridge_permit_join
         to: "off"
     action:
-      - service: timer.cancel
+      - action: timer.cancel
         data:
           entity_id: timer.zigbee_permit_join
-      - service: switch.turn_off
+      - action: switch.turn_off
         entity_id: switch.zigbee2mqtt_bridge_permit_join
 
   ######################################################################
@@ -263,13 +263,13 @@ automation:
   - alias: "Zigbee2MQTT: Device aggiunto alla rete Zigbee2mqtt"
     id: "zigbee2mqtt_device_aggiunto_alla_rete_zigbee2mqtt"
     trigger:
-      platform: mqtt
+      trigger: mqtt
       topic: 'zigbee2mqtt/bridge/event'
     condition:
       condition: template
       value_template: '{{trigger.payload_json.type == "device_interview" and trigger.payload_json.data.status == "successful" and trigger.payload_json.data.supported}}'
     action:
-      - service: persistent_notification.create
+      - action: persistent_notification.create
         data_template:
           title: "Device aggiunto alla rete Zigbee2mqtt"
           message: "Name: {{trigger.payload_json.data.friendly_name}},
@@ -283,14 +283,14 @@ automation:
   - alias: "Zigbee2MQTT: Restart Automation"
     id: "zigbee2mqtt_restart_automation"
     trigger:
-      - platform: homeassistant
+      - trigger: homeassistant
         event: start
-      - platform: state
+      - trigger: state
         entity_id: binary_sensor.zigbee2mqtt_bridge_connection_state
         to: "off"
         for: "00:01:00"
     action:
-      - service: shell_command.zigbee2mqtt_restart
+      - action: shell_command.zigbee2mqtt_restart
         data:
           docker_host: !secret docker_host
           docker_username: !secret docker_username

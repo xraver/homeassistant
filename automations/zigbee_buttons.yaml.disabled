@@ -6,14 +6,14 @@
 
   trigger:
     - domain: mqtt
-      platform: device
+      trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
       discovery_id: 0x00158d0004081917 single
       type: action
       subtype: single
 
   action:
-    - service: light.toggle
+    - action: light.toggle
       entity_id: light.luce_corridoio
 
 ######################################################################
@@ -24,14 +24,14 @@
 
   trigger:
     - domain: mqtt
-      platform: device
+      trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
       discovery_id: 0x00158d0004081917 action_double
       type: action
       subtype: action_double
 
   action:
-    - service: light.toggle
+    - action: light.toggle
       entity_id: light.luce_sala
 
 ######################################################################
@@ -42,14 +42,14 @@
 
   trigger:
     - domain: mqtt
-      platform: device
+      trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
       discovery_id: 0x00158d0004081917 action_triple
       type: action
       subtype: action_triple
 
   action:
-    - service: light.toggle
+    - action: light.toggle
       entity_id: light.luce_studio
 
 ######################################################################
@@ -60,12 +60,12 @@
 
   trigger:
     - domain: mqtt
-      platform: device
+      trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
       discovery_id: 0x00158d0004081917 hold
       type: action
       subtype: hold
 
   action:
-    - service: light.toggle
+    - action: light.toggle
       entity_id: light.luci_casa
