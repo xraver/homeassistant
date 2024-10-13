@@ -36,7 +36,7 @@ automation:
     id: "termosifoni_accensione"
 
     trigger:
-      platform: state
+      trigger: state
       entity_id: input_boolean.valvola_cucina,
                  input_boolean.valvola_sala,
                  input_boolean.valvola_studio,
@@ -45,7 +45,7 @@ automation:
       to: 'on'
 
     action:
-      - service: climate.turn_on
+      - action: climate.turn_on
         data_template:
           entity_id: >
             {% if trigger.entity_id == 'input_boolean.valvola_cucina' %}
@@ -67,7 +67,7 @@ automation:
     id: "termosifoni_spegnimento"
 
     trigger:
-      platform: state
+      trigger: state
       entity_id: input_boolean.valvola_cucina,
                  input_boolean.valvola_sala,
                  input_boolean.valvola_studio,
@@ -76,7 +76,7 @@ automation:
       to: 'off'
 
     action:
-      - service: climate.turn_off
+      - action: climate.turn_off
         data_template:
           entity_id: >
             {% if trigger.entity_id == 'input_boolean.valvola_cucina' %}
