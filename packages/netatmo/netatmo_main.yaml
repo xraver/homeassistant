@@ -74,3 +74,5 @@ homeassistant:
       <<: *customize
     automation.termosifoni_sincronizzazione_con_riscaldamento_centralizzato:
       <<: *customize
+    automation.netatmo_notifica_disconnessione:
+      <<: *customize

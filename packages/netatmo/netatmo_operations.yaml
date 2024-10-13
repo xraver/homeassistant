@@ -1,0 +1,46 @@
+######################################################################
+# Netatmo Package - Operations - Automations
+######################################################################
+
+automation:
+  # Notification when a device becomes unavailable
+  - alias: "Netatmo: Notifica disconnessione"
+    id: "netatmo_notifica_disconnessione"
+
+    variables:
+      disconnected_devices_list: >
+        {{ states.update
+          | selectattr('state','eq','unavailable')
+          | selectattr('entity_id', 'in', states.group.climate.attributes.entity_id)
+          | map(attribute='entity_id')
+          | list
+        }}
+
+    trigger:
+      - trigger: state
+        entity_id: climate.cucina
+        to: 'unavailable'
+      - trigger: state
+        entity_id: climate.sala
+        to: 'unavailable'
+      - trigger: state
+        entity_id: climate.studio
+        to: 'unavailable'
+      - trigger: state
+        entity_id: climate.bagno
+        to: 'unavailable'
+      - trigger: state
+        entity_id: climate.camera
+        to: 'unavailable'
+
+    action: 
+      - action: script.notify_text
+        data_template:
+          title: "Netatmo - Dispositivi disconnessi"
+          message: >
+            I seguenti dispositivi si sono disconnessi :
+            {% for entity_id in disconnected_devices_list %}
+                -> {{ state_attr(entity_id, 'friendly_name')}}
+            {%- endfor -%}
+          notification_id: "update"
+          enable_persistent: true

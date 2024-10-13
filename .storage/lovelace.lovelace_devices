@@ -3338,7 +3338,7 @@
                           "cards": [
                             {
                               "type": "tile",
-                              "entity": "script.shelly_upgrade",
+                              "entity": "script.shelly_update",
                               "name": "Aggiorna Tutto",
                               "tap_action": {
                                 "action": "call-service",
