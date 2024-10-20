@@ -792,7 +792,7 @@
                 {
                   "buttons_position": "left",
                   "entity": "cover.tapparella_cucina_old",
-                  "name": "Tapparella Cucina Grande",
+                  "name": "Tapparella Cucina",
                   "always_percentage": true
                 }
               ],
