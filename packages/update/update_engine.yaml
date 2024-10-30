@@ -19,9 +19,8 @@ automation:
 
     variables:
       pending_update_list: >
-        {{ states.update
+        {{ expand('group.hacs')
           | selectattr('state','eq','on')
-          | selectattr('entity_id', 'in', states.group.hacs.attributes.entity_id)
           | map(attribute='entity_id')
           | list
         }}
@@ -103,9 +102,8 @@ script:
     alias: "HACS: Aggiornamento Collettivo"
     variables:
       pending_update_list: >
-        {{ states.update
+        {{ expand('group.hacs')
           | selectattr('state','eq','on')
-          | selectattr('entity_id', 'in', states.group.hacs.attributes.entity_id)
           | map(attribute='entity_id')
           | list
         }}

@@ -9,9 +9,8 @@ automation:
 
     variables:
       disconnected_devices_list: >
-        {{ states.update
+        {{ expand('group.climate')
           | selectattr('state','eq','unavailable')
-          | selectattr('entity_id', 'in', states.group.climate.attributes.entity_id)
           | map(attribute='entity_id')
           | list
         }}
@@ -38,7 +37,7 @@ automation:
         data_template:
           title: "Netatmo - Dispositivi disconnessi"
           message: >
-            I seguenti dispositivi si sono disconnessi :
+            Ci sono {{disconnected_devices_list | count }} dispositivi disconnessi:
             {% for entity_id in disconnected_devices_list %}
                 -> {{ state_attr(entity_id, 'friendly_name')}}
             {%- endfor -%}
