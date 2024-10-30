@@ -308,7 +308,7 @@
                           "color": "#c0392b"
                         }
                       ],
-                      "decimals": 0,
+                      "decimals": 2,
                       "hour24": true
                     },
                     {
@@ -1168,7 +1168,7 @@
                           "color": "#c0392b"
                         }
                       ],
-                      "decimals": 0,
+                      "decimals": 2,
                       "hour24": true
                     },
                     {
@@ -2614,13 +2614,13 @@
           "cards": [
             {
               "entity": "sensor.shelly_em_channel_1_power",
-              "max": 4000,
+              "max": 6000,
               "min": 0,
               "name": "Potenza Istantanea",
               "severity": {
                 "green": 0,
                 "yellow": 2000,
-                "red": 3000
+                "red": 3500
               },
               "type": "gauge",
               "unit": "W",
@@ -2631,13 +2631,13 @@
             },
             {
               "entity": "sensor.shelly_em_old_channel_1_power",
-              "max": 4000,
+              "max": 6000,
               "min": 0,
               "name": "Potenza Istantanea",
               "severity": {
                 "green": 0,
                 "yellow": 2000,
-                "red": 3000
+                "red": 3500
               },
               "type": "gauge",
               "unit": "W",
