@@ -33,15 +33,15 @@ filter:
     # Home Assistant Controls
     - input_boolean.home_mode_away
     - script.homeassistant_restart
-  #include_domains:
-    #- climate
-    #- cover
-    #- light
-    #- sensor
-    #- switch
-  #exclude_entities:
-    #- cover.tapparelle_casa
-    #- light.luci_casa
-    #- light.luci_bagno
-    #- light.luci_sala
-    #- switch.zigbee2mqtt_bridge_permit_join
+#  include_domains:
+#    - climate
+#    - cover
+#    - light
+#    - sensor
+#    - switch
+#  exclude_entities:
+#    - cover.tapparelle_casa
+#    - light.luci_casa
+#    - light.luci_bagno
+#    - light.luci_sala
+#    - switch.zigbee2mqtt_bridge_permit_join

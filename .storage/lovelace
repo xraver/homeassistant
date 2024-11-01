@@ -105,7 +105,7 @@
                       "entity": "cover.tapparella_cucina_old"
                     },
                     {
-                      "entity": "climate.cucina"
+                      "entity": "climate.bagno_grande"
                     },
                     {
                       "entity": "media_player.google_home"
