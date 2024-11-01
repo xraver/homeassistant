@@ -26,8 +26,8 @@ rules:
     type: unix
 
   #quoted-strings:
-  #  quote-type: any
-  #  required: true
-  #  extra-required: []
-  #  extra-allowed: []
-  #  allow-quoted-quotes: false
+    #quote-type: any
+    #required: true
+    #extra-required: []
+    #extra-allowed: []
+    #allow-quoted-quotes: false
