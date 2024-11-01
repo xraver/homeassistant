@@ -3382,7 +3382,66 @@
                   "entities": [
                     {
                       "type": "section",
-                      "label": "Valvola 1 - Cucina"
+                      "label": "Valvola Zona Giorno"
+                    },
+                    {
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/netatmo_valve.png"
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "climate.zona_giorno",
+                                  "name": "Modalità"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "sensor.valvola_zona_giorno_state",
+                                  "name": "Stato"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_battery_state",
+                                  "entity": "sensor.valvola_zona_giorno_batteria",
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_zona_giorno",
+                                  "name": "Timer"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "view_layout": {
+                    "grid-area": "first"
+                  }
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
+                    {
+                      "type": "section",
+                      "label": "Valvola Cucina"
                     },
                     {
                       "type": "custom:hui-element",
@@ -3414,7 +3473,7 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
-                                  "entity": "sensor.valvola_cucina_battery_percent",
+                                  "entity": "sensor.valvola_cucina_batteria",
                                   "name": "Batteria"
                                 },
                                 {
@@ -3431,7 +3490,7 @@
                     }
                   ],
                   "view_layout": {
-                    "grid-area": "first"
+                    "grid-area": "second"
                   }
                 },
                 {
@@ -3441,7 +3500,7 @@
                   "entities": [
                     {
                       "type": "section",
-                      "label": "Valvola 2 - Sala"
+                      "label": "Valvola Sala"
                     },
                     {
                       "type": "custom:hui-element",
@@ -3473,72 +3532,13 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
-                                  "entity": "sensor.valvola_sala_battery_percent",
+                                  "entity": "sensor.valvola_sala_batteria",
                                   "name": "Batteria"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "timer.valvola_sala",
-                                  "name": "Timer"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "view_layout": {
-                    "grid-area": "second"
-                  }
-                },
-                {
-                  "type": "entities",
-                  "show_header_toggle": "off",
-                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-                  "entities": [
-                    {
-                      "type": "section",
-                      "label": "Valvola 3 - Bagno"
-                    },
-                    {
-                      "type": "custom:hui-element",
-                      "card_type": "vertical-stack",
-                      "cards": [
-                        {
-                          "type": "horizontal-stack",
-                          "cards": [
-                            {
-                              "type": "picture",
-                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                              "image": "/local/images/devices/netatmo_valve.png"
-                            },
-                            {
-                              "type": "vertical-stack",
-                              "cards": [
-                                {
-                                  "type": "custom:button-card",
-                                  "template": "template_device_generic_state",
-                                  "entity": "climate.bagno",
-                                  "name": "Modalità"
-                                },
-                                {
-                                  "type": "custom:button-card",
-                                  "template": "template_device_generic_state",
-                                  "entity": "sensor.valvola_bagno_state",
-                                  "name": "Stato"
-                                },
-                                {
-                                  "type": "custom:button-card",
-                                  "template": "template_device_generic_battery_state",
-                                  "entity": "sensor.valvola_bagno_battery_percent",
-                                  "name": "Batteria"
-                                },
-                                {
-                                  "type": "custom:button-card",
-                                  "template": "template_device_generic_state",
-                                  "entity": "timer.valvola_bagno",
                                   "name": "Timer"
                                 }
                               ]
@@ -3559,7 +3559,7 @@
                   "entities": [
                     {
                       "type": "section",
-                      "label": "Valvola 4 - Studio"
+                      "label": "Valvola Studio"
                     },
                     {
                       "type": "custom:hui-element",
@@ -3591,7 +3591,7 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
-                                  "entity": "sensor.valvola_studio_battery_percent",
+                                  "entity": "sensor.valvola_studio_batteria",
                                   "name": "Batteria"
                                 },
                                 {
@@ -3618,7 +3618,125 @@
                   "entities": [
                     {
                       "type": "section",
-                      "label": "Valvola 5 - Camera"
+                      "label": "Valvola Bagno Piccolo"
+                    },
+                    {
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/netatmo_valve.png"
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "climate.bagno_piccolo",
+                                  "name": "Modalità"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "sensor.valvola_bagno_piccolo_state",
+                                  "name": "Stato"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_battery_state",
+                                  "entity": "sensor.valvola_bagno_piccolo_batteria",
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_bagno_piccolo",
+                                  "name": "Timer"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "view_layout": {
+                    "grid-area": "fifth"
+                  }
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
+                    {
+                      "type": "section",
+                      "label": "Valvola Bagno Grande"
+                    },
+                    {
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/netatmo_valve.png"
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "climate.bagno_grande",
+                                  "name": "Modalità"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "sensor.valvola_bagno_grande_state",
+                                  "name": "Stato"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_battery_state",
+                                  "entity": "sensor.valvola_bagno_grande_batteria",
+                                  "name": "Batteria"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "timer.valvola_bagno_grande",
+                                  "name": "Timer"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "view_layout": {
+                    "grid-area": "sixth"
+                  }
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
+                    {
+                      "type": "section",
+                      "label": "Valvola Camera"
                     },
                     {
                       "type": "custom:hui-element",
@@ -3650,7 +3768,7 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
-                                  "entity": "sensor.valvola_camera_battery_percent",
+                                  "entity": "sensor.valvola_camera_batteria",
                                   "name": "Batteria"
                                 },
                                 {
@@ -3667,7 +3785,7 @@
                     }
                   ],
                   "view_layout": {
-                    "grid-area": "fifth"
+                    "grid-area": "seventh"
                   }
                 }
               ],

@@ -8,6 +8,14 @@ sensor:
   ######################################################################
   - platform: template
     sensors:
+      valvola_zona_giorno_temperature:
+        friendly_name: "Temperatura Zona Giorno"
+        value_template: "{{ state_attr('climate.zona_giorno', 'current_temperature') }}"
+        unit_of_measurement: '°C'
+        device_class: temperature
+
+  - platform: template
+    sensors:
       valvola_cucina_temperature:
         friendly_name: "Temperatura Cucina"
         value_template: "{{ state_attr('climate.cucina', 'current_temperature') }}"
@@ -32,9 +40,17 @@ sensor:
 
   - platform: template
     sensors:
-      valvola_bagno_temperature:
-        friendly_name: "Temperatura Bagno"
-        value_template: "{{ state_attr('climate.bagno', 'current_temperature') }}"
+      valvola_bagno_piccolo_temperature:
+        friendly_name: "Temperatura Bagno Piccolo"
+        value_template: "{{ state_attr('climate.bagno_piccolo', 'current_temperature') }}"
+        unit_of_measurement: '°C'
+        device_class: temperature
+
+  - platform: template
+    sensors:
+      valvola_bagno_grande_temperature:
+        friendly_name: "Temperatura Bagno Grande"
+        value_template: "{{ state_attr('climate.bagno_grande', 'current_temperature') }}"
         unit_of_measurement: '°C'
         device_class: temperature
 
@@ -49,6 +65,18 @@ sensor:
   ######################################################################
   # Sensor: State from Radiator Valve
   ######################################################################
+  - platform: template
+    sensors:
+      valvola_zona_giorno_state:
+        friendly_name: "Stato Valvola Zona Giorno"
+        value_template: "{{ state_attr('climate.zona_giorno', 'hvac_action') }}"
+        icon_template: >-
+          {% if is_state_attr('climate.zona_giorno', 'hvac_action', 'idle') %}
+            mdi:radiator-disabled
+          {% else %}
+            mdi:radiator
+          {% endif %}
+
   - platform: template
     sensors:
       valvola_cucina_state:
@@ -87,11 +115,23 @@ sensor:
 
   - platform: template
     sensors:
-      valvola_bagno_state:
-        friendly_name: "Stato Valvola Bagno"
-        value_template: "{{ state_attr('climate.bagno', 'hvac_action') }}"
+      valvola_bagno_piccolo_state:
+        friendly_name: "Stato Valvola Bagno Piccolo"
+        value_template: "{{ state_attr('climate.bagno_piccolo', 'hvac_action') }}"
         icon_template: >-
-          {% if is_state_attr('climate.bagno', 'hvac_action', 'idle') %}
+          {% if is_state_attr('climate.bagno_piccolo', 'hvac_action', 'idle') %}
+            mdi:radiator-disabled
+          {% else %}
+            mdi:radiator
+          {% endif %}
+
+  - platform: template
+    sensors:
+      valvola_bagno_grande_state:
+        friendly_name: "Stato Valvola Bagno Grande"
+        value_template: "{{ state_attr('climate.bagno_grande', 'hvac_action') }}"
+        icon_template: >-
+          {% if is_state_attr('climate.bagno_grande', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}
             mdi:radiator

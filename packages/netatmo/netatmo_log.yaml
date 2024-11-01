@@ -5,15 +5,19 @@
 logbook:
   exclude:
     entities:
-      - sensor.valvola_cucina_battery_percent
-      - sensor.valvola_sala_battery_percent
-      - sensor.valvola_studio_battery_percent
-      - sensor.valvola_bagno_battery_percent
-      - sensor.valvola_camera_battery_percent
+      - sensor.valvola_zona_giorno_batteria
+      - sensor.valvola_cucina_batteria
+      - sensor.valvola_sala_batteria
+      - sensor.valvola_studio_batteria
+      - sensor.valvola_bagno_piccolo_batteria
+      - sensor.valvola_bagno_grande_batteria
+      - sensor.valvola_camera_batteria
+      - sensor.valvola_zona_giorno_state
       - sensor.valvola_cucina_state
       - sensor.valvola_sala_state
       - sensor.valvola_studio_state
-      - sensor.valvola_bagno_state
+      - sensor.valvola_bagno_piccolo_state
+      - sensor.valvola_bagno_grande_state
       - sensor.valvola_camera_state
       - select.netatmo_casa_ravera_testa
 
@@ -24,14 +28,18 @@ logbook:
 recorder:
   exclude:
     entities:
-      - sensor.valvola_cucina_battery_percent
-      - sensor.valvola_sala_battery_percent
-      - sensor.valvola_studio_battery_percent
-      - sensor.valvola_bagno_battery_percent
-      - sensor.valvola_camera_battery_percent
+      - sensor.valvola_zona_giorno_batteria
+      - sensor.valvola_cucina_batteria
+      - sensor.valvola_sala_batteria
+      - sensor.valvola_studio_batteria
+      - sensor.valvola_bagno_piccolo_batteria
+      - sensor.valvola_bagno_grande_batteria
+      - sensor.valvola_camera_batteria
+      - sensor.valvola_zona_giorno_state
       - sensor.valvola_cucina_state
       - sensor.valvola_sala_state
       - sensor.valvola_studio_state
-      - sensor.valvola_bagno_state
+      - sensor.valvola_bagno_piccolo_state
+      - sensor.valvola_bagno_grande_state
       - sensor.valvola_camera_state
       - select.netatmo_casa_ravera_testa

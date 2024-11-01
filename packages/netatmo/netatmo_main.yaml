@@ -12,7 +12,7 @@ homeassistant:
     package.netatmo:
       customize: &customize
         package: 'netatmo'
-        version: 1.0.0
+        version: 1.2.0
 
     ######################################################################
     # Netatmo Package - Main - Entities
@@ -20,15 +20,21 @@ homeassistant:
 
     group.climate:
       <<: *customize
+    sensor.valvola_zona_giorno_temperature:
+      <<: *customize
     sensor.valvola_cucina_temperature:
       <<: *customize
     sensor.valvola_sala_temperature:
       <<: *customize
     sensor.valvola_studio_temperature:
       <<: *customize
-    sensor.valvola_bagno_temperature:
+    sensor.valvola_bagno_piccolo_temperature:
+      <<: *customize
+    sensor.valvola_bagno_grande_temperature:
       <<: *customize
     sensor.valvola_camera_temperature:
+      <<: *customize
+    sensor.valvola_zona_giorno_state:
       <<: *customize
     sensor.valvola_cucina_state:
       <<: *customize
@@ -36,9 +42,13 @@ homeassistant:
       <<: *customize
     sensor.valvola_studio_state:
       <<: *customize
-    sensor.valvola_bagno_state:
+    sensor.valvola_bagno_piccolo_state:
+      <<: *customize
+    sensor.valvola_bagno_grande_state:
       <<: *customize
     sensor.valvola_camera_state:
+      <<: *customize
+    input_boolean.valvola_zona_giorno:
       <<: *customize
     input_boolean.valvola_cucina:
       <<: *customize
@@ -46,7 +56,9 @@ homeassistant:
       <<: *customize
     input_boolean.valvola_studio:
       <<: *customize
-    input_boolean.valvola_bagno:
+    input_boolean.valvola_bagno_piccolo:
+      <<: *customize
+    input_boolean.valvola_bagno_grande:
       <<: *customize
     input_boolean.valvola_camera:
       <<: *customize
@@ -54,13 +66,17 @@ homeassistant:
       <<: *customize
     automation.termosifoni_spegnimento:
       <<: *customize
+    input_boolean.boost_valvola_zona_giorno:
+      <<: *customize
     input_boolean.boost_valvola_cucina:
       <<: *customize
     input_boolean.boost_valvola_sala:
       <<: *customize
     input_boolean.boost_valvola_studio:
       <<: *customize
-    input_boolean.boost_valvola_bagno:
+    input_boolean.boost_valvola_bagno_grande:
+      <<: *customize
+    input_boolean.boost_valvola_bagno_piccolo:
       <<: *customize
     input_boolean.boost_valvola_camera:
       <<: *customize

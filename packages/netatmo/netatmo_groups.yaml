@@ -7,8 +7,10 @@ group:
     name: Termostato
     icon: mdi:thermometer
     entities:
+      - climate.zona_giorno
       - climate.cucina
       - climate.sala
       - climate.studio
-      - climate.bagno
+      - climate.bagno_piccolo
+      - climate.bagno_grande
       - climate.camera

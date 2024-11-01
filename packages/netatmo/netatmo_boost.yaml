@@ -3,6 +3,10 @@
 ######################################################################
 
 input_boolean:
+  boost_valvola_zona_giorno:
+    name: Boost Valvola Zona Giorno
+    initial: off
+    icon: mdi:thermometer-plus
   boost_valvola_cucina:
     name: Boost Valvola Cucina
     initial: off
@@ -15,8 +19,12 @@ input_boolean:
     name: Boost Valvola Studio
     initial: off
     icon: mdi:thermometer-plus
-  boost_valvola_bagno:
-    name: Boost Valvola Bagno
+  boost_valvola_bagno_piccolo:
+    name: Boost Valvola Bagno Piccolo
+    initial: off
+    icon: mdi:thermometer-plus
+  boost_valvola_bagno_grande:
+    name: Boost Valvola Bagno Grande
     initial: off
     icon: mdi:thermometer-plus
   boost_valvola_camera:
@@ -38,23 +46,29 @@ automation:
 
     trigger:
       trigger: state
-      entity_id: input_boolean.boost_valvola_cucina,
+      entity_id: input_boolean.boost_valvola_zona_giorno,
+                 input_boolean.boost_valvola_cucina,
                  input_boolean.boost_valvola_sala,
                  input_boolean.boost_valvola_studio,
-                 input_boolean.boost_valvola_bagno,
+                 input_boolean.boost_valvola_bagno_piccolo,
+                 input_boolean.boost_valvola_bagno_grande,
                  input_boolean.boost_valvola_camera
       to: 'on'
 
     variables:
       entity_id: >-
-        {% if trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
+        {% if trigger.entity_id == 'input_boolean.boost_valvola_zona_giorno' %}
+          climate.zona_giorno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
           climate.cucina
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
           climate.sala
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
           climate.studio
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno' %}
-          climate.bagno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_piccolo' %}
+          climate.bagno_piccolo
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_grande' %}
+          climate.bagno_grande
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera' %}
           climate.camera
         {% endif %}
@@ -85,23 +99,29 @@ automation:
 
     trigger:
       trigger: state
-      entity_id: input_boolean.boost_valvola_cucina,
+      entity_id: input_boolean.boost_valvola_zona_giorno,
+                 input_boolean.boost_valvola_cucina,
                  input_boolean.boost_valvola_sala,
                  input_boolean.boost_valvola_studio,
-                 input_boolean.boost_valvola_bagno,
+                 input_boolean.boost_valvola_bagno_piccolo,
+                 input_boolean.boost_valvola_bagno_grande,
                  input_boolean.boost_valvola_camera
       to: 'off'
 
     variables:
       entity_id: >-
-        {% if trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
+        {% if trigger.entity_id == 'input_boolean.boost_valvola_zona_giorno' %}
+          climate.zona_giorno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
           climate.cucina
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
           climate.sala
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
           climate.studio
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno' %}
-          climate.bagno
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_piccolo' %}
+          climate.bagno_piccolo
+        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_grande' %}
+          climate.bagno_grande
         {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera' %}
           climate.camera
         {% endif %}

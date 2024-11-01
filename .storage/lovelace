@@ -162,7 +162,7 @@
                       "entity": "light.luce_specchio_old"
                     },
                     {
-                      "entity": "climate.bagno"
+                      "entity": "climate.bagno_piccolo"
                     }
                   ],
                   "entity": "group.lights_bathroom_old",
@@ -1046,7 +1046,7 @@
                       "entity": "cover.tapparella_bagno"
                     },
                     {
-                      "entity": "climate.bagno"
+                      "entity": "climate.bagno_grande"
                     }
                   ],
                   "entity": "group.lights_bathroom",
@@ -1803,16 +1803,22 @@
           "path": "climate",
           "badges": [
             {
+              "entity": "sensor.valvola_zona_giorno_temperature"
+            },
+            {
               "entity": "sensor.valvola_cucina_temperature"
             },
             {
               "entity": "sensor.valvola_sala_temperature"
             },
             {
-              "entity": "sensor.valvola_bagno_temperature"
+              "entity": "sensor.valvola_studio_temperature"
             },
             {
-              "entity": "sensor.valvola_studio_temperature"
+              "entity": "sensor.valvola_bagno_piccolo_temperature"
+            },
+            {
+              "entity": "sensor.valvola_bagno_grande_temperature"
             },
             {
               "entity": "sensor.valvola_camera_temperature"
@@ -1835,6 +1841,10 @@
           ],
           "cards": [
             {
+              "entity": "climate.zona_giorno",
+              "type": "thermostat"
+            },
+            {
               "entity": "climate.cucina",
               "type": "thermostat"
             },
@@ -1843,11 +1853,15 @@
               "type": "thermostat"
             },
             {
-              "entity": "climate.bagno",
+              "entity": "climate.studio",
               "type": "thermostat"
             },
             {
-              "entity": "climate.studio",
+              "entity": "climate.bagno_piccolo",
+              "type": "thermostat"
+            },
+            {
+              "entity": "climate.bagno_grande",
               "type": "thermostat"
             },
             {
@@ -1864,10 +1878,16 @@
                   "entity": "input_boolean.boost_valvola_sala"
                 },
                 {
+                  "entity": "input_boolean.boost_valvola_zona_giorno"
+                },
+                {
                   "entity": "input_boolean.boost_valvola_studio"
                 },
                 {
-                  "entity": "input_boolean.boost_valvola_bagno"
+                  "entity": "input_boolean.boost_valvola_bagno_piccolo"
+                },
+                {
+                  "entity": "input_boolean.boost_valvola_bagno_grande"
                 },
                 {
                   "entity": "input_boolean.boost_valvola_camera"
@@ -1880,6 +1900,9 @@
               "type": "entities",
               "entities": [
                 {
+                  "entity": "input_boolean.valvola_zona_giorno"
+                },
+                {
                   "entity": "input_boolean.valvola_cucina"
                 },
                 {
@@ -1889,7 +1912,10 @@
                   "entity": "input_boolean.valvola_studio"
                 },
                 {
-                  "entity": "input_boolean.valvola_bagno"
+                  "entity": "input_boolean.valvola_bagno_piccolo"
+                },
+                {
+                  "entity": "input_boolean.valvola_bagno_grande"
                 },
                 {
                   "entity": "input_boolean.valvola_camera"
@@ -1903,24 +1929,32 @@
               "title": "Stato Valvole Netatmo",
               "entities": [
                 {
+                  "entity": "sensor.valvola_zona_giorno_state",
+                  "name": "Valvola Zona Giorno"
+                },
+                {
                   "entity": "sensor.valvola_cucina_state",
-                  "name": "Cucina"
+                  "name": "Valvola Cucina"
                 },
                 {
                   "entity": "sensor.valvola_sala_state",
-                  "name": "Sala"
+                  "name": "Valvola Sala"
                 },
                 {
                   "entity": "sensor.valvola_studio_state",
-                  "name": "Studio"
+                  "name": "Valvola Studio"
                 },
                 {
-                  "entity": "sensor.valvola_bagno_state",
-                  "name": "Bagno"
+                  "entity": "sensor.valvola_bagno_piccolo_state",
+                  "name": "Valvola Bagno Piccolo"
+                },
+                {
+                  "entity": "sensor.valvola_bagno_grande_state",
+                  "name": "Valvola Bagno Grande"
                 },
                 {
                   "entity": "sensor.valvola_camera_state",
-                  "name": "Camera"
+                  "name": "Valvola Camera"
                 }
               ]
             },
@@ -1928,27 +1962,37 @@
               "type": "custom:bar-card",
               "entities": [
                 {
-                  "entity": "sensor.valvola_cucina_battery_percent",
-                  "name": "Cucina",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_sala_battery_percent",
-                  "name": "Sala",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_studio_battery_percent",
-                  "name": "Studio",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_bagno_battery_percent",
+                  "entity": "sensor.valvola_zona_giorno_batteria",
                   "name": "Bagno",
                   "width": "85%"
                 },
                 {
-                  "entity": "sensor.valvola_camera_battery_percent",
+                  "entity": "sensor.valvola_cucina_batteria",
+                  "name": "Cucina",
+                  "width": "85%"
+                },
+                {
+                  "entity": "sensor.valvola_sala_batteria",
+                  "name": "Sala",
+                  "width": "85%"
+                },
+                {
+                  "entity": "sensor.valvola_studio_batteria",
+                  "name": "Studio",
+                  "width": "85%"
+                },
+                {
+                  "entity": "sensor.valvola_bagno_piccolo_batteria",
+                  "name": "Bagno",
+                  "width": "85%"
+                },
+                {
+                  "entity": "sensor.valvola_bagno_grande_batteria",
+                  "name": "Bagno",
+                  "width": "85%"
+                },
+                {
+                  "entity": "sensor.valvola_camera_batteria",
                   "name": "Camera",
                   "width": "85%"
                 }
@@ -1962,6 +2006,17 @@
                 "name": "outside",
                 "value": "outside"
               }
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "climate.zona_giorno"
+                }
+              ],
+              "hours_to_show": 24,
+              "refresh_interval": 0,
+              "title": "Valvola Zona Giorno"
             },
             {
               "type": "history-graph",
@@ -2000,12 +2055,23 @@
               "type": "history-graph",
               "entities": [
                 {
-                  "entity": "climate.bagno"
+                  "entity": "climate.bagno_piccolo"
                 }
               ],
               "hours_to_show": 24,
               "refresh_interval": 0,
-              "title": "Valvola Bagno"
+              "title": "Valvola Bagno Piccolo"
+            },
+            {
+              "type": "history-graph",
+              "entities": [
+                {
+                  "entity": "climate.bagno_grande"
+                }
+              ],
+              "hours_to_show": 24,
+              "refresh_interval": 0,
+              "title": "Valvola Bagno Grande"
             },
             {
               "type": "history-graph",

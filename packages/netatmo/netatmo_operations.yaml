@@ -17,6 +17,9 @@ automation:
 
     trigger:
       - trigger: state
+        entity_id: climate.zona_giorno
+        to: 'unavailable'
+      - trigger: state
         entity_id: climate.cucina
         to: 'unavailable'
       - trigger: state
@@ -26,7 +29,10 @@ automation:
         entity_id: climate.studio
         to: 'unavailable'
       - trigger: state
-        entity_id: climate.bagno
+        entity_id: climate.bagno_piccolo
+        to: 'unavailable'
+      - trigger: state
+        entity_id: climate.bagno_grande
         to: 'unavailable'
       - trigger: state
         entity_id: climate.camera

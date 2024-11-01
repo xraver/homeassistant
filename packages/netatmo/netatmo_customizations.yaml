@@ -4,25 +4,33 @@
 
 homeassistant:
   customize:
+    climate.zona_giorno:
+      friendly_name: Valvola Zona Giorno
     climate.cucina:
       friendly_name: Valvola Cucina
     climate.sala:
       friendly_name: Valvola Sala
-    climate.bagno:
-      friendly_name: Valvola Bagno
     climate.studio:
       friendly_name: Valvola Studio
+    climate.bagno_piccolo:
+      friendly_name: Valvola Bagno Piccolo
+    climate.bagno_grande:
+      friendly_name: Valvola Bagno Grande
     climate.camera:
       friendly_name: Valvola Camera
     select.netatmo_casa_ravera_testa:
       friendly_name: Programmazione Valvole
-    sensor.valvola_cucina_battery_percent:
+    sensor.valvola_zona_giorno_batteria:
+      friendly_name: Batteria Valvola Zona Giorno
+    sensor.valvola_cucina_batteria:
       friendly_name: Batteria Valvola Cucina
-    sensor.valvola_sala_battery_percent:
+    sensor.valvola_sala_batteria:
       friendly_name: Batteria Valvola Sala
-    sensor.valvola_bagno_battery_percent:
-      friendly_name: Batteria Valvola Bagno
-    sensor.valvola_studio_battery_percent:
+    sensor.valvola_studio_batteria:
       friendly_name: Batteria Valvola Studio
-    sensor.valvola_camera_battery_percent:
+    sensor.valvola_bagno_piccolo_batteria:
+      friendly_name: Batteria Valvola Bagno Piccolo
+    sensor.valvola_bagno_grande_batteria:
+      friendly_name: Batteria Valvola Bagno Grande
+    sensor.valvola_camera_batteria:
       friendly_name: Batteria Valvola Camera

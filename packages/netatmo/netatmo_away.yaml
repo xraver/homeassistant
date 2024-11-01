@@ -11,10 +11,12 @@ script:
       - action: climate.set_preset_mode
         data:
           entity_id:
+            - climate.zona_giorno
             - climate.cucina
             - climate.sala
             - climate.studio
-            - climate.bagno
+            - climate.bagno_piccolo
+            - climate.bagno_grande
             - climate.camera
           preset_mode: away
 
@@ -26,10 +28,12 @@ script:
       - action: climate.set_hvac_mode
         data:
           entity_id:
+            - climate.zona_giorno
             - climate.cucina
             - climate.sala
             - climate.studio
-            - climate.bagno
+            - climate.bagno_piccolo
+            - climate.bagno_grande
             - climate.camera
           hvac_mode: auto
 
