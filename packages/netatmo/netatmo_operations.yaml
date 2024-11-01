@@ -38,7 +38,7 @@ automation:
         entity_id: climate.camera
         to: 'unavailable'
 
-    action: 
+    action:
       - action: script.notify_text
         data_template:
           title: "Netatmo - Dispositivi disconnessi"

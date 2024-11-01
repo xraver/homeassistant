@@ -40,12 +40,12 @@ homeassistant:
     shell_command.ap1_reconnect:
       <<: *customize
       icon: mdi:connection
-    #shell_command.ap1_led_on:
-    #  <<: *customize
-    #  icon: mdi:led-on
-    #shell_command.ap1_led_off:
-    #  <<: *customize
-    #  icon: mdi:led-off
+#    shell_command.ap1_led_on:
+#      <<: *customize
+#      icon: mdi:led-on
+#    shell_command.ap1_led_off:
+#      <<: *customize
+#      icon: mdi:led-off
 
 ######################################################################
 # Fritz Package - Switch
