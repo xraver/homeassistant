@@ -50,7 +50,7 @@ logbook:
       # BTI-3584C - Luce Cucina (0x0004740000282606)
       - select.luce_cucina_power_on_behavior
 
-      # BTI-4411C - Luce Sala (0x0004740000254d99)
+      # BTI-4411C - Luce Sala (0x00047400002bd3ad)
       - select.luce_sala_identify
       - number.luce_sala_ballast_maximum_level
       - number.luce_sala_ballast_minimum_level
@@ -153,7 +153,7 @@ recorder:
       # BTI-3584C - Luce Cucina (0x0004740000282606)
       - select.luce_cucina_power_on_behavior
 
-      # BTI-4411C - Luce Sala (0x0004740000254d99)
+      # BTI-4411C - Luce Sala (0x00047400002bd3ad)
       - select.luce_sala_identify
       - number.luce_sala_ballast_maximum_level
       - number.luce_sala_ballast_minimum_level

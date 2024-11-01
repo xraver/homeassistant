@@ -52,7 +52,7 @@ homeassistant:
     switch.tapparella_camera_led_in_dark:
       friendly_name: "LED se spento"
 
-    # BTI-4411C - Luce Sala (0x0004740000254d99)
+    # BTI-4411C - Luce Sala (0x00047400002bd3ad)
     #light.luce_sala:
     #  supported_color_modes: null
     #  supported_features: 0
