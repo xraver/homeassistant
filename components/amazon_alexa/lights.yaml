@@ -2,14 +2,18 @@
 # Amazon Alexa: Lights
 ######################################################################
 
-- light.luce_corridoio
-- light.luce_cucina_old
-- light.luce_sala_old
-- light.luce_divano
-- light.luce_bagno_old
-- light.luce_specchio_old
-- light.luce_studio_old
-- light.luce_camera_old
-- light.luce_dispensa
-- light.luce_balcone_old
-- light.luce_veranda
+  - light.luce_corridoio
+  #- light.luce_zona_giorno
+  #- light.luce_armadio
+  - light.luce_cucina_old
+  #- light.luce_vetrine
+  - light.luce_sala
+  - light.luce_divano
+  - light.luce_studio
+  #- light.luce_zona_notte
+  - light.luce_bagno_old
+  - light.luce_specchio_old
+  - light.luce_camera_old
+  - light.luce_dispensa
+  - light.luce_balcone_old
+  - light.luce_veranda

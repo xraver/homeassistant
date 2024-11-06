@@ -1872,13 +1872,13 @@
               "type": "entities",
               "entities": [
                 {
+                  "entity": "input_boolean.boost_valvola_zona_giorno"
+                },
+                {
                   "entity": "input_boolean.boost_valvola_cucina"
                 },
                 {
                   "entity": "input_boolean.boost_valvola_sala"
-                },
-                {
-                  "entity": "input_boolean.boost_valvola_zona_giorno"
                 },
                 {
                   "entity": "input_boolean.boost_valvola_studio"

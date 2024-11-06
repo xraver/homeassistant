@@ -17,13 +17,13 @@ light.luce_cucina_old:
 #light.luce_vetrine:
 #  expose: true
 #  room: Cucina
-light.luce_sala_old:
+light.luce_sala:
   expose: true
   room: Sala
 light.luce_divano:
   expose: true
   room: Sala
-light.luce_studio_old:
+light.luce_studio:
   expose: true
   room: Studio
 #light.luce_zona_notte:
