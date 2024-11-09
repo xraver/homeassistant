@@ -12,69 +12,119 @@
           "id": "main_old",
           "title": "Principale Old",
           "path": "main_old",
-          "type": "custom:grid-layout",
-          "badges": [],
-          "cards": [
+          "type": "sections",
+          "badges": [
             {
-              "type": "custom:badge-card",
-              "badges": [
-                {
-                  "entity": "person.giorgio",
-                  "show_entity_picture": true
-                },
-                {
-                  "entity": "person.laura",
-                  "show_entity_picture": true
-                },
-                {
-                  "entity": "device_tracker.ff590mr_device_tracker",
-                  "show_entity_picture": true
-                },
-                {
-                  "entity": "sensor.time"
-                },
-                {
-                  "entity": "binary_sensor.porta_casa_contact",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.home_mode",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.guard_mode",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.speech_notifications",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.alarms",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.central_heating",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "sensor.shelly_em_old_channel_1_power"
-                },
-                {
-                  "entity": "sensor.temperatura_balcone_temperature",
-                  "display_type": "complete",
-                  "name": "Balcone"
-                },
-                {
-                  "entity": "sensor.temperatura_veranda_temperature",
-                  "display_type": "complete",
-                  "name": "Veranda"
-                }
-              ]
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.giorgio",
+              "color": "",
+              "show_entity_picture": true
             },
             {
-              "title": "Stanze",
-              "type": "custom:layout-card",
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.laura",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "device_tracker.ff590mr_device_tracker",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.time"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.porta_casa_contact",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.home_mode",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.guard_mode",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.speech_notifications",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.alarms",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.central_heating",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.shelly_em_old_channel_1_power",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.temperatura_balcone_temperature",
+              "color": "",
+              "name": "Balcone"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.temperatura_veranda_temperature",
+              "color": "",
+              "name": "Veranda"
+            }
+          ],
+          "cards": [],
+          "sections": [
+            {
+              "type": "grid",
               "cards": [
                 {
                   "type": "picture-glance",
@@ -89,10 +139,7 @@
                     "off": "/local/images/rooms/corridoio_off.jpg",
                     "on": "/local/images/rooms/corridoio_on.jpg"
                   },
-                  "title": "Corridoio",
-                  "view_layout": {
-                    "grid-area": "first"
-                  }
+                  "title": "Corridoio"
                 },
                 {
                   "type": "picture-glance",
@@ -116,10 +163,7 @@
                     "off": "/local/images/rooms/cucina_off.jpg",
                     "on": "/local/images/rooms/cucina_on.jpg"
                   },
-                  "title": "Cucina",
-                  "view_layout": {
-                    "grid-area": "second"
-                  }
+                  "title": "Cucina"
                 },
                 {
                   "type": "picture-glance",
@@ -146,10 +190,7 @@
                     "off": "/local/images/rooms/sala_off.jpg",
                     "on": "/local/images/rooms/sala_on.jpg"
                   },
-                  "title": "Sala",
-                  "view_layout": {
-                    "grid-area": "third"
-                  }
+                  "title": "Sala"
                 },
                 {
                   "type": "picture-glance",
@@ -170,10 +211,7 @@
                     "off": "/local/images/rooms/bagno_off.jpg",
                     "on": "/local/images/rooms/bagno_on.jpg"
                   },
-                  "title": "Bagno",
-                  "view_layout": {
-                    "grid-area": "fourth"
-                  }
+                  "title": "Bagno"
                 },
                 {
                   "type": "picture-glance",
@@ -194,10 +232,7 @@
                     "off": "/local/images/rooms/studio_off.jpg",
                     "on": "/local/images/rooms/studio_on.jpg"
                   },
-                  "title": "Studio",
-                  "view_layout": {
-                    "grid-area": "fifth"
-                  }
+                  "title": "Studio"
                 },
                 {
                   "type": "picture-glance",
@@ -221,10 +256,7 @@
                     "off": "/local/images/rooms/camera_off.jpg",
                     "on": "/local/images/rooms/camera_on.jpg"
                   },
-                  "title": "Camera",
-                  "view_layout": {
-                    "grid-area": "sixth"
-                  }
+                  "title": "Camera"
                 },
                 {
                   "type": "picture-glance",
@@ -239,45 +271,24 @@
                     "off": "/local/images/rooms/balcone_off.jpg",
                     "on": "/local/images/rooms/balcone_on.jpg"
                   },
-                  "title": "Balcone",
-                  "view_layout": {
-                    "grid-area": "seventh"
-                  }
+                  "title": "Balcone"
                 },
                 {
                   "type": "custom:clock-weather-card",
-                  "entity": "weather.savona",
-                  "view_layout": {
-                    "grid-area": "eighth"
-                  }
+                  "entity": "weather.savona"
                 }
               ],
-              "layout": {
-                "grid-template-columns": "33% 33% 33%",
-                "grid-template-rows": "auto",
-                "grid-template-areas": "\"first second third\"\n\"fourth fifth sixth\"\n\"seventh eighth nineth\"\n\"tenth eleventh twelfth\"\n",
-                "mediaquery": {
-                  "(max-width: 600px)": {
-                    "grid-template-columns": "100%",
-                    "grid-template-areas": "\"first\"\n\"second\"\n\"third\"\n\"fourth\"\n\"fifth\" \n\"sixth\"\n\"seventh\"\n\"eighth\"\n\"nineth\"\n\"tenth\"\n\"eleventh\"\n\"twelfth\"\n"
-                  },
-                  "(max-width: 1200px)": {
-                    "grid-template-columns": "50% 50%",
-                    "grid-template-areas": "\"first second\"\n\"third fourth\"\n\"fifth sixth\"\n\"seventh eighth\"\n\"nineth tenth\"\n\"eleventh twelfth\"\n"
-                  }
-                }
-              },
-              "layout_type": "custom:grid-layout"
+              "column_span": 3
             },
             {
-              "type": "custom:layout-card",
-              "layout_type": "custom:grid-layout",
+              "type": "grid",
               "cards": [
                 {
+                  "type": "heading",
+                  "heading_style": "subtitle"
+                },
+                {
                   "type": "vertical-stack",
-                  "view_layout": {
-                    "grid-area": "first"
-                  },
                   "cards": [
                     {
                       "type": "custom:mushroom-title-card",
@@ -285,9 +296,6 @@
                     },
                     {
                       "type": "custom:mini-graph-card",
-                      "view_layout": {
-                        "grid-area": "second"
-                      },
                       "entities": [
                         "sensor.shelly_em_old_channel_1_power"
                       ],
@@ -386,9 +394,6 @@
                 },
                 {
                   "type": "vertical-stack",
-                  "view_layout": {
-                    "grid-area": "second"
-                  },
                   "cards": [
                     {
                       "type": "custom:mushroom-title-card",
@@ -490,29 +495,13 @@
                         }
                       ]
                     }
-                  ],
-                  "view_layout": {
-                    "grid-area": "third"
-                  }
+                  ]
                 }
               ],
-              "layout": {
-                "grid-template-columns": "33% 33% 33%",
-                "grid-template-rows": "auto",
-                "grid-template-areas": "\"first second third\"\n\"fourth fifth sixth\"\n\"seventh eighth nineth\"\n\"tenth eleventh twelfth\"\n",
-                "mediaquery": {
-                  "(max-width: 600px)": {
-                    "grid-template-columns": "100%",
-                    "grid-template-areas": "\"first\"\n\"second\"\n\"third\"\n\"fourth\"\n\"fifth\" \n\"sixth\"\n\"seventh\"\n\"eighth\"\n\"nineth\"\n\"tenth\"\n\"eleventh\"\n\"twelfth\"\n"
-                  },
-                  "(max-width: 1200px)": {
-                    "grid-template-columns": "50% 50%",
-                    "grid-template-areas": "\"first second\"\n\"third fourth\"\n\"fifth sixth\"\n\"seventh eighth\"\n\"nineth tenth\"\n\"eleventh twelfth\"\n"
-                  }
-                }
-              }
+              "column_span": 3
             }
-          ]
+          ],
+          "max_columns": 3
         },
         {
           "theme": "Backend-selected",
@@ -834,75 +823,19 @@
           ]
         },
         {
-          "theme": "Backend-selected",
-          "icon": "mdi:home",
-          "id": "main",
+          "type": "sections",
+          "max_columns": 3,
           "title": "Principale",
           "path": "main",
-          "type": "custom:grid-layout",
-          "badges": [],
-          "cards": [
+          "icon": "mdi:home",
+          "sections": [
             {
-              "type": "custom:badge-card",
-              "badges": [
-                {
-                  "entity": "person.giorgio",
-                  "show_entity_picture": true
-                },
-                {
-                  "entity": "person.laura",
-                  "show_entity_picture": true
-                },
-                {
-                  "entity": "device_tracker.ff590mr_device_tracker",
-                  "show_entity_picture": true
-                },
-                {
-                  "entity": "sensor.time"
-                },
-                {
-                  "entity": "binary_sensor.porta_casa_contact",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.home_mode",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.guard_mode",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.speech_notifications",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.alarms",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "binary_sensor.central_heating",
-                  "display_type": "minimal"
-                },
-                {
-                  "entity": "sensor.shelly_em_channel_1_power"
-                },
-                {
-                  "entity": "sensor.temperatura_balcone_temperature",
-                  "display_type": "complete",
-                  "name": "Balcone"
-                },
-                {
-                  "entity": "sensor.temperatura_veranda_temperature",
-                  "display_type": "complete",
-                  "name": "Veranda"
-                }
-              ]
-            },
-            {
-              "title": "Stanze",
-              "type": "custom:layout-card",
+              "type": "grid",
               "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "subtitle"
+                },
                 {
                   "type": "picture-glance",
                   "aspect_ratio": "0%",
@@ -919,10 +852,7 @@
                     "off": "/local/images/rooms/corridoio_off.jpg",
                     "on": "/local/images/rooms/corridoio_on.jpg"
                   },
-                  "title": "Zona Giorno",
-                  "view_layout": {
-                    "grid-area": "first"
-                  }
+                  "title": "Zona Giorno"
                 },
                 {
                   "type": "picture-glance",
@@ -952,10 +882,7 @@
                     "off": "/local/images/rooms/cucina_off.jpg",
                     "on": "/local/images/rooms/cucina_on.jpg"
                   },
-                  "title": "Cucina",
-                  "view_layout": {
-                    "grid-area": "second"
-                  }
+                  "title": "Cucina"
                 },
                 {
                   "type": "picture-glance",
@@ -982,10 +909,7 @@
                     "off": "/local/images/rooms/sala_off.jpg",
                     "on": "/local/images/rooms/sala_on.jpg"
                   },
-                  "title": "Sala",
-                  "view_layout": {
-                    "grid-area": "third"
-                  }
+                  "title": "Sala"
                 },
                 {
                   "type": "picture-glance",
@@ -1006,10 +930,7 @@
                     "off": "/local/images/rooms/studio_off.jpg",
                     "on": "/local/images/rooms/studio_on.jpg"
                   },
-                  "title": "Studio",
-                  "view_layout": {
-                    "grid-area": "fourth"
-                  }
+                  "title": "Studio"
                 },
                 {
                   "type": "picture-glance",
@@ -1024,10 +945,7 @@
                     "off": "/local/images/rooms/corridoio_off.jpg",
                     "on": "/local/images/rooms/corridoio_on.jpg"
                   },
-                  "title": "Zona Notte",
-                  "view_layout": {
-                    "grid-area": "fifth"
-                  }
+                  "title": "Zona Notte"
                 },
                 {
                   "type": "picture-glance",
@@ -1054,10 +972,7 @@
                     "off": "/local/images/rooms/bagno_off.jpg",
                     "on": "/local/images/rooms/bagno_on.jpg"
                   },
-                  "title": "Bagno Grande",
-                  "view_layout": {
-                    "grid-area": "sixth"
-                  }
+                  "title": "Bagno Grande"
                 },
                 {
                   "type": "picture-glance",
@@ -1081,10 +996,7 @@
                     "off": "/local/images/rooms/camera_off.jpg",
                     "on": "/local/images/rooms/camera_on.jpg"
                   },
-                  "title": "Camera",
-                  "view_layout": {
-                    "grid-area": "seventh"
-                  }
+                  "title": "Camera"
                 },
                 {
                   "type": "picture-glance",
@@ -1099,45 +1011,24 @@
                     "off": "/local/images/rooms/balcone_off.jpg",
                     "on": "/local/images/rooms/balcone_on.jpg"
                   },
-                  "title": "Balcone",
-                  "view_layout": {
-                    "grid-area": "eighth"
-                  }
+                  "title": "Balcone"
                 },
                 {
                   "type": "custom:clock-weather-card",
-                  "entity": "weather.savona",
-                  "view_layout": {
-                    "grid-area": "nineth"
-                  }
+                  "entity": "weather.savona"
                 }
               ],
-              "layout": {
-                "grid-template-columns": "33% 33% 33%",
-                "grid-template-rows": "auto",
-                "grid-template-areas": "\"first second third\"\n\"fourth fifth sixth\"\n\"seventh eighth nineth\"\n\"tenth eleventh twelfth\"\n",
-                "mediaquery": {
-                  "(max-width: 600px)": {
-                    "grid-template-columns": "100%",
-                    "grid-template-areas": "\"first\"\n\"second\"\n\"third\"\n\"fourth\"\n\"fifth\" \n\"sixth\"\n\"seventh\"\n\"eighth\"\n\"nineth\"\n\"tenth\"\n\"eleventh\"\n\"twelfth\"\n"
-                  },
-                  "(max-width: 1200px)": {
-                    "grid-template-columns": "50% 50%",
-                    "grid-template-areas": "\"first second\"\n\"third fourth\"\n\"fifth sixth\"\n\"seventh eighth\"\n\"nineth tenth\"\n\"eleventh twelfth\"\n"
-                  }
-                }
-              },
-              "layout_type": "custom:grid-layout"
+              "column_span": 3
             },
             {
-              "type": "custom:layout-card",
-              "layout_type": "custom:grid-layout",
+              "type": "grid",
               "cards": [
                 {
+                  "type": "heading",
+                  "heading_style": "subtitle"
+                },
+                {
                   "type": "vertical-stack",
-                  "view_layout": {
-                    "grid-area": "first"
-                  },
                   "cards": [
                     {
                       "type": "custom:mushroom-title-card",
@@ -1145,9 +1036,6 @@
                     },
                     {
                       "type": "custom:mini-graph-card",
-                      "view_layout": {
-                        "grid-area": "second"
-                      },
                       "entities": [
                         "sensor.shelly_em_channel_1_power"
                       ],
@@ -1246,9 +1134,6 @@
                 },
                 {
                   "type": "vertical-stack",
-                  "view_layout": {
-                    "grid-area": "second"
-                  },
                   "cards": [
                     {
                       "type": "custom:mushroom-title-card",
@@ -1350,27 +1235,116 @@
                         }
                       ]
                     }
-                  ],
-                  "view_layout": {
-                    "grid-area": "third"
-                  }
+                  ]
                 }
               ],
-              "layout": {
-                "grid-template-columns": "33% 33% 33%",
-                "grid-template-rows": "auto",
-                "grid-template-areas": "\"first second third\"\n\"fourth fifth sixth\"\n\"seventh eighth nineth\"\n\"tenth eleventh twelfth\"\n",
-                "mediaquery": {
-                  "(max-width: 600px)": {
-                    "grid-template-columns": "100%",
-                    "grid-template-areas": "\"first\"\n\"second\"\n\"third\"\n\"fourth\"\n\"fifth\" \n\"sixth\"\n\"seventh\"\n\"eighth\"\n\"nineth\"\n\"tenth\"\n\"eleventh\"\n\"twelfth\"\n"
-                  },
-                  "(max-width: 1200px)": {
-                    "grid-template-columns": "50% 50%",
-                    "grid-template-areas": "\"first second\"\n\"third fourth\"\n\"fifth sixth\"\n\"seventh eighth\"\n\"nineth tenth\"\n\"eleventh twelfth\"\n"
-                  }
-                }
-              }
+              "column_span": 3
+            }
+          ],
+          "dense_section_placement": false,
+          "cards": [],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.giorgio",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.laura",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "device_tracker.ff590mr_device_tracker",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.time"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.porta_casa_contact",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.home_mode",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.guard_mode",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.speech_notifications",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.alarms",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.central_heating",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.shelly_em_channel_1_power"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.temperatura_balcone_temperature",
+              "color": "",
+              "name": "Balcone"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.temperatura_veranda_temperature",
+              "color": "",
+              "name": "Veranda"
             }
           ]
         },
@@ -1839,252 +1813,290 @@
               "entity": "binary_sensor.central_heating"
             }
           ],
-          "cards": [
+          "cards": [],
+          "type": "sections",
+          "sections": [
             {
-              "entity": "climate.zona_giorno",
-              "type": "thermostat"
-            },
-            {
-              "entity": "climate.cucina",
-              "type": "thermostat"
-            },
-            {
-              "entity": "climate.sala",
-              "type": "thermostat"
-            },
-            {
-              "entity": "climate.studio",
-              "type": "thermostat"
-            },
-            {
-              "entity": "climate.bagno_piccolo",
-              "type": "thermostat"
-            },
-            {
-              "entity": "climate.bagno_grande",
-              "type": "thermostat"
-            },
-            {
-              "entity": "climate.camera",
-              "type": "thermostat"
-            },
-            {
-              "type": "entities",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "entity": "input_boolean.boost_valvola_zona_giorno"
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Valvole"
                 },
                 {
-                  "entity": "input_boolean.boost_valvola_cucina"
+                  "entity": "climate.zona_giorno",
+                  "type": "thermostat"
                 },
                 {
-                  "entity": "input_boolean.boost_valvola_sala"
+                  "entity": "climate.cucina",
+                  "type": "thermostat"
                 },
                 {
-                  "entity": "input_boolean.boost_valvola_studio"
+                  "entity": "climate.sala",
+                  "type": "thermostat"
                 },
                 {
-                  "entity": "input_boolean.boost_valvola_bagno_piccolo"
+                  "entity": "climate.studio",
+                  "type": "thermostat"
                 },
                 {
-                  "entity": "input_boolean.boost_valvola_bagno_grande"
+                  "entity": "climate.bagno_piccolo",
+                  "type": "thermostat"
                 },
                 {
-                  "entity": "input_boolean.boost_valvola_camera"
+                  "entity": "climate.bagno_grande",
+                  "type": "thermostat"
+                },
+                {
+                  "entity": "climate.camera",
+                  "type": "thermostat"
                 }
               ],
-              "show_header_toggle": false,
-              "title": "Modalità Boost"
+              "column_span": 4
             },
             {
-              "type": "entities",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "entity": "input_boolean.valvola_zona_giorno"
+                  "type": "heading",
+                  "heading": "Operazioni",
+                  "heading_style": "title"
                 },
                 {
-                  "entity": "input_boolean.valvola_cucina"
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "input_boolean.boost_valvola_zona_giorno"
+                    },
+                    {
+                      "entity": "input_boolean.boost_valvola_cucina"
+                    },
+                    {
+                      "entity": "input_boolean.boost_valvola_sala"
+                    },
+                    {
+                      "entity": "input_boolean.boost_valvola_studio"
+                    },
+                    {
+                      "entity": "input_boolean.boost_valvola_bagno_piccolo"
+                    },
+                    {
+                      "entity": "input_boolean.boost_valvola_bagno_grande"
+                    },
+                    {
+                      "entity": "input_boolean.boost_valvola_camera"
+                    }
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Modalità Boost"
                 },
                 {
-                  "entity": "input_boolean.valvola_sala"
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "input_boolean.valvola_zona_giorno"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_cucina"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_sala"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_studio"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_bagno_piccolo"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_bagno_grande"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_camera"
+                    }
+                  ],
+                  "title": "Accensione / Spegnimento",
+                  "show_header_toggle": false
                 },
                 {
-                  "entity": "input_boolean.valvola_studio"
+                  "type": "entities",
+                  "title": "Stato Valvole Netatmo",
+                  "entities": [
+                    {
+                      "entity": "sensor.valvola_zona_giorno_state",
+                      "name": "Valvola Zona Giorno"
+                    },
+                    {
+                      "entity": "sensor.valvola_cucina_state",
+                      "name": "Valvola Cucina"
+                    },
+                    {
+                      "entity": "sensor.valvola_sala_state",
+                      "name": "Valvola Sala"
+                    },
+                    {
+                      "entity": "sensor.valvola_studio_state",
+                      "name": "Valvola Studio"
+                    },
+                    {
+                      "entity": "sensor.valvola_bagno_piccolo_state",
+                      "name": "Valvola Bagno Piccolo"
+                    },
+                    {
+                      "entity": "sensor.valvola_bagno_grande_state",
+                      "name": "Valvola Bagno Grande"
+                    },
+                    {
+                      "entity": "sensor.valvola_camera_state",
+                      "name": "Valvola Camera"
+                    }
+                  ]
                 },
                 {
-                  "entity": "input_boolean.valvola_bagno_piccolo"
-                },
-                {
-                  "entity": "input_boolean.valvola_bagno_grande"
-                },
-                {
-                  "entity": "input_boolean.valvola_camera"
+                  "type": "custom:bar-card",
+                  "entities": [
+                    {
+                      "entity": "sensor.valvola_zona_giorno_batteria",
+                      "name": "Bagno",
+                      "width": "85%"
+                    },
+                    {
+                      "entity": "sensor.valvola_cucina_batteria",
+                      "name": "Cucina",
+                      "width": "85%"
+                    },
+                    {
+                      "entity": "sensor.valvola_sala_batteria",
+                      "name": "Sala",
+                      "width": "85%"
+                    },
+                    {
+                      "entity": "sensor.valvola_studio_batteria",
+                      "name": "Studio",
+                      "width": "85%"
+                    },
+                    {
+                      "entity": "sensor.valvola_bagno_piccolo_batteria",
+                      "name": "Bagno",
+                      "width": "85%"
+                    },
+                    {
+                      "entity": "sensor.valvola_bagno_grande_batteria",
+                      "name": "Bagno",
+                      "width": "85%"
+                    },
+                    {
+                      "entity": "sensor.valvola_camera_batteria",
+                      "name": "Camera",
+                      "width": "85%"
+                    }
+                  ],
+                  "title": "Batteria Valvole Netatmo",
+                  "show_header_toggle": false,
+                  "state_color": false,
+                  "positions": {
+                    "icon": "off",
+                    "indicator": "off",
+                    "name": "outside",
+                    "value": "outside"
+                  }
                 }
               ],
-              "title": "Accensione / Spegnimento",
-              "show_header_toggle": false
+              "column_span": 4
             },
             {
-              "type": "entities",
-              "title": "Stato Valvole Netatmo",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "entity": "sensor.valvola_zona_giorno_state",
-                  "name": "Valvola Zona Giorno"
+                  "type": "heading",
+                  "heading": "Grafici",
+                  "heading_style": "title"
                 },
                 {
-                  "entity": "sensor.valvola_cucina_state",
-                  "name": "Valvola Cucina"
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.zona_giorno"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Valvola Zona Giorno"
                 },
                 {
-                  "entity": "sensor.valvola_sala_state",
-                  "name": "Valvola Sala"
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.cucina"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Valvola Cucina"
                 },
                 {
-                  "entity": "sensor.valvola_studio_state",
-                  "name": "Valvola Studio"
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.sala"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Valvola Sala"
                 },
                 {
-                  "entity": "sensor.valvola_bagno_piccolo_state",
-                  "name": "Valvola Bagno Piccolo"
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.studio"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Valvola Studio"
                 },
                 {
-                  "entity": "sensor.valvola_bagno_grande_state",
-                  "name": "Valvola Bagno Grande"
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.bagno_piccolo"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Valvola Bagno Piccolo"
                 },
                 {
-                  "entity": "sensor.valvola_camera_state",
-                  "name": "Valvola Camera"
-                }
-              ]
-            },
-            {
-              "type": "custom:bar-card",
-              "entities": [
-                {
-                  "entity": "sensor.valvola_zona_giorno_batteria",
-                  "name": "Bagno",
-                  "width": "85%"
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.bagno_grande"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Valvola Bagno Grande"
                 },
                 {
-                  "entity": "sensor.valvola_cucina_batteria",
-                  "name": "Cucina",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_sala_batteria",
-                  "name": "Sala",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_studio_batteria",
-                  "name": "Studio",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_bagno_piccolo_batteria",
-                  "name": "Bagno",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_bagno_grande_batteria",
-                  "name": "Bagno",
-                  "width": "85%"
-                },
-                {
-                  "entity": "sensor.valvola_camera_batteria",
-                  "name": "Camera",
-                  "width": "85%"
-                }
-              ],
-              "title": "Batteria Valvole Netatmo",
-              "show_header_toggle": false,
-              "state_color": false,
-              "positions": {
-                "icon": "off",
-                "indicator": "off",
-                "name": "outside",
-                "value": "outside"
-              }
-            },
-            {
-              "type": "history-graph",
-              "entities": [
-                {
-                  "entity": "climate.zona_giorno"
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.camera"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Valvola Camera"
                 }
               ],
-              "hours_to_show": 24,
-              "refresh_interval": 0,
-              "title": "Valvola Zona Giorno"
-            },
-            {
-              "type": "history-graph",
-              "entities": [
-                {
-                  "entity": "climate.cucina"
-                }
-              ],
-              "hours_to_show": 24,
-              "refresh_interval": 0,
-              "title": "Valvola Cucina"
-            },
-            {
-              "type": "history-graph",
-              "entities": [
-                {
-                  "entity": "climate.sala"
-                }
-              ],
-              "hours_to_show": 24,
-              "refresh_interval": 0,
-              "title": "Valvola Sala"
-            },
-            {
-              "type": "history-graph",
-              "entities": [
-                {
-                  "entity": "climate.studio"
-                }
-              ],
-              "hours_to_show": 24,
-              "refresh_interval": 0,
-              "title": "Valvola Studio"
-            },
-            {
-              "type": "history-graph",
-              "entities": [
-                {
-                  "entity": "climate.bagno_piccolo"
-                }
-              ],
-              "hours_to_show": 24,
-              "refresh_interval": 0,
-              "title": "Valvola Bagno Piccolo"
-            },
-            {
-              "type": "history-graph",
-              "entities": [
-                {
-                  "entity": "climate.bagno_grande"
-                }
-              ],
-              "hours_to_show": 24,
-              "refresh_interval": 0,
-              "title": "Valvola Bagno Grande"
-            },
-            {
-              "type": "history-graph",
-              "entities": [
-                {
-                  "entity": "climate.camera"
-                }
-              ],
-              "hours_to_show": 24,
-              "refresh_interval": 0,
-              "title": "Valvola Camera"
+              "column_span": 4
             }
-          ]
+          ],
+          "max_columns": 4,
+          "subview": false,
+          "dense_section_placement": true
         },
         {
           "title": "Auto",
@@ -2874,28 +2886,57 @@
             },
             {
               "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
               "entity": "sensor.valvola_cucina_temperature",
-              "display_type": "complete"
+              "color": "",
+              "name": "Cucina"
             },
             {
               "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
               "entity": "sensor.valvola_sala_temperature",
-              "display_type": "complete"
+              "color": "",
+              "name": "Sala"
             },
             {
               "type": "entity",
-              "entity": "sensor.valvola_bagno_temperature",
-              "display_type": "complete"
-            },
-            {
-              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
               "entity": "sensor.valvola_studio_temperature",
-              "display_type": "complete"
+              "color": "",
+              "name": "Studio"
             },
             {
               "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "color": "",
+              "entity": "sensor.valvola_bagno_piccolo_temperature",
+              "name": "Bagno Piccolo"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.valvola_bagno_grande_temperature",
+              "color": "",
+              "name": "Bagno Grande"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
               "entity": "sensor.valvola_camera_temperature",
-              "display_type": "complete"
+              "color": "",
+              "name": "Camera"
             },
             {
               "type": "entity",
@@ -2939,7 +2980,7 @@
                 {
                   "type": "custom:clock-weather-card",
                   "entity": "weather.morgex",
-                  "title": "Morgex"
+                  "alignment": "center"
                 },
                 {
                   "type": "custom:mushroom-title-card",
@@ -3037,8 +3078,8 @@
                       "type": "custom:mini-graph-card",
                       "entities": [
                         {
-                          "entity": "sensor.valvola_bagno_temperature",
-                          "name": "Bagno"
+                          "entity": "sensor.valvola_bagno_piccolo_temperature",
+                          "name": "Bagno Piccolo"
                         }
                       ],
                       "name": "Bagno",

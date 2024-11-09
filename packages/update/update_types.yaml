@@ -43,7 +43,6 @@ group:
     icon: mdi:alpha-h-box
     entities:
       - update.auto_entities_update
-      - update.badge_card_update
       - update.bar_card_update
       - update.battery_state_card_entity_row_update
       - update.browser_mod_update

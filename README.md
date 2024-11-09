@@ -37,7 +37,6 @@ The following integration are part of HACS system. Install HACS first:
 * [Scheduler Component](https://github.com/nielsfaber/scheduler-component) (not currently used)
 ### Frontend
 * [auto-entities](https://github.com/thomasloven/lovelace-auto-entities)
-* [badge-Card](https://github.com/thomasloven/lovelace-badge-card)
 * [Bar Card](https://github.com/custom-cards/bar-card)
 * [Battery State Card](https://github.com/maxwroc/battery-state-card)
 * [button-card](https://github.com/custom-cards/button-card)
