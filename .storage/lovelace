@@ -516,7 +516,10 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -524,7 +527,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_cucina_old",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -532,7 +538,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_sala_old",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -540,7 +549,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_divano",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -548,7 +560,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_bagno_old",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -556,7 +571,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_specchio_old",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -564,7 +582,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_studio_old",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -572,7 +593,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_camera_old",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -580,7 +604,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_dispensa",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -588,7 +615,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_balcone_old",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -596,7 +626,10 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_veranda",
-              "color": ""
+              "color": "",
+              "tap_action": {
+                "action": "toggle"
+              }
             }
           ],
           "cards": [
@@ -1362,7 +1395,10 @@
               "show_icon": true,
               "entity": "light.luce_zona_giorno",
               "color": "",
-              "name": "Zona Giorno"
+              "name": "Zona Giorno",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1371,7 +1407,10 @@
               "show_icon": true,
               "entity": "light.luce_armadio",
               "color": "",
-              "name": "Armadio"
+              "name": "Armadio",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1380,7 +1419,10 @@
               "show_icon": true,
               "entity": "light.luce_cucina",
               "color": "",
-              "name": "Cucina"
+              "name": "Cucina",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1389,7 +1431,10 @@
               "show_icon": true,
               "entity": "light.luce_vetrine",
               "color": "",
-              "name": "Vetrine"
+              "name": "Vetrine",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1398,7 +1443,10 @@
               "show_icon": true,
               "entity": "light.luce_sala",
               "color": "",
-              "name": "Sala"
+              "name": "Sala",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1407,7 +1455,10 @@
               "show_icon": true,
               "entity": "light.luce_divano",
               "color": "",
-              "name": "Divano"
+              "name": "Divano",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1416,7 +1467,10 @@
               "show_icon": true,
               "entity": "light.luce_studio",
               "color": "",
-              "name": "Studio"
+              "name": "Studio",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1425,7 +1479,10 @@
               "show_icon": true,
               "entity": "light.luce_zona_notte",
               "color": "",
-              "name": "Zona Notte"
+              "name": "Zona Notte",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1434,7 +1491,10 @@
               "show_icon": true,
               "entity": "light.luce_bagno",
               "color": "",
-              "name": "Bagno"
+              "name": "Bagno",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1443,7 +1503,10 @@
               "show_icon": true,
               "entity": "light.luce_specchio",
               "color": "",
-              "name": "Specchio"
+              "name": "Specchio",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1452,7 +1515,10 @@
               "show_icon": true,
               "entity": "light.luce_trono",
               "color": "",
-              "name": "Trono"
+              "name": "Trono",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1461,7 +1527,10 @@
               "show_icon": true,
               "entity": "light.luce_camera",
               "color": "",
-              "name": "Camera"
+              "name": "Camera",
+              "tap_action": {
+                "action": "toggle"
+              }
             },
             {
               "type": "entity",
@@ -1470,7 +1539,10 @@
               "show_icon": true,
               "entity": "light.luce_balcone",
               "color": "",
-              "name": "Balcone"
+              "name": "Balcone",
+              "tap_action": {
+                "action": "toggle"
+              }
             }
           ],
           "cards": [
