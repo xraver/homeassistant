@@ -13,13 +13,16 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 
 ## Official Component Used
 * Amazon Alexa
+* BTcino/Legrand relays
 * Canon Printer (TR8550)
 * CO2 Signal
 * Google (Chromecast, Google Home Mini)
 * HomeKit
 * Mercedes Me (Mercedes-Benz A200d)
 * Netatmo Thermostatic valves
+* LG ThinQ Washing Machine (F2WV9S8P2E)
 * LG WebOS TV (LG 28TL510S-PZ)
+* Mitsubishi Air Conditioning (MSZ-LN25VG2V, MSZ-LN35VG2V)
 * Proxmox
 * QNAP NAS (TS-228A)
 * Shelly (Shelly1, Shelly2, Shelly2.5, ShellyEM, Shelly Dimmer)
@@ -89,6 +92,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * LG webOS Smart TV
   * Mercedes Me
   * MQTT
+  * MELCloud
   * Notify push html5
   * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa and assign names to all devices)
   * Openweather Map (Savona + Morgex)
@@ -110,7 +114,6 @@ All files are tested using a dedicated [github action](https://github.com/xraver
 ## To Do List
 * Improve notification system to include companion app including (alerts)[https://www.home-assistant.io/integrations/alert/]
 * Improve Fritz management interface
-* Script review ([Native types support for templates](https://www.home-assistant.io/blog/2020/10/28/release-117/#native-types-support-for-templates-beta) after release 117)
 * NFC
 * Lovelace:
    - Point and click on rooms
@@ -119,8 +122,6 @@ All files are tested using a dedicated [github action](https://github.com/xraver
 * [Network components](https://community.home-assistant.io/t/need-help-with-sensor-icon-color-based-on-state/49292)
 * Theft Protection
 * [Presence Simulator](https://indomus.it/progetti/simulare-automaticamente-la-presenza-in-casa-tramite-la-domotica-home-assistant/)
-* ESP8266 (ESP01 + NodeMCU)
-* Scene
 * Xiaomi Switch + Shelly Plug S
 * [Media Source](https://www.home-assistant.io/integrations/media_source) from NAS
 

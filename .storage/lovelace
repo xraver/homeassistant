@@ -1894,7 +1894,7 @@
                 {
                   "type": "heading",
                   "heading_style": "title",
-                  "heading": "Valvole"
+                  "heading": "Termosifoni"
                 },
                 {
                   "entity": "climate.zona_giorno",
@@ -2082,6 +2082,29 @@
               "cards": [
                 {
                   "type": "heading",
+                  "heading": "Climatizzatore",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.climatizzatore_zona_giorno"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.climatizzatore_zona_notte"
+                },
+                {
+                  "type": "thermostat",
+                  "entity": "climate.climatizzatore_studio"
+                }
+              ],
+              "column_span": 3
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
                   "heading": "Grafici",
                   "heading_style": "title"
                 },
@@ -2161,6 +2184,49 @@
                   "hours_to_show": 24,
                   "refresh_interval": 0,
                   "title": "Valvola Camera"
+                }
+              ],
+              "column_span": 4
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Nuova sezione"
+                },
+                {
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.climatizzatore_zona_giorno"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Climatizzatore Zona Giorno"
+                },
+                {
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.climatizzatore_zona_notte"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Climatizzatore Zona Notte"
+                },
+                {
+                  "type": "history-graph",
+                  "entities": [
+                    {
+                      "entity": "climate.climatizzatore_studio"
+                    }
+                  ],
+                  "hours_to_show": 24,
+                  "refresh_interval": 0,
+                  "title": "Climatizzatore Studio"
                 }
               ],
               "column_span": 4
