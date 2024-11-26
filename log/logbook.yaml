@@ -52,6 +52,13 @@ exclude:
     - sensor.consumo_energetico_mensile
     - sensor.consumo_energetico_giornaliero_old
     - sensor.consumo_energetico_mensile_old
+    # Climatizzatore
+    - sensor.climatizzatore_zona_giorno_energia
+    - sensor.climatizzatore_zona_giorno_temperatura_ambiente
+    - sensor.climatizzatore_zona_notte_energia
+    - sensor.climatizzatore_zona_notte_temperatura_ambiente
+    - sensor.climatizzatore_studio_energia
+    - sensor.climatizzatore_studio_temperatura_ambiente
     # Zigbee2mqtt
     - sensor.porta_casa_battery
     - sensor.porta_casa_linkquality

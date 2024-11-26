@@ -92,7 +92,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * LG webOS Smart TV
   * Mercedes Me
   * MQTT
-  * MELCloud
+  * MELCloud (rename climate.zona_giorno_2 to climate.climatizzatore_zona_giorno, climate.zona_notte to climate.climatizzatore_zona_notte, climate.studio_2 to climate.climatizzatore_studio)
   * Notify push html5
   * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa and assign names to all devices)
   * Openweather Map (Savona + Morgex)
