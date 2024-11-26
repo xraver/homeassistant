@@ -9,15 +9,14 @@ HOST=$(awk '/mqtt_host/ { print  $2 }' $HASS_HOME/secrets.yaml)
 USER=$(awk '/mqtt_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
 PASSWORD=$(awk '/mqtt_password/ { print  $2 }' $HASS_HOME/secrets.yaml)
 SHELLY_ID=(
+	shellyem-B9F0D0
 	shellyswitch-55980F
 	shellyswitch25-6919BD
 	shellyswitch-13572B
 	shellyswitch-559C49
 	shelly1-24D1EE
 	shelly1-93B27D
-	shellydimmer-D3EA58
 	shellyswitch25-C45BBE6C38D0
-	shelly1-59E18C
 	shellydimmer-D46CF2
 	shelly1-C423C8
 	shellybulb-BC8610

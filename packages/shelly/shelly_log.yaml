@@ -29,7 +29,7 @@ logbook:
       - binary_sensor.tapparella_cucina_old_channel_1_input
       - binary_sensor.tapparella_cucina_old_channel_2_input
       - binary_sensor.tapparella_cucina_old_cloud
-      - update.tapparella_cucina_old_firmware_update
+      - update.tapparella_cucina_old_firmware
       - sensor.tapparella_cucina_old_rssi
       - sensor.tapparella_cucina_old_uptime
       # Shelly 2 - Tapparella Sala (shellyswitch25_6919bd)
@@ -40,7 +40,7 @@ logbook:
       - binary_sensor.tapparella_sala_old_cloud
       - sensor.tapparella_sala_old_device_temperature
       - binary_sensor.tapparella_sala_old_overheating
-      - update.tapparella_sala_old_firmware_update
+      - update.tapparella_sala_old_firmware
       - sensor.tapparella_sala_old_rssi
       - sensor.tapparella_sala_old_uptime
       # Shelly 3 - Tapparella Studio (shellyswitch_13572b)
@@ -49,7 +49,7 @@ logbook:
       - binary_sensor.tapparella_studio_old_channel_1_input
       - binary_sensor.tapparella_studio_old_channel_2_input
       - binary_sensor.tapparella_studio_old_cloud
-      - update.tapparella_studio_old_firmware_update
+      - update.tapparella_studio_old_firmware
       - sensor.tapparella_studio_old_rssi
       - sensor.tapparella_studio_old_uptime
       # Shelly 4 - Tapparella Camera (shellyswitch_559c49)
@@ -58,7 +58,7 @@ logbook:
       - binary_sensor.tapparella_camera_old_channel_1_input
       - binary_sensor.tapparella_camera_old_channel_2_input
       - binary_sensor.tapparella_camera_old_cloud
-      - update.tapparella_camera_old_firmware_update
+      - update.tapparella_camera_old_firmware
       - sensor.tapparella_camera_old_rssi
       - sensor.tapparella_camera_old_uptime
       # Shelly 5 - Luce Corridoio (shelly1_24d1ee)
@@ -68,7 +68,7 @@ logbook:
       - sensor.luce_corridoio_uptime
       # Shelly 6 - Luce Cucina (shelly1_93B27D)
       - binary_sensor.luce_cucina_old_cloud
-      - update.luce_cucina_old_firmware_update
+      - update.luce_cucina_old_firmware
       - sensor.luce_cucina_old_rssi
       - sensor.luce_cucina_old_uptime
       # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
@@ -81,7 +81,7 @@ logbook:
       - binary_sensor.luci_bagno_cloud
       - sensor.luci_bagno_device_temperature
       - binary_sensor.luci_bagno_overheating
-      - update.luci_bagno_firmware_update
+      - update.luci_bagno_firmware
       - sensor.luci_bagno_rssi
       - sensor.luci_bagno_uptime
       # Shelly 10 - Luce Camera (shellydimmer_d46cf2)
@@ -93,12 +93,12 @@ logbook:
       - binary_sensor.luce_camera_old_cloud
       - sensor.luce_camera_old_device_temperature
       - binary_sensor.luce_camera_old_overheating
-      - update.luce_camera_old_firmware_update
+      - update.luce_camera_old_firmware
       - sensor.luce_camera_old_rssi
       - sensor.luce_camera_old_uptime
       # Shelly 11 - Luce Balcone (shelly1_c423c8)
       - binary_sensor.luce_balcone_old_cloud
-      - update.luce_balcone_old_firmware_update
+      - update.luce_balcone_old_firmware
       - sensor.luce_balcone_old_rssi
       - sensor.luce_balcone_old_uptime
       # Shelly Bulb (shellybulb_bc8610)
@@ -156,7 +156,7 @@ recorder:
       - binary_sensor.tapparella_cucina_old_channel_1_input
       - binary_sensor.tapparella_cucina_old_channel_2_input
       - binary_sensor.tapparella_cucina_old_cloud
-      - update.tapparella_cucina_old_firmware_update
+      - update.tapparella_cucina_old_firmware
       - sensor.tapparella_cucina_old_rssi
       - sensor.tapparella_cucina_old_uptime
       # Shelly 2 - Tapparella Sala (shellyswitch25_6919bd)
@@ -167,7 +167,7 @@ recorder:
       - binary_sensor.tapparella_sala_old_cloud
       - sensor.tapparella_sala_old_device_temperature
       - binary_sensor.tapparella_sala_old_overheating
-      - update.tapparella_sala_old_firmware_update
+      - update.tapparella_sala_old_firmware
       - sensor.tapparella_sala_old_rssi
       - sensor.tapparella_sala_old_uptime
       # Shelly 3 - Tapparella Studio (shellyswitch_13572b)
@@ -176,7 +176,7 @@ recorder:
       - binary_sensor.tapparella_studio_old_channel_1_input
       - binary_sensor.tapparella_studio_old_channel_2_input
       - binary_sensor.tapparella_studio_old_cloud
-      - update.tapparella_studio_old_firmware_update
+      - update.tapparella_studio_old_firmware
       - sensor.tapparella_studio_old_rssi
       - sensor.tapparella_studio_old_uptime
       # Shelly 4 - Tapparella Camera (shellyswitch_559c49)
@@ -185,7 +185,7 @@ recorder:
       - binary_sensor.tapparella_camera_old_channel_1_input
       - binary_sensor.tapparella_camera_old_channel_2_input
       - binary_sensor.tapparella_camera_old_cloud
-      - update.tapparella_camera_old_firmware_update
+      - update.tapparella_camera_old_firmware
       - sensor.tapparella_camera_old_rssi
       - sensor.tapparella_camera_old_uptime
       # Shelly 5 - Luce Corridoio (shelly1_24d1ee)
@@ -195,7 +195,7 @@ recorder:
       - sensor.luce_corridoio_uptime
       # Shelly 6 - Luce Cucina (shelly1_93B27D)
       - binary_sensor.luce_cucina_old_cloud
-      - update.luce_cucina_old_firmware_update
+      - update.luce_cucina_old_firmware
       - sensor.luce_cucina_old_rssi
       - sensor.luce_cucina_old_uptime
       # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
@@ -208,7 +208,7 @@ recorder:
       - binary_sensor.luci_bagno_cloud
       - sensor.luci_bagno_device_temperature
       - binary_sensor.luci_bagno_overheating
-      - update.luci_bagno_firmware_update
+      - update.luci_bagno_firmware
       - sensor.luci_bagno_rssi
       - sensor.luci_bagno_uptime
       # Shelly 10 - Luce Camera (shellydimmer_d46cf2)
@@ -220,12 +220,12 @@ recorder:
       - binary_sensor.luce_camera_old_cloud
       - sensor.luce_camera_old_device_temperature
       - binary_sensor.luce_camera_old_overheating
-      - update.luce_camera_old_firmware_update
+      - update.luce_camera_old_firmware
       - sensor.luce_camera_old_rssi
       - sensor.luce_camera_old_uptime
       # Shelly 11 - Luce Balcone (shelly1_c423c8)
       - binary_sensor.luce_balcone_old_cloud
-      - update.luce_balcone_old_firmware_update
+      - update.luce_balcone_old_firmware
       - sensor.luce_balcone_old_rssi
       - sensor.luce_balcone_old_uptime
       # Shelly Bulb (shellybulb_bc8610)

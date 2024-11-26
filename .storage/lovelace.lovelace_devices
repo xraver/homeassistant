@@ -2526,13 +2526,6 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.shelly_em_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
                               "entity": "button.shelly_em_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
@@ -2576,26 +2569,19 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "cover.tapparella_cucina",
+                              "entity": "cover.tapparella_cucina_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.tapparella_cucina_firmware_update",
+                              "entity": "update.tapparella_cucina_old_firmware",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.tapparella_cucina_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_cucina_reboot",
+                              "entity": "button.tapparella_cucina_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -2639,26 +2625,19 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "layout": "icon_name_state",
-                              "entity": "cover.tapparella_sala",
+                              "entity": "cover.tapparella_sala_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.tapparella_sala_firmware_update",
+                              "entity": "update.tapparella_sala_old_firmware",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.tapparella_sala_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_sala_reboot",
+                              "entity": "button.tapparella_sala_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -2701,26 +2680,19 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "cover.tapparella_studio",
+                              "entity": "cover.tapparella_studio_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.tapparella_studio_firmware_update",
+                              "entity": "update.tapparella_studio_old_firmware",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.tapparella_studio_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_studio_reboot",
+                              "entity": "button.tapparella_studio_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -2763,26 +2735,19 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "cover.tapparella_camera",
+                              "entity": "cover.tapparella_camera_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.tapparella_camera_firmware_update",
+                              "entity": "update.tapparella_camera_old_firmware",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.tapparella_camera_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_camera_reboot",
+                              "entity": "button.tapparella_camera_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -2837,13 +2802,6 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.luce_corridoio_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
                               "entity": "button.luce_corridoio_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
@@ -2887,88 +2845,19 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.luce_cucina",
+                              "entity": "light.luce_cucina_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.luce_cucina_firmware_update",
+                              "entity": "update.luce_cucina_old_firmware",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.luce_cucina_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_cucina_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 7 - Luce Sala"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly_dimmer.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly7.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_sala",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.luce_sala_firmware_update",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_sala_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_sala_reboot",
+                              "entity": "button.luce_cucina_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -3011,94 +2900,25 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.luce_bagno",
+                              "entity": "light.luce_bagno_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.luce_specchio",
+                              "entity": "light.luce_specchio_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.luci_bagno_firmware_update",
+                              "entity": "update.luci_bagno_firmware",
                               "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luci_bagno_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
                               "entity": "button.luci_bagno_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 9 - Luce Studio"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly1.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly9.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_studio",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.luce_studio_firmware_update",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_studio_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_studio_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -3141,26 +2961,19 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.luce_camera",
+                              "entity": "light.luce_camera_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.luce_camera_firmware_update",
+                              "entity": "update.luce_camera_old_firmware",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.luce_camera_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_camera_reboot",
+                              "entity": "button.luce_camera_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -3203,26 +3016,19 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "light.luce_balcone",
+                              "entity": "light.luce_balcone_old",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_firmware",
-                              "entity": "update.luce_balcone_firmware_update",
+                              "entity": "update.luce_balcone_old_firmware",
                               "name": "Firmare"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
-                              "entity": "button.luce_balcone_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_balcone_reboot",
+                              "entity": "button.luce_balcone_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
@@ -3288,13 +3094,6 @@
                               "template": "template_device_firmware",
                               "entity": "update.shelly_em_old_firmware_update",
                               "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.shelly_em_old_ota_update",
-                              "name": "Aggiorna Firmware",
-                              "icon": "mdi:package-up"
                             },
                             {
                               "type": "custom:button-card",

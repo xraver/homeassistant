@@ -56,7 +56,7 @@ homeassistant:
       friendly_name: Pulsante 2
     binary_sensor.tapparella_cucina_old_cloud:
       friendly_name: Connessione Cloud
-    update.tapparella_cucina_old_firmware_update:
+    update.tapparella_cucina_old_firmware:
       friendly_name: Aggiornamento Firmware
     update.tapparella_cucina_old_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
@@ -82,7 +82,7 @@ homeassistant:
       friendly_name: Temperatura Device
     binary_sensor.tapparella_sala_old_overheating:
       friendly_name: Surriscaldamento Device
-    update.tapparella_sala_old_firmware_update:
+    update.tapparella_sala_old_firmware:
       friendly_name: Aggiornamento Firmware
     update.tapparella_sala_old_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
@@ -104,7 +104,7 @@ homeassistant:
       friendly_name: Pulsante 2
     binary_sensor.tapparella_studio_old_cloud:
       friendly_name: Connessione Cloud
-    update.tapparella_studio_old_firmware_update:
+    update.tapparella_studio_old_firmware:
       friendly_name: Aggiornamento Firmware
     update.tapparella_studio_old_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
@@ -126,7 +126,7 @@ homeassistant:
       friendly_name: Pulsante 2
     binary_sensor.tapparella_camera_old_cloud:
       friendly_name: Connessione Cloud
-    update.tapparella_camera_old_firmware_update:
+    update.tapparella_camera_old_firmware:
       friendly_name: Aggiornamento Firmware
     update.tapparella_camera_old_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
@@ -154,7 +154,7 @@ homeassistant:
     # Shelly 6 - Luce Cucina (shelly1_93B27D)
     binary_sensor.luce_cucina_old_cloud:
       friendly_name: Connessione Cloud
-    update.luce_cucina_old_firmware_update:
+    update.luce_cucina_old_firmware:
       friendly_name: Aggiornamento Firmware
     update.luce_cucina_old_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
@@ -184,7 +184,7 @@ homeassistant:
       friendly_name: Temperatura Device
     binary_sensor.luci_bagno_overheating:
       friendly_name: Surriscaldamento Device
-    update.luci_bagno_firmware_update:
+    update.luci_bagno_firmware:
       friendly_name: Aggiornamento Firmware
     update.luci_bagno_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
@@ -212,7 +212,7 @@ homeassistant:
       friendly_name: Temperatura Device
     binary_sensor.luce_camera_old_overheating:
       friendly_name: Surriscaldamento Device
-    update.luce_camera_old_firmware_update:
+    update.luce_camera_old_firmware:
       friendly_name: Aggiornamento Firmware
     update.luce_camera_old_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
@@ -226,7 +226,7 @@ homeassistant:
     # Shelly 11 - Luce Balcone (shelly1_c423c8)
     binary_sensor.luce_balcone_old_cloud:
       friendly_name: Connessione Cloud
-    update.luce_balcone_old_firmware_update:
+    update.luce_balcone_old_firmware:
       friendly_name: Aggiornamento Firmware
     update.luce_balcone_old_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
