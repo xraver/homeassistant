@@ -71,18 +71,6 @@ logbook:
       - update.luce_cucina_old_firmware_update
       - sensor.luce_cucina_old_rssi
       - sensor.luce_cucina_old_uptime
-      # Shelly 7 - Luce Sala (shellydimmer_d3ea58)
-      - binary_sensor.luce_sala_old_old_channel_1_input
-      - binary_sensor.luce_sala_old_old_channel_2_input
-      - sensor.luce_sala_old_old_energy
-      - sensor.luce_sala_old_old_power
-      - binary_sensor.luce_sala_old_old_overpowering
-      - binary_sensor.luce_sala_old_old_cloud
-      - sensor.luce_sala_old_old_device_temperature
-      - binary_sensor.luce_sala_old_old_overheating
-      - update.luce_sala_old_old_firmware_update
-      - sensor.luce_sala_old_old_rssi
-      - sensor.luce_sala_old_old_uptime
       # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
       - sensor.luce_bagno_old_energy
       - binary_sensor.luce_bagno_old_overpowering
@@ -96,11 +84,6 @@ logbook:
       - update.luci_bagno_firmware_update
       - sensor.luci_bagno_rssi
       - sensor.luci_bagno_uptime
-      # Shelly 9 - Luce Studio (shelly1_59e18c)
-      - binary_sensor.luce_studio_old_cloud
-      - update.luce_studio_old_firmware_update
-      - sensor.luce_studio_old_rssi
-      - sensor.luce_studio_old_uptime
       # Shelly 10 - Luce Camera (shellydimmer_d46cf2)
       - binary_sensor.luce_camera_old_channel_1_input
       - binary_sensor.luce_camera_old_channel_2_input
@@ -215,18 +198,6 @@ recorder:
       - update.luce_cucina_old_firmware_update
       - sensor.luce_cucina_old_rssi
       - sensor.luce_cucina_old_uptime
-      # Shelly 7 - Luce Sala (shellydimmer_d3ea58)
-      - binary_sensor.luce_sala_old_old_channel_1_input
-      - binary_sensor.luce_sala_old_old_channel_2_input
-      - sensor.luce_sala_old_old_energy
-      - sensor.luce_sala_old_old_power
-      - binary_sensor.luce_sala_old_old_overpowering
-      - binary_sensor.luce_sala_old_old_cloud
-      - sensor.luce_sala_old_old_device_temperature
-      - binary_sensor.luce_sala_old_old_overheating
-      - update.luce_sala_old_old_firmware_update
-      - sensor.luce_sala_old_old_rssi
-      - sensor.luce_sala_old_old_uptime
       # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
       - sensor.luce_bagno_old_energy
       - binary_sensor.luce_bagno_old_overpowering
@@ -240,11 +211,6 @@ recorder:
       - update.luci_bagno_firmware_update
       - sensor.luci_bagno_rssi
       - sensor.luci_bagno_uptime
-      # Shelly 9 - Luce Studio (shelly1_59e18c)
-      - binary_sensor.luce_studio_old_cloud
-      - update.luce_studio_old_firmware_update
-      - sensor.luce_studio_old_rssi
-      - sensor.luce_studio_old_uptime
       # Shelly 10 - Luce Camera (shellydimmer_d46cf2)
       - binary_sensor.luce_camera_old_channel_1_input
       - binary_sensor.luce_camera_old_channel_2_input

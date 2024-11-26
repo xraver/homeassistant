@@ -8,11 +8,9 @@ lights_old:
   entities:
     - light.luce_corridoio
     - light.luce_cucina_old
-    - light.luce_sala_old
     - light.luce_divano
     - light.luce_bagno_old
     - light.luce_specchio_old
-    - light.luce_studio_old
     - light.luce_camera_old
     - light.luce_dispensa
     - light.luce_balcone_old

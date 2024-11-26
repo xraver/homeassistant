@@ -2,13 +2,6 @@
 # Group Lights Livingroom
 ######################################################################
 
-lights_livingroom_old:
-  name: Luci Sala (Old)
-  icon: mdi:lightbulb
-  entities:
-    - light.luce_sala_old
-    - light.luce_divano_old
-
 lights_livingroom:
   name: Luci Sala
   icon: mdi:lightbulb

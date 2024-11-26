@@ -5,18 +5,18 @@
 light.luce_corridoio:
   expose: true
   room: Corridoio
-#light.luce_zona_giorno:
-#  expose: true
-#  room: Zona Giorno
-#light.luce_armadio:
-#  expose: true
-#  room: Zona Giorno
+light.luce_zona_giorno:
+  expose: true
+  room: Zona Giorno
+light.luce_armadio:
+  expose: true
+  room: Zona Giorno
 light.luce_cucina_old:
   expose: true
   room: Cucina
-#light.luce_vetrine:
-#  expose: true
-#  room: Cucina
+light.luce_vetrine:
+  expose: true
+  room: Cucina
 light.luce_sala:
   expose: true
   room: Sala
@@ -26,18 +26,18 @@ light.luce_divano:
 light.luce_studio:
   expose: true
   room: Studio
-#light.luce_zona_notte:
-#  expose: true
-#  room: Zona Notte
+light.luce_zona_notte:
+  expose: true
+  room: Zona Notte
 light.luce_bagno_old:
   expose: true
   room: Bagno
 light.luce_specchio_old:
   expose: true
   room: Bagno
-#light.luce_trono:
-#  expose: true
-#  room: Bagno
+light.luce_trono:
+  expose: true
+  room: Bagno
 light.luce_camera_old:
   expose: true
   room: Camera

@@ -166,12 +166,10 @@
                   "title": "Cucina"
                 },
                 {
+                  "camera_view": "auto",
                   "type": "picture-glance",
                   "aspect_ratio": "0%",
                   "entities": [
-                    {
-                      "entity": "light.luce_sala_old"
-                    },
                     {
                       "entity": "light.luce_divano"
                     },
@@ -186,10 +184,7 @@
                     }
                   ],
                   "entity": "group.lights_livingroom_old",
-                  "state_image": {
-                    "off": "/local/images/rooms/sala_off.jpg",
-                    "on": "/local/images/rooms/sala_on.jpg"
-                  },
+                  "image": "/local/images/rooms/sala_off.jpg",
                   "title": "Sala"
                 },
                 {
@@ -214,12 +209,10 @@
                   "title": "Bagno"
                 },
                 {
+                  "camera_view": "auto",
                   "type": "picture-glance",
                   "aspect_ratio": "0%",
                   "entities": [
-                    {
-                      "entity": "light.luce_studio_old"
-                    },
                     {
                       "entity": "cover.tapparella_studio_old"
                     },
@@ -227,11 +220,7 @@
                       "entity": "climate.studio"
                     }
                   ],
-                  "entity": "light.luce_studio_old",
-                  "state_image": {
-                    "off": "/local/images/rooms/studio_off.jpg",
-                    "on": "/local/images/rooms/studio_on.jpg"
-                  },
+                  "image": "/local/images/rooms/studio_off.jpg",
                   "title": "Studio"
                 },
                 {
@@ -537,17 +526,6 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_sala_old",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
               "entity": "light.luce_divano",
               "color": "",
               "tap_action": {
@@ -571,17 +549,6 @@
               "show_state": true,
               "show_icon": true,
               "entity": "light.luce_specchio_old",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_studio_old",
               "color": "",
               "tap_action": {
                 "action": "toggle"
@@ -646,17 +613,6 @@
                 },
                 {
                   "type": "custom:fold-entity-row",
-                  "head": "group.lights_livingroom_old",
-                  "entities": [
-                    "light.luce_sala_old",
-                    "light.luce_divano"
-                  ]
-                },
-                {
-                  "entity": "light.luce_studio_old"
-                },
-                {
-                  "type": "custom:fold-entity-row",
                   "head": "group.lights_bathroom_old",
                   "entities": [
                     "light.luce_bagno_old",
@@ -690,21 +646,6 @@
               "type": "tile"
             },
             {
-              "entity": "group.lights_livingroom_old",
-              "name": "Luci Sala",
-              "type": "tile"
-            },
-            {
-              "features": [
-                {
-                  "type": "light-brightness"
-                }
-              ],
-              "entity": "light.luce_sala_old",
-              "name": "Luce Sala",
-              "type": "tile"
-            },
-            {
               "entity": "light.luce_divano",
               "name": "Luce Divano",
               "type": "tile",
@@ -727,11 +668,6 @@
             {
               "entity": "light.luce_specchio_old",
               "name": "Luce Specchio",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_studio_old",
-              "name": "Luce Studio",
               "type": "tile"
             },
             {

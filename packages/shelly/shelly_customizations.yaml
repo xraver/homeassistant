@@ -165,34 +165,6 @@ homeassistant:
     button.luce_cucina_old_reboot:
       friendly_name: Riavvia Dispositivo
 
-    # Shelly 7 - Luce Sala (shellydimmer_d3ea58)
-    binary_sensor.luce_sala_old_channel_1_input:
-      friendly_name: Pulsante 1
-    binary_sensor.luce_sala_old_channel_2_input:
-      friendly_name: Pulsante 2
-    sensor.luce_sala_old_energy:
-      friendly_name: Energia
-    sensor.luce_sala_old_power:
-      friendly_name: Potenza
-    binary_sensor.luce_sala_old_overpowering:
-      friendly_name: Sovraccarico Energetico
-    binary_sensor.luce_sala_old_cloud:
-      friendly_name: Connessione Cloud
-    sensor.luce_sala_old_device_temperature:
-      friendly_name: Temperatura Device
-    binary_sensor.luce_sala_old_overheating:
-      friendly_name: Surriscaldamento Device
-    update.luce_sala_old_firmware_update:
-      friendly_name: Aggiornamento Firmware
-    update.luce_sala_old_beta_firmware_update:
-      friendly_name: Aggiornamento Firmware Beta
-    sensor.luce_sala_old_rssi:
-      friendly_name: Potenza Segnale
-    sensor.luce_sala_old_uptime:
-      friendly_name: Uptime
-    button.luce_sala_old_reboot:
-      friendly_name: Riavvia Dispositivo
-
     # Shelly 8 - Luci Bagno (shellyswitch25_C45BBE6C38D0)
     sensor.luce_bagno_old_energy:
       friendly_name: Energia
@@ -221,20 +193,6 @@ homeassistant:
     sensor.luci_bagno_uptime:
       friendly_name: Uptime
     button.luci_bagno_reboot:
-      friendly_name: Riavvia Dispositivo
-
-    # Shelly 9 - Luce Studio (shelly1_59e18c)
-    binary_sensor.luce_studio_old_cloud:
-      friendly_name: Connessione Cloud
-    update.luce_studio_old_firmware_update:
-      friendly_name: Aggiornamento Firmware
-    update.luce_studio_old_beta_firmware_update:
-      friendly_name: Aggiornamento Firmware Beta
-    sensor.luce_studio_old_rssi:
-      friendly_name: Potenza Segnale
-    sensor.luce_studio_old_uptime:
-      friendly_name: Uptime
-    button.luce_studio_old_reboot:
       friendly_name: Riavvia Dispositivo
 
     # Shelly 10 - Luce Camera (shellydimmer_d46cf2)

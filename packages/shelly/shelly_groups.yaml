@@ -14,9 +14,7 @@ group:
       - update.tapparella_camera_old_firmware_update
       - update.luce_corridoio_firmware_update
       - update.luce_cucina_old_firmware_update
-      - update.luce_sala_old_firmware_update
       - update.luci_bagno_firmware_update
-      - update.luce_studio_old_firmware_update
       - update.luce_camera_old_firmware_update
       - update.luce_balcone_old_firmware_update
       #- update.luce_divano_firmware_update
