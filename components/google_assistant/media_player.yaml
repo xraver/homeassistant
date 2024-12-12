@@ -2,6 +2,10 @@
 # Google Assistant: Media Player
 ######################################################################
 
+media_player.tv_cucina:
+  expose: true
+  room: Cucina
+
 #media_player.sony_kd_55xf8596:
 #  expose: true
 #  room: Sala
