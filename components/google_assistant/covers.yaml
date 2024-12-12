@@ -11,15 +11,15 @@ cover.tapparella_cucina_old:
 #cover.tapparella_cucina_piccola:
 #  expose: true
 #  room: Cucina
-cover.tapparella_sala_old:
+cover.tapparella_sala:
   expose: true
   room: Sala
-cover.tapparella_studio_old:
+cover.tapparella_studio:
   expose: true
   room: Studio
-#cover.tapparella_bagno:
-#  expose: true
-#  room: Bagno
-cover.tapparella_camera_old:
+cover.tapparella_bagno:
+  expose: true
+  room: Bagno
+cover.tapparella_camera:
   expose: true
   room: Camera

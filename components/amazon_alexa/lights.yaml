@@ -14,7 +14,7 @@
   - light.luce_bagno_old
   - light.luce_specchio_old
   - light.luce_trono
-  - light.luce_camera_old
+  - light.luce_camera
   - light.luce_dispensa
-  - light.luce_balcone_old
+  - light.luce_balcone
   - light.luce_veranda

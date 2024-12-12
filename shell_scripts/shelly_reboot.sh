@@ -11,13 +11,9 @@ SHELLY_ID=(
 	shellyem.giorgioravera.it
 	shelly1.giorgioravera.it
 	shelly2.giorgioravera.it
-	shelly3.giorgioravera.it
-	shelly4.giorgioravera.it
 	shelly5.giorgioravera.it
 	shelly6.giorgioravera.it
 	shelly8.giorgioravera.it
-	shelly10.giorgioravera.it
-	shelly11.giorgioravera.it
 	shellybulb.giorgioravera.it
 	shellyem-old.giorgioravera.it
 	shellyplugs.giorgioravera.it

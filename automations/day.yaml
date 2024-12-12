@@ -26,6 +26,6 @@
       data:
         entity_id:
           - cover.tapparella_cucina_old
-          #- cover.tapparella_sala_old
-          - cover.tapparella_studio_old
+          #- cover.tapparella_sala
+          - cover.tapparella_studio
         position: 85

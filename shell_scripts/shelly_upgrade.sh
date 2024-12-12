@@ -12,13 +12,9 @@ SHELLY_ID=(
 	shellyem-B9F0D0
 	shellyswitch-55980F
 	shellyswitch25-6919BD
-	shellyswitch-13572B
-	shellyswitch-559C49
 	shelly1-24D1EE
 	shelly1-93B27D
 	shellyswitch25-C45BBE6C38D0
-	shellydimmer-D46CF2
-	shelly1-C423C8
 	shellybulb-BC8610
 	shellyem-B9E1A0
 	shellyplug-s-7A31CB

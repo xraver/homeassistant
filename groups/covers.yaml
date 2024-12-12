@@ -9,8 +9,6 @@ covers_old:
   entities:
     - cover.tapparella_cucina_old
     - cover.tapparella_sala_old
-    - cover.tapparella_studio_old
-    - cover.tapparella_camera_old
 
 covers:
   name: Tapparelle

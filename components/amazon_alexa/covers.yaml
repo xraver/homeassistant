@@ -3,6 +3,9 @@
 ######################################################################
 
 - cover.tapparella_cucina_old
-- cover.tapparella_sala_old
-- cover.tapparella_studio_old
-- cover.tapparella_camera_old
+#- cover.tapparella_cucina_grande
+#- cover.tapparella_cucina_piccola
+- cover.tapparella_sala
+- cover.tapparella_studio
+- cover.tapparella_bagno
+- cover.tapparella_camera

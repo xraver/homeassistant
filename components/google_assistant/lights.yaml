@@ -38,13 +38,13 @@ light.luce_specchio_old:
 light.luce_trono:
   expose: true
   room: Bagno
-light.luce_camera_old:
+light.luce_camera:
   expose: true
   room: Camera
 light.luce_dispensa:
   expose: true
   room: Dispensa
-light.luce_balcone_old:
+light.luce_balcone:
   expose: true
   room: Balcone
 light.luce_veranda:

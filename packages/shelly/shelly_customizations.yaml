@@ -93,50 +93,6 @@ homeassistant:
     button.tapparella_sala_old_reboot:
       friendly_name: Riavvia Dispositivo
 
-    # Shelly 3 - Tapparella Studio (shellyswitch_13572b)
-    sensor.tapparella_studio_old_energy:
-      friendly_name: Energia
-    sensor.tapparella_studio_old_power:
-      friendly_name: Potenza
-    binary_sensor.tapparella_studio_old_channel_1_input:
-      friendly_name: Pulsante 1
-    binary_sensor.tapparella_studio_old_channel_2_input:
-      friendly_name: Pulsante 2
-    binary_sensor.tapparella_studio_old_cloud:
-      friendly_name: Connessione Cloud
-    update.tapparella_studio_old_firmware:
-      friendly_name: Aggiornamento Firmware
-    update.tapparella_studio_old_beta_firmware_update:
-      friendly_name: Aggiornamento Firmware Beta
-    sensor.tapparella_studio_old_rssi:
-      friendly_name: Potenza Segnale
-    sensor.tapparella_studio_old_uptime:
-      friendly_name: Uptime
-    button.tapparella_studio_old_reboot:
-      friendly_name: Riavvia Dispositivo
-
-    # Shelly 4 - Tapparella Camera (shellyswitch_559c49)
-    sensor.tapparella_camera_old_energy:
-      friendly_name: Energia
-    sensor.tapparella_camera_old_power:
-      friendly_name: Potenza
-    binary_sensor.tapparella_camera_old_channel_1_input:
-      friendly_name: Pulsante 1
-    binary_sensor.tapparella_camera_old_channel_2_input:
-      friendly_name: Pulsante 2
-    binary_sensor.tapparella_camera_old_cloud:
-      friendly_name: Connessione Cloud
-    update.tapparella_camera_old_firmware:
-      friendly_name: Aggiornamento Firmware
-    update.tapparella_camera_old_beta_firmware_update:
-      friendly_name: Aggiornamento Firmware Beta
-    sensor.tapparella_camera_old_rssi:
-      friendly_name: Potenza Segnale
-    sensor.tapparella_camera_old_uptime:
-      friendly_name: Uptime
-    button.tapparella_camera_old_reboot:
-      friendly_name: Riavvia Dispositivo
-
     # Shelly 5 - Luce Corridoio (shelly1_24d1ee)
     binary_sensor.luce_corridoio_cloud:
       friendly_name: Connessione Cloud
@@ -193,48 +149,6 @@ homeassistant:
     sensor.luci_bagno_uptime:
       friendly_name: Uptime
     button.luci_bagno_reboot:
-      friendly_name: Riavvia Dispositivo
-
-    # Shelly 10 - Luce Camera (shellydimmer_d46cf2)
-    binary_sensor.luce_camera_old_channel_1_input:
-      friendly_name: Pulsante 1
-    binary_sensor.luce_camera_old_channel_2_input:
-      friendly_name: Pulsante 2
-    sensor.luce_camera_old_energy:
-      friendly_name: Energia
-    sensor.luce_camera_old_power:
-      friendly_name: Potenza
-    binary_sensor.luce_camera_old_overpowering:
-      friendly_name: Sovraccarico Energetico
-    binary_sensor.luce_camera_old_cloud:
-      friendly_name: Connessione Cloud
-    sensor.luce_camera_old_device_temperature:
-      friendly_name: Temperatura Device
-    binary_sensor.luce_camera_old_overheating:
-      friendly_name: Surriscaldamento Device
-    update.luce_camera_old_firmware:
-      friendly_name: Aggiornamento Firmware
-    update.luce_camera_old_beta_firmware_update:
-      friendly_name: Aggiornamento Firmware Beta
-    sensor.luce_camera_old_rssi:
-      friendly_name: Potenza Segnale
-    sensor.luce_camera_old_uptime:
-      friendly_name: Uptime
-    button.luce_camera_old_reboot:
-      friendly_name: Riavvia Dispositivo
-
-    # Shelly 11 - Luce Balcone (shelly1_c423c8)
-    binary_sensor.luce_balcone_old_cloud:
-      friendly_name: Connessione Cloud
-    update.luce_balcone_old_firmware:
-      friendly_name: Aggiornamento Firmware
-    update.luce_balcone_old_beta_firmware_update:
-      friendly_name: Aggiornamento Firmware Beta
-    sensor.luce_balcone_old_rssi:
-      friendly_name: Potenza Segnale
-    sensor.luce_balcone_old_uptime:
-      friendly_name: Uptime
-    button.luce_balcone_old_reboot:
       friendly_name: Riavvia Dispositivo
 
     # Shelly Bulb (shellybulb_bc8610)

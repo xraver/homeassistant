@@ -11,9 +11,7 @@ lights_old:
     - light.luce_divano
     - light.luce_bagno_old
     - light.luce_specchio_old
-    - light.luce_camera_old
     - light.luce_dispensa
-    - light.luce_balcone_old
     - light.luce_veranda
 
 lights:
