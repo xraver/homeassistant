@@ -177,9 +177,6 @@
                       "entity": "cover.tapparella_sala_old"
                     },
                     {
-                      "entity": "climate.sala"
-                    },
-                    {
                       "entity": "media_player.sony_kd_55xf8596"
                     }
                   ],
@@ -196,9 +193,6 @@
                     },
                     {
                       "entity": "light.luce_specchio_old"
-                    },
-                    {
-                      "entity": "climate.bagno_piccolo"
                     }
                   ],
                   "entity": "group.lights_bathroom_old",
@@ -207,60 +201,6 @@
                     "on": "/local/images/rooms/bagno_on.jpg"
                   },
                   "title": "Bagno"
-                },
-                {
-                  "camera_view": "auto",
-                  "type": "picture-glance",
-                  "aspect_ratio": "0%",
-                  "entities": [
-                    {
-                      "entity": "cover.tapparella_studio_old"
-                    },
-                    {
-                      "entity": "climate.studio"
-                    }
-                  ],
-                  "image": "/local/images/rooms/studio_off.jpg",
-                  "title": "Studio"
-                },
-                {
-                  "type": "picture-glance",
-                  "aspect_ratio": "0%",
-                  "entities": [
-                    {
-                      "entity": "light.luce_camera_old"
-                    },
-                    {
-                      "entity": "cover.tapparella_camera_old"
-                    },
-                    {
-                      "entity": "climate.camera"
-                    },
-                    {
-                      "entity": "media_player.tv_camera"
-                    }
-                  ],
-                  "entity": "light.luce_camera_old",
-                  "state_image": {
-                    "off": "/local/images/rooms/camera_off.jpg",
-                    "on": "/local/images/rooms/camera_on.jpg"
-                  },
-                  "title": "Camera"
-                },
-                {
-                  "type": "picture-glance",
-                  "aspect_ratio": "0%",
-                  "entities": [
-                    {
-                      "entity": "light.luce_balcone_old"
-                    }
-                  ],
-                  "entity": "light.luce_balcone_old",
-                  "state_image": {
-                    "off": "/local/images/rooms/balcone_off.jpg",
-                    "on": "/local/images/rooms/balcone_on.jpg"
-                  },
-                  "title": "Balcone"
                 },
                 {
                   "type": "custom:clock-weather-card",
@@ -559,29 +499,7 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
-              "entity": "light.luce_camera_old",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
               "entity": "light.luce_dispensa",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_balcone_old",
               "color": "",
               "tap_action": {
                 "action": "toggle"
@@ -618,12 +536,6 @@
                     "light.luce_bagno_old",
                     "light.luce_specchio_old"
                   ]
-                },
-                {
-                  "entity": "light.luce_camera_old"
-                },
-                {
-                  "entity": "light.luce_balcone_old"
                 }
               ],
               "show_header_toggle": false,
@@ -671,23 +583,8 @@
               "type": "tile"
             },
             {
-              "features": [
-                {
-                  "type": "light-brightness"
-                }
-              ],
-              "entity": "light.luce_camera_old",
-              "name": "Luce Camera",
-              "type": "tile"
-            },
-            {
               "entity": "light.luce_dispensa",
               "name": "Luce Dispensa",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_balcone_old",
-              "name": "Luce Balcone",
               "type": "tile"
             },
             {
@@ -722,26 +619,6 @@
               "color": "",
               "state_content": "current_position",
               "name": "Sala"
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_studio_old",
-              "color": "",
-              "state_content": "current_position",
-              "name": "Studio"
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_camera_old",
-              "color": "",
-              "state_content": "current_position",
-              "name": "Camera"
             }
           ],
           "cards": [
@@ -762,28 +639,6 @@
                   "buttons_position": "left",
                   "entity": "cover.tapparella_sala_old",
                   "name": "Tapparella Sala",
-                  "always_percentage": true
-                }
-              ],
-              "type": "custom:shutter-card"
-            },
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_studio_old",
-                  "name": "Tapparella Studio",
-                  "always_percentage": true
-                }
-              ],
-              "type": "custom:shutter-card"
-            },
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_camera_old",
-                  "name": "Tapparella Camera",
                   "always_percentage": true
                 }
               ],
@@ -1986,12 +1841,12 @@
                     },
                     {
                       "entity": "sensor.valvola_bagno_piccolo_batteria",
-                      "name": "Bagno",
+                      "name": "Bagno Piccolo",
                       "width": "85%"
                     },
                     {
                       "entity": "sensor.valvola_bagno_grande_batteria",
-                      "name": "Bagno",
+                      "name": "Bagno Grande",
                       "width": "85%"
                     },
                     {

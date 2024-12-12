@@ -2385,8 +2385,26 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_channel_1_power",
-                              "name": "Potenza"
+                              "entity": "sensor.lavatrice_current_status",
+                              "name": "Stato"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "number.lavatrice_delay_ends_in",
+                              "name": "Avvio in"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "event.lavatrice_notification",
+                              "name": "Notifica"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "event.lavatrice_error",
+                              "name": "Errore"
                             }
                           ]
                         }
@@ -2399,6 +2417,17 @@
                           "type": "custom:button-card",
                           "show_name": false,
                           "icon": "mdi:power",
+                          "entity": "select.lavatrice_operation",
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "select.select_option",
+                            "target": {
+                              "entity_id": "select.lavatrice_operation"
+                            },
+                            "data": {
+                              "option": "power_off"
+                            }
+                          },
                           "styles": {
                             "icon": [
                               {
@@ -2410,11 +2439,22 @@
                         {
                           "type": "custom:button-card",
                           "show_name": false,
-                          "icon": "mdi:power",
+                          "icon": "mdi:play",
+                          "entity": "select.lavatrice_operation",
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "select.select_option",
+                            "target": {
+                              "entity_id": "select.lavatrice_operation"
+                            },
+                            "data": {
+                              "option": "start"
+                            }
+                          },
                           "styles": {
                             "icon": [
                               {
-                                "color": "green"
+                                "color": "var(--state-icon-color)"
                               }
                             ]
                           }
@@ -2422,10 +2462,22 @@
                         {
                           "type": "custom:button-card",
                           "show_name": false,
+                          "icon": "mdi:play-pause",
+                          "entity": "select.lavatrice_operation",
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "select.select_option",
+                            "target": {
+                              "entity_id": "select.lavatrice_operation"
+                            },
+                            "data": {
+                              "option": "wake-up"
+                            }
+                          },
                           "styles": {
-                            "card": [
+                            "icon": [
                               {
-                                "padding": "0%"
+                                "color": "var(--state-icon-color)"
                               }
                             ]
                           }
@@ -2433,10 +2485,22 @@
                         {
                           "type": "custom:button-card",
                           "show_name": false,
+                          "icon": "mdi:stop",
+                          "entity": "select.lavatrice_operation",
+                          "tap_action": {
+                            "action": "call-service",
+                            "service": "select.select_option",
+                            "target": {
+                              "entity_id": "select.lavatrice_operation"
+                            },
+                            "data": {
+                              "option": "stop"
+                            }
+                          },
                           "styles": {
-                            "card": [
+                            "icon": [
                               {
-                                "padding": "0%"
+                                "color": "var(--state-icon-color)"
                               }
                             ]
                           }
@@ -2656,116 +2720,6 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "Shelly 3 - Tapparella Studio"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly25.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly3.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "cover.tapparella_studio_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.tapparella_studio_old_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_studio_old_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 4 - Tapparella Camera"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly25.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly4.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "cover.tapparella_camera_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.tapparella_camera_old_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_camera_old_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
                   "label": "Shelly 5 - Luce Corridoio"
                 },
                 {
@@ -2919,116 +2873,6 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
                               "entity": "button.luci_bagno_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 10 - Luce Camera"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly_dimmer.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly10.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_camera_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.luce_camera_old_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_camera_old_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 11 - Luce Balcone"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly1.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly11.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_balcone_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.luce_balcone_old_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_balcone_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
