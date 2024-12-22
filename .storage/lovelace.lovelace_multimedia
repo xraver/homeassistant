@@ -1200,6 +1200,10 @@
                 },
                 {
                   "type": "media-control",
+                  "entity": "media_player.tv_cucina"
+                },
+                {
+                  "type": "media-control",
                   "entity": "media_player.tv_camera"
                 },
                 {
