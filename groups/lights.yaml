@@ -2,18 +2,6 @@
 # Group Lights
 ######################################################################
 
-lights_old:
-  name: Luci Casa (Old)
-  icon: mdi:lightbulb
-  entities:
-    - light.luce_corridoio
-    - light.luce_cucina_old
-    - light.luce_divano
-    - light.luce_bagno_old
-    - light.luce_specchio_old
-    - light.luce_dispensa
-    - light.luce_veranda
-
 lights:
   name: Luci Casa
   icon: mdi:lightbulb

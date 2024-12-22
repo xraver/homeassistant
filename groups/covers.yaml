@@ -2,14 +2,6 @@
 # Group Covers
 ######################################################################
 
-covers_old:
-  name: Tapparelle (Old)
-  #icon: mdi:window-closed
-  icon: mdi:window-shutter
-  entities:
-    - cover.tapparella_cucina_old
-    - cover.tapparella_sala_old
-
 covers:
   name: Tapparelle
   icon: mdi:window-shutter

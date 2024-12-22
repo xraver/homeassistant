@@ -80,7 +80,7 @@
 
   {# Lights Status #}
   {%- macro status_lights() -%}
-    {% for entity_id in states.group.lights_old.attributes.entity_id  %}
+    {% for entity_id in states.group.lights.attributes.entity_id  %}
       {% set name = state_attr(entity_id, 'friendly_name') %}
       {% if is_state(entity_id, 'off') %}
         La {{ name }} è spenta.
@@ -92,7 +92,7 @@
 
   {# Covers Status #}
   {%- macro status_covers() -%}
-    {% for entity_id in states.group.covers_old.attributes.entity_id %}
+    {% for entity_id in states.group.covers.attributes.entity_id %}
       {% set name = state_attr(entity_id, 'friendly_name') %}
       {% set perc = state_attr(entity_id, 'current_position') %}
       {% if perc | int < 25 %}

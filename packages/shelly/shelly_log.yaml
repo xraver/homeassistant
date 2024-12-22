@@ -53,19 +53,6 @@ logbook:
       - update.luce_cucina_old_firmware
       - sensor.luce_cucina_old_rssi
       - sensor.luce_cucina_old_uptime
-      # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
-      - sensor.luce_bagno_old_energy
-      - binary_sensor.luce_bagno_old_overpowering
-      - sensor.luce_bagno_old_power
-      - sensor.luce_specchio_old_energy
-      - binary_sensor.luce_specchio_old_overpowering
-      - sensor.luce_specchio_old_power
-      - binary_sensor.luci_bagno_cloud
-      - sensor.luci_bagno_device_temperature
-      - binary_sensor.luci_bagno_overheating
-      - update.luci_bagno_firmware
-      - sensor.luci_bagno_rssi
-      - sensor.luci_bagno_uptime
       # Shelly Bulb (shellybulb_bc8610)
       - binary_sensor.luce_divano_cloud
       - update.luce_divano_firmware_update
@@ -145,19 +132,6 @@ recorder:
       - update.luce_cucina_old_firmware
       - sensor.luce_cucina_old_rssi
       - sensor.luce_cucina_old_uptime
-      # Shelly 8 - Luci Bagno (shellyswitch25_7457d8)
-      - sensor.luce_bagno_old_energy
-      - binary_sensor.luce_bagno_old_overpowering
-      - sensor.luce_bagno_old_power
-      - sensor.luce_specchio_old_energy
-      - binary_sensor.luce_specchio_old_overpowering
-      - sensor.luce_specchio_old_power
-      - binary_sensor.luci_bagno_cloud
-      - sensor.luci_bagno_device_temperature
-      - binary_sensor.luci_bagno_overheating
-      - update.luci_bagno_firmware
-      - sensor.luci_bagno_rssi
-      - sensor.luci_bagno_uptime
       # Shelly Bulb (shellybulb_bc8610)
       - binary_sensor.luce_divano_cloud
       - update.luce_divano_firmware_update

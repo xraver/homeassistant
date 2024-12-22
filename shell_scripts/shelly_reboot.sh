@@ -9,13 +9,7 @@ USER=$(awk '/shelly_user/ { print  $2 }' $HASS_HOME/secrets.yaml)
 PASSWORD=$(awk '/shelly_password/ { print  $2 }' $HASS_HOME/secrets.yaml)
 SHELLY_ID=(
 	shellyem.giorgioravera.it
-	shelly1.giorgioravera.it
-	shelly2.giorgioravera.it
-	shelly5.giorgioravera.it
-	shelly6.giorgioravera.it
-	shelly8.giorgioravera.it
 	shellybulb.giorgioravera.it
-	shellyem-old.giorgioravera.it
 	shellyplugs.giorgioravera.it
 )
 

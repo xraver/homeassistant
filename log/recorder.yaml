@@ -52,8 +52,6 @@ exclude:
     # Energy Sensors
     - sensor.consumo_energetico_giornaliero
     - sensor.consumo_energetico_mensile
-    - sensor.consumo_energetico_giornaliero_old
-    - sensor.consumo_energetico_mensile_old
     # Climatizzatore
     - sensor.climatizzatore_zona_giorno_energia
     - sensor.climatizzatore_zona_giorno_temperatura_ambiente

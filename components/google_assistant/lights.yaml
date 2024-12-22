@@ -11,7 +11,7 @@ light.luce_zona_giorno:
 light.luce_armadio:
   expose: true
   room: Zona Giorno
-light.luce_cucina_old:
+light.luce_cucina:
   expose: true
   room: Cucina
 light.luce_vetrine:
@@ -29,10 +29,10 @@ light.luce_studio:
 light.luce_zona_notte:
   expose: true
   room: Zona Notte
-light.luce_bagno_old:
+light.luce_bagno:
   expose: true
   room: Bagno
-light.luce_specchio_old:
+light.luce_specchio:
   expose: true
   room: Bagno
 light.luce_trono:

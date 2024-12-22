@@ -8,9 +8,8 @@ name: Casa Ravera-Testa
 filter:
   include_entities:
     # Covers
-    - cover.tapparella_cucina_old
-    #- cover.tapparella_cucina_grande
-    #- cover.tapparella_cucina_piccola
+    - cover.tapparella_cucina_grande
+    - cover.tapparella_cucina_piccola
     - cover.tapparella_sala
     - cover.tapparella_studio
     - cover.tapparella_bagno
@@ -19,14 +18,14 @@ filter:
     - light.luce_corridoio
     - light.luce_zona_giorno
     - light.luce_armadio
-    - light.luce_cucina_old
+    - light.luce_cucina
     #- light.luce_vetrine
     - light.luce_sala
     - light.luce_divano
     - light.luce_studio
     - light.luce_zona_notte
-    - light.luce_bagno_old
-    - light.luce_specchio_old
+    - light.luce_bagno
+    - light.luce_specchio
     - light.luce_camera
     - light.luce_dispensa
     - light.luce_balcone
@@ -36,6 +35,7 @@ filter:
     - sensor.temperatura_veranda_temperature
     # TV
     - media_player.sony_kd_55xf8596
+    - media_player.tv_cucina
     - media_player.tv_camera
     # Home Assistant Controls
     - input_boolean.home_mode_away

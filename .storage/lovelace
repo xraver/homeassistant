@@ -7,646 +7,6 @@
       "title": "Panoramica",
       "views": [
         {
-          "theme": "Backend-selected",
-          "icon": "mdi:home",
-          "id": "main_old",
-          "title": "Principale Old",
-          "path": "main_old",
-          "type": "sections",
-          "badges": [
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "person.giorgio",
-              "color": "",
-              "show_entity_picture": true
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "person.laura",
-              "color": "",
-              "show_entity_picture": true
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "device_tracker.ff590mr_device_tracker",
-              "color": "",
-              "show_entity_picture": true
-            },
-            {
-              "type": "entity",
-              "entity": "sensor.time"
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "binary_sensor.porta_casa_contact",
-              "color": "",
-              "show_entity_picture": true
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "binary_sensor.home_mode",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "binary_sensor.guard_mode",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "binary_sensor.speech_notifications",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "binary_sensor.alarms",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "binary_sensor.central_heating",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "sensor.shelly_em_old_channel_1_power",
-              "color": ""
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "sensor.temperatura_balcone_temperature",
-              "color": "",
-              "name": "Balcone"
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "sensor.temperatura_veranda_temperature",
-              "color": "",
-              "name": "Veranda"
-            }
-          ],
-          "cards": [],
-          "sections": [
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "picture-glance",
-                  "aspect_ratio": "0%",
-                  "entities": [
-                    {
-                      "entity": "light.luce_corridoio"
-                    }
-                  ],
-                  "entity": "light.luce_corridoio",
-                  "state_image": {
-                    "off": "/local/images/rooms/corridoio_off.jpg",
-                    "on": "/local/images/rooms/corridoio_on.jpg"
-                  },
-                  "title": "Corridoio"
-                },
-                {
-                  "type": "picture-glance",
-                  "aspect_ratio": "0%",
-                  "entities": [
-                    {
-                      "entity": "light.luce_cucina_old"
-                    },
-                    {
-                      "entity": "cover.tapparella_cucina_old"
-                    },
-                    {
-                      "entity": "climate.bagno_grande"
-                    },
-                    {
-                      "entity": "media_player.google_home"
-                    }
-                  ],
-                  "entity": "light.luce_cucina_old",
-                  "state_image": {
-                    "off": "/local/images/rooms/cucina_off.jpg",
-                    "on": "/local/images/rooms/cucina_on.jpg"
-                  },
-                  "title": "Cucina"
-                },
-                {
-                  "camera_view": "auto",
-                  "type": "picture-glance",
-                  "aspect_ratio": "0%",
-                  "entities": [
-                    {
-                      "entity": "light.luce_divano"
-                    },
-                    {
-                      "entity": "cover.tapparella_sala_old"
-                    },
-                    {
-                      "entity": "media_player.sony_kd_55xf8596"
-                    }
-                  ],
-                  "entity": "group.lights_livingroom_old",
-                  "image": "/local/images/rooms/sala_off.jpg",
-                  "title": "Sala"
-                },
-                {
-                  "type": "picture-glance",
-                  "aspect_ratio": "0%",
-                  "entities": [
-                    {
-                      "entity": "light.luce_bagno_old"
-                    },
-                    {
-                      "entity": "light.luce_specchio_old"
-                    }
-                  ],
-                  "entity": "group.lights_bathroom_old",
-                  "state_image": {
-                    "off": "/local/images/rooms/bagno_off.jpg",
-                    "on": "/local/images/rooms/bagno_on.jpg"
-                  },
-                  "title": "Bagno"
-                },
-                {
-                  "type": "custom:clock-weather-card",
-                  "entity": "weather.savona"
-                }
-              ],
-              "column_span": 3
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading_style": "subtitle"
-                },
-                {
-                  "type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "custom:mushroom-title-card",
-                      "title": "Grafici"
-                    },
-                    {
-                      "type": "custom:mini-graph-card",
-                      "entities": [
-                        "sensor.shelly_em_old_channel_1_power"
-                      ],
-                      "hours_to_show": 24,
-                      "points_per_hour": 120,
-                      "line_width": 3,
-                      "color_thresholds": [
-                        {
-                          "value": 0,
-                          "color": "#00ff00"
-                        },
-                        {
-                          "value": 1500,
-                          "color": "#c0392b"
-                        },
-                        {
-                          "value": 2500,
-                          "color": "#c0392b"
-                        }
-                      ],
-                      "decimals": 2,
-                      "hour24": true
-                    },
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "custom:mini-graph-card",
-                          "entities": [
-                            {
-                              "entity": "sensor.temperatura_balcone_temperature",
-                              "name": "Balcone"
-                            }
-                          ],
-                          "name": "Balcone",
-                          "hours_to_show": 24,
-                          "points_per_hour": 1,
-                          "show": {
-                            "name": true,
-                            "state": true
-                          },
-                          "line_width": 5,
-                          "color_thresholds": [
-                            {
-                              "value": 16,
-                              "color": "#4a90e2"
-                            },
-                            {
-                              "value": 19,
-                              "color": "#ffbd00"
-                            },
-                            {
-                              "value": 23,
-                              "color": "#ee7c3a"
-                            }
-                          ],
-                          "hour24": true,
-                          "decimals": 0
-                        },
-                        {
-                          "type": "custom:mini-graph-card",
-                          "entities": [
-                            {
-                              "entity": "sensor.temperatura_veranda_temperature",
-                              "name": "Veranda"
-                            }
-                          ],
-                          "name": "Veranda",
-                          "hours_to_show": 24,
-                          "points_per_hour": 1,
-                          "show": {
-                            "name": true,
-                            "state": true
-                          },
-                          "line_width": 5,
-                          "color_thresholds": [
-                            {
-                              "value": 16,
-                              "color": "#4a90e2"
-                            },
-                            {
-                              "value": 19,
-                              "color": "#ffbd00"
-                            },
-                            {
-                              "value": 23,
-                              "color": "#ee7c3a"
-                            }
-                          ],
-                          "hour24": true,
-                          "decimals": 0
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "custom:mushroom-title-card",
-                      "title": "Modalità Casa"
-                    },
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "custom:mushroom-entity-card",
-                          "entity": "input_boolean.home_mode_day",
-                          "tap_action": {
-                            "action": "toggle"
-                          },
-                          "layout": "vertical"
-                        },
-                        {
-                          "type": "custom:mushroom-entity-card",
-                          "entity": "input_boolean.home_mode_night",
-                          "tap_action": {
-                            "action": "toggle"
-                          },
-                          "layout": "vertical"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "custom:mushroom-entity-card",
-                          "entity": "input_boolean.home_mode_away",
-                          "tap_action": {
-                            "action": "toggle"
-                          },
-                          "layout": "vertical"
-                        },
-                        {
-                          "type": "custom:mushroom-entity-card",
-                          "entity": "input_boolean.guard_mode",
-                          "tap_action": {
-                            "action": "toggle"
-                          },
-                          "layout": "vertical",
-                          "name": "Guardia"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "custom:mushroom-title-card",
-                      "title": "Controlli Vari"
-                    },
-                    {
-                      "type": "entities",
-                      "show_header_toggle": false,
-                      "entities": [
-                        {
-                          "entity": "script.speech_status"
-                        },
-                        {
-                          "entity": "script.homeassistant_restart"
-                        },
-                        {
-                          "entity": "automation.risveglio_giorgio"
-                        },
-                        {
-                          "entity": "select.netatmo_casa_ravera_testa"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "entity-filter",
-                      "title": "Eventi da Segnalare",
-                      "entities": [
-                        "group.alarms",
-                        "group.update",
-                        "binary_sensor.ff590mr_engine_light_warning",
-                        "binary_sensor.ff590mr_warning_brakefluid",
-                        "binary_sensor.ff590mr_warning_washwater",
-                        "binary_sensor.ff590mr_warning_coolantlevellow"
-                      ],
-                      "state_filter": [
-                        "on"
-                      ],
-                      "show_empty": false
-                    },
-                    {
-                      "type": "entities",
-                      "title": "Eventi",
-                      "show_header_toggle": false,
-                      "entities": [
-                        {
-                          "entity": "input_datetime.away_mode_end"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "column_span": 3
-            }
-          ],
-          "max_columns": 3
-        },
-        {
-          "theme": "Backend-selected",
-          "icon": "mdi:lightbulb",
-          "id": "lights",
-          "title": "Luci Old",
-          "path": "lights_old",
-          "badges": [
-            {
-              "type": "entity",
-              "entity": "light.luce_corridoio",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_cucina_old",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_divano",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_bagno_old",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_specchio_old",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_dispensa",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "light.luce_veranda",
-              "color": "",
-              "tap_action": {
-                "action": "toggle"
-              }
-            }
-          ],
-          "cards": [
-            {
-              "entities": [
-                {
-                  "entity": "group.lights_old"
-                },
-                {
-                  "entity": "light.luce_corridoio"
-                },
-                {
-                  "entity": "light.luce_cucina_old"
-                },
-                {
-                  "type": "custom:fold-entity-row",
-                  "head": "group.lights_bathroom_old",
-                  "entities": [
-                    "light.luce_bagno_old",
-                    "light.luce_specchio_old"
-                  ]
-                }
-              ],
-              "show_header_toggle": false,
-              "title": "Comandi luci",
-              "type": "entities"
-            },
-            {
-              "entity": "group.lights_old",
-              "name": "Luci Casa",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_corridoio",
-              "name": "Luce Corridoio",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_cucina_old",
-              "name": "Luce Cucina",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_divano",
-              "name": "Luce Divano",
-              "type": "tile",
-              "features": [
-                {
-                  "type": "light-brightness"
-                }
-              ]
-            },
-            {
-              "entity": "group.lights_bathroom_old",
-              "name": "Luci Bagno",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_bagno_old",
-              "name": "Luce Bagno",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_specchio_old",
-              "name": "Luce Specchio",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_dispensa",
-              "name": "Luce Dispensa",
-              "type": "tile"
-            },
-            {
-              "entity": "light.luce_veranda",
-              "name": "Luce Veranda",
-              "type": "tile"
-            }
-          ]
-        },
-        {
-          "icon": "mdi:window-shutter",
-          "id": "covers",
-          "title": "Tapparelle Old",
-          "path": "covers_old",
-          "badges": [
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_cucina_old",
-              "color": "",
-              "state_content": "current_position",
-              "name": "Cucina"
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "cover.tapparella_sala_old",
-              "color": "",
-              "state_content": "current_position",
-              "name": "Sala"
-            }
-          ],
-          "cards": [
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_cucina_old",
-                  "name": "Tapparella Cucina",
-                  "always_percentage": true
-                }
-              ],
-              "type": "custom:shutter-card"
-            },
-            {
-              "entities": [
-                {
-                  "buttons_position": "left",
-                  "entity": "cover.tapparella_sala_old",
-                  "name": "Tapparella Sala",
-                  "always_percentage": true
-                }
-              ],
-              "type": "custom:shutter-card"
-            }
-          ]
-        },
-        {
           "type": "sections",
           "max_columns": 3,
           "title": "Principale",
@@ -1626,6 +986,447 @@
                   "buttons_position": "left",
                   "entity": "cover.tapparella_camera",
                   "name": "Tapparella Camera",
+                  "always_percentage": true
+                }
+              ],
+              "type": "custom:shutter-card"
+            }
+          ]
+        },
+        {
+          "theme": "Backend-selected",
+          "icon": "mdi:home",
+          "id": "main_old",
+          "title": "Principale Old",
+          "path": "main_old",
+          "type": "sections",
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.giorgio",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.laura",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "device_tracker.ff590mr_device_tracker",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "entity": "sensor.time"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.porta_casa_contact",
+              "color": "",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.home_mode",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.guard_mode",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.speech_notifications",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.alarms",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.central_heating",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.shelly_em_old_channel_1_power",
+              "color": ""
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.temperatura_balcone_temperature",
+              "color": "",
+              "name": "Balcone"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.temperatura_veranda_temperature",
+              "color": "",
+              "name": "Veranda"
+            }
+          ],
+          "cards": [],
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "picture-glance",
+                  "aspect_ratio": "0%",
+                  "entities": [
+                    {
+                      "entity": "light.luce_corridoio"
+                    }
+                  ],
+                  "entity": "light.luce_corridoio",
+                  "state_image": {
+                    "off": "/local/images/rooms/corridoio_off.jpg",
+                    "on": "/local/images/rooms/corridoio_on.jpg"
+                  },
+                  "title": "Corridoio"
+                },
+                {
+                  "type": "picture-glance",
+                  "aspect_ratio": "0%",
+                  "entities": [
+                    {
+                      "entity": "light.luce_cucina_old"
+                    },
+                    {
+                      "entity": "cover.tapparella_cucina_old"
+                    },
+                    {
+                      "entity": "climate.bagno_grande"
+                    },
+                    {
+                      "entity": "media_player.google_home"
+                    }
+                  ],
+                  "entity": "light.luce_cucina_old",
+                  "state_image": {
+                    "off": "/local/images/rooms/cucina_off.jpg",
+                    "on": "/local/images/rooms/cucina_on.jpg"
+                  },
+                  "title": "Cucina"
+                },
+                {
+                  "type": "custom:clock-weather-card",
+                  "entity": "weather.savona"
+                }
+              ],
+              "column_span": 3
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "subtitle"
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-title-card",
+                      "title": "Grafici"
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        "sensor.shelly_em_old_channel_1_power"
+                      ],
+                      "hours_to_show": 24,
+                      "points_per_hour": 120,
+                      "line_width": 3,
+                      "color_thresholds": [
+                        {
+                          "value": 0,
+                          "color": "#00ff00"
+                        },
+                        {
+                          "value": 1500,
+                          "color": "#c0392b"
+                        },
+                        {
+                          "value": 2500,
+                          "color": "#c0392b"
+                        }
+                      ],
+                      "decimals": 2,
+                      "hour24": true
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mini-graph-card",
+                          "entities": [
+                            {
+                              "entity": "sensor.temperatura_balcone_temperature",
+                              "name": "Balcone"
+                            }
+                          ],
+                          "name": "Balcone",
+                          "hours_to_show": 24,
+                          "points_per_hour": 1,
+                          "show": {
+                            "name": true,
+                            "state": true
+                          },
+                          "line_width": 5,
+                          "color_thresholds": [
+                            {
+                              "value": 16,
+                              "color": "#4a90e2"
+                            },
+                            {
+                              "value": 19,
+                              "color": "#ffbd00"
+                            },
+                            {
+                              "value": 23,
+                              "color": "#ee7c3a"
+                            }
+                          ],
+                          "hour24": true,
+                          "decimals": 0
+                        },
+                        {
+                          "type": "custom:mini-graph-card",
+                          "entities": [
+                            {
+                              "entity": "sensor.temperatura_veranda_temperature",
+                              "name": "Veranda"
+                            }
+                          ],
+                          "name": "Veranda",
+                          "hours_to_show": 24,
+                          "points_per_hour": 1,
+                          "show": {
+                            "name": true,
+                            "state": true
+                          },
+                          "line_width": 5,
+                          "color_thresholds": [
+                            {
+                              "value": 16,
+                              "color": "#4a90e2"
+                            },
+                            {
+                              "value": 19,
+                              "color": "#ffbd00"
+                            },
+                            {
+                              "value": 23,
+                              "color": "#ee7c3a"
+                            }
+                          ],
+                          "hour24": true,
+                          "decimals": 0
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-title-card",
+                      "title": "Modalità Casa"
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "input_boolean.home_mode_day",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "input_boolean.home_mode_night",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "layout": "vertical"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "input_boolean.home_mode_away",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "layout": "vertical"
+                        },
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "input_boolean.guard_mode",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "layout": "vertical",
+                          "name": "Guardia"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mushroom-title-card",
+                      "title": "Controlli Vari"
+                    },
+                    {
+                      "type": "entities",
+                      "show_header_toggle": false,
+                      "entities": [
+                        {
+                          "entity": "script.speech_status"
+                        },
+                        {
+                          "entity": "script.homeassistant_restart"
+                        },
+                        {
+                          "entity": "automation.risveglio_giorgio"
+                        },
+                        {
+                          "entity": "select.netatmo_casa_ravera_testa"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "entity-filter",
+                      "title": "Eventi da Segnalare",
+                      "entities": [
+                        "group.alarms",
+                        "group.update",
+                        "binary_sensor.ff590mr_engine_light_warning",
+                        "binary_sensor.ff590mr_warning_brakefluid",
+                        "binary_sensor.ff590mr_warning_washwater",
+                        "binary_sensor.ff590mr_warning_coolantlevellow"
+                      ],
+                      "state_filter": [
+                        "on"
+                      ],
+                      "show_empty": false
+                    },
+                    {
+                      "type": "entities",
+                      "title": "Eventi",
+                      "show_header_toggle": false,
+                      "entities": [
+                        {
+                          "entity": "input_datetime.away_mode_end"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "column_span": 3
+            }
+          ],
+          "max_columns": 3
+        },
+        {
+          "icon": "mdi:window-shutter",
+          "id": "covers",
+          "title": "Tapparelle Old",
+          "path": "covers_old",
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "cover.tapparella_cucina_old",
+              "color": "",
+              "state_content": "current_position",
+              "name": "Cucina"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "cover.tapparella_sala_old",
+              "color": "",
+              "state_content": "current_position",
+              "name": "Sala"
+            }
+          ],
+          "cards": [
+            {
+              "entities": [
+                {
+                  "buttons_position": "left",
+                  "entity": "cover.tapparella_cucina_old",
+                  "name": "Tapparella Cucina",
+                  "always_percentage": true
+                }
+              ],
+              "type": "custom:shutter-card"
+            },
+            {
+              "entities": [
+                {
+                  "buttons_position": "left",
+                  "entity": "cover.tapparella_sala_old",
+                  "name": "Tapparella Sala",
                   "always_percentage": true
                 }
               ],
@@ -2637,23 +2438,6 @@
               }
             },
             {
-              "entity": "sensor.shelly_em_old_channel_1_power",
-              "max": 6000,
-              "min": 0,
-              "name": "Potenza Istantanea",
-              "severity": {
-                "green": 0,
-                "yellow": 2000,
-                "red": 3500
-              },
-              "type": "gauge",
-              "unit": "W",
-              "needle": true,
-              "view_layout": {
-                "position": "sidebar"
-              }
-            },
-            {
               "type": "gauge",
               "entity": "sensor.consumo_energetico_giornaliero",
               "min": 0,
@@ -2690,8 +2474,7 @@
             {
               "type": "custom:plotly-graph",
               "entities": [
-                "sensor.shelly_em_channel_1_power",
-                "sensor.shelly_em_old_channel_1_power"
+                "sensor.shelly_em_channel_1_power"
               ],
               "hours_to_show": 24,
               "refresh_interval": 0,
@@ -2742,12 +2525,6 @@
                 },
                 {
                   "entity": "sensor.consumo_energetico_mensile"
-                },
-                {
-                  "entity": "sensor.consumo_energetico_giornaliero_old"
-                },
-                {
-                  "entity": "sensor.consumo_energetico_mensile_old"
                 }
               ],
               "title": "Consumi",

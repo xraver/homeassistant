@@ -5,14 +5,14 @@
   - light.luce_corridoio
   - light.luce_zona_giorno
   - light.luce_armadio
-  - light.luce_cucina_old
+  - light.luce_cucina
   - light.luce_vetrine
   - light.luce_sala
   - light.luce_divano
   - light.luce_studio
   - light.luce_zona_notte
-  - light.luce_bagno_old
-  - light.luce_specchio_old
+  - light.luce_bagno
+  - light.luce_specchio
   - light.luce_trono
   - light.luce_camera
   - light.luce_dispensa

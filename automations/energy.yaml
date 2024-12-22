@@ -8,10 +8,7 @@
   trigger:
     - trigger: numeric_state
       entity_id: sensor.shelly_em_channel_1_power
-      above: 3200
-    - trigger: numeric_state
-      entity_id: sensor.shelly_em_old_channel_1_power
-      above: 3200
+      above: 3300
 
   action:
     action: script.notify_all
