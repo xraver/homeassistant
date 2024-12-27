@@ -31,10 +31,10 @@
                       "entity": "light.luce_armadio"
                     }
                   ],
-                  "entity": "light.luce_zona_giorno",
+                  "entity": "group.lights_day_side",
                   "state_image": {
-                    "off": "/local/images/rooms/corridoio_off.jpg",
-                    "on": "/local/images/rooms/corridoio_on.jpg"
+                    "off": "/local/images/rooms/zona_giorno_off.jpg",
+                    "on": "/local/images/rooms/zona_giorno_on.jpg"
                   },
                   "title": "Zona Giorno"
                 },
@@ -236,7 +236,7 @@
                           "color": "#c0392b"
                         },
                         {
-                          "value": 2500,
+                          "value": 3000,
                           "color": "#c0392b"
                         }
                       ],

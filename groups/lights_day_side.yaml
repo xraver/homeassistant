@@ -1,0 +1,10 @@
+######################################################################
+# Group Lights Day Side
+######################################################################
+
+lights_day_side:
+  name: Luci Zona Giorno
+  icon: mdi:lightbulb
+  entities:
+    - light.luce_zona_giorno
+    - light.luce_armadio
