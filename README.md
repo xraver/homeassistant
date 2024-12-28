@@ -20,7 +20,7 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 * HomeKit
 * Mercedes Me (Mercedes-Benz A200d)
 * Netatmo Thermostatic valves
-* LG ThinQ Washing Machine (F2WV9S8P2E)
+* LG ThinQ Washing Machine (LG F2WV9S8P2E)
 * LG WebOS TV (LG 28TL510S-PZ)
 * Mitsubishi Air Conditioning (MSZ-LN25VG2V, MSZ-LN35VG2V)
 * Proxmox
@@ -46,7 +46,7 @@ The following integration are part of HACS system. Install HACS first:
 * [card-mod](https://github.com/thomasloven/lovelace-card-mod)
 * [clock-weather-card](https://github.com/pkissling/clock-weather-card)
 * [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
-* [homeassistant_electrolux_status](https://github.com/mauro-midolo/homeassistant_electrolux_status)
+* [homeassistant_electrolux_status](https://github.com/mauro-midolo/homeassistant_electrolux_status) (Electrolux EOB9S21WX and AEG NSC7P751DS)
 * [Lovelace Horizon Card](https://github.com/rejuvenate/lovelace-horizon-card)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
 * [Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)

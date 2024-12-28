@@ -5,6 +5,7 @@
 logbook:
   exclude:
     entities:
+      # Hoven Electrolyx EOB9S21WX
       - button.electrolux_forno_executecommand_off
       - button.electrolux_forno_executecommand_on
       - button.electrolux_forno_executecommand_resume
@@ -34,6 +35,32 @@ logbook:
       - sensor.electrolux_forno_watertankempty
       - sensor.electrolux_forno_watertrayinsertionstate
       - switch.electrolux_forno_cavitylight
+
+      # Refrigerator AEG NSC7P751DS
+      - binary_sensor.aeg_frigo_freezer_doorstate
+      - binary_sensor.aeg_frigo_fridge_doorstate
+      - button.aeg_frigo_airfilterstatereset
+      - number.aeg_frigo_freezer_targettemperaturec
+      - number.aeg_frigo_freezer_targettemperaturef
+      - number.aeg_frigo_fridge_targettemperaturec
+      - select.aeg_frigo_ecometervisualstate
+      - select.aeg_frigo_energysavingmode
+      - select.aeg_frigo_highfan
+      - select.aeg_frigo_keysoundtone
+      - sensor.aeg_frigo_airfilterlifetime
+      - sensor.aeg_frigo_airfilterstate
+      - sensor.aeg_frigo_alerts
+      - sensor.aeg_frigo_compressorruntime
+      - sensor.aeg_frigo_connectivitystate
+      - sensor.aeg_frigo_ecometerlevel
+      - sensor.aeg_frigo_freezer_alerts
+      - sensor.aeg_frigo_freezer_fastmodetimetoend
+      - sensor.aeg_frigo_fridge_alerts
+      - sensor.aeg_frigo_fridge_fanstate
+      - sensor.aeg_frigo_fridge_fastmodetimetoend
+      - sensor.aeg_frigo_sensorhumidity
+      - switch.aeg_frigo_freezer_fastmode
+      - switch.aeg_frigo_fridge_fastmode
 
 ######################################################################
 # Electrolux Package - Recorder
@@ -71,3 +98,29 @@ recorder:
       - sensor.electrolux_forno_watertankempty
       - sensor.electrolux_forno_watertrayinsertionstate
       - switch.electrolux_forno_cavitylight
+
+      # Refrigerator AEG NSC7P751DS
+      - binary_sensor.aeg_frigo_freezer_doorstate
+      - binary_sensor.aeg_frigo_fridge_doorstate
+      - button.aeg_frigo_airfilterstatereset
+      - number.aeg_frigo_freezer_targettemperaturec
+      - number.aeg_frigo_freezer_targettemperaturef
+      - number.aeg_frigo_fridge_targettemperaturec
+      - select.aeg_frigo_ecometervisualstate
+      - select.aeg_frigo_energysavingmode
+      - select.aeg_frigo_highfan
+      - select.aeg_frigo_keysoundtone
+      - sensor.aeg_frigo_airfilterlifetime
+      - sensor.aeg_frigo_airfilterstate
+      - sensor.aeg_frigo_alerts
+      - sensor.aeg_frigo_compressorruntime
+      - sensor.aeg_frigo_connectivitystate
+      - sensor.aeg_frigo_ecometerlevel
+      - sensor.aeg_frigo_freezer_alerts
+      - sensor.aeg_frigo_freezer_fastmodetimetoend
+      - sensor.aeg_frigo_fridge_alerts
+      - sensor.aeg_frigo_fridge_fanstate
+      - sensor.aeg_frigo_fridge_fastmodetimetoend
+      - sensor.aeg_frigo_sensorhumidity
+      - switch.aeg_frigo_freezer_fastmode
+      - switch.aeg_frigo_fridge_fastmode

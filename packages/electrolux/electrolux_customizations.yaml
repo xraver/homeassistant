@@ -4,6 +4,7 @@
 
 homeassistant:
   customize:
+    # Hoven Electrolyx EOB9S21WX
     button.electrolux_forno_executecommand_off:
       friendly_name: "Spegni forno"
     button.electrolux_forno_executecommand_on:
@@ -19,13 +20,13 @@ homeassistant:
     number.electrolux_forno_targetduration:
       friendly_name: "Tempo di cottura desiderato"
     number.electrolux_forno_targetfoodprobetemperaturec:
-      friendly_name: "Temperatura di cottura sonda desiderata (Celsius)"
+      friendly_name: "Temperatura di cottura sonda desiderata"
     number.electrolux_forno_targetfoodprobetemperaturef:
       friendly_name: "Temperatura di cottura sonda desiderata (Fahrenheit)"
     number.electrolux_forno_targetmicrowavepower:
       friendly_name: "Potenza di cottura desiderata"
     number.electrolux_forno_targettemperaturec:
-      friendly_name: "Temperatura di cottura desiderata (Celsius)"
+      friendly_name: "Temperatura di cottura desiderata"
     number.electrolux_forno_targettemperaturef:
       friendly_name: "Temperatura di cottura desiderata (Fahrenheit)"
     select.electrolux_forno_program:
@@ -42,7 +43,7 @@ homeassistant:
     sensor.electrolux_forno_displayfoodprobetemperaturec:
       friendly_name: "Temperatura sonda"
     sensor.electrolux_forno_displaytemperaturec:
-      friendly_name: "Temperatura forno (Celsius)"
+      friendly_name: "Temperatura forno"
     sensor.electrolux_forno_displaytemperaturef:
       friendly_name: "Temperatura forno (Fahrenheit)"
     sensor.electrolux_forno_doorstate:
@@ -66,3 +67,53 @@ homeassistant:
       friendly_name: "Stato vassoio acqua forno"
     switch.electrolux_forno_cavitylight:
       friendly_name: "Luce forno"
+
+    # Refrigerator AEG NSC7P751DS
+    binary_sensor.aeg_frigo_freezer_doorstate:
+      friendly_name: "Porta Freezer"
+    binary_sensor.aeg_frigo_fridge_doorstate:
+      friendly_name: "Porta Frigo"
+    button.aeg_frigo_airfilterstatereset:
+      friendly_name: "Reset Filtro Aria"
+    number.aeg_frigo_freezer_targettemperaturec:
+      friendly_name: "Temperatura Freezer"
+    number.aeg_frigo_freezer_targettemperaturef:
+      friendly_name: "Temperatura Freezer (Fahrenheit)"
+    number.aeg_frigo_fridge_targettemperaturec:
+      friendly_name: "Temperatura Frigo"
+    select.aeg_frigo_ecometervisualstate:
+      friendly_name: "Visualizza Stato Eco"
+    select.aeg_frigo_energysavingmode:
+      friendly_name: "Energy Mode"
+    select.aeg_frigo_highfan:
+      friendly_name: "Ventola Frigo"
+    select.aeg_frigo_keysoundtone:
+      friendly_name: "Suono Tasti"
+    sensor.aeg_frigo_airfilterlifetime:
+      friendly_name: "Tempo di Vita Filtro Aria"
+    sensor.aeg_frigo_airfilterstate:
+      friendly_name: "Stato Filtro Aria"
+    sensor.aeg_frigo_alerts:
+      friendly_name: "Allarmi Frigorifero"
+    sensor.aeg_frigo_compressorruntime:
+      friendly_name: "Tempo di Esercizio Compressore"
+    sensor.aeg_frigo_connectivitystate:
+      friendly_name: "Stato Connettività"
+    sensor.aeg_frigo_ecometerlevel:
+      friendly_name: "Livello ECO"
+    sensor.aeg_frigo_freezer_alerts:
+      friendly_name: "Allarmi Freezer"
+    sensor.aeg_frigo_freezer_fastmodetimetoend:
+      friendly_name: "Tempo Fast Mode Freezer"
+    sensor.aeg_frigo_fridge_alerts:
+      friendly_name: "Allarmi Frigo"
+    sensor.aeg_frigo_fridge_fanstate:
+      friendly_name: "Stato Ventola Frigo"
+    sensor.aeg_frigo_fridge_fastmodetimetoend:
+      friendly_name: "Tempo Fast Mode Frigo"
+    sensor.aeg_frigo_sensorhumidity:
+      friendly_name: "Sensore Umidità"
+    switch.aeg_frigo_freezer_fastmode:
+      friendly_name: "Fast Mode Freezer"
+    switch.aeg_frigo_fridge_fastmode:
+      friendly_name: "Fast Mode Frigo"
