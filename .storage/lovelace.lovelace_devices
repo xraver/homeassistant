@@ -2257,6 +2257,135 @@
               "entities": [
                 {
                   "type": "section",
+                  "label": "Frigorifero AEG NSC7P751DS"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/kitchen_appliance/NSC7P751DS.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "https://home.giorgioravera.it/config/devices/device/bfab9fda2db21dc014407fb29ed4607e"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "binary_sensor.aeg_frigo_fridge_doorstate",
+                              "name": "Porta Frigo"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "binary_sensor.aeg_frigo_freezer_doorstate",
+                              "name": "Porta Freezer"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "number.aeg_frigo_fridge_targettemperaturec",
+                              "name": "Frigo",
+                              "color": "var(--state-icon-color)"
+                            },
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "number.aeg_frigo_freezer_targettemperaturec",
+                              "name": "Freezer",
+                              "color": "var(--state-icon-color)"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:button-card",
+                          "entity": "select.aeg_frigo_highfan",
+                          "show_name": false,
+                          "icon": "mdi:fan",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "select.aeg_frigo_ecometervisualstate",
+                          "icon": "mdi:recycle",
+                          "show_name": false,
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "switch.aeg_frigo_freezer_fastmode",
+                          "show_name": false,
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "switch.aeg_frigo_freezer_fastmode",
+                          "show_name": false,
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "button.aeg_frigo_airfilterstatereset",
+                          "show_name": false,
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
                   "label": "Lavastoviglie Electrolux EES68510L"
                 },
                 {
