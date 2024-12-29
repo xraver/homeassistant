@@ -1,0 +1,37 @@
+######################################################################
+# LG ThinQ Package - Customizations
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # LG ThinQ Package - Customizations - General Package Settings
+    ######################################################################
+
+    package.lg_thinq:
+      customize: &customize
+        package: 'lg_thinq'
+        version: 1.0.0
+
+    ######################################################################
+    # LG ThinQ Package - Customizations - Entities
+    ######################################################################
+
+    binary_sensor.lavatrice_remote_start:
+      friendly_name: "Avvio Remoto"
+
+    event.lavatrice_notification:
+      friendly_name: "Notifiche"
+
+    event.lavatrice_error:
+      friendly_name: "Errori"
+
+    number.lavatrice_delay_ends_in:
+      friendly_name: "Fine Lavaggio in"
+
+    sensor.lavatrice_current_status:
+      friendly_name: "Stato"
+
+    select.lavatrice_operation:
+      friendly_name: "Programma Lavaggio"
