@@ -5,15 +5,17 @@
 homeassistant:
   customize:
     # Hoven Electrolyx EOB9S21WX
-    button.electrolux_forno_executecommand_off:
+    binary_sensor.electrolux_forno_doorstate:
+      friendly_name: "Porta forno"
+    button.electrolux_forno_executecommand:
       friendly_name: "Spegni forno"
-    button.electrolux_forno_executecommand_on:
+    button.electrolux_forno_executecommand_2:
       friendly_name: "Accendi forno"
-    button.electrolux_forno_executecommand_resume:
+    button.electrolux_forno_executecommand_3:
       friendly_name: "Riprendi cottura"
-    button.electrolux_forno_executecommand_start:
+    button.electrolux_forno_executecommand_4:
       friendly_name: "Avvia cottura"
-    button.electrolux_forno_executecommand_stopreset:
+    button.electrolux_forno_executecommand_5:
       friendly_name: "Ferma cottura"
     number.electrolux_forno_starttime:
       friendly_name: "Imposta Avvio Cottura"
@@ -23,31 +25,23 @@ homeassistant:
       friendly_name: "Temperatura di cottura sonda desiderata"
     number.electrolux_forno_targetfoodprobetemperaturef:
       friendly_name: "Temperatura di cottura sonda desiderata (Fahrenheit)"
-    number.electrolux_forno_targetmicrowavepower:
-      friendly_name: "Potenza di cottura desiderata"
     number.electrolux_forno_targettemperaturec:
       friendly_name: "Temperatura di cottura desiderata"
-    number.electrolux_forno_targettemperaturef:
-      friendly_name: "Temperatura di cottura desiderata (Fahrenheit)"
     select.electrolux_forno_program:
       friendly_name: "Programma forno"
-    select.electrolux_forno_temperaturerepresentation:
-      friendly_name: "Unità di misura temperatura"
-    sensor.electrolux_forno_appliancemode:
-      friendly_name: "Programma forno"
-      icon: mdi:state-machine
-    sensor.electrolux_forno_appliancestate:
-      friendly_name: "Stato programma"
     sensor.electrolux_forno_connectivitystate:
       friendly_name: "Connessione WiFi"
+    sensor.electrolux_forno_alerts:
+      friendly_name: "Allarmi forno"
+    sensor.electrolux_forno_appliancestate:
+      friendly_name: "Programma forno"
+      icon: mdi:state-machine
     sensor.electrolux_forno_displayfoodprobetemperaturec:
       friendly_name: "Temperatura sonda"
     sensor.electrolux_forno_displaytemperaturec:
       friendly_name: "Temperatura forno"
     sensor.electrolux_forno_displaytemperaturef:
       friendly_name: "Temperatura forno (Fahrenheit)"
-    sensor.electrolux_forno_doorstate:
-      friendly_name: "Porta forno"
     sensor.electrolux_forno_foodprobeinsertionstate:
       friendly_name: "Stato sonda"
     sensor.electrolux_forno_networkinterface_linkqualityindicator:
@@ -57,6 +51,10 @@ homeassistant:
     sensor.electrolux_forno_runningtime:
       friendly_name: "Tempo Totale di Funzionamento"
       icon: mdi:clock-time-twelve-outline
+    sensor.electrolux_forno_targetmicrowavepower:
+      friendly_name: "Potenza di cottura desiderata"
+    sensor.electrolux_forno_targettemperaturef:
+      friendly_name: "Temperatura di cottura desiderata (Fahrenheit)"
     sensor.electrolux_forno_timetoend:
       friendly_name: "Tempo di Cottura Rimanenete"
       icon: mdi:timer-outline

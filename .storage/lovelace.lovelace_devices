@@ -2158,16 +2158,37 @@
                                       "type": "entities",
                                       "entities": [
                                         {
-                                          "entity": "sensor.electrolux_forno_doorstate"
+                                          "entity": "binary_sensor.electrolux_forno_doorstate"
                                         },
                                         {
                                           "entity": "sensor.electrolux_forno_foodprobeinsertionstate"
+                                        },
+                                        {
+                                          "style": {
+                                            "background": "#62717b",
+                                            "height": "1px",
+                                            "margin-left": "auto",
+                                            "margin-right": "auto"
+                                          },
+                                          "type": "divider"
                                         },
                                         {
                                           "entity": "sensor.electrolux_forno_connectivitystate"
                                         },
                                         {
                                           "entity": "sensor.electrolux_forno_remotecontrol"
+                                        },
+                                        {
+                                          "style": {
+                                            "background": "#62717b",
+                                            "height": "1px",
+                                            "margin-left": "auto",
+                                            "margin-right": "auto"
+                                          },
+                                          "type": "divider"
+                                        },
+                                        {
+                                          "entity": "sensor.electrolux_forno_alerts"
                                         }
                                       ]
                                     }
@@ -2184,7 +2205,7 @@
                       "cards": [
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_executecommand_off",
+                          "entity": "button.electrolux_forno_executecommand",
                           "show_name": false,
                           "icon": "mdi:power",
                           "styles": {
@@ -2197,7 +2218,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_executecommand_on",
+                          "entity": "button.electrolux_forno_executecommand_2",
                           "show_name": false,
                           "icon": "mdi:power",
                           "styles": {
@@ -2210,7 +2231,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_executecommand_start",
+                          "entity": "button.electrolux_forno_executecommand_3",
                           "show_name": false,
                           "styles": {
                             "icon": [
@@ -2222,7 +2243,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_executecommand_resume",
+                          "entity": "button.electrolux_forno_executecommand_4",
                           "show_name": false,
                           "styles": {
                             "icon": [
@@ -2234,7 +2255,7 @@
                         },
                         {
                           "type": "custom:button-card",
-                          "entity": "button.electrolux_forno_executecommand_stopreset",
+                          "entity": "button.electrolux_forno_executecommand_5",
                           "show_name": false,
                           "styles": {
                             "icon": [
@@ -2282,27 +2303,100 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "binary_sensor.aeg_frigo_fridge_doorstate",
-                              "name": "Porta Frigo"
+                              "name": "Frigo"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "binary_sensor.aeg_frigo_freezer_doorstate",
-                              "name": "Porta Freezer"
+                              "name": "Freezer"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "number.aeg_frigo_fridge_targettemperaturec",
-                              "name": "Frigo",
-                              "color": "var(--state-icon-color)"
+                              "name": "Temperature",
+                              "icon": "mdi:thermometer",
+                              "tap_action": {
+                                "action": "fire-dom-event",
+                                "browser_mod": {
+                                  "service": "browser_mod.popup",
+                                  "data": {
+                                    "title": "Temperature",
+                                    "style": "--popup-background-color: var(--secondary-background-color);\n--dialog-backdrop-filter: blur(2em) brightness(0.75);\n",
+                                    "content": {
+                                      "type": "entities",
+                                      "entities": [
+                                        {
+                                          "entity": "number.aeg_frigo_fridge_targettemperaturec"
+                                        },
+                                        {
+                                          "entity": "number.aeg_frigo_freezer_targettemperaturec"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "number.aeg_frigo_freezer_targettemperaturec",
-                              "name": "Freezer",
-                              "color": "var(--state-icon-color)"
+                              "name": "Diagnostica",
+                              "icon": "mdi:file-chart-outline",
+                              "tap_action": {
+                                "action": "fire-dom-event",
+                                "browser_mod": {
+                                  "service": "browser_mod.popup",
+                                  "data": {
+                                    "title": "Diagnostica",
+                                    "style": "--popup-background-color: var(--secondary-background-color);\n--dialog-backdrop-filter: blur(2em) brightness(0.75);\n",
+                                    "content": {
+                                      "type": "entities",
+                                      "entities": [
+                                        {
+                                          "entity": "sensor.aeg_frigo_ecometerlevel"
+                                        },
+                                        {
+                                          "entity": "sensor.aeg_frigo_sensorhumidity"
+                                        },
+                                        {
+                                          "entity": "sensor.aeg_frigo_airfilterlifetime"
+                                        },
+                                        {
+                                          "style": {
+                                            "background": "#62717b",
+                                            "height": "1px",
+                                            "margin-left": "auto",
+                                            "margin-right": "auto"
+                                          },
+                                          "type": "divider"
+                                        },
+                                        {
+                                          "entity": "sensor.aeg_frigo_connectivitystate"
+                                        },
+                                        {
+                                          "style": {
+                                            "background": "#62717b",
+                                            "height": "1px",
+                                            "margin-left": "auto",
+                                            "margin-right": "auto"
+                                          },
+                                          "type": "divider"
+                                        },
+                                        {
+                                          "entity": "sensor.aeg_frigo_alerts"
+                                        },
+                                        {
+                                          "entity": "sensor.aeg_frigo_fridge_alerts"
+                                        },
+                                        {
+                                          "entity": "sensor.aeg_frigo_freezer_alerts"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
                             }
                           ]
                         }
@@ -2316,6 +2410,18 @@
                           "entity": "select.aeg_frigo_highfan",
                           "show_name": false,
                           "icon": "mdi:fan",
+                          "state": [
+                            {
+                              "value": "Off",
+                              "styles": {
+                                "card": [
+                                  {
+                                    "filter": "opacity(50%)"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
                           "styles": {
                             "icon": [
                               {
@@ -2329,6 +2435,45 @@
                           "entity": "select.aeg_frigo_ecometervisualstate",
                           "icon": "mdi:recycle",
                           "show_name": false,
+                          "state": [
+                            {
+                              "value": "Off",
+                              "styles": {
+                                "card": [
+                                  {
+                                    "filter": "opacity(50%)"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "entity": "switch.aeg_frigo_fridge_fastmode",
+                          "show_name": false,
+                          "confirmation": {
+                            "text": "[[[ return `Sicuro di voler attivare ${entity.attributes.friendly_name}?` ]]]"
+                          },
+                          "state": [
+                            {
+                              "value": "off",
+                              "styles": {
+                                "card": [
+                                  {
+                                    "filter": "opacity(50%)"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
                           "styles": {
                             "icon": [
                               {
@@ -2341,18 +2486,21 @@
                           "type": "custom:button-card",
                           "entity": "switch.aeg_frigo_freezer_fastmode",
                           "show_name": false,
-                          "styles": {
-                            "icon": [
-                              {
-                                "color": "var(--state-icon-color)"
+                          "confirmation": {
+                            "text": "[[[ return `Sicuro di voler attivare ${entity.attributes.friendly_name}?` ]]]"
+                          },
+                          "state": [
+                            {
+                              "value": "off",
+                              "styles": {
+                                "card": [
+                                  {
+                                    "filter": "opacity(50%)"
+                                  }
+                                ]
                               }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "custom:button-card",
-                          "entity": "switch.aeg_frigo_freezer_fastmode",
-                          "show_name": false,
+                            }
+                          ],
                           "styles": {
                             "icon": [
                               {
@@ -2371,6 +2519,9 @@
                                 "color": "var(--state-icon-color)"
                               }
                             ]
+                          },
+                          "confirmation": {
+                            "text": "[[[ return `Sicuro di voler resettare il filtro aria?` ]]]"
                           }
                         }
                       ]
@@ -2720,358 +2871,6 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_button",
                               "entity": "button.shelly_em_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 1 - Tapparella Cucina"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly25.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly1.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "cover.tapparella_cucina_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.tapparella_cucina_old_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_cucina_old_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 2 - Tapparella Sala"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly25.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly2.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "layout": "icon_name_state",
-                              "entity": "cover.tapparella_sala_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.tapparella_sala_old_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.tapparella_sala_old_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 5 - Luce Corridoio"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly1.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly5.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_corridoio",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.luce_corridoio_firmware_update",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_corridoio_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 6 - Luce Cucina"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly1.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly6.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_cucina_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.luce_cucina_old_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luce_cucina_old_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly 8 - Luci Bagno"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly25.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shelly8.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_bagno_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "light.luce_specchio_old",
-                              "name": "Stato"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.luci_bagno_firmware",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.luci_bagno_reboot",
-                              "name": "Riavvia Dispositivo",
-                              "icon": "mdi:restart"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "visible": false,
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "Shelly EM (Old)"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/shelly/shelly_em.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://shellyem-old.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_old_channel_1_power",
-                              "name": "Potenza"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_old_channel_1_voltage",
-                              "name": "Tensione",
-                              "icon": "mdi:alpha-v-box"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_old_channel_1_power_factor",
-                              "name": "FP",
-                              "icon": "mdi:angle-acute"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_firmware",
-                              "entity": "update.shelly_em_old_firmware_update",
-                              "name": "Firmare"
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_button",
-                              "entity": "button.shelly_em_old_reboot",
                               "name": "Riavvia Dispositivo",
                               "icon": "mdi:restart"
                             }
