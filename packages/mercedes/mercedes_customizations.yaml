@@ -56,6 +56,17 @@ homeassistant:
       # windowstatusfrontleft, windowstatusfrontright, windowstatusrearleft, windowstatusrearright
 
     ######################################################################
+    # Buttons
+    ######################################################################
+    # Avviare Preriscaldamento Abitacolo
+    button.ff590mr_preclimate_start:
+      friendly_name: Avvia Preriscaldamento
+
+    # Interrompere Preriscaldamento Abitacolo
+    button.ff590mr_preclimate_stop:
+      friendly_name: Ferma Preriscaldamento
+
+    ######################################################################
     # Device Tracker
     ######################################################################
     device_tracker.ff590mr_device_tracker:
@@ -146,3 +157,17 @@ homeassistant:
       friendly_name: Configurazione estesa
       icon: mdi:car-cog
       # rcp_supported_settings (List of all remote configuration options, I'll implement them step by step as services or buttons)
+
+    # Sensore Monitoraggio Pneumatici
+    sensor.ff590mr_tires_rdk_state:
+      friendly_name: Stato Monitoraggio Pneumatici
+
+    ######################################################################
+    # Switches
+    ######################################################################
+    # Interruttore Riscaldamento Ausiliario
+    switch.ff590mr_auxiliary_heating:
+      friendly_name: Riscaldamento Ausiliario
+
+    switch.ff590mr_pre_entry_climate_control:
+      friendly_name: Controllo Preriscaldamento abitacolo

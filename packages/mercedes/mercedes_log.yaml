@@ -42,6 +42,7 @@ logbook:
       - sensor.ff590mr_tire_pressure_front_right
       - sensor.ff590mr_tire_pressure_rear_left
       - sensor.ff590mr_tire_pressure_rear_right
+      - sensor.ff590mr_tires_rdk_state
 
 ######################################################################
 # Mercedes Package - Recorder
@@ -87,3 +88,4 @@ recorder:
       - sensor.ff590mr_tire_pressure_front_right
       - sensor.ff590mr_tire_pressure_rear_left
       - sensor.ff590mr_tire_pressure_rear_right
+      - sensor.ff590mr_tires_rdk_state
