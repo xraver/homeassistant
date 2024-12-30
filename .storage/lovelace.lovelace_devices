@@ -2537,110 +2537,6 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "Lavastoviglie Electrolux EES68510L"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/kitchen_appliance/EES68510L.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "https://www.electrolux.it/kitchen/dishwashing/dishwashers/dishwasher-60-cm/ees68510l/"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "template": "template_device_generic_state",
-                              "entity": "sensor.shelly_em_channel_1_power",
-                              "name": "Potenza"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "custom:button-card",
-                          "show_name": false,
-                          "icon": "mdi:power",
-                          "styles": {
-                            "icon": [
-                              {
-                                "color": "red"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "custom:button-card",
-                          "show_name": false,
-                          "icon": "mdi:power",
-                          "styles": {
-                            "icon": [
-                              {
-                                "color": "green"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "custom:button-card",
-                          "show_name": false,
-                          "styles": {
-                            "card": [
-                              {
-                                "padding": "0%"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "custom:button-card",
-                          "show_name": false,
-                          "styles": {
-                            "card": [
-                              {
-                                "padding": "0%"
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "custom:button-card",
-                          "show_name": false,
-                          "styles": {
-                            "card": [
-                              {
-                                "padding": "0%"
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
                   "label": "Lavatrice LG F2WV9S8P2E"
                 },
                 {
@@ -2672,7 +2568,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "number.lavatrice_delay_ends_in",
-                              "name": "Avvio in"
+                              "name": "Fine lavaggio in"
                             },
                             {
                               "type": "custom:button-card",
@@ -2781,6 +2677,110 @@
                             "icon": [
                               {
                                 "color": "var(--state-icon-color)"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "entities",
+              "show_header_toggle": "off",
+              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+              "entities": [
+                {
+                  "type": "section",
+                  "label": "Lavastoviglie Electrolux EES68510L"
+                },
+                {
+                  "type": "custom:hui-element",
+                  "card_type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "picture",
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                          "image": "/local/images/devices/kitchen_appliance/EES68510L.png",
+                          "tap_action": {
+                            "action": "url",
+                            "url_path": "https://www.electrolux.it/kitchen/dishwashing/dishwashers/dishwasher-60-cm/ees68510l/"
+                          }
+                        },
+                        {
+                          "type": "vertical-stack",
+                          "cards": [
+                            {
+                              "type": "custom:button-card",
+                              "template": "template_device_generic_state",
+                              "entity": "sensor.shelly_em_channel_1_power",
+                              "name": "Potenza"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "red"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "icon": "mdi:power",
+                          "styles": {
+                            "icon": [
+                              {
+                                "color": "green"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "type": "custom:button-card",
+                          "show_name": false,
+                          "styles": {
+                            "card": [
+                              {
+                                "padding": "0%"
                               }
                             ]
                           }
