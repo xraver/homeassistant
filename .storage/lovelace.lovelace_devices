@@ -2034,29 +2034,9 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
+                              "entity": "select.electrolux_forno_program",
                               "name": "Programma",
-                              "icon": "mdi:state-machine",
-                              "tap_action": {
-                                "action": "fire-dom-event",
-                                "browser_mod": {
-                                  "service": "browser_mod.popup",
-                                  "data": {
-                                    "title": "Programma",
-                                    "style": "--popup-background-color: var(--secondary-background-color);\n--dialog-backdrop-filter: blur(2em) brightness(0.75);\n",
-                                    "content": {
-                                      "type": "entities",
-                                      "entities": [
-                                        {
-                                          "entity": "sensor.electrolux_forno_appliancestate"
-                                        },
-                                        {
-                                          "entity": "select.electrolux_forno_program"
-                                        }
-                                      ]
-                                    }
-                                  }
-                                }
-                              }
+                              "icon": "mdi:state-machine"
                             },
                             {
                               "type": "custom:button-card",
@@ -2568,7 +2548,7 @@
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
                               "entity": "number.lavatrice_delay_ends_in",
-                              "name": "Fine lavaggio in"
+                              "name": "Avvio ritardato"
                             },
                             {
                               "type": "custom:button-card",

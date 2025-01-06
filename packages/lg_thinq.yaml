@@ -28,7 +28,7 @@ homeassistant:
       friendly_name: "Errori"
 
     number.lavatrice_delay_ends_in:
-      friendly_name: "Fine Lavaggio in"
+      friendly_name: "Avvio ritardato"
 
     sensor.lavatrice_current_status:
       friendly_name: "Stato"
