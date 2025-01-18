@@ -126,8 +126,8 @@
                   ],
                   "entity": "light.luce_zona_notte",
                   "state_image": {
-                    "off": "/local/images/rooms/corridoio_off.jpg",
-                    "on": "/local/images/rooms/corridoio_on.jpg"
+                    "off": "/local/images/rooms/zona_notte_off.jpg",
+                    "on": "/local/images/rooms/zona_notte_on.jpg"
                   },
                   "title": "Zona Notte"
                 },
@@ -2166,6 +2166,15 @@
             },
             {
               "type": "entity",
+              "name": "Zona Giorno",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.valvola_zona_giorno_temperature",
+              "color": ""
+            },
+            {
+              "type": "entity",
               "show_name": true,
               "show_state": true,
               "show_icon": true,
@@ -2220,13 +2229,21 @@
             },
             {
               "type": "entity",
+              "name": "Balcone",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
               "entity": "sensor.temperatura_balcone_temperature",
-              "display_type": "complete"
+              "color": ""
             },
             {
               "type": "entity",
+              "name": "Veranda",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
               "entity": "sensor.temperatura_veranda_temperature",
-              "display_type": "complete"
+              "color": ""
             },
             {
               "type": "entity",
@@ -2287,11 +2304,11 @@
                       "type": "custom:mini-graph-card",
                       "entities": [
                         {
-                          "entity": "sensor.valvola_cucina_temperature",
-                          "name": "Cucina"
+                          "entity": "sensor.valvola_zona_giorno_temperature",
+                          "name": "Zona Giorno"
                         }
                       ],
-                      "name": "Cucina",
+                      "name": "Zona Giorno",
                       "hours_to_show": 24,
                       "points_per_hour": 1,
                       "show": {
@@ -2320,11 +2337,11 @@
                       "type": "custom:mini-graph-card",
                       "entities": [
                         {
-                          "entity": "sensor.valvola_sala_temperature",
-                          "name": "Sala"
+                          "entity": "sensor.valvola_cucina_temperature",
+                          "name": "Cucina"
                         }
                       ],
-                      "name": "Sala",
+                      "name": "Cucina",
                       "hours_to_show": 24,
                       "points_per_hour": 1,
                       "show": {
@@ -2358,11 +2375,11 @@
                       "type": "custom:mini-graph-card",
                       "entities": [
                         {
-                          "entity": "sensor.valvola_bagno_piccolo_temperature",
-                          "name": "Bagno Piccolo"
+                          "entity": "sensor.valvola_sala_temperature",
+                          "name": "Sala"
                         }
                       ],
-                      "name": "Bagno",
+                      "name": "Sala",
                       "hours_to_show": 24,
                       "points_per_hour": 1,
                       "show": {
@@ -2403,6 +2420,77 @@
                         "state": true
                       },
                       "line_width": 5,
+                      "color_thresholds": [
+                        {
+                          "value": 16,
+                          "color": "#4a90e2"
+                        },
+                        {
+                          "value": 19,
+                          "color": "#ffbd00"
+                        },
+                        {
+                          "value": 23,
+                          "color": "#ee7c3a"
+                        }
+                      ],
+                      "hour24": true,
+                      "decimals": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        {
+                          "entity": "sensor.valvola_bagno_piccolo_temperature",
+                          "name": "Bagno Piccolo"
+                        }
+                      ],
+                      "name": "Bagno Piccolo",
+                      "hours_to_show": 24,
+                      "points_per_hour": 1,
+                      "show": {
+                        "name": true,
+                        "state": true
+                      },
+                      "line_width": 5,
+                      "color_thresholds": [
+                        {
+                          "value": 16,
+                          "color": "#4a90e2"
+                        },
+                        {
+                          "value": 19,
+                          "color": "#ffbd00"
+                        },
+                        {
+                          "value": 23,
+                          "color": "#ee7c3a"
+                        }
+                      ],
+                      "hour24": true,
+                      "decimals": 0
+                    },
+                    {
+                      "type": "custom:mini-graph-card",
+                      "entities": [
+                        {
+                          "entity": "sensor.valvola_bagno_grande_temperature",
+                          "name": "Bagno Grande"
+                        }
+                      ],
+                      "name": "Bagno Grande",
+                      "hours_to_show": 24,
+                      "points_per_hour": 1,
+                      "show": {
+                        "name": true,
+                        "state": true
+                      },
+                      "line_width": 3,
                       "color_thresholds": [
                         {
                           "value": 16,
