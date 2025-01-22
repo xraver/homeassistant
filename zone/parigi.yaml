@@ -1,0 +1,9 @@
+######################################################################
+# Zone: Casa Parigi
+######################################################################
+
+name: Casa Parigi
+latitude: !secret parigi_latitude
+longitude: !secret parigi_longitude
+radius: 65
+icon: mdi:home
