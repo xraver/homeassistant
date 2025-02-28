@@ -279,8 +279,16 @@
                   "name": "wireless_button"
                 },
                 {
-                  "entity": "sensor.sensore_acqua_1_battery",
-                  "name": "Sensore Acqua 1"
+                  "entity": "sensor.sensore_acqua_cucina_battery",
+                  "name": "Sensore Acqua Cucina"
+                },
+                {
+                  "entity": "sensor.sensore_acqua_bagno_grande_battery",
+                  "name": "Sensore Acqua Bagno Grande"
+                },
+                {
+                  "entity": "sensor.sensore_acqua_bagno_piccolo_battery",
+                  "name": "Sensore Acqua Bagno Piccolo"
                 }
               ]
             },

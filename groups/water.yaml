@@ -6,6 +6,6 @@ water:
   name: Sensori Perdite Acqua
   icon: mdi:water
   entities:
-    - binary_sensor.sensore_acqua_1_water_leak
-    - binary_sensor.sensore_acqua_2_water_leak
-    - binary_sensor.sensore_acqua_3_water_leak
+    - binary_sensor.sensore_acqua_cucina_water_leak
+    - binary_sensor.sensore_acqua_bagno_grande_water_leak
+    - binary_sensor.sensore_acqua_bagno_piccolo_water_leak

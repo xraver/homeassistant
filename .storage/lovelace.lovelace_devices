@@ -3618,7 +3618,7 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "Sensore Acqua 1 - Xiaomi SJCGQ11LM"
+                  "label": "Sensore Acqua Cucina - Xiaomi SJCGQ11LM"
                 },
                 {
                   "type": "custom:hui-element",
@@ -3638,13 +3638,13 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "binary_sensor.sensore_acqua_1_water_leak",
+                              "entity": "binary_sensor.sensore_acqua_cucina_water_leak",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_battery_state",
-                              "entity": "sensor.sensore_acqua_1_battery",
+                              "entity": "sensor.sensore_acqua_cucina_battery",
                               "name": "Batteria"
                             }
                           ]
@@ -3662,7 +3662,7 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "Sensore Acqua 2 - Xiaomi SJCGQ11LM"
+                  "label": "Sensore Acqua Bagno Grande - Xiaomi SJCGQ11LM"
                 },
                 {
                   "type": "custom:hui-element",
@@ -3682,13 +3682,13 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "binary_sensor.sensore_acqua_2_water_leak",
+                              "entity": "binary_sensor.sensore_acqua_bagno_grande_water_leak",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_battery_state",
-                              "entity": "sensor.sensore_acqua_2_battery",
+                              "entity": "sensor.sensore_acqua_bagno_grande_battery",
                               "name": "Batteria"
                             }
                           ]
@@ -3706,7 +3706,7 @@
               "entities": [
                 {
                   "type": "section",
-                  "label": "Sensore Acqua 3 - Xiaomi SJCGQ11LM"
+                  "label": "Sensore Acqua Bagno Piccolo - Xiaomi SJCGQ11LM"
                 },
                 {
                   "type": "custom:hui-element",
@@ -3726,13 +3726,13 @@
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_state",
-                              "entity": "binary_sensor.sensore_acqua_3_water_leak",
+                              "entity": "binary_sensor.sensore_acqua_bagno_piccolo_water_leak",
                               "name": "Stato"
                             },
                             {
                               "type": "custom:button-card",
                               "template": "template_device_generic_battery_state",
-                              "entity": "sensor.sensore_acqua_3_battery",
+                              "entity": "sensor.sensore_acqua_bagno_piccolo_battery",
                               "name": "Batteria"
                             }
                           ]

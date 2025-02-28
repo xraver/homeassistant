@@ -56,50 +56,50 @@ sensor.wireless_button_linkquality:
 sensor.wireless_button_voltage:
   friendly_name: 'Tensione'
 
-# Sensore Acqua 1
-binary_sensor.sensore_acqua_1_water_leak:
-  friendly_name: "Sensore Acqua 1"
-sensor.sensore_acqua_1_power_outage_count:
+# Sensore Acqua Cucina
+binary_sensor.sensore_acqua_cucina_water_leak:
+  friendly_name: "Sensore Acqua Cucina"
+sensor.sensore_acqua_cucina_power_outage_count:
   friendly_name: "Guasto Alimentazione"
-sensor.sensore_acqua_1_battery:
+sensor.sensore_acqua_cucina_battery:
   friendly_name: "Batteria"
-binary_sensor.sensore_acqua_1_battery_low:
+binary_sensor.sensore_acqua_cucina_battery_low:
   friendly_name: "Batteria scarica"
-sensor.sensore_acqua_1_device_temperature:
+sensor.sensore_acqua_cucina_device_temperature:
   friendly_name: "Temperatura"
-sensor.sensore_acqua_1_linkquality:
+sensor.sensore_acqua_cucina_linkquality:
   friendly_name: "Link"
-sensor.sensore_acqua_1_voltage:
+sensor.sensore_acqua_cucina_voltage:
   friendly_name: "Tensione"
 
-# Sensore Acqua 2
-binary_sensor.sensore_acqua_2_water_leak:
-  friendly_name: "Sensore Acqua 2"
-sensor.sensore_acqua_2_power_outage_count:
+# Sensore Acqua Bagno Grande
+binary_sensor.sensore_acqua_bagno_grande_water_leak:
+  friendly_name: "Sensore Acqua Bagno Grande"
+sensor.sensore_acqua_bagno_grande_power_outage_count:
   friendly_name: "Guasto Alimentazione"
-sensor.sensore_acqua_2_battery:
+sensor.sensore_acqua_bagno_grande_battery:
   friendly_name: "Batteria"
-binary_sensor.sensore_acqua_2_battery_low:
+binary_sensor.sensore_acqua_bagno_grande_battery_low:
   friendly_name: "Batteria scarica"
-sensor.sensore_acqua_2_device_temperature:
+sensor.sensore_acqua_bagno_grande_device_temperature:
   friendly_name: "Temperatura"
-sensor.sensore_acqua_2_linkquality:
+sensor.sensore_acqua_bagno_grande_linkquality:
   friendly_name: "Link"
-sensor.sensore_acqua_2_voltage:
+sensor.sensore_acqua_bagno_grande_voltage:
   friendly_name: "Tensione"
 
-# Sensore Acqua 3
-binary_sensor.sensore_acqua_3_water_leak:
-  friendly_name: "Sensore Acqua 3"
-sensor.sensore_acqua_3_power_outage_count:
+# Sensore Acqua Bagno Piccolo
+binary_sensor.sensore_acqua_bagno_piccolo_water_leak:
+  friendly_name: "Sensore Acqua Bagno Piccolo"
+sensor.sensore_acqua_bagno_piccolo_power_outage_count:
   friendly_name: "Guasto Alimentazione"
-sensor.sensore_acqua_3_battery:
+sensor.sensore_acqua_bagno_piccolo_battery:
   friendly_name: "Batteria"
-binary_sensor.sensore_acqua_3_battery_low:
+binary_sensor.sensore_acqua_bagno_piccolo_battery_low:
   friendly_name: "Batteria scarica"
-sensor.sensore_acqua_3_device_temperature:
+sensor.sensore_acqua_bagno_piccolo_device_temperature:
   friendly_name: "Temperatura"
-sensor.sensore_acqua_3_linkquality:
+sensor.sensore_acqua_bagno_piccolo_linkquality:
   friendly_name: "Link"
-sensor.sensore_acqua_3_voltage:
+sensor.sensore_acqua_bagno_piccolo_voltage:
   friendly_name: "Tensione"
