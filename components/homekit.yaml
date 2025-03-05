@@ -27,9 +27,7 @@ filter:
     - light.luce_bagno
     - light.luce_specchio
     - light.luce_camera
-    - light.luce_dispensa
     - light.luce_balcone
-    - light.luce_veranda
     # Sensors
     - sensor.temperatura_balcone_temperature
     - sensor.temperatura_veranda_temperature

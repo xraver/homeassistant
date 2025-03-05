@@ -41,12 +41,6 @@ light.luce_trono:
 light.luce_camera:
   expose: true
   room: Camera
-light.luce_dispensa:
-  expose: true
-  room: Dispensa
 light.luce_balcone:
   expose: true
   room: Balcone
-light.luce_veranda:
-  expose: true
-  room: Veranda
