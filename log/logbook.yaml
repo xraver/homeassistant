@@ -84,8 +84,6 @@ exclude:
     - binary_sensor.sensore_acqua_bagno_piccolo_battery_low
     - sensor.sensore_acqua_bagno_piccolo_battery
     - sensoor.sensore_acqua_bagno_piccolo_device_temperature
-    - select.luce_dispensa_power_on_behavior
-    - select.luce_veranda_power_on_behavior
     # pfSense
     - binary_sensor.freebsd_router_stato_della_wan
     - sensor.freebsd_router_dati_inviati
