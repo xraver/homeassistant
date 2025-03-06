@@ -143,11 +143,11 @@ notify_text:
             - condition: template
               value_template: "{{ enable_persistent }}"
           sequence:
-          - action: persistent_notification.create
-            data_template:
-              title: "{{ title }}"
-              message: "{{ message }}"
-              notification_id: "{{ notification_id }}"
+            - action: persistent_notification.create
+              data_template:
+                title: "{{ title }}"
+                message: "{{ message }}"
+                notification_id: "{{ notification_id }}"
       default: []
 
     - choose:
