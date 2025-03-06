@@ -33,6 +33,56 @@ input_boolean:
     icon: mdi:thermometer
 
 ######################################################################
+# Netatmo Package - On/Off Engine - Input Number
+######################################################################
+
+# Input number for manual temperature set (in minutes)
+input_number:
+  netatmo_manual_temperature:
+    name: "Durata impostazioni manuali"
+    initial: 180
+    min: 5
+    max: 720
+    step: 1
+    mode: slider
+    icon: mdi:timer-edit-outline
+
+######################################################################
+# Netatmo Package - On/Off Engine - Timer
+######################################################################
+
+timer:
+  # Timer for manual set (10800 sec = 3 hour)
+  valvola_zona_giorno:
+    name: Valvola Zona Giorno
+    duration: 10800
+    icon: mdi:timer-edit-outline
+  valvola_cucina:
+    name: Valvola Cucina
+    duration: 10800
+    icon: mdi:timer-edit-outline
+  valvola_sala:
+    name: Valvola Sala
+    duration: 10800
+    icon: mdi:timer-edit-outline
+  valvola_studio:
+    name: Valvola Studio
+    duration: 10800
+    icon: mdi:timer-edit-outline
+  valvola_bagno_piccolo:
+    name: Valvola Bagno Piccolo
+    duration: 10800
+    icon: mdi:timer-edit-outline
+  valvola_bagno_grande:
+    name: Valvola Bagno Grande
+    duration: 10800
+    icon: mdi:timer-edit-outline
+  valvola_camera:
+    name: Valvola Camera
+    duration: 10800
+    icon: mdi:timer-edit-outline
+
+######################################################################
 # Netatmo Package - On/Off Engine - Automations
 ######################################################################
 
@@ -54,7 +104,7 @@ automation:
                  input_boolean.valvola_camera
       to: 'on'
 
-    action:
+    actions:
       - action: climate.turn_on
         data_template:
           entity_id: >
@@ -72,6 +122,24 @@ automation:
               climate.bagno_grande
             {% elif trigger.entity_id == 'input_boolean.valvola_camera' %}
               climate.camera
+            {% endif %}
+      - action: timer.cancel
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'input_boolean.valvola_zona_giorno' %}
+              timer.valvola_zona_giorno
+            {% elif trigger.entity_id == 'input_boolean.valvola_cucina' %}
+              timer.valvola_cucina
+            {% elif trigger.entity_id == 'input_boolean.valvola_sala' %}
+              timer.valvola_sala
+            {% elif trigger.entity_id == 'input_boolean.valvola_studio' %}
+              timer.valvola_studio
+            {% elif trigger.entity_id == 'input_boolean.valvola_bagno_piccolo' %}
+              timer.valvola_bagno_piccolo
+            {% elif trigger.entity_id == 'input_boolean.valvola_bagno_grande' %}
+              timer.valvola_bagno_grande
+            {% elif trigger.entity_id == 'input_boolean.valvola_camera' %}
+              timer.valvola_camera
             {% endif %}
 
   ######################################################################
@@ -110,3 +178,84 @@ automation:
             {% elif trigger.entity_id == 'input_boolean.valvola_camera' %}
               climate.camera
             {% endif %}
+      - action: timer.start
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'input_boolean.valvola_zona_giorno' %}
+              timer.valvola_zona_giorno
+            {% elif trigger.entity_id == 'input_boolean.valvola_cucina' %}
+              timer.valvola_cucina
+            {% elif trigger.entity_id == 'input_boolean.valvola_sala' %}
+              timer.valvola_sala
+            {% elif trigger.entity_id == 'input_boolean.valvola_studio' %}
+              timer.valvola_studio
+            {% elif trigger.entity_id == 'input_boolean.valvola_bagno_piccolo' %}
+              timer.valvola_bagno_piccolo
+            {% elif trigger.entity_id == 'input_boolean.valvola_bagno_grande' %}
+              timer.valvola_bagno_grande
+            {% elif trigger.entity_id == 'input_boolean.valvola_camera' %}
+              timer.valvola_camera
+            {% endif %}
+          duration: "{{ (states('input_number.netatmo_manual_temperature')) | int // 60}}:{{(states('input_number.netatmo_manual_temperature')) | int % 60}}:0"
+
+  ######################################################################
+  # Automation triggered after manual temperature set timeout elapsed
+  ######################################################################
+  - alias: "Termosifoni: Scadenza timeout impostazione manuale"
+    id: "termosifoni_scadenza_timeout_impostazione_manuale"
+    mode: parallel
+  
+    triggers:
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.valvola_zona_giorno
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.valvola_cucina
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.valvola_sala
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.valvola_studio
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.valvola_bagno_piccolo
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.valvola_bagno_grande
+    - trigger: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.valvola_camera
+
+    actions:
+      - action: input_boolean.turn_on
+        data_template:
+          entity_id: >
+            {% if trigger.event.data.entity_id == 'timer.valvola_zona_giorno' %}
+              input_boolean.valvola_zona_giorno
+            {% elif trigger.event.data.entity_id == 'timer.valvola_cucina' %}
+              input_boolean.valvola_cucina
+            {% elif trigger.event.data.entity_id == 'timer.valvola_sala' %}
+              input_boolean.valvola_sala
+            {% elif trigger.event.data.entity_id == 'timer.valvola_studio' %}
+              input_boolean.valvola_studio
+            {% elif trigger.event.data.entity_id == 'timer.valvola_bagno_piccolo' %}
+              input_boolean.valvola_bagno_piccolo
+            {% elif trigger.event.data.entity_id == 'timer.valvola_bagno_grande' %}
+              input_boolean.valvola_bagno_grande
+            {% elif trigger.event.data.entity_id == 'timer.valvola_camera' %}
+              input_boolean.valvola_camera
+            {% endif %}
+      - action: script.notify_all
+        data_template:
+          title: "Home Assistant - Termosifoni"
+          message: "Il termosifone {{ trigger.event.data.entity_id | replace('timer.valvola_', '') | replace('_', ' ') }} si è riacceso"
+          destination: all
