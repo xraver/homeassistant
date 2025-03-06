@@ -6,6 +6,7 @@
 # - destination
 # - notification_id
 # - enable_persistent
+# - enable_browser
 # - enable_telegram
 #
 # Operations:
@@ -46,6 +47,12 @@ notify_text:
         {% set enable_persistent = false %}
       {% endif %}
       {{ enable_persistent }}
+    enable_browser: >-
+      {# Check Null Input #}
+      {% if enable_browser | length == 0 %}
+        {% set enable_browser = false %}
+      {% endif %}
+      {{ enable_browser }}
     enable_telegram: >-
       {# Check Null Input #}
       {% if enable_telegram | length == 0 %}
@@ -88,6 +95,12 @@ notify_text:
       default: false
       selector:
         boolean:
+    enable_browser:
+      description: "Abilitare o meno la notifica sul browser"
+      example: "false"
+      default: false
+      selector:
+        boolean:
     enable_telegram:
       description: "Abilitare o meno la notifica su telegram"
       example: "false"
@@ -115,6 +128,29 @@ notify_text:
     - choose:
         - conditions:
             - condition: template
+              value_template: "{{ enable_persistent }}"
+          sequence:
+          - action: persistent_notification.create
+            data_template:
+              title: "{{ title }}"
+              message: "{{ message }}"
+              notification_id: "{{ notification_id }}"
+      default: []
+
+    - choose:
+        - conditions:
+            - condition: template
+              value_template: "{{ enable_browser }}"
+          sequence:
+            - action: notify.html5
+              data_template:
+                title: "{{ title }}"
+                message: "{{ message }}"
+      default: []
+
+    - choose:
+        - conditions:
+            - condition: template
               value_template: "{{ enable_telegram }}"
           sequence:
             - action: notify.telegram
@@ -122,20 +158,6 @@ notify_text:
                 title: "{{ title }}"
                 message: "{{ message | regex_replace(find='_', replace='-', ignorecase=False) }}"
       default: []
-
-    - action: notify.html5
-      data_template:
-        title: "{{ title }}"
-        message: "{{ message }}"
-
-    - condition: template
-      value_template: "{{ enable_persistent }}"
-
-    - action: persistent_notification.create
-      data_template:
-        title: "{{ title }}"
-        message: "{{ message }}"
-        notification_id: "{{ notification_id }}"
 
 ######################################################################
 # Script: Volume Manager
@@ -312,6 +334,7 @@ notify_voice:
 # - destination
 # - notification_id
 # - enable_persistent
+# - enable_browser
 # - enable_telegram
 #
 # Operations:
@@ -373,6 +396,12 @@ notify_all:
         {% set enable_persistent = false %}
       {% endif %}
       {{ enable_persistent }}
+    enable_browser: >-
+      {# Check Null Input #}
+      {% if enable_browser | length == 0 %}
+        {% set enable_browser = false %}
+      {% endif %}
+      {{ enable_browser }}
     enable_telegram: >-
       {# Check Null Input #}
       {% if enable_telegram | length == 0 %}
@@ -441,6 +470,12 @@ notify_all:
       default: false
       selector:
         boolean:
+    enable_browser:
+      description: "Abilitare o meno la notifica sul browser"
+      example: "false"
+      default: false
+      selector:
+        boolean:
     enable_telegram:
       description: "Abilitare o meno la notifica su telegram"
       example: "false"
@@ -456,6 +491,7 @@ notify_all:
         destination: "{{ destination }}"
         notification_id: "{{ notification_id }}"
         enable_persistent: "{{ enable_persistent }}"
+        enable_browser: "{{ enable_browser }}"
         enable_telegram: "{{ enable_telegram }}"
 
     - action: script.notify_voice
