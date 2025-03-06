@@ -1,0 +1,9 @@
+######################################################################
+# Mobile App Notifications
+######################################################################
+
+- name: mobileapp_all
+  platform: group
+  services:
+    - service: mobile_app_giorgio_s25
+    - service: mobile_app_lalaura_s_phone

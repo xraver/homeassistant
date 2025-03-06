@@ -7,6 +7,7 @@
 # - notification_id
 # - enable_persistent
 # - enable_browser
+# - enable_mobileapp
 # - enable_telegram
 #
 # Operations:
@@ -53,6 +54,12 @@ notify_text:
         {% set enable_browser = false %}
       {% endif %}
       {{ enable_browser }}
+    enable_mobileapp: >-
+      {# Check Null Input #}
+      {% if enable_mobileapp | length == 0 %}
+        {% set enable_mobileapp = false %}
+      {% endif %}
+      {{ enable_mobileapp }}
     enable_telegram: >-
       {# Check Null Input #}
       {% if enable_telegram | length == 0 %}
@@ -101,6 +108,12 @@ notify_text:
       default: false
       selector:
         boolean:
+    enable_mobileapp:
+      description: "Abilitare o meno la notifica sull'app mobile"
+      example: "false"
+      default: false
+      selector:
+        boolean:
     enable_telegram:
       description: "Abilitare o meno la notifica su telegram"
       example: "false"
@@ -143,6 +156,24 @@ notify_text:
               value_template: "{{ enable_browser }}"
           sequence:
             - action: notify.html5
+              data_template:
+                title: "{{ title }}"
+                message: "{{ message }}"
+      default: []
+
+    - choose:
+        - conditions:
+            - condition: template
+              value_template: "{{ enable_mobileapp }}"
+          sequence:
+            - service: >
+                {% if destination == 'giorgio' %}
+                  notify.mobile_app_giorgio_s25
+                {% elif destination == 'laura' %}
+                  notify.mobile_app_lalaura_s_phone
+                {% else %}
+                  notify.mobileapp_all
+                {% endif %}
               data_template:
                 title: "{{ title }}"
                 message: "{{ message }}"
@@ -335,6 +366,7 @@ notify_voice:
 # - notification_id
 # - enable_persistent
 # - enable_browser
+# - enable_mobileapp
 # - enable_telegram
 #
 # Operations:
@@ -402,6 +434,12 @@ notify_all:
         {% set enable_browser = false %}
       {% endif %}
       {{ enable_browser }}
+    enable_mobileapp: >-
+      {# Check Null Input #}
+      {% if enable_mobileapp | length == 0 %}
+        {% set enable_mobileapp = false %}
+      {% endif %}
+      {{ enable_mobileapp }}
     enable_telegram: >-
       {# Check Null Input #}
       {% if enable_telegram | length == 0 %}
@@ -476,6 +514,12 @@ notify_all:
       default: false
       selector:
         boolean:
+    enable_mobileapp:
+      description: "Abilitare o meno la notifica sull'app mobile"
+      example: "false"
+      default: false
+      selector:
+        boolean:
     enable_telegram:
       description: "Abilitare o meno la notifica su telegram"
       example: "false"
@@ -492,6 +536,7 @@ notify_all:
         notification_id: "{{ notification_id }}"
         enable_persistent: "{{ enable_persistent }}"
         enable_browser: "{{ enable_browser }}"
+        enable_mobileapp: "{{ enable_mobileapp }}"
         enable_telegram: "{{ enable_telegram }}"
 
     - action: script.notify_voice
