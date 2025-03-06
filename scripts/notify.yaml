@@ -3,6 +3,7 @@
 # Inputs:
 # - title
 # - message
+# - destination
 # - notification_id
 # - enable_persistent
 # - enable_telegram
@@ -20,12 +21,19 @@ notify_text:
   variables:
     defaultTitle: 'Home Assistant'
     defaultId: 'generic'
+    defaultDestination: 'giorgio'
     title: >-
       {# Check Null Input #}
       {% if title | length == 0 %}
         {% set title = defaultTitle %}
       {% endif %}
       {{ title }}
+    destination: >-
+      {# Check Null Input #}
+      {% if destination | length == 0 %}
+        {% set destination = defaultDestination %}
+      {% endif %}
+      {{ destination }}
     notification_id: >-
       {# Check Null Input #}
       {% if notification_id | length == 0 %}
@@ -49,6 +57,7 @@ notify_text:
     title:
       description: "Titolo della notifica"
       example: "Home Assistant"
+      default: "Home Assistant"
       selector:
         text:
     message:
@@ -57,9 +66,20 @@ notify_text:
       example: "Testo Messaggio"
       selector:
         text:
+    destination: 
+      description: "A chi inviare la notifica"
+      example: "giorgio"
+      default: "giorgio"
+      selector:
+        select:
+          options:
+            - "giorgio"
+            - "laura"
+            - "all"
     notification_id:
       description: "Id di notifica"
       example: "generic"
+      default: "generic"
       selector:
         text:
     enable_persistent:
@@ -80,7 +100,14 @@ notify_text:
       entity_id: input_boolean.text_notifications
       state: 'on'
 
-    - action: notify.mail
+    - service: >
+        {% if destination == 'giorgio' %}
+          notify.mail_giorgio
+        {% elif destination == 'laura' %}
+          notify.mail_laura
+        {% else %}
+          notify.mail_all
+        {% endif %}
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
@@ -281,7 +308,8 @@ notify_voice:
 # - message
 # - media_player
 # - volume_level
-# _ language
+# - language
+# - destination
 # - notification_id
 # - enable_persistent
 # - enable_telegram
@@ -301,6 +329,7 @@ notify_all:
     defaultTitle: 'Home Assistant'
     defaulMediaPlayer: 'media_player.google_home'
     defaultVolume: 0.35
+    defaultDestination: 'giorgio'
     defaultId: 'generic'
     title: >-
       {# Check Null Input #}
@@ -326,6 +355,12 @@ notify_all:
         {% set language = 'it' %}
       {% endif %}
       {{ language }}
+    destination: >-
+      {# Check Null Input #}
+      {% if destination | length == 0 %}
+        {% set destination = defaultDestination %}
+      {% endif %}
+      {{ destination }}
     notification_id: >-
       {# Check Null Input #}
       {% if notification_id | length == 0 %}
@@ -349,6 +384,7 @@ notify_all:
     title:
       description: "Titolo della notifica"
       example: "Home Assistant"
+      default: "Home Assistant"
       selector:
         text:
     message:
@@ -360,9 +396,20 @@ notify_all:
     media_player:
       description: "Destinazione della notifica"
       example: "media_player.google_home"
+      default: "media_player.google_home"
       selector:
         entity:
           domain: media_player
+    destination: 
+      description: "A chi inviare la notifica"
+      example: "giorgio"
+      default: "giorgio"
+      selector:
+        select:
+          options:
+            - "giorgio"
+            - "laura"
+            - "all"
     volume_level:
       description: "Livello del volume"
       example: "0.35"
@@ -385,6 +432,7 @@ notify_all:
     notification_id:
       description: "Id di notifica"
       example: "generic"
+      default: "generic"
       selector:
         text:
     enable_persistent:
@@ -405,6 +453,7 @@ notify_all:
       data_template:
         title: "{{ title }}"
         message: "{{ message }}"
+        destination: "{{ destination }}"
         notification_id: "{{ notification_id }}"
         enable_persistent: "{{ enable_persistent }}"
         enable_telegram: "{{ enable_telegram }}"

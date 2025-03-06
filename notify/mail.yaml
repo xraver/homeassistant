@@ -2,11 +2,32 @@
 # Mail Server Integration
 ######################################################################
 
-- name: mail
+# Mail to Giorgio
+- name: mail_giorgio
   platform: smtp
   server: !secret mail_server
   port: 25
   encryption: none
   sender: !secret mail_sender
-  recipient: !secret mail_recipient
+  recipient: !secret mail_giorgio
+  sender_name: Casa Ravera-Testa
+
+# Mail to Laura
+- name: mail_laura
+  platform: smtp
+  server: !secret mail_server
+  port: 25
+  encryption: none
+  sender: !secret mail_sender
+  recipient: !secret mail_laura
+  sender_name: Casa Ravera-Testa
+
+# Mail to All
+- name: mail_all
+  platform: smtp
+  server: !secret mail_server
+  port: 25
+  encryption: none
+  sender: !secret mail_sender
+  recipient: !secret mail_all
   sender_name: Casa Ravera-Testa
