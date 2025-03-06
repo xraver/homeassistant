@@ -66,7 +66,7 @@ notify_text:
       example: "Testo Messaggio"
       selector:
         text:
-    destination: 
+    destination:
       description: "A chi inviare la notifica"
       example: "giorgio"
       default: "giorgio"
@@ -400,7 +400,7 @@ notify_all:
       selector:
         entity:
           domain: media_player
-    destination: 
+    destination:
       description: "A chi inviare la notifica"
       example: "giorgio"
       default: "giorgio"

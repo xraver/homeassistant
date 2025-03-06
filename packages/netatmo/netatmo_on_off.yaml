@@ -204,36 +204,36 @@ automation:
   - alias: "Termosifoni: Scadenza timeout impostazione manuale"
     id: "termosifoni_scadenza_timeout_impostazione_manuale"
     mode: parallel
-  
+
     triggers:
-    - trigger: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.valvola_zona_giorno
-    - trigger: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.valvola_cucina
-    - trigger: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.valvola_sala
-    - trigger: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.valvola_studio
-    - trigger: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.valvola_bagno_piccolo
-    - trigger: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.valvola_bagno_grande
-    - trigger: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.valvola_camera
+      - trigger: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.valvola_zona_giorno
+      - trigger: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.valvola_cucina
+      - trigger: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.valvola_sala
+      - trigger: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.valvola_studio
+      - trigger: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.valvola_bagno_piccolo
+      - trigger: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.valvola_bagno_grande
+      - trigger: event
+        event_type: timer.finished
+        event_data:
+          entity_id: timer.valvola_camera
 
     actions:
       - action: input_boolean.turn_on
