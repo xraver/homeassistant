@@ -1256,7 +1256,7 @@
               "cards": [
                 {
                   "type": "heading",
-                  "heading": "Grafici",
+                  "heading": "Grafici Termosifoni",
                   "heading_style": "title"
                 },
                 {
@@ -1344,7 +1344,8 @@
               "cards": [
                 {
                   "type": "heading",
-                  "heading": "Nuova sezione"
+                  "heading": "Grafici Climatizzatori",
+                  "heading_style": "title"
                 },
                 {
                   "type": "history-graph",
