@@ -12,7 +12,7 @@ homeassistant:
     package.zigbee2mqtt:
       customize: &customize
         package: 'zigbee2mqtt'
-        version: 1.2.0
+        version: 1.3.0
 
     ######################################################################
     # Zigbee2mqtt Package - Customizations - Entities
@@ -63,8 +63,6 @@ homeassistant:
     #sensor.zigbee2mqtt_bridge_permit_join:
     #  friendly_name: "Stato permesso join"
     #  <<: *customize
-    sensor.zigbee2mqtt_bridge_permit_join_timeout:
-      friendly_name: "Tempo rimasto per il join (bridge)"
     sensor.zigbee2mqtt_bridge_version:
       friendly_name: "Versione bridge"
     shell_command.zigbee2mqtt_restart:
@@ -305,7 +303,6 @@ logbook:
       - binary_sensor.zigbee2mqtt_bridge_connection_state
       - select.zigbee2mqtt_bridge_log_level
       - sensor.zigbee2mqtt_bridge_permit_join
-      - sensor.zigbee2mqtt_bridge_permit_join_timeout
       - sensor.zigbee2mqtt_bridge_version
       - sensor.zigbee2mqtt_bridge_coordinator_version
       - sensor.zigbee2mqtt_bridge_coordinator_type
@@ -324,7 +321,6 @@ recorder:
       - binary_sensor.zigbee2mqtt_bridge_connection_state
       - select.zigbee2mqtt_bridge_log_level
       - sensor.zigbee2mqtt_bridge_permit_join
-      - sensor.zigbee2mqtt_bridge_permit_join_timeout
       - sensor.zigbee2mqtt_bridge_version
       - sensor.zigbee2mqtt_bridge_coordinator_version
       - sensor.zigbee2mqtt_bridge_coordinator_type

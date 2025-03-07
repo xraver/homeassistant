@@ -196,9 +196,6 @@
                   "entity": "timer.zigbee_permit_join"
                 },
                 {
-                  "entity": "sensor.zigbee2mqtt_bridge_permit_join_timeout"
-                },
-                {
                   "entity": "input_number.zigbee2mqtt_join_minutes"
                 },
                 {
