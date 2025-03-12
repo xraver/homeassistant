@@ -1066,7 +1066,8 @@
                 {
                   "type": "heading",
                   "heading_style": "title",
-                  "heading": "Termosifoni"
+                  "heading": "Termosifoni",
+                  "icon": "mdi:radiator"
                 },
                 {
                   "entity": "climate.zona_giorno",
@@ -1105,7 +1106,8 @@
                 {
                   "type": "heading",
                   "heading": "Operazioni",
-                  "heading_style": "title"
+                  "heading_style": "title",
+                  "icon": "mdi:wrench"
                 },
                 {
                   "type": "entities",
@@ -1255,7 +1257,8 @@
                 {
                   "type": "heading",
                   "heading": "Climatizzatore",
-                  "heading_style": "title"
+                  "heading_style": "title",
+                  "icon": "mdi:air-conditioner"
                 },
                 {
                   "type": "thermostat",
@@ -1270,7 +1273,7 @@
                   "entity": "climate.climatizzatore_studio"
                 }
               ],
-              "column_span": 3
+              "column_span": 4
             },
             {
               "type": "grid",
@@ -1278,7 +1281,8 @@
                 {
                   "type": "heading",
                   "heading": "Grafici Termosifoni",
-                  "heading_style": "title"
+                  "heading_style": "title",
+                  "icon": "mdi:radiator"
                 },
                 {
                   "type": "history-graph",
@@ -1366,7 +1370,8 @@
                 {
                   "type": "heading",
                   "heading": "Grafici Climatizzatori",
-                  "heading_style": "title"
+                  "heading_style": "title",
+                  "icon": "mdi:air-conditioner"
                 },
                 {
                   "type": "history-graph",
@@ -2278,9 +2283,12 @@
               "display_type": "complete"
             }
           ],
-          "cards": [
+          "cards": [],
+          "type": "sections",
+          "max_columns": 3,
+          "sections": [
             {
-              "type": "vertical-stack",
+              "type": "grid",
               "cards": [
                 {
                   "type": "custom:mushroom-title-card",
@@ -2312,7 +2320,7 @@
               ]
             },
             {
-              "type": "vertical-stack",
+              "type": "grid",
               "cards": [
                 {
                   "type": "custom:mushroom-title-card",
