@@ -539,7 +539,16 @@
               "color": "",
               "name": "Veranda"
             }
-          ]
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "content": "# Ciao {{ user }} 🏠\n{% set weather = {\n  'clear-night': \"il cielo è **sereno ☀️**\",\n  'cloudy': \"il cielo è **nuvoloso ☁️**\",\n  'exceptional': \"ci sono condizoni meteo **eccezionali ❗**\",\n  'fog': \"c'è **nebbia 🌁**\",\n  'hail': \"**grandina **\",\n  'lightning': \"c'è un **temporale ☔**\",\n  'lightning-rainy': \"**piove ☔**\",\n  'partlycloudy': \"il cielo è **nuvoloso ☁️**\",\n  'pouring': \"**piove ☔**\",\n  'rainy': \"**piove ☔**\",\n  'snowy': \"**nevica ❄️**\",\n  'snowy-rainy': \"**nevica ❄️**\",\n  'sunny': \"il cielo è **sereno ☀️**\",\n  'windy': \"**c'è vento 🌀**\",\n  'windy-variant': \"**c'è vento 🌀**\"\n} %}\nOggi {{weather[states('weather.savona')] }} con **{{ states('sensor.temperatura_balcone_temperature') }}° C**.\nAl momento in casa {% if is_state('group.residents', 'not_home') %} non c'è nessuno 😴.{% else %}c'è vita😍!{% endif %}\n\n",
+              "text_only": true
+            },
+            "layout": "responsive",
+            "badges_position": "bottom"
+          }
         },
         {
           "theme": "Backend-selected",
