@@ -113,6 +113,9 @@
                     },
                     {
                       "entity": "climate.studio"
+                    },
+                    {
+                      "entity": "climate.climatizzatore_studio"
                     }
                   ],
                   "entity": "light.luce_studio",
