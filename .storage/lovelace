@@ -2696,7 +2696,7 @@
               ]
             },
             {
-              "type": "vertical-stack",
+              "type": "grid",
               "cards": [
                 {
                   "type": "custom:mushroom-title-card",
@@ -2704,157 +2704,160 @@
                   "alignment": "center"
                 },
                 {
-                  "type": "horizontal-stack",
+                  "type": "vertical-stack",
                   "cards": [
                     {
-                      "type": "custom:mini-graph-card",
-                      "entities": [
+                      "type": "horizontal-stack",
+                      "cards": [
                         {
-                          "entity": "sensor.temperatura_balcone_temperature",
-                          "name": "Balcone"
-                        }
-                      ],
-                      "name": "Balcone",
-                      "hours_to_show": 24,
-                      "points_per_hour": 1,
-                      "show": {
-                        "name": true,
-                        "state": true
-                      },
-                      "line_width": 5,
-                      "color_thresholds": [
-                        {
-                          "value": 16,
-                          "color": "#4a90e2"
+                          "type": "custom:mini-graph-card",
+                          "entities": [
+                            {
+                              "entity": "sensor.temperatura_balcone_temperature",
+                              "name": "Balcone"
+                            }
+                          ],
+                          "name": "Balcone",
+                          "hours_to_show": 24,
+                          "points_per_hour": 1,
+                          "show": {
+                            "name": true,
+                            "state": true
+                          },
+                          "line_width": 5,
+                          "color_thresholds": [
+                            {
+                              "value": 16,
+                              "color": "#4a90e2"
+                            },
+                            {
+                              "value": 19,
+                              "color": "#ffbd00"
+                            },
+                            {
+                              "value": 23,
+                              "color": "#ee7c3a"
+                            }
+                          ],
+                          "hour24": true,
+                          "decimals": 0
                         },
                         {
-                          "value": 19,
-                          "color": "#ffbd00"
-                        },
-                        {
-                          "value": 23,
-                          "color": "#ee7c3a"
+                          "type": "custom:mini-graph-card",
+                          "entities": [
+                            {
+                              "entity": "sensor.temperatura_veranda_temperature",
+                              "name": "Veranda"
+                            }
+                          ],
+                          "name": "Veranda",
+                          "hours_to_show": 24,
+                          "points_per_hour": 1,
+                          "show": {
+                            "name": true,
+                            "state": true
+                          },
+                          "line_width": 5,
+                          "color_thresholds": [
+                            {
+                              "value": 16,
+                              "color": "#4a90e2"
+                            },
+                            {
+                              "value": 19,
+                              "color": "#ffbd00"
+                            },
+                            {
+                              "value": 23,
+                              "color": "#ee7c3a"
+                            }
+                          ],
+                          "hour24": true,
+                          "decimals": 0
                         }
-                      ],
-                      "hour24": true,
-                      "decimals": 0
+                      ]
                     },
                     {
-                      "type": "custom:mini-graph-card",
-                      "entities": [
-                        {
-                          "entity": "sensor.temperatura_veranda_temperature",
-                          "name": "Veranda"
-                        }
-                      ],
-                      "name": "Veranda",
-                      "hours_to_show": 24,
-                      "points_per_hour": 1,
-                      "show": {
-                        "name": true,
-                        "state": true
-                      },
-                      "line_width": 5,
-                      "color_thresholds": [
-                        {
-                          "value": 16,
-                          "color": "#4a90e2"
-                        },
-                        {
-                          "value": 19,
-                          "color": "#ffbd00"
-                        },
-                        {
-                          "value": 23,
-                          "color": "#ee7c3a"
-                        }
-                      ],
-                      "hour24": true,
-                      "decimals": 0
-                    }
-                  ]
-                },
-                {
-                  "type": "custom:mushroom-title-card",
-                  "title": "Umidità Esterna",
-                  "alignment": "center"
-                },
-                {
-                  "type": "horizontal-stack",
-                  "cards": [
-                    {
-                      "type": "custom:mini-graph-card",
-                      "entities": [
-                        {
-                          "entity": "sensor.temperatura_balcone_humidity",
-                          "name": "Balcone"
-                        }
-                      ],
-                      "name": "Balcone",
-                      "hours_to_show": 24,
-                      "points_per_hour": 1,
-                      "show": {
-                        "name": true,
-                        "state": true
-                      },
-                      "line_width": 5,
-                      "color_thresholds": [
-                        {
-                          "value": 40,
-                          "color": "#4a90e2"
-                        },
-                        {
-                          "value": 60,
-                          "color": "#ffbd00"
-                        },
-                        {
-                          "value": 80,
-                          "color": "#ee7c3a"
-                        }
-                      ],
-                      "hour24": true,
-                      "decimals": 0
+                      "type": "custom:mushroom-title-card",
+                      "title": "Umidità Esterna",
+                      "alignment": "center"
                     },
                     {
-                      "type": "custom:mini-graph-card",
-                      "entities": [
+                      "type": "horizontal-stack",
+                      "cards": [
                         {
-                          "entity": "sensor.temperatura_veranda_humidity",
-                          "name": "Veranda"
-                        }
-                      ],
-                      "name": "Veranda",
-                      "hours_to_show": 24,
-                      "points_per_hour": 1,
-                      "show": {
-                        "name": true,
-                        "state": true
-                      },
-                      "line_width": 5,
-                      "color_thresholds": [
-                        {
-                          "value": 40,
-                          "color": "#4a90e2"
+                          "type": "custom:mini-graph-card",
+                          "entities": [
+                            {
+                              "entity": "sensor.temperatura_balcone_humidity",
+                              "name": "Balcone"
+                            }
+                          ],
+                          "name": "Balcone",
+                          "hours_to_show": 24,
+                          "points_per_hour": 1,
+                          "show": {
+                            "name": true,
+                            "state": true
+                          },
+                          "line_width": 5,
+                          "color_thresholds": [
+                            {
+                              "value": 40,
+                              "color": "#4a90e2"
+                            },
+                            {
+                              "value": 60,
+                              "color": "#ffbd00"
+                            },
+                            {
+                              "value": 80,
+                              "color": "#ee7c3a"
+                            }
+                          ],
+                          "hour24": true,
+                          "decimals": 0
                         },
                         {
-                          "value": 60,
-                          "color": "#ffbd00"
-                        },
-                        {
-                          "value": 80,
-                          "color": "#ee7c3a"
+                          "type": "custom:mini-graph-card",
+                          "entities": [
+                            {
+                              "entity": "sensor.temperatura_veranda_humidity",
+                              "name": "Veranda"
+                            }
+                          ],
+                          "name": "Veranda",
+                          "hours_to_show": 24,
+                          "points_per_hour": 1,
+                          "show": {
+                            "name": true,
+                            "state": true
+                          },
+                          "line_width": 5,
+                          "color_thresholds": [
+                            {
+                              "value": 40,
+                              "color": "#4a90e2"
+                            },
+                            {
+                              "value": 60,
+                              "color": "#ffbd00"
+                            },
+                            {
+                              "value": 80,
+                              "color": "#ee7c3a"
+                            }
+                          ],
+                          "hour24": true,
+                          "decimals": 0
                         }
-                      ],
-                      "hour24": true,
-                      "decimals": 0
+                      ]
                     }
                   ]
                 }
               ]
             }
           ]
-        }
-      ]
     }
   }
 }
