@@ -131,6 +131,9 @@
                   "entities": [
                     {
                       "entity": "light.luce_zona_notte"
+                    },
+                    {
+                      "entity": "climate.climatizzatore_zona_notte"
                     }
                   ],
                   "entity": "light.luce_zona_notte",
