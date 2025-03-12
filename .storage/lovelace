@@ -29,6 +29,12 @@
                     },
                     {
                       "entity": "light.luce_armadio"
+                    },
+                    {
+                      "entity": "climate.zona_giorno"
+                    },
+                    {
+                      "entity": "climate.climatizzatore_zona_giorno"
                     }
                   ],
                   "entity": "group.lights_day_side",
