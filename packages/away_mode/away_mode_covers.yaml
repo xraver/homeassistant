@@ -12,9 +12,9 @@ automation:
 
     trigger:
       - trigger: time
-        at: '09:00:00'
+        at: '08:00:00'
       - trigger: time
-        at: '18:00:00'
+        at: '20:00:00'
 
     condition:
       - condition: state
@@ -29,7 +29,7 @@ automation:
             - cover.tapparella_sala
             - cover.tapparella_camera
           position: >
-            {% if now().strftime('%H')|int >= 9 and now().strftime('%H')|int < 18 %}
+            {% if now().strftime('%H')|int >= 6 and now().strftime('%H')|int < 16 %}
               80
             {% else %}
               0
