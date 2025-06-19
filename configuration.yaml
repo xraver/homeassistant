@@ -65,6 +65,9 @@ energy:
 frontend:
   themes: !include_dir_merge_named themes
 
+# Go2rtc stream protocol
+# got2rtc
+
 # Hardware
 # hardware:
 
@@ -216,9 +219,6 @@ tts: !include components/tts.yaml
 # Templates
 template: !include_dir_merge_list template/
 
-# Wake on Lan
-wake_on_lan:
-
 ######################################################################
 # Integrations
 ######################################################################
@@ -244,3 +244,6 @@ telegram_bot: !include components/telegram.yaml
 
 # Monitor Docker
 monitor_docker: !include components/monitor_docker.yaml
+
+# Wake on Lan
+wake_on_lan:
