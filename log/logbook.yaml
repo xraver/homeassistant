@@ -9,6 +9,7 @@ exclude:
     - calendar
     - event
     - group
+    - image
     - input_boolean
     - input_datetime
     - input_number
@@ -26,7 +27,7 @@ exclude:
     - sensor.docker_*
   entities:
     # Device Trackers
-    - device_tracker.giorgio_s21
+    - device_tracker.giorgio_s25
     - device_tracker.giorgio_tab_s8
     - device_tracker.lalaura_s_phone
     - device_tracker.google_maps_115265981849847357125
@@ -39,8 +40,6 @@ exclude:
     - sensor.time_date
     # Sun & Weather
     - sun.sun
-    # Hacs
-    - sensor.hacs
     # System
     - binary_sensor.home_mode
     - binary_sensor.speech_notifications
@@ -59,31 +58,28 @@ exclude:
     - sensor.climatizzatore_studio_temperatura_ambiente
     # Zigbee2mqtt
     - sensor.porta_casa_battery
-    - sensor.porta_casa_linkquality
     - sensor.porta_casa_voltage
     - binary_sensor.spare_door_contact
     - sensor.spare_door_battery
-    - sensor.spare_door_linkquality
     - sensor.spare_door_voltage
     - sensor.wireless_button_battery
-    - sensor.wireless_button_click
-    - sensor.wireless_button_linkquality
     - sensor.wireless_button_voltage
     - sensor.temperatura_balcone_battery
-    - sensor.temperatura_balcone_linkquality
     - sensor.temperatura_balcone_voltage
     - sensor.temperatura_veranda_battery
-    - sensor.temperatura_veranda_linkquality
     - sensor.temperatura_veranda_voltage
     - binary_sensor.sensore_acqua_cucina_battery_low
     - sensor.sensore_acqua_cucina_battery
     - sensor.sensore_acqua_cucina_device_temperature
+    - sensor.sensore_acqua_cucina_voltage
     - binary_sensor.sensore_acqua_bagno_grande_battery_low
     - sensor.sensore_acqua_bagno_grande_battery
     - sensor.sensore_acqua_bagno_grande_device_temperature
+    - sensor.sensore_acqua_bagno_grande_voltage
     - binary_sensor.sensore_acqua_bagno_piccolo_battery_low
     - sensor.sensore_acqua_bagno_piccolo_battery
     - sensoor.sensore_acqua_bagno_piccolo_device_temperature
+    - sensor.sensore_acqua_bagno_piccolo_voltage
     # pfSense
     - binary_sensor.freebsd_router_stato_della_wan
     - sensor.freebsd_router_dati_inviati
@@ -99,7 +95,7 @@ exclude:
     - sensor.freebsd_router_velocita_di_scaricamento_dei_pacchetti
     # DNS IP
     - sensor.xraver_duckdns_org
-    - sensor.xraver_duckdns_org_ipv6
+    #- sensor.xraver_duckdns_org_ipv6
     - sensor.externalip_giorgioravera_it
     # Canon
     - sensor.canon_tr8500_series

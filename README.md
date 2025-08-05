@@ -67,7 +67,7 @@ The following integration are part of HACS system. Install HACS first:
 ## Custom Component Used (not included in HACS)
 The following integrations are not part of HACS. It's required to clone the related repository in the folder git_repos.
 * [bravia-auth-and-remote](https://github.com/breunigs/bravia-auth-and-remote)
-* [FritzBoxShell](https://github.com/jhubig/FritzBoxShell)
+* [FritzBoxShell](https://github.com/xraver/FritzBoxShell)
 
 ## Installation
 * Clone repository
@@ -81,6 +81,7 @@ The following integrations are not part of HACS. It's required to clone the rela
 * Start Home Assistant
 * Create Users/People
 * Configure the following integrations using UI:
+  * AVM FRITZ!Box Tools (disabling the network device tracking)
   * Certificate Expiry
   * CO2 Signal
   * DNS IP

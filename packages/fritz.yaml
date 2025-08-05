@@ -80,3 +80,53 @@ shell_command:
   ap1_reconnect: 'bash /config/shell_scripts/fritzBox.sh ap1 WAN RECONNECT'
   #ap1_led_on: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 1'
   #ap1_led_off: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 0'
+
+######################################################################
+# Netatmo Package - Logbook
+######################################################################
+
+logbook:
+  exclude:
+    entities:
+    # 7530 AX
+    - binary_sensor.fritz_box_7530_ax_collegamento
+    - binary_sensor.fritz_box_7530_ax_connessione
+    - sensor.fritz_box_7530_ax_gb_inviati
+    - sensor.fritz_box_7530_ax_gb_ricevuti
+    - sensor.fritz_box_7530_ax_ip_esterno
+    - sensor.fritz_box_7530_ax_ipv6_esterno
+    - sensor.fritz_box_7530_ax_tempo_di_attivita_della_connessione
+    - sensor.fritz_box_7530_ax_ultimo_riavvio
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_caricamento
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_caricamento_del_collegamento
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_scaricamento
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_scaricamento_del_collegamento
+    - sensor.fritz_box_7530_ax_velocita_massima_di_caricamento_della_connessione
+    - sensor.fritz_box_7530_ax_velocita_massima_di_scaricamento_della_connessione
+    # 7590
+    - sensor.fritz_box_7590_ultimo_riavvio
+
+######################################################################
+# Netatmo Package - Recorder
+######################################################################
+
+recorder:
+  exclude:
+    entities:
+    # 7530 AX
+    - binary_sensor.fritz_box_7530_ax_collegamento
+    - binary_sensor.fritz_box_7530_ax_connessione
+    - sensor.fritz_box_7530_ax_gb_inviati
+    - sensor.fritz_box_7530_ax_gb_ricevuti
+    - sensor.fritz_box_7530_ax_ip_esterno
+    - sensor.fritz_box_7530_ax_ipv6_esterno
+    - sensor.fritz_box_7530_ax_tempo_di_attivita_della_connessione
+    - sensor.fritz_box_7530_ax_ultimo_riavvio
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_caricamento
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_caricamento_del_collegamento
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_scaricamento
+    - sensor.fritz_box_7530_ax_velocita_effettiva_di_scaricamento_del_collegamento
+    - sensor.fritz_box_7530_ax_velocita_massima_di_caricamento_della_connessione
+    - sensor.fritz_box_7530_ax_velocita_massima_di_scaricamento_della_connessione
+    # 7590
+    - sensor.fritz_box_7590_ultimo_riavvio

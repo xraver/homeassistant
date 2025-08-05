@@ -9,338 +9,346 @@
           "title": "Dispositivi di Rete",
           "path": "network-devices",
           "icon": "mdi:network-outline",
-          "type": "custom:horizontal-layout",
+          "type": "sections",
           "layout": {
             "width": 300,
             "max_cols": 3
           },
           "badges": [],
-          "cards": [
+          "cards": [],
+          "sections": [
             {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "type": "section",
-                  "label": "Intel NUC10i5FNH"
+                  "type": "heading",
+                  "icon": "mdi:server",
+                  "heading": "Intel NUC10i5FNH",
+                  "heading_style": "title"
                 },
                 {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
                     {
-                      "type": "horizontal-stack",
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
                       "cards": [
                         {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/intel_nuc.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "https://pve.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
+                          "type": "horizontal-stack",
                           "cards": [
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_server",
-                              "name": "VM Debian",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/intel_nuc.png",
+                              "tap_action": {
+                                "action": "url",
+                                "url_path": "https://pve.giorgioravera.it"
+                              }
                             },
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_docker",
-                              "name": "VM Docker",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
+                              "type": "vertical-stack",
+                              "cards": [
                                 {
-                                  "value": "on",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "binary_sensor.pve_server",
+                                  "name": "VM Debian",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "lightgreen"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "binary_sensor.pve_docker",
+                                  "name": "VM Docker",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_firewall",
-                              "name": "VM Firewall",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                        "padding": "0px 0px"
+                                      },
                                       {
-                                        "color": "lightgreen"
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "binary_sensor.pve_firewall",
+                                  "name": "VM Firewall",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "binary_sensor.pve_asterisk",
-                              "name": "VM Asterisk",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                        "padding": "0px 0px"
+                                      },
                                       {
-                                        "color": "lightgreen"
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "binary_sensor.pve_asterisk",
+                                  "name": "VM Asterisk",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -353,222 +361,70 @@
               ]
             },
             {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "type": "section",
-                  "label": "FRITZ!Box 7530 AX"
+                  "type": "heading",
+                  "icon": "mdi:router-network-wireless",
+                  "heading": "FRITZ!Box 7530 AX",
+                  "heading_style": "title"
                 },
                 {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
                     {
-                      "type": "horizontal-stack",
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
                       "cards": [
                         {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/fritzbox_7530_ax.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "https://fritz.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
+                          "type": "horizontal-stack",
                           "cards": [
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "name": "Riavvia Dispositivo",
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/fritzbox_7530_ax.png",
                               "tap_action": {
-                                "action": "call-service",
-                                "service": "shell_command.fritz_reboot"
-                              },
-                              "show_icon": true,
-                              "show_state": false,
-                              "icon": "mdi:restart",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
+                                "action": "url",
+                                "url_path": "https://fritz.giorgioravera.it"
                               }
                             },
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "name": "Ricollega a WAN",
-                              "tap_action": {
-                                "action": "call-service",
-                                "service": "shell_command.fritz_reconnect"
-                              },
-                              "show_icon": true,
-                              "show_state": false,
-                              "icon": "mdi:connection",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.fritz_led",
-                              "name": "LED",
-                              "show_icon": true,
-                              "show_state": false,
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
+                              "type": "vertical-stack",
+                              "cards": [
                                 {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.fritz_box_7530_ax_riavvia",
+                                  "name": "Riavvia Dispositivo"
                                 },
                                 {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.fritz_box_7530_ax_pulizia",
+                                  "name": "Pulisci Log"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "switch.fritz_box_7530_ax_wi_fi_fritz_box_accesso_ospite",
+                                  "name": "Wifi Ospite"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "sensor.fritz_box_7530_ax_ultimo_riavvio",
+                                  "label": "[[[\n    const eventTime = new Date(entity.state);\n    const now = new Date();\n    const diffMin = Math.floor((now - eventTime) / 60000);\n    return `${diffMin} minuti fa`;\n]]]\n",
+                                  "show_state": false,
+                                  "show_label": true,
+                                  "name": "Ultimo Riavvio"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_firmware",
+                                  "entity": "update.fritz_box_7530_ax_fritz_os",
+                                  "name": "Firmare"
                                 }
                               ]
                             }
@@ -581,167 +437,70 @@
               ]
             },
             {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "type": "section",
-                  "label": "FRITZ!Box 7590"
+                  "type": "heading",
+                  "icon": "mdi:router-network-wireless",
+                  "heading": "FRITZ!Box 7590",
+                  "heading_style": "title"
                 },
                 {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
                     {
-                      "type": "horizontal-stack",
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
                       "cards": [
                         {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/fritzbox_7590.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "https://ap1.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
+                          "type": "horizontal-stack",
                           "cards": [
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "name": "Riavvia Dispositivo",
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/fritzbox_7590.png",
                               "tap_action": {
-                                "action": "call-service",
-                                "service": "shell_command.ap1_reboot"
-                              },
-                              "show_icon": true,
-                              "show_state": false,
-                              "icon": "mdi:restart",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
+                                "action": "url",
+                                "url_path": "https://ap1.giorgioravera.it"
                               }
                             },
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.ap1_led",
-                              "name": "LED",
-                              "show_icon": true,
-                              "show_state": false,
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
+                              "type": "vertical-stack",
+                              "cards": [
                                 {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.fritz_box_7590_riavvia",
+                                  "name": "Riavvia Dispositivo"
                                 },
                                 {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.fritz_box_7590_pulizia",
+                                  "name": "Pulisci Log"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "switch.fritz_box_7530_ax_wi_fi_fritz_box_accesso_ospite",
+                                  "name": "Wifi Ospite"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "sensor.fritz_box_7590_ultimo_riavvio",
+                                  "label": "[[[\n    const eventTime = new Date(entity.state);\n    const now = new Date();\n    const diffMin = Math.floor((now - eventTime) / 60000);\n    return `${diffMin} minuti fa`;\n]]]\n",
+                                  "show_state": false,
+                                  "show_label": true,
+                                  "name": "Ultimo Riavvio"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_firmware",
+                                  "entity": "update.fritz_box_7590_fritz_os",
+                                  "name": "Firmare"
                                 }
                               ]
                             }
@@ -754,618 +513,625 @@
               ]
             },
             {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "type": "section",
-                  "label": "Docker Containers"
+                  "type": "heading",
+                  "icon": "mdi:docker",
+                  "heading": "Docker Containers",
+                  "heading_style": "title"
                 },
                 {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
                     {
-                      "type": "horizontal-stack",
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
                       "cards": [
                         {
-                          "type": "vertical-stack",
+                          "type": "horizontal-stack",
                           "cards": [
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_portainer",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
+                              "type": "vertical-stack",
+                              "cards": [
                                 {
-                                  "value": "on",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_portainer",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "lightgreen"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_traefik",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_amule",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
+                                  "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
+                                    "icon": [
+                                      {
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
+                                      }
+                                    ]
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_transmission",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
+                                  "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
+                                    "icon": [
+                                      {
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
+                                      }
+                                    ]
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_traefik",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
+                              "type": "vertical-stack",
+                              "cards": [
                                 {
-                                  "value": "on",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_homeassistant",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "lightgreen"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_mosquitto",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_amule",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                        "padding": "0px 0px"
+                                      },
                                       {
-                                        "color": "lightgreen"
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_zigbee2mqtt",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_transmission",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                        "padding": "0px 0px"
+                                      },
                                       {
-                                        "color": "lightgreen"
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.docker_filebrowser",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_homeassistant",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                        "padding": "0px 0px"
+                                      },
                                       {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
+                                        "height": "25px"
+                                      },
                                       {
-                                        "color": "grey"
+                                        "width": "25px"
                                       }
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_mosquitto",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                    ],
+                                    "card": [
                                       {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
                                       {
-                                        "color": "grey"
+                                        "--ha-card-box-shadow": "none"
                                       }
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_zigbee2mqtt",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                    ],
+                                    "name": [
                                       {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
+                                        "padding": "0px 10px"
+                                      },
                                       {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.docker_filebrowser",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "styles": {
-                                    "icon": [
+                                        "justify-self": "start"
+                                      },
                                       {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "value": "off",
-                                  "styles": {
-                                    "icon": [
+                                        "font-family": "Roboto, sans-serif"
+                                      },
                                       {
-                                        "color": "grey"
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
-                                  }
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1378,403 +1144,303 @@
               ]
             },
             {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "type": "section",
-                  "label": "NAS QNAP TS-228A"
+                  "type": "heading",
+                  "icon": "mdi:nas",
+                  "heading": "NAS QNAP TS-228A",
+                  "heading_style": "title"
                 },
                 {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
                     {
-                      "type": "horizontal-stack",
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
                       "cards": [
                         {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/qnap_ts228a.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "https://nas.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
+                          "type": "horizontal-stack",
                           "cards": [
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.nas",
-                              "name": "Stato",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "icon": "mdi:power",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
-                                {
-                                  "value": "on",
-                                  "name": "Acceso",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "lightgreen"
-                                      }
-                                    ]
-                                  }
-                                },
-                                {
-                                  "value": "off",
-                                  "name": "Spento",
-                                  "styles": {
-                                    "icon": [
-                                      {
-                                        "color": "grey"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "tap_action": {
-                                "action": "toggle",
-                                "confirmation": {
-                                  "text": "Sei sicuro di voler procedere?"
-                                }
-                              }
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "name": "Gestione",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": true,
-                              "icon": "mdi:cogs",
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/qnap_ts228a.png",
                               "tap_action": {
                                 "action": "url",
                                 "url_path": "https://nas.giorgioravera.it"
-                              },
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
                               }
                             },
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "script.plex_start",
-                              "name": "Avvia Plex",
-                              "show_icon": true,
-                              "show_state": false,
-                              "icon": "mdi:plex",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "tap_action": {
-                                "action": "call-service",
-                                "confirmation": {
-                                  "text": "Sei sicuro di voler avviare Plex?"
-                                },
-                                "service": "script.plex_start"
-                              }
-                            },
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "script.plex_stop",
-                              "name": "Ferma Plex",
-                              "show_icon": true,
-                              "show_state": false,
-                              "icon": "mdi:plex",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "tap_action": {
-                                "action": "call-service",
-                                "confirmation": {
-                                  "text": "Sei sicuro di voler fermare Plex?"
-                                },
-                                "service": "script.plex_stop"
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
-                {
-                  "type": "section",
-                  "label": "BTicino Classe 300EOS with Netatmo"
-                },
-                {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
-                    {
-                      "type": "horizontal-stack",
-                      "cards": [
-                        {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/BTicino/classe300eos.png"
-                        },
-                        {
-                          "type": "vertical-stack",
-                          "cards": [
-                            {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "switch.portone",
-                              "name": "Apertura Portone",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": false,
-                              "color-type": "card",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
+                              "type": "vertical-stack",
+                              "cards": [
                                 {
-                                  "value": "on",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.nas",
+                                  "name": "Stato",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
+                                  "icon": "mdi:power",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "grey"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
+                                      }
+                                    ]
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "name": "Acceso",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "name": "Spento",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "tap_action": {
+                                    "action": "toggle",
+                                    "confirmation": {
+                                      "text": "Sei sicuro di voler procedere?"
+                                    }
+                                  }
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "name": "Gestione",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": true,
+                                  "icon": "mdi:cogs",
+                                  "tap_action": {
+                                    "action": "url",
+                                    "url_path": "https://nas.giorgioravera.it"
+                                  },
+                                  "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
+                                    "icon": [
+                                      {
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      },
+                                      {
+                                        "color": "var(--state-icon-color)"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
                                   }
                                 },
                                 {
-                                  "value": "off",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "script.plex_start",
+                                  "name": "Avvia Plex",
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "icon": "mdi:plex",
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "lightgreen"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      },
+                                      {
+                                        "color": "var(--state-icon-color)"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
+                                  },
+                                  "tap_action": {
+                                    "action": "call-service",
+                                    "confirmation": {
+                                      "text": "Sei sicuro di voler avviare Plex?"
+                                    },
+                                    "service": "script.plex_start"
+                                  }
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "script.plex_stop",
+                                  "name": "Ferma Plex",
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "icon": "mdi:plex",
+                                  "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
+                                    "icon": [
+                                      {
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      },
+                                      {
+                                        "color": "var(--state-icon-color)"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
+                                      }
+                                    ]
+                                  },
+                                  "tap_action": {
+                                    "action": "call-service",
+                                    "confirmation": {
+                                      "text": "Sei sicuro di voler fermare Plex?"
+                                    },
+                                    "service": "script.plex_stop"
                                   }
                                 }
                               ]
@@ -1788,205 +1454,326 @@
               ]
             },
             {
-              "type": "entities",
-              "show_header_toggle": "off",
-              "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
-              "entities": [
+              "type": "grid",
+              "cards": [
                 {
-                  "type": "section",
-                  "label": "Canon PIXMA TR8550"
+                  "type": "heading",
+                  "icon": "mdi:tablet",
+                  "heading": "BTicino Classe 300EOS with Netatmo",
+                  "heading_style": "title"
                 },
                 {
-                  "type": "custom:hui-element",
-                  "card_type": "vertical-stack",
-                  "cards": [
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
                     {
-                      "type": "horizontal-stack",
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
                       "cards": [
                         {
-                          "type": "picture",
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0.0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
-                          "image": "/local/images/devices/canon_tr8550.png",
-                          "tap_action": {
-                            "action": "url",
-                            "url_path": "http://stampante.giorgioravera.it"
-                          }
-                        },
-                        {
-                          "type": "vertical-stack",
+                          "type": "horizontal-stack",
                           "cards": [
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "name": "Gestione",
-                              "show_name": true,
-                              "show_icon": true,
-                              "show_state": true,
-                              "icon": "mdi:cogs",
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/BTicino/classe300eos.png"
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "switch.portone",
+                                  "name": "Apertura Portone",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": false,
+                                  "color-type": "card",
+                                  "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
+                                    "icon": [
+                                      {
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
+                                      }
+                                    ]
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "on",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "grey"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "value": "off",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "lightgreen"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:printer",
+                  "heading": "Canon PIXMA TR8550",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
+                    {
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0.0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "/local/images/devices/canon_tr8550.png",
                               "tap_action": {
                                 "action": "url",
                                 "url_path": "http://stampante.giorgioravera.it"
-                              },
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
                               }
                             },
                             {
-                              "type": "custom:button-card",
-                              "layout": "icon_name_state",
-                              "entity": "sensor.canon_tr8500_series",
-                              "name": "Stato",
-                              "show_name": false,
-                              "show_icon": true,
-                              "show_state": true,
-                              "icon": "[[[\n  if (entity.state==\"idle\")\n    return \"mdi:printer\"\n  else\n    return \"mdi:printer-settings\"\n]]]\n",
-                              "styles": {
-                                "grid": [
-                                  {
-                                    "grid-template-columns": "50px auto"
-                                  }
-                                ],
-                                "icon": [
-                                  {
-                                    "padding": "0px 0px"
-                                  },
-                                  {
-                                    "height": "25px"
-                                  },
-                                  {
-                                    "width": "25px"
-                                  },
-                                  {
-                                    "color": "var(--state-icon-color)"
-                                  }
-                                ],
-                                "card": [
-                                  {
-                                    "--ha-card-background": "rgba(0, 0, 0, 0)"
-                                  },
-                                  {
-                                    "--ha-card-box-shadow": "none"
-                                  }
-                                ],
-                                "name": [
-                                  {
-                                    "padding": "0px 10px"
-                                  },
-                                  {
-                                    "justify-self": "start"
-                                  },
-                                  {
-                                    "font-family": "Roboto, sans-serif"
-                                  },
-                                  {
-                                    "font-size": "15px"
-                                  },
-                                  {
-                                    "color": "var(--primary-text-color)"
-                                  }
-                                ]
-                              },
-                              "state": [
+                              "type": "vertical-stack",
+                              "cards": [
                                 {
-                                  "value": "printing",
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "name": "Gestione",
+                                  "show_name": true,
+                                  "show_icon": true,
+                                  "show_state": true,
+                                  "icon": "mdi:cogs",
+                                  "tap_action": {
+                                    "action": "url",
+                                    "url_path": "http://stampante.giorgioravera.it"
+                                  },
                                   "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
                                     "icon": [
                                       {
-                                        "color": "yellow"
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      },
+                                      {
+                                        "color": "var(--state-icon-color)"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
                                       }
                                     ]
                                   }
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "layout": "icon_name_state",
+                                  "entity": "sensor.canon_tr8500_series",
+                                  "name": "Stato",
+                                  "show_name": false,
+                                  "show_icon": true,
+                                  "show_state": true,
+                                  "icon": "[[[\n  if (entity.state==\"idle\")\n    return \"mdi:printer\"\n  else\n    return \"mdi:printer-settings\"\n]]]\n",
+                                  "styles": {
+                                    "grid": [
+                                      {
+                                        "grid-template-columns": "50px auto"
+                                      }
+                                    ],
+                                    "icon": [
+                                      {
+                                        "padding": "0px 0px"
+                                      },
+                                      {
+                                        "height": "25px"
+                                      },
+                                      {
+                                        "width": "25px"
+                                      },
+                                      {
+                                        "color": "var(--state-icon-color)"
+                                      }
+                                    ],
+                                    "card": [
+                                      {
+                                        "--ha-card-background": "rgba(0, 0, 0, 0)"
+                                      },
+                                      {
+                                        "--ha-card-box-shadow": "none"
+                                      }
+                                    ],
+                                    "name": [
+                                      {
+                                        "padding": "0px 10px"
+                                      },
+                                      {
+                                        "justify-self": "start"
+                                      },
+                                      {
+                                        "font-family": "Roboto, sans-serif"
+                                      },
+                                      {
+                                        "font-size": "15px"
+                                      },
+                                      {
+                                        "color": "var(--primary-text-color)"
+                                      }
+                                    ]
+                                  },
+                                  "state": [
+                                    {
+                                      "value": "printing",
+                                      "styles": {
+                                        "icon": [
+                                          {
+                                            "color": "yellow"
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
                                 }
                               ]
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "custom:bar-card",
-                      "show_header_toggle": false,
-                      "state_color": false,
-                      "positions": {
-                        "indicator": "off",
-                        "name": "outside",
-                        "value": "outside",
-                        "icon": "inside"
-                      },
-                      "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\nbar-card-value {\n  \n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nbar-card-name {\n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nha-icon {\n  color: darkgrey;\n}",
-                      "entities": [
-                        {
-                          "entity": "sensor.canon_tr8500_series_black_bk",
-                          "name": "BK",
-                          "color": "black",
-                          "width": "85%"
                         },
                         {
-                          "entity": "sensor.canon_tr8500_series_black_pgbk",
-                          "name": "PGBK",
-                          "color": "black",
-                          "width": "85%"
-                        },
-                        {
-                          "entity": "sensor.canon_tr8500_series_cyan",
-                          "name": "C",
-                          "color": "cyan",
-                          "width": "85%"
-                        },
-                        {
-                          "entity": "sensor.canon_tr8500_series_magenta",
-                          "name": "M",
-                          "color": "magenta",
-                          "width": "85%"
-                        },
-                        {
-                          "entity": "sensor.canon_tr8500_series_yellow",
-                          "name": "Y",
-                          "color": "yellow",
-                          "width": "85%"
+                          "type": "custom:bar-card",
+                          "show_header_toggle": false,
+                          "state_color": false,
+                          "positions": {
+                            "indicator": "off",
+                            "name": "outside",
+                            "value": "outside",
+                            "icon": "inside"
+                          },
+                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\nbar-card-value {\n  \n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nbar-card-name {\n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nha-icon {\n  color: darkgrey;\n}",
+                          "entities": [
+                            {
+                              "entity": "sensor.canon_tr8500_series_black_bk",
+                              "name": "BK",
+                              "color": "black",
+                              "width": "85%"
+                            },
+                            {
+                              "entity": "sensor.canon_tr8500_series_black_pgbk",
+                              "name": "PGBK",
+                              "color": "black",
+                              "width": "85%"
+                            },
+                            {
+                              "entity": "sensor.canon_tr8500_series_cyan",
+                              "name": "C",
+                              "color": "cyan",
+                              "width": "85%"
+                            },
+                            {
+                              "entity": "sensor.canon_tr8500_series_magenta",
+                              "name": "M",
+                              "color": "magenta",
+                              "width": "85%"
+                            },
+                            {
+                              "entity": "sensor.canon_tr8500_series_yellow",
+                              "name": "Y",
+                              "color": "yellow",
+                              "width": "85%"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1994,7 +1781,9 @@
                 }
               ]
             }
-          ]
+          ],
+          "max_columns": 3,
+          "dense_section_placement": false
         },
         {
           "title": "Elettrodomestici",
