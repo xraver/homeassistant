@@ -21,7 +21,7 @@ filter:
     - light.luce_cucina
     #- light.luce_vetrine
     - light.luce_sala
-    - light.luce_divano
+    - light.luce_piantana
     - light.luce_studio
     - light.luce_zona_notte
     - light.luce_bagno

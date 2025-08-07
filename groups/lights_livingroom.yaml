@@ -7,4 +7,4 @@ lights_livingroom:
   icon: mdi:lightbulb
   entities:
     - light.luce_sala
-    - light.luce_divano
+    - light.luce_piantana

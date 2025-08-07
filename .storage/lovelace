@@ -82,7 +82,7 @@
                       "entity": "light.luce_sala"
                     },
                     {
-                      "entity": "light.luce_divano"
+                      "entity": "light.luce_piantana"
                     },
                     {
                       "entity": "cover.tapparella_sala"
@@ -625,9 +625,9 @@
               "show_name": true,
               "show_state": false,
               "show_icon": true,
-              "entity": "light.luce_divano",
+              "entity": "light.luce_piantana",
               "color": "",
-              "name": "Divano",
+              "name": "Piantana",
               "tap_action": {
                 "action": "toggle"
               }
@@ -754,7 +754,7 @@
                       "head": "group.lights_livingroom",
                       "entities": [
                         "light.luce_sala",
-                        "light.luce_divano"
+                        "light.luce_piantana"
                       ]
                     },
                     {
@@ -858,8 +858,8 @@
                   ]
                 },
                 {
-                  "entity": "light.luce_divano",
-                  "name": "Luce Divano",
+                  "entity": "light.luce_piantana",
+                  "name": "Luce Piantana",
                   "type": "tile",
                   "features": [
                     {

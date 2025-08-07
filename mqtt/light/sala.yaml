@@ -2,7 +2,7 @@
 # Living Room Couch Light (Color)
 ######################################################################
 
-- name: Luce Divano
+- name: Luce Piantana
   schema: template
   command_topic: "shellies/shellybulb-BC8610/color/0/set"
   state_topic: "shellies/shellybulb-BC8610/color/0/status"
@@ -83,7 +83,7 @@
 # Living Room Couch Light (White)
 ######################################################################
 
-# - name: Luce Divano Bianca
+# - name: Luce Piantana Bianca
 #   schema: template
 #   command_topic: "shellies/shellybulb-BC8610/color/0/set"
 #   state_topic: "shellies/shellybulb-BC8610/color/0/status"

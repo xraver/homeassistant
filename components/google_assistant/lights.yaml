@@ -20,12 +20,12 @@ light.luce_vetrine:
 light.luce_sala:
   expose: true
   room: Sala
-light.luce_divano:
-  expose: true
-  room: Sala
 light.luce_studio:
   expose: true
   room: Studio
+light.luce_piantana:
+  expose: true
+  room: Sala
 light.luce_zona_notte:
   expose: true
   room: Zona Notte

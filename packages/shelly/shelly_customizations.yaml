@@ -46,15 +46,15 @@ homeassistant:
       friendly_name: Riavvia Dispositivo
 
     # Shelly Bulb (shellybulb_bc8610)
-    binary_sensor.luce_divano_cloud:
+    binary_sensor.luce_piantana_cloud:
       friendly_name: Connessione Cloud
-    update.luce_divano_firmware_update:
+    update.luce_piantana_firmware_update:
       friendly_name: Aggiornamento Firmware
-    update.luce_divano_beta_firmware_update:
+    update.luce_piantana_beta_firmware_update:
       friendly_name: Aggiornamento Firmware Beta
-    sensor.luce_divano_rssi:
+    sensor.luce_piantana_rssi:
       friendly_name: Potenza Segnale
-    sensor.luce_divano_uptime:
+    sensor.luce_piantana_uptime:
       friendly_name: Uptime
-    button.luce_divano_reboot:
+    button.luce_piantana_reboot:
       friendly_name: Riavvia Dispositivo

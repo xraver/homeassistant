@@ -24,10 +24,10 @@ logbook:
       - sensor.shelly_em_rssi
       - sensor.shelly_em_uptime
       # Shelly Bulb (shellybulb_bc8610)
-      - binary_sensor.luce_divano_cloud
-      - update.luce_divano_firmware_update
-      - sensor.luce_divano_rssi
-      - sensor.luce_divano_uptime
+      - binary_sensor.luce_piantana_cloud
+      - update.luce_piantana_firmware_update
+      - sensor.luce_piantana_rssi
+      - sensor.luce_piantana_uptime
 
 ######################################################################
 # Shelly Package - Recorder
@@ -55,7 +55,7 @@ recorder:
       - sensor.shelly_em_rssi
       - sensor.shelly_em_uptime
       # Shelly Bulb (shellybulb_bc8610)
-      - binary_sensor.luce_divano_cloud
-      - update.luce_divano_firmware_update
-      - sensor.luce_divano_rssi
-      - sensor.luce_divano_uptime
+      - binary_sensor.luce_piantana_cloud
+      - update.luce_piantana_firmware_update
+      - sensor.luce_piantana_rssi
+      - sensor.luce_piantana_uptime
