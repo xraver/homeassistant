@@ -415,7 +415,7 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "sensor.fritz_box_7530_ax_ultimo_riavvio",
-                                  "label": "[[[\n    const eventTime = new Date(entity.state);\n    const now = new Date();\n    const diffMin = Math.floor((now - eventTime) / 60000);\n    return `${diffMin} minuti fa`;\n]]]\n",
+                                  "label": "[[[\n    const eventTime = new Date(entity.state);\n    const now = new Date();\n    const diffMs = now - eventTime;\n    \n    const diffMin = Math.floor(diffMs / 60000);\n    const diffHrs = Math.floor(diffMs / 3600000);\n    const diffDays = Math.floor(diffMs / 86400000);\n    \n    let timeAgo;\n    \n    if (diffMin < 60) {\n        timeAgo = `${diffMin} minuti fa`;\n    } else if (diffHrs < 24) {\n        timeAgo = `${diffHrs} ore fa`;\n    } else {\n        timeAgo = `${diffDays} giorni fa`;\n    }\n    \n    return timeAgo;\n]]]\n",
                                   "show_state": false,
                                   "show_label": true,
                                   "name": "Ultimo Riavvio"
@@ -491,7 +491,7 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
                                   "entity": "sensor.fritz_box_7590_ultimo_riavvio",
-                                  "label": "[[[\n    const eventTime = new Date(entity.state);\n    const now = new Date();\n    const diffMin = Math.floor((now - eventTime) / 60000);\n    return `${diffMin} minuti fa`;\n]]]\n",
+                                  "label": "[[[\n    const eventTime = new Date(entity.state);\n    const now = new Date();\n    const diffMs = now - eventTime;\n    \n    const diffMin = Math.floor(diffMs / 60000);\n    const diffHrs = Math.floor(diffMs / 3600000);\n    const diffDays = Math.floor(diffMs / 86400000);\n    \n    let timeAgo;\n    \n    if (diffMin < 60) {\n        timeAgo = `${diffMin} minuti fa`;\n    } else if (diffHrs < 24) {\n        timeAgo = `${diffHrs} ore fa`;\n    } else {\n        timeAgo = `${diffDays} giorni fa`;\n    }\n    \n    return timeAgo;\n]]]\n",
                                   "show_state": false,
                                   "show_label": true,
                                   "name": "Ultimo Riavvio"
