@@ -12,26 +12,79 @@ homeassistant:
     package.lg_thinq:
       customize: &customize
         package: 'lg_thinq'
-        version: 1.0.0
+        version: 1.1.0
 
     ######################################################################
     # LG ThinQ Package - Customizations - Entities
     ######################################################################
 
-    binary_sensor.lavatrice_remote_start:
+    binary_sensor.lavatrice_avvio_remoto:
       friendly_name: "Avvio Remoto"
 
     event.lavatrice_notification:
       friendly_name: "Notifiche"
 
-    event.lavatrice_error:
+    event.lavatrice_errore:
       friendly_name: "Errori"
 
-    number.lavatrice_delay_ends_in:
+    number.lavatrice_delayed_end:
       friendly_name: "Avvio ritardato"
 
-    sensor.lavatrice_current_status:
-      friendly_name: "Stato"
+    sensor.lavatrice_cicli:
+      friendly_name: "Cicli"
+
+    sensir.lavatrice_delayed_end:
+      friendly_name: "Avvio ritardato"
+
+    sensor.lavatrice_stato_attuale:
+      friendly_name: "Stato attuale"
+
+    sensor.lavatrice_tempo_rimanente:
+      friendly_name: "Tempo rimanente"
+
+    sensor.lavatrice_total_time:
+      friendly_name: "Tempo totale"
 
     select.lavatrice_operation:
       friendly_name: "Programma Lavaggio"
+
+    switch.lavatrice_power:
+      friendly_name: "Accensione"
+
+######################################################################
+# LG ThinQ Package - Logbook
+######################################################################
+
+logbook:
+  exclude:
+    entities:
+      - binary_sensor.lavatrice_avvio_remoto
+      - event.lavatrice_notification
+      - event.lavatrice_errore
+      - number.lavatrice_delayed_end
+      - sensor.lavatrice_cicli
+      - sensor.lavatrice_delayed_end
+      - sensor.lavatrice_stato_attuale
+      - sensor.lavatrice_tempo_rimanente
+      - sensor.lavatrice_total_time
+      - select.lavatrice_operation
+      - switch.lavatrice_power
+
+######################################################################
+# LG ThinQ Package - Recorder
+######################################################################
+
+recorder:
+  exclude:
+    entities:
+      - binary_sensor.lavatrice_avvio_remoto
+      - event.lavatrice_notification
+      - event.lavatrice_errore
+      - number.lavatrice_delayed_end
+      - sensor.lavatrice_cicli
+      - sensor.lavatrice_delayed_end
+      - sensor.lavatrice_stato_attuale
+      - sensor.lavatrice_tempo_rimanente
+      - sensor.lavatrice_total_time
+      - select.lavatrice_operation
+      - switch.lavatrice_power
