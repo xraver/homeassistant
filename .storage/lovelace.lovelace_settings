@@ -146,169 +146,193 @@
         {
           "icon": "mdi:zigbee",
           "title": "Zigbee",
-          "path": "zigbee",
           "badges": [],
-          "cards": [
+          "cards": [],
+          "type": "sections",
+          "max_columns": 3,
+          "sections": [
             {
-              "entities": [
-                {
-                  "entity": "binary_sensor.zigbee2mqtt_bridge_connection_state"
-                },
-                {
-                  "entity": "sensor.zigbee2mqtt_bridge_version"
-                },
-                {
-                  "entity": "sensor.zigbee2mqtt_bridge_coordinator_type"
-                },
-                {
-                  "entity": "sensor.zigbee2mqtt_bridge_coordinator_version"
-                },
-                {
-                  "entity": "sensor.zigbee2mqtt_bridge_channel"
-                },
-                {
-                  "entity": "sensor.zigbee2mqtt_bridge_panid"
-                }
-              ],
-              "show_header_toggle": false,
-              "title": "Stato Sistema Zigbee2MQTT",
-              "type": "entities"
-            },
-            {
-              "entities": [
-                {
-                  "entity": "button.zigbee2mqtt_bridge_restart"
-                },
-                {
-                  "type": "divider",
-                  "style": {
-                    "height": "1px",
-                    "width": "98%",
-                    "margin-left": "auto",
-                    "margin-right": "auto",
-                    "background": "#62717b"
-                  }
-                },
-                {
-                  "entity": "switch.zigbee2mqtt_bridge_permit_join"
-                },
-                {
-                  "entity": "timer.zigbee_permit_join"
-                },
-                {
-                  "entity": "input_number.zigbee2mqtt_join_minutes"
-                },
-                {
-                  "type": "divider",
-                  "style": {
-                    "height": "1px",
-                    "width": "98%",
-                    "margin-left": "auto",
-                    "margin-right": "auto",
-                    "background": "#62717b"
-                  }
-                },
-                {
-                  "entity": "input_text.zigbee2mqtt_old_name"
-                },
-                {
-                  "entity": "input_text.zigbee2mqtt_new_name"
-                },
-                {
-                  "entity": "script.zigbee2mqtt_rename"
-                },
-                {
-                  "type": "divider",
-                  "style": {
-                    "height": "1px",
-                    "width": "98%",
-                    "margin-left": "auto",
-                    "margin-right": "auto",
-                    "background": "#62717b"
-                  }
-                },
-                {
-                  "entity": "input_text.zigbee2mqtt_remove"
-                },
-                {
-                  "entity": "input_boolean.zigbee2mqtt_force_remove"
-                },
-                {
-                  "entity": "script.zigbee2mqtt_remove"
-                },
-                {
-                  "type": "divider",
-                  "style": {
-                    "height": "1px",
-                    "width": "98%",
-                    "margin-left": "auto",
-                    "margin-right": "auto",
-                    "background": "#62717b"
-                  }
-                },
-                {
-                  "entity": "select.zigbee2mqtt_bridge_log_level"
-                }
-              ],
-              "show_header_toggle": false,
-              "title": "Operazioni Sistema Zigbee2mqtt",
-              "type": "entities"
-            },
-            {
-              "type": "custom:battery-state-card",
-              "title": "Batteria Dispositivi ZigBee",
-              "sort_by_level": "desc",
-              "entities": [
-                {
-                  "entity": "sensor.porta_casa_battery",
-                  "name": "Porta Casa"
-                },
-                {
-                  "entity": "sensor.temperatura_balcone_battery",
-                  "name": "Temperatura Balcone"
-                },
-                {
-                  "entity": "sensor.temperatura_veranda_battery",
-                  "name": "Temperatura Veranda"
-                },
-                {
-                  "entity": "sensor.wireless_button_battery",
-                  "name": "wireless_button"
-                },
-                {
-                  "entity": "sensor.sensore_acqua_cucina_battery",
-                  "name": "Sensore Acqua Cucina"
-                },
-                {
-                  "entity": "sensor.sensore_acqua_bagno_grande_battery",
-                  "name": "Sensore Acqua Bagno Grande"
-                },
-                {
-                  "entity": "sensor.sensore_acqua_bagno_piccolo_battery",
-                  "name": "Sensore Acqua Bagno Piccolo"
-                }
-              ]
-            },
-            {
-              "type": "vertical-stack",
-              "title": "Mappa Dispositivi",
-              "layout": "vertical",
+              "type": "grid",
               "cards": [
                 {
-                  "type": "custom:zigbee2mqtt-networkmap",
-                  "title": "Zigbee2MQTT Network Map",
-                  "entity": "sensor.zigbee2mqtt_bridge_network_map",
-                  "mqtt_base_topic": "zigbee2mqtt",
-                  "force": 3000,
-                  "node_size": 16,
-                  "font_size": 12,
-                  "link_width": 2,
-                  "height": 400,
-                  "css": ":host {\n  --zigbee2mqtt-networkmap-node-color: rgba(18, 120, 98, .7);\n  --zigbee2mqtt-networkmap-node-fill-color: #dcfaf3;\n  --zigbee2mqtt-networkmap-node-pinned-color: rgba(190, 56, 93, .6);\n  --zigbee2mqtt-networkmap-link-color: rgba(18, 120, 98, .5);\n  --zigbee2mqtt-networkmap-hover-color: #be385d;\n  --zigbee2mqtt-networkmap-link-selected-color: rgba(202, 164, 85, .6);\n  --zigbee2mqtt-networkmap-label-color: #127862;\n  --zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7);\n  --zigbee2mqtt-networkmap-node-coordinator-color: rgba(224, 78, 93, .7);\n  --zigbee2mqtt-networkmap-node-router-color: rgba(0, 165, 255, .7);\n    }\n"
+                  "entities": [
+                    {
+                      "entity": "binary_sensor.zigbee2mqtt_bridge_connection_state"
+                    },
+                    {
+                      "entity": "sensor.zigbee2mqtt_bridge_version"
+                    },
+                    {
+                      "entity": "sensor.zigbee2mqtt_bridge_coordinator_type"
+                    },
+                    {
+                      "entity": "sensor.zigbee2mqtt_bridge_coordinator_version"
+                    },
+                    {
+                      "entity": "sensor.zigbee2mqtt_bridge_channel"
+                    },
+                    {
+                      "entity": "sensor.zigbee2mqtt_bridge_panid"
+                    }
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Stato Sistema Zigbee2MQTT",
+                  "type": "entities"
                 }
               ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "entities": [
+                    {
+                      "entity": "button.zigbee2mqtt_bridge_restart"
+                    },
+                    {
+                      "type": "divider",
+                      "style": {
+                        "height": "1px",
+                        "width": "98%",
+                        "margin-left": "auto",
+                        "margin-right": "auto",
+                        "background": "#62717b"
+                      }
+                    },
+                    {
+                      "entity": "switch.zigbee2mqtt_bridge_permit_join"
+                    },
+                    {
+                      "entity": "timer.zigbee_permit_join"
+                    },
+                    {
+                      "entity": "input_number.zigbee2mqtt_join_minutes"
+                    },
+                    {
+                      "type": "divider",
+                      "style": {
+                        "height": "1px",
+                        "width": "98%",
+                        "margin-left": "auto",
+                        "margin-right": "auto",
+                        "background": "#62717b"
+                      }
+                    },
+                    {
+                      "entity": "input_text.zigbee2mqtt_old_name"
+                    },
+                    {
+                      "entity": "input_text.zigbee2mqtt_new_name"
+                    },
+                    {
+                      "entity": "script.zigbee2mqtt_rename"
+                    },
+                    {
+                      "type": "divider",
+                      "style": {
+                        "height": "1px",
+                        "width": "98%",
+                        "margin-left": "auto",
+                        "margin-right": "auto",
+                        "background": "#62717b"
+                      }
+                    },
+                    {
+                      "entity": "input_text.zigbee2mqtt_remove"
+                    },
+                    {
+                      "entity": "input_boolean.zigbee2mqtt_force_remove"
+                    },
+                    {
+                      "entity": "script.zigbee2mqtt_remove"
+                    },
+                    {
+                      "type": "divider",
+                      "style": {
+                        "height": "1px",
+                        "width": "98%",
+                        "margin-left": "auto",
+                        "margin-right": "auto",
+                        "background": "#62717b"
+                      }
+                    },
+                    {
+                      "entity": "select.zigbee2mqtt_bridge_log_level"
+                    }
+                  ],
+                  "show_header_toggle": false,
+                  "title": "Operazioni Sistema Zigbee2mqtt",
+                  "type": "entities"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:battery-state-card",
+                  "title": "Batteria Dispositivi ZigBee",
+                  "sort_by_level": "desc",
+                  "entities": [
+                    {
+                      "entity": "sensor.porta_casa_battery",
+                      "name": "Porta Casa"
+                    },
+                    {
+                      "entity": "sensor.temperatura_balcone_battery",
+                      "name": "Temperatura Balcone"
+                    },
+                    {
+                      "entity": "sensor.temperatura_veranda_battery",
+                      "name": "Temperatura Veranda"
+                    },
+                    {
+                      "entity": "sensor.wireless_button_battery",
+                      "name": "wireless_button"
+                    },
+                    {
+                      "entity": "sensor.sensore_acqua_cucina_battery",
+                      "name": "Sensore Acqua Cucina"
+                    },
+                    {
+                      "entity": "sensor.sensore_acqua_bagno_grande_battery",
+                      "name": "Sensore Acqua Bagno Grande"
+                    },
+                    {
+                      "entity": "sensor.sensore_acqua_bagno_piccolo_battery",
+                      "name": "Sensore Acqua Bagno Piccolo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:map",
+                  "heading": "Mappa dei dispositivi",
+                  "heading_style": "title"
+                }
+              ]
+            },
+            {
+              "type": "custom:zigbee2mqtt-networkmap",
+              "entity": "sensor.zigbee2mqtt_bridge_network_map",
+              "mqtt_base_topic": "zigbee2mqtt",
+              "force": 3000,
+              "node_size": 16,
+              "font_size": 12,
+              "link_width": 2,
+              "height": 600,
+              "view_layout": {
+                "column_span": 3
+              },
+              "column_span": 3
             }
-          ]
+          ],
+          "path": "zigbee"
         },
         {
           "icon": "mdi:lan",
