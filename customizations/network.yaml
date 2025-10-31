@@ -5,9 +5,9 @@
 sensor.speedtest_ping:
   friendly_name: Ping
 sensor.speedtest_carica:
-  friendly_name: Download
-sensor.speedtest_scarica:
   friendly_name: Upload
+sensor.speedtest_scarica:
+  friendly_name: Download
 
 ######################################################################
 # Customization: pfSense
