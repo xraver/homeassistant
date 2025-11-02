@@ -130,6 +130,20 @@
                   "aspect_ratio": "0%",
                   "entities": [
                     {
+                      "entity": "cover.tenda_bagno"
+                    },
+                    {
+                      "entity": "climate.bagno_piccolo"
+                    }
+                  ],
+                  "image": "/local/images/rooms/bagno_off.jpg",
+                  "title": "Bagno Piccolo"
+                },
+                {
+                  "type": "picture-glance",
+                  "aspect_ratio": "0%",
+                  "entities": [
+                    {
                       "entity": "light.luce_zona_notte"
                     },
                     {
@@ -208,10 +222,6 @@
                     "on": "/local/images/rooms/balcone_on.jpg"
                   },
                   "title": "Balcone"
-                },
-                {
-                  "type": "custom:clock-weather-card",
-                  "entity": "weather.savona"
                 }
               ],
               "column_span": 3
@@ -550,7 +560,8 @@
               "text_only": true
             },
             "layout": "responsive",
-            "badges_position": "bottom"
+            "badges_position": "bottom",
+            "badges_wrap": "wrap"
           }
         },
         {
@@ -1115,6 +1126,23 @@
                       "buttons_position": "left",
                       "entity": "cover.tapparella_camera",
                       "name": "Tapparella Camera",
+                      "always_percentage": true
+                    }
+                  ],
+                  "type": "custom:shutter-card"
+                },
+                {
+                  "type": "heading",
+                  "icon": "mdi:curtains-closed",
+                  "heading": "Tende",
+                  "heading_style": "title"
+                },
+                {
+                  "entities": [
+                    {
+                      "buttons_position": "left",
+                      "entity": "cover.tenda_bagno",
+                      "name": "Tenda Bagno",
                       "always_percentage": true
                     }
                   ],

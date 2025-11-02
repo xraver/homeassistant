@@ -12,6 +12,7 @@ group:
       - update.tapparella_cucina_piccola
       - update.tapparella_sala
       - update.tapparella_studio
+      - update.tenda_bagno
       - update.tapparella_bagno
       - update.tapparella_camera
       # Lights
@@ -27,6 +28,3 @@ group:
       - update.luce_trono
       - update.luce_camera
       - update.luce_balcone
-      # Non connessi
-      - update.0x0004740000249a4e
-      - update.0x0004740001583a4a

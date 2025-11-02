@@ -36,6 +36,14 @@ homeassistant:
     switch.tapparella_studio_led_in_dark:
       friendly_name: "LED se spento"
 
+    # BTI-N4027C - Tenda Bagno (0x0004740001729a60)
+    cover.tenda_bagno:
+      supported_features: 15
+    switch.tenda_bagno_led_if_on:
+      friendly_name: "LED se acceso"
+    switch.tenda_bagno_led_in_dark:
+      friendly_name: "LED se spento"
+
     # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
     cover.tapparella_bagno:
       supported_features: 15
@@ -80,19 +88,4 @@ homeassistant:
     number.luce_camera_ballast_maximum_level:
       friendly_name: "Illuminazione massima"
     number.luce_camera_ballast_minimum_level:
-      friendly_name: "Illuminazione minima"
-
-    # BTI-NT4411C - Dimmer 0x0004740001583a4a (N/A)
-    #light.0x0004740001583a4a:
-    #  supported_color_modes: null
-    #  supported_features: 0
-    switch.0x0004740001583a4a_device_mode:
-      friendly_name: "Funzione Dimmer"
-    switch.0x0004740001583a4a_led_if_on:
-      friendly_name: "LED se acceso"
-    switch.0x0004740001583a4a_led_in_dark:
-      friendly_name: "LED se spento"
-    number.0x0004740001583a4a_ballast_maximum_level:
-      friendly_name: "Illuminazione massima"
-    number.0x0004740001583a4a_ballast_minimum_level:
       friendly_name: "Illuminazione minima"

@@ -12,20 +12,21 @@ filter:
     - cover.tapparella_cucina_piccola
     - cover.tapparella_sala
     - cover.tapparella_studio
+    - cover.tenda_bagno
     - cover.tapparella_bagno
     - cover.tapparella_camera
     # Lights
-    - light.luce_corridoio
     - light.luce_zona_giorno
     - light.luce_armadio
     - light.luce_cucina
-    #- light.luce_vetrine
+    - light.luce_vetrine
     - light.luce_sala
-    - light.luce_piantana
     - light.luce_studio
+    - light.luce_piantana
     - light.luce_zona_notte
     - light.luce_bagno
     - light.luce_specchio
+    - light.luce_trono
     - light.luce_camera
     - light.luce_balcone
     # Sensors

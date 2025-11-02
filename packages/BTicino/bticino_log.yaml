@@ -6,37 +6,36 @@ logbook:
   exclude:
     entities:
       # BTI-NT4027C - Tapparella Cucina Grande (0x00047400015ada4b)
-      - select.tapparella_cucina_grande_identify
       - select.tapparella_cucina_grande_calibration_mode
       - switch.tapparella_cucina_grande_led_if_on
       - switch.tapparella_cucina_grande_led_in_dark
 
       # BTI-NT4027C - Tapparella Cucina Piccola (0x00047400015adb10)
-      - select.tapparella_cucina_piccola_identify
       - select.tapparella_cucina_piccola_calibration_mode
       - switch.tapparella_cucina_piccola_led_if_on
       - switch.tapparella_cucina_piccola_led_in_dark
 
       # BTI-NT4027C - Tapparella Sala (0x00047400015ada3d)
-      - select.tapparella_sala_identify
       - select.tapparella_sala_calibration_mode
       - switch.tapparella_sala_led_if_on
       - switch.tapparella_sala_led_in_dark
 
       # BTI-NT4027C - Tapparella Studio (0x00047400015a3e19)
-      - select.tapparella_studio_identify
       - select.tapparella_studio_calibration_mode
       - switch.tapparella_studio_led_if_on
       - switch.tapparella_studio_led_in_dark
 
+      # BTI-N4027C - Tenda Bagno (0x0004740001729a60)
+      - select.tenda_bagno_calibration_mode
+      - switch.tenda_bagno_led_if_on
+      - switch.tenda_bagno_led_in_dark
+
       # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
-      - select.tapparella_bagno_identify
       - select.tapparella_bagno_calibration_mode
       - switch.tapparella_bagno_led_if_on
       - switch.tapparella_bagno_led_in_dark
 
       # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)
-      - select.tapparella_camera_identify
       - select.tapparella_camera_calibration_mode
       - switch.tapparella_camera_led_if_on
       - switch.tapparella_camera_led_in_dark
@@ -51,7 +50,6 @@ logbook:
       - select.luce_cucina_power_on_behavior
 
       # BTI-4411C - Luce Sala (0x00047400002bd3ad)
-      - select.luce_sala_identify
       - number.luce_sala_ballast_maximum_level
       - number.luce_sala_ballast_minimum_level
       - switch.luce_sala_device_mode
@@ -78,7 +76,6 @@ logbook:
       - select.luce_trono_power_on_behavior
 
       # BTI-4411C - Luce Camera (0x0004740000292ec9)
-      - select.luce_camera_identify
       - number.luce_camera_ballast_maximum_level
       - number.luce_camera_ballast_minimum_level
       - switch.luce_camera_device_mode
@@ -88,18 +85,6 @@ logbook:
 
       # BTI-3584C - Luce Balcone (0x000474000015de50)
       - select.luce_balcone_power_on_behavior
-
-      # BTI-NT4411C - Dimmer 0x0004740001583a4a (N/A)
-      - select.0x0004740001583a4a_identify
-      - number.0x0004740001583a4a_ballast_maximum_level
-      - number.0x0004740001583a4a_ballast_minimum_level
-      - switch.0x0004740001583a4a_device_mode
-      - select.0x0004740001583a4a_power_on_behavior
-      - switch.0x0004740001583a4a_led_if_on
-      - switch.0x0004740001583a4a_led_in_dark
-
-      # BTI-3584C - Wired Relay 0x0004740000249a4e (N/A)
-      - select.0x0004740000249a4e_power_on_behavior
 
 ######################################################################
 # BTicino Package - Recorder
@@ -109,37 +94,36 @@ recorder:
   exclude:
     entities:
       # BTI-NT4027C - Tapparella Cucina Grande (0x00047400015ada4b)
-      - select.tapparella_cucina_grande_identify
       - select.tapparella_cucina_grande_calibration_mode
       - switch.tapparella_cucina_grande_led_if_on
       - switch.tapparella_cucina_grande_led_in_dark
 
       # BTI-NT4027C - Tapparella Cucina Piccola (0x00047400015adb10)
-      - select.tapparella_cucina_piccola_identify
       - select.tapparella_cucina_piccola_calibration_mode
       - switch.tapparella_cucina_piccola_led_if_on
       - switch.tapparella_cucina_piccola_led_in_dark
 
       # BTI-NT4027C - Tapparella Sala (0x00047400015ada3d)
-      - select.tapparella_sala_identify
       - select.tapparella_sala_calibration_mode
       - switch.tapparella_sala_led_if_on
       - switch.tapparella_sala_led_in_dark
 
       # BTI-NT4027C - Tapparella Studio (0x00047400015a3e19)
-      - select.tapparella_studio_identify
       - select.tapparella_studio_calibration_mode
       - switch.tapparella_studio_led_if_on
       - switch.tapparella_studio_led_in_dark
 
+      # BTI-N4027C - Tenda Bagno (0x0004740001729a60)
+      - select.tenda_bagno_calibration_mode
+      - switch.tenda_bagno_led_if_on
+      - switch.tenda_bagno_led_in_dark
+
       # BTI-NT4027C - Tapparella Bagno (0x000474000159053e)
-      - select.tapparella_bagno_identify
       - select.tapparella_bagno_calibration_mode
       - switch.tapparella_bagno_led_if_on
       - switch.tapparella_bagno_led_in_dark
 
       # BTI-NT4027C - Tapparella Camera (0x00047400015ada3f)
-      - select.tapparella_camera_identify
       - select.tapparella_camera_calibration_mode
       - switch.tapparella_camera_led_if_on
       - switch.tapparella_camera_led_in_dark
@@ -154,7 +138,6 @@ recorder:
       - select.luce_cucina_power_on_behavior
 
       # BTI-4411C - Luce Sala (0x00047400002bd3ad)
-      - select.luce_sala_identify
       - number.luce_sala_ballast_maximum_level
       - number.luce_sala_ballast_minimum_level
       - switch.luce_sala_device_mode
@@ -181,7 +164,6 @@ recorder:
       - select.luce_trono_power_on_behavior
 
       # BTI-4411C - Luce Camera (0x0004740000292ec9)
-      - select.luce_camera_identify
       - number.luce_camera_ballast_maximum_level
       - number.luce_camera_ballast_minimum_level
       - switch.luce_camera_device_mode
@@ -191,15 +173,3 @@ recorder:
 
       # BTI-3584C - Luce Balcone (0x000474000015de50)
       - select.luce_balcone_power_on_behavior
-
-      # BTI-NT4411C - Dimmer 0x0004740001583a4a (N/A)
-      - select.0x0004740001583a4a_identify
-      - number.0x0004740001583a4a_ballast_maximum_level
-      - number.0x0004740001583a4a_ballast_minimum_level
-      - switch.0x0004740001583a4a_device_mode
-      - select.0x0004740001583a4a_power_on_behavior
-      - switch.0x0004740001583a4a_led_if_on
-      - switch.0x0004740001583a4a_led_in_dark
-
-      # BTI-3584C - Wired Relay 0x0004740000249a4e (N/A)
-      - select.0x0004740000249a4e_power_on_behavior

@@ -1,5 +1,6 @@
 # Home Assistant Components
 .HA_VERSION
+.ha_run.lock
 .storage
 .uuid
 deps/
