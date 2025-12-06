@@ -27,8 +27,10 @@ logbook:
       #- lock.ff590mr_lock_no_pin
       - sensor.ff590mr_car
       - sensor.ff590mr_charging_power
+      - sensor.ff590mr_data_mode
       - sensor.ff590mr_distance_reset
       - sensor.ff590mr_distance_start
+      - sensor.ff590mr_end_of_charge
       - sensor.ff590mr_fuel_level
       - sensor.ff590mr_geofencing_violation
       - sensor.ff590mr_ignition_state
@@ -73,8 +75,10 @@ recorder:
       #- lock.ff590mr_lock_no_pin
       - sensor.ff590mr_car
       - sensor.ff590mr_charging_power
+      - sensor.ff590mr_data_mode
       - sensor.ff590mr_distance_reset
       - sensor.ff590mr_distance_start
+      - sensor.ff590mr_end_of_charge
       - sensor.ff590mr_fuel_level
       - sensor.ff590mr_geofencing_violation
       - sensor.ff590mr_ignition_state

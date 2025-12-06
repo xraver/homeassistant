@@ -7,7 +7,7 @@ template:
       - name: "alarms"
         unique_id: alarms
         state: "{{ is_state('group.alarms', 'on') }}"
-        device_class: safety
+        device_class: problem
         icon: >
           {% if is_state('group.alarms', 'on') %}
             mdi:alarm-light

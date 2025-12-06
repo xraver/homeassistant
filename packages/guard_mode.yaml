@@ -36,8 +36,7 @@ template:
   - binary_sensor:
       - name: "guard_mode"
         unique_id: guard_mode
-        state: "{{ is_state('input_boolean.guard_mode', 'off') }}"
-        device_class: safety
+        state: "{{ is_state('input_boolean.guard_mode', 'on') }}"
         icon: >
           {% if is_state('input_boolean.guard_mode', 'on') %}
             mdi:shield-home

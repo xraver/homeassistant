@@ -28,7 +28,7 @@ template:
         state: "{{ is_state('binary_sensor.windowstatusfrontleft', 'on') }}"
         device_class: opening
         icon: >
-          {% if is_state('binary_sensor.windowstatusfrontleft', 'on') %}
+          {% if not is_state('binary_sensor.windowstatusfrontleft', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
@@ -43,7 +43,7 @@ template:
         state: "{{ is_state('binary_sensor.windowstatusfrontright', 'on') }}"
         device_class: opening
         icon: >
-          {% if is_state('binary_sensor.windowstatusfrontright', 'on') %}
+          {% if not is_state('binary_sensor.windowstatusfrontright', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
@@ -58,7 +58,7 @@ template:
         state: "{{ is_state('binary_sensor.windowstatusrearleft', 'on') }}"
         device_class: opening
         icon: >
-          {% if is_state('binary_sensor.windowstatusrearleft', 'on') %}
+          {% if not is_state('binary_sensor.windowstatusrearleft', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
@@ -73,7 +73,7 @@ template:
         state: "{{ is_state('binary_sensor.windowstatusrearright', 'on') }}"
         device_class: opening
         icon: >
-          {% if is_state('binary_sensor.windowstatusrearright', 'on') %}
+          {% if not is_state('binary_sensor.windowstatusrearright', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
