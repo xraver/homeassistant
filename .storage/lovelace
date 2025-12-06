@@ -2896,6 +2896,561 @@
               ]
             }
           ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 3,
+          "title": "Stanze",
+          "path": "rooms",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Zona Giorno",
+                  "heading_style": "title",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.valvola_zona_giorno_temperature"
+                    }
+                  ]
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/zona_giorno_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_zona_giorno",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_armadio",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.zona_giorno",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.climatizzatore_zona_giorno",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Cucina",
+                  "heading_style": "title",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.valvola_cucina_temperature"
+                    }
+                  ],
+                  "icon": "mdi:faucet-variant"
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/cucina_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_cucina",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_vetrine",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-position"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.tapparella_cucina_grande",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": false,
+                  "state_content": "current_position"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-position"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.tapparella_cucina_piccola",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": false,
+                  "state_content": "current_position"
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.cucina",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "media_player.tv_cucina"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Sala",
+                  "heading_style": "title",
+                  "icon": "mdi:television",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.valvola_sala_temperature"
+                    }
+                  ]
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/sala_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "light-brightness"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_sala",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-position"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.tapparella_sala",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "state_content": "current_position"
+                },
+                {
+                  "type": "tile",
+                  "entity": "media_player.sony_kd_55xf8596",
+                  "features_position": "bottom",
+                  "vertical": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.sala",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Studio",
+                  "heading_style": "title",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.valvola_studio_temperature"
+                    }
+                  ],
+                  "icon": "mdi:desk"
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/studio_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_studio",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-position"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.tapparella_studio",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "state_content": "current_position"
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.studio",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.climatizzatore_studio",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Bagno Piccolo",
+                  "heading_style": "title",
+                  "icon": "mdi:shower-head",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.valvola_bagno_piccolo_temperature"
+                    }
+                  ]
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/bagno_off.jpg"
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.bagno_piccolo",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ]
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-position"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.tenda_bagno",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "state_content": "current_position"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Zona Notte",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/zona_notte_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_zona_notte",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.climatizzatore_zona_notte",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-hvac-modes"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Bagno Grande",
+                  "heading_style": "title",
+                  "icon": "mdi:shower",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.valvola_bagno_grande_temperature"
+                    }
+                  ]
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/bagno_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_bagno",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_specchio",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_trono",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-position"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.tapparella_bagno",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "state_content": "current_position"
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.bagno_grande",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Camera",
+                  "heading_style": "title",
+                  "icon": "mdi:bed-empty",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.valvola_camera_temperature"
+                    }
+                  ]
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/camera_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "light-brightness"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_camera",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                },
+                {
+                  "features": [
+                    {
+                      "type": "cover-position"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "cover.tapparella_camera",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "state_content": "current_position"
+                },
+                {
+                  "type": "tile",
+                  "entity": "climate.camera",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "climate-preset-modes",
+                      "style": "dropdown"
+                    }
+                  ]
+                },
+                {
+                  "type": "tile",
+                  "entity": "media_player.tv_camera"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Balcone",
+                  "heading_style": "title",
+                  "badges": [
+                    {
+                      "type": "entity",
+                      "entity": "sensor.temperatura_balcone_temperature"
+                    }
+                  ]
+                },
+                {
+                  "type": "picture",
+                  "image": "/local/images/rooms/balcone_off.jpg"
+                },
+                {
+                  "features": [
+                    {
+                      "type": "toggle"
+                    }
+                  ],
+                  "type": "tile",
+                  "entity": "light.luce_balcone",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "hide_state": true
+                }
+              ]
+            }
+          ],
+          "cards": [],
+          "dense_section_placement": false,
+          "icon": "mdi:devices",
+          "header": {}
+        }
+      ]
     }
   }
 }
