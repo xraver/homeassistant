@@ -1,0 +1,37 @@
+######################################################################
+# Alarm Package - Main
+######################################################################
+
+homeassistant:
+  customize:
+
+    ######################################################################
+    # Alarm Package - Main - General Package Settings
+    ######################################################################
+
+    package.alarm:
+      customize: &customize
+        package: 'alarm'
+        version: 1.1.0
+
+    ######################################################################
+    # Alarm Package - Main - Entities
+    ######################################################################
+
+    group.alarms:
+      <<: *customize
+    binary_sensor.alarms:
+      friendly_name: "Allarmi"
+      <<: *customize
+    input_boolean.generic_alarm:
+      device_class: safety
+      <<: *customize
+    input_boolean.door_alarm:
+      device_class: safety
+      <<: *customize
+    input_boolean.water_alarm:
+      device_class: safety
+      <<: *customize
+    input_boolean.car_alarm:
+      device_class: safety
+      <<: *customize

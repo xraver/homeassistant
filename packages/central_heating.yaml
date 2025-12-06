@@ -19,6 +19,7 @@ homeassistant:
     ######################################################################
 
     binary_sensor.central_heating:
+      friendly_name: "Riscaldamento Centralizzato"
       <<: *customize
     input_boolean.central_heating:
       <<: *customize
@@ -29,18 +30,17 @@ homeassistant:
 # Central Heating Package - Binary Sensor
 ######################################################################
 
-binary_sensor:
-  - platform: template
-    sensors:
-      central_heating:
-        friendly_name: Riscaldamento Centralizzato
-        value_template: >-
-          {{ is_state('input_boolean.central_heating', 'on') }}
-        icon_template: >-
+template:
+  - binary_sensor:
+      - name: "central_heating"
+        unique_id: central_heating
+        state: "{{ is_state('input_boolean.central_heating', 'on') }}"
+        device_class: heat
+        icon: >
           {% if is_state('input_boolean.central_heating', 'on') %}
-              mdi:radiator
+            mdi:radiator
           {% else %}
-              mdi:radiator-disabled
+            mdi:radiator-disabled
           {% endif %}
 
 ######################################################################

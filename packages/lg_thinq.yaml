@@ -20,34 +20,24 @@ homeassistant:
 
     binary_sensor.lavatrice_avvio_remoto:
       friendly_name: "Avvio Remoto"
-
     event.lavatrice_notification:
       friendly_name: "Notifiche"
-
     event.lavatrice_errore:
       friendly_name: "Errori"
-
     number.lavatrice_delayed_end:
       friendly_name: "Avvio ritardato"
-
     sensor.lavatrice_cicli:
       friendly_name: "Cicli"
-
     sensir.lavatrice_delayed_end:
       friendly_name: "Avvio ritardato"
-
     sensor.lavatrice_stato_attuale:
       friendly_name: "Stato attuale"
-
     sensor.lavatrice_tempo_rimanente:
       friendly_name: "Tempo rimanente"
-
     sensor.lavatrice_total_time:
       friendly_name: "Tempo totale"
-
     select.lavatrice_operation:
       friendly_name: "Programma Lavaggio"
-
     switch.lavatrice_power:
       friendly_name: "Accensione"
 

@@ -2,19 +2,17 @@
 # Alarm Package - Alarm Engine - Binary Sensors
 ######################################################################
 
-binary_sensor:
-  # Generic Alarms
-  - platform: template
-    sensors:
-      alarms:
-        friendly_name: Allarmi
-        value_template: >-
-          {{ is_state('group.alarms', 'on') }}
-        icon_template: >-
+template:
+  - binary_sensor:
+      - name: "alarms"
+        unique_id: alarms
+        state: "{{ is_state('group.alarms', 'on') }}"
+        device_class: safety
+        icon: >
           {% if is_state('group.alarms', 'on') %}
-             mdi:alarm-light
+            mdi:alarm-light
           {% else %}
-             mdi:alarm-light-outline
+            mdi:alarm-light-outline
           {% endif %}
 
 ######################################################################
@@ -22,6 +20,7 @@ binary_sensor:
 ######################################################################
 
 automation:
+
   ######################################################################
   # Alarm Automation: Aknowledge Alarms
   #

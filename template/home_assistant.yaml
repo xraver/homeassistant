@@ -1,0 +1,53 @@
+######################################################################
+# Sensor: Home Mode
+######################################################################
+
+- sensor:
+    - name: "home_mode"
+      unique_id: home_mode
+      state: >
+        {% if is_state('input_boolean.home_mode_day', 'on') %}
+          giorno
+        {% elif is_state('input_boolean.home_mode_night', 'on') %}
+          notte
+        {% elif is_state('input_boolean.home_mode_away', 'on') %}
+          vacanza
+        {% endif %}
+      icon: >
+        {% if is_state('input_boolean.home_mode_day', 'on') %}
+          mdi:white-balance-sunny
+        {% elif is_state('input_boolean.home_mode_night', 'on') %}
+          mdi:weather-night
+        {% elif is_state('input_boolean.home_mode_away', 'on') %}
+          mdi:airplane-takeoff
+        {% endif %}
+
+######################################################################
+# Binary Sensor: Text Notification
+######################################################################
+
+- binary_sensor:
+    - name: "text_notifications"
+      unique_id: text_notifications
+      state: "{{ is_state('input_boolean.text_notifications', 'on') }}"
+      icon: >
+        {% if is_state('input_boolean.text_notifications', 'on') %}
+          mdi:message-bulleted
+        {% else %}
+          mdi:message-bulleted-off
+        {% endif %}
+
+######################################################################
+# Binary Sensor: Speech Notification
+######################################################################
+
+- binary_sensor:
+    - name: "speech_notifications"
+      unique_id: speech_notifications
+      state: "{{ is_state('input_boolean.speech_notifications', 'on') }}"
+      icon: >
+        {% if is_state('input_boolean.speech_notifications', 'on') %}
+          mdi:speaker-wireless
+        {% else %}
+          mdi:speaker-off
+        {% endif %}

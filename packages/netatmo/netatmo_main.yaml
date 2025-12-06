@@ -12,7 +12,7 @@ homeassistant:
     package.netatmo:
       customize: &customize
         package: 'netatmo'
-        version: 1.3.0
+        version: 1.4.0
 
     ######################################################################
     # Netatmo Package - Main - Entities
@@ -21,32 +21,46 @@ homeassistant:
     group.climate:
       <<: *customize
     sensor.valvola_zona_giorno_temperature:
+      friendly_name: "Temperatura Zona Giorno"
       <<: *customize
     sensor.valvola_cucina_temperature:
+      friendly_name: "Temperatura Cucina"
       <<: *customize
     sensor.valvola_sala_temperature:
+      friendly_name: "Temperatura Sala"
       <<: *customize
     sensor.valvola_studio_temperature:
+      friendly_name: "Temperatura Studio"
       <<: *customize
     sensor.valvola_bagno_piccolo_temperature:
+      friendly_name: "Temperatura Bagno Piccolo"
       <<: *customize
     sensor.valvola_bagno_grande_temperature:
+      friendly_name: "Temperatura Bagno Grande"
       <<: *customize
     sensor.valvola_camera_temperature:
+      friendly_name: "Temperatura Camera"
       <<: *customize
     sensor.valvola_zona_giorno_state:
+      friendly_name: "Stato Valvola Zona Giorno"
       <<: *customize
     sensor.valvola_cucina_state:
+      friendly_name: "Stato Valvola Cucina"
       <<: *customize
     sensor.valvola_sala_state:
+      friendly_name: "Stato Valvola Saòa"
       <<: *customize
     sensor.valvola_studio_state:
+      friendly_name: "Stato Valvola Studio"
       <<: *customize
     sensor.valvola_bagno_piccolo_state:
+      friendly_name: "Stato Valvola Bagno Piccolo"
       <<: *customize
     sensor.valvola_bagno_grande_state:
+      friendly_name: "Stato Valvola Bagno Grande"
       <<: *customize
     sensor.valvola_camera_state:
+      friendly_name: "Stato Valvola Camera"
       <<: *customize
     input_boolean.valvola_zona_giorno:
       <<: *customize

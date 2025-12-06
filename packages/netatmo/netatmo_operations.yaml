@@ -3,7 +3,10 @@
 ######################################################################
 
 automation:
-  # Notification when a device becomes unavailable
+
+  ######################################################################
+  # Netatmo: Notification when a device becomes unavailable
+  ######################################################################
   - alias: "Netatmo: Notifica disconnessione"
     id: "netatmo_notifica_disconnessione"
 

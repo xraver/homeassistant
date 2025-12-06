@@ -495,7 +495,7 @@
               "show_name": false,
               "show_state": false,
               "show_icon": true,
-              "entity": "binary_sensor.home_mode",
+              "entity": "sensor.home_mode",
               "color": ""
             },
             {

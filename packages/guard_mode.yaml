@@ -12,13 +12,14 @@ homeassistant:
     package.guard_mode:
       customize: &customize
         package: 'guard_mode'
-        version: 1.0.0
+        version: 1.1.0
 
     ######################################################################
     # Guard Mode Package - Customizations - Entities
     ######################################################################
 
     binary_sensor.guard_mode:
+      friendly_name: Modalità Guardia
       <<: *customize
     input_boolean.guard_mode:
       <<: *customize
@@ -31,18 +32,17 @@ homeassistant:
 # Guard Mode Package - Binary Sensor
 ######################################################################
 
-binary_sensor:
-  - platform: template
-    sensors:
-      guard_mode:
-        friendly_name: Modalità Guardia
-        value_template: >-
-          {{ is_state('input_boolean.guard_mode', 'on') }}
-        icon_template: >-
+template:
+  - binary_sensor:
+      - name: "guard_mode"
+        unique_id: guard_mode
+        state: "{{ is_state('input_boolean.guard_mode', 'off') }}"
+        device_class: safety
+        icon: >
           {% if is_state('input_boolean.guard_mode', 'on') %}
-             mdi:shield-home
+            mdi:shield-home
           {% else %}
-             mdi:shield-off
+            mdi:shield-off
           {% endif %}
 
 ######################################################################
@@ -60,6 +60,7 @@ input_boolean:
 ######################################################################
 
 automation:
+
   ######################################################################
   # Guard Mode: Enable
   ######################################################################

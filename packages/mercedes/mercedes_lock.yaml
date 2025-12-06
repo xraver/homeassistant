@@ -2,12 +2,11 @@
 # Mercedes Package - Switch
 ######################################################################
 
-#switch:
-#  - platform: template
-#    switches:
-#      ff590mr_lock:
-#        friendly_name: Blocco Auto
-#        value_template: "{{ is_state('binary_sensor.ff590mr_locked', 'off') }}"
+#template:
+#  - switch:
+#      - name: ff590mr_lock
+#        unique_id: ff590mr_lock
+#        state: "{{ is_state('binary_sensor.ff590mr_locked', 'off') }}"
 #        turn_on:
 #          - action: mbapi2020.doors_lock
 #            data:
@@ -16,23 +15,28 @@
 #          - action: mbapi2020.doors_unlock
 #            data:
 #              vin: !secret mb_vin
-#        icon_template: >-
+#        icon: >-
 #          {% if is_state('binary_sensor.ff590mr_locked', 'off') %}
 #            mdi:lock
 #          {% else %}
 #            mdi:lock-open
 #          {% endif %}
 
-lock:
-  - platform: template
-    name: ff590mr_lock_no_pin
-    value_template: "{{ is_state('binary_sensor.ff590mr_locked', 'off') }}"
-    optimistic: true
-    lock:
-      - action: mbapi2020.doors_lock
-        data:
-          vin: !secret mb_vin
-    unlock:
-      - action: mbapi2020.doors_unlock
-        data:
-          vin: !secret mb_vin
+######################################################################
+# Mercedes Package - Lock
+######################################################################
+
+template:
+  - lock:
+      - name: "ff590mr_lock_no_pin"
+        unique_id: ff590mr_lock_no_pin
+        state: "{{ is_state('binary_sensor.ff590mr_locked', 'off') }}"
+        optimistic: true
+        lock:
+          - action: mbapi2020.doors_lock
+            data:
+              vin: !secret mb_vin
+        unlock:
+          - action: mbapi2020.doors_unlock
+            data:
+              vin: !secret mb_vin

@@ -2,7 +2,8 @@
 # Mercedes Package - Doors Sensors
 ######################################################################
 
-binary_sensor:
+template:
+
   ######################################################################
   # Binary Sensor: Doors Lock
   #
@@ -11,23 +12,22 @@ binary_sensor:
   # 1 -> internal locked (e.g. driving)
   # 2 -> external locked (e.g. locked by key)
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_locked:
-        friendly_name: Blocco Vettura
-        value_template: >-
-          {% if is_state('sensor.ff590mr_lock', '0') %}
-            true
-          {% else %}
-            false
-          {% endif %}
-        icon_template: >-
-          {% if not is_state('sensor.ff590mr_lock', '0') %}
-            mdi:lock
-          {% else %}
-            mdi:lock-open
-          {% endif %}
-        device_class: lock
+  - binary_sensor:
+        - name: ff590mr_locked"
+          unique_id: ff590mr_locked
+          state: >
+            {% if is_state('sensor.ff590mr_lock', '0') %}
+              on
+            {% else %}
+              off
+            {% endif %}
+          device_class: door   # oppure safety, connectivity, problem… lock non è supportato
+          icon: >
+            {% if not is_state('sensor.ff590mr_lock', '0') %}
+              mdi:lock
+            {% else %}
+              mdi:lock-open
+            {% endif %}
 
   ######################################################################
   # Binary Sensor: Doors Closed
@@ -36,125 +36,101 @@ binary_sensor:
   #   1 -> closed
   #   0 -> opened
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_doors_closed:
-        friendly_name: Porte
-        value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorStatusOverall', '0') }}
-        icon_template: >-
+  - binary_sensor:
+      - name: "ff590mr_doors_closed"
+        unique_id: ff590mr_doors_closed
+        state: "{{ is_state_attr('sensor.ff590mr_lock', 'doorStatusOverall', '0') }}"
+        device_class: opening
+        icon: >
           {% if is_state('sensor.ff590mr_lock', '2') %}
             mdi:car-door-lock
+          {% elif is_state_attr('sensor.ff590mr_lock', 'doorStatusOverall', '1') %}
+            mdi:car-door
           {% else %}
-            {% if is_state_attr('sensor.ff590mr_lock', 'doorStatusOverall', '1') %}
-              mdi:car-door
-            {% else %}
-              mdi:car-door
-            {% endif %}
+            mdi:car-door
           {% endif %}
-        device_class: opening
 
   ######################################################################
   # Binary Sensor: Door Front Left
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_door_front_left:
-        friendly_name: Anteriore Sinistra
-        value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontleft', true) }}
-        icon_template: >-
-          {% if is_state('sensor.ff590mr_lock', '2',) %}
-            mdi:car-door-lock
-          {% else %}
-            {% if not is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontleft', true) %}
-              mdi:car-door
-            {% else %}
-              mdi:car-door
-            {% endif %}
-          {% endif %}
+  - binary_sensor:
+      - name: "ff590mr_door_front_left"
+        unique_id: ff590mr_door_front_left
+        state: "{{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontleft', true) }}"
         device_class: opening
+        icon: >
+          {% if is_state('sensor.ff590mr_lock', '2') %}
+            mdi:car-door-lock
+          {% elif not is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontleft', true) %}
+            mdi:car-door
+          {% else %}
+            mdi:car-door
+          {% endif %}
 
   ######################################################################
   # Binary Sensor: Door Front Right
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_door_front_right:
-        friendly_name: Anteriore Destra
-        value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontright', true) }}
-        icon_template: >-
-          {% if is_state('sensor.ff590mr_lock', '2',) %}
-            mdi:car-door-lock
-          {% else %}
-            {% if not is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontright', true) %}
-              mdi:car-door
-            {% else %}
-              mdi:car-door
-            {% endif %}
-          {% endif %}
+  - binary_sensor:
+      - name: "ff590mr_door_front_right"
+        unique_id: ff590mr_door_front_right
+        state: "{{ is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontright', true) }}"
         device_class: opening
+        icon: >
+          {% if is_state('sensor.ff590mr_lock', '2') %}
+            mdi:car-door-lock
+          {% elif not is_state_attr('sensor.ff590mr_lock', 'doorstatusfrontright', true) %}
+            mdi:car-door
+          {% else %}
+            mdi:car-door
+          {% endif %}
 
   ######################################################################
   # Binary Sensor: Door Rear Left
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_door_rear_left:
-        friendly_name: Posteriore Sinistra
-        value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearleft', true) }}
-        icon_template: >-
-          {% if is_state('sensor.ff590mr_lock', '2',) %}
-            mdi:car-door-lock
-          {% else %}
-            {% if not is_state_attr('sensor.ff590mr_lock', 'doorstatusrearleft', true) %}
-              mdi:car-door
-            {% else %}
-              mdi:car-door
-            {% endif %}
-          {% endif %}
+  - binary_sensor:
+      - name: "ff590mr_door_rear_left"
+        unique_id: ff590mr_door_rear_left
+        state: "{{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearleft', true) }}"
         device_class: opening
+        icon: >
+          {% if is_state('sensor.ff590mr_lock', '2') %}
+            mdi:car-door-lock
+          {% elif not is_state_attr('sensor.ff590mr_lock', 'doorstatusrearleft', true) %}
+            mdi:car-door
+          {% else %}
+            mdi:car-door
+          {% endif %}
 
   ######################################################################
   # Binary Sensor: Door Rear Right
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_door_rear_right:
-        friendly_name: Posteriore Destra
-        value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearright', true) }}
-        icon_template: >-
-          {% if is_state('sensor.ff590mr_lock', '2',) %}
-            mdi:car-door-lock
-          {% else %}
-            {% if not is_state_attr('sensor.ff590mr_lock', 'doorstatusrearright', true) %}
-              mdi:car-door
-            {% else %}
-              mdi:car-door
-            {% endif %}
-          {% endif %}
+  - binary_sensor:
+      - name: "ff590mr_door_rear_right"
+        unique_id: ff590mr_door_rear_right
+        state: "{{ is_state_attr('sensor.ff590mr_lock', 'doorstatusrearright', true) }}"
         device_class: opening
+        icon: >
+          {% if is_state('sensor.ff590mr_lock', '2') %}
+            mdi:car-door-lock
+          {% elif not is_state_attr('sensor.ff590mr_lock', 'doorstatusrearright', true) %}
+            mdi:car-door
+          {% else %}
+            mdi:car-door
+          {% endif %}
 
   ######################################################################
   # Binary Sensor: Decklid
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_decklid:
-        friendly_name: Bagagliaio
-        value_template: >-
-          {{ is_state_attr('sensor.ff590mr_lock', 'decklidstatus', true) }}
-        icon_template: >-
-          {% if is_state('sensor.ff590mr_lock', '2',) %}
-            mdi:car-door-lock
-          {% else %}
-            {% if not is_state_attr('sensor.ff590mr_lock', 'decklidstatus', true) %}
-              mdi:car-door
-            {% else %}
-              mdi:car-door
-            {% endif %}
-          {% endif %}
+  - binary_sensor:
+      - name: "ff590mr_decklid"
+        unique_id: ff590mr_decklid
+        state: "{{ is_state_attr('sensor.ff590mr_lock', 'decklidstatus', true) }}"
         device_class: opening
+        icon: >
+          {% if is_state('sensor.ff590mr_lock', '2') %}
+            mdi:car-door-lock
+          {% elif not is_state_attr('sensor.ff590mr_lock', 'decklidstatus', true) %}
+            mdi:car-door
+          {% else %}
+            mdi:car-door
+          {% endif %}

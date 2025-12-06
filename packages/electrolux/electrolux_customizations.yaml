@@ -4,7 +4,11 @@
 
 homeassistant:
   customize:
+
+    ######################################################################
     # Hoven Electrolyx EOB9S21WX
+    ######################################################################
+
     binary_sensor.electrolux_forno_doorstate:
       friendly_name: "Porta forno"
     button.electrolux_forno_executecommand:
@@ -66,7 +70,10 @@ homeassistant:
     switch.electrolux_forno_cavitylight:
       friendly_name: "Luce forno"
 
+    ######################################################################
     # Refrigerator AEG NSC7P751DS
+    ######################################################################
+
     binary_sensor.aeg_frigo_freezer_doorstate:
       friendly_name: "Porta Freezer"
     binary_sensor.aeg_frigo_fridge_doorstate:

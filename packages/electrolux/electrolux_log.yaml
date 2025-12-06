@@ -5,7 +5,9 @@
 logbook:
   exclude:
     entities:
+      ######################################################################
       # Hoven Electrolyx EOB9S21WX
+      ######################################################################
       - select.electrolux_forno_program
       - sensor.electrolux_forno_connectivitystate
       - sensor.electrolux_forno_alerts
@@ -23,7 +25,9 @@ logbook:
       - sensor.electrolux_forno_watertankempty
       - sensor.electrolux_forno_watertrayinsertionstate
 
+      ######################################################################
       # Refrigerator AEG NSC7P751DS
+      ######################################################################
       - binary_sensor.aeg_frigo_freezer_doorstate
       - binary_sensor.aeg_frigo_fridge_doorstate
       - button.aeg_frigo_airfilterstatereset

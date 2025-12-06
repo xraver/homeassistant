@@ -2,6 +2,16 @@
 # Customization: Home Assistant
 ######################################################################
 
+sensor.home_mode:
+  friendly_name: "Modalità Casa"
+  device_class: enum
+
+binary_sensor.text_notifications:
+  friendly_name: "Notifiche testuali"
+
+binary_sensor.speech_notifications:
+  friendly_name: "Notifiche vocali"
+
 script.homeassistant_restart:
   icon: mdi:restart
 

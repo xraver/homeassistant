@@ -2,147 +2,134 @@
 # Netatmo Package - Sensor
 ######################################################################
 
-sensor:
+template:
+
   ######################################################################
   # Sensor: Temperature from Radiator Valve
   ######################################################################
-  - platform: template
-    sensors:
-      valvola_zona_giorno_temperature:
-        friendly_name: "Temperatura Zona Giorno"
-        value_template: "{{ state_attr('climate.zona_giorno', 'current_temperature') }}"
-        unit_of_measurement: '°C'
+  - sensor:
+      - name: "valvola_zona_giorno_temperature"
+        unique_id: valvola_zona_giorno_temperature
+        state: "{{ state_attr('climate.zona_giorno', 'current_temperature') }}"
+        unit_of_measurement: "°C"
         device_class: temperature
 
-  - platform: template
-    sensors:
-      valvola_cucina_temperature:
-        friendly_name: "Temperatura Cucina"
-        value_template: "{{ state_attr('climate.cucina', 'current_temperature') }}"
-        unit_of_measurement: '°C'
+  - sensor:
+      - name: "valvola_cucina_temperature"
+        unique_id: valvola_cucina_temperature
+        state: "{{ state_attr('climate.cucina', 'current_temperature') }}"
+        unit_of_measurement: "°C"
         device_class: temperature
 
-  - platform: template
-    sensors:
-      valvola_sala_temperature:
-        friendly_name: "Temperatura Sala"
-        value_template: "{{ state_attr('climate.sala', 'current_temperature') }}"
-        unit_of_measurement: '°C'
+  - sensor:
+      - name: "valvola_sala_temperature"
+        unique_id: valvola_sala_temperature
+        state: "{{ state_attr('climate.sala', 'current_temperature') }}"
+        unit_of_measurement: "°C"
         device_class: temperature
 
-  - platform: template
-    sensors:
-      valvola_studio_temperature:
-        friendly_name: "Temperatura Studio"
-        value_template: "{{ state_attr('climate.studio', 'current_temperature') }}"
-        unit_of_measurement: '°C'
+  - sensor:
+      - name: "valvola_studio_temperature"
+        unique_id: valvola_studio_temperature
+        state: "{{ state_attr('climate.studio', 'current_temperature') }}"
+        unit_of_measurement: "°C"
         device_class: temperature
 
-  - platform: template
-    sensors:
-      valvola_bagno_piccolo_temperature:
-        friendly_name: "Temperatura Bagno Piccolo"
-        value_template: "{{ state_attr('climate.bagno_piccolo', 'current_temperature') }}"
-        unit_of_measurement: '°C'
+  - sensor:
+      - name: "valvola_bagno_piccolo_temperature"
+        unique_id: valvola_bagno_piccolo_temperature
+        state: "{{ state_attr('climate.bagno_piccolo', 'current_temperature') }}"
+        unit_of_measurement: "°C"
         device_class: temperature
 
-  - platform: template
-    sensors:
-      valvola_bagno_grande_temperature:
-        friendly_name: "Temperatura Bagno Grande"
-        value_template: "{{ state_attr('climate.bagno_grande', 'current_temperature') }}"
-        unit_of_measurement: '°C'
+  - sensor:
+      - name: "valvola_bagno_grande_temperature"
+        unique_id: valvola_bagno_grande_temperature
+        state: "{{ state_attr('climate.bagno_grande', 'current_temperature') }}"
+        unit_of_measurement: "°C"
         device_class: temperature
 
-  - platform: template
-    sensors:
-      valvola_camera_temperature:
-        friendly_name: "Temperatura Camera"
-        value_template: "{{ state_attr('climate.camera', 'current_temperature') }}"
-        unit_of_measurement: '°C'
+  - sensor:
+      - name: "valvola_camera_temperature"
+        unique_id: valvola_camera_temperature
+        state: "{{ state_attr('climate.camera', 'current_temperature') }}"
+        unit_of_measurement: "°C"
         device_class: temperature
 
   ######################################################################
   # Sensor: State from Radiator Valve
   ######################################################################
-  - platform: template
-    sensors:
-      valvola_zona_giorno_state:
-        friendly_name: "Stato Valvola Zona Giorno"
-        value_template: "{{ state_attr('climate.zona_giorno', 'hvac_action') }}"
-        icon_template: >-
+  - sensor:
+      - name: "valvola_zona_giorno_state"
+        unique_id: valvola_zona_giorno_state
+        state: "{{ state_attr('climate.zona_giorno', 'hvac_action') }}"
+        icon: >
           {% if is_state_attr('climate.zona_giorno', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}
             mdi:radiator
           {% endif %}
 
-  - platform: template
-    sensors:
-      valvola_cucina_state:
-        friendly_name: "Stato Valvola Cucina"
-        value_template: "{{ state_attr('climate.cucina', 'hvac_action') }}"
-        icon_template: >-
+  - sensor:
+      - name: "valvola_cucina_state"
+        unique_id: valvola_cucina_state
+        state: "{{ state_attr('climate.cucina', 'hvac_action') }}"
+        icon: >
           {% if is_state_attr('climate.cucina', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}
             mdi:radiator
           {% endif %}
 
-  - platform: template
-    sensors:
-      valvola_sala_state:
-        friendly_name: "Stato Valvola Sala"
-        value_template: "{{ state_attr('climate.sala', 'hvac_action') }}"
-        icon_template: >-
+  - sensor:
+      - name: "valvola_sala_state"
+        unique_id: valvola_sala_state
+        state: "{{ state_attr('climate.sala', 'hvac_action') }}"
+        icon: >
           {% if is_state_attr('climate.sala', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}
             mdi:radiator
           {% endif %}
 
-  - platform: template
-    sensors:
-      valvola_studio_state:
-        friendly_name: "Stato Valvola Studio"
-        value_template: "{{ state_attr('climate.studio', 'hvac_action') }}"
-        icon_template: >-
+  - sensor:
+      - name: "valvola_studio_state"
+        unique_id: valvola_studio_state
+        state: "{{ state_attr('climate.studio', 'hvac_action') }}"
+        icon: >
           {% if is_state_attr('climate.studio', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}
             mdi:radiator
           {% endif %}
 
-  - platform: template
-    sensors:
-      valvola_bagno_piccolo_state:
-        friendly_name: "Stato Valvola Bagno Piccolo"
-        value_template: "{{ state_attr('climate.bagno_piccolo', 'hvac_action') }}"
-        icon_template: >-
+  - sensor:
+      - name: "valvola_bagno_piccolo_state"
+        unique_id: valvola_bagno_piccolo_state
+        state: "{{ state_attr('climate.bagno_piccolo', 'hvac_action') }}"
+        icon: >
           {% if is_state_attr('climate.bagno_piccolo', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}
             mdi:radiator
           {% endif %}
 
-  - platform: template
-    sensors:
-      valvola_bagno_grande_state:
-        friendly_name: "Stato Valvola Bagno Grande"
-        value_template: "{{ state_attr('climate.bagno_grande', 'hvac_action') }}"
-        icon_template: >-
+  - sensor:
+      - name: "valvola_bagno_grande_state"
+        unique_id: valvola_bagno_grande_state
+        state: "{{ state_attr('climate.bagno_grande', 'hvac_action') }}"
+        icon: >
           {% if is_state_attr('climate.bagno_grande', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}
             mdi:radiator
           {% endif %}
 
-  - platform: template
-    sensors:
-      valvola_camera_state:
-        friendly_name: "Stato Valvola Camera"
-        value_template: "{{ state_attr('climate.camera', 'hvac_action') }}"
-        icon_template: >-
+  - sensor:
+      - name: "valvola_camera_state"
+        unique_id: valvola_camera_state
+        state: "{{ state_attr('climate.camera', 'hvac_action') }}"
+        icon: >
           {% if is_state_attr('climate.camera', 'hvac_action', 'idle') %}
             mdi:radiator-disabled
           {% else %}

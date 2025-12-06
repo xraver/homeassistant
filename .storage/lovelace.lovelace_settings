@@ -13,7 +13,7 @@
           "badges": [
             {
               "type": "entity",
-              "entity": "binary_sensor.home_mode",
+              "entity": "sensor.home_mode",
               "display_type": "minimal"
             },
             {

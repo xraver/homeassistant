@@ -4,6 +4,8 @@
 
 homeassistant:
   customize:
+
+    # Valves
     climate.zona_giorno:
       friendly_name: Valvola Zona Giorno
     climate.cucina:
@@ -18,8 +20,12 @@ homeassistant:
       friendly_name: Valvola Bagno Grande
     climate.camera:
       friendly_name: Valvola Camera
+
+    # Select
     select.netatmo_casa_ravera_testa:
       friendly_name: Programmazione Valvole
+
+    # Batteries
     sensor.valvola_zona_giorno_batteria:
       friendly_name: Batteria Valvola Zona Giorno
     sensor.valvola_cucina_batteria:

@@ -2,104 +2,79 @@
 # Mercedes Package - Windows Sensors
 ######################################################################
 
-binary_sensor:
+template:
+
   ######################################################################
   # Binary Sensor: Windows Closed
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_windows_closed_2:
-        friendly_name: Finestrini
-        value_template: >-
-          {{ is_state('binary_sensor.ff590mr_windows_closed', 'true') }}
-        icon_template: >-
-          {% if not is_state('binary_sensor.ff590mr_windows_closed', '2') %}
+  - binary_sensor:
+      - name: "ff590mr_windows_closed_2"
+        unique_id: ff590mr_windows_closed_2
+        state: "{{ is_state('binary_sensor.ff590mr_windows_closed', 'off') }}"
+        device_class: opening
+        icon: >
+          {% if not is_state('binary_sensor.ff590mr_windows_closed', 'off') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
           {% endif %}
-        device_class: opening
 
   ######################################################################
   # Binary Sensor: Window Front Left
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_front_left:
-        friendly_name: Anteriore Sinistro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontleft', '2') %}
+  - binary_sensor:
+      - name: "ff590mr_window_front_left"
+        unique_id: ff590mr_window_front_left
+        state: "{{ is_state('binary_sensor.windowstatusfrontleft', 'on') }}"
+        device_class: opening
+        icon: >
+          {% if is_state('binary_sensor.windowstatusfrontleft', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
           {% endif %}
-        device_class: opening
 
   ######################################################################
   # Binary Sensor: Window Front Right
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_front_right:
-        friendly_name: Anteriore Destro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusfrontright', '2') %}
+  - binary_sensor:
+      - name: "ff590mr_window_front_right"
+        unique_id: ff590mr_window_front_right
+        state: "{{ is_state('binary_sensor.windowstatusfrontright', 'on') }}"
+        device_class: opening
+        icon: >
+          {% if is_state('binary_sensor.windowstatusfrontright', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
           {% endif %}
-        device_class: opening
 
   ######################################################################
   # Binary Sensor: Window Rear Left
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_rear_left:
-        friendly_name: Posteriore Sinistro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearleft', '2') %}
+  - binary_sensor:
+      - name: "ff590mr_window_rear_left"
+        unique_id: ff590mr_window_rear_left
+        state: "{{ is_state('binary_sensor.windowstatusrearleft', 'on') }}"
+        device_class: opening
+        icon: >
+          {% if is_state('binary_sensor.windowstatusrearleft', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
           {% endif %}
-        device_class: opening
 
   ######################################################################
   # Binary Sensor: Window Rear Right
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_window_rear_right:
-        friendly_name: Posteriore Destro
-        value_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', '2') %}
-            false
-          {% else %}
-            true
-          {% endif %}
-        icon_template: >-
-          {% if is_state_attr('binary_sensor.ff590mr_windows_closed', 'windowstatusrearright', '2') %}
+  - binary_sensor:
+      - name: "ff590mr_window_rear_right"
+        unique_id: ff590mr_window_rear_right
+        state: "{{ is_state('binary_sensor.windowstatusrearright', 'on') }}"
+        device_class: opening
+        icon: >
+          {% if is_state('binary_sensor.windowstatusrearright', 'on') %}
             mdi:window-closed
           {% else %}
             mdi:window-open
           {% endif %}
-        device_class: opening

@@ -19,6 +19,7 @@ homeassistant:
     ######################################################################
 
     binary_sensor.home_assistant_error:
+      friendly_name: "Errore Generale"
       <<: *customize
     input_boolean.home_assistant_error:
       <<: *customize
@@ -31,18 +32,17 @@ homeassistant:
 # Errors Package - Binary Sensor
 ######################################################################
 
-binary_sensor:
-  - platform: template
-    sensors:
-      home_assistant_error:
-        friendly_name: Errore Generale
-        value_template: >-
-          {{ is_state('input_boolean.home_assistant_error', 'on') }}
-        icon_template: >-
+template:
+  - binary_sensor:
+      - name: "home_assistant_error"
+        unique_id: home_assistant_error
+        state: "{{ is_state('input_boolean.home_assistant_error', 'on') }}"
+        device_class: problem
+        icon: >
           {% if is_state('input_boolean.home_assistant_error', 'on') %}
-              mdi:alert-circle-outline
+            mdi:alert-circle-outline
           {% else %}
-              mdi:alert-circle-check-outline
+            mdi:alert-circle-check-outline
           {% endif %}
 
 ######################################################################
@@ -59,6 +59,7 @@ input_boolean:
 ######################################################################
 
 automation:
+
   ######################################################################
   # Error generation
   # - input_boolean.turn_on

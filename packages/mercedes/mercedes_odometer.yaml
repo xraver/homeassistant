@@ -2,58 +2,54 @@
 # Mercedes Package - Odometer Sensor
 ######################################################################
 
-sensor:
+template:
+
   ######################################################################
   # Sensor: Distance from Reset
   ######################################################################
-  #- platform: template
-  #  sensors:
-  #    ff590mr_distance_since_reset:
-  #      friendly_name: Distanza dal reset
+  #- sensors:
+  #    - name: "ff590mr_distance_since_reset"
+  #      unique_id: ff590mr_distance_since_reset
   #      unit_of_measurement: 'Km'
-  #      value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceReset') }}"
-  #      icon_template: mdi:map-marker-distance
+  #      state: "{{ state_attr('sensor.ff590mr_odometer', 'distanceReset') }}"
+  #      icon: mdi:map-marker-distance
 
   ######################################################################
   # Sensor: Distance from Start
   ######################################################################
-  #- platform: template
-  #  sensors:
-  #    ff590mr_distance_since_start:
-  #      friendly_name: Distanza dalla partenza
+  #- sensors:
+  #    - name: "ff590mr_distance_since_start"
+  #      unique_id: ff590mr_distance_since_start
   #      unit_of_measurement: 'Km'
-  #      value_template: "{{ state_attr('sensor.ff590mr_odometer', 'distanceStart') }}"
-  #      icon_template: mdi:map-marker-distance
+  #      state: "{{ state_attr('sensor.ff590mr_odometer', 'distanceStart') }}"
+  #      icon: mdi:map-marker-distance
 
   ######################################################################
   # Sensor: Liquid Consumption from Start
   ######################################################################
-  #- platform: template
-  #  sensors:
-  #    ff590mr_liquid_consumption_start:
-  #      friendly_name: Consumo dalla partenza
+  #- sensors:
+  #    - name: "ff590mr_liquid_consumption_start"
+  #      unique_id: ff590mr_liquid_consumption_start
   #      unit_of_measurement: 'l/100Km'
-  #      value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionstart') }}"
-  #      icon_template: mdi:fuel
+  #      state: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionstart') }}"
+  #      icon: mdi:fuel
 
   ######################################################################
   # Sensor: Liquid Consumption from Reset
   ######################################################################
-  #- platform: template
-  #  sensors:
-  #    ff590mr_liquid_consumption_reset:
-  #      friendly_name: Consumo dal reset
+  #- sensors:
+  #    - name: "ff590mr_liquid_consumption_reset"
+  #      unique_id: ff590mr_liquid_consumption_reset
   #      unit_of_measurement: 'l/100Km'
-  #      value_template: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionreset') }}"
-  #      icon_template: mdi:gas-station
+  #      state: "{{ state_attr('sensor.ff590mr_odometer', 'liquidconsumptionreset') }}"
+  #      icon: mdi:gas-station
 
   ######################################################################
   # Sensor: Service Interval Days
   ######################################################################
-  - platform: template
-    sensors:
-      ff590mr_service_interval_days:
-        friendly_name: Prossimo Tagliando
-        unit_of_measurement: 'giorni'
-        value_template: "{{ state_attr('sensor.ff590mr_odometer', 'serviceintervaldays') }}"
-        icon_template: mdi:wrench
+  - sensor:
+      - name: "ff590mr_service_interval_days"
+        unique_id: ff590mr_service_interval_days
+        unit_of_measurement: "giorni"
+        state: "{{ state_attr('sensor.ff590mr_odometer', 'serviceintervaldays') }}"
+        icon: mdi:wrench

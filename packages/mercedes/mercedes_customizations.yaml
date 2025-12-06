@@ -4,9 +4,11 @@
 
 homeassistant:
   customize:
+
     ######################################################################
     # Binary Sensors
     ######################################################################
+
     # Liquido Lavacristalli - warningwashwater
     binary_sensor.ff590mr_low_wash_water_warning:
       friendly_name: Liquido Lavacristalli
@@ -58,6 +60,7 @@ homeassistant:
     ######################################################################
     # Buttons
     ######################################################################
+
     # Avviare Preriscaldamento Abitacolo
     button.ff590mr_preclimate_start:
       friendly_name: Avvia Preriscaldamento
@@ -69,6 +72,7 @@ homeassistant:
     ######################################################################
     # Device Tracker
     ######################################################################
+
     device_tracker.ff590mr_device_tracker:
       friendly_name: Mercedes A200d
       entity_picture: /local/images/device-trackers/mercedes.jpg
@@ -76,6 +80,7 @@ homeassistant:
     ######################################################################
     # Locks
     ######################################################################
+
     lock.ff590mr_lock:
       friendly_name: Blocco auto
       icon: mdi:lock
@@ -83,6 +88,7 @@ homeassistant:
     ######################################################################
     # Sensors
     ######################################################################
+
     # Blocco Veicolo - lock
     sensor.ff590mr_lock:
       friendly_name: Veicolo
@@ -144,6 +150,7 @@ homeassistant:
     ######################################################################
     # Diagnostic Sensors
     ######################################################################
+
     # Sensore Dati connessione
     sensor.ff590mr_car:
       friendly_name: Messaggi auto
@@ -165,9 +172,9 @@ homeassistant:
     ######################################################################
     # Switches
     ######################################################################
+
     # Interruttore Riscaldamento Ausiliario
     switch.ff590mr_auxiliary_heating:
       friendly_name: Riscaldamento Ausiliario
-
     switch.ff590mr_pre_entry_climate_control:
       friendly_name: Controllo Preriscaldamento abitacolo

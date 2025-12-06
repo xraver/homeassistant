@@ -12,7 +12,7 @@ homeassistant:
     package.netatmo:
       customize: &customize
         package: 'mercedes'
-        version: 1.1.0
+        version: 1.2.0
 
     ######################################################################
     # Mercedes Package - Main - Entities
@@ -21,32 +21,61 @@ homeassistant:
     group.car_alarm:
       <<: *customize
     binary_sensor.ff590mr_locked:
+      friendly_name: "Blocco Vettura"
       <<: *customize
     binary_sensor.ff590mr_doors_closed:
+      friendly_name: "Porte"
       <<: *customize
     binary_sensor.ff590mr_door_front_left:
+      friendly_name: "Anteriore Sinistra"
       <<: *customize
     binary_sensor.ff590mr_door_front_right:
+      friendly_name: "Anteriore Destra"
       <<: *customize
     binary_sensor.ff590mr_door_rear_left:
+      friendly_name: "Posteriore Sinistra"
       <<: *customize
     binary_sensor.ff590mr_door_rear_right:
+      friendly_name: "Posteriore Sestra"
       <<: *customize
     binary_sensor.ff590mr_decklid:
+      friendly_name: "Bagagliaio"
       <<: *customize
+    #lock.ff590mr_lock:
+    #  <<: *customize
+    #  friendly_name: "Blocco Auto"
+    #  icon: mdi:lock
     lock.ff590mr_lock_no_pin:
       <<: *customize
-      friendly_name: Blocco Auto
+      friendly_name: "Blocco Auto"
       icon: mdi:lock
+    #sensor.ff590mr_distance_since_reset:
+    #  friendly_name: "Distanza dal reset"
+    #  <<: *customize
+    #sensor.ff590mr_distance_since_start:
+    #  friendly_name: "Distanza dalla partenza"
+    #  <<: *customize
+    #sensor.ff590mr_liquid_consumption_start:
+    #  friendly_name: "Consumo dalla partenza"
+    #  <<: *customize
+    #sensor.ff590mr_liquid_consumption_reset:
+    #  friendly_name: "Consumo dal reset"
+    #  <<: *customize
     sensor.ff590mr_service_interval_days:
+      friendly_name: "Prossimo Tagliando"
       <<: *customize
     binary_sensor.ff590mr_windows_closed_2:
+      friendly_name: "Finestrini"
       <<: *customize
     binary_sensor.ff590mr_window_front_left:
+      friendly_name: "Anteriore Sinistro"
       <<: *customize
     binary_sensor.ff590mr_window_front_right:
+      friendly_name: "Anteriore Destro"
       <<: *customize
     binary_sensor.ff590mr_window_rear_left:
+      friendly_name: "Posteriore Sinistro"
       <<: *customize
     binary_sensor.ff590mr_window_rear_right:
+      friendly_name: "Posteriore Destro"
       <<: *customize
