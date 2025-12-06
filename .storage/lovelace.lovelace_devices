@@ -3813,6 +3813,13 @@
                                   "entity": "switch.tapparella_cucina_grande_led_if_on",
                                   "icon": "mdi:led-outline",
                                   "show_state": false
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.tapparella_cucina_grande_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -3880,6 +3887,13 @@
                                   "entity": "switch.tapparella_cucina_piccola_led_if_on",
                                   "icon": "mdi:led-outline",
                                   "show_state": false
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.tapparella_cucina_piccola_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -3947,6 +3961,13 @@
                                   "entity": "switch.tapparella_sala_led_if_on",
                                   "icon": "mdi:led-outline",
                                   "show_state": false
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.tapparella_sala_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -4014,6 +4035,13 @@
                                   "entity": "switch.tapparella_studio_led_if_on",
                                   "icon": "mdi:led-outline",
                                   "show_state": false
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.tapparella_studio_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -4081,6 +4109,13 @@
                                   "entity": "switch.tapparella_bagno_led_if_on",
                                   "icon": "mdi:led-outline",
                                   "show_state": false
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.tapparella_bagno_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -4148,6 +4183,13 @@
                                   "entity": "switch.tapparella_camera_led_if_on",
                                   "icon": "mdi:led-outline",
                                   "show_state": false
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.tapparella_camera_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -4215,6 +4257,13 @@
                                   "entity": "switch.tenda_bagno_led_if_on",
                                   "icon": "mdi:led-outline",
                                   "show_state": false
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.tenda_bagno_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -4909,6 +4958,13 @@
                                   "entity": "select.luce_sala_power_on_behavior",
                                   "template": "template_device_generic_state",
                                   "name": "Power-On"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.luce_sala_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }
@@ -4989,6 +5045,13 @@
                                   "entity": "select.luce_camera_power_on_behavior",
                                   "template": "template_device_generic_state",
                                   "name": "Power-On"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_button",
+                                  "entity": "button.luce_camera_identify",
+                                  "show_state": false,
+                                  "name": "Identifica"
                                 }
                               ]
                             }

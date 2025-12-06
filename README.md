@@ -100,6 +100,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
   * Sony Bravia
   * SpeedTest
+  * Telegram Bot
   * UPNP
   * Version (local)
 * Create labels for different devices type (Acqua, BTicino, Elettrodomestici, Energia, Luci, Multimedia, Netatmo, Porte e Finestre, Tapparelle, Temperatura, Shelly, zigbee2mqtt)

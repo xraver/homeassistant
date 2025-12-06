@@ -1035,9 +1035,19 @@
               "show_name": true,
               "show_state": true,
               "show_icon": true,
+              "entity": "cover.tenda_bagno",
+              "color": "",
+              "name": "Bagno Piccolo",
+              "state_content": "current_position"
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": true,
+              "show_icon": true,
               "entity": "cover.tapparella_bagno",
               "color": "",
-              "name": "Bagno",
+              "name": "Bagno Grande",
               "state_content": "current_position"
             },
             {
@@ -1114,7 +1124,7 @@
                     {
                       "buttons_position": "left",
                       "entity": "cover.tapparella_bagno",
-                      "name": "Tapparella Bagno",
+                      "name": "Tapparella Bagno Grande",
                       "always_percentage": true
                     }
                   ],
@@ -1142,7 +1152,7 @@
                     {
                       "buttons_position": "left",
                       "entity": "cover.tenda_bagno",
-                      "name": "Tenda Bagno",
+                      "name": "Tenda Bagno Piccolo",
                       "always_percentage": true
                     }
                   ],
