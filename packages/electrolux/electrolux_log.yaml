@@ -24,6 +24,7 @@ logbook:
       - sensor.electrolux_forno_timetoend
       - sensor.electrolux_forno_watertankempty
       - sensor.electrolux_forno_watertrayinsertionstate
+      - sensor.electrolux_forno_keymodel
 
       ######################################################################
       # Refrigerator AEG NSC7P751DS
@@ -42,6 +43,10 @@ logbook:
       - sensor.aeg_frigo_airfilterstate
       - sensor.aeg_frigo_alerts
       - sensor.aeg_frigo_compressorruntime
+      - sensor.aeg_frigo_compressorspeed
+      - sensor.aeg_frigo_compressorspeed_coefficient
+      - sensor.aeg_frigo_compressorspeed_exponent
+      - sensor.aeg_frigo_compressorstate
       - sensor.aeg_frigo_connectivitystate
       - sensor.aeg_frigo_ecometerlevel
       - sensor.aeg_frigo_freezer_alerts
@@ -76,6 +81,7 @@ recorder:
       - sensor.electrolux_forno_timetoend
       - sensor.electrolux_forno_watertankempty
       - sensor.electrolux_forno_watertrayinsertionstate
+      - sensor.electrolux_forno_keymodel
 
       # Refrigerator AEG NSC7P751DS
       - binary_sensor.aeg_frigo_freezer_doorstate
@@ -92,6 +98,10 @@ recorder:
       - sensor.aeg_frigo_airfilterstate
       - sensor.aeg_frigo_alerts
       - sensor.aeg_frigo_compressorruntime
+      - sensor.aeg_frigo_compressorspeed
+      - sensor.aeg_frigo_compressorspeed_coefficient
+      - sensor.aeg_frigo_compressorspeed_exponent
+      - sensor.aeg_frigo_compressorstate
       - sensor.aeg_frigo_connectivitystate
       - sensor.aeg_frigo_ecometerlevel
       - sensor.aeg_frigo_freezer_alerts

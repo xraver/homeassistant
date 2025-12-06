@@ -69,6 +69,8 @@ homeassistant:
       friendly_name: "Stato vassoio acqua forno"
     switch.electrolux_forno_cavitylight:
       friendly_name: "Luce forno"
+    sensor.electrolux_forno_keymodel:
+      friendly_name: "Codice modello"
 
     ######################################################################
     # Refrigerator AEG NSC7P751DS
@@ -102,6 +104,14 @@ homeassistant:
       friendly_name: "Allarmi Frigorifero"
     sensor.aeg_frigo_compressorruntime:
       friendly_name: "Tempo di Esercizio Compressore"
+    sensor.aeg_frigo_compressorspeed:
+      friendly_name: "Velocità Compressore"
+    sensor.aeg_frigo_compressorspeed_coefficient:
+      friendly_name: "Coefficiente Velocità Compressore"
+    sensor.aeg_frigo_compressorspeed_exponent:
+      friendly_name: "Esponente Velocità Compressore"
+    sensor.aeg_frigo_compressorstate:
+      friendly_name: "Stato Compressore"
     sensor.aeg_frigo_connectivitystate:
       friendly_name: "Stato Connettività"
     sensor.aeg_frigo_ecometerlevel:
