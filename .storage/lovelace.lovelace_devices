@@ -407,8 +407,8 @@
                                 },
                                 {
                                   "type": "custom:button-card",
-                                  "template": "template_device_generic_button",
-                                  "entity": "switch.fritz_box_7530_ax_wi_fi_fritz_box_accesso_ospite",
+                                  "template": "template_device_generic_switch",
+                                  "entity": "switch.fritz_box_7530_ax_wi_fi_xraver_guest",
                                   "name": "Wifi Ospite"
                                 },
                                 {
@@ -483,8 +483,8 @@
                                 },
                                 {
                                   "type": "custom:button-card",
-                                  "template": "template_device_generic_button",
-                                  "entity": "switch.fritz_box_7530_ax_wi_fi_fritz_box_accesso_ospite",
+                                  "template": "template_device_generic_switch",
+                                  "entity": "switch.fritz_box_7530_ax_wi_fi_xraver_guest",
                                   "name": "Wifi Ospite"
                                 },
                                 {
@@ -1819,7 +1819,7 @@
                               "image": "/local/images/devices/kitchen_appliance/EOB9S21WX.png",
                               "tap_action": {
                                 "action": "url",
-                                "url_path": "https://www.electrolux.it/kitchen/cooking/ovens/oven/eob9s21wx/"
+                                "url_path": "https://home.giorgioravera.it/config/devices/device/fd999cf73a0ac0ea0ce065d2d04a4ced"
                               }
                             },
                             {
@@ -2072,7 +2072,7 @@
                               "image": "/local/images/devices/kitchen_appliance/NSC7P751DS.png",
                               "tap_action": {
                                 "action": "url",
-                                "url_path": "https://home.giorgioravera.it/config/devices/device/bfab9fda2db21dc014407fb29ed4607e"
+                                "url_path": "https://home.giorgioravera.it/config/devices/device/8b03d29e1ec226cb0606f8fefadb0b24"
                               }
                             },
                             {
@@ -5135,6 +5135,77 @@
               "entity_id": "[[[ return entity.entity_id ]]]"
             }
           },
+          "styles": {
+            "grid": [
+              {
+                "grid-template-columns": "50px auto"
+              }
+            ],
+            "icon": [
+              {
+                "padding": "0px 0px"
+              },
+              {
+                "height": "25px"
+              },
+              {
+                "width": "25px"
+              },
+              {
+                "color": "var(--state-icon-color)"
+              }
+            ],
+            "card": [
+              {
+                "--ha-card-background": "rgba(0, 0, 0, 0)"
+              },
+              {
+                "--ha-card-box-shadow": "none"
+              }
+            ],
+            "name": [
+              {
+                "padding": "0px 10px"
+              },
+              {
+                "justify-self": "start"
+              },
+              {
+                "font-family": "Roboto, sans-serif"
+              },
+              {
+                "font-size": "15px"
+              },
+              {
+                "color": "var(--primary-text-color)"
+              }
+            ]
+          }
+        },
+        "template_device_generic_switch": {
+          "layout": "icon_name_state",
+          "color-type": "card",
+          "show_name": true,
+          "show_icon": true,
+          "show_state": true,
+          "tap_action": {
+            "action": "toggle"
+          },
+          "state": [
+            {
+              "value": "on",
+              "styles": {
+                "card": [
+                  {
+                    "background-color": "rgba(0, 150, 0, 0.2)"
+                  },
+                  {
+                    "color": "green"
+                  }
+                ]
+              }
+            }
+          ],
           "styles": {
             "grid": [
               {
