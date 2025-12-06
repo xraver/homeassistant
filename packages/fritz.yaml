@@ -71,6 +71,7 @@ homeassistant:
 ######################################################################
 # Fritz Package - Fritz Command
 ######################################################################
+
 shell_command:
   fritz_reboot: 'bash /config/shell_scripts/fritzBox.sh fritz REBOOT Box'
   fritz_reconnect: 'bash /config/shell_scripts/fritzBox.sh fritz WAN RECONNECT'
