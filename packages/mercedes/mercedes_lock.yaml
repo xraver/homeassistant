@@ -31,7 +31,6 @@ template:
       - name: "ff590mr_lock_no_pin"
         unique_id: ff590mr_lock_no_pin
         state: "{{ is_state('binary_sensor.ff590mr_locked', 'off') }}"
-        optimistic: true
         lock:
           - action: mbapi2020.doors_lock
             data:
@@ -40,3 +39,9 @@ template:
           - action: mbapi2020.doors_unlock
             data:
               vin: !secret mb_vin
+        icon: >-
+          {% if is_state('binary_sensor.ff590mr_locked', 'off') %}
+            mdi:lock
+          {% else %}
+            mdi:lock-open
+          {% endif %}

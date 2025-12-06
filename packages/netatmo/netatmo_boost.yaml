@@ -5,31 +5,31 @@
 input_boolean:
   boost_valvola_zona_giorno:
     name: Boost Valvola Zona Giorno
-    initial: off
+    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_cucina:
     name: Boost Valvola Cucina
-    initial: off
+    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_sala:
     name: Boost Valvola Sala
-    initial: off
+    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_studio:
     name: Boost Valvola Studio
-    initial: off
+    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_bagno_piccolo:
     name: Boost Valvola Bagno Piccolo
-    initial: off
+    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_bagno_grande:
     name: Boost Valvola Bagno Grande
-    initial: off
+    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_camera:
     name: Boost Valvola Camera
-    initial: off
+    initial: false
     icon: mdi:thermometer-plus
 
 ######################################################################

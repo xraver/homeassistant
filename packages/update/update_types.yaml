@@ -6,19 +6,19 @@ input_boolean:
   # HACS
   update_hacs:
     name: Aggiornamenti HACS
-    initial: off
+    initial: false
     icon: mdi:package-up
 
   # Shelly
   update_shelly:
     name: Aggiornamenti Shelly
-    initial: off
+    initial: false
     icon: mdi:package-up
 
   # BTicino
   update_bticino:
     name: Aggiornamenti BTicino
-    initial: off
+    initial: false
     icon: mdi:package-up
 
 ######################################################################

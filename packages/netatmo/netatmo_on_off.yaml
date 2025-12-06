@@ -5,31 +5,31 @@
 input_boolean:
   valvola_zona_giorno:
     name: Valvola Zona Giorno
-    initial: on
+    initial: true
     icon: mdi:thermometer
   valvola_cucina:
     name: Valvola Cucina
-    initial: on
+    initial: true
     icon: mdi:thermometer
   valvola_sala:
     name: Valvola Sala
-    initial: on
+    initial: true
     icon: mdi:thermometer
   valvola_studio:
     name: Valvola Studio
-    initial: on
+    initial: true
     icon: mdi:thermometer
   valvola_bagno_piccolo:
     name: Valvola Bagno Piccolo
-    initial: on
+    initial: true
     icon: mdi:thermometer
   valvola_bagno_grande:
     name: Valvola Bagno Grande
-    initial: on
+    initial: true
     icon: mdi:thermometer
   valvola_camera:
     name: Valvola Camera
-    initial: on
+    initial: true
     icon: mdi:thermometer
 
 ######################################################################
