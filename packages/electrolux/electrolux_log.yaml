@@ -11,12 +11,12 @@ logbook:
       - select.electrolux_forno_program
       - sensor.electrolux_forno_connectivitystate
       - sensor.electrolux_forno_alerts
-      - sensor.electrolux_forno_appliancestate
+      #- sensor.electrolux_forno_appliancestate
       - sensor.electrolux_forno_displayfoodprobetemperaturec
       - sensor.electrolux_forno_displaytemperaturec
       - sensor.electrolux_forno_displaytemperaturef
       - sensor.electrolux_forno_foodprobeinsertionstate
-      - sensor.electrolux_forno_networkinterface_linkqualityindicator
+      #- sensor.electrolux_forno_networkinterface_linkqualityindicator
       - sensor.electrolux_forno_remotecontrol
       - sensor.electrolux_forno_runningtime
       - sensor.electrolux_forno_targetmicrowavepower
@@ -68,12 +68,12 @@ recorder:
       - select.electrolux_forno_program
       - sensor.electrolux_forno_connectivitystate
       - sensor.electrolux_forno_alerts
-      - sensor.electrolux_forno_appliancestate
+      #- sensor.electrolux_forno_appliancestate
       - sensor.electrolux_forno_displayfoodprobetemperaturec
       - sensor.electrolux_forno_displaytemperaturec
       - sensor.electrolux_forno_displaytemperaturef
       - sensor.electrolux_forno_foodprobeinsertionstate
-      - sensor.electrolux_forno_networkinterface_linkqualityindicator
+      #- sensor.electrolux_forno_networkinterface_linkqualityindicator
       - sensor.electrolux_forno_remotecontrol
       - sensor.electrolux_forno_runningtime
       - sensor.electrolux_forno_targetmicrowavepower

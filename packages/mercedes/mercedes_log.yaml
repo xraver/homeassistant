@@ -23,16 +23,16 @@ logbook:
       - binary_sensor.ff590mr_windows_closed
       #- binary_sensor.ff590mr_windows_closed_2
       #- device_tracker.ff590mr_device_tracker
-      - lock.ff590mr_lock
+      #- lock.ff590mr_lock
       #- lock.ff590mr_lock_no_pin
       - sensor.ff590mr_car
-      - sensor.ff590mr_charging_power
+      #- sensor.ff590mr_charging_power
       - sensor.ff590mr_data_mode
       - sensor.ff590mr_distance_reset
       - sensor.ff590mr_distance_start
       - sensor.ff590mr_end_of_charge
       - sensor.ff590mr_fuel_level
-      - sensor.ff590mr_geofencing_violation
+      #- sensor.ff590mr_geofencing_violation
       - sensor.ff590mr_ignition_state
       - sensor.ff590mr_liquid_consumption_reset
       - sensor.ff590mr_liquid_consumption_start
@@ -71,16 +71,16 @@ recorder:
       - binary_sensor.ff590mr_windows_closed
       #- binary_sensor.ff590mr_windows_closed_2
       #- device_tracker.ff590mr_device_tracker
-      - lock.ff590mr_lock
+      #- lock.ff590mr_lock
       #- lock.ff590mr_lock_no_pin
       - sensor.ff590mr_car
-      - sensor.ff590mr_charging_power
+      #- sensor.ff590mr_charging_power
       - sensor.ff590mr_data_mode
       - sensor.ff590mr_distance_reset
       - sensor.ff590mr_distance_start
       - sensor.ff590mr_end_of_charge
       - sensor.ff590mr_fuel_level
-      - sensor.ff590mr_geofencing_violation
+      #- sensor.ff590mr_geofencing_violation
       - sensor.ff590mr_ignition_state
       - sensor.ff590mr_liquid_consumption_reset
       - sensor.ff590mr_liquid_consumption_start
