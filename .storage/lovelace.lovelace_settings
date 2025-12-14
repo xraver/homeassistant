@@ -9,7 +9,6 @@
         {
           "icon": "mdi:cog",
           "title": "Configurazione",
-          "path": "config",
           "badges": [
             {
               "type": "entity",
@@ -44,10 +43,21 @@
               "entity": "group.update"
             }
           ],
-          "cards": [
+          "cards": [],
+          "type": "sections",
+          "sections": [
             {
+              "type": "grid",
               "cards": [
                 {
+                  "type": "heading",
+                  "heading": "Automazioni",
+                  "heading_style": "title",
+                  "icon": "mdi:robot"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": false,
                   "entities": [
                     {
                       "entity": "automation.home_assistant_startup_restart_on_error"
@@ -61,44 +71,64 @@
                     {
                       "entity": "automation.risveglio_giorgio"
                     }
-                  ],
-                  "show_header_toggle": false,
-                  "title": "Automazioni",
-                  "type": "entities"
+                  ]
                 },
                 {
+                  "type": "heading",
+                  "icon": "mdi:speaker-wireless",
+                  "heading": "Configurazione Notifiche",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": false,
                   "entities": [
                     "input_boolean.speech_notifications",
                     "input_boolean.text_notifications"
-                  ],
-                  "show_header_toggle": false,
-                  "title": "Configurazione Notifiche",
-                  "type": "entities"
+                  ]
                 }
-              ],
-              "type": "vertical-stack"
+              ]
             },
             {
+              "type": "grid",
               "cards": [
                 {
-                  "entities": [
-                    "script.homeassistant_restart",
-                    "script.homeassistant_reload_scripts",
-                    "script.homeassistant_reload_automations",
-                    "script.homeassistant_clearlog",
-                    "script.homeassistant_google_home_sync",
-                    "input_boolean.test_mode"
+                  "type": "heading",
+                  "heading": "Controlli",
+                  "heading_style": "title",
+                  "icon": "mdi:toggle-switch"
+                },
+                {
+                  "cards": [
+                    {
+                      "entities": [
+                        "script.homeassistant_restart",
+                        "script.homeassistant_reload_scripts",
+                        "script.homeassistant_reload_automations",
+                        "script.homeassistant_clearlog",
+                        "script.homeassistant_google_home_sync",
+                        "input_boolean.test_mode"
+                      ],
+                      "show_header_toggle": false,
+                      "type": "entities"
+                    }
                   ],
-                  "show_header_toggle": false,
-                  "title": "Controlli",
-                  "type": "entities"
+                  "type": "vertical-stack"
                 }
-              ],
-              "type": "vertical-stack"
+              ]
             },
             {
+              "type": "grid",
               "cards": [
                 {
+                  "type": "heading",
+                  "heading": "Informazioni Varie",
+                  "heading_style": "title",
+                  "icon": "mdi:information"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": false,
                   "entities": [
                     {
                       "entity": "sensor.current_version"
@@ -106,17 +136,17 @@
                     {
                       "entity": "sensor.server_giorgioravera_it_scadenza_del_certificato"
                     }
-                  ],
-                  "show_header_toggle": false,
-                  "title": "Informazioni Varie",
-                  "type": "entities"
-                }
-              ],
-              "type": "vertical-stack"
-            },
-            {
-              "cards": [
+                  ]
+                },
                 {
+                  "type": "heading",
+                  "icon": "mdi:update",
+                  "heading": "Aggiornamenti",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": false,
                   "entities": [
                     {
                       "entity": "group.update"
@@ -133,15 +163,66 @@
                     {
                       "entity": "script.bticino_update"
                     }
-                  ],
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Gestione WiFi",
+                  "heading_style": "title",
+                  "icon": "mdi:wifi"
+                },
+                {
+                  "type": "entities",
                   "show_header_toggle": false,
-                  "title": "Aggiornamenti",
-                  "type": "entities"
+                  "entities": [
+                    {
+                      "entity": "switch.fritz_box_7530_ax_wi_fi_xraver_2_4ghz",
+                      "name": "WiFi 2,4 Ghz"
+                    },
+                    {
+                      "entity": "switch.fritz_box_7530_ax_wi_fi_xraver_5ghz",
+                      "name": "WiFi 5 Ghz"
+                    },
+                    {
+                      "entity": "switch.fritz_box_7590_wi_fi_xraver_guest",
+                      "name": "WiFi Guest"
+                    }
+                  ]
                 }
               ],
-              "type": "vertical-stack"
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:qrcode",
+                  "heading": "QRCode WiFi Guest",
+                  "heading_style": "title"
+                },
+                {
+                  "show_state": false,
+                  "show_name": false,
+                  "camera_view": "auto",
+                  "fit_mode": "cover",
+                  "type": "picture-entity",
+                  "entity": "image.fritz_box_7530_ax_xraver_guest",
+                  "name": "Wi-Fi Guest QR",
+                  "card_mod": {
+                    "style": "ha-card {\n  max-width: 150px;\n  margin: auto;\n  margin-left: 0;\n}\nimg {\n  width: 100px;\n  height: auto;\n}\n"
+                  }
+                }
+              ]
             }
-          ]
+          ],
+          "max_columns": 3,
+          "path": "config"
         },
         {
           "icon": "mdi:zigbee",
