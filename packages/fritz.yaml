@@ -48,6 +48,18 @@ homeassistant:
 #      icon: mdi:led-off
 
 ######################################################################
+# Fritz Package - Group
+######################################################################
+
+group:
+  fritz:
+    name: FRITZ!Box Devices
+    icon: mdi:alpha-s-box
+    entities:
+      - update.fritz_box_7530_ax_fritz_os
+      - update.fritz_box_7590_fritz_os
+
+######################################################################
 # Fritz Package - Switch
 ######################################################################
 
@@ -83,7 +95,7 @@ shell_command:
   #ap1_led_off: 'bash /config/shell_scripts/fritzBox.sh ap1 LED 0'
 
 ######################################################################
-# Netatmo Package - Logbook
+# Fritz Package - Logbook
 ######################################################################
 
 logbook:
@@ -108,7 +120,7 @@ logbook:
     - sensor.fritz_box_7590_ultimo_riavvio
 
 ######################################################################
-# Netatmo Package - Recorder
+# Fritz Package - Recorder
 ######################################################################
 
 recorder:
@@ -131,3 +143,46 @@ recorder:
     - sensor.fritz_box_7530_ax_velocita_massima_di_scaricamento_della_connessione
     # 7590
     - sensor.fritz_box_7590_ultimo_riavvio
+
+automation:
+
+  ######################################################################
+  # Fritz: Update Notification
+  ######################################################################
+  - alias: "Fritz: Update Notification"
+    id: "fritz_update_notification"
+
+    variables:
+      pending_update_list: >
+        {{ expand('group.fritz')
+          | selectattr('state','eq','on')
+          | map(attribute='entity_id')
+          | list
+        }}
+
+    trigger:
+      - trigger: state
+        entity_id: group.fritz
+        to: 'on'
+      - trigger: homeassistant
+        event: start
+
+    condition:
+      condition: state
+      entity_id: group.fritz
+      state: 'on'
+
+    action:
+      - delay: '00:00:10'
+      - action: script.notify_text
+        data_template:
+          title: "FRITZ!Box - Aggiornamento"
+          message: >
+            Sono disponibili {{pending_update_list | count }} aggiornamenti per i dispositivi FRITZ!Box:
+            {% for entity_id in pending_update_list %}
+                -> {{ state_attr(entity_id, 'friendly_name')|replace(" - Aggiornamento Firmware", "") }}: {{ state_attr(entity_id, 'latest_version') }}
+            {%- endfor -%}
+          notification_id: "update"
+          enable_persistent: true
+      - action: input_boolean.turn_on
+        entity_id: input_boolean.update_fritz

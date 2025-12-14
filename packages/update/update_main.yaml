@@ -26,6 +26,8 @@ homeassistant:
       <<: *customize
     input_boolean.update_bticino:
       <<: *customize
+    input_boolean.update_fritz:
+      <<: *customize
     automation.update_hacs_notification:
       <<: *customize
     automation.update_update_acknowledgment:

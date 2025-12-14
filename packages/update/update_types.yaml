@@ -21,6 +21,12 @@ input_boolean:
     initial: false
     icon: mdi:package-up
 
+  # FRITZ!Box
+  update_fritz:
+    name: Aggiornamenti FRITZ!Box
+    initial: false
+    icon: mdi:package-up
+
 ######################################################################
 # Update Package - Types - Group
 ######################################################################
@@ -37,6 +43,7 @@ group:
       - input_boolean.update_hacs
       - input_boolean.update_shelly
       - input_boolean.update_bticino
+      - input_boolean.update_fritz
 
   hacs:
     name: HACS modules
@@ -48,6 +55,7 @@ group:
       - update.browser_mod_update
       - update.button_card_update
       - update.card_mod_update
+      - update.clear_theme_dark_update
       - update.clock_weather_card_update
       - update.darkish_theme_update
       - update.electrolux_care_integration_v2_not_official_update
@@ -67,5 +75,6 @@ group:
       - update.reeder_dark_theme_update
       - update.shutter_card_update
       - update.tabbed_card_update
+      - update.vehicle_info_card_update
       - update.vertical_stack_in_card_update
       - update.zigbee2mqtt_networkmap_card_update

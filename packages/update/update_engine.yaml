@@ -67,6 +67,7 @@ automation:
         - input_boolean.update_hacs
         - input_boolean.update_shelly
         - input_boolean.update_bticino
+        - input_boolean.update_fritz
       to: 'off'
 
     action:
