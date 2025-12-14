@@ -78,7 +78,7 @@ exclude:
     - sensor.sensore_acqua_bagno_grande_voltage
     - binary_sensor.sensore_acqua_bagno_piccolo_battery_low
     - sensor.sensore_acqua_bagno_piccolo_battery
-    - sensoor.sensore_acqua_bagno_piccolo_device_temperature
+    - sensor.sensore_acqua_bagno_piccolo_device_temperature
     - sensor.sensore_acqua_bagno_piccolo_voltage
     # pfSense
     - binary_sensor.freebsd_router_stato_della_wan
