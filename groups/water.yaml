@@ -9,3 +9,4 @@ water:
     - binary_sensor.sensore_acqua_cucina_water_leak
     - binary_sensor.sensore_acqua_bagno_grande_water_leak
     - binary_sensor.sensore_acqua_bagno_piccolo_water_leak
+    - binary_sensor.sensore_acqua_veranda_water_leak

@@ -43,7 +43,6 @@ exclude:
     # Sun & Weather
     - sun.sun
     # System
-    - binary_sensor.home_mode
     - binary_sensor.speech_notifications
     - binary_sensor.text_notifications
     - sensor.current_version
@@ -82,6 +81,12 @@ exclude:
     - sensor.sensore_acqua_bagno_piccolo_battery
     - sensor.sensore_acqua_bagno_piccolo_device_temperature
     - sensor.sensore_acqua_bagno_piccolo_voltage
+    - binary_sensor.sensore_acqua_veranda_battery_low
+    - sensor.sensore_acqua_veranda_battery
+    - binary_sensor.sensore_presenza_bagno_grande_occupancy
+    - sensor.sensore_presenza_bagno_grande_battery
+    - sensor.sensore_presenza_bagno_grande_illumination
+    - sensor.sensore_presenza_bagno_grande_voltage
     # pfSense
     - binary_sensor.freebsd_router_stato_della_wan
     - sensor.freebsd_router_dati_inviati

@@ -1,5 +1,5 @@
 ######################################################################
-# Customization: Xiaomi Devices
+# Customization: Zigbee Devices
 ######################################################################
 
 # Main Door Sensor
@@ -102,4 +102,24 @@ sensor.sensore_acqua_bagno_piccolo_device_temperature:
 sensor.sensore_acqua_bagno_piccolo_linkquality:
   friendly_name: "Link"
 sensor.sensore_acqua_bagno_piccolo_voltage:
+  friendly_name: "Tensione"
+
+# Sensore Acqua Veranda
+binary_sensor.sensore_acqua_veranda_water_leak:
+  friendly_name: "Sensore Acqua Veranda"
+sensor.sensore_acqua_veranda_battery:
+  friendly_name: "Batteria"
+binary_sensor.sensore_acqua_veranda_battery_low:
+  friendly_name: "Batteria scarica"
+
+# Sensore Presenza Bagno Grande
+binary_sensor.sensore_presenza_bagno_grande_occupancy:
+  friendly_name: "Presenza Rilevata"
+number.sensore_presenza_bagno_grande_motion_timeout:
+  friendly_name: "Timeout"
+sensor.sensore_presenza_bagno_grande_battery:
+  friendly_name: "Sensore Batteria"
+sensor.sensore_presenza_bagno_grande_illumination:
+  friendly_name: "Illuminazione"
+sensor.sensore_presenza_bagno_grande_voltage:
   friendly_name: "Tensione"

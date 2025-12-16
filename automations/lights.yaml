@@ -1,0 +1,32 @@
+######################################################################
+# Bathroom Light: Switch on Lights
+#
+# Actions:
+# - light.turn_on
+######################################################################
+- alias: "Accendi luce bagno se occupato e casa non vuota"
+  id: "accendi_luci_presenza_bagno_grande"
+  description: >
+    Se qualcuno è in casa, il bagno è occupato,
+    il sole è basso e siamo tra le 15:00 e le 05:00,
+    accende la luce del bagno grande.
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.sensore_presenza_bagno_grande_occupancy
+      to: "on"
+  condition:
+    - condition: state
+      entity_id: group.residents
+      state: "home"
+    - condition: state
+      entity_id: group.lights_bathroom
+      state: "off"
+    - condition: numeric_state
+      entity_id: sun.sun
+      attribute: elevation
+      below: 1
+  action:
+    - service: light.turn_on
+      target:
+        entity_id: light.luce_trono
+  mode: single
