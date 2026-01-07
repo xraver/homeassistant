@@ -125,4 +125,3 @@ automation:
           - action: input_boolean.turn_off
             data_template:
               entity_id: "{{ trigger.entity_id }}"
- 
