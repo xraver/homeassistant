@@ -136,8 +136,8 @@ All files are tested using a dedicated [github action](https://github.com/xraver
 
 ---
 
-[check-status-img]: https://github.com/xraver/homeassistant/actions/workflows/configuration-validation.yaml/badge.svg
-[check-status-url]: https://github.com/xraver/homeassistant/actions/workflows/configuration-validation.yaml
+[check-status-img]: https://github.com/xraver/homeassistant/actions/workflows/homeassistant-ci.yaml/badge.svg
+[check-status-url]: https://github.com/xraver/homeassistant/actions/workflows/homeassistant-ci.yaml
 [nightlycheck-status-img]: https://github.com/xraver/homeassistant/actions/workflows/nightly-check.yaml/badge.svg
 [nightlycheck-status-url]: https://github.com/xraver/homeassistant/actions/workflows/nightly-check.yaml
 [license-img]: https://img.shields.io/github/license/xraver/homeassistant
