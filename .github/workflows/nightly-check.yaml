@@ -1,4 +1,4 @@
-name: Nightly Configuration Check
+name: Nightly CI
 
 on:
   schedule:

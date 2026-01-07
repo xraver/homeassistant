@@ -1,4 +1,4 @@
-name: Configuration Validation Check
+name: Home Assistant CI
 
 on:
   push:
