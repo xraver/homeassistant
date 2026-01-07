@@ -1,5 +1,6 @@
 # Home Assistant Configuration
 [![Check Status][check-status-img]][check-status-url]
+[![Nightly Check Status][nightlycheck-status-img]][nightlycheck-status-url]
 [![Last Commit][last-commit-img]][last-commit-url]
 [![License Status][license-img]][license-url]
 [![BuyMeCoffee][buymecoffee-img]][buymecoffee-url]
@@ -135,8 +136,10 @@ All files are tested using a dedicated [github action](https://github.com/xraver
 
 ---
 
-[check-status-img]: https://github.com/xraver/homeassistant/actions/workflows/ci-validation.yaml/badge.svg
-[check-status-url]: https://github.com/xraver/homeassistant/actions/workflows/ci-validation.yaml
+[check-status-img]: https://github.com/xraver/homeassistant/actions/workflows/configuration-validation.yaml/badge.svg
+[check-status-url]: https://github.com/xraver/homeassistant/actions/workflows/configuration-validation.yaml
+[nightlycheck-status-img]: https://github.com/xraver/homeassistant/actions/workflows/nightly-check.yaml/badge.svg
+[nightlycheck-status-url]: https://github.com/xraver/homeassistant/actions/workflows/nightly-check.yaml
 [license-img]: https://img.shields.io/github/license/xraver/homeassistant
 [license-url]: LICENSE
 [releases-img]: https://img.shields.io/github/v/release/xraver/homeassistant
