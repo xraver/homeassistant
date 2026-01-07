@@ -5,31 +5,24 @@
 input_boolean:
   boost_valvola_zona_giorno:
     name: Boost Valvola Zona Giorno
-    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_cucina:
     name: Boost Valvola Cucina
-    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_sala:
     name: Boost Valvola Sala
-    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_studio:
     name: Boost Valvola Studio
-    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_bagno_piccolo:
     name: Boost Valvola Bagno Piccolo
-    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_bagno_grande:
     name: Boost Valvola Bagno Grande
-    initial: false
     icon: mdi:thermometer-plus
   boost_valvola_camera:
     name: Boost Valvola Camera
-    initial: false
     icon: mdi:thermometer-plus
 
 ######################################################################
@@ -41,37 +34,27 @@ automation:
   # Automation: Start Boost
   ######################################################################
   - alias: "Termosifoni: Attivazione Boost"
-    id: "termosifoni_attivazione_boost"
+    id: termosifoni_attivazione_boost
     mode: parallel
 
     trigger:
-      trigger: state
-      entity_id: input_boolean.boost_valvola_zona_giorno,
-                 input_boolean.boost_valvola_cucina,
-                 input_boolean.boost_valvola_sala,
-                 input_boolean.boost_valvola_studio,
-                 input_boolean.boost_valvola_bagno_piccolo,
-                 input_boolean.boost_valvola_bagno_grande,
-                 input_boolean.boost_valvola_camera
-      to: 'on'
+      - trigger: state
+        entity_id:
+          - input_boolean.boost_valvola_zona_giorno
+          - input_boolean.boost_valvola_cucina
+          - input_boolean.boost_valvola_sala
+          - input_boolean.boost_valvola_studio
+          - input_boolean.boost_valvola_bagno_piccolo
+          - input_boolean.boost_valvola_bagno_grande
+          - input_boolean.boost_valvola_camera
+        to: "on"
 
     variables:
-      entity_id: >-
-        {% if trigger.entity_id == 'input_boolean.boost_valvola_zona_giorno' %}
-          climate.zona_giorno
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
-          climate.cucina
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
-          climate.sala
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
-          climate.studio
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_piccolo' %}
-          climate.bagno_piccolo
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_grande' %}
-          climate.bagno_grande
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera' %}
-          climate.camera
-        {% endif %}
+      climate_entity: >
+        {{
+          (state_attr('sensor.netatmo_valve_map', 'boost_boolean_to_climate')
+          | default('{}') | from_json)[trigger.entity_id]
+        }}
 
     action:
       #- action: climate.set_preset_mode
@@ -80,12 +63,12 @@ automation:
       #    preset_mode: boost
       - action: climate.set_temperature
         data_template:
-          entity_id: "{{ entity_id }}"
+          entity_id: "{{ climate_entity }}"
           temperature: 30
-      - delay: 300
+      - delay: "00:05:00"
       - action: climate.turn_on
         data_template:
-          entity_id: "{{ entity_id }}"
+          entity_id: "{{ climate_entity }}"
       - action: input_boolean.turn_off
         data_template:
           entity_id: "{{ trigger.entity_id }}"
@@ -94,42 +77,52 @@ automation:
   # Automation: Stop Boost
   ######################################################################
   - alias: "Termosifoni: Disattivazione Boost"
-    id: "termosifoni_disattivazione_boost"
+    id: termosifoni_disattivazione_boost
     mode: parallel
 
     trigger:
-      trigger: state
-      entity_id: input_boolean.boost_valvola_zona_giorno,
-                 input_boolean.boost_valvola_cucina,
-                 input_boolean.boost_valvola_sala,
-                 input_boolean.boost_valvola_studio,
-                 input_boolean.boost_valvola_bagno_piccolo,
-                 input_boolean.boost_valvola_bagno_grande,
-                 input_boolean.boost_valvola_camera
-      to: 'off'
+      - trigger: state
+        entity_id:
+          - input_boolean.boost_valvola_zona_giorno
+          - input_boolean.boost_valvola_cucina
+          - input_boolean.boost_valvola_sala
+          - input_boolean.boost_valvola_studio
+          - input_boolean.boost_valvola_bagno_piccolo
+          - input_boolean.boost_valvola_bagno_grande
+          - input_boolean.boost_valvola_camera
+        to: "off"
+
+      - trigger: homeassistant
+        event: start
 
     variables:
-      entity_id: >-
-        {% if trigger.entity_id == 'input_boolean.boost_valvola_zona_giorno' %}
-          climate.zona_giorno
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_cucina' %}
-          climate.cucina
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_sala' %}
-          climate.sala
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_studio' %}
-          climate.studio
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_piccolo' %}
-          climate.bagno_piccolo
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_bagno_grande' %}
-          climate.bagno_grande
-        {% elif trigger.entity_id == 'input_boolean.boost_valvola_camera' %}
-          climate.camera
-        {% endif %}
+      climate_entity: >
+        {{
+          (state_attr('sensor.netatmo_valve_map', 'boost_boolean_to_climate')
+          | default('{}') | from_json)[trigger.entity_id]
+          if trigger.entity_id is not none else none
+        }}
 
     action:
-      - action: climate.turn_on
-        data_template:
-          entity_id: "{{ entity_id }}"
-      - action: input_boolean.turn_off
-        data_template:
-          entity_id: "{{ trigger.entity_id }}"
+      # home assistant start
+      - choose:
+          - conditions: "{{ trigger.platform == 'homeassistant' }}"
+            sequence:
+              - action: input_boolean.turn_off
+                target:
+                  entity_id:
+                    - input_boolean.boost_valvola_zona_giorno
+                    - input_boolean.boost_valvola_cucina
+                    - input_boolean.boost_valvola_sala
+                    - input_boolean.boost_valvola_studio
+                    - input_boolean.boost_valvola_bagno_piccolo
+                    - input_boolean.boost_valvola_bagno_grande
+                    - input_boolean.boost_valvola_camera
+        default:
+          - action: climate.turn_on
+            data_template:
+              entity_id: "{{ climate_entity }}"
+          - action: input_boolean.turn_off
+            data_template:
+              entity_id: "{{ trigger.entity_id }}"
+ 

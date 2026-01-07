@@ -33,3 +33,12 @@ template:
             "timer.valvola_bagno_piccolo":"input_boolean.valvola_bagno_piccolo",
             "timer.valvola_bagno_grande":"input_boolean.valvola_bagno_grande",
             "timer.valvola_camera":"input_boolean.valvola_camera"}
+
+        boost_boolean_to_climate: >
+          {"input_boolean.boost_valvola_zona_giorno":"climate.zona_giorno",
+            "input_boolean.boost_valvola_cucina":"climate.cucina",
+            "input_boolean.boost_valvola_sala":"climate.sala",
+            "input_boolean.boost_valvola_studio":"climate.studio",
+            "input_boolean.boost_valvola_bagno_piccolo":"climate.bagno_piccolo",
+            "input_boolean.boost_valvola_bagno_grande":"climate.bagno_grande",
+            "input_boolean.boost_valvola_camera":"climate.camera"}
