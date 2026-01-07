@@ -64,7 +64,7 @@ homeassistant:
       <<: *customize
     sensor.netatmo_valve_map:
       friendly_name: "Mappa Valvole Netatmo"
-      <<: *customize    
+      <<: *customize
     input_boolean.valvola_zona_giorno:
       <<: *customize
     input_boolean.valvola_cucina:
