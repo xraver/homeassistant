@@ -1,0 +1,39 @@
+name: Nightly Configuration Check
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  nightly:
+    name: Nightly HA Config Check
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        version: [ "stable", "beta" ]
+
+    steps:
+      - name: ⤵️ Checkout
+        uses: actions/checkout@v3
+
+      - name: 🔑 Dummy secrets
+        run: |
+          cp .secrets_dummy.yaml secrets.yaml
+          cp credentials/.google_dummy.json credentials/google.json
+
+      - name: ⤵️ Fetch Home Assistant Docker Image
+        run: |
+          docker pull -q "ghcr.io/home-assistant/home-assistant:${{ matrix.version }}"
+
+      - name: 🚀 Run Home Assistant Configuration Check
+        run: |
+          docker run --rm \
+            -v .:/config \
+            "ghcr.io/home-assistant/home-assistant:${{ matrix.version }}" \
+            python -m homeassistant \
+              --config "/config" \
+              --script check_config

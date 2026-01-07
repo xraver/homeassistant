@@ -1,8 +1,5 @@
 name: Configuration Validation Check
 
-env:
-  VERSION: stable
-
 on:
   push:
     branches: [ "master" ]
@@ -21,9 +18,35 @@ jobs:
     name: Validate Configuration
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        version: [ "stable", "beta" ]
+
     steps:
       - name: ⤵️ Check out configuration from GitHub
         uses: actions/checkout@v3
+
+      # ---------------------------------------------------------
+      # CACHE PIP
+      # ---------------------------------------------------------
+      - name: ♻️ Cache pip
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # ---------------------------------------------------------
+      # CACHE NPM
+      # ---------------------------------------------------------
+      - name: ♻️ Cache npm
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-cache
+          restore-keys: |
+            ${{ runner.os }}-npm-
 
       # ---------------------------------------------------------
       # YAML LINT
@@ -34,7 +57,7 @@ jobs:
           yamllint -c "./.yamllint/rules.yaml" .
 
       # ---------------------------------------------------------
-      # JSON LINT (per i tuoi mapping JSON)
+      # JSON LINT
       # ---------------------------------------------------------
       - name: 🔍 JSON Lint
         run: |
@@ -81,20 +104,20 @@ jobs:
       # ---------------------------------------------------------
       - name: ⤵️ Fetch Home Assistant Docker Image
         run: |
-          docker pull -q "ghcr.io/home-assistant/home-assistant:$VERSION"
+          docker pull -q "ghcr.io/home-assistant/home-assistant:${{ matrix.version }}"
 
       - name: 🚀 Run Home Assistant Configuration Check
         run: |
           # Show Version
           docker run --rm \
             -v .:/config \
-            "ghcr.io/home-assistant/home-assistant:$VERSION" \
+            "ghcr.io/home-assistant/home-assistant:${{ matrix.version }}" \
             python -m homeassistant --version
 
           # Run check_config
           docker run --rm \
             -v .:/config \
-            "ghcr.io/home-assistant/home-assistant:$VERSION" \
+            "ghcr.io/home-assistant/home-assistant:${{ matrix.version }}" \
             python -m homeassistant \
               --config "/config" \
               --script check_config
