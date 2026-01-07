@@ -470,15 +470,6 @@
             },
             {
               "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "device_tracker.ff590mr_device_tracker",
-              "color": "",
-              "show_entity_picture": true
-            },
-            {
-              "type": "entity",
               "entity": "sensor.time"
             },
             {

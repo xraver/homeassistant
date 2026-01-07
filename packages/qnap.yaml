@@ -63,10 +63,10 @@ switch:
 ######################################################################
 
 shell_command:
-  nas_turn_off: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa /sbin/poweroff'
-  plex_start: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh start'
-  plex_restart: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh restart'
-  plex_stop: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh stop'
+  nas_turn_off: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_ed25519 /sbin/poweroff'
+  plex_start: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_ed25519  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh start'
+  plex_restart: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_ed25519  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh restart'
+  plex_stop: 'ssh {{ nas_username }}@{{ nas_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_ed25519  /share/CACHEDEV1_DATA/.qpkg/PlexMediaServer/plex.sh stop'
 
 ######################################################################
 # QNAP Package - Script

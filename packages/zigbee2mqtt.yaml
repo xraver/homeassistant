@@ -213,7 +213,7 @@ mqtt:
 ######################################################################
 
 shell_command:
-  zigbee2mqtt_restart: 'ssh {{ docker_username }}@{{ docker_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_rsa docker container restart zigbee2mqtt'
+  zigbee2mqtt_restart: 'ssh {{ docker_username }}@{{ docker_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_ed25519 docker container restart zigbee2mqtt'
 
 ######################################################################
 # Zigbee2mqtt Package - Automation
