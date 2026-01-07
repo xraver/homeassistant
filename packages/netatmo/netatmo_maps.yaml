@@ -1,0 +1,35 @@
+######################################################################
+# Netatmo Package - Netatmo Valve Map
+######################################################################
+
+template:
+  - sensor:
+    - name: "Netatmo Valve Map"
+      state: "ok"
+      attributes:
+        boolean_to_climate: >
+          {"input_boolean.valvola_zona_giorno":"climate.zona_giorno",
+            "input_boolean.valvola_cucina":"climate.cucina",
+            "input_boolean.valvola_sala":"climate.sala",
+            "input_boolean.valvola_studio":"climate.studio",
+            "input_boolean.valvola_bagno_piccolo":"climate.bagno_piccolo",
+            "input_boolean.valvola_bagno_grande":"climate.bagno_grande",
+            "input_boolean.valvola_camera":"climate.camera"}
+
+        boolean_to_timer: >
+          {"input_boolean.valvola_zona_giorno":"timer.valvola_zona_giorno",
+            "input_boolean.valvola_cucina":"timer.valvola_cucina",
+            "input_boolean.valvola_sala":"timer.valvola_sala",
+            "input_boolean.valvola_studio":"timer.valvola_studio",
+            "input_boolean.valvola_bagno_piccolo":"timer.valvola_bagno_piccolo",
+            "input_boolean.valvola_bagno_grande":"timer.valvola_bagno_grande",
+            "input_boolean.valvola_camera":"timer.valvola_camera"}
+
+        timer_to_boolean: >
+          {"timer.valvola_zona_giorno":"input_boolean.valvola_zona_giorno",
+            "timer.valvola_cucina":"input_boolean.valvola_cucina",
+            "timer.valvola_sala":"input_boolean.valvola_sala",
+            "timer.valvola_studio":"input_boolean.valvola_studio",
+            "timer.valvola_bagno_piccolo":"input_boolean.valvola_bagno_piccolo",
+            "timer.valvola_bagno_grande":"input_boolean.valvola_bagno_grande",
+            "timer.valvola_camera":"input_boolean.valvola_camera"}

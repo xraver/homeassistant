@@ -62,6 +62,9 @@ homeassistant:
     sensor.valvola_camera_state:
       friendly_name: "Stato Valvola Camera"
       <<: *customize
+    sensor.netatmo_valve_map:
+      friendly_name: "Mappa Valvole Netatmo"
+      <<: *customize    
     input_boolean.valvola_zona_giorno:
       <<: *customize
     input_boolean.valvola_cucina:

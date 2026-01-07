@@ -20,6 +20,7 @@ logbook:
       - sensor.valvola_bagno_grande_state
       - sensor.valvola_camera_state
       - select.netatmo_casa_ravera_testa
+      - sensor.netatmo_valve_map
 
 ######################################################################
 # Netatmo Package - Recorder
@@ -43,3 +44,4 @@ recorder:
       - sensor.valvola_bagno_grande_state
       - sensor.valvola_camera_state
       - select.netatmo_casa_ravera_testa
+      - sensor.netatmo_valve_map
