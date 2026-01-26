@@ -1,0 +1,14 @@
+# Global owner: Every change in the repository requires your approval
+* @xraver
+
+# Core logic: Specific protection for the network manager core files
+/src/   @xraver
+
+# Security & CI/CD: Only you can approve changes to workflows and security settings
+/.github/workflows/    @xraver
+/security/             @xraver
+
+# Configuration files
+*.json  @xraver
+*.yaml  @xraver
+*.yml   @xraver
