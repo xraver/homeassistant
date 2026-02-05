@@ -236,9 +236,6 @@ homekit: !include components/homekit.yaml
 mqtt:
   light: !include_dir_merge_list mqtt/light/
 
-# Proxmox
-proxmoxve: !include components/proxmox.yaml
-
 # Monitor Docker
 monitor_docker: !include components/monitor_docker.yaml
 
