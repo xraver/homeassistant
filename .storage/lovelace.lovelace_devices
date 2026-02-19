@@ -2594,7 +2594,7 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "sensor.shelly_em_channel_1_power",
+                                  "entity": "sensor.shelly_em_channel_1_potenza",
                                   "name": "Potenza"
                                 }
                               ]
@@ -2717,33 +2717,33 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "sensor.shelly_em_channel_1_power",
+                                  "entity": "sensor.shelly_em_channel_1_potenza",
                                   "name": "Potenza"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "sensor.shelly_em_channel_1_voltage",
+                                  "entity": "sensor.shelly_em_channel_1_tensione",
                                   "name": "Tensione",
                                   "icon": "mdi:alpha-v-box"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "sensor.shelly_em_channel_1_power_factor",
+                                  "entity": "sensor.shelly_em_channel_1_fattore_di_potenza",
                                   "name": "FP",
                                   "icon": "mdi:angle-acute"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_firmware",
-                                  "entity": "update.shelly_em_firmware_update",
+                                  "entity": "update.shelly_em_firmware",
                                   "name": "Firmare"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_button",
-                                  "entity": "button.shelly_em_reboot",
+                                  "entity": "button.shelly_em_riavvia",
                                   "name": "Riavvia Dispositivo",
                                   "icon": "mdi:restart"
                                 }

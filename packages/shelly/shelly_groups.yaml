@@ -7,5 +7,5 @@ group:
     name: Shelly Devices
     icon: mdi:alpha-s-box
     entities:
-      - update.shelly_em_firmware_update
+      - update.shelly_em_firmware
       #- update.luce_piantana_firmware_update

@@ -7,22 +7,22 @@ logbook:
     entities:
       # Shelly EM (shellyem_b9f0d0)
       - switch.shelly_em
-      #- sensor.shelly_em_channel_1_power
-      - sensor.shelly_em_channel_1_energy
-      - sensor.shelly_em_channel_1_energy_cost
-      - sensor.shelly_em_channel_1_energy_returned
-      - sensor.shelly_em_channel_1_voltage
-      - sensor.shelly_em_channel_1_power_factor
-      - sensor.shelly_em_channel_2_power
-      - sensor.shelly_em_channel_2_energy
-      - sensor.shelly_em_channel_2_energy_returned
-      - sensor.shelly_em_channel_2_voltage
-      - sensor.shelly_em_channel_2_power_factor
-      - binary_sensor.shelly_em_overpowering
+      #- sensor.shelly_em_channel_1_potenza
+      - sensor.shelly_em_channel_1_energia
+      - sensor.shelly_em_channel_1_energia_cost
+      - sensor.shelly_em_channel_1_energia_restituita
+      - sensor.shelly_em_channel_1_tensione
+      - sensor.shelly_em_channel_1_fattore_di_potenza
+      - sensor.shelly_em_channel_2_potenza
+      - sensor.shelly_em_channel_2_energia
+      - sensor.shelly_em_channel_2_energia_restituita
+      - sensor.shelly_em_channel_2_tensione
+      - sensor.shelly_em_channel_2_fattore_di_potenza
+      - binary_sensor.shelly_em_sovra_potenza
       - binary_sensor.shelly_em_cloud
-      - update.shelly_em_firmware_update
-      - sensor.shelly_em_rssi
-      - sensor.shelly_em_uptime
+      - update.shelly_em_firmware
+      - sensor.shelly_em_intensita_del_segnale
+      - sensor.shelly_em_ultimo_riavvio
       # Shelly Bulb (shellybulb_bc8610)
       - binary_sensor.luce_piantana_cloud
       - update.luce_piantana_firmware_update
@@ -38,22 +38,22 @@ recorder:
     entities:
       # Shelly EM (shellyem_b9f0d0)
       - switch.shelly_em
-      #- sensor.shelly_em_channel_1_power
-      #- sensor.shelly_em_channel_1_energy
-      #- sensor.shelly_em_channel_1_energy_cost
-      - sensor.shelly_em_channel_1_energy_returned
-      - sensor.shelly_em_channel_1_voltage
-      - sensor.shelly_em_channel_2_power_factor
-      - sensor.shelly_em_channel_2_power
-      - sensor.shelly_em_channel_2_energy
-      - sensor.shelly_em_channel_2_energy_returned
-      - sensor.shelly_em_channel_2_voltage
-      - sensor.shelly_em_channel_1_power_factor
-      - binary_sensor.shelly_em_overpowering
+      #- sensor.shelly_em_channel_1_potenza
+      #- sensor.shelly_em_channel_1_energia
+      #- sensor.shelly_em_channel_1_energia_cost
+      - sensor.shelly_em_channel_1_energia_restituita
+      - sensor.shelly_em_channel_1_tensione
+      - sensor.shelly_em_channel_2_fattore_di_potenza
+      - sensor.shelly_em_channel_2_potenza
+      - sensor.shelly_em_channel_2_energia
+      - sensor.shelly_em_channel_2_energia_restituita
+      - sensor.shelly_em_channel_2_tensione
+      - sensor.shelly_em_channel_1_fattore_di_potenza
+      - binary_sensor.shelly_em_sovra_potenza
       - binary_sensor.shelly_em_cloud
-      - update.shelly_em_firmware_update
-      - sensor.shelly_em_rssi
-      - sensor.shelly_em_uptime
+      - update.shelly_em_firmware
+      - sensor.shelly_em_intensita_del_segnale
+      - sensor.shelly_em_ultimo_riavvio
       # Shelly Bulb (shellybulb_bc8610)
       - binary_sensor.luce_piantana_cloud
       - update.luce_piantana_firmware_update
