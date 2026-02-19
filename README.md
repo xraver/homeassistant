@@ -34,20 +34,19 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 The following integration are part of HACS system. Install HACS first:
 * [HACS](https://github.com/hacs/integration)
 ### Integrations
-* [browser_mod](https://github.com/thomasloven/hass-browser_mod)
+* [browser-mod](https://github.com/thomasloven/hass-browser_mod)
 * [Monitor Docker](https://github.com/ualex73/monitor_docker)
 * [MercedeME 2020](https://github.com/ReneNulschDE/mbapi2020)
 * [pfSense integration for Home Assistant](https://github.com/travisghansen/hass-pfsense) (not currently used)
 * [Scheduler Component](https://github.com/nielsfaber/scheduler-component) (not currently used)
 ### Frontend
 * [auto-entities](https://github.com/thomasloven/lovelace-auto-entities)
-* [Bar Card](https://github.com/custom-cards/bar-card)
 * [Battery State Card](https://github.com/maxwroc/battery-state-card)
 * [button-card](https://github.com/custom-cards/button-card)
 * [card-mod](https://github.com/thomasloven/lovelace-card-mod)
 * [clock-weather-card](https://github.com/pkissling/clock-weather-card)
-* [Darkish Theme](https://github.com/78wesley/Home-Assistant-Darkish-Theme)
-* [homeassistant_electrolux_status](https://github.com/mauro-midolo/homeassistant_electrolux_status) (Electrolux EOB9S21WX and AEG NSC7P751DS)
+* [homeassistant-electrolux-status](https://github.com/mauro-midolo/homeassistant_electrolux_status) (Electrolux EOB9S21WX and AEG NSC7P751DS)
+* [locelace-entity-progress-card](https://github.com/francois-le-ko4la/lovelace-entity-progress-card)
 * [Lovelace Horizon Card](https://github.com/rejuvenate/lovelace-horizon-card)
 * [fold-entity-row](https://github.com/thomasloven/lovelace-fold-entity-row)
 * [Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)
@@ -60,11 +59,13 @@ The following integration are part of HACS system. Install HACS first:
 * [Mushroom Themes](https://github.com/piitaya/lovelace-mushroom-themes) (not currently used)
 * [Paper Buttons Row](https://github.com/jcwillox/lovelace-paper-buttons-row) (not currently used)
 * [Plotly Graph Card](https://github.com/dbuezas/lovelace-plotly-graph-card)
-* [Reeder Dark Theme](https://github.com/hekm77/reeder_dark_theme)
 * [Scheduler Card](https://github.com/nielsfaber/scheduler-card) (not currently used)
 * [Shutter Card](https://github.com/Deejayfool/hass-shutter-card)
 * [Tabbed Card](https://github.com/kinghat/tabbed-card)
 * [Zigbee2mqtt Networkmap Card](https://github.com/azuwis/zigbee2mqtt-networkmap)
+### Themes
+* [Aqua Fiesta](https://github.com/home-assistant-community-themes/aqua-fiesta)
+* [Blue Night](https://github.com/home-assistant-community-themes/blue-night)
 ## Custom Component Used (not included in HACS)
 The following integrations are not part of HACS. It's required to clone the related repository in the folder git_repos.
 * [bravia-auth-and-remote](https://github.com/breunigs/bravia-auth-and-remote)

@@ -1730,52 +1730,53 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "custom:bar-card",
-                          "show_header_toggle": false,
-                          "state_color": false,
-                          "positions": {
-                            "indicator": "off",
-                            "name": "outside",
-                            "value": "outside",
-                            "icon": "inside"
-                          },
-                          "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\nbar-card-value {\n  \n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nbar-card-name {\n  margin: 0px;\n  font-size: 15px;\n  text-shadow: 1px 1px #0005;\n}\nha-icon {\n  color: darkgrey;\n}",
-                          "entities": [
-                            {
-                              "entity": "sensor.canon_tr8500_series_black_bk",
-                              "name": "BK",
-                              "color": "black",
-                              "width": "85%"
-                            },
-                            {
-                              "entity": "sensor.canon_tr8500_series_black_pgbk",
-                              "name": "PGBK",
-                              "color": "black",
-                              "width": "85%"
-                            },
-                            {
-                              "entity": "sensor.canon_tr8500_series_cyan",
-                              "name": "C",
-                              "color": "cyan",
-                              "width": "85%"
-                            },
-                            {
-                              "entity": "sensor.canon_tr8500_series_magenta",
-                              "name": "M",
-                              "color": "magenta",
-                              "width": "85%"
-                            },
-                            {
-                              "entity": "sensor.canon_tr8500_series_yellow",
-                              "name": "Y",
-                              "color": "yellow",
-                              "width": "85%"
-                            }
-                          ]
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:entity-progress-card",
+                      "entity": "sensor.canon_tr8500_series_black_bk",
+                      "name": "BK",
+                      "fill_direction": "left-to-right",
+                      "bar_color": "black",
+                      "bar_size": "large"
+                    },
+                    {
+                      "type": "custom:entity-progress-card",
+                      "entity": "sensor.canon_tr8500_series_black_pgbk",
+                      "name": "PGBK",
+                      "fill_direction": "left-to-right",
+                      "bar_color": "#555555",
+                      "bar_size": "large"
+                    },
+                    {
+                      "type": "custom:entity-progress-card",
+                      "entity": "sensor.canon_tr8500_series_cyan",
+                      "name": "C",
+                      "fill_direction": "left-to-right",
+                      "bar_color": "cyan",
+                      "bar_size": "large"
+                    },
+                    {
+                      "type": "custom:entity-progress-card",
+                      "entity": "sensor.canon_tr8500_series_magenta",
+                      "name": "M",
+                      "fill_direction": "left-to-right",
+                      "bar_color": "magenta",
+                      "bar_size": "large"
+                    },
+                    {
+                      "type": "custom:entity-progress-card",
+                      "entity": "sensor.canon_tr8500_series_yellow",
+                      "name": "Y",
+                      "fill_direction": "left-to-right",
+                      "bar_color": "yellow",
+                      "bar_size": "large"
                     }
                   ]
                 }
@@ -3259,20 +3260,57 @@
               "layout_type": "custom:grid-layout"
             },
             {
-              "type": "entities",
-              "entities": [
+              "type": "custom:vertical-stack-in-card",
+              "cards": [
                 {
-                  "entity": "input_boolean.central_heating"
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "input_boolean.central_heating"
+                    },
+                    {
+                      "entity": "select.netatmo_casa_ravera_testa"
+                    },
+                    {
+                      "entity": "input_number.netatmo_manual_temperature"
+                    }
+                  ],
+                  "state_color": false,
+                  "title": "Impostazioni"
                 },
                 {
-                  "entity": "select.netatmo_casa_ravera_testa"
+                  "type": "markdown",
+                  "content": "<hr style=\"border:0;height:1px;background:#c9c9c9;margin:8px 0;\">\n"
                 },
                 {
-                  "entity": "input_number.netatmo_manual_temperature"
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "input_boolean.valvola_zona_giorno"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_cucina"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_sala"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_studio"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_bagno_piccolo"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_bagno_grande"
+                    },
+                    {
+                      "entity": "input_boolean.valvola_camera"
+                    }
+                  ],
+                  "title": "Accensione / Spegnimento",
+                  "show_header_toggle": false
                 }
               ],
-              "state_color": false,
-              "title": "Impostazioni",
               "view_layout": {
                 "position": "sidebar"
               }
@@ -3666,6 +3704,124 @@
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
                                   "entity": "sensor.sensore_acqua_bagno_piccolo_battery",
+                                  "name": "Batteria"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Sensore Acqua Veranda - SONOFF SNZB-05P",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
+                    {
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-05P.png"
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "binary_sensor.sensore_acqua_veranda_water_leak",
+                                  "name": "Stato"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_battery_state",
+                                  "entity": "sensor.sensore_acqua_veranda_battery",
+                                  "name": "Batteria"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:motion-sensor",
+                  "heading": "Sesori Presenza",
+                  "heading_style": "title"
+                }
+              ],
+              "column_span": 3
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Sensore Presenza Bagno Grande - SONOFF SNZB-03P",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
+                    {
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "https://www.zigbee2mqtt.io/images/devices/SNZB-03P.png"
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "binary_sensor.sensore_presenza_bagno_grande_occupancy",
+                                  "name": "Stato"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_battery_state",
+                                  "entity": "sensor.sensore_presenza_bagno_grande_illumination",
+                                  "name": "Illuminazione"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_battery_state",
+                                  "entity": "sensor.sensore_presenza_bagno_grande_battery",
                                   "name": "Batteria"
                                 }
                               ]

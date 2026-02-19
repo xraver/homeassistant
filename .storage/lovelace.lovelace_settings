@@ -134,9 +134,49 @@
                       "entity": "sensor.current_version"
                     },
                     {
-                      "entity": "sensor.server_giorgioravera_it_scadenza_del_certificato"
+                      "entity": "sensor.zigbee2mqtt_bridge_version"
+                    },
+                    {
+                      "entity": "sensor.zigbee2mqtt_bridge_coordinator_type"
                     }
                   ]
+                },
+                {
+                  "type": "heading",
+                  "icon": "mdi:certificate",
+                  "heading": "Certificati",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "custom:entity-progress-card",
+                  "name": "Validità Certificato SSL",
+                  "icon": "mdi:certificate",
+                  "decimal": 0,
+                  "min_value": 0,
+                  "max_value": 90,
+                  "bar_orientation": "rtl",
+                  "custom_theme": [
+                    {
+                      "min": 0,
+                      "max": 10,
+                      "color": "red"
+                    },
+                    {
+                      "min": 10,
+                      "max": 20,
+                      "color": "yellow-color"
+                    },
+                    {
+                      "min": 20,
+                      "max": 90,
+                      "color": "green"
+                    }
+                  ],
+                  "entity": "sensor.certificato_ssl_giorni_rimanenti",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
                 },
                 {
                   "type": "heading",

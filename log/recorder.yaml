@@ -104,6 +104,9 @@ exclude:
     - sensor.xraver_duckdns_org
     #- sensor.xraver_duckdns_org_ipv6
     - sensor.externalip_giorgioravera_it
+    # Certificates
+    - sensor.server_giorgioravera_it_scadenza_del_certificato
+    - sensor.server_giorgioravera_it_scadenza
     # Canon
     - sensor.canon_tr8500_series
     - sensor.canon_tr8500_series_black_bk

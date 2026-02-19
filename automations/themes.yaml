@@ -25,11 +25,11 @@
       data_template:
         name: >-
           {% if is_state('sensor.home_mode', 'giorno') %}
-            default
+            classic_blue
           {% endif %}
           {% if is_state('sensor.home_mode', 'notte') %}
-            darkish
+            blue_night
           {% endif %}
           {% if is_state('sensor.home_mode', 'vacanza') %}
-            reeder_dark
+            aqua-fiesta
           {% endif %}

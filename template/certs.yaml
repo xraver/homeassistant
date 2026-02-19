@@ -1,0 +1,20 @@
+######################################################################
+# Sensors: Certificates
+######################################################################
+
+- trigger:
+    - platform: homeassistant
+      event: start
+    - platform: time_pattern
+      seconds: "/30"
+    - platform: time
+      at: "00:00:00"
+  sensor:
+    - name: "Certificato SSL - Giorni Rimanenti"
+      unique_id: certificato_ssl_giorni_rimanenti
+      unit_of_measurement: "giorni"
+      availability: >
+        {{ states('sensor.server_giorgioravera_it_scadenza_del_certificato') not in ['unknown','unavailable','none',''] }}
+      state: >
+        {% set expiry = as_datetime(states('sensor.server_giorgioravera_it_scadenza_del_certificato')) %}
+        {{ ((expiry - now()).total_seconds() / 86400) | round(0) }}
