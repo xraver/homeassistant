@@ -53,7 +53,7 @@ automation:
       climate_entity: >
         {{
           (state_attr('sensor.netatmo_valve_map', 'boost_boolean_to_climate')
-          | default('{}') | from_json)[trigger.entity_id]
+          | default('{}') | from_json).get(trigger.entity_id)
         }}
 
     action:
@@ -99,8 +99,7 @@ automation:
       climate_entity: >
         {{
           (state_attr('sensor.netatmo_valve_map', 'boost_boolean_to_climate')
-          | default('{}') | from_json)[trigger.entity_id]
-          if trigger.entity_id is not none else none
+          | default('{}') | from_json).get(trigger.entity_id)
         }}
 
     action:
