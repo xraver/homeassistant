@@ -152,8 +152,7 @@ recorder: !include log/recorder.yaml
 ######################################################################
 
 # Bluetooth
-bluetooth:
-  enable: false
+# bluetooth:
 
 # Discover DHCP requests for supported devices and services.
 dhcp:
