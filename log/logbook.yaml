@@ -56,11 +56,15 @@ exclude:
     - sensor.climatizzatore_studio_energia
     - sensor.climatizzatore_studio_temperatura_ambiente
     # Zigbee2mqtt
+    #- binary_sensor.porta_casa_contact
     - sensor.porta_casa_battery
     - sensor.porta_casa_voltage
-    #- binary_sensor.spare_door_contact
-    #- sensor.spare_door_battery
-    #- sensor.spare_door_voltage
+    #- binary_sensor.portafinestra_sala_contact
+    - sensor.portafinestra_sala_battery
+    - sensor.portafinestra_sala_voltage
+    #- binary_sensor.portafinestra_camera_contact
+    - sensor.portafinestra_camera_battery
+    - sensor.portafinestra_camera_voltage
     - sensor.wireless_button_battery
     - sensor.wireless_button_voltage
     - sensor.temperatura_balcone_battery

@@ -3391,7 +3391,8 @@
               "cards": [
                 {
                   "type": "heading",
-                  "heading": "spare_door - Xiaomi MCCGQ11LM"
+                  "heading": "Potafinestra sala- Xiaomi MCCGQ11LM",
+                  "heading_style": "title"
                 },
                 {
                   "type": "entities",
@@ -3416,13 +3417,63 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "binary_sensor.spare_door_contact",
+                                  "entity": "binary_sensor.portafinestra_sala_contact",
                                   "name": "Stato"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_battery_state",
-                                  "entity": "sensor.spare_door_battery",
+                                  "entity": "sensor.portafinestra_sala_battery",
+                                  "name": "Batteria"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Potafinestra camera - Xiaomi MCCGQ11LM",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "entities",
+                  "show_header_toggle": "off",
+                  "style": ".card-header {\n  padding: 0px 0px 0px 0px !important;\n}\n",
+                  "entities": [
+                    {
+                      "type": "custom:hui-element",
+                      "card_type": "vertical-stack",
+                      "cards": [
+                        {
+                          "type": "horizontal-stack",
+                          "cards": [
+                            {
+                              "type": "picture",
+                              "style": "ha-card { \n    --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';\n    --ha-card-background: \"rgba(0, 0, 0, 0)\";\n    --ha-card-box-shadow: 'none';\n}\n",
+                              "image": "https://www.zigbee2mqtt.io/images/devices/MCCGQ11LM.jpg"
+                            },
+                            {
+                              "type": "vertical-stack",
+                              "cards": [
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_state",
+                                  "entity": "binary_sensor.portafinestra_camera_contact",
+                                  "name": "Stato"
+                                },
+                                {
+                                  "type": "custom:button-card",
+                                  "template": "template_device_generic_battery_state",
+                                  "entity": "sensor.portafinestra_camera_battery",
                                   "name": "Batteria"
                                 }
                               ]

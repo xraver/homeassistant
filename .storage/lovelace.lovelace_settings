@@ -138,6 +138,9 @@
                     },
                     {
                       "entity": "sensor.zigbee2mqtt_bridge_coordinator_type"
+                    },
+                    {
+                      "entity": "sensor.zigbee2mqtt_bridge_coordinator_version"
                     }
                   ]
                 },
@@ -398,6 +401,14 @@
                     {
                       "entity": "sensor.porta_casa_battery",
                       "name": "Porta Casa"
+                    },
+                    {
+                      "entity": "portafinestra_camera_battery",
+                      "name": "Portafinestra Sala"
+                    },
+                    {
+                      "entity": "sensor.portafinestra_camera_battery",
+                      "name": "Portafinestra Camera"
                     },
                     {
                       "entity": "sensor.temperatura_balcone_battery",
