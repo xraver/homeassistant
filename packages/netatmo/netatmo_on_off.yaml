@@ -94,7 +94,7 @@ automation:
   - alias: "Termosifoni: Accensione"
     id: termosifoni_accensione
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id:
           - input_boolean.valvola_zona_giorno
@@ -106,16 +106,28 @@ automation:
           - input_boolean.valvola_camera
         to: "on"
 
-    action:
+    variables:
+      climate_id: "{{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_climate') | from_json)[trigger.entity_id] }}"
+      timer_id: "{{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_timer') | from_json)[trigger.entity_id] }}"
+
+    conditions:
+      - condition: template
+        value_template: "{{ climate_id is not none }}"
+      - condition: template
+        value_template: "{{ states(climate_id) not in ['unknown','unavailable','none',''] }}"
+      - condition: template
+        value_template: "{{ timer_id is not none }}"
+
+    actions:
       - action: climate.turn_on
         data:
           entity_id: >
-            {{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_climate') | from_json)[trigger.entity_id] }}
+            {{ climate_id }}
 
       - action: timer.cancel
         data:
           entity_id: >
-            {{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_timer') | from_json)[trigger.entity_id] }}
+            {{ timer_id }}
 
 
   ######################################################################
@@ -136,16 +148,28 @@ automation:
           - input_boolean.valvola_camera
         to: "off"
 
+    variables:
+      climate_id: "{{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_climate') | from_json)[trigger.entity_id] }}"
+      timer_id: "{{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_timer') | from_json)[trigger.entity_id] }}"
+
+    conditions:
+      - condition: template
+        value_template: "{{ climate_id is not none }}"
+      - condition: template
+        value_template: "{{ states(climate_id) not in ['unknown','unavailable','none',''] }}"
+      - condition: template
+        value_template: "{{ timer_id is not none }}"
+
     actions:
       - action: climate.turn_off
         data:
           entity_id: >
-            {{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_climate') | from_json)[trigger.entity_id] }}
+            {{ climate_id }}
 
       - action: timer.start
         data:
           entity_id: >
-            {{ (state_attr('sensor.netatmo_valve_map', 'boolean_to_timer') | from_json)[trigger.entity_id] }}
+            {{ timer_id }}
           duration: "{{ states('input_number.netatmo_manual_temperature') | int * 60 }}"
 
   ######################################################################
@@ -168,11 +192,21 @@ automation:
             - timer.valvola_bagno_grande
             - timer.valvola_camera
 
+    variables:
+      mappa_sensori: "{{ state_attr('sensor.netatmo_valve_map','timer_to_boolean') | from_json }}"
+      climate_input_boolean: "{{ mappa_sensori.get(trigger.entity_id) }}"
+
+    conditions:
+      - condition: template
+        value_template: "{{ climate_input_boolean is not none }}"
+      - condition: template
+        value_template: "{{ states(climate_input_boolean) not in ['unknown','unavailable','none',''] }}"
+
     actions:
       - action: input_boolean.turn_on
         data:
           entity_id: >
-            {{ (state_attr('sensor.netatmo_valve_map', 'timer_to_boolean') | from_json)[trigger.event.data.entity_id] }}
+            {{ climate_input_boolean }}
 
       - action: script.notify_all
         data:
@@ -184,3 +218,63 @@ automation:
               | replace('_', ' ')
             }} si è riacceso
           destination: all
+
+  ######################################################################
+  # Automation triggered after window open to switch off the valve
+  ######################################################################
+  - alias: "Termosifoni: Spegnimento con Finestra Aperta"
+    id: termosifoni_spegnimento_con_finestra_aperta
+    mode: parallel
+
+    triggers:
+      - trigger: state
+        entity_id:
+          - binary_sensor.portafinestra_sala_contact
+          - binary_sensor.portafinestra_camera_contact
+        to: 'on'
+
+    variables:
+      mappa_sensori: "{{ state_attr('sensor.netatmo_valve_map','sensors_to_climate') | from_json }}"
+      climate_input_boolean: "{{ mappa_sensori.get(trigger.entity_id) }}"
+
+    conditions:
+      - condition: template
+        value_template: "{{ climate_input_boolean is not none }}"
+      - condition: template
+        value_template: "{{ states(climate_input_boolean) not in ['unknown','unavailable','none',''] }}"
+
+    actions:
+      - action: input_boolean.turn_off
+        data:
+          entity_id: >
+            {{ climate_input_boolean }}
+
+  ######################################################################
+  # Automation triggered after window close to switch on the valve
+  ######################################################################
+  - alias: "Termosifoni: Riaccensione con Finestra Chiusa"
+    id: termosifoni_riaccensione_con_finestra_chiusa
+    mode: parallel
+
+    triggers:
+      - trigger: state
+        entity_id:
+          - binary_sensor.portafinestra_sala_contact
+          - binary_sensor.portafinestra_camera_contact
+        to: 'off'
+
+    variables:
+      mappa_sensori: "{{ state_attr('sensor.netatmo_valve_map','sensors_to_climate') | from_json }}"
+      climate_input_boolean: "{{ mappa_sensori.get(trigger.entity_id) }}"
+
+    conditions:
+      - condition: template
+        value_template: "{{ climate_input_boolean is not none }}"
+      - condition: template
+        value_template: "{{ states(climate_input_boolean) not in ['unknown','unavailable','none',''] }}"
+
+    actions:
+      - action: input_boolean.turn_on
+        data:
+          entity_id: >
+            {{ climate_input_boolean }}

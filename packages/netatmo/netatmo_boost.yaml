@@ -37,7 +37,7 @@ automation:
     id: termosifoni_attivazione_boost
     mode: parallel
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id:
           - input_boolean.boost_valvola_zona_giorno
@@ -50,25 +50,31 @@ automation:
         to: "on"
 
     variables:
-      climate_entity: >
+      climate_id: >
         {{
           (state_attr('sensor.netatmo_valve_map', 'boost_boolean_to_climate')
           | default('{}') | from_json).get(trigger.entity_id)
         }}
 
-    action:
+    conditions:
+      - condition: template
+        value_template: "{{ climate_id is not none }}"
+      - condition: template
+        value_template: "{{ states(climate_id) not in ['unknown','unavailable','none',''] }}"
+
+    actions:
       #- action: climate.set_preset_mode
       #  data_template:
       #    entity_id: "{{ entity_id }}"
       #    preset_mode: boost
       - action: climate.set_temperature
         data_template:
-          entity_id: "{{ climate_entity }}"
+          entity_id: "{{ climate_id }}"
           temperature: 30
       - delay: "00:05:00"
       - action: climate.turn_on
         data_template:
-          entity_id: "{{ climate_entity }}"
+          entity_id: "{{ climate_id }}"
       - action: input_boolean.turn_off
         data_template:
           entity_id: "{{ trigger.entity_id }}"
@@ -80,7 +86,7 @@ automation:
     id: termosifoni_disattivazione_boost
     mode: parallel
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id:
           - input_boolean.boost_valvola_zona_giorno
@@ -96,13 +102,19 @@ automation:
         event: start
 
     variables:
-      climate_entity: >
+      climate_id: >
         {{
           (state_attr('sensor.netatmo_valve_map', 'boost_boolean_to_climate')
           | default('{}') | from_json).get(trigger.entity_id)
         }}
 
-    action:
+    conditions:
+      - condition: template
+        value_template: "{{ climate_id is not none }}"
+      - condition: template
+        value_template: "{{ states(climate_id) not in ['unknown','unavailable','none',''] }}"
+
+    actions:
       # home assistant start
       - choose:
           - conditions: "{{ trigger.platform == 'homeassistant' }}"
@@ -120,7 +132,7 @@ automation:
         default:
           - action: climate.turn_on
             data_template:
-              entity_id: "{{ climate_entity }}"
+              entity_id: "{{ climate_id }}"
           - action: input_boolean.turn_off
             data_template:
               entity_id: "{{ trigger.entity_id }}"

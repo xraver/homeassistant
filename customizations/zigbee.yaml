@@ -12,16 +12,28 @@ sensor.porta_casa_linkquality:
 sensor.porta_casa_voltage:
   friendly_name: 'Tensione'
 
-# Spare Door Sensor
-binary_sensor.spare_door_contact:
-  friendly_name: 'Spare Door'
-sensor.spare_door_battery:
+# Bedroom French Door Sensor
+binary_sensor.portafinestra_sala_contact:
+  friendly_name: 'Portafinestra Sala'
+sensor.portafinestra_sala_battery:
   friendly_name: 'Batteria'
-sensor.spare_door_device_temperature:
+sensor.portafinestra_sala_device_temperature:
   friendly_name: 'Temperatura'
-sensor.spare_door_linkquality:
+sensor.portafinestra_sala_linkquality:
   friendly_name: 'Link'
-sensor.spare_door_voltage:
+sensor.portafinestra_sala_voltage:
+  friendly_name: 'Tensione'
+
+# Bedroom French Door Sensor
+binary_sensor.portafinestra_camera_contact:
+  friendly_name: 'Portafinestra Camera'
+sensor.portafinestra_camera_battery:
+  friendly_name: 'Batteria'
+sensor.portafinestra_camera_device_temperature:
+  friendly_name: 'Temperatura'
+sensor.portafinestra_camera_linkquality:
+  friendly_name: 'Link'
+sensor.portafinestra_camera_voltage:
   friendly_name: 'Tensione'
 
 # Front Balcony Temperature Sensor
