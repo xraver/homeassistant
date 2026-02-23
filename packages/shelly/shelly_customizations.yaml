@@ -36,7 +36,7 @@ homeassistant:
       friendly_name: Connessione Cloud
     update.shelly_em_firmware:
       friendly_name: Aggiornamento Firmware
-    shelly_em_firmware_beta:
+    update.shelly_em_firmware_beta:
       friendly_name: Aggiornamento Firmware Beta
     sensor.shelly_em_intensita_del_segnale:
       friendly_name: Potenza Segnale
