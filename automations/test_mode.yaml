@@ -5,16 +5,12 @@
 - alias: "Home Assistant - Modalità Test: Azione on"
   id: "home_assistant_modalita_test_azione_on"
 
-  trigger:
+  triggers:
     - trigger: state
       entity_id: input_boolean.test_mode
       to: 'on'
 
-  action:
-
-    - action: automation.turn_off
-      entity_id: automation.home_assistant_startup_restart_on_error
-
+  actions:
     - action: automation.turn_off
       entity_id: automation.home_assistant_startup_google_sync
 
@@ -25,14 +21,11 @@
 - alias: "Home Assistant - Modalità Test: Azione off"
   id: "home_assistant_modalita_test_azione_off"
 
-  trigger:
+  triggers:
     - trigger: state
       entity_id: input_boolean.test_mode
       to: 'off'
 
-  action:
-    - action: automation.turn_on
-      entity_id: automation.home_assistant_startup_restart_on_error
-
+  actions:
     - action: automation.turn_on
       entity_id: automation.home_assistant_startup_google_sync

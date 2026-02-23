@@ -1,22 +1,4 @@
 ######################################################################
-# Startup Automation: Restart on Error
-######################################################################
-
-- alias: "Home Assistant - Startup: Restart on Error"
-  id: "home_assistant_startup_restart_on_error"
-
-  trigger:
-    - trigger: homeassistant
-      event: start
-
-  action:
-    - delay: 00:00:60
-    - condition: state
-      entity_id: persistent_notification.invalid_config
-      state: 'notifying'
-    - action: script.homeassistant_restart
-
-######################################################################
 # Startup Automation: Google Sync
 ######################################################################
 
