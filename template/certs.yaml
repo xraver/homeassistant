@@ -2,12 +2,12 @@
 # Sensors: Certificates
 ######################################################################
 
-- trigger:
-    - platform: homeassistant
+- triggers:
+    - trigger: homeassistant
       event: start
-    - platform: time_pattern
+    - trigger: time_pattern
       seconds: "/30"
-    - platform: time
+    - trigger: time
       at: "00:00:00"
   sensor:
     - name: "Certificato SSL - Giorni Rimanenti"
