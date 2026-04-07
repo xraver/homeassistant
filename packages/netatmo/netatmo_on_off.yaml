@@ -94,7 +94,7 @@ automation:
   - alias: "Termosifoni: Accensione"
     id: termosifoni_accensione
 
-    triggers:
+    trigger:
       - trigger: state
         entity_id:
           - input_boolean.valvola_zona_giorno
@@ -136,7 +136,7 @@ automation:
   - alias: "Termosifoni: Spegnimento"
     id: termosifoni_spegnimento
 
-    triggers:
+    trigger:
       - trigger: state
         entity_id:
           - input_boolean.valvola_zona_giorno
@@ -179,7 +179,7 @@ automation:
     id: termosifoni_scadenza_timeout_impostazione_manuale
     mode: parallel
 
-    triggers:
+    trigger:
       - trigger: event
         event_type: timer.finished
         event_data:
@@ -226,7 +226,7 @@ automation:
     id: termosifoni_spegnimento_con_finestra_aperta
     mode: parallel
 
-    triggers:
+    trigger:
       - trigger: state
         entity_id:
           - binary_sensor.portafinestra_sala_contact
@@ -256,7 +256,7 @@ automation:
     id: termosifoni_riaccensione_con_finestra_chiusa
     mode: parallel
 
-    triggers:
+    trigger:
       - trigger: state
         entity_id:
           - binary_sensor.portafinestra_sala_contact

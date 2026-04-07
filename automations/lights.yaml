@@ -10,7 +10,7 @@
     If someone is at home, the bathroom is occupied,
     the sun is low, and it is between 3:00 p.m. and 5:00 a.m.,
     turn on the light in the large bathroom and turn it off after a while.
-  triggers:
+  trigger:
     - platform: state
       entity_id: binary_sensor.sensore_presenza_bagno_grande_occupancy
       to: "on"

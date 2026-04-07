@@ -1,12 +1,13 @@
 # Home Assistant Components
-.cache/
 .HA_VERSION
 .ha_run.lock
-.storage/
 .uuid
-deps/
 home-assistant.log*
 home-assistant_v2.db*
+ip_bans.yaml
+.cache/
+.storage/
+deps/
 image/
 tts/
 

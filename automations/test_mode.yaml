@@ -5,7 +5,7 @@
 - alias: "Home Assistant - Modalità Test: Azione on"
   id: "home_assistant_modalita_test_azione_on"
 
-  triggers:
+  trigger:
     - trigger: state
       entity_id: input_boolean.test_mode
       to: 'on'
@@ -21,7 +21,7 @@
 - alias: "Home Assistant - Modalità Test: Azione off"
   id: "home_assistant_modalita_test_azione_off"
 
-  triggers:
+  trigger:
     - trigger: state
       entity_id: input_boolean.test_mode
       to: 'off'
