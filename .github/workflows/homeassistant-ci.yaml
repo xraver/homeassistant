@@ -25,12 +25,15 @@ jobs:
     steps:
       - name: ⤵️ Check out configuration from GitHub
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          clean: true
 
       # ---------------------------------------------------------
       # CACHE PIP
       # ---------------------------------------------------------
       - name: ♻️ Cache pip
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -41,7 +44,7 @@ jobs:
       # CACHE NPM
       # ---------------------------------------------------------
       - name: ♻️ Cache npm
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-cache
