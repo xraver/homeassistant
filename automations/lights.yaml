@@ -7,14 +7,15 @@
 - alias: "Accendi luce bagno se occupato e casa non vuota"
   id: "accendi_luci_presenza_bagno_grande"
   description: >
-    Se qualcuno è in casa, il bagno è occupato,
-    il sole è basso e siamo tra le 15:00 e le 05:00,
-    accende la luce del bagno grande.
-  trigger:
+    If someone is at home, the bathroom is occupied,
+    the sun is low, and it is between 3:00 p.m. and 5:00 a.m.,
+    turn on the light in the large bathroom and turn it off after a while.
+  triggers:
     - platform: state
       entity_id: binary_sensor.sensore_presenza_bagno_grande_occupancy
       to: "on"
-  condition:
+
+  conditions:
     - condition: state
       entity_id: group.residents
       state: "home"
@@ -25,8 +26,22 @@
       entity_id: sun.sun
       attribute: elevation
       below: 1
-  action:
+
+  actions:
     - service: light.turn_on
       target:
         entity_id: light.luce_trono
-  mode: single
+
+    # Wait 10 minutes before checking if the light should be turned off
+    - delay: "00:10:00"
+
+    # Turn off only if there is no more presence in the bathroom
+    - condition: state
+      entity_id: binary_sensor.sensore_presenza_bagno_grande_occupancy
+      state: "off"
+
+    - service: light.turn_off
+      target:
+        entity_id: light.luce_trono
+
+  mode: restart
