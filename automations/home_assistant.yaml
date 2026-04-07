@@ -65,12 +65,12 @@
     - trigger: homeassistant
       event: start
 
-  condition:
-    condition: state
-    entity_id: input_boolean.home_mode_away
-    state: 'off'
+  conditions:
+    - condition: state
+      entity_id: input_boolean.home_mode_away
+      state: 'off'
 
-  action:
+  actions:
     - action: input_boolean.turn_on
       data_template:
         entity_id: >-
@@ -97,7 +97,7 @@
       entity_id: input_boolean.home_mode_night
       to: 'off'
 
-  action:
+  actions:
     - action: >-
         {% if trigger.to_state.state == 'on' %}
           input_boolean.turn_off
@@ -119,9 +119,9 @@
     - trigger: time
       at: '00:00:00'
 
-  condition:
+  conditions:
     - condition: time
       weekday: [mon]
 
-  action:
+  actions:
     - action: script.homeassistant_clearlog

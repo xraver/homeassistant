@@ -52,7 +52,7 @@ automation:
           entity_id: input_boolean.home_mode_away
           state: 'on'
 
-    action:
+    actions:
       - action: input_boolean.turn_off
         data:
           entity_id: input_boolean.home_mode_away

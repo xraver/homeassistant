@@ -70,7 +70,7 @@ automation:
           - input_boolean.update_fritz
         to: 'off'
 
-    action:
+    actions:
       - action: persistent_notification.dismiss
         data_template:
           notification_id: "update"

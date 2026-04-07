@@ -48,9 +48,7 @@
     - trigger: time
       at: '12:00:00'
 
-  condition: []
-
-  action:
+  actions:
     - action: script.speech_engine
       data_template:
         message: >-
