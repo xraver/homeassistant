@@ -25,19 +25,19 @@ automation:
           | list
         }}
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: group.hacs
         to: 'on'
       - trigger: homeassistant
         event: start
 
-    condition:
-      condition: state
-      entity_id: group.hacs
-      state: 'on'
+    conditions:
+      - condition: state
+        entity_id: group.hacs
+        state: 'on'
 
-    action:
+    actions:
       - delay: '00:00:10'
       - action: script.notify_text
         data_template:
@@ -61,14 +61,14 @@ automation:
   - alias: "Update: Riconoscimento Aggiornamenti"
     id: "update_riconoscimento_aggiornamenti"
 
-    trigger:
-      trigger: state
-      entity_id:
-        - input_boolean.update_hacs
-        - input_boolean.update_shelly
-        - input_boolean.update_bticino
-        - input_boolean.update_fritz
-      to: 'off'
+    triggers:
+      - trigger: state
+        entity_id:
+          - input_boolean.update_hacs
+          - input_boolean.update_shelly
+          - input_boolean.update_bticino
+          - input_boolean.update_fritz
+        to: 'off'
 
     action:
       - action: persistent_notification.dismiss

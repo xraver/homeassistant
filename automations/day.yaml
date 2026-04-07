@@ -7,13 +7,12 @@
   id: "risveglio_giorgio"
   #initial_state: 'on'
 
-  trigger:
+  triggers:
     - trigger: time
       at: '07:00:00'
 
-  condition:
-    condition: and
-    conditions:
+  conditions:
+    - and:
       - condition: state
         entity_id: input_boolean.home_mode_away
         state: 'off'
@@ -21,7 +20,7 @@
       - condition: time
         weekday: [mon, tue, wed, thu, fri]
 
-  action:
+  actions:
     - action: cover.set_cover_position
       data:
         entity_id:

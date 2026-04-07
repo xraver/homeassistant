@@ -13,21 +13,21 @@ template:
   # 2 -> external locked (e.g. locked by key)
   ######################################################################
   - binary_sensor:
-        - name: ff590mr_locked"
-          unique_id: ff590mr_locked
-          state: >
-            {% if is_state('sensor.ff590mr_lock', '0') %}
-              on
-            {% else %}
-              off
-            {% endif %}
-          device_class: door   # oppure safety, connectivity, problem… lock non è supportato
-          icon: >
-            {% if not is_state('sensor.ff590mr_lock', '0') %}
-              mdi:lock
-            {% else %}
-              mdi:lock-open
-            {% endif %}
+      - name: ff590mr_locked"
+        unique_id: ff590mr_locked
+        state: >
+          {% if is_state('sensor.ff590mr_lock', '0') %}
+            on
+          {% else %}
+            off
+          {% endif %}
+        device_class: door   # oppure safety, connectivity, problem… lock non è supportato
+        icon: >
+          {% if not is_state('sensor.ff590mr_lock', '0') %}
+            mdi:lock
+          {% else %}
+            mdi:lock-open
+          {% endif %}
 
   ######################################################################
   # Binary Sensor: Doors Closed

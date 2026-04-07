@@ -10,7 +10,7 @@ automation:
   - alias: "Modalità Vacanza: Gestione Termosifoni"
     id: "modalita_vacanza_gestione_termosifoni"
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: input_boolean.home_mode_away
         to: 'on'
@@ -18,9 +18,7 @@ automation:
         entity_id: input_boolean.home_mode_away
         to: 'off'
 
-    condition: []
-
-    action:
+    actions:
       - choose:
           # Switch On
           - conditions:

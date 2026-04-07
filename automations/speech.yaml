@@ -9,7 +9,7 @@
   id: "saluto_di_benvenuto"
   mode: parallel
 
-  trigger:
+  triggers:
     - trigger: zone
       entity_id:
         - person.giorgio
@@ -18,9 +18,7 @@
       zone: zone.home
       event: enter
 
-  condition: []
-
-  action:
+  actions:
     - wait_for_trigger:
         - trigger: state
           entity_id: binary_sensor.porta_casa_contact
@@ -46,7 +44,7 @@
 - alias: "Saluto orario"
   initial_state: false
 
-  trigger:
+  triggers:
     - trigger: time
       at: '12:00:00'
 

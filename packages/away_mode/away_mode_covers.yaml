@@ -11,18 +11,18 @@ automation:
     id: "modalita_vacanza_gestione_tapparelle"
     #initial_state: 'on'
 
-    trigger:
+    triggers:
       - trigger: time
         at: '08:00:00'
       - trigger: time
         at: '20:00:00'
 
-    condition:
+    conditions:
       - condition: state
         entity_id: input_boolean.home_mode_away
         state: 'on'
 
-    action:
+    actions:
       - action: cover.set_cover_position
         data_template:
           entity_id:

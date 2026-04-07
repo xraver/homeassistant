@@ -12,14 +12,13 @@
   id: "porta_casa_accendi_luci_corridoio"
   mode: single
 
-  trigger:
+  triggers:
     - trigger: state
       entity_id: binary_sensor.porta_casa_contact
       to: 'on'
 
-  condition:
-    condition: and
-    conditions:
+  conditions:
+    - and:
       - condition: numeric_state
         entity_id: sun.sun
         attribute: elevation
@@ -31,7 +30,7 @@
         entity_id: group.lights
         state: "off"
 
-  action:
+  actions:
     - delay: 00:00:01
     - action: light.turn_on
       entity_id: light.luce_zona_giorno

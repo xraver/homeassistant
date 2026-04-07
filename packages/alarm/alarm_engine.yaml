@@ -30,10 +30,10 @@ automation:
   - alias: "Allarmi: Riconoscimento Allarmi"
     id: "allarmi_riconoscimento_allarmi"
 
-    trigger:
-      trigger: state
-      entity_id: group.alarms
-      to: 'off'
+    triggers:
+      - trigger: state
+        entity_id: group.alarms
+        to: 'off'
 
-    action:
+    actions:
       - action: script.stop_alarm

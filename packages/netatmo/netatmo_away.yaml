@@ -49,7 +49,7 @@ automation:
   - alias: "Termosifoni: Sincronizzazione con Riscaldamento Centralizzato"
     id: "termosifoni_sincronizzazione_con_riscaldamento_centralizzato"
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: input_boolean.central_heating
         to: 'on'
@@ -57,9 +57,7 @@ automation:
         entity_id: input_boolean.central_heating
         to: 'off'
 
-    condition: []
-
-    action:
+    actions:
       - choose:
           # Switch On
           - conditions:

@@ -5,9 +5,9 @@
 - alias: "Home Assistant - Startup: Google Sync"
   id: "home_assistant_startup_google_sync"
 
-  trigger:
+  triggers:
     - trigger: homeassistant
       event: start
 
-  action:
+  actions:
     - action: script.homeassistant_google_home_sync

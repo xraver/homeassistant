@@ -37,7 +37,7 @@ automation:
     id: termosifoni_attivazione_boost
     mode: parallel
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id:
           - input_boolean.boost_valvola_zona_giorno
@@ -86,7 +86,7 @@ automation:
     id: termosifoni_disattivazione_boost
     mode: parallel
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id:
           - input_boolean.boost_valvola_zona_giorno

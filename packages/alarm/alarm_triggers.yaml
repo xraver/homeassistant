@@ -13,17 +13,17 @@ automation:
   - alias: "Allarmi: Porta Casa"
     id: "allarmi_porta_casa"
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: group.doors
         to: 'on'
 
-    condition:
+    conditions:
       - condition: state
         entity_id: binary_sensor.guard_mode
         state: 'on'
 
-    action:
+    actions:
       - action: script.start_alarm
         data_template:
           entity_id: input_boolean.door_alarm
@@ -39,12 +39,12 @@ automation:
   - alias: "Allarmi: Perdita Acqua"
     id: "allarmi_perdita_acqua"
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: group.water
         to: 'on'
 
-    action:
+    actions:
       - action: script.start_alarm
         data_template:
           entity_id: input_boolean.water_alarm
@@ -61,12 +61,12 @@ automation:
   - alias: "Allarmi: Auto"
     id: "allarmi_auto"
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: group.car_alarm
         to: 'on'
 
-    action:
+    actions:
       - action: script.start_alarm
         data_template:
           entity_id: input_boolean.car_alarm

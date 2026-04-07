@@ -5,15 +5,15 @@
 - alias: "Allarmi: Consumo Energetico Elevato"
   id: "allarmi_consumo_energetico_elevato"
 
-  trigger:
+  triggers:
     - trigger: numeric_state
       entity_id: sensor.shelly_em_channel_1_potenza
       above: 3300
 
-  action:
-    action: script.notify_all
-    data_template:
-      title: "Home Assistant - Consumo Energetico Elevato"
-      message: "Consumo energetico elevato ({{ states.sensor.shelly_em_channel_1_potenza.state }})."
-      enable_persistent: false
-      volume_level: 0.4
+  actions:
+    - action: script.notify_all
+      data_template:
+        title: "Home Assistant - Consumo Energetico Elevato"
+        message: "Consumo energetico elevato ({{ states.sensor.shelly_em_channel_1_potenza.state }})."
+        enable_persistent: false
+        volume_level: 0.4

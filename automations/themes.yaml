@@ -5,7 +5,7 @@
 - alias: "Home Assistant - Temi: Modalità Giorno/Notte"
   id: "home_assistant_temi_modalita_giorno_notte"
 
-  trigger:
+  triggers:
     - trigger: homeassistant
       event: start
     - trigger: state
@@ -18,7 +18,7 @@
       entity_id: input_boolean.home_mode_away
       to: 'on'
 
-  action:
+  actions:
     - delay:
         milliseconds: 50
     - action: frontend.set_theme

@@ -17,11 +17,11 @@
       !secret nfc_1:
         name: "NFC_1"
 
-  trigger:
-    trigger: event
-    event_type: tag_scanned
+  triggers:
+    - trigger: event
+      event_type: tag_scanned
 
-  action:
+  actions:
     - variables:
         detected_tag: "{{ trigger.event.data.tag_id }}"
         detected_device: "{{ trigger.event.data.device_id }}"

@@ -4,7 +4,7 @@
 - alias: "wireless_button_single"
   id: 'wireless_button_single'
 
-  trigger:
+  triggers:
     - domain: mqtt
       trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
@@ -12,7 +12,7 @@
       type: action
       subtype: single
 
-  action:
+  actions:
     - action: light.toggle
       entity_id: light.luce_corridoio
 
@@ -22,7 +22,7 @@
 - alias: 'wireless_button_double'
   id: 'wireless_button_double'
 
-  trigger:
+  triggers:
     - domain: mqtt
       trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
@@ -30,7 +30,7 @@
       type: action
       subtype: action_double
 
-  action:
+  actions:
     - action: light.toggle
       entity_id: light.luce_sala
 
@@ -40,7 +40,7 @@
 - alias: 'wireless_button_triple'
   id: 'wireless_button_triple'
 
-  trigger:
+  triggers:
     - domain: mqtt
       trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
@@ -48,7 +48,7 @@
       type: action
       subtype: action_triple
 
-  action:
+  actions:
     - action: light.toggle
       entity_id: light.luce_studio
 
@@ -58,7 +58,7 @@
 - alias: 'wireless_button_hold'
   id: 'wireless_button_hold'
 
-  trigger:
+  triggers:
     - domain: mqtt
       trigger: device
       device_id: 438f9a7754246f4c5b02f7560706eb59
@@ -66,6 +66,6 @@
       type: action
       subtype: hold
 
-  action:
+  actions:
     - action: light.toggle
       entity_id: light.luci_casa

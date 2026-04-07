@@ -5,14 +5,14 @@
 - alias: "Home Assistant: Cambio modalità On"
   id: "home_assistant_cambio_modalita_on"
 
-  trigger:
-    trigger: state
-    entity_id: input_boolean.home_mode_day,
-               input_boolean.home_mode_night,
-               input_boolean.home_mode_away
-    to: 'on'
+  triggers:
+    - trigger: state
+      entity_id: input_boolean.home_mode_day,
+                 input_boolean.home_mode_night,
+                 input_boolean.home_mode_away
+      to: 'on'
 
-  action:
+  actions:
     - action: input_boolean.turn_off
       data_template:
         entity_id: >
@@ -21,16 +21,15 @@
 
 - alias: "Home Assistant: Cambio modalità Off"
 
-  trigger:
-    trigger: state
-    entity_id: input_boolean.home_mode_day,
-               input_boolean.home_mode_night,
-               input_boolean.home_mode_away
-    to: 'off'
+  triggers:
+    - trigger: state
+      entity_id: input_boolean.home_mode_day,
+                 input_boolean.home_mode_night,
+                 input_boolean.home_mode_away
+      to: 'off'
 
-  condition:
-    condition: and
-    conditions:
+  conditions:
+    - and:
       - condition: state
         entity_id: input_boolean.home_mode_day
         state: 'off'
@@ -41,7 +40,7 @@
         entity_id: input_boolean.home_mode_away
         state: 'off'
 
-  action:
+  actions:
     - action: input_boolean.turn_on
       data_template:
         entity_id: >
@@ -58,7 +57,7 @@
 - alias: "Home Assistant: Modalità Giorno/Notte"
   id: "home_assistant_modalita_giorno_notte"
 
-  trigger:
+  triggers:
     - trigger: time
       at: '08:00:00'
     - trigger: time
@@ -90,7 +89,7 @@
 - alias: "Home Assistant: Gestione notifiche vocali"
   id: "home_assistant_gestione_notifiche_vocali"
 
-  trigger:
+  triggers:
     - trigger: state
       entity_id: input_boolean.home_mode_night
       to: 'on'
@@ -116,7 +115,7 @@
 - alias: "Home Assistant: Pulitura settimanale log"
   id: "home_assistant_pulitura_settimanale_log"
 
-  trigger:
+  triggers:
     - trigger: time
       at: '00:00:00'
 

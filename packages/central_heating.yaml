@@ -64,15 +64,13 @@ automation:
   - alias: "Riscaldamento Centralizzato"
     id: "riscaldamneto_centralizzato"
 
-    trigger:
+    triggers:
       - trigger: homeassistant
         event: start
       - trigger: time
         at: '00:00:00'
 
-    condition: []
-
-    action:
+    actions:
       - choose:
           # Switch on
           - conditions: "{{ now().month == 11 and now().day == 1 and is_state('input_boolean.central_heating', 'off') }}"

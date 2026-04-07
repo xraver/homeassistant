@@ -18,7 +18,7 @@ automation:
           | list
         }}
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: climate.zona_giorno
         to: 'unavailable'
@@ -41,7 +41,7 @@ automation:
         entity_id: climate.camera
         to: 'unavailable'
 
-    action:
+    actions:
       - action: script.notify_text
         data_template:
           title: "Netatmo - Dispositivi disconnessi"

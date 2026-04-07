@@ -10,12 +10,12 @@ automation:
   - alias: "Modalità Vacanza: Azione on"
     id: "modalita_vacanza_azione_on"
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: input_boolean.home_mode_away
         to: 'on'
 
-    action:
+    actions:
       - action: script.notify_voice
         data_template:
           message: "Modalità vacanza abilitata"
@@ -26,7 +26,7 @@ automation:
   - alias: "Modalità Vacanza: Azione off"
     id: "modalita_vacanza_azione_off"
 
-    trigger:
+    triggers:
       # Manual Disable
       - trigger: state
         entity_id: input_boolean.home_mode_away
@@ -39,9 +39,8 @@ automation:
       - trigger: time
         at: input_datetime.away_mode_end
 
-    condition:
-      condition: or
-      conditions:
+    conditions:
+      - or:
         - condition: template
           value_template: >-
             {% if trigger.entity_id == 'input_boolean.home_mode_away' %}

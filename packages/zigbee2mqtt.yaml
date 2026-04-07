@@ -225,22 +225,22 @@ automation:
   ######################################################################
   - alias: "Zigbee2MQTT: Abilita Join"
     id: "zigbee2mqtt_abilita_join"
-    trigger:
-      trigger: state
-      entity_id: switch.zigbee2mqtt_bridge_permit_join
-      to: "on"
-    action:
-      action: timer.start
-      entity_id: timer.zigbee_permit_join
-      data_template:
-        duration: "{{ '00:0%i:00' % (states('input_number.zigbee2mqtt_join_minutes') | int ) }}"
+    triggers:
+      - trigger: state
+        entity_id: switch.zigbee2mqtt_bridge_permit_join
+        to: "on"
+    actions:
+      - action: timer.start
+        entity_id: timer.zigbee_permit_join
+        data_template:
+          duration: "{{ '00:0%i:00' % (states('input_number.zigbee2mqtt_join_minutes') | int ) }}"
 
   ######################################################################
   # Automation to stop timer when switch turned off and turn off switch when timer finished
   ######################################################################
   - alias: "Zigbee2MQTT: Disabilita Join"
     id: "zigbee2mqtt_disabilita_join"
-    trigger:
+    triggers:
       - trigger: event
         event_type: timer.finished
         event_data:
@@ -248,7 +248,7 @@ automation:
       - trigger: state
         entity_id: switch.zigbee2mqtt_bridge_permit_join
         to: "off"
-    action:
+    actions:
       - action: timer.cancel
         data:
           entity_id: timer.zigbee_permit_join
@@ -260,13 +260,13 @@ automation:
   ######################################################################
   - alias: "Zigbee2MQTT: Device aggiunto alla rete Zigbee2mqtt"
     id: "zigbee2mqtt_device_aggiunto_alla_rete_zigbee2mqtt"
-    trigger:
-      trigger: mqtt
-      topic: 'zigbee2mqtt/bridge/event'
-    condition:
-      condition: template
-      value_template: '{{trigger.payload_json.type == "device_interview" and trigger.payload_json.data.status == "successful" and trigger.payload_json.data.supported}}'
-    action:
+    triggers:
+      - trigger: mqtt
+        topic: 'zigbee2mqtt/bridge/event'
+    conditions:
+      - condition: template
+        value_template: '{{trigger.payload_json.type == "device_interview" and trigger.payload_json.data.status == "successful" and trigger.payload_json.data.supported}}'
+    actions:
       - action: persistent_notification.create
         data_template:
           title: "Device aggiunto alla rete Zigbee2mqtt"
@@ -280,14 +280,14 @@ automation:
   ######################################################################
   - alias: "Zigbee2MQTT: Restart Automation"
     id: "zigbee2mqtt_restart_automation"
-    trigger:
+    triggers:
       - trigger: homeassistant
         event: start
       - trigger: state
         entity_id: binary_sensor.zigbee2mqtt_bridge_connection_state
         to: "off"
         for: "00:01:00"
-    action:
+    actions:
       - action: shell_command.zigbee2mqtt_restart
         data:
           docker_host: !secret docker_host

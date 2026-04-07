@@ -67,21 +67,19 @@ automation:
   - alias: "Home Assistant - Errori: Insorgenza Errore"
     id: "home_assistant_errori_insorgenza_errore"
 
-    trigger:
-      - event_data:
+    triggers:
+      - trigger: event
+        event_data:
           domain: persistent_notification
           service: create
         event_type: call_service
-        trigger: event
-      - event_data:
+      - trigger: event
+        event_data:
           domain: persistent_notification
           service: dimiss
         event_type: call_service
-        trigger: event
 
-    condition: []
-
-    action:
+    actions:
       - action: input_boolean.turn_on
         data_template:
           entity_id: input_boolean.home_assistant_error
@@ -93,7 +91,7 @@ automation:
   - alias: "Home Assistant - Errori: Scomparsa Errore"
     id: "home_assistant_errori_scomparsa_errore"
 
-    trigger:
+    triggers:
       - event_data:
           domain: persistent_notification
           service: create
@@ -105,9 +103,7 @@ automation:
         event_type: call_service
         trigger: event
 
-    condition: []
-
-    action:
+    actions:
       - action: input_boolean.turn_off
         data_template:
           entity_id: input_boolean.home_assistant_error

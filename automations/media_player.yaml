@@ -6,15 +6,13 @@
 - alias: "Google Home: Pronuncia testo"
   id: "google_home_pronuncia_testo"
 
-  trigger:
+  triggers:
     - trigger: state
       entity_id: input_text.google_home_speak
     - trigger: state
       entity_id: input_text.google_anna_speak
 
-  condition: []
-
-  action:
+  actions:
     - action: script.speech_engine
       data_template:
         media_player: >

@@ -41,19 +41,19 @@ automation:
           | list
         }}
 
-    trigger:
+    triggers:
       - trigger: state
         entity_id: group.bticino
         to: 'on'
       - trigger: homeassistant
         event: start
 
-    condition:
-      condition: state
-      entity_id: group.bticino
-      state: 'on'
+    conditions:
+      - condition: state
+        entity_id: group.bticino
+        state: 'on'
 
-    action:
+    actions:
       - delay: '00:00:10'
       - action: script.notify_text
         data_template:
