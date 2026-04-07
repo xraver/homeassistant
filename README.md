@@ -45,6 +45,7 @@ The following integration are part of HACS system. Install HACS first:
 * [button-card](https://github.com/custom-cards/button-card)
 * [card-mod](https://github.com/thomasloven/lovelace-card-mod)
 * [clock-weather-card](https://github.com/pkissling/clock-weather-card)
+* [enhanced-shutter-card](https://github.com/marcelhoogantink/enhanced-shutter-card)
 * [homeassistant-electrolux-status](https://github.com/mauro-midolo/homeassistant_electrolux_status) (Electrolux EOB9S21WX and AEG NSC7P751DS)
 * [locelace-entity-progress-card](https://github.com/francois-le-ko4la/lovelace-entity-progress-card)
 * [Lovelace Horizon Card](https://github.com/rejuvenate/lovelace-horizon-card)
@@ -60,7 +61,6 @@ The following integration are part of HACS system. Install HACS first:
 * [Paper Buttons Row](https://github.com/jcwillox/lovelace-paper-buttons-row) (not currently used)
 * [Plotly Graph Card](https://github.com/dbuezas/lovelace-plotly-graph-card)
 * [Scheduler Card](https://github.com/nielsfaber/scheduler-card) (not currently used)
-* [Shutter Card](https://github.com/Deejayfool/hass-shutter-card)
 * [Tabbed Card](https://github.com/kinghat/tabbed-card)
 * [Zigbee2mqtt Networkmap Card](https://github.com/azuwis/zigbee2mqtt-networkmap)
 ### Themes

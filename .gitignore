@@ -1,7 +1,8 @@
 # Home Assistant Components
+.cache/
 .HA_VERSION
 .ha_run.lock
-.storage
+.storage/
 .uuid
 deps/
 home-assistant.log*

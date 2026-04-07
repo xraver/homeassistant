@@ -59,6 +59,7 @@ group:
       - update.card_mod_update
       - update.clock_weather_card_update
       - update.electrolux_status_update
+      - update.enhanced_shutter_card_update
       - update.entity_progress_card_update
       - update.fold_entity_row_update
       - update.hacs_update
@@ -73,7 +74,6 @@ group:
       - update.mushroom_update
       - update.paper_buttons_row_update
       - update.plotly_graph_card_update
-      - update.shutter_card_update
       - update.tabbed_card_update
       - update.vehicle_info_card_update
       - update.vertical_stack_in_card_update

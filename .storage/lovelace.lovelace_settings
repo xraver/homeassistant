@@ -60,9 +60,6 @@
                   "show_header_toggle": false,
                   "entities": [
                     {
-                      "entity": "automation.home_assistant_startup_restart_on_error"
-                    },
-                    {
                       "entity": "automation.modalita_vacanza_gestione_tapparelle"
                     },
                     {
@@ -403,12 +400,12 @@
                       "name": "Porta Casa"
                     },
                     {
-                      "entity": "portafinestra_camera_battery",
-                      "name": "Portafinestra Sala"
-                    },
-                    {
                       "entity": "sensor.portafinestra_camera_battery",
                       "name": "Portafinestra Camera"
+                    },
+                    {
+                      "entity": "sensor.portafinestra_sala_battery",
+                      "name": "Portafinestra Sala"
                     },
                     {
                       "entity": "sensor.temperatura_balcone_battery",
@@ -417,10 +414,6 @@
                     {
                       "entity": "sensor.temperatura_veranda_battery",
                       "name": "Temperatura Veranda"
-                    },
-                    {
-                      "entity": "sensor.wireless_button_battery",
-                      "name": "wireless_button"
                     },
                     {
                       "entity": "sensor.sensore_acqua_cucina_battery",
@@ -433,6 +426,14 @@
                     {
                       "entity": "sensor.sensore_acqua_bagno_piccolo_battery",
                       "name": "Sensore Acqua Bagno Piccolo"
+                    },
+                    {
+                      "entity": "sensor.sensore_acqua_veranda_battery",
+                      "name": "Sensore Acqua Veranda"
+                    },
+                    {
+                      "entity": "sensor.wireless_button_battery",
+                      "name": "wireless_button"
                     }
                   ]
                 }
