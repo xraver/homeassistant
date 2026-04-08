@@ -17,20 +17,71 @@ jobs:
         version: [ "stable", "beta" ]
 
     steps:
-      - name: ⤵️ Checkout
+      # ---------------------------------------------------------
+      # CHECKOUT
+      # ---------------------------------------------------------
+      - name: ⤵️ Check out configuration from GitHub
         uses: actions/checkout@v4
 
-      - name: 🔑 Dummy secrets
+      # ---------------------------------------------------------
+      # CACHE PIP
+      # ---------------------------------------------------------
+      - name: ♻️ Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # ---------------------------------------------------------
+      # CACHE NPM
+      # ---------------------------------------------------------
+      - name: ♻️ Cache npm
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-npm-cache
+          restore-keys: |
+            ${{ runner.os }}-npm-
+
+      # ---------------------------------------------------------
+      # CUSTOM COMPONENTS
+      # ---------------------------------------------------------
+      - name: ⤵️ Check out Custom Components
+        run: |
+          mkdir -p custom_components/
+          # Monitor Docker
+          git clone https://github.com/ualex73/monitor_docker
+          mv monitor_docker/custom_components/monitor_docker/ custom_components/
+
+      # ---------------------------------------------------------
+      # DUMMY SECRETS
+      # ---------------------------------------------------------
+      - name: 🔑 Use dummy files as credentials
         run: |
           cp .secrets_dummy.yaml secrets.yaml
           cp credentials/.google_dummy.json credentials/google.json
 
+      # ---------------------------------------------------------
+      # FETCH HOME ASSISTANT IMAGE
+      # ---------------------------------------------------------
       - name: ⤵️ Fetch Home Assistant Docker Image
         run: |
           docker pull -q "ghcr.io/home-assistant/home-assistant:${{ matrix.version }}"
 
+      # ---------------------------------------------------------
+      # HOME ASSISTANT CONFIG CHECK
+      # ---------------------------------------------------------
       - name: 🚀 Run Home Assistant Configuration Check
         run: |
+          # Show Version
+          docker run --rm \
+            -v .:/config \
+            "homeassistant/home-assistant:${{ matrix.version }}" \
+            python -m homeassistant --version
+
+          # Run check_config
           docker run --rm \
             -v .:/config \
             "ghcr.io/home-assistant/home-assistant:${{ matrix.version }}" \
