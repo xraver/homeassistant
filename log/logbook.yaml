@@ -49,12 +49,15 @@ exclude:
     - sensor.consumo_energetico_giornaliero
     - sensor.consumo_energetico_mensile
     # Climatizzatore
-    - sensor.climatizzatore_zona_giorno_energia
+    - sensor.climatizzatore_zona_giorno_energia_consumata
     - sensor.climatizzatore_zona_giorno_temperatura_ambiente
-    - sensor.climatizzatore_zona_notte_energia
+    - sensor.climatizzatore_zona_giorno_temperatura_esterna
+    - sensor.climatizzatore_zona_notte_energia_consumata
     - sensor.climatizzatore_zona_notte_temperatura_ambiente
-    - sensor.climatizzatore_studio_energia
+    - sensor.climatizzatore_zona_notte_temperatura_esterna
+    - sensor.climatizzatore_studio_energia_consumata
     - sensor.climatizzatore_studio_temperatura_ambiente
+    - sensor.climatizzatore_studio_temperatura_esterna
     # Zigbee2mqtt
     #- binary_sensor.porta_casa_contact
     - sensor.porta_casa_battery
@@ -62,9 +65,11 @@ exclude:
     #- binary_sensor.portafinestra_sala_contact
     - sensor.portafinestra_sala_battery
     - sensor.portafinestra_sala_voltage
+    - sensor.portafinestra_sala_device_temperature
     #- binary_sensor.portafinestra_camera_contact
     - sensor.portafinestra_camera_battery
     - sensor.portafinestra_camera_voltage
+    - sensor.portafinestra_camera_device_temperature
     - sensor.wireless_button_battery
     - sensor.wireless_button_voltage
     - sensor.temperatura_balcone_battery
@@ -119,3 +124,72 @@ exclude:
     # CO2
     - sensor.electricity_maps_intensita_della_co2
     - sensor.electricity_maps_percentuale_della_rete_di_combustibili_fossili
+    # Proxmox - Host
+    - sensor.pve_cpu_usage
+    - sensor.pve_disk_usage
+    - sensor.pve_durata_backup
+    - sensor.pve_max_disk_usage
+    - sensor.pve_memory_usage
+    - sensor.pve_memory_usage_percentage
+    - sensor.pve_max_memory_usage
+    - sensor.pve_uptime
+    # Proxmox - Host Storage Local
+    - sensor.storage_local_used_storage
+    - sensor.storage_local_total_storage
+    - sensor.storage_local_available_storage
+    - sensor.storage_local_storage_usage_percentage
+    # Proxmox - Host Storage Local LVM
+    - sensor.storage_local_lvm_used_storage
+    - sensor.storage_local_lvm_total_storage
+    - sensor.storage_local_lvm_available_storage
+    - sensor.storage_local_lvm_storage_usage_percentage
+    # Proxmox - VM Server
+    - sensor.server_cpu_usage
+    - sensor.server_disk_usage
+    - sensor.server_max_disk_usage
+    - sensor.server_memory_usage
+    - sensor.server_memory_usage_percentage
+    - sensor.server_max_memory_usage
+    - sensor.server_network_input
+    - sensor.server_network_output
+    - sensor.server_uptime
+    # Proxmox - VM Docker
+    - sensor.docker_cpu_usage
+    - sensor.docker_disk_usage
+    - sensor.docker_max_disk_usage
+    - sensor.docker_memory_usage
+    - sensor.docker_memory_usage_percentage
+    - sensor.docker_max_memory_usage
+    - sensor.docker_network_input
+    - sensor.docker_network_output
+    - sensor.docker_uptime
+    # Proxmox - VM Firewall
+    - sensor.firewall_cpu_usage
+    - sensor.firewall_disk_usage
+    - sensor.firewall_max_disk_usage
+    - sensor.firewall_memory_usage
+    - sensor.firewall_max_memory_usage
+    - sensor.firewall_memory_usage_percentage
+    - sensor.firewall_network_input
+    - sensor.firewall_network_output
+    - sensor.firewall_uptime
+    # Proxmox - VM Asterisk
+    - sensor.asterisk_cpu_usage
+    - sensor.asterisk_disk_usage
+    - sensor.asterisk_max_disk_usage
+    - sensor.asterisk_memory_usage
+    - sensor.asterisk_memory_usage_percentage
+    - sensor.asterisk_max_memory_usage
+    - sensor.asterisk_network_input
+    - sensor.asterisk_network_output
+    - sensor.asterisk_uptime
+    # Proxmox - VM Network
+    - sensor.network_cpu_usage
+    - sensor.network_disk_usage
+    - sensor.network_max_disk_usage
+    - sensor.network_memory_usage
+    - sensor.network_max_memory_usage
+    - sensor.network_memory_usage_percentage
+    - sensor.network_network_input
+    - sensor.network_network_output
+    - sensor.network_uptime

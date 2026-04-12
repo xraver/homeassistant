@@ -107,7 +107,7 @@ logbook:
       - sensor.fritz_box_7530_ax_gb_inviati
       - sensor.fritz_box_7530_ax_gb_ricevuti
       - sensor.fritz_box_7530_ax_ip_esterno
-      - sensor.fritz_box_7530_ax_ipv6_esterno
+      #- sensor.fritz_box_7530_ax_ipv6_esterno
       - sensor.fritz_box_7530_ax_tempo_di_attivita_della_connessione
       - sensor.fritz_box_7530_ax_ultimo_riavvio
       - sensor.fritz_box_7530_ax_velocita_effettiva_di_caricamento
@@ -116,8 +116,10 @@ logbook:
       - sensor.fritz_box_7530_ax_velocita_effettiva_di_scaricamento_del_collegamento
       - sensor.fritz_box_7530_ax_velocita_massima_di_caricamento_della_connessione
       - sensor.fritz_box_7530_ax_velocita_massima_di_scaricamento_della_connessione
+      - sensor.fritz_box_7530_ax_temperatura_cpu
       # 7590
       - sensor.fritz_box_7590_ultimo_riavvio
+      - sensor.fritz_box_7590_temperatura_cpu
 
 ######################################################################
 # Fritz Package - Recorder
@@ -132,7 +134,7 @@ recorder:
       - sensor.fritz_box_7530_ax_gb_inviati
       - sensor.fritz_box_7530_ax_gb_ricevuti
       - sensor.fritz_box_7530_ax_ip_esterno
-      - sensor.fritz_box_7530_ax_ipv6_esterno
+      #- sensor.fritz_box_7530_ax_ipv6_esterno
       - sensor.fritz_box_7530_ax_tempo_di_attivita_della_connessione
       - sensor.fritz_box_7530_ax_ultimo_riavvio
       - sensor.fritz_box_7530_ax_velocita_effettiva_di_caricamento
@@ -141,8 +143,10 @@ recorder:
       - sensor.fritz_box_7530_ax_velocita_effettiva_di_scaricamento_del_collegamento
       - sensor.fritz_box_7530_ax_velocita_massima_di_caricamento_della_connessione
       - sensor.fritz_box_7530_ax_velocita_massima_di_scaricamento_della_connessione
+      - sensor.fritz_box_7530_ax_temperatura_cpu
       # 7590
       - sensor.fritz_box_7590_ultimo_riavvio
+      - sensor.fritz_box_7590_temperatura_cpu
 
 automation:
 
