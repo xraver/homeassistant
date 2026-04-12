@@ -61,9 +61,15 @@ counter: !include_dir_merge_named counters/
 # Energy
 energy:
 
+# Estimates future energy consumption and production based on historical data.
+usage_prediction:
+
 # Enables the frontend
 frontend:
   themes: !include_dir_merge_named themes
+
+# File integration to read from and write to text files in support of system sensors, scripts, and automations.
+# file:
 
 # Go2rtc stream protocol
 # got2rtc
