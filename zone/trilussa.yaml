@@ -1,0 +1,9 @@
+######################################################################
+# Zone: Casa Trilussa
+######################################################################
+
+name: Trilussa
+latitude: !secret trilussa_latitude
+longitude: !secret trilussa_longitude
+radius: 65
+icon: mdi:home
