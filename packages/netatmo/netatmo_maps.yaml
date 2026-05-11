@@ -44,5 +44,6 @@ template:
               "input_boolean.boost_valvola_camera":"climate.camera" }
 
           sensors_to_climate: >
-            { "binary_sensor.portafinestra_sala":"input_boolean.valvola_sala",
+            { "binary_sensor.finestra_studio_contact":"input_boolean.valvola_studio",
+              "binary_sensor.portafinestra_sala_contact":"input_boolean.valvola_sala",
               "binary_sensor.portafinestra_camera_contact":"input_boolean.valvola_camera" }

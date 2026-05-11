@@ -62,6 +62,10 @@ exclude:
     #- binary_sensor.porta_casa_contact
     - sensor.porta_casa_battery
     - sensor.porta_casa_voltage
+    #- binary_sensor.finestra_studio_contact
+    - sensor.finestra_studio_battery
+    - sensor.finestra_studio_device_temperature
+    - sensor.finestra_studio_voltage
     #- binary_sensor.portafinestra_sala_contact
     - sensor.portafinestra_sala_battery
     - sensor.portafinestra_sala_voltage

@@ -12,7 +12,19 @@ sensor.porta_casa_linkquality:
 sensor.porta_casa_voltage:
   friendly_name: 'Tensione'
 
-# Bedroom French Door Sensor
+# Studio French Door Sensor
+binary_sensor.finestra_studio_contact:
+  friendly_name: 'Finestra Studio'
+sensor.finestra_studio_battery:
+  friendly_name: 'Batteria'
+sensor.finestra_studio_device_temperature:
+  friendly_name: 'Temperatura'
+sensor.finestra_studio_linkquality:
+  friendly_name: 'Link'
+sensor.finestra_studio_voltage:
+  friendly_name: 'Tensione'
+
+# Livingroom French Door Sensor
 binary_sensor.portafinestra_sala_contact:
   friendly_name: 'Portafinestra Sala'
 sensor.portafinestra_sala_battery:

@@ -119,6 +119,9 @@
                     },
                     {
                       "entity": "climate.climatizzatore_studio"
+                    },
+                    {
+                      "entity": "binary_sensor.finestra_studio_contact"
                     }
                   ],
                   "entity": "light.luce_studio",

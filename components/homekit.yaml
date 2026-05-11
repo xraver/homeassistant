@@ -32,10 +32,14 @@ filter:
     # Sensors
     - sensor.temperatura_balcone_temperature
     - sensor.temperatura_veranda_temperature
+    - binary_sensor.sensore_acqua_cucina_water_leak
+    - binary_sensor.sensore_acqua_bagno_grande_water_leak
+    - binary_sensor.sensore_acqua_bagno_piccolo_water_leak
+    - binary_sensor.sensore_acqua_veranda_water_leak
     # TV
-    - media_player.sony_kd_55xf8596
-    - media_player.tv_cucina
-    - media_player.tv_camera
+    #- media_player.sony_kd_55xf8596
+    #- media_player.tv_cucina
+    #- media_player.tv_camera
     # Home Assistant Controls
     - input_boolean.home_mode_away
     - script.homeassistant_restart

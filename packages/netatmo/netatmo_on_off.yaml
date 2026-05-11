@@ -229,6 +229,7 @@ automation:
     triggers:
       - trigger: state
         entity_id:
+          - binary_sensor.finestra_studio_contact
           - binary_sensor.portafinestra_sala_contact
           - binary_sensor.portafinestra_camera_contact
         to: 'on'
@@ -259,6 +260,7 @@ automation:
     triggers:
       - trigger: state
         entity_id:
+          - binary_sensor.finestra_studio_contact
           - binary_sensor.portafinestra_sala_contact
           - binary_sensor.portafinestra_camera_contact
         to: 'off'

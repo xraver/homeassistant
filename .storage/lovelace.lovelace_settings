@@ -400,12 +400,16 @@
                       "name": "Porta Casa"
                     },
                     {
-                      "entity": "sensor.portafinestra_camera_battery",
-                      "name": "Portafinestra Camera"
+                      "entity": "sensor.finestra_studio_battery",
+                      "name": "Finestra Studio"
                     },
                     {
                       "entity": "sensor.portafinestra_sala_battery",
                       "name": "Portafinestra Sala"
+                    },
+                    {
+                      "entity": "sensor.portafinestra_camera_battery",
+                      "name": "Portafinestra Camera"
                     },
                     {
                       "entity": "sensor.temperatura_balcone_battery",
