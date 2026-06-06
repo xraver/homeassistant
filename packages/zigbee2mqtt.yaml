@@ -12,7 +12,7 @@ homeassistant:
     package.zigbee2mqtt:
       customize: &customize
         package: 'zigbee2mqtt'
-        version: 1.3.0
+        version: 1.3.1
 
     ######################################################################
     # Zigbee2mqtt Package - Customizations - Entities
@@ -213,7 +213,11 @@ mqtt:
 ######################################################################
 
 shell_command:
-  zigbee2mqtt_restart: 'ssh {{ docker_username }}@{{ docker_host }} -oStrictHostKeyChecking=no -i /config/credentials/id_ed25519 docker container restart zigbee2mqtt'
+  zigbee2mqtt_restart: >
+    ssh {{ docker_username }}@{{ docker_host }}
+        -oStrictHostKeyChecking=no
+        -i /config/credentials/id_ed25519
+        docker container restart zigbee2mqtt
 
 ######################################################################
 # Zigbee2mqtt Package - Automation
@@ -288,10 +292,13 @@ automation:
         to: "off"
         for: "00:01:00"
     actions:
-      - action: shell_command.zigbee2mqtt_restart
+      #- action: shell_command.zigbee2mqtt_restart
+      #  data:
+      #    docker_host: !secret docker_host
+      #    docker_username: !secret docker_username
+      - action: monitor_docker.restart
         data:
-          docker_host: !secret docker_host
-          docker_username: !secret docker_username
+          name: zigbee2mqtt
 
 ######################################################################
 # Zigbee2mqtt Package - Logbook
@@ -302,7 +309,6 @@ logbook:
     entities:
       - binary_sensor.zigbee2mqtt_bridge_connection_state
       - select.zigbee2mqtt_bridge_log_level
-      - sensor.zigbee2mqtt_bridge_permit_join
       - sensor.zigbee2mqtt_bridge_version
       - sensor.zigbee2mqtt_bridge_coordinator_version
       - sensor.zigbee2mqtt_bridge_coordinator_type
@@ -320,7 +326,6 @@ recorder:
     entities:
       - binary_sensor.zigbee2mqtt_bridge_connection_state
       - select.zigbee2mqtt_bridge_log_level
-      - sensor.zigbee2mqtt_bridge_permit_join
       - sensor.zigbee2mqtt_bridge_version
       - sensor.zigbee2mqtt_bridge_coordinator_version
       - sensor.zigbee2mqtt_bridge_coordinator_type
