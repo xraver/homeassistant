@@ -35,7 +35,7 @@
         entity_id: light.luce_trono
 
     # Wait 10 minutes before checking if the light should be turned off
-    - delay: "00:10:00"
+    #- delay: "00:10:00"
 
     # Turn off only if there is no more presence in the bathroom
     - condition: state
