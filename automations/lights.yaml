@@ -38,12 +38,12 @@
     #- delay: "00:10:00"
 
     # Turn off only if there is no more presence in the bathroom
-    - condition: state
-      entity_id: binary_sensor.sensore_presenza_bagno_grande_occupancy
-      state: "off"
+    #- condition: state
+    #  entity_id: binary_sensor.sensore_presenza_bagno_grande_occupancy
+    #  state: "off"
 
-    - service: light.turn_off
-      target:
-        entity_id: light.luce_trono
+    #- service: light.turn_off
+    #  target:
+    #    entity_id: light.luce_trono
 
   mode: restart
