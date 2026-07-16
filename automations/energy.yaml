@@ -7,13 +7,13 @@
 
   triggers:
     - trigger: numeric_state
-      entity_id: sensor.shelly_em_channel_1_potenza
+      entity_id: sensor.shelly_em_energy_meter_0_potenza
       above: 3300
 
   actions:
     - action: script.notify_all
       data_template:
         title: "Home Assistant - Consumo Energetico Elevato"
-        message: "Consumo energetico elevato ({{ states.sensor.shelly_em_channel_1_potenza.state }})."
+        message: "Consumo energetico elevato ({{ states.sensor.shelly_em_energy_meter_0_potenza.state }})."
         enable_persistent: false
         volume_level: 0.4

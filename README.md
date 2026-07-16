@@ -26,7 +26,7 @@ My server is an Intel NUC (NUC10i5FNH) with [Proxmox Virtual Environment](https:
 * Mitsubishi Air Conditioning (MSZ-LN25VG2V, MSZ-LN35VG2V)
 * Proxmox
 * QNAP NAS (TS-228A)
-* Shelly (Shelly1, Shelly2, Shelly2.5, ShellyEM, Shelly Dimmer)
+* Shelly (ShellyEM Gen4)
 * Sony Android TV (KD-55XF8596)
 * Xiaomi (MiJia door & window contact sensor, MiJia temperature & humidity sensor)
 

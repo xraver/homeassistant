@@ -2718,20 +2718,20 @@
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "sensor.shelly_em_channel_1_potenza",
+                                  "entity": "sensor.shelly_em_energy_meter_0_potenza",
                                   "name": "Potenza"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "sensor.shelly_em_channel_1_tensione",
+                                  "entity": "sensor.shelly_em_energy_meter_0_tensione",
                                   "name": "Tensione",
                                   "icon": "mdi:alpha-v-box"
                                 },
                                 {
                                   "type": "custom:button-card",
                                   "template": "template_device_generic_state",
-                                  "entity": "sensor.shelly_em_channel_1_fattore_di_potenza",
+                                  "entity": "sensor.shelly_em_energy_meter_0_fattore_di_potenza",
                                   "name": "FP",
                                   "icon": "mdi:angle-acute"
                                 },

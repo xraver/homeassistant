@@ -252,7 +252,7 @@
                     {
                       "type": "custom:mini-graph-card",
                       "entities": [
-                        "sensor.shelly_em_channel_1_potenza"
+                        "sensor.shelly_em_energy_meter_0_potenza"
                       ],
                       "hours_to_show": 24,
                       "points_per_hour": 120,
@@ -535,7 +535,7 @@
               "show_name": false,
               "show_state": true,
               "show_icon": true,
-              "entity": "sensor.shelly_em_channel_1_potenza"
+              "entity": "sensor.shelly_em_energy_meter_0_potenza"
             },
             {
               "type": "entity",
@@ -2204,7 +2204,7 @@
               "show_name": false,
               "show_state": true,
               "show_icon": true,
-              "entity": "sensor.shelly_em_channel_1_potenza",
+              "entity": "sensor.shelly_em_energy_meter_0_potenza",
               "color": ""
             },
             {
@@ -2212,7 +2212,7 @@
               "show_name": false,
               "show_state": true,
               "show_icon": true,
-              "entity": "sensor.shelly_em_channel_1_energia",
+              "entity": "sensor.shelly_em_energy_meter_0_energia",
               "color": ""
             },
             {
@@ -2220,16 +2220,16 @@
               "show_name": false,
               "show_state": true,
               "show_icon": true,
-              "entity": "sensor.shelly_em_channel_1_tensione",
+              "entity": "sensor.shelly_em_energy_meter_0_tensione",
               "color": ""
             }
           ],
           "cards": [
             {
-              "entity": "sensor.shelly_em_channel_1_potenza",
+              "entity": "sensor.shelly_em_energy_meter_0_potenza",
               "max": 6000,
               "min": 0,
-              "name": "Potenza Istantanea",
+              "name": "Potenza",
               "severity": {
                 "green": 0,
                 "yellow": 2000,
@@ -2279,7 +2279,7 @@
             {
               "type": "custom:plotly-graph",
               "entities": [
-                "sensor.shelly_em_channel_1_potenza"
+                "sensor.shelly_em_energy_meter_0_potenza"
               ],
               "hours_to_show": 24,
               "refresh_interval": 0,
@@ -3256,7 +3256,19 @@
                 },
                 {
                   "type": "picture",
-                  "image": "/local/images/rooms/bagno_off.jpg"
+                  "image": {
+                    "media_content_id": "/local/images/rooms/bagno_piccolo_off.jpg",
+                    "media_content_type": "",
+                    "metadata": {
+                      "navigateIds": [
+                        {},
+                        {
+                          "media_content_type": "",
+                          "media_content_id": "__MANUAL_ENTRY__"
+                        }
+                      ]
+                    }
+                  }
                 },
                 {
                   "type": "tile",

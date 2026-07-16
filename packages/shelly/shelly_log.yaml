@@ -5,24 +5,36 @@
 logbook:
   exclude:
     entities:
-      # Shelly EM (shellyem_b9f0d0)
+      # Shelly EM Gen4 (ACEBE6C8F2D8)
       - switch.shelly_em
-      #- sensor.shelly_em_channel_1_potenza
-      - sensor.shelly_em_channel_1_energia
-      - sensor.shelly_em_channel_1_energia_cost
-      - sensor.shelly_em_channel_1_energia_restituita
-      - sensor.shelly_em_channel_1_tensione
-      - sensor.shelly_em_channel_1_fattore_di_potenza
-      - sensor.shelly_em_channel_2_potenza
-      - sensor.shelly_em_channel_2_energia
-      - sensor.shelly_em_channel_2_energia_restituita
-      - sensor.shelly_em_channel_2_tensione
-      - sensor.shelly_em_channel_2_fattore_di_potenza
-      - binary_sensor.shelly_em_sovra_potenza
-      - binary_sensor.shelly_em_cloud
       - update.shelly_em_firmware
+      - update.shelly_em_firmware_beta
+      - button.shelly_em_riavvia
+      - binary_sensor.shelly_em_cloud
       - sensor.shelly_em_intensita_del_segnale
-      - sensor.shelly_em_ultimo_riavvio
+      - binary_sensor.shelly_em_riavvio_richiesto
+      - sensor.shelly_em_temperatura
+      - sensor.shelly_em_tempo_di_attivita
+      # Energy Meter A
+      #- sensor.shelly_em_energy_meter_0_potenza
+      - sensor.shelly_em_energy_meter_0_energia
+      - sensor.shelly_em_energy_meter_0_energia_cost
+      - sensor.shelly_em_energy_meter_0_fattore_di_potenza
+      - sensor.shelly_em_energy_meter_0_potenza_apparente
+      - sensor.shelly_em_energy_meter_0_corrente
+      - sensor.shelly_em_energy_meter_0_energia_restituita
+      - sensor.shelly_em_energy_meter_0_frequenza
+      - sensor.shelly_em_energy_meter_0_tensione
+      # Energy Meter B
+      - sensor.shelly_em_energy_meter_1_potenza
+      - sensor.shelly_em_energy_meter_1_energia
+      - sensor.shelly_em_energy_meter_1_energia_cost
+      - sensor.shelly_em_energy_meter_1_fattore_di_potenza
+      - sensor.shelly_em_energy_meter_1_potenza_apparente
+      - sensor.shelly_em_energy_meter_1_corrente
+      - sensor.shelly_em_energy_meter_1_energia_restituita
+      - sensor.shelly_em_energy_meter_1_frequenza
+      - sensor.shelly_em_energy_meter_1_tensione
       # Shelly Bulb (shellybulb_bc8610)
       - binary_sensor.luce_piantana_cloud
       - update.luce_piantana_firmware_update
@@ -36,24 +48,36 @@ logbook:
 recorder:
   exclude:
     entities:
-      # Shelly EM (shellyem_b9f0d0)
+      # Shelly EM Gen4 (ACEBE6C8F2D8)
       - switch.shelly_em
-      #- sensor.shelly_em_channel_1_potenza
-      #- sensor.shelly_em_channel_1_energia
-      #- sensor.shelly_em_channel_1_energia_cost
-      - sensor.shelly_em_channel_1_energia_restituita
-      - sensor.shelly_em_channel_1_tensione
-      - sensor.shelly_em_channel_2_fattore_di_potenza
-      - sensor.shelly_em_channel_2_potenza
-      - sensor.shelly_em_channel_2_energia
-      - sensor.shelly_em_channel_2_energia_restituita
-      - sensor.shelly_em_channel_2_tensione
-      - sensor.shelly_em_channel_1_fattore_di_potenza
-      - binary_sensor.shelly_em_sovra_potenza
-      - binary_sensor.shelly_em_cloud
       - update.shelly_em_firmware
+      - update.shelly_em_firmware_beta
+      - button.shelly_em_riavvia
+      - binary_sensor.shelly_em_cloud
       - sensor.shelly_em_intensita_del_segnale
-      - sensor.shelly_em_ultimo_riavvio
+      - binary_sensor.shelly_em_riavvio_richiesto
+      - sensor.shelly_em_temperatura
+      - sensor.shelly_em_tempo_di_attivita
+      # Energy Meter A
+      #- sensor.shelly_em_energy_meter_0_potenza
+      #- sensor.shelly_em_energy_meter_0_energia
+      #- sensor.shelly_em_energy_meter_0_energia_cost
+      - sensor.shelly_em_energy_meter_0_fattore_di_potenza
+      - sensor.shelly_em_energy_meter_0_potenza_apparente
+      - sensor.shelly_em_energy_meter_0_corrente
+      - sensor.shelly_em_energy_meter_0_energia_restituita
+      - sensor.shelly_em_energy_meter_0_frequenza
+      - sensor.shelly_em_energy_meter_0_tensione
+      # Energy Meter B
+      - sensor.shelly_em_energy_meter_1_potenza
+      - sensor.shelly_em_energy_meter_1_energia
+      - sensor.shelly_em_energy_meter_1_energia_cost
+      - sensor.shelly_em_energy_meter_1_fattore_di_potenza
+      - sensor.shelly_em_energy_meter_1_potenza_apparente
+      - sensor.shelly_em_energy_meter_1_corrente
+      - sensor.shelly_em_energy_meter_1_energia_restituita
+      - sensor.shelly_em_energy_meter_1_frequenza
+      - sensor.shelly_em_energy_meter_1_tensione
       # Shelly Bulb (shellybulb_bc8610)
       - binary_sensor.luce_piantana_cloud
       - update.luce_piantana_firmware_update

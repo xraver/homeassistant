@@ -5,45 +5,63 @@
 homeassistant:
   customize:
 
-    # Shelly EM (shellyem_b9f0d0)
+    # Shelly EM Gen4 (ACEBE6C8F2D8)
     switch.shelly_em:
       friendly_name: Pulsante
-    sensor.shelly_em_channel_1_potenza:
-      friendly_name: Potenza Istantanea
-    sensor.shelly_em_channel_1_energia:
-      friendly_name: Energia
-    sensor.shelly_em_channel_1_energia_cost:
-      friendly_name: Costo Energia
-    sensor.shelly_em_channel_1_energia_restituita:
-      friendly_name: Energia Restituita
-    sensor.shelly_em_channel_1_tensione:
-      friendly_name: Tensione
-    sensor.shelly_em_channel_1_fattore_di_potenza:
-      friendly_name: Fattore di Potenza Canale 1
-    sensor.shelly_em_channel_2_potenza:
-      friendly_name: Potenza Istantanea Canale 2
-    sensor.shelly_em_channel_2_energia:
-      friendly_name: Energia Canale 2
-    sensor.shelly_em_channel_2_energia_restituita:
-      friendly_name: Energia Restituita Canale 2
-    sensor.shelly_em_channel_2_tensione:
-      friendly_name: Tensione Canale 2
-    sensor.shelly_em_channel_2_fattore_di_potenza:
-      friendly_name: Fattore di Potenza Canale 2
-    binary_sensor.shelly_em_sovra_potenza:
-      friendly_name: Sovraccarico Energetico
-    binary_sensor.shelly_em_cloud:
-      friendly_name: Connessione Cloud
     update.shelly_em_firmware:
       friendly_name: Aggiornamento Firmware
     update.shelly_em_firmware_beta:
       friendly_name: Aggiornamento Firmware Beta
-    sensor.shelly_em_intensita_del_segnale:
-      friendly_name: Potenza Segnale
-    sensor.shelly_em_ultimo_riavvio:
-      friendly_name: Ultimo Riavvio
     button.shelly_em_riavvia:
       friendly_name: Riavvia Dispositivo
+    binary_sensor.shelly_em_cloud:
+      friendly_name: Connessione Cloud
+    sensor.shelly_em_intensita_del_segnale:
+      friendly_name: Potenza Segnale
+    binary_sensor.shelly_em_riavvio_richiesto:
+      friendly_name: Riavvio Richiesto
+    sensor.shelly_em_temperatura:
+      friendly_name: Temperatura
+    sensor.shelly_em_tempo_di_attivita:
+      friendly_name: Tempo di Attività
+    # Energy Meter A
+    sensor.shelly_em_energy_meter_0_potenza:
+      friendly_name: Potenza
+    sensor.shelly_em_energy_meter_0_energia:
+      friendly_name: Energia
+    sensor.shelly_em_energy_meter_0_energia_cost:
+      friendly_name: Costo Energia
+    sensor.shelly_em_energy_meter_0_fattore_di_potenza:
+      friendly_name: Fattore di Potenza
+    sensor.shelly_em_energy_meter_0_potenza_apparente:
+      friendly_name: Potenza Apparente
+    sensor.shelly_em_energy_meter_0_corrente:
+      friendly_name: Corrente
+    sensor.shelly_em_energy_meter_0_energia_restituita:
+      friendly_name: Energia Restituita
+    sensor.shelly_em_energy_meter_0_frequenza:
+      friendly_name: Frequenza
+    sensor.shelly_em_energy_meter_0_tensione:
+      friendly_name: Tensione
+    # Energy Meter B
+    sensor.shelly_em_energy_meter_1_potenza:
+      friendly_name: Potenza
+    sensor.shelly_em_energy_meter_1_energia:
+      friendly_name: Energia
+    sensor.shelly_em_energy_meter_1_energia_cost:
+      friendly_name: Costo Energia
+    sensor.shelly_em_energy_meter_1_fattore_di_potenza:
+      friendly_name: Fattore di Potenza
+    sensor.shelly_em_energy_meter_1_potenza_apparente:
+      friendly_name: Potenza Apparente
+    sensor.shelly_em_energy_meter_1_corrente:
+      friendly_name: Corrente
+    sensor.shelly_em_energy_meter_1_energia_restituita:
+      friendly_name: Energia Restituita
+    sensor.shelly_em_energy_meter_1_frequenza:
+      friendly_name: Frequenza
+    sensor.shelly_em_energy_meter_1_tensione:
+      friendly_name: Tensione
 
     # Shelly Bulb (shellybulb_bc8610)
     binary_sensor.luce_piantana_cloud:

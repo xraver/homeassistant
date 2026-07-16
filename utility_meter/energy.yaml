@@ -3,9 +3,9 @@
 ######################################################################
 
 consumo_energetico_giornaliero:
-  source: sensor.shelly_em_channel_1_energia
+  source: sensor.shelly_em_energy_meter_0_energia
   cycle: daily
 
 consumo_energetico_mensile:
-  source: sensor.shelly_em_channel_1_energia
+  source: sensor.shelly_em_energy_meter_0_energia
   cycle: monthly
