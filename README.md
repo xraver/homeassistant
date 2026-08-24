@@ -103,6 +103,7 @@ The following integrations are not part of HACS. It's required to clone the rela
   * Notify push html5
   * Netatmo (rename select.casa_ravera_testa to select.netatmo_casa_ravera_testa and assign names to all devices)
   * Openweather Map (Savona + Morgex)
+  * Proxmox Integration (configuring specific pve user with permission PVEVMUser & PVEAuditor)
   * Shelly Devices (with the exception of Shelly Bulb) enabling firmware update sensor
   * SMTP
   * Sony Bravia
