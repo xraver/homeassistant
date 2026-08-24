@@ -29,13 +29,13 @@ jobs:
       # CHECKOUT
       # ---------------------------------------------------------
       - name: ⤵️ Check out configuration from GitHub
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # ---------------------------------------------------------
       # CACHE PIP
       # ---------------------------------------------------------
       - name: ♻️ Cache pip
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -46,7 +46,7 @@ jobs:
       # CACHE NPM
       # ---------------------------------------------------------
       - name: ♻️ Cache npm
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-cache
