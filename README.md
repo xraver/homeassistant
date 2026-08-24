@@ -82,6 +82,10 @@ The following integrations are not part of HACS. It's required to clone the rela
 * Clone custom components not included in HACS into git_repos folder
 * Start Home Assistant
 * Create Users/People
+* Configure the system:
+  * Network:
+    * Revers Proxy: add trusted proxies (if any) and enable "x forwarded for" option
+    * IP Ban: enable with max 3 login attempts
 * Configure the following integrations using UI:
   * AVM FRITZ!Box Tools (disabling the network device tracking)
   * Certificate Expiry
